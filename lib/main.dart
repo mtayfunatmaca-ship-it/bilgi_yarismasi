@@ -1,13 +1,21 @@
+import 'package:bilgi_yarismasi/widgets/connectivity_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:bilgi_yarismasi/screens/auth_wrapper.dart'; // Yönlendiriciyi çağırır
+import 'package:bilgi_yarismasi/screens/auth_wrapper.dart';
+import 'package:intl/date_symbol_data_local.dart'; // <<< YENİ IMPORT EKLENDİ
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  // 🔹 Sadece ilk yüklemede çalıştır:
+  // --- YENİ EKLENEN KISIM: 'intl' paketini başlat ---
+  // Uygulamanızda tarih formatlaması kullanmak için bu gereklidir.
+  // 'tr_TR' Türkçe formatlama içindir.
+  await initializeDateFormatting('tr_TR', null);
+  // --- YENİ EKLENEN KISIM BİTTİ ---
+
+  // FirebaseDataUploader yorumda kalmalı, bu doğru.
   // final uploader = FirebaseDataUploader();
   //await uploader.uploadDataFromJson();
 
@@ -23,10 +31,12 @@ class MyApp extends StatelessWidget {
       title: 'Bilgi Yarışması',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        // Ekstra İyileştirme: Modern Flutter için colorScheme kullanmak daha iyidir.
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true, // Modern Material 3 tasarımını etkinleştirir.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const AuthWrapper(), // Uygulama buradan başlar
+      home: const ConnectivityBanner(child: AuthWrapper()),
     );
   }
 }
