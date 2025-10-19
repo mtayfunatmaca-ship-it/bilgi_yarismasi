@@ -1,0 +1,62 @@
+{
+    "kategoriler": [
+      {
+        "id": "tarih",
+        "ad": "Tarih",
+        "sira": 1
+      },
+      {
+        "id": "matematik",
+        "ad": "Matematik",
+        "sira": 2
+      },
+      {
+        "id": "cografya",
+        "ad": "Coğrafya",
+        "sira": 3
+      }
+    ],
+    "quizzes": [
+      {
+        "baslik": "Osmanlı Kuruluş Dönemi",
+        "kategoriId": "tarih",
+        "soruSayisi": 2,
+        "sureDakika": 5,
+        "sorular": [
+          {
+            "soruMetni": "İlk Osmanlı padişahı kimdir?",
+            "dogruCevapIndex": 1,
+            "secenekler": ["Orhan Bey", "Osman Bey", "I. Murat", "Ertuğrul Gazi"]
+          },
+          {
+            "soruMetni": "Ankara Savaşı hangi tarihte yapılmıştır?",
+            "dogruCevapIndex": 0,
+            "secenekler": ["1402", "1453", "1389", "1326"]
+          }
+        ]
+      },
+      {
+        "baslik": "Temel Dört İşlem",
+        "kategoriId": "matematik",
+        "soruSayisi": 3,
+        "sureDakika": 8,
+        "sorular": [
+          {
+            "soruMetni": "12 * 5 kaçtır?",
+            "dogruCevapIndex": 2,
+            "secenekler": ["50", "55", "60", "65"]
+          },
+          {
+            "soruMetni": "100 / 4 kaçtır?",
+            "dogruCevapIndex": 0,
+            "secenekler": ["25", "20", "30", "50"]
+          },
+          {
+            "soruMetni": "17 + 8 kaçtır?",
+            "dogruCevapIndex": 0,
+            "secenekler": ["25", "24", "26", "23"]
+          }
+        ]
+      }
+    ]
+  }
