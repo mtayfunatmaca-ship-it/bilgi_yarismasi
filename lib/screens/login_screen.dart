@@ -14,33 +14,61 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   String _errorMessage = '';
+  bool _isLoading = false;
 
   void _login() async {
     setState(() {
       _errorMessage = '';
     });
 
-    // Basit bir klavye kapama
     FocusScope.of(context).unfocus();
 
-    final user = await _authService.signInWithEmailAndPassword(
-      _emailController.text.trim(),
-      _passwordController.text.trim(),
-    );
+    final email = _emailController.text.trim();
+    final password = _passwordController.text;
+
+    if (email.isEmpty || password.isEmpty) {
+      setState(() {
+        _errorMessage = 'E-posta ve şifre boş olamaz.';
+      });
+      return;
+    }
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    final user = await _authService.signInWithEmailAndPassword(email, password);
+
+    setState(() {
+      _isLoading = false;
+    });
 
     if (user == null) {
       setState(() {
-        _errorMessage =
-            'Giriş yapılamadı. E-posta veya şifrenizi kontrol edin.';
+        _errorMessage = 'Giriş yapılamadı. E-posta veya şifre yanlış.';
       });
     }
-    // Giriş başarılıysa, AuthWrapper bizi otomatik olarak MainScreen'e yönlendirecek.
+    // Başarılı girişte AuthWrapper veya ana ekran yönlendirme yapıyor
   }
 
   void _loginWithGoogle() async {
+    setState(() {
+      _isLoading = true;
+      _errorMessage = '';
+    });
+
     final user = await _authService.signInWithGoogle();
-    // Başarılıysa AuthWrapper yönlendirir.
-    // Hata varsa AuthService'de print ile konsola yazdırdık.
+
+    setState(() {
+      _isLoading = false;
+    });
+
+    if (user == null) {
+      setState(() {
+        _errorMessage = 'Google ile giriş başarısız oldu.';
+      });
+    }
+    // Başarılı girişte AuthWrapper yönlendirecek
   }
 
   @override
@@ -48,7 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Giriş Yap')),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -65,15 +93,25 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(height: 20),
             if (_errorMessage.isNotEmpty)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
-                child: Text(
-                  _errorMessage,
-                  style: const TextStyle(color: Colors.red),
-                  textAlign: TextAlign.center,
-                ),
+              Text(
+                _errorMessage,
+                style: const TextStyle(color: Colors.red),
+                textAlign: TextAlign.center,
               ),
-            ElevatedButton(onPressed: _login, child: const Text('Giriş Yap')),
+            const SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: _isLoading ? null : _login,
+              child: _isLoading
+                  ? const SizedBox(
+                      height: 20,
+                      width: 20,
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                        strokeWidth: 2,
+                      ),
+                    )
+                  : const Text('Giriş Yap'),
+            ),
             const SizedBox(height: 10),
             TextButton(
               onPressed: () {
@@ -87,19 +125,14 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _loginWithGoogle,
+              onPressed: _isLoading ? null : _loginWithGoogle,
               style: ElevatedButton.styleFrom(backgroundColor: Colors.white70),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
-                children: [
-                  // Not: Bu logoyu eklemeniz gerek (assets/google_logo.png)
-                  // Image.asset('assets/google_logo.png', height: 20),
-                  const Icon(
-                    Icons.g_mobiledata,
-                    color: Colors.black,
-                  ), // Logo yerine ikon
-                  const SizedBox(width: 10),
-                  const Text(
+                children: const [
+                  Icon(Icons.g_mobiledata, color: Colors.black),
+                  SizedBox(width: 10),
+                  Text(
                     'Google ile Giriş Yap',
                     style: TextStyle(color: Colors.black),
                   ),

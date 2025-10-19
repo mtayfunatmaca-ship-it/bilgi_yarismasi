@@ -6,6 +6,11 @@ import 'package:bilgi_yarismasi/screens/auth_wrapper.dart'; // Yönlendiriciyi �
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // 🔹 Sadece ilk yüklemede çalıştır:
+  // final uploader = FirebaseDataUploader();
+  //await uploader.uploadDataFromJson();
+
   runApp(const MyApp());
 }
 

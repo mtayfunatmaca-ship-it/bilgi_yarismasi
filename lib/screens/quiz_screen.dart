@@ -9,6 +9,7 @@ class QuizScreen extends StatefulWidget {
   final String quizBaslik;
   final int soruSayisi;
   final int sureDakika;
+  final String kategoriId; // <<< YENİ ALAN EKLENDİ
 
   const QuizScreen({
     super.key,
@@ -16,6 +17,7 @@ class QuizScreen extends StatefulWidget {
     required this.quizBaslik,
     required this.soruSayisi,
     required this.sureDakika,
+    required this.kategoriId, // <<< CONSTRUCTOR'A EKLENDİ
   });
 
   @override
@@ -25,14 +27,11 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
-
   bool _isLoading = true;
   bool _isSubmitting = false;
   List<DocumentSnapshot> _questions = [];
   int _currentQuestionIndex = 0;
-
   Map<String, int> _selectedAnswers = {};
-
   Timer? _timer;
   int _secondsRemaining = 0;
 
@@ -56,15 +55,21 @@ class _QuizScreenState extends State<QuizScreen> {
       });
     } catch (e) {
       print("Soruları çekerken hata: $e");
-      setState(() {
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
     }
   }
 
   void _startTimer() {
     _secondsRemaining = widget.sureDakika * 60;
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (!mounted) {
+        timer.cancel();
+        return;
+      }
       setState(() {
         if (_secondsRemaining > 0) {
           _secondsRemaining--;
@@ -97,11 +102,13 @@ class _QuizScreenState extends State<QuizScreen> {
 
     final user = _authService.currentUser;
     if (user == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Puanı kaydetmek için giriş yapmalısınız.'),
-        ),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Puanı kaydetmek için giriş yapmalısınız.'),
+          ),
+        );
+      }
       setState(() {
         _isSubmitting = false;
       });
@@ -109,7 +116,7 @@ class _QuizScreenState extends State<QuizScreen> {
     }
 
     try {
-      // PUAN KORUMASI KONTROLÜ
+      // Puan koruması
       final solvedDoc = await _firestore
           .collection('users')
           .doc(user.uid)
@@ -118,22 +125,19 @@ class _QuizScreenState extends State<QuizScreen> {
           .get();
 
       if (solvedDoc.exists) {
-        // TEST ZATEN ÇÖZÜLMÜŞ!
         if (mounted) {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => ResultScreen(
-                fromHistory: true, // Geçmiş sonucu göster
-                solvedData: solvedDoc.data(), // Mevcut sonucu yolla
-              ),
+              builder: (context) =>
+                  ResultScreen(fromHistory: true, solvedData: solvedDoc.data()),
             ),
           );
         }
-        return; // Fonksiyondan çık, puan kaydetme
+        return;
       }
 
-      // (Test daha önce çözülmemiş, normal devam et)
+      // Puan hesaplama
       int dogruSayisi = 0;
       int yanlisSayisi = 0;
       for (var question in _questions) {
@@ -149,14 +153,17 @@ class _QuizScreenState extends State<QuizScreen> {
       }
       int puan = (dogruSayisi * 100) + (_secondsRemaining * 5);
 
-      // 1. KAYIT: Çözülen testin belgesini oluştur
+      // 1. KAYIT: Çözülen test belgesi
       Map<String, dynamic> newSolvedData = {
+        'quizBaslik': widget.quizBaslik,
+        'kategoriId': widget.kategoriId, // <<< KATEGORI ID EKLENDİ
         'puan': puan,
         'tarih': FieldValue.serverTimestamp(),
         'dogruSayisi': dogruSayisi,
         'yanlisSayisi': yanlisSayisi,
         'harcananSureSn': (widget.sureDakika * 60) - _secondsRemaining,
       };
+
       await _firestore
           .collection('users')
           .doc(user.uid)
@@ -164,12 +171,12 @@ class _QuizScreenState extends State<QuizScreen> {
           .doc(widget.quizId)
           .set(newSolvedData);
 
-      // 2. KAYIT: Kullanıcının toplam puanını güncelle
+      // 2. KAYIT: Toplam puan
       await _firestore.collection('users').doc(user.uid).set({
         'toplamPuan': FieldValue.increment(puan),
       }, SetOptions(merge: true));
 
-      // Kayıt başarılı, Sonuç Ekranına Git
+      // Sonuç Ekranına Git
       if (mounted) {
         Navigator.pushReplacement(
           context,
@@ -179,7 +186,7 @@ class _QuizScreenState extends State<QuizScreen> {
               puan: puan,
               dogruSayisi: dogruSayisi,
               soruSayisi: widget.soruSayisi,
-              fromHistory: false, // Yeni çözüldü
+              fromHistory: false,
             ),
           ),
         );
@@ -273,10 +280,23 @@ class _QuizScreenState extends State<QuizScreen> {
             ),
             const Divider(height: 20),
 
-            Text(questionText, style: Theme.of(context).textTheme.titleLarge),
+            Expanded(
+              // Soru metninin uzun olabileceği düşünülerek Expanded eklendi
+              child: SingleChildScrollView(
+                // Kaydırılabilir yapıldı
+                child: Text(
+                  questionText,
+                  style: Theme.of(context).textTheme.titleLarge,
+                  textAlign: TextAlign.center, // Ortalandı
+                ),
+              ),
+            ),
             const SizedBox(height: 20),
 
+            // Seçenekler (Sabit yükseklik veya Expanded ile kontrol edilebilir)
             Expanded(
+              // Seçeneklerin de kaydırılabilir olması için
+              flex: 2, // Soru metnine göre daha fazla yer kaplasın
               child: ListView.builder(
                 itemCount: options.length,
                 itemBuilder: (context, index) {
@@ -299,39 +319,53 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                if (_currentQuestionIndex > 0)
-                  ElevatedButton(
-                    onPressed: _previousQuestion,
-                    child: const Text('Önceki'),
-                  )
-                else
-                  Container(),
-
-                _currentQuestionIndex == _questions.length - 1
-                    ? ElevatedButton(
-                        onPressed: _isSubmitting ? null : _submitQuiz,
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.green,
+            // Navigasyon Butonları
+            Padding(
+              // Butonlara biraz padding eklendi
+              padding: const EdgeInsets.only(top: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  if (_currentQuestionIndex > 0)
+                    ElevatedButton.icon(
+                      // İkon eklendi
+                      onPressed: _previousQuestion,
+                      icon: const Icon(Icons.arrow_back),
+                      label: const Text('Önceki'),
+                    )
+                  else
+                    const SizedBox(width: 100), // Boşluk bırakmak için SizedBox
+                  // Sonraki Soru veya Testi Bitir Butonu
+                  _currentQuestionIndex == _questions.length - 1
+                      ? ElevatedButton.icon(
+                          // İkon eklendi
+                          onPressed: _isSubmitting ? null : _submitQuiz,
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.green,
+                          ),
+                          icon: _isSubmitting
+                              ? Container(
+                                  // Buton içindeki progress indicator boyutu ayarlandı
+                                  width: 18,
+                                  height: 18,
+                                  child: const CircularProgressIndicator(
+                                    color: Colors.white,
+                                    strokeWidth: 2,
+                                  ),
+                                )
+                              : const Icon(Icons.check_circle),
+                          label: _isSubmitting
+                              ? const Text('...')
+                              : const Text('Testi Bitir'),
+                        )
+                      : ElevatedButton.icon(
+                          // İkon eklendi
+                          onPressed: _nextQuestion,
+                          icon: const Icon(Icons.arrow_forward),
+                          label: const Text('Sonraki'),
                         ),
-                        child: _isSubmitting
-                            ? const SizedBox(
-                                height: 20,
-                                width: 20,
-                                child: CircularProgressIndicator(
-                                  color: Colors.white,
-                                  strokeWidth: 2,
-                                ),
-                              )
-                            : const Text('Testi Bitir'),
-                      )
-                    : ElevatedButton(
-                        onPressed: _nextQuestion,
-                        child: const Text('Sonraki'),
-                      ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

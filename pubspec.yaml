@@ -21,6 +21,7 @@ dependencies:
   firebase_auth: ^6.1.1
   cloud_firestore: ^6.0.3
   google_sign_in: ^6.1.0
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -36,12 +37,11 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - assets/sorular.json
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

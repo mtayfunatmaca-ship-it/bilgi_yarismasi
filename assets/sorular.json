@@ -1,0 +1,161 @@
+{
+  "kategoriler": [
+    {
+      "id": "tarih",
+      "ad": "Tarih",
+      "sira": 1
+    },
+    {
+      "id": "matematik",
+      "ad": "Matematik",
+      "sira": 2
+    },
+    {
+      "id": "cografya",
+      "ad": "Coğrafya",
+      "sira": 3
+    },
+    {
+      "id": "turkce",
+      "ad": "Türkçe",
+      "sira": 4
+    },
+    {
+      "id": "vatandaslik",
+      "ad": "Vatandaşlık",
+      "sira": 5
+    }
+  ],
+  "quizzes": [
+    {
+      "baslik": "Osmanlı Kuruluş Dönemi",
+      "kategoriId": "tarih",
+      "soruSayisi": 2,
+      "sureDakika": 5,
+      "sorular": [
+        {
+          "soruMetni": "İlk Osmanlı padişahı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": ["Orhan Bey", "Osman Bey", "I. Murat", "Ertuğrul Gazi"]
+        },
+        {
+          "soruMetni": "Ankara Savaşı hangi tarihte yapılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["1402", "1453", "1389", "1326"]
+        }
+      ]
+    },
+    {
+      "baslik": "Temel Dört İşlem",
+      "kategoriId": "matematik",
+      "soruSayisi": 3,
+      "sureDakika": 8,
+      "sorular": [
+        {
+          "soruMetni": "12 * 5 kaçtır?",
+          "dogruCevapIndex": 2,
+          "secenekler": ["50", "55", "60", "65"]
+        },
+        {
+          "soruMetni": "100 / 4 kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["25", "20", "30", "50"]
+        },
+        {
+          "soruMetni": "17 + 8 kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["25", "24", "26", "23"]
+        }
+      ]
+    },
+    {
+      "baslik": "Türkiye Coğrafyası - Dağlar",
+      "kategoriId": "cografya",
+      "soruSayisi": 3,
+      "sureDakika": 7,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'nin en yüksek dağı hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["Ağrı Dağı", "Erciyes Dağı", "Süphan Dağı", "Kaçkar Dağı"]
+        },
+        {
+          "soruMetni": "Uludağ hangi ilimizdedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": ["İstanbul", "Ankara", "Bursa", "İzmir"]
+        },
+        {
+          "soruMetni": "Toros Dağları hangi bölgemizde uzanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": ["Karadeniz", "Akdeniz", "Ege", "Doğu Anadolu"]
+        }
+      ]
+    },
+    {
+      "baslik": "Yazım Kuralları - 'de' Eki",
+      "kategoriId": "turkce",
+      "soruSayisi": 3,
+      "sureDakika": 6,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde 'de'nin yazımı doğrudur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bende seninle geleceğim.",
+            "Kitap da ilginç bilgiler var.",
+            "Okulda bugün tören var.",
+            "Sen de bizimle gelmelisin."
+          ]
+        },
+        {
+          "soruMetni": "Bulunma hal eki olan '-de' nasıl yazılır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bitişik",
+            "Ayrı",
+            "Kesme işaretiyle",
+            "Her zaman büyük harfle"
+          ]
+        },
+        {
+          "soruMetni": "'... dünya da böyle.' cümlesinde boşluğa ne gelmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": ["Demekki", "Demek ki", "Demekki de", "Demek ki de"]
+        }
+      ]
+    },
+    {
+      "baslik": "Temel Hukuk Kavramları",
+      "kategoriId": "vatandaslik",
+      "soruSayisi": 3,
+      "sureDakika": 7,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nin yönetim şekli nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["Cumhuriyet", "Monarşi", "Oligarşi", "Teokrasi"]
+        },
+        {
+          "soruMetni": "Yasama yetkisi kime aittir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhurbaşkanı",
+            "Türkiye Büyük Millet Meclisi (TBMM)",
+            "Mahkemeler",
+            "Bakanlar Kurulu"
+          ]
+        },
+        {
+          "soruMetni": "18 yaşını dolduran her Türk vatandaşı hangi hakka sahiptir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Memur olma",
+            "Milletvekili seçilme",
+            "Oy kullanma",
+            "Pasaport alma"
+          ]
+        }
+      ]
+    }
+  ]
+}

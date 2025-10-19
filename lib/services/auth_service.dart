@@ -1,23 +1,21 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:cloud_firestore/cloud_firestore.dart'; // Firestore eklendi
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance; // EKLENDİ
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // 1. GİRİŞ DURUMUNU DİNLE (Stream)
   Stream<User?> get authStateChanges => _auth.authStateChanges();
-
-  // 2. MEVCUT KULLANICIYI AL
   User? get currentUser => _auth.currentUser;
 
-  // 3. E-POSTA VE ŞİFRE İLE KAYIT OLMA (GÜNCELLENDİ)
+  // E-POSTA VE ŞİFRE İLE KAYIT OLMA
   Future<User?> createUserWithEmailAndPassword(
     String email,
-    String password,
-  ) async {
+    String password, {
+    required String username,
+  }) async {
     try {
       UserCredential result = await _auth.createUserWithEmailAndPassword(
         email: email,
@@ -25,20 +23,15 @@ class AuthService {
       );
       User? user = result.user;
 
-      // --- YENİ EKLENEN KISIM ---
       if (user != null) {
-        // Yeni kullanıcı için Firestore'da hemen bir belge oluştur
         await _firestore.collection('users').doc(user.uid).set({
           'email': user.email,
-          'kullaniciAdi':
-              user.email?.split('@').first ??
-              'Kullanici', // E-postadan kullanıcı adı türet
-          'profilFotoUrl': '', // Varsayılan
+          'kullaniciAdi': username,
+          'profilFotoUrl': '',
           'toplamPuan': 0,
           'kayitTarihi': FieldValue.serverTimestamp(),
         });
       }
-      // --- EKLENEN KISIM BİTTİ ---
 
       return user;
     } on FirebaseAuthException catch (e) {
@@ -47,7 +40,7 @@ class AuthService {
     }
   }
 
-  // 4. E-POSTA VE ŞİFRE İLE GİRİŞ YAPMA (Değişiklik yok)
+  // E-POSTA VE ŞİFRE İLE GİRİŞ
   Future<User?> signInWithEmailAndPassword(
     String email,
     String password,
@@ -64,14 +57,11 @@ class AuthService {
     }
   }
 
-  // 5. GOOGLE İLE GİRİŞ YAPMA (GÜNCELLENDİ)
+  // GOOGLE İLE GİRİŞ
   Future<User?> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      if (googleUser == null) {
-        // Kullanıcı pencereyi kapattı
-        return null;
-      }
+      if (googleUser == null) return null;
 
       final GoogleSignInAuthentication googleAuth =
           await googleUser.authentication;
@@ -84,38 +74,29 @@ class AuthService {
       UserCredential result = await _auth.signInWithCredential(credential);
       User? user = result.user;
 
-      // --- YENİ EKLENEN KISIM ---
       if (user != null) {
-        // Firestore'da bu kullanıcı için belge var mı diye kontrol et
         final doc = await _firestore.collection('users').doc(user.uid).get();
-
         if (!doc.exists) {
-          // Belge yoksa (Google ile ilk giriş, yani kayıt), oluştur
           await _firestore.collection('users').doc(user.uid).set({
             'email': user.email,
-            'kullaniciAdi': user.displayName ?? user.email?.split('@').first,
+            'kullaniciAdi':
+                user.displayName ?? user.email?.split('@').first ?? 'Kullanici',
             'profilFotoUrl': user.photoURL ?? '',
             'toplamPuan': 0,
             'kayitTarihi': FieldValue.serverTimestamp(),
           });
         }
-        // Belge varsa (normal giriş) bir şey yapmaya gerek yok
       }
-      // --- EKLENEN KISIM BİTTİ ---
 
       return user;
-    } on FirebaseAuthException catch (e) {
-      print('Google Giriş Hatası: ${e.message}');
-      return null;
     } catch (e) {
-      print(e);
+      print('Google Giriş Hatası: $e');
       return null;
     }
   }
 
-  // 6. ÇIKIŞ YAPMA
   Future<void> signOut() async {
-    await _googleSignIn.signOut(); // Google hesabından da çıkış yap
-    await _auth.signOut(); // Firebase'den çıkış yap
+    await _googleSignIn.signOut();
+    await _auth.signOut();
   }
 }
