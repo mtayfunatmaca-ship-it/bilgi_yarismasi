@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 
 class LeaderboardScreen extends StatefulWidget {
@@ -13,6 +14,22 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
   int _currentSegment = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    // Analytics ile liderlik tablosu görüntülenmesini takip et
+    FirebaseAnalytics.instance.logEvent(
+      name: 'view_leaderboard',
+      parameters: {
+        'segment': _currentSegment == 0
+            ? 'genel'
+            : _currentSegment == 1
+            ? 'haftalik'
+            : 'aylik',
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +91,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                       .snapshots(),
                   puanField: 'toplamPuan',
                   currentUserId: currentUserId,
-                  emptyMessage: 'Henüz puan alan kimse yok.',
+                  emptyMessage:
+                      'Henüz puan alan kimse yok. Bir test çözerek sıralamaya katıl!',
                 ),
                 _buildLeaderboardContent(
                   stream: _firestore
@@ -83,7 +101,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                       .snapshots(),
                   puanField: 'puan',
                   currentUserId: currentUserId,
-                  emptyMessage: 'Bu hafta henüz kimse test çözmedi.',
+                  emptyMessage:
+                      'Bu hafta henüz kimse test çözmedi. Hemen bir test çöz!',
                 ),
                 _buildLeaderboardContent(
                   stream: _firestore
@@ -92,7 +111,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                       .snapshots(),
                   puanField: 'puan',
                   currentUserId: currentUserId,
-                  emptyMessage: 'Bu ay henüz kimse test çözmedi.',
+                  emptyMessage:
+                      'Bu ay henüz kimse test çözmedi. Hemen bir test çöz!',
                 ),
               ],
             ),
@@ -117,6 +137,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
           onTap: () {
             setState(() {
               _currentSegment = index;
+              // Segment değiştiğinde analytics olayı gönder
+              FirebaseAnalytics.instance.logEvent(
+                name: 'view_leaderboard',
+                parameters: {'segment': text.toLowerCase()},
+              );
             });
           },
           child: Container(
@@ -160,11 +185,42 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     return StreamBuilder<QuerySnapshot>(
       stream: stream,
       builder: (context, snapshot) {
+        // Hata ayıklama için log ekle
+        print('Snapshot state: ${snapshot.connectionState}');
+        if (snapshot.hasData) {
+          print('Documents: ${snapshot.data!.docs.length}');
+          for (var doc in snapshot.data!.docs) {
+            print('Doc data: ${doc.data()}');
+          }
+        }
+
+        // Yükleme durumu için zaman aşımı ekle
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return FutureBuilder(
+            future: Future.delayed(const Duration(seconds: 10)),
+            builder: (context, _) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const CircularProgressIndicator(),
+                      const SizedBox(height: 16),
+                      Text(
+                        'Yükleniyor, lütfen bekleyin...',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ],
+                  ),
+                );
+              }
+              return const Center(child: CircularProgressIndicator());
+            },
+          );
         }
 
         if (snapshot.hasError) {
+          print('Error: ${snapshot.error}');
           return _buildErrorState();
         }
 
@@ -222,6 +278,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
       ),
       child: Column(
         children: [
+          // 1. sıra - Ortada
           _buildPodiumUser(
             userData: topThree[0].data() as Map<String, dynamic>,
             rank: 1,
@@ -233,7 +290,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              const SizedBox(height: 20),
               if (topThree.length > 1)
                 _buildPodiumUser(
                   userData: topThree[1].data() as Map<String, dynamic>,
@@ -242,7 +298,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                   isCurrentUser: _isCurrentUser(topThree[1], currentUserId),
                   height: 120,
                 ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               if (topThree.length > 2)
                 _buildPodiumUser(
                   userData: topThree[2].data() as Map<String, dynamic>,
@@ -253,8 +309,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 ),
             ],
           ),
-
-          // 1. sıra - Ortada
         ],
       ),
     );
@@ -566,10 +620,17 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
           ),
           const SizedBox(height: 8),
           Text(
-            'Liderlik tablosu yüklenemedi',
+            'Liderlik tablosu yüklenemedi. Lütfen tekrar deneyin.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: colorScheme.onSurface.withOpacity(0.6),
             ),
+          ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {}); // Yeniden yüklemeyi tetikle
+            },
+            child: const Text('Yeniden Dene'),
           ),
         ],
       ),
@@ -597,6 +658,14 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 color: colorScheme.onSurface.withOpacity(0.5),
               ),
             ),
+          ),
+          const SizedBox(height: 16),
+          ElevatedButton(
+            onPressed: () {
+              // Test ekranına yönlendir
+              Navigator.pushNamed(context, '/quiz');
+            },
+            child: const Text('Test Çöz'),
           ),
         ],
       ),
