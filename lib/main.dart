@@ -1,3 +1,4 @@
+import 'package:bilgi_yarismasi/services/firebase_data_uploader.dart';
 import 'package:bilgi_yarismasi/widgets/connectivity_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -16,7 +17,7 @@ void main() async {
   // --- YENİ EKLENEN KISIM BİTTİ ---
 
   // FirebaseDataUploader yorumda kalmalı, bu doğru.
-  // final uploader = FirebaseDataUploader();
+  //final uploader = FirebaseDataUploader();
   //await uploader.uploadDataFromJson();
 
   runApp(const MyApp());
