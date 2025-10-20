@@ -35,17 +35,16 @@ class _QuizScreenState extends State<QuizScreen> {
   Timer? _timer;
   int _secondsRemaining = 0;
   List<QueryDocumentSnapshot> _achievementDefinitions = []; // Başarı tanımları
-  String? _fetchError; // <<< SORU YÜKLEME HATASINI TUTMAK İÇİN STATE (EKLENDİ)
+  String? _fetchError; // <<< SORU YÜKLEME HATASINI TUTMAK İÇİN STATE
 
   @override
   void initState() {
     super.initState();
     _fetchQuestions(); // Başlangıçta soruları yükle
-    // Timer'ı _fetchQuestions içinde başlatacağız
     _loadAchievementDefinitions();
   }
 
-  // Başarı tanımlarını Firestore'dan çeker (aynı)
+  // Başarı tanımlarını Firestore'dan çeker
   Future<void> _loadAchievementDefinitions() async {
     try {
       final snapshot = await _firestore.collection('achievements').get();
@@ -59,13 +58,13 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
-  // Soruları Firestore'dan çeker (Hata yönetimi güncellendi)
+  // Soruları Firestore'dan çeker (Hata yönetimi ve Timer başlatma güncellendi)
   Future<void> _fetchQuestions() async {
     if (!mounted) return;
     setState(() {
       _isLoading = true;
       _fetchError = null;
-    }); // Yüklemeye başla, eski hatayı temizle
+    });
     try {
       final snapshot = await _firestore
           .collection('questions')
@@ -73,7 +72,7 @@ class _QuizScreenState extends State<QuizScreen> {
           .get();
       if (mounted) {
         var fetchedQuestions = snapshot.docs;
-        fetchedQuestions.shuffle(); // Soruları karıştır
+        fetchedQuestions.shuffle();
 
         final int countToTake =
             (widget.soruSayisi > 0 &&
@@ -95,7 +94,6 @@ class _QuizScreenState extends State<QuizScreen> {
       if (mounted) {
         setState(() {
           _isLoading = false;
-          // Hata mesajını daha kullanıcı dostu yapalım
           String errorMsg = "Sorular yüklenirken bir hata oluştu.";
           if (e is FirebaseException) {
             if (e.code == 'permission-denied')
@@ -103,13 +101,13 @@ class _QuizScreenState extends State<QuizScreen> {
             else if (e.code == 'unavailable')
               errorMsg = "Sunucuya bağlanılamadı. İnternetinizi kontrol edin.";
           }
-          _fetchError = errorMsg; // <<< Hata mesajını state'e kaydet
+          _fetchError = errorMsg; // Hata mesajını state'e kaydet
         });
       }
     }
   }
 
-  // Timer'ı başlatır (aynı)
+  // Timer'ı başlatır
   void _startTimer() {
     _timer?.cancel();
     _secondsRemaining = widget.sureDakika * 60;
@@ -135,12 +133,12 @@ class _QuizScreenState extends State<QuizScreen> {
     super.dispose();
   }
 
-  // Cevap seçme (aynı)
+  // Cevap seçme
   void _selectAnswer(String questionId, int selectedIndex) {
     setState(() => _selectedAnswers[questionId] = selectedIndex);
   }
 
-  // Testi bitirme ve kaydetme (Başarı kontrolü içerir, aynı)
+  // Testi bitirme ve kaydetme (Başarı kontrolü içerir)
   Future<void> _submitQuiz() async {
     _timer?.cancel();
     if (_isSubmitting || !mounted) return;
@@ -150,13 +148,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
     final user = _authService.currentUser;
     if (user == null) {
-      if (mounted) {
+      if (mounted)
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Puanı kaydetmek için giriş yapmalısınız.'),
           ),
         );
-      }
       if (mounted) setState(() => _isSubmitting = false);
       return;
     }
@@ -170,7 +167,7 @@ class _QuizScreenState extends State<QuizScreen> {
           .doc(widget.quizId);
       final solvedDoc = await solvedDocRef.get();
       if (solvedDoc.exists) {
-        if (mounted) {
+        if (mounted)
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
@@ -178,7 +175,6 @@ class _QuizScreenState extends State<QuizScreen> {
                   ResultScreen(fromHistory: true, solvedData: solvedDoc.data()),
             ),
           );
-        }
         if (mounted) setState(() => _isSubmitting = false);
         return;
       }
@@ -217,7 +213,7 @@ class _QuizScreenState extends State<QuizScreen> {
         'toplamPuan': FieldValue.increment(puan),
       }, SetOptions(merge: true));
 
-      // --- BAŞARI KONTROLÜ ---
+      // BAŞARI KONTROLÜ
       final updatedUserDoc = await userDocRef.get();
       final updatedTotalScore =
           (updatedUserDoc.data()?['toplamPuan'] as num? ?? 0).toInt();
@@ -233,7 +229,6 @@ class _QuizScreenState extends State<QuizScreen> {
         solvedCount: updatedSolvedCount,
         totalScore: updatedTotalScore,
       );
-      // --- BAŞARI KONTROLÜ BİTTİ ---
 
       // Sonuç Ekranına Git
       if (mounted) {
@@ -244,7 +239,7 @@ class _QuizScreenState extends State<QuizScreen> {
               quizId: widget.quizId,
               puan: puan,
               dogruSayisi: dogruSayisi,
-              soruSayisi: actualQuestionCount, // Gerçek soru sayısını gönder
+              soruSayisi: actualQuestionCount,
               fromHistory: false,
             ),
           ),
@@ -259,17 +254,16 @@ class _QuizScreenState extends State<QuizScreen> {
         else if (e.code == 'unavailable')
           errorMessage = 'Sunucuya bağlanılamadı.';
       }
-      if (mounted) {
+      if (mounted)
         ScaffoldMessenger.of(
           context,
         ).showSnackBar(SnackBar(content: Text(errorMessage)));
-      }
     } finally {
       if (mounted) setState(() => _isSubmitting = false);
     }
   }
 
-  // Başarıları kontrol etme ve kazandırma (aynı, null safety düzeltmeleriyle)
+  // Başarıları kontrol etme ve kazandırma
   Future<void> _checkAndGrantAchievements({
     required String userId,
     required int solvedCount,
@@ -345,13 +339,12 @@ class _QuizScreenState extends State<QuizScreen> {
     }
   }
 
-  // Başarı kazanıldı popup'ı (aynı, null safety düzeltmeleriyle)
+  // Başarı kazanıldı popup'ı
   void _showAchievementEarnedDialog(Map<String, dynamic> achievementData) {
     if (!mounted) return;
     final emoji = achievementData['emoji'] as String? ?? '🏆';
     final name = achievementData['name'] as String? ?? 'Başarı';
     final description = achievementData['description'] as String? ?? '';
-
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -361,7 +354,7 @@ class _QuizScreenState extends State<QuizScreen> {
           ),
           title: Row(
             children: [
-              Text(emoji, style: TextStyle(fontSize: 28)),
+              Text(emoji, style: const TextStyle(fontSize: 28)),
               const SizedBox(width: 10),
               const Text("Yeni Başarı!"),
             ],
@@ -391,26 +384,31 @@ class _QuizScreenState extends State<QuizScreen> {
     );
   }
 
-  // Sonraki/Önceki soru fonksiyonları (aynı)
+  // Sonraki soru
   void _nextQuestion() {
-    if (_currentQuestionIndex < _questions.length - 1)
+    if (_currentQuestionIndex < _questions.length - 1) {
       setState(() => _currentQuestionIndex++);
+    }
   }
 
+  // Önceki soru
   void _previousQuestion() {
-    if (_currentQuestionIndex > 0) setState(() => _currentQuestionIndex--);
+    if (_currentQuestionIndex > 0) {
+      setState(() => _currentQuestionIndex--);
+    }
   }
 
-  // Zaman formatlama (aynı)
+  // Zaman formatlama
   String get _formattedTime {
     final minutes = (_secondsRemaining ~/ 60).toString().padLeft(2, '0');
     final seconds = (_secondsRemaining % 60).toString().padLeft(2, '0');
     return '$minutes:$seconds';
   }
 
+  // === build METODU (Hata Yönetimi Dahil) ===
   @override
   Widget build(BuildContext context) {
-    // --- YÜKLENİYOR DURUMU ---
+    // 1. YÜKLENİYOR DURUMU
     if (_isLoading) {
       return Scaffold(
         appBar: AppBar(title: Text(widget.quizBaslik)),
@@ -418,9 +416,8 @@ class _QuizScreenState extends State<QuizScreen> {
       );
     }
 
-    // --- HATA DURUMU ---
+    // 2. HATA DURUMU
     if (_fetchError != null) {
-      // <<< EKLENDİ: Hata varsa göster
       return Scaffold(
         appBar: AppBar(title: Text(widget.quizBaslik)),
         body: Center(
@@ -468,9 +465,8 @@ class _QuizScreenState extends State<QuizScreen> {
       );
     }
 
-    // --- SORU YOK DURUMU ---
+    // 3. SORU YOK DURUMU
     if (_questions.isEmpty) {
-      // <<< EKLENDİ: Soru yoksa göster
       return Scaffold(
         appBar: AppBar(title: Text(widget.quizBaslik)),
         body: Center(
@@ -513,23 +509,18 @@ class _QuizScreenState extends State<QuizScreen> {
       );
     }
 
-    // --- SORULAR VARSA NORMAL EKRAN ---
-    final int actualQuestionCount =
-        _questions.length; // Gerçek soru sayısını kullan
-    // Soru sayısı uyarısı (opsiyonel ama iyi)
+    // 4. SORULAR VARSA NORMAL EKRAN
+    final int actualQuestionCount = _questions.length;
     if (actualQuestionCount != widget.soruSayisi && widget.soruSayisi > 0) {
       print(
         "Uyarı: Beklenen soru sayısı (${widget.soruSayisi}) ile bulunan ($actualQuestionCount) farklı!",
       );
     }
 
-    // Mevcut soruyu al (Index out of bounds hatasını önlemek için kontrol)
-    if (_currentQuestionIndex >= _questions.length) {
-      _currentQuestionIndex =
-          _questions.length - 1; // Güvenlik için son index'e ayarla
-    }
-    if (_currentQuestionIndex < 0)
-      _currentQuestionIndex = 0; // Güvenlik için ilk index'e ayarla
+    // Index kontrolü
+    if (_currentQuestionIndex >= _questions.length)
+      _currentQuestionIndex = _questions.length - 1;
+    if (_currentQuestionIndex < 0) _currentQuestionIndex = 0;
 
     final currentQuestion = _questions[_currentQuestionIndex];
     final questionId = currentQuestion.id;
@@ -542,6 +533,7 @@ class _QuizScreenState extends State<QuizScreen> {
         title: Text(widget.quizBaslik),
         actions: [
           Padding(
+            // Zamanlayıcı Chip
             padding: const EdgeInsets.only(right: 16.0),
             child: Chip(
               label: Text(
@@ -569,11 +561,13 @@ class _QuizScreenState extends State<QuizScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
+            // Soru Sayacı
             Text(
               'Soru ${_currentQuestionIndex + 1} / $actualQuestionCount',
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const Divider(height: 20),
+            // Soru Metni
             Expanded(
               child: SingleChildScrollView(
                 child: Text(
@@ -584,6 +578,7 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
             ),
             const SizedBox(height: 20),
+            // Seçenekler
             Expanded(
               flex: 2,
               child: ListView.builder(
@@ -605,9 +600,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       value: index,
                       groupValue: _selectedAnswers[questionId],
                       onChanged: (value) {
-                        if (value != null) {
-                          _selectAnswer(questionId, value);
-                        }
+                        if (value != null) _selectAnswer(questionId, value);
                       },
                       activeColor: Theme.of(context).colorScheme.primary,
                       contentPadding: const EdgeInsets.symmetric(
@@ -619,6 +612,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 },
               ),
             ),
+            // Navigasyon Butonları
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: Row(
@@ -644,7 +638,6 @@ class _QuizScreenState extends State<QuizScreen> {
                       ),
                     ),
                   ),
-
                   _currentQuestionIndex == _questions.length - 1
                       ? ElevatedButton.icon(
                           onPressed: _isSubmitting ? null : _submitQuiz,
