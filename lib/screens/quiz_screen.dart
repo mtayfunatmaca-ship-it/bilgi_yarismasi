@@ -31,11 +31,20 @@ class _QuizScreenState extends State<QuizScreen> {
   bool _isSubmitting = false; // Sonuç kaydediliyor mu?
   List<DocumentSnapshot> _questions = []; // Yüklenen sorular
   int _currentQuestionIndex = 0;
-  Map<String, int> _selectedAnswers = {};
-  Timer? _timer;
+  Map<String, int> _selectedAnswers = {}; // Kullanıcının seçtiği index'i tutar
+  Timer? _timer; // Ana süre sayacı
   int _secondsRemaining = 0;
   List<QueryDocumentSnapshot> _achievementDefinitions = []; // Başarı tanımları
-  String? _fetchError; // <<< SORU YÜKLEME HATASINI TUTMAK İÇİN STATE
+  String? _fetchError; // Soru yükleme hatasını tutmak için state
+
+  // --- YENİ STATE'LER ---
+  // Key: questionId, Value: true (doğru), false (yanlış), null (cevaplanmadı)
+  Map<String, bool?> _answerStatus = {};
+  // Otomatik sonraki soruya geçiş aktif mi?
+  bool _autoAdvanceEnabled = true; // Varsayılan olarak açık
+  // Otomatik geçiş için kullanılan timer
+  Timer? _advanceTimer;
+  // --- YENİ STATE'LER BİTTİ ---
 
   @override
   void initState() {
@@ -64,7 +73,7 @@ class _QuizScreenState extends State<QuizScreen> {
     setState(() {
       _isLoading = true;
       _fetchError = null;
-    });
+    }); // Yüklemeye başla
     try {
       final snapshot = await _firestore
           .collection('questions')
@@ -72,7 +81,7 @@ class _QuizScreenState extends State<QuizScreen> {
           .get();
       if (mounted) {
         var fetchedQuestions = snapshot.docs;
-        fetchedQuestions.shuffle();
+        fetchedQuestions.shuffle(); // Soruları karıştır
 
         final int countToTake =
             (widget.soruSayisi > 0 &&
@@ -109,7 +118,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   // Timer'ı başlatır
   void _startTimer() {
-    _timer?.cancel();
+    _timer?.cancel(); // Önceki timer varsa durdur
     _secondsRemaining = widget.sureDakika * 60;
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (!mounted) {
@@ -121,7 +130,13 @@ class _QuizScreenState extends State<QuizScreen> {
           _secondsRemaining--;
         } else {
           _timer?.cancel();
-          if (!_isSubmitting) _submitQuiz();
+          // Süre bittiğinde submit fonksiyonunu doğrudan çağırmadan önce
+          // kullanıcıya bir uyarı vermek daha iyi olabilir.
+          // Şimdilik doğrudan çağıralım:
+          if (!_isSubmitting) {
+            // Zaten submit oluyorsa tekrar çağırma
+            _submitQuiz();
+          }
         }
       });
     });
@@ -130,17 +145,45 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   void dispose() {
     _timer?.cancel();
+    _advanceTimer?.cancel(); // <<< Otomatik geçiş timer'ını da iptal et
     super.dispose();
   }
 
-  // Cevap seçme
-  void _selectAnswer(String questionId, int selectedIndex) {
-    setState(() => _selectedAnswers[questionId] = selectedIndex);
+  // CEVAP SEÇME MANTIĞI GÜNCELLENDİ
+  void _selectAnswer(String questionId, int selectedIndex, int correctIndex) {
+    if (_answerStatus.containsKey(questionId) || _isLoading || _isSubmitting)
+      return;
+
+    _advanceTimer?.cancel();
+
+    final bool isCorrect = selectedIndex == correctIndex;
+
+    setState(() {
+      _selectedAnswers[questionId] = selectedIndex;
+      _answerStatus[questionId] = isCorrect;
+    });
+
+    if (_autoAdvanceEnabled) {
+      _advanceTimer = Timer(const Duration(seconds: 2), () {
+        if (mounted) _moveToNextOrFinish();
+      });
+    }
+  }
+
+  // YENİ YARDIMCI FONKSİYON: Sonraki soruya geç veya bitir
+  void _moveToNextOrFinish() {
+    _advanceTimer?.cancel();
+    if (_currentQuestionIndex < _questions.length - 1) {
+      _nextQuestion();
+    } else {
+      _submitQuiz();
+    }
   }
 
   // Testi bitirme ve kaydetme (Başarı kontrolü içerir)
   Future<void> _submitQuiz() async {
     _timer?.cancel();
+    _advanceTimer?.cancel(); // Geçiş timer'ını da iptal et
     if (_isSubmitting || !mounted) return;
     setState(() {
       _isSubmitting = true;
@@ -386,6 +429,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   // Sonraki soru
   void _nextQuestion() {
+    _advanceTimer?.cancel(); // Manuel geçişte timer'ı iptal et
     if (_currentQuestionIndex < _questions.length - 1) {
       setState(() => _currentQuestionIndex++);
     }
@@ -393,6 +437,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
   // Önceki soru
   void _previousQuestion() {
+    _advanceTimer?.cancel(); // Manuel geçişte timer'ı iptal et
     if (_currentQuestionIndex > 0) {
       setState(() => _currentQuestionIndex--);
     }
@@ -405,7 +450,7 @@ class _QuizScreenState extends State<QuizScreen> {
     return '$minutes:$seconds';
   }
 
-  // === build METODU (Hata Yönetimi Dahil) ===
+  // === build METODU (Hata Yönetimi ve Anında Geri Bildirim Dahil) ===
   @override
   Widget build(BuildContext context) {
     // 1. YÜKLENİYOR DURUMU
@@ -527,14 +572,36 @@ class _QuizScreenState extends State<QuizScreen> {
     final questionData = currentQuestion.data() as Map<String, dynamic>? ?? {};
     final questionText = questionData['soruMetni'] ?? 'Soru yüklenemedi';
     final options = List<String>.from(questionData['secenekler'] ?? []);
+    final correctIndex =
+        (questionData['dogruCevapIndex'] as num?)?.toInt() ?? -1;
+    final bool? answerCorrectness = _answerStatus[questionId];
+    final bool isAnswered = answerCorrectness != null;
+    final int? userAnswerIndex = _selectedAnswers[questionId];
 
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.quizBaslik),
         actions: [
+          // Otomatik Geçiş Switch'i
+          Tooltip(
+            message: _autoAdvanceEnabled
+                ? 'Otomatik İlerleme Açık'
+                : 'Otomatik İlerleme Kapalı',
+            child: Switch(
+              value: _autoAdvanceEnabled,
+              onChanged: (value) {
+                setState(() {
+                  _autoAdvanceEnabled = value;
+                });
+                if (!value) _advanceTimer?.cancel();
+              },
+              activeColor: Colors.white, // AppBar'a uygun
+              activeTrackColor: Colors.white.withOpacity(0.5),
+            ),
+          ),
+          // Zamanlayıcı Chip
           Padding(
-            // Zamanlayıcı Chip
-            padding: const EdgeInsets.only(right: 16.0),
+            padding: const EdgeInsets.only(right: 8.0),
             child: Chip(
               label: Text(
                 _formattedTime,
@@ -578,46 +645,100 @@ class _QuizScreenState extends State<QuizScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            // Seçenekler
+            // Seçenekler (Geri Bildirimli)
             Expanded(
               flex: 2,
               child: ListView.builder(
                 itemCount: options.length,
                 itemBuilder: (context, index) {
+                  final bool isCorrectOption = index == correctIndex;
+                  final bool isSelectedOption = index == userAnswerIndex;
+                  Color cardColor = Theme.of(context).cardColor;
+                  Color borderColor = Theme.of(
+                    context,
+                  ).dividerColor.withOpacity(0.5);
+                  double elevation = 1;
+                  Icon? trailingIcon;
+
+                  if (isAnswered) {
+                    if (isCorrectOption) {
+                      cardColor = Colors.green.shade50;
+                      borderColor = Colors.green.shade300;
+                      elevation = 2;
+                      trailingIcon = Icon(
+                        Icons.check_circle_rounded,
+                        color: Colors.green.shade700,
+                      ); // İkon değişti
+                    } else if (isSelectedOption) {
+                      cardColor = Colors.red.shade50;
+                      borderColor = Colors.red.shade300;
+                      elevation = 2;
+                      trailingIcon = Icon(
+                        Icons.cancel_rounded,
+                        color: Colors.red.shade700,
+                      ); // İkon değişti
+                    } else {
+                      cardColor = Colors.grey.shade100.withOpacity(0.5);
+                      borderColor = Colors.grey.shade300.withOpacity(0.5);
+                      elevation = 0;
+                    }
+                  }
+
                   return Card(
-                    elevation: _selectedAnswers[questionId] == index ? 2 : 1,
+                    elevation: elevation,
                     margin: const EdgeInsets.symmetric(vertical: 6),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
-                    ),
-                    color: _selectedAnswers[questionId] == index
-                        ? Theme.of(
-                            context,
-                          ).colorScheme.primaryContainer.withOpacity(0.7)
-                        : Theme.of(context).cardColor,
-                    child: RadioListTile<int>(
-                      title: Text(options[index]),
-                      value: index,
-                      groupValue: _selectedAnswers[questionId],
-                      onChanged: (value) {
-                        if (value != null) _selectAnswer(questionId, value);
-                      },
-                      activeColor: Theme.of(context).colorScheme.primary,
-                      contentPadding: const EdgeInsets.symmetric(
-                        horizontal: 16,
-                        vertical: 4,
+                      side: BorderSide(
+                        color: borderColor,
+                        width: isAnswered ? 1.5 : 1,
                       ),
+                    ),
+                    color: cardColor,
+                    child: RadioListTile<int>(
+                      title: Text(
+                        options[index],
+                        style: TextStyle(
+                          color:
+                              (isAnswered &&
+                                  !isSelectedOption &&
+                                  !isCorrectOption)
+                              ? Colors.grey.shade600
+                              : null,
+                        ),
+                      ),
+                      value: index,
+                      groupValue: userAnswerIndex,
+                      // Cevaplanmışsa null yap
+                      onChanged: (isAnswered || correctIndex == -1)
+                          ? null
+                          : (value) {
+                              // correctIndex -1 ise de disable
+                              if (value != null)
+                                _selectAnswer(questionId, value, correctIndex);
+                            },
+                      activeColor: Theme.of(context).colorScheme.primary,
+                      secondary: trailingIcon, // Geri bildirim ikonu
+                      controlAffinity:
+                          ListTileControlAffinity.trailing, // Radio'yu sağa al
+                      contentPadding: const EdgeInsets.only(
+                        left: 16,
+                        right: 8,
+                        top: 4,
+                        bottom: 4,
+                      ), // Padding ayarlandı
                     ),
                   );
                 },
               ),
             ),
-            // Navigasyon Butonları
+            // Navigasyon Butonları (Güncellendi)
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // Önceki Buton
                   Opacity(
                     opacity: _currentQuestionIndex > 0 ? 1.0 : 0.0,
                     child: IgnorePointer(
@@ -638,46 +759,61 @@ class _QuizScreenState extends State<QuizScreen> {
                       ),
                     ),
                   ),
-                  _currentQuestionIndex == _questions.length - 1
-                      ? ElevatedButton.icon(
-                          onPressed: _isSubmitting ? null : _submitQuiz,
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.green.shade600,
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 10,
+
+                  // Sonraki / Bitir Butonu
+                  // Otomatik geçiş kapalıysa VEYA soru henüz cevaplanmamışsa göster
+                  if (!_autoAdvanceEnabled || !isAnswered)
+                    _currentQuestionIndex == _questions.length - 1
+                        ? ElevatedButton.icon(
+                            // Testi Bitir
+                            onPressed: (isAnswered && !_isSubmitting)
+                                ? _submitQuiz
+                                : null, // Cevaplanmışsa aktif
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.green.shade600,
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 10,
+                              ),
+                              disabledBackgroundColor: Colors.green.shade200,
                             ),
-                          ),
-                          icon: _isSubmitting
-                              ? Container(
-                                  width: 18,
-                                  height: 18,
-                                  child: const CircularProgressIndicator(
-                                    color: Colors.white,
-                                    strokeWidth: 2,
+                            icon: _isSubmitting
+                                ? Container(
+                                    width: 18,
+                                    height: 18,
+                                    child: const CircularProgressIndicator(
+                                      color: Colors.white,
+                                      strokeWidth: 2,
+                                    ),
+                                  )
+                                : const Icon(
+                                    Icons.check_circle_outline_rounded,
+                                    size: 18,
                                   ),
-                                )
-                              : const Icon(
-                                  Icons.check_circle_outline_rounded,
-                                  size: 18,
-                                ),
-                          label: Text(_isSubmitting ? '...' : 'Testi Bitir'),
-                        )
-                      : ElevatedButton.icon(
-                          onPressed: _nextQuestion,
-                          icon: const Icon(
-                            Icons.arrow_forward_ios_rounded,
-                            size: 16,
-                          ),
-                          label: const Text('Sonraki'),
-                          style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 10,
+                            label: Text(_isSubmitting ? '...' : 'Testi Bitir'),
+                          )
+                        : ElevatedButton.icon(
+                            // Sonraki Soru
+                            onPressed: isAnswered
+                                ? _nextQuestion
+                                : null, // Cevaplanmışsa aktif
+                            icon: const Icon(
+                              Icons.arrow_forward_ios_rounded,
+                              size: 16,
                             ),
-                          ),
-                        ),
+                            label: const Text('Sonraki'),
+                            style: ElevatedButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 16,
+                                vertical: 10,
+                              ),
+                              disabledBackgroundColor: Colors.grey.shade300,
+                            ),
+                          )
+                  // Otomatik geçiş açıksa VE soru cevaplanmışsa, boşluk bırak
+                  else
+                    const SizedBox(width: 100), // Buton kadar yer kaplasın
                 ],
               ),
             ),
