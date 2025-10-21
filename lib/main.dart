@@ -1,26 +1,29 @@
-import 'package:bilgi_yarismasi/services/firebase_data_uploader.dart';
 import 'package:bilgi_yarismasi/widgets/connectivity_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:bilgi_yarismasi/screens/auth_wrapper.dart';
-import 'package:intl/date_symbol_data_local.dart'; // <<< YENİ IMPORT EKLENDİ
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:provider/provider.dart'; // <<< YENİ IMPORT
+import 'package:bilgi_yarismasi/services/theme_notifier.dart'; // <<< YENİ IMPORT
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
-  // --- YENİ EKLENEN KISIM: 'intl' paketini başlat ---
-  // Uygulamanızda tarih formatlaması kullanmak için bu gereklidir.
-  // 'tr_TR' Türkçe formatlama içindir.
   await initializeDateFormatting('tr_TR', null);
-  // --- YENİ EKLENEN KISIM BİTTİ ---
 
-  // FirebaseDataUploader yorumda kalmalı, bu doğru.
-  //final uploader = FirebaseDataUploader();
-  //await uploader.uploadDataFromJson();
+  // Yorum satırları (doğru)
+  // final uploader = FirebaseDataUploader();
+  // await uploader.uploadDataFromJson();
 
-  runApp(const MyApp());
+  // --- DEĞİŞİKLİK: Uygulamayı ThemeNotifier ile sarmala ---
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => ThemeNotifier(), // ThemeNotifier'ı oluştur
+      child: const MyApp(), // Uygulamanı onun içine yerleştir
+    ),
+  );
+  // --- DEĞİŞİKLİK BİTTİ ---
 }
 
 class MyApp extends StatelessWidget {
@@ -28,16 +31,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bilgi Yarışması',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        // Ekstra İyileştirme: Modern Flutter için colorScheme kullanmak daha iyidir.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true, // Modern Material 3 tasarımını etkinleştirir.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const ConnectivityBanner(child: AuthWrapper()),
+    // --- DEĞİŞİKLİK: Rengi ThemeNotifier'dan dinle ---
+    // Consumer widget'ı, ThemeNotifier'daki değişiklikleri dinler
+    return Consumer<ThemeNotifier>(
+      builder: (context, themeNotifier, child) {
+        // themeNotifier.seedColor, o anki seçili rengi verir
+        return MaterialApp(
+          title: 'Bilgi Yarışması',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            // seedColor'u artık hardcoded değil, notifier'dan alıyoruz
+            colorScheme: ColorScheme.fromSeed(
+              seedColor: themeNotifier.seedColor, // <<< DİNAMİK RENK
+            ),
+            useMaterial3: true,
+            visualDensity: VisualDensity.adaptivePlatformDensity,
+          ),
+          // AuthWrapper'ı ConnectivityBanner ile sarmalamak (önceki kodunuzdaki gibi)
+          home: const ConnectivityBanner(child: AuthWrapper()),
+        );
+      },
     );
+    // --- DEĞİŞİKLİK BİTTİ ---
   }
 }
