@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
+// Gerekirse import edilecek: import 'package:bilgi_yarismasi/screens/main_screen.dart';
 
 class LeaderboardScreen extends StatefulWidget {
   const LeaderboardScreen({super.key});
@@ -10,27 +11,123 @@ class LeaderboardScreen extends StatefulWidget {
   State<LeaderboardScreen> createState() => _LeaderboardScreenState();
 }
 
-class _LeaderboardScreenState extends State<LeaderboardScreen> {
+class _LeaderboardScreenState extends State<LeaderboardScreen>
+    with TickerProviderStateMixin {
+  // <<< TickerProviderStateMixin önemli
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
   int _currentSegment = 0;
+  late AnimationController _animationController;
+  late Animation<double> _fadeAnimation;
+  late AnimationController _podiumAnimationController;
+  late List<Animation<double>> _podiumAnimations;
+
+  // Stream'leri tutmak için değişkenler (yenileme için)
+  Stream<QuerySnapshot>? _generalStream;
+  Stream<QuerySnapshot>? _weeklyStream;
+  Stream<QuerySnapshot>? _monthlyStream;
 
   @override
   void initState() {
     super.initState();
-    // Analytics ile liderlik tablosu görüntülenmesini takip et
+
+    // Stream'leri başlat
+    _initializeStreams();
+
+    // Fade animasyonu
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 600),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
+    );
+
+    // Podyum animasyonu
+    _podiumAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 1200),
+      vsync: this,
+    );
+    _podiumAnimations = List.generate(3, (index) {
+      double beginInterval = index == 0 ? 0.4 : (index == 1 ? 0.2 : 0.0);
+      double endInterval = index == 0 ? 1.0 : (index == 1 ? 0.8 : 0.6);
+      return Tween<double>(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
+          parent: _podiumAnimationController,
+          curve: Interval(beginInterval, endInterval, curve: Curves.elasticOut),
+        ),
+      );
+    });
+
+    // Animasyonları initState'de başlat
+    _animationController.forward();
+    _podiumAnimationController.forward(); // <<< Animasyonu initState'de başlat
+
+    // Analytics (aynı)
+    _logLeaderboardView(_currentSegment);
+  }
+
+  // Stream'leri başlatan veya yeniden oluşturan fonksiyon
+  void _initializeStreams() {
+    _generalStream = _firestore
+        .collection('users')
+        .orderBy('toplamPuan', descending: true)
+        .limit(100) // Limit eklendi
+        .snapshots();
+    _weeklyStream = _firestore
+        .collection('haftalikLiderlik')
+        .orderBy('puan', descending: true)
+        .limit(100) // Limit eklendi
+        .snapshots();
+    _monthlyStream = _firestore
+        .collection('aylikLiderlik')
+        .orderBy('puan', descending: true)
+        .limit(100) // Limit eklendi
+        .snapshots();
+  }
+
+  // Analytics loglama fonksiyonu
+  void _logLeaderboardView(int segmentIndex) {
+    String segmentName;
+    switch (segmentIndex) {
+      case 1:
+        segmentName = 'haftalik';
+        break;
+      case 2:
+        segmentName = 'aylik';
+        break;
+      default:
+        segmentName = 'genel';
+    }
     FirebaseAnalytics.instance.logEvent(
       name: 'view_leaderboard',
-      parameters: {
-        'segment': _currentSegment == 0
-            ? 'genel'
-            : _currentSegment == 1
-            ? 'haftalik'
-            : 'aylik',
-      },
+      parameters: {'segment': segmentName},
     );
   }
 
+  // Yenileme fonksiyonu (Animasyonları da sıfırlar)
+  Future<void> _refreshData() async {
+    // Animasyonları sıfırla ve başlat
+    _animationController.reset();
+    _podiumAnimationController.reset(); // <<< Podyum animasyonunu da sıfırla
+    _animationController.forward();
+    _podiumAnimationController.forward(); // <<< Podyum animasyonunu da başlat
+
+    // Stream'leri yeniden oluştur
+    setState(() {
+      _initializeStreams();
+    });
+    await Future.delayed(const Duration(milliseconds: 500));
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    _podiumAnimationController.dispose();
+    super.dispose();
+  }
+
+  // === build METODU ===
   @override
   Widget build(BuildContext context) {
     final String? currentUserId = _authService.currentUser?.uid;
@@ -38,137 +135,163 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Liderlik Tablosu',
-          style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800),
-        ),
-        centerTitle: true,
-        elevation: 0,
-      ),
-      body: Column(
-        children: [
-          // Segment Kontrolü
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Container(
-              decoration: BoxDecoration(
-                color: colorScheme.surfaceVariant.withOpacity(0.3),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              padding: const EdgeInsets.all(4),
-              child: Row(
-                children: [
-                  _buildSegmentButton(
-                    text: 'Genel',
-                    index: 0,
-                    isSelected: _currentSegment == 0,
-                  ),
-                  _buildSegmentButton(
-                    text: 'Haftalık',
-                    index: 1,
-                    isSelected: _currentSegment == 1,
-                  ),
-                  _buildSegmentButton(
-                    text: 'Aylık',
-                    index: 2,
-                    isSelected: _currentSegment == 2,
-                  ),
-                ],
+      backgroundColor: colorScheme.background,
+      body: RefreshIndicator(
+        // Ana yapıya RefreshIndicator eklendi
+        onRefresh: _refreshData,
+        color: colorScheme.primary,
+        child: CustomScrollView(
+          slivers: [
+            // AppBar (Görünüm biraz ayarlandı)
+            SliverAppBar(
+              floating: true, // Scroll yukarı yapınca hemen görünsün
+              pinned: true,
+              snap: true, // floating ile birlikte kullanılır
+              elevation: 1, // Hafif gölge
+              backgroundColor: colorScheme.surface, // Arka plan rengi
+              foregroundColor: colorScheme.onSurface, // İkon/Yazı rengi
+              centerTitle: true,
+              title: Text(
+                'Liderlik Tablosu',
+                style: textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-          ),
 
-          // Liderlik İçeriği
-          Expanded(
-            child: IndexedStack(
-              index: _currentSegment,
-              children: [
-                _buildLeaderboardContent(
-                  stream: _firestore
-                      .collection('users')
-                      .orderBy('toplamPuan', descending: true)
-                      .snapshots(),
-                  puanField: 'toplamPuan',
-                  currentUserId: currentUserId,
-                  emptyMessage:
-                      'Henüz puan alan kimse yok. Bir test çözerek sıralamaya katıl!',
+            // Segment Kontrolü
+            SliverToBoxAdapter(
+              child: FadeTransition(
+                opacity: _fadeAnimation,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    16.0,
+                    16.0,
+                    16.0,
+                    8.0,
+                  ), // Padding ayarlandı
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(
+                        color: colorScheme.outlineVariant.withOpacity(0.5),
+                      ), // Sınır eklendi
+                    ),
+                    padding: const EdgeInsets.all(4),
+                    child: Row(
+                      children: [
+                        _buildSegmentButton(
+                          text: 'Genel',
+                          index: 0,
+                          isSelected: _currentSegment == 0,
+                        ),
+                        _buildSegmentButton(
+                          text: 'Haftalık',
+                          index: 1,
+                          isSelected: _currentSegment == 1,
+                        ),
+                        _buildSegmentButton(
+                          text: 'Aylık',
+                          index: 2,
+                          isSelected: _currentSegment == 2,
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                _buildLeaderboardContent(
-                  stream: _firestore
-                      .collection('haftalikLiderlik')
-                      .orderBy('puan', descending: true)
-                      .snapshots(),
-                  puanField: 'puan',
-                  currentUserId: currentUserId,
-                  emptyMessage:
-                      'Bu hafta henüz kimse test çözmedi. Hemen bir test çöz!',
-                ),
-                _buildLeaderboardContent(
-                  stream: _firestore
-                      .collection('aylikLiderlik')
-                      .orderBy('puan', descending: true)
-                      .snapshots(),
-                  puanField: 'puan',
-                  currentUserId: currentUserId,
-                  emptyMessage:
-                      'Bu ay henüz kimse test çözmedi. Hemen bir test çöz!',
-                ),
-              ],
+              ),
             ),
-          ),
-        ],
+
+            // Liderlik İçeriği
+            SliverPadding(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).padding.bottom + 16,
+              ), // Alt boşluk
+              sliver: SliverToBoxAdapter(
+                child: IndexedStack(
+                  index: _currentSegment,
+                  children: [
+                    // Stream'leri state değişkenlerinden alıyoruz
+                    if (_generalStream != null)
+                      _buildLeaderboardContent(
+                        stream: _generalStream!,
+                        puanField: 'toplamPuan',
+                        currentUserId: currentUserId,
+                        emptyMessage:
+                            'Henüz puan alan kimse yok. Bir test çözerek sıralamaya katıl!',
+                      )
+                    else
+                      const Center(
+                        child: CircularProgressIndicator(),
+                      ), // Stream null ise yükleniyor göster
+                    if (_weeklyStream != null)
+                      _buildLeaderboardContent(
+                        stream: _weeklyStream!,
+                        puanField: 'puan',
+                        currentUserId: currentUserId,
+                        emptyMessage:
+                            'Bu hafta henüz kimse test çözmedi. Hemen bir test çöz!',
+                      )
+                    else
+                      const Center(child: CircularProgressIndicator()),
+                    if (_monthlyStream != null)
+                      _buildLeaderboardContent(
+                        stream: _monthlyStream!,
+                        puanField: 'puan',
+                        currentUserId: currentUserId,
+                        emptyMessage:
+                            'Bu ay henüz kimse test çözmedi. Hemen bir test çöz!',
+                      )
+                    else
+                      const Center(child: CircularProgressIndicator()),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
+  // === build METODU SONU ===
 
+  // === YARDIMCI WIDGET'LAR ===
+
+  // Segment Butonu
   Widget _buildSegmentButton({
     required String text,
     required int index,
     required bool isSelected,
   }) {
     final colorScheme = Theme.of(context).colorScheme;
-
     return Expanded(
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(12),
-          onTap: () {
+      child: GestureDetector(
+        onTap: () {
+          if (_currentSegment != index) {
             setState(() {
               _currentSegment = index;
-              // Segment değiştiğinde analytics olayı gönder
-              FirebaseAnalytics.instance.logEvent(
-                name: 'view_leaderboard',
-                parameters: {'segment': text.toLowerCase()},
-              );
+              _logLeaderboardView(index);
+              _podiumAnimationController.reset();
+              _podiumAnimationController.forward();
             });
-          },
-          child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
-            decoration: BoxDecoration(
-              color: isSelected ? colorScheme.primary : Colors.transparent,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: isSelected
-                  ? [
-                      BoxShadow(
-                        color: colorScheme.primary.withOpacity(0.3),
-                        blurRadius: 8,
-                        offset: const Offset(0, 2),
-                      ),
-                    ]
-                  : null,
-            ),
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: isSelected
-                    ? colorScheme.onPrimary
-                    : colorScheme.onSurface.withOpacity(0.6),
-              ),
+          }
+        },
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+          decoration: BoxDecoration(
+            color: isSelected ? colorScheme.primary : Colors.transparent,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+              color: isSelected
+                  ? colorScheme.onPrimary
+                  : colorScheme.onSurfaceVariant,
             ),
           ),
         ),
@@ -176,6 +299,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     );
   }
 
+  // Liderlik İçeriği Oluşturucu
   Widget _buildLeaderboardContent({
     required Stream<QuerySnapshot> stream,
     required String puanField,
@@ -185,271 +309,247 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     return StreamBuilder<QuerySnapshot>(
       stream: stream,
       builder: (context, snapshot) {
-        // Hata ayıklama için log ekle
-        print('Snapshot state: ${snapshot.connectionState}');
-        if (snapshot.hasData) {
-          print('Documents: ${snapshot.data!.docs.length}');
-          for (var doc in snapshot.data!.docs) {
-            print('Doc data: ${doc.data()}');
-          }
-        }
-
-        // Yükleme durumu için zaman aşımı ekle
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return FutureBuilder(
-            future: Future.delayed(const Duration(seconds: 10)),
-            builder: (context, _) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const CircularProgressIndicator(),
-                      const SizedBox(height: 16),
-                      Text(
-                        'Yükleniyor, lütfen bekleyin...',
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                    ],
-                  ),
-                );
-              }
-              return const Center(child: CircularProgressIndicator());
-            },
-          );
+          return const Center(child: CircularProgressIndicator()); // Yükleniyor
         }
-
         if (snapshot.hasError) {
-          print('Error: ${snapshot.error}');
-          return _buildErrorState();
+          print(
+            'Leaderboard Stream Error (${stream.hashCode}): ${snapshot.error}',
+          );
+          return _buildErrorState(_refreshData); // Hata durumu
         }
-
         if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-          return _buildEmptyState(emptyMessage);
+          // Animasyon başlatma KODU BURADA YOK (initState/refresh/segment'te var)
+          return _buildEmptyState(emptyMessage, context); // Boş durum
         }
 
+        // Veri varsa
         var userDocs = snapshot.data!.docs;
         final currentUserIndex = userDocs.indexWhere(
           (u) => _isCurrentUser(u, currentUserId),
         );
-
-        // İlk 3 kullanıcıyı al
         final topThree = userDocs.take(3).toList();
         final otherUsers = userDocs.skip(3).toList();
 
-        return SingleChildScrollView(
-          child: Column(
-            children: [
-              // İlk 3 Kullanıcı - Podyum Tasarımı
-              if (topThree.isNotEmpty)
-                _buildPodiumSection(topThree, puanField, currentUserId),
+        // Animasyon başlatma KODU BURADA YOK (initState/refresh/segment'te var)
 
-              // Diğer Kullanıcılar
-              if (otherUsers.isNotEmpty)
-                _buildOtherUsersSection(
-                  otherUsers,
-                  puanField,
-                  currentUserId,
-                  currentUserIndex,
-                ),
-            ],
-          ),
+        // Column içinde Podyum ve Liste
+        return Column(
+          children: [
+            if (topThree.isNotEmpty)
+              _buildPodiumSection(topThree, puanField, currentUserId),
+            if (otherUsers.isNotEmpty)
+              _buildOtherUsersSection(
+                otherUsers,
+                puanField,
+                currentUserId,
+                currentUserIndex >= 3 ? currentUserIndex : -1,
+              ),
+            const SizedBox(height: 20),
+          ],
         );
       },
     );
   }
 
+  // Podyum Bölümü
   Widget _buildPodiumSection(
     List<QueryDocumentSnapshot> topThree,
     String puanField,
     String? currentUserId,
   ) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            Theme.of(context).colorScheme.primary.withOpacity(0.05),
-            Theme.of(context).colorScheme.primary.withOpacity(0.02),
-          ],
-        ),
-      ),
-      child: Column(
-        children: [
-          // 1. sıra - Ortada
-          _buildPodiumUser(
+    final colorScheme = Theme.of(context).colorScheme;
+    List<Widget> podiumItems = [];
+    if (topThree.isNotEmpty) {
+      podiumItems.add(
+        ScaleTransition(
+          scale: _podiumAnimations[0],
+          child: _buildPodiumUser(
             userData: topThree[0].data() as Map<String, dynamic>,
             rank: 1,
             puanField: puanField,
             isCurrentUser: _isCurrentUser(topThree[0], currentUserId),
-            height: 140,
           ),
-          // 2. ve 3. sıra - Yan yana
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              if (topThree.length > 1)
-                _buildPodiumUser(
-                  userData: topThree[1].data() as Map<String, dynamic>,
-                  rank: 2,
-                  puanField: puanField,
-                  isCurrentUser: _isCurrentUser(topThree[1], currentUserId),
-                  height: 120,
-                ),
-              const SizedBox(width: 20),
-              if (topThree.length > 2)
-                _buildPodiumUser(
-                  userData: topThree[2].data() as Map<String, dynamic>,
-                  rank: 3,
-                  puanField: puanField,
-                  isCurrentUser: _isCurrentUser(topThree[2], currentUserId),
-                  height: 80,
-                ),
-            ],
+        ),
+      );
+    }
+    if (topThree.length > 1) {
+      podiumItems.add(
+        ScaleTransition(
+          scale: _podiumAnimations[1],
+          child: _buildPodiumUser(
+            userData: topThree[1].data() as Map<String, dynamic>,
+            rank: 2,
+            puanField: puanField,
+            isCurrentUser: _isCurrentUser(topThree[1], currentUserId),
           ),
+        ),
+      );
+    }
+    if (topThree.length > 2) {
+      podiumItems.add(
+        ScaleTransition(
+          scale: _podiumAnimations[2],
+          child: _buildPodiumUser(
+            userData: topThree[2].data() as Map<String, dynamic>,
+            rank: 3,
+            puanField: puanField,
+            isCurrentUser: _isCurrentUser(topThree[2], currentUserId),
+          ),
+        ),
+      );
+    }
+
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 8.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          if (podiumItems.length > 1)
+            Flexible(child: podiumItems[1])
+          else
+            const Spacer(),
+          const SizedBox(width: 8),
+          if (podiumItems.isNotEmpty)
+            Flexible(child: podiumItems[0])
+          else
+            const Spacer(),
+          const SizedBox(width: 8),
+          if (podiumItems.length > 2)
+            Flexible(child: podiumItems[2])
+          else
+            const Spacer(),
         ],
       ),
     );
   }
 
+  // Podyum Kullanıcısı Widget'ı
   Widget _buildPodiumUser({
     required Map<String, dynamic> userData,
     required int rank,
     required String puanField,
     required bool isCurrentUser,
-    required double height,
   }) {
     final puan = (userData[puanField] as num? ?? 0).toInt();
     final kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
     final emoji = userData['emoji'] ?? '🙂';
     final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
+    double heightFactor = rank == 1 ? 1.0 : (rank == 2 ? 0.85 : 0.7);
     Color rankColor;
+    IconData rankIcon;
     switch (rank) {
       case 1:
-        rankColor = Colors.amber;
+        rankColor = Colors.amber.shade600;
+        rankIcon = Icons.emoji_events;
         break;
       case 2:
-        rankColor = Colors.grey;
+        rankColor = Colors.grey.shade500;
+        rankIcon = Icons.emoji_events;
         break;
       case 3:
-        rankColor = Colors.orange.shade300;
+        rankColor = Colors.brown.shade400;
+        rankIcon = Icons.emoji_events;
         break;
       default:
         rankColor = Colors.grey;
+        rankIcon = Icons.military_tech;
     }
 
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        // Podyum
+        if (isCurrentUser)
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0),
+            child: Icon(
+              Icons.person_pin_circle_rounded,
+              color: colorScheme.primary,
+              size: 18,
+            ),
+          ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 6),
+          child: Text(
+            kullaniciAdi,
+            textAlign: TextAlign.center,
+            style: textTheme.bodySmall?.copyWith(
+              fontWeight: FontWeight.w600,
+              color: isCurrentUser ? colorScheme.primary : null,
+            ),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
         Container(
-          width: 100,
-          height: height,
+          constraints: const BoxConstraints(maxWidth: 110),
+          height: 100 * heightFactor,
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           decoration: BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [rankColor.withOpacity(0.8), rankColor.withOpacity(0.4)],
+              colors: [rankColor.withOpacity(0.9), rankColor.withOpacity(0.6)],
             ),
             borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(12),
-              topRight: Radius.circular(12),
+              topLeft: Radius.circular(8),
+              topRight: Radius.circular(8),
             ),
             boxShadow: [
               BoxShadow(
-                color: rankColor.withOpacity(0.3),
-                blurRadius: 8,
-                offset: const Offset(0, 4),
+                color: rankColor.withOpacity(0.4),
+                blurRadius: 10,
+                offset: const Offset(0, 5),
               ),
             ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Emoji
-              Text(emoji, style: const TextStyle(fontSize: 28)),
-              const SizedBox(height: 8),
-
-              // Sıra Numarası
-              Container(
-                width: 32,
-                height: 32,
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      blurRadius: 4,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: Center(
-                  child: Text(
-                    '$rank',
-                    style: TextStyle(
-                      color: rankColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
+              Text(
+                emoji,
+                style: TextStyle(fontSize: 24 + (4 * (4 - rank)).toDouble()),
+              ),
+              const SizedBox(height: 6),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Text(
+                  '$puan',
+                  style: textTheme.titleMedium?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ),
             ],
           ),
         ),
-
-        // Kullanıcı Bilgileri
         Container(
-          width: 100,
-          padding: const EdgeInsets.all(8),
-          child: Column(
+          constraints: const BoxConstraints(maxWidth: 110),
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          decoration: BoxDecoration(
+            color: rankColor.withOpacity(0.15),
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(8),
+              bottomRight: Radius.circular(8),
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Icon(rankIcon, color: rankColor, size: 16),
+              const SizedBox(width: 4),
               Text(
-                kullaniciAdi,
-                textAlign: TextAlign.center,
+                '$rank.',
                 style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 12,
-                  color: isCurrentUser
-                      ? colorScheme.primary
-                      : colorScheme.onSurface,
-                ),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
-              ),
-              const SizedBox(height: 4),
-              Text(
-                '$puan Puan',
-                style: const TextStyle(
+                  color: rankColor,
                   fontWeight: FontWeight.bold,
-                  fontSize: 12,
-                  color: Colors.green,
+                  fontSize: 14,
                 ),
               ),
-              if (isCurrentUser)
-                Container(
-                  margin: const EdgeInsets.only(top: 4),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 6,
-                    vertical: 2,
-                  ),
-                  decoration: BoxDecoration(
-                    color: colorScheme.primary,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: const Text(
-                    'Siz',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
             ],
           ),
         ),
@@ -457,29 +557,30 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     );
   }
 
+  // Diğer Kullanıcılar Bölümü
   Widget _buildOtherUsersSection(
     List<QueryDocumentSnapshot> otherUsers,
     String puanField,
     String? currentUserId,
-    int currentUserIndex,
+    int currentUserRankInOthers,
   ) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Başlık
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            padding: const EdgeInsets.only(top: 8.0, bottom: 12.0),
             child: Text(
-              'Diğer Katılımcılar',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.w600,
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.6),
+              'Diğer Sıralamalar',
+              style: theme.textTheme.titleMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+                color: colorScheme.onSurfaceVariant,
               ),
             ),
           ),
-
-          // Kullanıcı Listesi
           ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -491,7 +592,6 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
                 otherUsers[index],
                 currentUserId,
               );
-
               return _buildUserListItem(
                 userData: userData,
                 rank: rank,
@@ -505,6 +605,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     );
   }
 
+  // Liste Elemanı Widget'ı
   Widget _buildUserListItem({
     required Map<String, dynamic> userData,
     required int rank,
@@ -515,160 +616,162 @@ class _LeaderboardScreenState extends State<LeaderboardScreen> {
     final kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
     final emoji = userData['emoji'] ?? '🙂';
     final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       decoration: BoxDecoration(
         color: isCurrentUser
-            ? colorScheme.primary.withOpacity(0.1)
-            : colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+            ? colorScheme.primaryContainer.withOpacity(0.3)
+            : colorScheme.surfaceVariant.withOpacity(0.3),
+        borderRadius: BorderRadius.circular(12),
         border: isCurrentUser
-            ? Border.all(color: colorScheme.primary, width: 1.5)
-            : Border.all(color: colorScheme.outline.withOpacity(0.1)),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 4,
-            offset: const Offset(0, 2),
-          ),
-        ],
+            ? Border.all(color: colorScheme.primary, width: 1)
+            : null,
       ),
       child: ListTile(
-        leading: Container(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                colorScheme.primary.withOpacity(0.8),
-                colorScheme.primary.withOpacity(0.4),
-              ],
-            ),
-            shape: BoxShape.circle,
-          ),
-          child: Center(
-            child: Text(
-              '$rank',
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-              ),
-            ),
+        leading: Text(
+          '$rank.',
+          style: textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.bold,
+            color: colorScheme.primary,
           ),
         ),
         title: Row(
           children: [
-            Text(emoji, style: const TextStyle(fontSize: 20)),
-            const SizedBox(width: 12),
+            Text(emoji, style: const TextStyle(fontSize: 18)),
+            const SizedBox(width: 10),
             Expanded(
               child: Text(
                 kullaniciAdi,
-                style: TextStyle(
-                  fontWeight: isCurrentUser ? FontWeight.bold : FontWeight.w500,
-                  color: isCurrentUser
-                      ? colorScheme.primary
-                      : colorScheme.onSurface,
+                style: textTheme.bodyLarge?.copyWith(
+                  fontWeight: isCurrentUser
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
+        ),
+        trailing: Text(
+          '$puan Puan',
+          style: textTheme.bodyMedium?.copyWith(
+            fontWeight: FontWeight.bold,
+            color: Colors.green.shade700,
+          ),
+        ),
+        dense: true,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      ),
+    );
+  }
+
+  // Mevcut Kullanıcı mı?
+  bool _isCurrentUser(DocumentSnapshot userDoc, String? currentUserId) {
+    var data = userDoc.data() as Map<String, dynamic>? ?? {}; // Null check
+    var userId = data.containsKey('userId') ? data['userId'] : userDoc.id;
+    return userId == currentUserId;
+  }
+
+  // Hata Durumu Widget'ı
+  Widget _buildErrorState(VoidCallback onRetry) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: colorScheme.errorContainer.withOpacity(0.2),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                Icons.error_outline_rounded,
+                color: colorScheme.error,
+                size: 64,
+              ),
+            ),
+            const SizedBox(height: 24),
+            Text(
+              'Bir hata oluştu',
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Liderlik tablosu yüklenemedi. Lütfen tekrar deneyin.',
+              textAlign: TextAlign.center,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: colorScheme.onSurface.withOpacity(0.6),
+              ),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton.icon(
+              onPressed: onRetry,
+              icon: const Icon(Icons.refresh),
+              label: const Text('Yeniden Dene'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Boş Durum Widget'ı
+  Widget _buildEmptyState(String message, BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: colorScheme.primaryContainer.withOpacity(0.2),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                Icons.leaderboard_outlined,
+                color: colorScheme.primary,
+                size: 80,
+              ),
+            ),
+            const SizedBox(height: 24),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 48.0),
+              child: Text(
+                message,
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: colorScheme.onSurface.withOpacity(0.7),
+                ),
+              ),
+            ),
+            const SizedBox(height: 32),
+            ElevatedButton.icon(
+              onPressed: () {
+                if (Navigator.canPop(context)) Navigator.pop(context);
+              }, // Güvenli pop
+              icon: const Icon(Icons.quiz),
+              label: const Text('Test Çözmeye Başla'),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
                 ),
               ),
             ),
           ],
         ),
-        trailing: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Text(
-              '$puan',
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: Colors.green,
-              ),
-            ),
-            const Text(
-              'Puan',
-              style: TextStyle(fontSize: 10, color: Colors.grey),
-            ),
-          ],
-        ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       ),
     );
   }
-
-  bool _isCurrentUser(DocumentSnapshot userDoc, String? currentUserId) {
-    var data = userDoc.data() as Map<String, dynamic>;
-    var userId = data.containsKey('userId') ? data['userId'] : userDoc.id;
-    return userId == currentUserId;
-  }
-
-  Widget _buildErrorState() {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.error_outline_rounded, color: colorScheme.error, size: 64),
-          const SizedBox(height: 16),
-          Text(
-            'Bir hata oluştu',
-            style: Theme.of(context).textTheme.titleMedium,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Liderlik tablosu yüklenemedi. Lütfen tekrar deneyin.',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-              color: colorScheme.onSurface.withOpacity(0.6),
-            ),
-          ),
-          const SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () {
-              setState(() {}); // Yeniden yüklemeyi tetikle
-            },
-            child: const Text('Yeniden Dene'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildEmptyState(String message) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.leaderboard_outlined,
-            color: colorScheme.onSurface.withOpacity(0.3),
-            size: 80,
-          ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 48.0),
-            child: Text(
-              message,
-              textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                color: colorScheme.onSurface.withOpacity(0.5),
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () {
-              // Test ekranına yönlendir
-              Navigator.pushNamed(context, '/quiz');
-            },
-            child: const Text('Test Çöz'),
-          ),
-        ],
-      ),
-    );
-  }
-}
+} // _LeaderboardScreenState sonu

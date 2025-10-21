@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:bilgi_yarismasi/screens/solved_quizzes_screen.dart';
-import 'package:bilgi_yarismasi/screens/achievements_screen.dart'; // <<< BAŞARI EKRANI IMPORT'U
+import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
+import 'package:bilgi_yarismasi/screens/statistics_screen.dart'; // <<< İSTATİSTİK IMPORT'U
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -22,7 +23,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   int _liderlikSirasi = 0;
 
   bool _isLoading = true;
-  bool _isSaving = false; // Emoji kaydetme durumu için
+  bool _isSaving = false; // Emoji veya kullanıcı adı kaydetme durumu için
 
   final List<String> _availableEmojis = [
     '🙂',
@@ -37,7 +38,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
     '🦄',
     '🐸',
     '🐯',
-  ];
+    '🤩',
+    '🥳',
+    '🤯',
+    '🤔',
+    '🚀',
+    '⭐',
+    '💡',
+    '📚',
+    '🧠',
+    '🎓',
+    '🦉',
+    '🦊',
+  ]; // Daha fazla emoji eklendi
 
   @override
   void initState() {
@@ -45,6 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     _loadUserData();
   }
 
+  // --- Emoji Picker ---
   void _showEmojiPicker() {
     showModalBottomSheet(
       context: context,
@@ -59,57 +73,76 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.min, // İçeriğe göre boyutlan
             children: [
+              // Başlık
               Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Text(
                   'Profil Emojisi Seç',
-                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    // Boyut büyütüldü
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
               Divider(
                 height: 1,
-                color: Theme.of(context).dividerColor,
+                color: Theme.of(context).dividerColor.withOpacity(0.5),
               ), // Ayırıcı
+              // Emoji Grid'i
               Padding(
                 padding: const EdgeInsets.all(20.0),
-                child: GridView.count(
-                  crossAxisCount: 6, // 6 sütunlu grid
-                  shrinkWrap: true, // İçeriğe göre boyutlan
-                  physics:
-                      const NeverScrollableScrollPhysics(), // Kaydırmayı engelle
-                  mainAxisSpacing: 12,
-                  crossAxisSpacing: 12,
-                  children: _availableEmojis.map((e) {
-                    bool isSelected = (_emoji == e); // Mevcut emoji mi?
+                child: GridView.builder(
+                  // Builder kullanmak daha verimli
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 6, // Sütun sayısı
+                    mainAxisSpacing: 12,
+                    crossAxisSpacing: 12,
+                  ),
+                  itemCount: _availableEmojis.length,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    final emoji = _availableEmojis[index];
+                    bool isSelected = (_emoji == emoji);
                     return GestureDetector(
                       onTap: () {
-                        if (!mounted) return; // Ekran kapandıysa işlem yapma
+                        if (!mounted) return;
                         setState(() {
-                          _emoji = e;
+                          _emoji = emoji;
                         });
-                        _saveEmoji(); // Firestore'a kaydet
-                        Navigator.pop(context); // Bottom sheet'i kapat
+                        _saveEmoji();
+                        Navigator.pop(context);
                       },
-                      child: Container(
+                      child: AnimatedContainer(
+                        // Seçim animasyonu
+                        duration: const Duration(milliseconds: 200),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          // Seçiliyse hafif vurgu rengi
+                          borderRadius: BorderRadius.circular(
+                            16,
+                          ), // Daha yuvarlak
                           color: isSelected
-                              ? Theme.of(
-                                  context,
-                                ).colorScheme.primary.withOpacity(0.1)
-                              : Colors.transparent,
+                              ? Theme.of(context).colorScheme.primaryContainer
+                                    .withOpacity(0.6) // Seçili rengi
+                              : Theme.of(context).colorScheme.surfaceVariant
+                                    .withOpacity(0.3), // Normal renk
+                          border: isSelected
+                              ? Border.all(
+                                  color: Theme.of(context).colorScheme.primary,
+                                  width: 2,
+                                ) // Seçili kenarlık
+                              : null,
                         ),
                         child: Center(
-                          child: Text(e, style: const TextStyle(fontSize: 28)),
+                          child: Text(
+                            emoji,
+                            style: const TextStyle(fontSize: 32),
+                          ), // Boyut ayarlandı
                         ),
                       ),
                     );
-                  }).toList(),
+                  },
                 ),
               ),
               const SizedBox(height: 16), // Alt boşluk
@@ -120,79 +153,75 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
+  // Emoji kaydetme (Aynı)
   Future<void> _saveEmoji() async {
-    if (_isSaving || !mounted) return; // Kaydediyorsa veya ekran kapandıysa çık
-
+    if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
     final user = _authService.currentUser;
     if (user == null) {
       if (mounted) setState(() => _isSaving = false);
       return;
     }
-
     try {
       await _firestore.collection('users').doc(user.uid).update({
-        'emoji': _emoji, // Yeni emojiyi güncelle
+        'emoji': _emoji,
       });
-      if (mounted) {
+      if (mounted)
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Profil emojisi güncellendi!')),
+          const SnackBar(
+            content: Text('Profil emojisi güncellendi!'),
+            duration: Duration(seconds: 2),
+          ),
         );
-      }
     } catch (e) {
-      print("Emoji kaydetme hatası: $e"); // Hatayı logla
-      if (mounted) {
+      print("Emoji kaydetme hatası: $e");
+      if (mounted)
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Hata: Emoji güncellenemedi. $e')),
+          SnackBar(
+            content: Text('Hata: Emoji güncellenemedi.'),
+            backgroundColor: Colors.red,
+          ),
         );
-      }
     } finally {
       if (mounted) setState(() => _isSaving = false);
     }
   }
 
+  // Kullanıcı verilerini ve liderlik sırasını yükleme (Aynı)
   Future<void> _loadUserData() async {
-    if (!mounted) return; // Başlamadan kontrol
+    if (!mounted) return;
     final user = _authService.currentUser;
     if (user == null) {
-      // Eğer kullanıcı yoksa, çıkış yapıp Login ekranına yönlendirmek daha mantıklı olabilir
-      // Veya en azından sayfayı kapatmak
-      if (mounted) Navigator.of(context).pop();
+      if (mounted) Navigator.of(context).pop(); // Geri git
       return;
     }
-
     if (mounted)
       setState(() {
         _isLoading = true;
-      }); // Yüklemeye başla
-
+      });
     try {
-      // Kullanıcı belgesini al
       final doc = await _firestore.collection('users').doc(user.uid).get();
-      if (!mounted) return; // Veri geldikten sonra ekran kapandıysa
-
+      if (!mounted) return;
       if (!doc.exists) {
         print("Kullanıcı belgesi bulunamadı: ${user.uid}");
         setState(() {
           _isLoading = false;
-        }); // Yüklemeyi bitir
-        // Belki burada bir hata mesajı gösterilebilir
+        });
+        // Belki kullanıcıyı çıkışa zorlamak veya hata göstermek daha iyi olur
+        _authService.signOut(); // Belge yoksa çıkış yap
         return;
       }
-
       final data = doc.data() as Map<String, dynamic>;
       final toplamPuan = (data['toplamPuan'] as num? ?? 0).toInt();
 
-      // Liderlik sırasını bul (performans için iyileştirilebilir)
+      // Liderlik sırası (limit ekleyerek optimize edilebilir)
       final querySnapshot = await _firestore
           .collection('users')
           .orderBy('toplamPuan', descending: true)
-          // .limit(500) // Belki bir limit eklemek iyi olabilir
-          .get();
-
-      if (!mounted) return; // Sorgu sonrası kontrol
-
-      int sirasi = -1; // Bulunamazsa -1
+          .limit(500)
+          .get(); // İlk 500'e bak
+      if (!mounted) return;
+      int sirasi = -1;
       int currentRank = 1;
       for (var userDoc in querySnapshot.docs) {
         if (userDoc.id == user.uid) {
@@ -201,30 +230,33 @@ class _ProfileScreenState extends State<ProfileScreen> {
         }
         currentRank++;
       }
+      // Eğer ilk 500'de değilse -1 kalacak
 
-      // State'i güncelle
       setState(() {
         _email = data['email'] ?? 'E-posta yok';
         _kullaniciAdi = data['kullaniciAdi'] ?? 'İsimsiz';
-        _emoji = data['emoji'] ?? '🙂'; // Firestore'dan emojiyi oku
+        _emoji = data['emoji'] ?? '🙂';
         _toplamPuan = toplamPuan;
         _liderlikSirasi = sirasi;
-        _isLoading = false; // Yükleme bitti
+        _isLoading = false;
       });
     } catch (e) {
       print("Profil verisi yüklenirken hata: $e");
       if (mounted) {
         setState(() {
           _isLoading = false;
-        }); // Hata durumunda da yüklemeyi bitir
+        });
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Profil verileri yüklenemedi: $e')),
+          SnackBar(
+            content: Text('Profil verileri yüklenemedi: $e'),
+            backgroundColor: Colors.red,
+          ),
         );
       }
     }
   }
 
-  // Kullanıcı adını düzenlemek için (Dialog ile)
+  // Kullanıcı adını düzenleme Dialog'u
   void _showEditUsernameDialog() {
     final TextEditingController usernameController = TextEditingController(
       text: _kullaniciAdi,
@@ -232,69 +264,104 @@ class _ProfileScreenState extends State<ProfileScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog(
-          title: const Text('Kullanıcı Adını Düzenle'),
-          content: TextField(
-            controller: usernameController,
-            decoration: const InputDecoration(hintText: "Yeni kullanıcı adı"),
-            autofocus: true, // Otomatik odaklanma
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('İptal'),
-            ),
-            TextButton(
-              onPressed: () {
-                final newUsername = usernameController.text.trim();
-                Navigator.pop(context); // Dialog'u kapat
-                if (newUsername.isNotEmpty && newUsername != _kullaniciAdi) {
-                  _saveUsername(newUsername); // Yeni adı kaydet
-                }
-              },
-              child: const Text('Kaydet'),
-            ),
-          ],
+        // Dialog içeriği state tutabilsin diye StatefulWidget
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            String? errorText; // Hata mesajı için
+            return AlertDialog(
+              title: const Text('Kullanıcı Adını Düzenle'),
+              content: TextField(
+                controller: usernameController,
+                maxLength: 15, // Max uzunluk eklendi
+                decoration: InputDecoration(
+                  hintText: "Yeni kullanıcı adı",
+                  counterText: "", // Sayacı gizle
+                  errorText: errorText, // Hata mesajını göster
+                ),
+                autofocus: true,
+                onChanged: (value) {
+                  // Yazarken hatayı temizle
+                  if (errorText != null) setDialogState(() => errorText = null);
+                },
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: const Text('İptal'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    final newUsername = usernameController.text.trim();
+                    // Doğrulama
+                    if (newUsername.isEmpty) {
+                      setDialogState(
+                        () => errorText = 'Kullanıcı adı boş olamaz.',
+                      );
+                      return;
+                    }
+                    if (newUsername.length > 15) {
+                      setDialogState(
+                        () => errorText = 'Maksimum 15 karakter olabilir.',
+                      );
+                      return;
+                    }
+                    if (newUsername == _kullaniciAdi) {
+                      Navigator.pop(context); // Değişiklik yoksa kapat
+                      return;
+                    }
+
+                    Navigator.pop(context); // Dialog'u kapat
+                    _saveUsername(newUsername); // Yeni adı kaydet
+                  },
+                  child: const Text('Kaydet'),
+                ),
+              ],
+            );
+          },
         );
       },
     );
   }
 
-  // Kullanıcı adını kaydetme fonksiyonu
+  // Kullanıcı adını kaydetme
   Future<void> _saveUsername(String newUsername) async {
     if (_isSaving || !mounted) return;
-
-    setState(() => _isSaving = true);
+    setState(() => _isSaving = true); // Kaydetme başladı (UI'da gösterilebilir)
     final user = _authService.currentUser;
     if (user == null) {
       if (mounted) setState(() => _isSaving = false);
       return;
     }
-
     try {
       await _firestore.collection('users').doc(user.uid).update({
-        'kullaniciAdi': newUsername, // Yeni adı güncelle
+        'kullaniciAdi': newUsername,
       });
       if (mounted) {
         setState(() {
-          _kullaniciAdi = newUsername; // State'i de anında güncelle
-        });
+          _kullaniciAdi = newUsername;
+        }); // State'i anında güncelle
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Kullanıcı adı güncellendi!')),
+          const SnackBar(
+            content: Text('Kullanıcı adı güncellendi!'),
+            duration: Duration(seconds: 2),
+          ),
         );
       }
     } catch (e) {
       print("Kullanıcı adı kaydetme hatası: $e");
-      if (mounted) {
+      String errorMsg = 'Kullanıcı adı güncellenemedi.';
+      if (e is FirebaseException && e.code == 'permission-denied')
+        errorMsg = 'İzniniz yok.';
+      if (mounted)
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Hata: Kullanıcı adı güncellenemedi. $e')),
+          SnackBar(content: Text(errorMsg), backgroundColor: Colors.red),
         );
-      }
     } finally {
-      if (mounted) setState(() => _isSaving = false);
+      if (mounted) setState(() => _isSaving = false); // Kaydetme bitti
     }
   }
 
+  // === build METODU ===
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -302,20 +369,26 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     return Scaffold(
       appBar: AppBar(
+        // AppBar (Tam Kod)
         title: Text(
           'Profilim',
-          style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w700),
+          style: textTheme.headlineSmall?.copyWith(
+            fontWeight: FontWeight.w700,
+          ), // Stil güncellendi
         ),
-        centerTitle: false, // Başlığı sola yasla
-        elevation: 0, // Gölgeyi kaldır (Material 3)
-        backgroundColor: Colors.transparent, // Arka planı şeffaf yap
-        foregroundColor: colorScheme.onSurface, // İkon/Yazı rengi
+        centerTitle: false,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: colorScheme.onSurface,
         actions: [
           IconButton(
-            icon: Icon(Icons.logout, color: colorScheme.error),
+            // Çıkış Yap Butonu (Tam Kod)
+            icon: Icon(
+              Icons.logout_rounded,
+              color: colorScheme.error,
+            ), // İkon değişti
             tooltip: 'Çıkış Yap',
             onPressed: () {
-              // Çıkış yapmadan önce onay sormak iyi bir fikir olabilir
               showDialog(
                 context: context,
                 builder: (ctx) => AlertDialog(
@@ -330,8 +403,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     TextButton(
                       onPressed: () {
-                        Navigator.pop(ctx); // Dialog'u kapat
-                        _authService.signOut(); // Çıkış yap
+                        Navigator.pop(ctx);
+                        _authService.signOut();
                       },
                       child: Text(
                         'Çıkış Yap',
@@ -348,86 +421,81 @@ class _ProfileScreenState extends State<ProfileScreen> {
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : RefreshIndicator(
-              // Sayfayı yenileme özelliği eklendi
-              onRefresh: _loadUserData, // Yenileyince verileri tekrar yükle
+              onRefresh: _loadUserData,
+              color: colorScheme.primary, // Indicator rengi
               child: SingleChildScrollView(
-                physics:
-                    const AlwaysScrollableScrollPhysics(), // İçerik az olsa bile yenilemeyi aktif et
-                padding: const EdgeInsets.all(24.0),
+                physics: const AlwaysScrollableScrollPhysics(),
+                padding: const EdgeInsets.all(16.0), // Padding azaltıldı
                 child: Column(
                   children: [
-                    // --- Profil Kartı (Görünüm İyileştirildi) ---
+                    // Profil Kartı (Tam Kod)
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.symmetric(
-                        horizontal: 24,
-                        vertical: 32,
+                        horizontal: 20,
+                        vertical: 28,
                       ), // Padding ayarlandı
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
-                          // Daha belirgin gradient
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            colorScheme.primaryContainer.withOpacity(
-                              0.5,
-                            ), // Tema rengi kullanıldı
-                            colorScheme.primaryContainer.withOpacity(0.1),
+                            colorScheme.primaryContainer.withOpacity(0.6),
+                            colorScheme.primaryContainer.withOpacity(0.2),
                           ],
                         ),
-                        borderRadius: BorderRadius.circular(
-                          24,
-                        ), // Daha yuvarlak köşeler
+                        borderRadius: BorderRadius.circular(24),
                         border: Border.all(
-                          color: colorScheme.primaryContainer.withOpacity(
-                            0.3,
-                          ), // Sınır rengi
+                          color: colorScheme.primaryContainer.withOpacity(0.4),
                         ),
                       ),
                       child: Column(
                         children: [
-                          // Emoji ve Düzenleme
+                          // Emoji ve Düzenleme Butonu (Tam Kod)
                           Stack(
-                            clipBehavior:
-                                Clip.none, // Butonun dışarı taşması için
+                            clipBehavior: Clip.none,
                             children: [
                               Container(
-                                padding: const EdgeInsets.all(24),
+                                padding: const EdgeInsets.all(
+                                  20,
+                                ), // Padding azaltıldı
                                 decoration: BoxDecoration(
-                                  // color: colorScheme.primary.withOpacity(0.1), // Arka plan kaldırıldı
-                                  shape: BoxShape.circle, // Yuvarlak yapıldı
+                                  shape: BoxShape.circle,
                                   border: Border.all(
-                                    color: colorScheme.primary.withOpacity(0.3),
+                                    color: colorScheme.primary.withOpacity(0.5),
                                     width: 3,
                                   ),
+                                  color:
+                                      colorScheme.surface, // Arka plan eklendi
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withOpacity(0.1),
+                                      blurRadius: 10,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ], // Gölge
                                 ),
                                 child: Text(
                                   _emoji,
-                                  style: const TextStyle(
-                                    fontSize: 56,
-                                  ), // Boyut büyütüldü
-                                ),
+                                  style: const TextStyle(fontSize: 48),
+                                ), // Boyut küçültüldü
                               ),
                               Positioned(
-                                bottom: -5, // Biraz aşağıya
-                                right: -5, // Biraz sağa
+                                bottom: -8,
+                                right: -8,
                                 child: Material(
-                                  // Tıklama efekti için Material
                                   color: colorScheme.primary,
                                   shape: const CircleBorder(),
-                                  elevation: 2, // Hafif gölge
+                                  elevation: 3,
                                   child: InkWell(
-                                    // Tıklama efekti
                                     customBorder: const CircleBorder(),
                                     onTap: _showEmojiPicker,
                                     child: Container(
-                                      padding: const EdgeInsets.all(
-                                        8,
-                                      ), // İç boşluk
+                                      padding: const EdgeInsets.all(8),
                                       child: Icon(
                                         Icons.edit_rounded,
                                         color: colorScheme.onPrimary,
-                                        size: 18, // Boyut ayarlandı
+                                        size: 18,
                                       ),
                                     ),
                                   ),
@@ -435,55 +503,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 24),
-
-                          // Kullanıcı Adı ve Düzenleme İkonu
+                          const SizedBox(height: 20), // Boşluk azaltıldı
+                          // Kullanıcı Adı ve Düzenleme Butonu (Tam Kod)
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Flexible(
-                                // Uzun isimler için
                                 child: Text(
                                   _kullaniciAdi,
                                   style: textTheme.headlineMedium?.copyWith(
-                                    // Boyut ayarlandı
-                                    fontWeight:
-                                        FontWeight.bold, // Kalın yapıldı
+                                    fontWeight: FontWeight.bold,
                                   ),
                                   textAlign: TextAlign.center,
-                                  overflow: TextOverflow
-                                      .ellipsis, // Taşarsa ... koysun
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                               IconButton(
-                                // Kullanıcı adı düzenleme butonu
                                 icon: Icon(
                                   Icons.edit_note_rounded,
-                                  size: 20,
-                                  color: colorScheme.primary,
-                                ),
+                                  size: 24,
+                                  color: colorScheme.primary.withOpacity(0.8),
+                                ), // Boyut/Renk ayarlandı
                                 onPressed: _showEditUsernameDialog,
                                 tooltip: 'Kullanıcı adını düzenle',
+                                splashRadius: 20, // Tıklama efekti alanı
                               ),
                             ],
                           ),
-                          const SizedBox(height: 4), // Boşluk azaltıldı
-                          // E-posta
+                          const SizedBox(height: 2), // Boşluk azaltıldı
+                          // E-posta (Tam Kod)
                           Text(
                             _email,
                             style: textTheme.bodyMedium?.copyWith(
-                              color: colorScheme
-                                  .onSurfaceVariant, // Daha uygun renk
+                              color: colorScheme.onSurfaceVariant,
                             ),
                             textAlign: TextAlign.center,
                           ),
-                          const SizedBox(height: 24),
-
-                          // Puan ve Liderlik Sırası (Ayrı Kartlarda)
+                          const SizedBox(height: 20), // Boşluk azaltıldı
+                          // Puan ve Sıralama Kartları (Tam Kod)
                           Row(
                             children: [
                               Expanded(
-                                // Puan Kartı
                                 child: _buildStatCard(
                                   icon: Icons.star_rounded,
                                   iconColor: Colors.amber.shade600,
@@ -492,17 +552,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   context: context,
                                 ),
                               ),
-                              const SizedBox(width: 16),
+                              const SizedBox(width: 12), // Boşluk azaltıldı
                               Expanded(
-                                // Sıralama Kartı
                                 child: _buildStatCard(
                                   icon: Icons.leaderboard_rounded,
-                                  iconColor:
-                                      colorScheme.tertiary, // Farklı renk
+                                  iconColor: colorScheme.tertiary,
                                   label: 'Genel Sıralama',
                                   value: _liderlikSirasi > 0
                                       ? '#$_liderlikSirasi'
-                                      : '-', // Bulunamadıysa -
+                                      : '-',
                                   context: context,
                                 ),
                               ),
@@ -511,11 +569,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ],
                       ),
                     ),
-
-                    // --- Profil Kartı Bitti ---
-                    const SizedBox(height: 32),
-
-                    // --- Butonlar (Görünüm İyileştirildi) ---
+                    const SizedBox(height: 28), // Boşluk azaltıldı
+                    // --- NAVİGASYON BUTONLARI (Tam Kod) ---
                     _buildNavigationButton(
                       icon: Icons.history_rounded,
                       title: 'Test Geçmişim',
@@ -530,10 +585,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       },
                       context: context,
                     ),
-                    const SizedBox(height: 16), // Buton arası boşluk
-                    // --- BAŞARILARIM BUTONU ---
+                    const SizedBox(height: 12), // Boşluk azaltıldı
                     _buildNavigationButton(
-                      icon: Icons.emoji_events_rounded, // Başarı ikonu
+                      icon: Icons.emoji_events_rounded,
                       title: 'Başarılarım',
                       subtitle: 'Kazandığın rozetleri görüntüle',
                       onTap: () {
@@ -546,23 +600,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       },
                       context: context,
                     ),
+                    const SizedBox(height: 12), // Boşluk azaltıldı
+                    _buildNavigationButton(
+                      icon: Icons.bar_chart_rounded,
+                      title: 'İstatistiklerim',
+                      subtitle: 'Detaylı performans analizini gör',
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const StatisticsScreen(),
+                          ),
+                        );
+                      },
+                      context: context,
+                    ),
 
-                    // --- BAŞARILARIM BUTONU BİTTİ ---
-
-                    // --- Butonlar Bitti ---
-                    const SizedBox(height: 24), // Alt boşluk
+                    // --- NAVİGASYON BUTONLARI BİTTİ ---
+                    const SizedBox(height: 20), // Boşluk azaltıldı
+                    // Emoji/Ad değiştirme yazısı (Tam Kod)
                     Padding(
-                      // Emoji açıklama yazısı
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
                       child: Text(
-                        'Emojiyi veya kullanıcı adını değiştirmek için düzenleme ikonlarına tıklayın.', // Yazı güncellendi
+                        'Emojiyi veya kullanıcı adını değiştirmek için düzenleme ikonlarına tıklayın.',
                         style: textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurfaceVariant, // Renk ayarlandı
+                          color: colorScheme.onSurfaceVariant,
                         ),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    const SizedBox(height: 100), // En alta boşluk (Scroll için)
+                    const SizedBox(height: 80), // En alta boşluk azaltıldı
                   ],
                 ),
               ),
@@ -570,7 +637,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // --- YENİ YARDIMCI WIDGET: Puan/Sıralama Kartı ---
+  // Yardımcı Widget: Puan/Sıralama Kartı (Tam Kod)
   Widget _buildStatCard({
     required IconData icon,
     required Color iconColor,
@@ -581,23 +648,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 10,
+      ), // Padding azaltıldı
       decoration: BoxDecoration(
-        color: colorScheme.surfaceVariant.withOpacity(0.5), // Hafif arka plan
+        color: colorScheme.surfaceVariant.withOpacity(0.6),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
-            mainAxisSize: MainAxisSize.min, // İçeriğe göre boyutlan
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(icon, color: iconColor, size: 20),
-              const SizedBox(width: 8),
+              Icon(icon, color: iconColor, size: 18), // Boyut küçültüldü
+              const SizedBox(width: 6), // Boşluk azaltıldı
               Text(
                 label,
                 style: textTheme.labelMedium?.copyWith(
-                  // Daha küçük etiket
                   color: colorScheme.onSurfaceVariant,
                 ),
               ),
@@ -606,18 +675,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
           const SizedBox(height: 4),
           Text(
             value,
-            style: textTheme.titleLarge?.copyWith(
-              // Değer daha büyük
+            style: textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
               color: colorScheme.onSurface,
             ),
-          ),
+          ), // Boyut küçültüldü
         ],
       ),
     );
   }
 
-  // --- YENİ YARDIMCI WIDGET: Geçmiş/Başarı Butonu ---
+  // Yardımcı Widget: Geçmiş/Başarı/İstatistik Butonu (Tam Kod)
   Widget _buildNavigationButton({
     required IconData icon,
     required String title,
@@ -630,12 +698,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
-        // color: colorScheme.surface, // Arka plan kaldırıldı
-        border: Border.all(
-          color: colorScheme.outlineVariant.withOpacity(
-            0.5,
-          ), // Daha belirgin sınır
-        ),
+        border: Border.all(color: colorScheme.outlineVariant.withOpacity(0.5)),
       ),
       child: Material(
         color: Colors.transparent,
@@ -644,42 +707,39 @@ class _ProfileScreenState extends State<ProfileScreen> {
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-              vertical: 16,
-            ), // Padding ayarlandı
+              horizontal: 16,
+              vertical: 12,
+            ), // Padding azaltıldı
             child: Row(
               children: [
                 Container(
-                  // İkon Arka Planı
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: colorScheme.secondaryContainer, // Tema rengi
+                    color: colorScheme.secondaryContainer,
                     borderRadius: BorderRadius.circular(12),
-                  ),
+                  ), // Padding azaltıldı
                   child: Icon(
                     icon,
                     color: colorScheme.onSecondaryContainer,
-                    size: 24,
+                    size: 22,
                   ),
-                ),
-                const SizedBox(width: 16),
+                ), // Boyut azaltıldı
+                const SizedBox(width: 12), // Boşluk azaltıldı
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         title,
-                        style: textTheme.titleMedium?.copyWith(
-                          // Boyut ayarlandı
+                        style: textTheme.titleSmall?.copyWith(
                           fontWeight: FontWeight.w600,
                         ),
-                      ),
-                      const SizedBox(height: 2), // Boşluk azaltıldı
+                      ), // Boyut küçültüldü
+                      const SizedBox(height: 2),
                       Text(
                         subtitle,
                         style: textTheme.bodySmall?.copyWith(
-                          // Daha küçük alt başlık
-                          color: colorScheme.onSurfaceVariant, // Renk ayarlandı
+                          color: colorScheme.onSurfaceVariant,
                         ),
                       ),
                     ],
@@ -687,11 +747,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 Icon(
                   Icons.arrow_forward_ios_rounded,
-                  color: colorScheme.onSurfaceVariant.withOpacity(
-                    0.6,
-                  ), // Renk ayarlandı
-                  size: 18,
-                ),
+                  color: colorScheme.onSurfaceVariant.withOpacity(0.6),
+                  size: 16,
+                ), // Boyut azaltıldı
               ],
             ),
           ),
@@ -699,4 +757,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-}
+} // _ProfileScreenState sonu
