@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:bilgi_yarismasi/screens/solved_quizzes_screen.dart';
 import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
-import 'package:bilgi_yarismasi/screens/statistics_screen.dart'; // <<< İSTATİSTİK IMPORT'U
+import 'package:bilgi_yarismasi/screens/statistics_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -12,7 +12,8 @@ class ProfileScreen extends StatefulWidget {
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen>
+    with TickerProviderStateMixin {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
 
@@ -23,7 +24,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   int _liderlikSirasi = 0;
 
   bool _isLoading = true;
-  bool _isSaving = false; // Emoji veya kullanıcı adı kaydetme durumu için
+  bool _isSaving = false;
 
   final List<String> _availableEmojis = [
     '🙂',
@@ -50,102 +51,162 @@ class _ProfileScreenState extends State<ProfileScreen> {
     '🎓',
     '🦉',
     '🦊',
-  ]; // Daha fazla emoji eklendi
+  ];
+
+  // Animasyon controller'ları
+  late AnimationController _animationController;
+  late AnimationController _profileAnimationController;
+  late Animation<double> _fadeAnimation;
+  late Animation<double> _scaleAnimation;
+  late Animation<double> _profileScaleAnimation;
 
   @override
   void initState() {
     super.initState();
+
+    // Animasyon controller'larını başlat
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 1000),
+      vsync: this,
+    );
+
+    _profileAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    );
+
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
+    );
+
+    _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.elasticOut),
+    );
+
+    _profileScaleAnimation = Tween<double>(begin: 0.9, end: 1.0).animate(
+      CurvedAnimation(
+        parent: _profileAnimationController,
+        curve: Curves.elasticOut,
+      ),
+    );
+
     _loadUserData();
   }
 
-  // --- Emoji Picker ---
+  @override
+  void dispose() {
+    _animationController.dispose();
+    _profileAnimationController.dispose();
+    super.dispose();
+  }
+
   void _showEmojiPicker() {
     showModalBottomSheet(
       context: context,
-      backgroundColor: Colors.transparent, // Arka planı şeffaf yap
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
       builder: (context) {
         return Container(
+          height: MediaQuery.of(context).size.height * 0.6,
           decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surface, // Tema rengini kullan
+            color: Theme.of(context).colorScheme.surface,
             borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(24),
-              topRight: Radius.circular(24),
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
             ),
           ),
           child: Column(
-            mainAxisSize: MainAxisSize.min, // İçeriğe göre boyutlan
             children: [
-              // Başlık
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
-                child: Text(
-                  'Profil Emojisi Seç',
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    // Boyut büyütüldü
-                    fontWeight: FontWeight.w600,
-                  ),
+              // Başlık ve Kapatma Butonu
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16,
+                  horizontal: 20,
                 ),
-              ),
-              Divider(
-                height: 1,
-                color: Theme.of(context).dividerColor.withOpacity(0.5),
-              ), // Ayırıcı
-              // Emoji Grid'i
-              Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: GridView.builder(
-                  // Builder kullanmak daha verimli
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 6, // Sütun sayısı
-                    mainAxisSpacing: 12,
-                    crossAxisSpacing: 12,
-                  ),
-                  itemCount: _availableEmojis.length,
-                  shrinkWrap: true,
-                  physics: const NeverScrollableScrollPhysics(),
-                  itemBuilder: (context, index) {
-                    final emoji = _availableEmojis[index];
-                    bool isSelected = (_emoji == emoji);
-                    return GestureDetector(
-                      onTap: () {
-                        if (!mounted) return;
-                        setState(() {
-                          _emoji = emoji;
-                        });
-                        _saveEmoji();
-                        Navigator.pop(context);
-                      },
-                      child: AnimatedContainer(
-                        // Seçim animasyonu
-                        duration: const Duration(milliseconds: 200),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(
-                            16,
-                          ), // Daha yuvarlak
-                          color: isSelected
-                              ? Theme.of(context).colorScheme.primaryContainer
-                                    .withOpacity(0.6) // Seçili rengi
-                              : Theme.of(context).colorScheme.surfaceVariant
-                                    .withOpacity(0.3), // Normal renk
-                          border: isSelected
-                              ? Border.all(
-                                  color: Theme.of(context).colorScheme.primary,
-                                  width: 2,
-                                ) // Seçili kenarlık
-                              : null,
-                        ),
-                        child: Center(
-                          child: Text(
-                            emoji,
-                            style: const TextStyle(fontSize: 32),
-                          ), // Boyut ayarlandı
-                        ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Profil Emojisi Seç',
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
                       ),
-                    );
-                  },
+                    ),
+                    IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: const Icon(Icons.close),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 16), // Alt boşluk
+
+              // Emoji Grid'i
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 6,
+                          mainAxisSpacing: 12,
+                          crossAxisSpacing: 12,
+                        ),
+                    itemCount: _availableEmojis.length,
+                    itemBuilder: (context, index) {
+                      final emoji = _availableEmojis[index];
+                      bool isSelected = (_emoji == emoji);
+
+                      return GestureDetector(
+                        onTap: () {
+                          if (!mounted) return;
+                          setState(() {
+                            _emoji = emoji;
+                          });
+                          _saveEmoji();
+                          Navigator.pop(context);
+                        },
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 200),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: isSelected
+                                ? Theme.of(context).colorScheme.primaryContainer
+                                      .withOpacity(0.6)
+                                : Theme.of(
+                                    context,
+                                  ).colorScheme.surfaceVariant.withOpacity(0.3),
+                            border: isSelected
+                                ? Border.all(
+                                    color: Theme.of(
+                                      context,
+                                    ).colorScheme.primary,
+                                    width: 2,
+                                  )
+                                : null,
+                            boxShadow: isSelected
+                                ? [
+                                    BoxShadow(
+                                      color: Theme.of(
+                                        context,
+                                      ).colorScheme.primary.withOpacity(0.3),
+                                      blurRadius: 8,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ]
+                                : null,
+                          ),
+                          child: Center(
+                            child: Text(
+                              emoji,
+                              style: const TextStyle(fontSize: 32),
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
             ],
           ),
         );
@@ -153,7 +214,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // Emoji kaydetme (Aynı)
   Future<void> _saveEmoji() async {
     if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
@@ -168,9 +228,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
       });
       if (mounted)
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Profil emojisi güncellendi!'),
-            duration: Duration(seconds: 2),
+          SnackBar(
+            content: const Text('Profil emojisi güncellendi!'),
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         );
     } catch (e) {
@@ -180,6 +244,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
           SnackBar(
             content: Text('Hata: Emoji güncellenemedi.'),
             backgroundColor: Colors.red,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         );
     } finally {
@@ -187,12 +255,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
-  // Kullanıcı verilerini ve liderlik sırasını yükleme (Aynı)
   Future<void> _loadUserData() async {
     if (!mounted) return;
     final user = _authService.currentUser;
     if (user == null) {
-      if (mounted) Navigator.of(context).pop(); // Geri git
+      if (mounted) Navigator.of(context).pop();
       return;
     }
     if (mounted)
@@ -207,19 +274,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
         setState(() {
           _isLoading = false;
         });
-        // Belki kullanıcıyı çıkışa zorlamak veya hata göstermek daha iyi olur
-        _authService.signOut(); // Belge yoksa çıkış yap
+        _authService.signOut();
         return;
       }
       final data = doc.data() as Map<String, dynamic>;
       final toplamPuan = (data['toplamPuan'] as num? ?? 0).toInt();
 
-      // Liderlik sırası (limit ekleyerek optimize edilebilir)
+      // Liderlik sırası
       final querySnapshot = await _firestore
           .collection('users')
           .orderBy('toplamPuan', descending: true)
           .limit(500)
-          .get(); // İlk 500'e bak
+          .get();
       if (!mounted) return;
       int sirasi = -1;
       int currentRank = 1;
@@ -230,7 +296,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
         }
         currentRank++;
       }
-      // Eğer ilk 500'de değilse -1 kalacak
 
       setState(() {
         _email = data['email'] ?? 'E-posta yok';
@@ -240,6 +305,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         _liderlikSirasi = sirasi;
         _isLoading = false;
       });
+
+      // Animasyonları başlat
+      _animationController.forward();
+      _profileAnimationController.forward();
     } catch (e) {
       print("Profil verisi yüklenirken hata: $e");
       if (mounted) {
@@ -250,13 +319,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
           SnackBar(
             content: Text('Profil verileri yüklenemedi: $e'),
             backgroundColor: Colors.red,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         );
       }
     }
   }
 
-  // Kullanıcı adını düzenleme Dialog'u
   void _showEditUsernameDialog() {
     final TextEditingController usernameController = TextEditingController(
       text: _kullaniciAdi,
@@ -264,23 +336,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
     showDialog(
       context: context,
       builder: (context) {
-        // Dialog içeriği state tutabilsin diye StatefulWidget
         return StatefulBuilder(
           builder: (context, setDialogState) {
-            String? errorText; // Hata mesajı için
+            String? errorText;
             return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
               title: const Text('Kullanıcı Adını Düzenle'),
               content: TextField(
                 controller: usernameController,
-                maxLength: 15, // Max uzunluk eklendi
+                maxLength: 15,
                 decoration: InputDecoration(
                   hintText: "Yeni kullanıcı adı",
-                  counterText: "", // Sayacı gizle
-                  errorText: errorText, // Hata mesajını göster
+                  counterText: "",
+                  errorText: errorText,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(
+                      color: Theme.of(context).colorScheme.primary,
+                      width: 2,
+                    ),
+                  ),
                 ),
                 autofocus: true,
                 onChanged: (value) {
-                  // Yazarken hatayı temizle
                   if (errorText != null) setDialogState(() => errorText = null);
                 },
               ),
@@ -289,10 +372,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   onPressed: () => Navigator.pop(context),
                   child: const Text('İptal'),
                 ),
-                TextButton(
+                ElevatedButton(
                   onPressed: () {
                     final newUsername = usernameController.text.trim();
-                    // Doğrulama
                     if (newUsername.isEmpty) {
                       setDialogState(
                         () => errorText = 'Kullanıcı adı boş olamaz.',
@@ -306,13 +388,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       return;
                     }
                     if (newUsername == _kullaniciAdi) {
-                      Navigator.pop(context); // Değişiklik yoksa kapat
+                      Navigator.pop(context);
                       return;
                     }
 
-                    Navigator.pop(context); // Dialog'u kapat
-                    _saveUsername(newUsername); // Yeni adı kaydet
+                    Navigator.pop(context);
+                    _saveUsername(newUsername);
                   },
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
                   child: const Text('Kaydet'),
                 ),
               ],
@@ -323,10 +410,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  // Kullanıcı adını kaydetme
   Future<void> _saveUsername(String newUsername) async {
     if (_isSaving || !mounted) return;
-    setState(() => _isSaving = true); // Kaydetme başladı (UI'da gösterilebilir)
+    setState(() => _isSaving = true);
     final user = _authService.currentUser;
     if (user == null) {
       if (mounted) setState(() => _isSaving = false);
@@ -339,11 +425,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
       if (mounted) {
         setState(() {
           _kullaniciAdi = newUsername;
-        }); // State'i anında güncelle
+        });
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Kullanıcı adı güncellendi!'),
-            duration: Duration(seconds: 2),
+          SnackBar(
+            content: const Text('Kullanıcı adı güncellendi!'),
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         );
       }
@@ -354,290 +444,386 @@ class _ProfileScreenState extends State<ProfileScreen> {
         errorMsg = 'İzniniz yok.';
       if (mounted)
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(errorMsg), backgroundColor: Colors.red),
+          SnackBar(
+            content: Text(errorMsg),
+            backgroundColor: Colors.red,
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
         );
     } finally {
-      if (mounted) setState(() => _isSaving = false); // Kaydetme bitti
+      if (mounted) setState(() => _isSaving = false);
     }
   }
 
-  // === build METODU ===
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
+      backgroundColor: colorScheme.background,
       appBar: AppBar(
-        // AppBar (Tam Kod)
         title: Text(
           'Profilim',
-          style: textTheme.headlineSmall?.copyWith(
-            fontWeight: FontWeight.w700,
-          ), // Stil güncellendi
+          style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w700),
         ),
         centerTitle: false,
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: colorScheme.onSurface,
         actions: [
-          IconButton(
-            // Çıkış Yap Butonu (Tam Kod)
-            icon: Icon(
-              Icons.logout_rounded,
-              color: colorScheme.error,
-            ), // İkon değişti
-            tooltip: 'Çıkış Yap',
-            onPressed: () {
-              showDialog(
-                context: context,
-                builder: (ctx) => AlertDialog(
-                  title: const Text('Çıkış Yap'),
-                  content: const Text(
-                    'Çıkış yapmak istediğinizden emin misiniz?',
-                  ),
-                  actions: [
-                    TextButton(
-                      onPressed: () => Navigator.pop(ctx),
-                      child: const Text('İptal'),
+          Container(
+            margin: const EdgeInsets.only(right: 16),
+            decoration: BoxDecoration(
+              color: colorScheme.errorContainer.withOpacity(0.2),
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(
+              icon: Icon(Icons.logout_rounded, color: colorScheme.error),
+              tooltip: 'Çıkış Yap',
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (ctx) => AlertDialog(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.pop(ctx);
-                        _authService.signOut();
-                      },
-                      child: Text(
-                        'Çıkış Yap',
-                        style: TextStyle(color: colorScheme.error),
+                    title: const Text('Çıkış Yap'),
+                    content: const Text(
+                      'Çıkış yapmak istediğinizden emin misiniz?',
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(ctx),
+                        child: const Text('İptal'),
                       ),
-                    ),
-                  ],
-                ),
-              );
-            },
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.pop(ctx);
+                          _authService.signOut();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: colorScheme.error,
+                          foregroundColor: colorScheme.onError,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: const Text('Çıkış Yap'),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),
       body: _isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ? Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 80,
+                    height: 80,
+                    padding: const EdgeInsets.all(16),
+                    decoration: BoxDecoration(
+                      color: colorScheme.primary.withOpacity(0.1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: CircularProgressIndicator(
+                      color: colorScheme.primary,
+                      strokeWidth: 3,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Text(
+                    'Profil Yükleniyor...',
+                    style: textTheme.titleMedium?.copyWith(
+                      color: colorScheme.onSurface.withOpacity(0.7),
+                    ),
+                  ),
+                ],
+              ),
+            )
           : RefreshIndicator(
               onRefresh: _loadUserData,
-              color: colorScheme.primary, // Indicator rengi
+              color: colorScheme.primary,
               child: SingleChildScrollView(
                 physics: const AlwaysScrollableScrollPhysics(),
-                padding: const EdgeInsets.all(16.0), // Padding azaltıldı
-                child: Column(
-                  children: [
-                    // Profil Kartı (Tam Kod)
-                    Container(
-                      width: double.infinity,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 20,
-                        vertical: 28,
-                      ), // Padding ayarlandı
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            colorScheme.primaryContainer.withOpacity(0.6),
-                            colorScheme.primaryContainer.withOpacity(0.2),
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(24),
-                        border: Border.all(
-                          color: colorScheme.primaryContainer.withOpacity(0.4),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          // Emoji ve Düzenleme Butonu (Tam Kod)
-                          Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.all(
-                                  20,
-                                ), // Padding azaltıldı
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  border: Border.all(
-                                    color: colorScheme.primary.withOpacity(0.5),
-                                    width: 3,
-                                  ),
-                                  color:
-                                      colorScheme.surface, // Arka plan eklendi
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.1),
-                                      blurRadius: 10,
-                                      offset: Offset(0, 4),
-                                    ),
-                                  ], // Gölge
-                                ),
-                                child: Text(
-                                  _emoji,
-                                  style: const TextStyle(fontSize: 48),
-                                ), // Boyut küçültüldü
+                padding: const EdgeInsets.all(16.0),
+                child: FadeTransition(
+                  opacity: _fadeAnimation,
+                  child: Column(
+                    children: [
+                      // Profil Kartı
+                      ScaleTransition(
+                        scale: _scaleAnimation,
+                        child: Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                            vertical: 32,
+                          ),
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                colorScheme.primary,
+                                colorScheme.primary.withOpacity(0.8),
+                                colorScheme.secondary.withOpacity(0.7),
+                              ],
+                            ),
+                            borderRadius: BorderRadius.circular(24),
+                            boxShadow: [
+                              BoxShadow(
+                                color: colorScheme.primary.withOpacity(0.3),
+                                blurRadius: 15,
+                                offset: const Offset(0, 8),
                               ),
-                              Positioned(
-                                bottom: -8,
-                                right: -8,
-                                child: Material(
-                                  color: colorScheme.primary,
-                                  shape: const CircleBorder(),
-                                  elevation: 3,
-                                  child: InkWell(
-                                    customBorder: const CircleBorder(),
-                                    onTap: _showEmojiPicker,
-                                    child: Container(
-                                      padding: const EdgeInsets.all(8),
-                                      child: Icon(
-                                        Icons.edit_rounded,
+                            ],
+                          ),
+                          child: Column(
+                            children: [
+                              // Emoji ve Düzenleme Butonu
+                              ScaleTransition(
+                                scale: _profileScaleAnimation,
+                                child: Stack(
+                                  clipBehavior: Clip.none,
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.all(20),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                          color: colorScheme.onPrimary
+                                              .withOpacity(0.5),
+                                          width: 3,
+                                        ),
                                         color: colorScheme.onPrimary,
-                                        size: 18,
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black.withOpacity(
+                                              0.2,
+                                            ),
+                                            blurRadius: 15,
+                                            offset: const Offset(0, 5),
+                                          ),
+                                        ],
+                                      ),
+                                      child: Text(
+                                        _emoji,
+                                        style: const TextStyle(fontSize: 48),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      bottom: -5,
+                                      right: -5,
+                                      child: GestureDetector(
+                                        onTap: _showEmojiPicker,
+                                        child: Container(
+                                          padding: const EdgeInsets.all(8),
+                                          decoration: BoxDecoration(
+                                            color: colorScheme.onPrimary,
+                                            shape: BoxShape.circle,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.black.withOpacity(
+                                                  0.2,
+                                                ),
+                                                blurRadius: 5,
+                                                offset: const Offset(0, 2),
+                                              ),
+                                            ],
+                                          ),
+                                          child: Icon(
+                                            Icons.edit_rounded,
+                                            color: colorScheme.primary,
+                                            size: 20,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 24),
+                              // Kullanıcı Adı ve Düzenleme Butonu
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Flexible(
+                                    child: Text(
+                                      _kullaniciAdi,
+                                      style: textTheme.headlineMedium?.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: colorScheme.onPrimary,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  GestureDetector(
+                                    onTap: _showEditUsernameDialog,
+                                    child: Icon(
+                                      Icons.edit_note_rounded,
+                                      size: 24,
+                                      color: colorScheme.onPrimary.withOpacity(
+                                        0.8,
                                       ),
                                     ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ],
-                          ),
-                          const SizedBox(height: 20), // Boşluk azaltıldı
-                          // Kullanıcı Adı ve Düzenleme Butonu (Tam Kod)
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  _kullaniciAdi,
-                                  style: textTheme.headlineMedium?.copyWith(
-                                    fontWeight: FontWeight.bold,
+                              const SizedBox(height: 8),
+                              // E-posta
+                              Text(
+                                _email,
+                                style: textTheme.bodyMedium?.copyWith(
+                                  color: colorScheme.onPrimary.withOpacity(0.9),
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                              const SizedBox(height: 24),
+                              // Puan ve Sıralama Kartları
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: _buildStatCard(
+                                      icon: Icons.star_rounded,
+                                      iconColor: Colors.amber,
+                                      label: 'Toplam Puan',
+                                      value: '$_toplamPuan',
+                                      context: context,
+                                    ),
                                   ),
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                              IconButton(
-                                icon: Icon(
-                                  Icons.edit_note_rounded,
-                                  size: 24,
-                                  color: colorScheme.primary.withOpacity(0.8),
-                                ), // Boyut/Renk ayarlandı
-                                onPressed: _showEditUsernameDialog,
-                                tooltip: 'Kullanıcı adını düzenle',
-                                splashRadius: 20, // Tıklama efekti alanı
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 2), // Boşluk azaltıldı
-                          // E-posta (Tam Kod)
-                          Text(
-                            _email,
-                            style: textTheme.bodyMedium?.copyWith(
-                              color: colorScheme.onSurfaceVariant,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          const SizedBox(height: 20), // Boşluk azaltıldı
-                          // Puan ve Sıralama Kartları (Tam Kod)
-                          Row(
-                            children: [
-                              Expanded(
-                                child: _buildStatCard(
-                                  icon: Icons.star_rounded,
-                                  iconColor: Colors.amber.shade600,
-                                  label: 'Toplam Puan',
-                                  value: '$_toplamPuan',
-                                  context: context,
-                                ),
-                              ),
-                              const SizedBox(width: 12), // Boşluk azaltıldı
-                              Expanded(
-                                child: _buildStatCard(
-                                  icon: Icons.leaderboard_rounded,
-                                  iconColor: colorScheme.tertiary,
-                                  label: 'Genel Sıralama',
-                                  value: _liderlikSirasi > 0
-                                      ? '#$_liderlikSirasi'
-                                      : '-',
-                                  context: context,
-                                ),
+                                  const SizedBox(width: 16),
+                                  Expanded(
+                                    child: _buildStatCard(
+                                      icon: Icons.leaderboard_rounded,
+                                      iconColor: colorScheme.onPrimary,
+                                      label: 'Genel Sıralama',
+                                      value: _liderlikSirasi > 0
+                                          ? '#$_liderlikSirasi'
+                                          : '-',
+                                      context: context,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 28), // Boşluk azaltıldı
-                    // --- NAVİGASYON BUTONLARI (Tam Kod) ---
-                    _buildNavigationButton(
-                      icon: Icons.history_rounded,
-                      title: 'Test Geçmişim',
-                      subtitle: 'Çözdüğüm testleri görüntüle',
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => SolvedQuizzesScreen(),
-                          ),
-                        );
-                      },
-                      context: context,
-                    ),
-                    const SizedBox(height: 12), // Boşluk azaltıldı
-                    _buildNavigationButton(
-                      icon: Icons.emoji_events_rounded,
-                      title: 'Başarılarım',
-                      subtitle: 'Kazandığın rozetleri görüntüle',
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const AchievementsScreen(),
-                          ),
-                        );
-                      },
-                      context: context,
-                    ),
-                    const SizedBox(height: 12), // Boşluk azaltıldı
-                    _buildNavigationButton(
-                      icon: Icons.bar_chart_rounded,
-                      title: 'İstatistiklerim',
-                      subtitle: 'Detaylı performans analizini gör',
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const StatisticsScreen(),
-                          ),
-                        );
-                      },
-                      context: context,
-                    ),
-
-                    // --- NAVİGASYON BUTONLARI BİTTİ ---
-                    const SizedBox(height: 20), // Boşluk azaltıldı
-                    // Emoji/Ad değiştirme yazısı (Tam Kod)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        'Emojiyi veya kullanıcı adını değiştirmek için düzenleme ikonlarına tıklayın.',
-                        style: textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurfaceVariant,
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                    ),
-                    const SizedBox(height: 80), // En alta boşluk azaltıldı
-                  ],
+                      const SizedBox(height: 32),
+
+                      // Navigasyon Başlığı
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 8.0,
+                            bottom: 16.0,
+                          ),
+                          child: Text(
+                            'Hızlı Erişim',
+                            style: textTheme.titleLarge?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      // Navigasyon Butonları
+                      _buildModernNavigationButton(
+                        icon: Icons.history_rounded,
+                        title: 'Test Geçmişim',
+                        subtitle: 'Çözdüğüm testleri görüntüle',
+                        color: colorScheme.primary,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SolvedQuizzesScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                      _buildModernNavigationButton(
+                        icon: Icons.emoji_events_rounded,
+                        title: 'Başarılarım',
+                        subtitle: 'Kazandığın rozetleri görüntüle',
+                        color: Colors.amber,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AchievementsScreen(),
+                            ),
+                          );
+                        },
+                      ),
+                      const SizedBox(height: 16),
+                      _buildModernNavigationButton(
+                        icon: Icons.bar_chart_rounded,
+                        title: 'İstatistiklerim',
+                        subtitle: 'Detaylı performans analizini gör',
+                        color: Colors.teal,
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const StatisticsScreen(),
+                            ),
+                          );
+                        },
+                      ),
+
+                      const SizedBox(height: 32),
+
+                      // Bilgilendirme Metni
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: colorScheme.surfaceVariant.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.info_outline_rounded,
+                              color: colorScheme.onSurfaceVariant,
+                              size: 20,
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Text(
+                                'Emojiyi veya kullanıcı adını değiştirmek için düzenleme ikonlarına tıklayın.',
+                                style: textTheme.bodySmall?.copyWith(
+                                  color: colorScheme.onSurfaceVariant,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      const SizedBox(height: 80),
+                    ],
+                  ),
                 ),
               ),
             ),
     );
   }
 
-  // Yardımcı Widget: Puan/Sıralama Kartı (Tam Kod)
   Widget _buildStatCard({
     required IconData icon,
     required Color iconColor,
@@ -647,109 +833,105 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 12,
-        vertical: 10,
-      ), // Padding azaltıldı
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
-        color: colorScheme.surfaceVariant.withOpacity(0.6),
-        borderRadius: BorderRadius.circular(12),
+        color: colorScheme.onPrimary.withOpacity(0.2),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: colorScheme.onPrimary.withOpacity(0.3),
+          width: 1,
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(icon, color: iconColor, size: 18), // Boyut küçültüldü
-              const SizedBox(width: 6), // Boşluk azaltıldı
-              Text(
-                label,
-                style: textTheme.labelMedium?.copyWith(
-                  color: colorScheme.onSurfaceVariant,
-                ),
-              ),
-            ],
+          Icon(icon, color: iconColor, size: 24),
+          const SizedBox(height: 8),
+          Text(
+            label,
+            style: textTheme.bodyMedium?.copyWith(
+              color: colorScheme.onPrimary.withOpacity(0.9),
+            ),
           ),
           const SizedBox(height: 4),
           Text(
             value,
             style: textTheme.titleMedium?.copyWith(
               fontWeight: FontWeight.bold,
-              color: colorScheme.onSurface,
+              color: colorScheme.onPrimary,
             ),
-          ), // Boyut küçültüldü
+          ),
         ],
       ),
     );
   }
 
-  // Yardımcı Widget: Geçmiş/Başarı/İstatistik Butonu (Tam Kod)
-  Widget _buildNavigationButton({
+  Widget _buildModernNavigationButton({
     required IconData icon,
     required String title,
     required String subtitle,
+    required Color color,
     required VoidCallback onTap,
-    required BuildContext context,
   }) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: colorScheme.outlineVariant.withOpacity(0.5)),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: color.withOpacity(0.2),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(20),
           onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16,
-              vertical: 12,
-            ), // Padding azaltıldı
+          child: Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: color.withOpacity(0.3), width: 1),
+            ),
             child: Row(
               children: [
                 Container(
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: colorScheme.secondaryContainer,
-                    borderRadius: BorderRadius.circular(12),
-                  ), // Padding azaltıldı
-                  child: Icon(
-                    icon,
-                    color: colorScheme.onSecondaryContainer,
-                    size: 22,
+                    color: color.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(16),
                   ),
-                ), // Boyut azaltıldı
-                const SizedBox(width: 12), // Boşluk azaltıldı
+                  child: Icon(icon, color: color, size: 28),
+                ),
+                const SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         title,
-                        style: textTheme.titleSmall?.copyWith(
-                          fontWeight: FontWeight.w600,
+                        style: textTheme.titleMedium?.copyWith(
+                          fontWeight: FontWeight.bold,
                         ),
-                      ), // Boyut küçültüldü
-                      const SizedBox(height: 2),
+                      ),
+                      const SizedBox(height: 4),
                       Text(
                         subtitle,
-                        style: textTheme.bodySmall?.copyWith(
-                          color: colorScheme.onSurfaceVariant,
+                        style: textTheme.bodyMedium?.copyWith(
+                          color: colorScheme.onSurface.withOpacity(0.7),
                         ),
                       ),
                     ],
                   ),
                 ),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: colorScheme.onSurfaceVariant.withOpacity(0.6),
-                  size: 16,
-                ), // Boyut azaltıldı
+                Icon(Icons.arrow_forward_ios_rounded, color: color, size: 20),
               ],
             ),
           ),
@@ -757,4 +939,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
-} // _ProfileScreenState sonu
+}
