@@ -4,6 +4,8 @@ import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:bilgi_yarismasi/screens/solved_quizzes_screen.dart';
 import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
 import 'package:bilgi_yarismasi/screens/statistics_screen.dart';
+import 'package:provider/provider.dart'; // Tema için
+import 'package:bilgi_yarismasi/services/theme_notifier.dart'; // Tema için
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -53,23 +55,22 @@ class _ProfileScreenState extends State<ProfileScreen>
     '🦊',
   ];
 
-  // Animasyon controller'ları
   late AnimationController _animationController;
   late AnimationController _profileAnimationController;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
   late Animation<double> _profileScaleAnimation;
+  String? _currentUserId;
 
   @override
   void initState() {
     super.initState();
+    _currentUserId = _authService.currentUser?.uid;
 
-    // Animasyon controller'larını başlat
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 1000),
       vsync: this,
     );
-
     _profileAnimationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
@@ -78,11 +79,9 @@ class _ProfileScreenState extends State<ProfileScreen>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
-
     _scaleAnimation = Tween<double>(begin: 0.8, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.elasticOut),
     );
-
     _profileScaleAnimation = Tween<double>(begin: 0.9, end: 1.0).animate(
       CurvedAnimation(
         parent: _profileAnimationController,
@@ -100,6 +99,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     super.dispose();
   }
 
+  // --- Emoji Seçici ---
   void _showEmojiPicker() {
     showModalBottomSheet(
       context: context,
@@ -117,7 +117,6 @@ class _ProfileScreenState extends State<ProfileScreen>
           ),
           child: Column(
             children: [
-              // Başlık ve Kapatma Butonu
               Container(
                 padding: const EdgeInsets.symmetric(
                   vertical: 16,
@@ -139,8 +138,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                   ],
                 ),
               ),
-
-              // Emoji Grid'i
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(20.0),
@@ -214,6 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
+  // --- Emoji Kaydetme ---
   Future<void> _saveEmoji() async {
     if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
@@ -255,6 +253,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
+  // --- Kullanıcı Verisi Yükleme ---
   Future<void> _loadUserData() async {
     if (!mounted) return;
     final user = _authService.currentUser;
@@ -280,7 +279,6 @@ class _ProfileScreenState extends State<ProfileScreen>
       final data = doc.data() as Map<String, dynamic>;
       final toplamPuan = (data['toplamPuan'] as num? ?? 0).toInt();
 
-      // Liderlik sırası
       final querySnapshot = await _firestore
           .collection('users')
           .orderBy('toplamPuan', descending: true)
@@ -306,7 +304,6 @@ class _ProfileScreenState extends State<ProfileScreen>
         _isLoading = false;
       });
 
-      // Animasyonları başlat
       _animationController.forward();
       _profileAnimationController.forward();
     } catch (e) {
@@ -329,6 +326,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
+  // --- Kullanıcı Adı Düzenleme Dialog ---
   void _showEditUsernameDialog() {
     final TextEditingController usernameController = TextEditingController(
       text: _kullaniciAdi,
@@ -391,7 +389,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                       Navigator.pop(context);
                       return;
                     }
-
                     Navigator.pop(context);
                     _saveUsername(newUsername);
                   },
@@ -410,6 +407,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
+  // --- Kullanıcı Adı Kaydetme ---
   Future<void> _saveUsername(String newUsername) async {
     if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
@@ -458,6 +456,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
+  // === build METODU (Tam Kod) ===
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -590,7 +589,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                           ),
                           child: Column(
                             children: [
-                              // Emoji ve Düzenleme Butonu
                               ScaleTransition(
                                 scale: _profileScaleAnimation,
                                 child: Stack(
@@ -653,7 +651,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 ),
                               ),
                               const SizedBox(height: 24),
-                              // Kullanıcı Adı ve Düzenleme Butonu
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
@@ -682,7 +679,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 ],
                               ),
                               const SizedBox(height: 8),
-                              // E-posta
                               Text(
                                 _email,
                                 style: textTheme.bodyMedium?.copyWith(
@@ -691,7 +687,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 textAlign: TextAlign.center,
                               ),
                               const SizedBox(height: 24),
-                              // Puan ve Sıralama Kartları
                               Row(
                                 children: [
                                   Expanded(
@@ -746,36 +741,34 @@ class _ProfileScreenState extends State<ProfileScreen>
                         title: 'Test Geçmişim',
                         subtitle: 'Çözdüğüm testleri görüntüle',
                         color: colorScheme.primary,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SolvedQuizzesScreen(),
-                            ),
-                          );
-                        },
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SolvedQuizzesScreen(),
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 16),
                       _buildModernNavigationButton(
                         icon: Icons.emoji_events_rounded,
                         title: 'Başarılarım',
                         subtitle: 'Kazandığın rozetleri görüntüle',
-                        color: Colors.amber,
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const AchievementsScreen(),
-                            ),
-                          );
-                        },
+                        color: Colors.amber.shade700, // Renk ayarlandı
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AchievementsScreen(),
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 16),
+
+                      // --- İSTATİSTİKLERİM BUTONU (EKLENDİ) ---
                       _buildModernNavigationButton(
                         icon: Icons.bar_chart_rounded,
                         title: 'İstatistiklerim',
                         subtitle: 'Detaylı performans analizini gör',
-                        color: Colors.teal,
+                        color: Colors.teal.shade600, // Renk ayarlandı
                         onTap: () {
                           Navigator.push(
                             context,
@@ -786,8 +779,71 @@ class _ProfileScreenState extends State<ProfileScreen>
                         },
                       ),
 
+                      // --- İSTATİSTİK BUTONU BİTTİ ---
                       const SizedBox(height: 32),
 
+                      // --- TEMA RENGİ SEÇİMİ (EKLENDİ) ---
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 8.0,
+                            bottom: 16.0,
+                          ),
+                          child: Text(
+                            'Tema Rengi',
+                            style: textTheme.titleLarge?.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: colorScheme.surfaceVariant.withOpacity(0.3),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(
+                            color: colorScheme.outlineVariant.withOpacity(0.5),
+                          ),
+                        ),
+                        child: GridView.count(
+                          crossAxisCount: 6,
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          mainAxisSpacing: 12,
+                          crossAxisSpacing: 12,
+                          children: [
+                            _buildColorChoice(
+                              context,
+                              const Color.fromARGB(255, 243, 100, 33),
+                            ), // Turuncu
+                            _buildColorChoice(
+                              context,
+                              Colors.blue.shade600,
+                            ), // Mavi
+                            _buildColorChoice(
+                              context,
+                              Colors.green.shade600,
+                            ), // Yeşil
+                            _buildColorChoice(
+                              context,
+                              Colors.purple.shade600,
+                            ), // Mor
+                            _buildColorChoice(
+                              context,
+                              Colors.red.shade600,
+                            ), // Kırmızı
+                            _buildColorChoice(
+                              context,
+                              Colors.teal.shade600,
+                            ), // Turkuaz
+                          ],
+                        ),
+                      ),
+
+                      // --- TEMA SEÇİMİ BİTTİ ---
+                      const SizedBox(height: 32), // Aralık ayarlandı
                       // Bilgilendirme Metni
                       Container(
                         padding: const EdgeInsets.all(16),
@@ -814,7 +870,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                           ],
                         ),
                       ),
-
                       const SizedBox(height: 80),
                     ],
                   ),
@@ -824,6 +879,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
+  // Yardımcı Widget: Puan/Sıralama Kartı (Tam Kod)
   Widget _buildStatCard({
     required IconData icon,
     required Color iconColor,
@@ -833,7 +889,6 @@ class _ProfileScreenState extends State<ProfileScreen>
   }) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
-
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
@@ -868,6 +923,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
+  // Yardımcı Widget: Navigasyon Butonu (Tam Kod)
   Widget _buildModernNavigationButton({
     required IconData icon,
     required String title,
@@ -881,9 +937,14 @@ class _ProfileScreenState extends State<ProfileScreen>
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
+        color: colorScheme.surface, // Düz renk
+        border: Border.all(
+          color: color.withOpacity(0.3),
+          width: 1,
+        ), // Renkli kenarlık
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.2),
+            color: color.withOpacity(0.1), // Renkli gölge
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -896,10 +957,6 @@ class _ProfileScreenState extends State<ProfileScreen>
           onTap: onTap,
           child: Container(
             padding: const EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: color.withOpacity(0.3), width: 1),
-            ),
             child: Row(
               children: [
                 Container(
@@ -931,10 +988,68 @@ class _ProfileScreenState extends State<ProfileScreen>
                     ],
                   ),
                 ),
-                Icon(Icons.arrow_forward_ios_rounded, color: color, size: 20),
+                Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: color.withOpacity(0.7),
+                  size: 20,
+                ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  // --- TEMA SEÇİMİ İÇİN YENİ YARDIMCI WIDGET (Tam Kod) ---
+  Widget _buildColorChoice(BuildContext context, Color color) {
+    // Notifier'ı dinleyerek mevcut seçili rengi al
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+    final bool isSelected = themeNotifier.seedColor.value == color.value;
+
+    return Tooltip(
+      message: 'Bu temayı seç',
+      child: GestureDetector(
+        onTap: () {
+          // Tıklandığında rengi güncelle
+          Provider.of<ThemeNotifier>(
+            context,
+            listen: false,
+          ).setThemeColor(color);
+        },
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+            border: Border.all(
+              color: isSelected
+                  ? Theme.of(context).colorScheme.surface
+                  : Theme.of(context).colorScheme.outline.withOpacity(0.3),
+              width: isSelected ? 4 : 1.5,
+            ),
+            boxShadow: isSelected
+                ? [
+                    BoxShadow(
+                      color: color.withOpacity(0.6),
+                      blurRadius: 8,
+                      spreadRadius: 1,
+                    ),
+                  ]
+                : [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 2,
+                    ),
+                  ],
+          ),
+          child: isSelected
+              ? Icon(
+                  Icons.check_rounded,
+                  color: Theme.of(context).colorScheme.surface,
+                  size: 24,
+                )
+              : null,
         ),
       ),
     );
