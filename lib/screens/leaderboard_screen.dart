@@ -75,12 +75,12 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
         .limit(100) // Limit eklendi
         .snapshots();
     _weeklyStream = _firestore
-        .collection('haftalikLiderlik')
+        .collection('mevcutHaftalikLiderlik')
         .orderBy('puan', descending: true)
         .limit(100) // Limit eklendi
         .snapshots();
     _monthlyStream = _firestore
-        .collection('aylikLiderlik')
+        .collection('mevcutAylikLiderlik')
         .orderBy('puan', descending: true)
         .limit(100) // Limit eklendi
         .snapshots();
