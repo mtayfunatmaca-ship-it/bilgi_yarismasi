@@ -832,7 +832,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                             ), // Mor
                             _buildColorChoice(
                               context,
-                              Colors.red.shade600,
+                              const Color.fromARGB(255, 223, 72, 69),
                             ), // Kırmızı
                             _buildColorChoice(
                               context,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_screen.dart';
-// import 'package:intl/intl.dart'; // Artık burada değil, TimeDifferenceDisplay içinde
-// import 'dart:async'; // Timer kaldırıldı
-
-// TimeDifferenceDisplay widget'ını import et
 import 'package:bilgi_yarismasi/widgets/time_display.dart';
+import 'package:bilgi_yarismasi/screens/trial_exam_leaderboard_screen.dart';
+
+// Yeni enum dosyasını import et
+import 'package:bilgi_yarismasi/utils/exam_status.dart';
 
 class TrialExamsListScreen extends StatefulWidget {
   const TrialExamsListScreen({super.key});
@@ -21,30 +21,27 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
   Map<String, DocumentSnapshot> _userResults =
       {}; // Kullanıcının çözdüğü sınav sonuçları
   bool _isLoadingResults = true;
-  // Timer? _timer; // <<< KALDIRILDI
+  // Timer kaldırılmıştı
 
   @override
   void initState() {
     super.initState();
     _loadUserResults();
-    // Timer başlatma kodu <<< KALDIRILDI
   }
 
   @override
   void dispose() {
-    // _timer?.cancel(); // <<< KALDIRILDI
     super.dispose();
   }
 
   Future<void> _loadUserResults() async {
-    // Bu fonksiyon aynı kaldı
     if (!mounted) return;
     final user = _authService.currentUser;
     if (user == null) {
-      setState(() => _isLoadingResults = false);
+      if (mounted) setState(() => _isLoadingResults = false);
       return;
     }
-    setState(() => _isLoadingResults = true);
+    if (mounted) setState(() => _isLoadingResults = true);
     try {
       final snapshot = await _firestore
           .collection('users')
@@ -66,13 +63,10 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     }
   }
 
-  // Tarih formatlama fonksiyonu artık burada gerekli değil (_formatTimestamp kaldırıldı)
-  // Süre formatlama fonksiyonu artık burada gerekli değil (_formatDuration kaldırıldı)
-
   @override
   Widget build(BuildContext context) {
-    final now =
-        DateTime.now(); // Şimdiki zamanı al (sadece status hesaplamak için)
+    final now = DateTime.now();
+    final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Deneme Sınavları')),
@@ -81,15 +75,20 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
           : StreamBuilder<QuerySnapshot>(
               stream: _firestore
                   .collection('trialExams')
-                  .orderBy('startTime')
+                  .orderBy('startTime', descending: true)
                   .snapshots(),
               builder: (context, snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return const Center(child: CircularProgressIndicator());
                 }
                 if (snapshot.hasError) {
-                  print("Sınav listesi hatası: ${snapshot.error}"); // Hata logu
-                  return const Center(child: Text('Sınavlar yüklenemedi.'));
+                  print("Sınav listesi hatası: ${snapshot.error}");
+                  return Center(
+                    child: Text(
+                      'Sınavlar yüklenemedi.',
+                      style: TextStyle(color: colorScheme.error),
+                    ),
+                  );
                 }
                 if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
                   return const Center(
@@ -99,213 +98,221 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
 
                 var examDocs = snapshot.data!.docs;
 
-                return ListView.builder(
-                  padding: const EdgeInsets.all(10),
-                  itemCount: examDocs.length,
-                  itemBuilder: (context, index) {
-                    var exam = examDocs[index];
-                    var examId = exam.id;
-                    var examData =
-                        exam.data() as Map<String, dynamic>? ??
-                        {}; // Null check
+                return RefreshIndicator(
+                  onRefresh: _loadUserResults,
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(16.0),
+                    itemCount: examDocs.length,
+                    itemBuilder: (context, index) {
+                      var exam = examDocs[index];
+                      var examId = exam.id;
+                      var examData = exam.data() as Map<String, dynamic>? ?? {};
 
-                    final String title = examData['title'] ?? 'Başlıksız Sınav';
-                    final Timestamp? startTimeTs = examData['startTime'];
-                    final Timestamp? endTimeTs = examData['endTime'];
-                    final DateTime? startTime = startTimeTs?.toDate();
-                    final DateTime? endTime = endTimeTs?.toDate();
-                    final int durationMinutes =
-                        (examData['durationMinutes'] as num? ?? 30).toInt();
-                    final int questionCount =
-                        (examData['questionCount'] as num? ?? 0).toInt();
+                      final String title =
+                          examData['title'] ?? 'Başlıksız Sınav';
+                      final Timestamp? startTimeTs = examData['startTime'];
+                      final Timestamp? endTimeTs = examData['endTime'];
+                      final DateTime? startTime = startTimeTs?.toDate();
+                      final DateTime? endTime = endTimeTs?.toDate();
+                      final int durationMinutes =
+                          (examData['durationMinutes'] as num? ?? 30).toInt();
+                      final int questionCount =
+                          (examData['questionCount'] as num? ?? 0).toInt();
 
-                    // Sınavın durumu
-                    ExamStatus status = ExamStatus.upcoming;
-                    if (startTime != null && now.isBefore(startTime)) {
-                      status = ExamStatus.upcoming;
-                    } else if (endTime != null && now.isAfter(endTime)) {
-                      status = ExamStatus.finished;
-                    } else if (startTime != null &&
-                        endTime != null &&
-                        now.isAfter(startTime) &&
-                        now.isBefore(endTime)) {
-                      status = ExamStatus.active;
-                    } else {
-                      status = ExamStatus.unknown;
-                    }
+                      // Sınavın durumunu hesapla
+                      ExamStatus status = ExamStatus.upcoming;
+                      if (startTime != null && now.isBefore(startTime)) {
+                        status = ExamStatus.upcoming;
+                      } else if (endTime != null && now.isAfter(endTime)) {
+                        status = ExamStatus.finished;
+                      } else if (startTime != null &&
+                          endTime != null &&
+                          now.isAfter(startTime) &&
+                          now.isBefore(endTime)) {
+                        status = ExamStatus.active;
+                      } else {
+                        status = ExamStatus.unknown;
+                      }
 
-                    // Kullanıcı girmiş mi?
-                    final bool hasTaken = _userResults.containsKey(examId);
-                    final userResultData = hasTaken
-                        ? _userResults[examId]?.data() as Map<String, dynamic>?
-                        : null;
-                    final int? userScore = hasTaken
-                        ? (userResultData?['score'] as num?)?.toInt()
-                        : null;
+                      final bool hasTaken = _userResults.containsKey(examId);
+                      final userResultData = hasTaken
+                          ? _userResults[examId]?.data()
+                                as Map<String, dynamic>?
+                          : null;
+                      final int? userScore = hasTaken
+                          ? (userResultData?['score'] as num?)?.toInt()
+                          : null;
 
-                    Widget trailingWidget;
-                    VoidCallback? startExamCallback; // Başlatma fonksiyonu
+                      Widget trailingWidget;
+                      VoidCallback? listTileOnTap;
 
-                    if (hasTaken) {
-                      trailingWidget = Chip(
-                        label: Text(
-                          'Girdin ($userScore P)',
-                          style: TextStyle(
-                            color: Colors.green.shade800,
-                            fontSize: 12,
-                          ),
-                        ), // Boyut küçültüldü
-                        backgroundColor: Colors.green.shade100,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 2,
-                        ), // Padding ayarlandı
-                        visualDensity:
-                            VisualDensity.compact, // Daha kompakt görünüm
-                      );
-                    } else if (status == ExamStatus.active) {
-                      startExamCallback = () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => TrialExamScreen(
-                              trialExamId: examId,
-                              title: title,
-                              durationMinutes: durationMinutes,
-                              questionCount: questionCount,
+                      if (hasTaken) {
+                        trailingWidget = Chip(
+                          label: Text(
+                            'Girdin ($userScore P)',
+                            style: TextStyle(
+                              color: Colors.green.shade800,
+                              fontSize: 12,
                             ),
                           ),
-                        ).then((value) {
-                          if (value == true && mounted) {
-                            _loadUserResults();
-                          }
-                        });
-                      };
-                      trailingWidget = ElevatedButton(
-                        onPressed: startExamCallback,
-                        style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 6,
-                          ), // Padding
-                          textStyle: TextStyle(fontSize: 13), // Yazı boyutu
-                        ),
-                        child: const Text('Başla'),
-                      );
-                    } else if (status == ExamStatus.upcoming) {
-                      trailingWidget = Chip(
-                        label: Text(
-                          'Yakında',
-                          style: TextStyle(
-                            color: Colors.orange.shade800,
-                            fontSize: 12,
-                          ),
-                        ),
-                        backgroundColor: Colors.orange.shade100,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 2,
-                        ),
-                        visualDensity: VisualDensity.compact,
-                      );
-                    } else if (status == ExamStatus.finished) {
-                      trailingWidget = Chip(
-                        label: Text(
-                          'Bitti',
-                          style: TextStyle(
-                            color: Colors.red.shade800,
-                            fontSize: 12,
-                          ),
-                        ),
-                        backgroundColor: Colors.red.shade100,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: 8,
-                          vertical: 2,
-                        ),
-                        visualDensity: VisualDensity.compact,
-                      );
-                    } else {
-                      // Unknown
-                      trailingWidget = const Icon(
-                        Icons.help_outline,
-                        color: Colors.grey,
-                      );
-                    }
+                          backgroundColor: Colors.green.shade100,
+                          visualDensity: VisualDensity.compact,
+                        );
+                        listTileOnTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TrialExamLeaderboardScreen(
+                                trialExamId: examId,
+                                title: title,
+                              ),
+                            ),
+                          );
+                        };
+                      } else if (status == ExamStatus.active) {
+                        startExamCallback() {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TrialExamScreen(
+                                trialExamId: examId,
+                                title: title,
+                                durationMinutes: durationMinutes,
+                                questionCount: questionCount,
+                              ),
+                            ),
+                          ).then((value) {
+                            if (value == true && mounted) {
+                              _loadUserResults();
+                            }
+                          });
+                        }
 
-                    // ListTile onTap callback'i
-                    VoidCallback? listTileOnTap =
-                        (status == ExamStatus.active && !hasTaken)
-                        ? startExamCallback
-                        : null;
+                        ;
+                        trailingWidget = ElevatedButton(
+                          onPressed: startExamCallback,
+                          style: ElevatedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 12,
+                              vertical: 6,
+                            ),
+                            textStyle: const TextStyle(fontSize: 13),
+                          ),
+                          child: const Text('Başla'),
+                        );
+                        listTileOnTap = startExamCallback;
+                      } else if (status == ExamStatus.finished) {
+                        trailingWidget = Chip(
+                          label: Text(
+                            'Bitti',
+                            style: TextStyle(
+                              color: Colors.red.shade800,
+                              fontSize: 12,
+                            ),
+                          ),
+                          backgroundColor: Colors.red.shade100,
+                          visualDensity: VisualDensity.compact,
+                        );
+                        listTileOnTap = () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TrialExamLeaderboardScreen(
+                                trialExamId: examId,
+                                title: title,
+                              ),
+                            ),
+                          );
+                        };
+                      } else if (status == ExamStatus.upcoming) {
+                        trailingWidget = Chip(
+                          label: Text(
+                            'Yakında',
+                            style: TextStyle(
+                              color: Colors.orange.shade800,
+                              fontSize: 12,
+                            ),
+                          ),
+                          backgroundColor: Colors.orange.shade100,
+                          visualDensity: VisualDensity.compact,
+                        );
+                        listTileOnTap = () {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Bu sınav henüz başlamadı.'),
+                              duration: Duration(seconds: 2),
+                            ),
+                          );
+                        };
+                      } else {
+                        trailingWidget = const Icon(
+                          Icons.help_outline,
+                          color: Colors.grey,
+                        );
+                        listTileOnTap = null;
+                      }
 
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 12),
-                      elevation: status == ExamStatus.active && !hasTaken
-                          ? 2
-                          : 0.8, // Gölge ayarlandı
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ), // Köşe yuvarlatıldı
-                      child: ListTile(
-                        contentPadding: const EdgeInsets.symmetric(
-                          horizontal: 16,
-                          vertical: 10,
-                        ), // İç boşluk
-                        leading: Icon(
-                          status == ExamStatus.active
-                              ? Icons.play_circle_fill_rounded
-                              : status == ExamStatus.upcoming
-                              ? Icons.timer_outlined
-                              : status == ExamStatus.finished
-                              ? Icons
-                                    .history_edu_rounded // Biten ikon değişti
-                              : Icons.help_outline,
-                          color: status == ExamStatus.active
-                              ? (hasTaken
-                                    ? Colors.green.shade700
-                                    : Theme.of(context)
-                                          .colorScheme
-                                          .primary) // Renkler ayarlandı
-                              : status == ExamStatus.upcoming
-                              ? Colors.orange.shade700
-                              : status == ExamStatus.finished
-                              ? (hasTaken
-                                    ? Colors.green.shade700
-                                    : Colors.red.shade700)
-                              : Colors.grey,
-                          size: 28, // İkon boyutu
+                      return Card(
+                        margin: const EdgeInsets.only(bottom: 12),
+                        elevation: (status == ExamStatus.active && !hasTaken)
+                            ? 2
+                            : 0.8,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        title: Text(
-                          title,
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        child: ListTile(
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 10,
+                          ),
+                          leading: Icon(
+                            status == ExamStatus.active
+                                ? Icons.play_circle_fill_rounded
+                                : status == ExamStatus.upcoming
+                                ? Icons.timer_outlined
+                                : status == ExamStatus.finished
+                                ? Icons.history_edu_rounded
+                                : Icons.help_outline,
+                            color: status == ExamStatus.active
+                                ? (hasTaken
+                                      ? Colors.green.shade700
+                                      : colorScheme.primary)
+                                : status == ExamStatus.upcoming
+                                ? Colors.orange.shade700
+                                : status == ExamStatus.finished
+                                ? (hasTaken
+                                      ? Colors.green.shade700
+                                      : Colors.red.shade700)
+                                : Colors.grey,
+                            size: 28,
+                          ),
+                          title: Text(
+                            title,
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: TimeDifferenceDisplay(
+                            // Göz kırpmayı önleyen widget
+                            startTime: startTime,
+                            endTime: endTime,
+                            status: status, // <<< Artık doğru tipi kullanıyor
+                          ),
+                          trailing: trailingWidget,
+                          onTap: listTileOnTap,
                         ),
-                        subtitle: TimeDifferenceDisplay(
-                          // <<< YENİ WIDGET KULLANILDI
-                          startTime: startTime,
-                          endTime: endTime,
-                          status: status,
-                        ),
-                        trailing: trailingWidget,
-                        onTap:
-                            listTileOnTap, // Aktif ve çözülmemişse tıklanabilir
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 );
               },
             ),
       floatingActionButton: FloatingActionButton.extended(
-        // Extended FAB
         onPressed: _isLoadingResults ? null : _loadUserResults,
         tooltip: 'Sonuçları Yenile',
         icon: const Icon(Icons.refresh),
-        label: const Text('Yenile'), // Etiket eklendi
-        isExtended: true, // Başta açık olsun
-        // shrinkWrap: true, // Kaydırınca küçülsün mü? - Gerek yok
+        label: const Text('Yenile'),
       ),
     );
   }
 }
 
-// ExamStatus enum'ı burada veya time_display.dart içinde tanımlı olmalı
-// enum ExamStatus { upcoming, active, finished, unknown }
+// enum ExamStatus tanımı buradan SİLİNDİ.

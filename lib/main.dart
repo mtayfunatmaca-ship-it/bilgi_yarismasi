@@ -1,3 +1,4 @@
+import 'package:bilgi_yarismasi/screens/batch_upload.dart';
 import 'package:bilgi_yarismasi/widgets/connectivity_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -13,8 +14,8 @@ void main() async {
   await initializeDateFormatting('tr_TR', null);
 
   // Yorum satırları (doğru)
-  // final uploader = FirebaseDataUploader();
-  // await uploader.uploadDataFromJson();
+  final uploader = FirebaseDataUploader();
+  await uploader.uploadDataFromJson();
 
   // --- DEĞİŞİKLİK: Uygulamayı ThemeNotifier ile sarmala ---
   runApp(

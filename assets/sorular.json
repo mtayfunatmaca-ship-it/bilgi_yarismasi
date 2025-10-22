@@ -7,17 +7,36 @@
     { "id": "vatandaslik", "ad": "Vatandaşlık", "sira": 5 }
   ],
   "quizzes": [
+    {
+      "id": "tarih_ilk_turkler",
+      "baslik": "İlk Atalarımız",
+      "kategoriId": "tarih",
+      "soruSayisi": 4,
+      "sureDakika": 8,
+      "sorular": [
+         {"soruMetni": "Şu an yürürlükte olan anayasa kaç yılında kabul edilmiştir?", "dogruCevapIndex": 2, "secenekler": ["1921", "1961", "1982", "1924"]},
+         {"soruMetni": "Anayasanın ilk üç maddesi değiştirilebilir mi?", "dogruCevapIndex": 1, "secenekler": ["Evet, TBMM kararıyla", "Hayır, değiştirilemez ve değiştirilmesi teklif edilemez", "Evet, referandumla", "Evet, Cumhurbaşkanı kararıyla"]},
+         {"soruMetni": "Anayasa Mahkemesi kaç üyeden oluşur?", "dogruCevapIndex": 0, "secenekler": ["15", "11", "17", "9"]},
+         {"soruMetni": "Milletvekili seçilme yaşı kaçtır?", "dogruCevapIndex": 0, "secenekler": ["18", "21", "25", "30"]}
+      ]
+    }
+  ],
+
+  "trialExams": [
 
     {
-       "id": "osmanli_devleti",
-       "baslik": "Osmanlı Neymiş La",
-       "kategoriId": "tarih",
-       "soruSayisi": 3,
-       "sureDakika": 6,
-       "sorular": [
-        {"soruMetni": "Aşağıdaki cümlelerin hangisinde 'ki'nin yazımı yanlıştır?", "dogruCevapIndex": 1, "secenekler": ["Sen ki bu işin uzmanısın.", "Evdeki hesap çarşıya uymaz.", "Baktım ki gitmiş.", "Mademki gelmeyecektin, haber verseydin."]},
-        {"soruMetni": "Hangi kelimenin yazımı doğrudur?", "dogruCevapIndex": 0, "secenekler": ["Herkes", "Herkez", "Herkeş", "Herkesz"]},
-        {"soruMetni": "Aşağıdakilerden hangisinde bir yazım yanlışı vardır?", "dogruCevapIndex": 3, "secenekler": ["Art arda", "Pek çok", "Birkaç", "Gelişi güzel"]}
+      "id": "turkiye_geneli_1",
+      "title": "Türkiye Geneli-1",
+      "description": "Tarih konularından 3 soruluk mini deneme.",
+      "startTime": "2025-10-21T12:00:00+03:00",
+      "endTime": "2025-10-27T12:00:00+03:00",
+      "durationMinutes": 5,
+      "questionCount": 3,
+      "isMixedCategory": false,
+      "sorular": [
+        {"soruMetni": "İstanbul hangi padişah döneminde fethedilmiştir?", "dogruCevapIndex": 0, "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"]},
+        {"soruMetni": "Ankara Savaşı hangi tarihte yapılmıştır?", "dogruCevapIndex": 0, "secenekler": ["1402", "1453", "1389", "1326"]},
+        {"soruMetni": "Mustafa Kemal'e 'Gazi' unvanı hangi savaştan sonra verilmiştir?", "dogruCevapIndex": 0, "secenekler": ["Sakarya Meydan Muharebesi", "Büyük Taarruz", "II. İnönü Savaşı", "Çanakkale Savaşı"]}
       ]
     }
   ]

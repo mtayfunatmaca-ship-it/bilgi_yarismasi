@@ -377,10 +377,10 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                       const SizedBox(height: 20),
                       // İlerleme Barı
                       Container(
-                        height: 8,
+                        height: 12,
                         decoration: BoxDecoration(
                           color: colorScheme.onPrimary.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(4),
+                          borderRadius: BorderRadius.circular(6),
                         ),
                         child: Stack(
                           children: [
@@ -388,8 +388,7 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                               duration: const Duration(milliseconds: 1000),
                               curve: Curves.easeOut,
                               width:
-                                  MediaQuery.of(context).size.width *
-                                  0.8 *
+                                  (MediaQuery.of(context).size.width - 88) *
                                   (_earnedAchievements.length /
                                       _allAchievements.length),
                               decoration: BoxDecoration(
@@ -399,7 +398,14 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                                     colorScheme.primary.withOpacity(0.7),
                                   ],
                                 ),
-                                borderRadius: BorderRadius.circular(4),
+                                borderRadius: BorderRadius.circular(6),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: colorScheme.primary.withOpacity(0.3),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 2),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -439,7 +445,7 @@ class _AchievementsScreenState extends State<AchievementsScreen>
           // Başlık
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
               child: Text(
                 'Tüm Başarılar',
                 style: textTheme.titleLarge?.copyWith(
@@ -458,7 +464,7 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                 crossAxisCount: 3,
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
-                childAspectRatio: 0.9,
+                childAspectRatio: 0.85,
               ),
               delegate: SliverChildBuilderDelegate((context, index) {
                 if (index >= _allAchievements.length) return null;
@@ -586,9 +592,9 @@ class _AchievementsScreenState extends State<AchievementsScreen>
             boxShadow: [
               if (isEarned)
                 BoxShadow(
-                  color: colorScheme.primary.withOpacity(0.1),
-                  blurRadius: 15,
-                  offset: const Offset(0, 4),
+                  color: colorScheme.primary.withOpacity(0.15),
+                  blurRadius: 20,
+                  offset: const Offset(0, 6),
                 ),
               BoxShadow(
                 color: colorScheme.onSurface.withOpacity(0.05),
@@ -597,139 +603,154 @@ class _AchievementsScreenState extends State<AchievementsScreen>
               ),
             ],
           ),
-          child: Stack(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // Ana içerik
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Rozet container
-                  Container(
-                    width: 70,
-                    height: 70,
-                    margin: const EdgeInsets.only(bottom: 12),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      gradient: isEarned
-                          ? LinearGradient(
-                              colors: [
-                                colorScheme.primary.withOpacity(0.9),
-                                colorScheme.primary,
-                              ],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
+              SizedBox(
+                width: 70,
+                height: 70,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Container(
+                      width: 70,
+                      height: 70,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        gradient: isEarned
+                            ? LinearGradient(
+                                colors: [
+                                  colorScheme.primary.withOpacity(0.9),
+                                  colorScheme.primary,
+                                ],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                              )
+                            : LinearGradient(
+                                colors: [
+                                  Colors.grey.shade300,
+                                  Colors.grey.shade500,
+                                ],
+                              ),
+                        boxShadow: [
+                          if (isEarned)
+                            BoxShadow(
+                              color: colorScheme.primary.withOpacity(0.4),
+                              blurRadius: 15,
+                              offset: const Offset(0, 6),
                             )
-                          : LinearGradient(
-                              colors: [
-                                Colors.grey.shade400,
-                                Colors.grey.shade600,
+                          else
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.3),
+                              blurRadius: 8,
+                              offset: const Offset(0, 4),
+                            ),
+                        ],
+                      ),
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          if (isEarned)
+                            AnimatedBuilder(
+                              animation: _shimmerController,
+                              builder: (context, child) {
+                                return Container(
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    gradient: RadialGradient(
+                                      colors: [
+                                        Colors.white.withOpacity(
+                                          0.4 * _shimmerController.value,
+                                        ),
+                                        Colors.transparent,
+                                      ],
+                                      stops: const [0.1, 0.8],
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: isEarned
+                                  ? colorScheme.primaryContainer
+                                  : Colors.grey.shade100.withOpacity(0.8),
+                              boxShadow: [
+                                if (isEarned)
+                                  BoxShadow(
+                                    color: colorScheme.primary.withOpacity(0.3),
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 3),
+                                  ),
                               ],
                             ),
-                      boxShadow: [
-                        if (isEarned)
-                          BoxShadow(
-                            color: colorScheme.primary.withOpacity(0.3),
-                            blurRadius: 10,
-                            offset: const Offset(0, 4),
-                          ),
-                      ],
-                    ),
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        // Parıltı efekti
-                        if (isEarned)
-                          AnimatedBuilder(
-                            animation: _shimmerController,
-                            builder: (context, child) {
-                              return Container(
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: RadialGradient(
-                                    colors: [
-                                      Colors.white.withOpacity(
-                                        0.3 * _shimmerController.value,
-                                      ),
-                                      Colors.transparent,
-                                    ],
-                                  ),
+                            child: Center(
+                              child: Text(
+                                emoji,
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  color: isEarned
+                                      ? colorScheme.onPrimaryContainer
+                                      : Colors.grey.shade600.withOpacity(0.7),
                                 ),
-                              );
-                            },
+                              ),
+                            ),
                           ),
-
-                        // Emoji veya kilit
-                        Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: isEarned
-                                ? colorScheme.primaryContainer
-                                : Colors.grey.shade200,
-                          ),
-                          child: Center(
-                            child: isEarned
-                                ? Text(
-                                    emoji,
-                                    style: const TextStyle(fontSize: 24),
-                                  )
-                                : Icon(
-                                    Icons.lock_rounded,
-                                    color: Colors.grey.shade600,
-                                    size: 24,
-                                  ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  // Başlık
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: Text(
-                      name,
-                      textAlign: TextAlign.center,
-                      style: textTheme.bodyMedium?.copyWith(
-                        fontWeight: FontWeight.w600,
-                        color: isEarned
-                            ? colorScheme.onSurface
-                            : colorScheme.onSurface.withOpacity(0.5),
+                        ],
                       ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
                     ),
-                  ),
-                ],
-              ),
-
-              // Kazanılan rozet için işaret
-              if (isEarned)
-                Positioned(
-                  top: 8,
-                  right: 8,
-                  child: Container(
-                    width: 20,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.green.withOpacity(0.5),
-                          blurRadius: 4,
-                          offset: const Offset(0, 2),
+                    if (isEarned)
+                      Positioned(
+                        top: 2,
+                        right: 2,
+                        child: Container(
+                          width: 20,
+                          height: 20,
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.yellow.shade400,
+                                Colors.orange.shade400,
+                              ],
+                            ),
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.orange.withOpacity(0.6),
+                                blurRadius: 6,
+                                spreadRadius: 1,
+                              ),
+                            ],
+                          ),
+                          child: const Icon(
+                            Icons.star_rounded,
+                            color: Colors.white,
+                            size: 12,
+                          ),
                         ),
-                      ],
-                    ),
-                    child: const Icon(
-                      Icons.check_rounded,
-                      color: Colors.white,
-                      size: 14,
-                    ),
-                  ),
+                      ),
+                  ],
                 ),
+              ),
+              const SizedBox(height: 12),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Text(
+                  name,
+                  textAlign: TextAlign.center,
+                  style: textTheme.bodyMedium?.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: isEarned
+                        ? colorScheme.onSurface
+                        : colorScheme.onSurface.withOpacity(0.4),
+                  ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
             ],
           ),
         ),
@@ -768,7 +789,6 @@ class _AchievementsScreenState extends State<AchievementsScreen>
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // Büyük Rozet
               Stack(
                 alignment: Alignment.center,
                 children: [
@@ -788,20 +808,42 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                             )
                           : LinearGradient(
                               colors: [
-                                Colors.grey.shade400,
-                                Colors.grey.shade600,
+                                Colors.grey.shade300,
+                                Colors.grey.shade500,
                               ],
                             ),
                       boxShadow: [
                         BoxShadow(
                           color: (isEarned ? colorScheme.primary : Colors.grey)
-                              .withOpacity(0.3),
-                          blurRadius: 20,
+                              .withOpacity(0.4),
+                          blurRadius: 25,
                           offset: const Offset(0, 8),
                         ),
                       ],
                     ),
                   ),
+                  if (isEarned)
+                    AnimatedBuilder(
+                      animation: _shimmerController,
+                      builder: (context, child) {
+                        return Container(
+                          width: 140,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            gradient: RadialGradient(
+                              colors: [
+                                Colors.white.withOpacity(
+                                  0.3 * _shimmerController.value,
+                                ),
+                                Colors.transparent,
+                              ],
+                              stops: const [0.1, 0.7],
+                            ),
+                          ),
+                        );
+                      },
+                    ),
                   Container(
                     width: 100,
                     height: 100,
@@ -809,16 +851,26 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                       shape: BoxShape.circle,
                       color: isEarned
                           ? colorScheme.primaryContainer
-                          : Colors.grey.shade200,
+                          : Colors.grey.shade100.withOpacity(0.8),
+                      boxShadow: [
+                        BoxShadow(
+                          color: (isEarned ? colorScheme.primary : Colors.grey)
+                              .withOpacity(0.3),
+                          blurRadius: 15,
+                          offset: const Offset(0, 5),
+                        ),
+                      ],
                     ),
                     child: Center(
-                      child: isEarned
-                          ? Text(emoji, style: const TextStyle(fontSize: 48))
-                          : Icon(
-                              Icons.lock_rounded,
-                              color: Colors.grey.shade600,
-                              size: 48,
-                            ),
+                      child: Text(
+                        emoji,
+                        style: TextStyle(
+                          fontSize: 48,
+                          color: isEarned
+                              ? colorScheme.onPrimaryContainer
+                              : Colors.grey.shade600.withOpacity(0.7),
+                        ),
+                      ),
                     ),
                   ),
                   if (isEarned)
@@ -826,30 +878,34 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                       top: 8,
                       right: 8,
                       child: Container(
-                        width: 32,
-                        height: 32,
+                        width: 28,
+                        height: 28,
                         decoration: BoxDecoration(
-                          color: Colors.green,
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.yellow.shade400,
+                              Colors.orange.shade400,
+                            ],
+                          ),
                           shape: BoxShape.circle,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.green.withOpacity(0.5),
-                              blurRadius: 8,
+                              color: Colors.orange.withOpacity(0.6),
+                              blurRadius: 10,
+                              spreadRadius: 1,
                             ),
                           ],
                         ),
                         child: const Icon(
-                          Icons.check_rounded,
+                          Icons.star_rounded,
                           color: Colors.white,
-                          size: 20,
+                          size: 16,
                         ),
                       ),
                     ),
                 ],
               ),
               const SizedBox(height: 32),
-
-              // Başlık
               Text(
                 name,
                 style: textTheme.headlineSmall?.copyWith(
@@ -859,8 +915,6 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 16),
-
-              // Açıklama
               Text(
                 description,
                 style: textTheme.bodyLarge?.copyWith(
@@ -870,8 +924,6 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 24),
-
-              // Durum
               Container(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 20,
@@ -880,7 +932,7 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                 decoration: BoxDecoration(
                   color: isEarned
                       ? Colors.green.withOpacity(0.1)
-                      : colorScheme.surfaceVariant,
+                      : colorScheme.surfaceVariant.withOpacity(0.6),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
                     color: isEarned
@@ -893,8 +945,8 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                   children: [
                     Icon(
                       isEarned
-                          ? Icons.check_circle_rounded
-                          : Icons.lock_rounded,
+                          ? Icons.emoji_events_rounded
+                          : Icons.hourglass_empty_rounded,
                       color: isEarned
                           ? Colors.green
                           : colorScheme.onSurface.withOpacity(0.6),
@@ -914,8 +966,6 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                 ),
               ),
               const SizedBox(height: 24),
-
-              // Kapatma Butonu
               SizedBox(
                 width: double.infinity,
                 child: FilledButton(
