@@ -29,6 +29,8 @@ dependencies:
   flutter_animate: ^4.5.2
   provider: ^6.1.5+1
   shared_preferences: ^2.5.3
+  font_awesome_flutter: ^10.12.0
+
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +49,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/sorular.json
+    - assets/images/google_logo.png
 
 
   uses-material-design: true

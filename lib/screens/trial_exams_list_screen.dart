@@ -4,9 +4,7 @@ import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_screen.dart';
 import 'package:bilgi_yarismasi/widgets/time_display.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_leaderboard_screen.dart';
-
-// Yeni enum dosyasını import et
-import 'package:bilgi_yarismasi/utils/exam_status.dart';
+import 'package:bilgi_yarismasi/utils/exam_status.dart'; // Paylaşılan enum importu
 
 class TrialExamsListScreen extends StatefulWidget {
   const TrialExamsListScreen({super.key});
@@ -18,10 +16,8 @@ class TrialExamsListScreen extends StatefulWidget {
 class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
-  Map<String, DocumentSnapshot> _userResults =
-      {}; // Kullanıcının çözdüğü sınav sonuçları
+  Map<String, DocumentSnapshot> _userResults = {};
   bool _isLoadingResults = true;
-  // Timer kaldırılmıştı
 
   @override
   void initState() {
@@ -34,6 +30,7 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     super.dispose();
   }
 
+  // Kullanıcının deneme sınavı sonuçlarını yükler
   Future<void> _loadUserResults() async {
     if (!mounted) return;
     final user = _authService.currentUser;
@@ -67,9 +64,16 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
   Widget build(BuildContext context) {
     final now = DateTime.now();
     final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Deneme Sınavları')),
+      appBar: AppBar(
+        title: const Text('Deneme Sınavları'),
+        centerTitle: true,
+        elevation: 1,
+        backgroundColor: colorScheme.surface,
+      ),
+      backgroundColor: colorScheme.background,
       body: _isLoadingResults
           ? const Center(child: CircularProgressIndicator())
           : StreamBuilder<QuerySnapshot>(
@@ -100,6 +104,7 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
 
                 return RefreshIndicator(
                   onRefresh: _loadUserResults,
+                  color: colorScheme.primary,
                   child: ListView.builder(
                     padding: const EdgeInsets.all(16.0),
                     itemCount: examDocs.length,
@@ -108,6 +113,7 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                       var examId = exam.id;
                       var examData = exam.data() as Map<String, dynamic>? ?? {};
 
+                      // Sınav verilerini al
                       final String title =
                           examData['title'] ?? 'Başlıksız Sınav';
                       final Timestamp? startTimeTs = examData['startTime'];
@@ -119,21 +125,21 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                       final int questionCount =
                           (examData['questionCount'] as num? ?? 0).toInt();
 
-                      // Sınavın durumunu hesapla
+                      // Durumu hesapla
                       ExamStatus status = ExamStatus.upcoming;
-                      if (startTime != null && now.isBefore(startTime)) {
+                      if (startTime != null && now.isBefore(startTime))
                         status = ExamStatus.upcoming;
-                      } else if (endTime != null && now.isAfter(endTime)) {
+                      else if (endTime != null && now.isAfter(endTime))
                         status = ExamStatus.finished;
-                      } else if (startTime != null &&
+                      else if (startTime != null &&
                           endTime != null &&
                           now.isAfter(startTime) &&
-                          now.isBefore(endTime)) {
+                          now.isBefore(endTime))
                         status = ExamStatus.active;
-                      } else {
+                      else
                         status = ExamStatus.unknown;
-                      }
 
+                      // Kullanıcı girmiş mi?
                       final bool hasTaken = _userResults.containsKey(examId);
                       final userResultData = hasTaken
                           ? _userResults[examId]?.data()
@@ -143,33 +149,45 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           ? (userResultData?['score'] as num?)?.toInt()
                           : null;
 
+                      // --- YENİ RENK, İKON VE İÇERİK MANTIĞI ---
+                      Color statusColor;
+                      Color cardBackgroundColor;
+                      Color contentColor;
+                      IconData leadingIcon;
                       Widget trailingWidget;
                       VoidCallback? listTileOnTap;
+                      String subtitleText = '';
 
+                      // 1. GİRİLMİŞ (hasTaken == true) -> İsteğin üzerine KIRMIZI
                       if (hasTaken) {
-                        trailingWidget = Chip(
-                          label: Text(
-                            'Girdin ($userScore P)',
-                            style: TextStyle(
-                              color: Colors.green.shade800,
-                              fontSize: 12,
+                        statusColor = Colors.red.shade700;
+                        cardBackgroundColor = Colors.red.shade50.withOpacity(
+                          0.6,
+                        );
+                        contentColor = Colors.red.shade900;
+                        leadingIcon =
+                            Icons.history_edu_rounded; // 'Geçmiş' ikonu
+                        subtitleText =
+                            'Girdin | Puan: $userScore | Sıralamayı Gör';
+
+                        listTileOnTap = () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrialExamLeaderboardScreen(
+                              trialExamId: examId,
+                              title: title,
                             ),
                           ),
-                          backgroundColor: Colors.green.shade100,
-                          visualDensity: VisualDensity.compact,
                         );
-                        listTileOnTap = () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => TrialExamLeaderboardScreen(
-                                trialExamId: examId,
-                                title: title,
-                              ),
-                            ),
-                          );
-                        };
-                      } else if (status == ExamStatus.active) {
+                      }
+                      // 2. AKTİF (girilmemiş) -> İsteğin üzerine YEŞİL
+                      else if (status == ExamStatus.active) {
+                        statusColor = Colors.green.shade600;
+                        cardBackgroundColor = Colors.green.shade50;
+                        contentColor = Colors.green.shade800;
+                        leadingIcon = Icons.play_circle_fill_rounded;
+                        subtitleText = 'SINAV ŞİMDİ AKTİF!';
+
                         startExamCallback() {
                           Navigator.push(
                             context,
@@ -182,122 +200,179 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                               ),
                             ),
                           ).then((value) {
-                            if (value == true && mounted) {
-                              _loadUserResults();
-                            }
+                            if (value == true && mounted) _loadUserResults();
                           });
                         }
 
-                        ;
                         trailingWidget = ElevatedButton(
                           onPressed: startExamCallback,
                           style: ElevatedButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12,
-                              vertical: 6,
-                            ),
-                            textStyle: const TextStyle(fontSize: 13),
+                            backgroundColor: statusColor, // Yeşil buton
+                            foregroundColor: Colors.white,
                           ),
                           child: const Text('Başla'),
                         );
                         listTileOnTap = startExamCallback;
-                      } else if (status == ExamStatus.finished) {
-                        trailingWidget = Chip(
-                          label: Text(
-                            'Bitti',
-                            style: TextStyle(
-                              color: Colors.red.shade800,
-                              fontSize: 12,
-                            ),
-                          ),
-                          backgroundColor: Colors.red.shade100,
-                          visualDensity: VisualDensity.compact,
-                        );
-                        listTileOnTap = () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => TrialExamLeaderboardScreen(
-                                trialExamId: examId,
-                                title: title,
-                              ),
-                            ),
-                          );
-                        };
-                      } else if (status == ExamStatus.upcoming) {
+                      }
+                      // 3. YAKINDA -> İsteğin üzerine TURUNCU
+                      else if (status == ExamStatus.upcoming) {
+                        statusColor = Colors.orange.shade700;
+                        cardBackgroundColor = Colors.orange.shade50;
+                        contentColor = Colors.orange.shade900;
+                        leadingIcon = Icons.timer_outlined; // Zamanlayıcı ikonu
+
                         trailingWidget = Chip(
                           label: Text(
                             'Yakında',
                             style: TextStyle(
-                              color: Colors.orange.shade800,
+                              color: contentColor,
                               fontSize: 12,
+                              fontWeight: FontWeight.w500,
                             ),
                           ),
-                          backgroundColor: Colors.orange.shade100,
+                          backgroundColor: contentColor.withOpacity(0.1),
+                          side: BorderSide.none,
                           visualDensity: VisualDensity.compact,
                         );
-                        listTileOnTap = () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Bu sınav henüz başlamadı.'),
-                              duration: Duration(seconds: 2),
+                        listTileOnTap = () =>
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Bu sınav henüz başlamadı.'),
+                                duration: Duration(seconds: 2),
+                              ),
+                            );
+                      }
+                      // 4. BİTMİŞ (girilmemiş) -> İsteğin üzerine KIRMIZI
+                      else if (status == ExamStatus.finished) {
+                        statusColor = Colors.red.shade700;
+                        cardBackgroundColor = Colors.red.shade50.withOpacity(
+                          0.6,
+                        );
+                        contentColor = Colors.red.shade900;
+                        leadingIcon = Icons.cancel_rounded; // Kaçırıldı ikonu
+                        subtitleText =
+                            'Bu sınav bitti (Kaçırdın). Sıralamaya bak.';
+
+                        trailingWidget = OutlinedButton(
+                          onPressed: () {}, // onTap halledecek
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: contentColor,
+                            side: BorderSide(
+                              color: contentColor.withOpacity(0.4),
                             ),
-                          );
-                        };
-                      } else {
+                            visualDensity: VisualDensity.compact,
+                          ),
+                          child: const Text('Sıralama'),
+                        );
+                        listTileOnTap = () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrialExamLeaderboardScreen(
+                              trialExamId: examId,
+                              title: title,
+                            ),
+                          ),
+                        );
+                      }
+                      // 5. BİLİNMEYEN (Gri)
+                      else {
+                        statusColor = Colors.grey;
+                        cardBackgroundColor = colorScheme.surfaceVariant
+                            .withOpacity(0.5);
+                        contentColor = colorScheme.onSurfaceVariant;
+                        leadingIcon = Icons.help_outline;
+                        subtitleText = 'Sınav tarihi belirsiz.';
                         trailingWidget = const Icon(
                           Icons.help_outline,
                           color: Colors.grey,
                         );
                         listTileOnTap = null;
                       }
+                      // --- MANTIK BİTTİ ---
 
                       return Card(
-                        margin: const EdgeInsets.only(bottom: 12),
+                        margin: const EdgeInsets.only(bottom: 14),
                         elevation: (status == ExamStatus.active && !hasTaken)
-                            ? 2
-                            : 0.8,
+                            ? 3
+                            : 1,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(16),
+                          side: BorderSide(
+                            color: statusColor.withOpacity(0.5),
+                            width: 1.5,
+                          ),
                         ),
-                        child: ListTile(
-                          contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 10,
-                          ),
-                          leading: Icon(
-                            status == ExamStatus.active
-                                ? Icons.play_circle_fill_rounded
-                                : status == ExamStatus.upcoming
-                                ? Icons.timer_outlined
-                                : status == ExamStatus.finished
-                                ? Icons.history_edu_rounded
-                                : Icons.help_outline,
-                            color: status == ExamStatus.active
-                                ? (hasTaken
-                                      ? Colors.green.shade700
-                                      : colorScheme.primary)
-                                : status == ExamStatus.upcoming
-                                ? Colors.orange.shade700
-                                : status == ExamStatus.finished
-                                ? (hasTaken
-                                      ? Colors.green.shade700
-                                      : Colors.red.shade700)
-                                : Colors.grey,
-                            size: 28,
-                          ),
-                          title: Text(
-                            title,
-                            style: const TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: TimeDifferenceDisplay(
-                            // Göz kırpmayı önleyen widget
-                            startTime: startTime,
-                            endTime: endTime,
-                            status: status, // <<< Artık doğru tipi kullanıyor
-                          ),
-                          trailing: trailingWidget,
+                        clipBehavior: Clip.antiAlias,
+                        child: InkWell(
                           onTap: listTileOnTap,
+                          borderRadius: BorderRadius.circular(
+                            15,
+                          ), // Kenarlığa uysun
+                          child: Container(
+                            color:
+                                cardBackgroundColor, // Kartın arka plan rengi
+                            child: Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: Row(
+                                children: [
+                                  // Sol İkon
+                                  Container(
+                                    width: 48,
+                                    height: 48,
+                                    decoration: BoxDecoration(
+                                      color: statusColor.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Icon(
+                                      leadingIcon,
+                                      color: statusColor,
+                                      size: 28,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 16),
+                                  // Orta Alan (Başlık ve Zaman/Durum)
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          title,
+                                          style: textTheme.titleMedium
+                                              ?.copyWith(
+                                                fontWeight: FontWeight.bold,
+                                                color: colorScheme.onSurface,
+                                              ),
+                                        ),
+                                        const SizedBox(height: 4),
+                                        // Aktif veya Yakında ise Zamanlayıcıyı,
+                                        // Bitmiş veya Girilmiş ise Durum Metnini göster
+                                        (status == ExamStatus.active &&
+                                                    !hasTaken) ||
+                                                (status == ExamStatus.upcoming)
+                                            ? TimeDifferenceDisplay(
+                                                startTime: startTime,
+                                                endTime: endTime,
+                                                status: status,
+                                              )
+                                            : Text(
+                                                subtitleText,
+                                                style: textTheme.bodySmall
+                                                    ?.copyWith(
+                                                      color: contentColor,
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                      fontSize: 13,
+                                                    ),
+                                              ),
+                                      ],
+                                    ),
+                                  ),
+                                  const SizedBox(width: 12),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
                       );
                     },
@@ -314,5 +389,3 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     );
   }
 }
-
-// enum ExamStatus tanımı buradan SİLİNDİ.

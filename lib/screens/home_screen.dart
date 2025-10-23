@@ -189,18 +189,24 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     final String currentUserEmail =
         _authService.currentUser?.email ?? 'Kullanıcı';
+
+    // --- TEMADAN RENKLERİ AL ---
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
+    // --- BİTTİ ---
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF5F7FA),
+      // DEĞİŞTİ: Arka plan rengi temadan
+      backgroundColor: colorScheme.surfaceContainerLowest,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFF4A6572),
-        foregroundColor: Colors.white,
+        // DEĞİŞTİ: AppBar rengi temadan
+        backgroundColor: colorScheme.primary,
+        // DEĞİŞTİ: AppBar üstündeki ikon/yazı rengi
+        foregroundColor: colorScheme.onPrimary,
         title: Row(
           children: [
-            Icon(Icons.quiz, color: Colors.white, size: 24),
+            // DEĞİŞTİ: İkon rengi temadan
             const SizedBox(width: 8),
             const Text(
               'Bilgi Yarışması',
@@ -213,11 +219,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           Container(
             margin: const EdgeInsets.only(right: 16),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              // DEĞİŞTİ: Vurgu rengi temadan
+              color: colorScheme.onPrimary.withOpacity(0.2),
               borderRadius: BorderRadius.circular(12),
             ),
             child: IconButton(
-              icon: Icon(Icons.refresh, color: Colors.white),
+              // DEĞİŞTİ: İkon rengi temadan
+              icon: Icon(Icons.refresh, color: colorScheme.onPrimary),
               tooltip: 'Yenile',
               onPressed: _isCompletionLoading ? null : _reloadAllData,
             ),
@@ -266,10 +274,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     padding: const EdgeInsets.all(16.0),
                     child: Row(
                       children: [
-                        const SizedBox(
+                        SizedBox(
                           width: 18,
                           height: 18,
-                          child: CircularProgressIndicator(strokeWidth: 2),
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            // DEĞİŞTİ: Yükleme ikonu rengi
+                            color: colorScheme.primary,
+                          ),
                         ),
                         const SizedBox(width: 8),
                         Text(
@@ -282,7 +294,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 } else if (userSnapshot.hasData && userSnapshot.data!.exists) {
                   var userData =
                       userSnapshot.data!.data() as Map<String, dynamic>? ?? {};
-                  var username = userData['kullaniciAdi'] ?? currentUserEmail;
+                  var username = userData['ad'] ?? currentUserEmail;
                   welcomeMessage = 'Hoş Geldin, $username!';
                   final puan = userData['toplamPuan'] ?? 0;
 
@@ -295,8 +307,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            const Color(0xFF4A6572),
-                            const Color(0xFF4A6572).withOpacity(0.8),
+                            // DEĞİŞTİ: Gradient renkleri temadan
+                            colorScheme.primary,
+                            colorScheme.primary.withOpacity(0.8),
                           ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -304,7 +317,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFF4A6572).withOpacity(0.3),
+                            // DEĞİŞTİ: Gölge rengi temadan
+                            color: colorScheme.primary.withOpacity(0.3),
                             blurRadius: 8,
                             offset: const Offset(0, 4),
                           ),
@@ -317,6 +331,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                             children: [
                               Icon(
                                 Icons.emoji_events,
+                                // Bu semantik bir renk (altın), temadan bağımsız kalabilir.
                                 color: Colors.amber,
                                 size: 28,
                               ),
@@ -325,7 +340,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 child: Text(
                                   welcomeMessage,
                                   style: theme.textTheme.titleLarge?.copyWith(
-                                    color: Colors.white,
+                                    // DEĞİŞTİ: Yazı rengi temadan
+                                    color: colorScheme.onPrimary,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -336,7 +352,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           Text(
                             'Bugün ne kadar bilgilisin? Testlere başla ve kendini ölç!',
                             style: theme.textTheme.bodyMedium?.copyWith(
-                              color: Colors.white.withOpacity(0.9),
+                              // DEĞİŞTİ: Yazı rengi temadan
+                              color: colorScheme.onPrimary.withOpacity(0.9),
                             ),
                           ),
                           const SizedBox(height: 12),
@@ -346,7 +363,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 'Puan',
                                 puan.toString(),
                                 Icons.star,
-                                Colors.amber,
+                                Colors.amber, // Semantik renk
                               ),
                             ],
                           ),
@@ -364,8 +381,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
-                            const Color(0xFF4A6572),
-                            const Color(0xFF4A6572).withOpacity(0.8),
+                            // DEĞİŞTİ: Gradient renkleri temadan
+                            colorScheme.primary,
+                            colorScheme.primary.withOpacity(0.8),
                           ],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -373,7 +391,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: const Color(0xFF4A6572).withOpacity(0.3),
+                            // DEĞİŞTİ: Gölge rengi temadan
+                            color: colorScheme.primary.withOpacity(0.3),
                             blurRadius: 8,
                             offset: const Offset(0, 4),
                           ),
@@ -382,7 +401,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       child: Text(
                         welcomeMessage,
                         style: theme.textTheme.titleLarge?.copyWith(
-                          color: Colors.white,
+                          // DEĞİŞTİ: Yazı rengi temadan
+                          color: colorScheme.onPrimary,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -394,7 +414,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   children: [
                     welcomeWidget,
 
-                    // --- GÜNCELLENMİŞ DENEME SINAVLARI BUTONU ---
+                    // --- DENEME SINAVLARI BUTONU ---
+                    // Bu buton özel bir tasarıma (turuncu ve parlak) sahip
+                    // olduğu için temadan etkilenmemesi daha iyi olabilir.
+                    // Bu yüzden burayı olduğu gibi bırakıyoruz.
                     FadeTransition(
                       opacity: _fadeAnimation,
                       child: Padding(
@@ -484,14 +507,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   CircularProgressIndicator(
-                                    color: const Color(0xFF4A6572),
+                                    // DEĞİŞTİ: Yükleme ikonu rengi
+                                    color: colorScheme.primary,
                                     strokeWidth: 3,
                                   ),
                                   const SizedBox(height: 16),
                                   Text(
                                     'Kategoriler Yükleniyor...',
                                     style: theme.textTheme.bodyMedium?.copyWith(
-                                      color: const Color(0xFF4A6572),
+                                      // DEĞİŞTİ: Yazı rengi
+                                      color: colorScheme.primary,
                                     ),
                                   ),
                                 ],
@@ -515,7 +540,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           var documents = catSnapshot.data!.docs;
 
                           return RefreshIndicator(
-                            color: const Color(0xFF4A6572),
+                            // DEĞİŞTİ: Yenileme ikonu rengi
+                            color: colorScheme.primary,
                             onRefresh: _reloadAllData,
                             child: ListView.builder(
                               padding: const EdgeInsets.only(
@@ -550,13 +576,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                 final total = completionInfo?['total'] ?? 0;
                                 final solved = completionInfo?['solved'] ?? 0;
 
-                                Widget trailingWidget = const Icon(
+                                Widget trailingWidget = Icon(
                                   Icons.arrow_forward_ios,
                                   size: 18,
+                                  // DEĞİŞTİ: İkon rengi
+                                  color: colorScheme.onSurfaceVariant,
                                 );
 
                                 if (!_isCompletionLoading && total > 0) {
                                   if (solved == total) {
+                                    // Semantik renk (başarı), kalabilir
                                     trailingWidget = Container(
                                       padding: const EdgeInsets.all(4),
                                       decoration: BoxDecoration(
@@ -576,9 +605,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       height: 50,
                                       padding: const EdgeInsets.all(4),
                                       decoration: BoxDecoration(
-                                        color: const Color(
-                                          0xFF4A6572,
-                                        ).withOpacity(0.1),
+                                        // DEĞİŞTİ: Arka plan rengi
+                                        color: colorScheme.primary.withOpacity(
+                                          0.1,
+                                        ),
                                         shape: BoxShape.circle,
                                       ),
                                       child: Stack(
@@ -593,7 +623,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                                   Colors.grey.shade300,
                                               valueColor:
                                                   AlwaysStoppedAnimation<Color>(
-                                                    const Color(0xFF4A6572),
+                                                    // DEĞİŞTİ: İlerleme rengi
+                                                    colorScheme.primary,
                                                   ),
                                               strokeWidth: 4,
                                             ),
@@ -603,7 +634,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                             style: TextStyle(
                                               fontSize: 10,
                                               fontWeight: FontWeight.bold,
-                                              color: const Color(0xFF4A6572),
+                                              // DEĞİŞTİ: Yazı rengi
+                                              color: colorScheme.primary,
                                             ),
                                           ),
                                         ],
@@ -612,6 +644,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   }
                                 } else if (!_isCompletionLoading &&
                                     total == 0) {
+                                  // Semantik renk (boş), kalabilir
                                   trailingWidget = Container(
                                     padding: const EdgeInsets.all(4),
                                     decoration: BoxDecoration(
@@ -625,6 +658,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                     ),
                                   );
                                 } else if (total == -1) {
+                                  // Semantik renk (hata/uyarı), kalabilir
                                   trailingWidget = Container(
                                     padding: const EdgeInsets.all(4),
                                     decoration: BoxDecoration(
@@ -650,7 +684,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                       margin: const EdgeInsets.only(bottom: 12),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(16),
-                                        color: Colors.white,
+                                        // DEĞİŞTİ: Kart rengi
+                                        color: colorScheme.surface,
                                         boxShadow: [
                                           BoxShadow(
                                             color: Colors.black.withOpacity(
@@ -691,6 +726,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                                     10,
                                                   ),
                                                   decoration: BoxDecoration(
+                                                    // _getCategoryColor kategoriye özel
+                                                    // renkler ürettiği için burası değişmemeli.
                                                     color: _getCategoryColor(
                                                       index,
                                                     ).withOpacity(0.2),
@@ -723,10 +760,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold,
-                                                              color:
-                                                                  const Color(
-                                                                    0xFF4A6572,
-                                                                  ),
+                                                              // DEĞİŞTİ: Yazı rengi
+                                                              color: colorScheme
+                                                                  .onSurface,
                                                             ),
                                                       ),
                                                       const SizedBox(height: 4),
@@ -798,11 +834,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     IconData icon,
     Color iconColor,
   ) {
+    // Bu widget'ın arka planı AppBar'daki (primary)
+    // 'welcomeWidget' olduğu için renkleri onPrimary olmalı
+    final colorScheme = Theme.of(context).colorScheme;
+
     return Expanded(
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.2),
+          // DEĞİŞTİ: Arka plan rengi
+          color: colorScheme.onPrimary.withOpacity(0.2),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -814,12 +855,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(color: Colors.white70, fontSize: 12),
+                  // DEĞİŞTİ: Yazı rengi
+                  style: TextStyle(
+                    color: colorScheme.onPrimary.withOpacity(0.7),
+                    fontSize: 12,
+                  ),
                 ),
                 Text(
                   value,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style: TextStyle(
+                    // DEĞİŞTİ: Yazı rengi
+                    color: colorScheme.onPrimary,
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
@@ -832,6 +878,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
+  // Bu fonksiyon kategoriye özel renkler ürettiği için
+  // temadan bağımsız olmalıdır, değiştirilmedi.
   Color _getCategoryColor(int index) {
     final colors = [
       Colors.blue,
@@ -846,6 +894,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return colors[index % colors.length];
   }
 
+  // Bu fonksiyon kategoriye özel ikonlar ürettiği için
+  // temadan bağımsız olmalıdır, değiştirilmedi.
   IconData _getCategoryIcon(int index) {
     final icons = [
       Icons.science,
@@ -877,6 +927,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
+                // Bu kısım zaten temayı kullanıyordu (errorContainer)
                 color: colorScheme.errorContainer.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
@@ -886,6 +937,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             Text(
               message,
               textAlign: TextAlign.center,
+              // Bu kısım zaten temayı kullanıyordu (onSurface)
               style: theme.textTheme.bodyLarge?.copyWith(
                 color: colorScheme.onSurface.withOpacity(0.7),
               ),
@@ -897,7 +949,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF4A6572).withOpacity(0.2),
+                      // DEĞİŞTİ: Gölge rengi
+                      color: colorScheme.primary.withOpacity(0.2),
                       blurRadius: 8,
                       offset: const Offset(0, 4),
                     ),
@@ -907,8 +960,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   icon: const Icon(Icons.refresh),
                   label: const Text('Tekrar Dene'),
                   style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: const Color(0xFF4A6572),
+                    // DEĞİŞTİ: Buton renkleri temadan
+                    foregroundColor: colorScheme.onPrimary,
+                    backgroundColor: colorScheme.primary,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 24,
                       vertical: 12,

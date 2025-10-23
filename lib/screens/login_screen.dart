@@ -11,11 +11,11 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final AuthService _authService = AuthService();
-  final _formKey = GlobalKey<FormState>(); // <<< Form kontrolü için key
+  final _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   String _errorMessage = '';
-  bool _isLoading = false; // <<< Yüklenme durumu
+  bool _isLoading = false; // Yüklenme durumu
 
   @override
   void dispose() {
@@ -24,9 +24,8 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  // --- E-posta/Şifre ile Giriş (Güncellendi) ---
+  // --- E-posta/Şifre ile Giriş ---
   void _login() async {
-    // Form geçerli değilse veya zaten yükleniyorsa devam etme
     if (!(_formKey.currentState?.validate() ?? false) || _isLoading) return;
 
     setState(() {
@@ -35,29 +34,24 @@ class _LoginScreenState extends State<LoginScreen> {
     });
     FocusScope.of(context).unfocus(); // Klavyeyi kapat
 
-    // AuthService'den hata mesajını al
     final error = await _authService.signInWithEmailAndPassword(
       _emailController.text.trim(),
-      _passwordController.text, // Şifrede trim() genellikle yapılmaz
+      _passwordController.text,
     );
 
-    // İşlem bittikten sonra ekran hala aktif mi kontrol et
     if (!mounted) return;
-
     if (error != null) {
-      // Hata varsa göster
       setState(() {
         _errorMessage = error;
       });
     }
     // Başarılıysa AuthWrapper yönlendirecek
-
     setState(() {
       _isLoading = false;
-    }); // Yükleme bitti
+    });
   }
 
-  // --- Google ile Giriş (Güncellendi) ---
+  // --- Google ile Giriş ---
   void _loginWithGoogle() async {
     if (_isLoading) return;
     setState(() {
@@ -65,88 +59,237 @@ class _LoginScreenState extends State<LoginScreen> {
       _isLoading = true;
     });
 
-    // AuthService'den hata mesajını al
     final error = await _authService.signInWithGoogle();
 
     if (!mounted) return;
-
     if (error != null) {
-      // Hata varsa göster
       setState(() {
         _errorMessage = error;
       });
     }
     // Başarılıysa AuthWrapper yönlendirecek
-
     setState(() {
       _isLoading = false;
-    }); // Yükleme bitti
+    });
   }
+
+  // --- Şifre Sıfırlama Dialog'u ---
+  void _showForgotPasswordDialog() {
+    final TextEditingController resetEmailController = TextEditingController();
+    final GlobalKey<FormState> resetFormKey = GlobalKey<FormState>();
+    bool isSending = false;
+
+    showDialog(
+      context: context,
+      builder: (context) {
+        // Dialogun kendi state'ini yönetmesi için StatefulBuilder
+        return StatefulBuilder(
+          builder: (context, setDialogState) {
+            String? dialogError; // Hata mesajı (String? olmalı)
+
+            return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+              title: const Text('Şifremi Unuttum'),
+              content: Form(
+                key: resetFormKey,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      'Kayıtlı e-posta adresinizi girin. Size bir sıfırlama linki göndereceğiz.',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 16),
+                    TextFormField(
+                      controller: resetEmailController,
+                      decoration: const InputDecoration(
+                        labelText: 'E-posta',
+                        prefixIcon: Icon(Icons.email_outlined),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                        ),
+                      ),
+                      keyboardType: TextInputType.emailAddress,
+                      validator: (value) {
+                        if (value == null ||
+                            value.isEmpty ||
+                            !RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
+                          return 'Lütfen geçerli bir e-posta girin.';
+                        }
+                        return null;
+                      },
+                      onChanged: (_) {
+                        if (dialogError != null)
+                          setDialogState(() => dialogError = null);
+                      },
+                    ),
+                    if (dialogError != null && dialogError!.isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 12.0),
+                        child: Text(
+                          dialogError!,
+                          style: TextStyle(
+                            color: dialogError!.contains('Hata')
+                                ? Colors.red
+                                : Colors.green,
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: isSending ? null : () => Navigator.pop(context),
+                  child: const Text('İptal'),
+                ),
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  onPressed: isSending
+                      ? null
+                      : () async {
+                          if (resetFormKey.currentState?.validate() ?? false) {
+                            setDialogState(() {
+                              isSending = true;
+                              dialogError = null;
+                            });
+
+                            final error = await _authService
+                                .sendPasswordResetEmail(
+                                  resetEmailController.text.trim(),
+                                );
+
+                            if (!mounted) return;
+                            if (error == null) {
+                              // Başarılı
+                              setDialogState(() {
+                                isSending = false;
+                                dialogError =
+                                    'Link gönderildi! E-postanızı kontrol edin.';
+                              });
+                              // 2 saniye sonra dialog'u kapat
+                              Future.delayed(const Duration(seconds: 3), () {
+                                if (mounted && Navigator.of(context).canPop()) {
+                                  Navigator.pop(context);
+                                }
+                              });
+                            } else {
+                              // Hatalı
+                              setDialogState(() {
+                                isSending = false;
+                                dialogError = 'Hata: $error';
+                              });
+                            }
+                          }
+                        },
+                  child: isSending
+                      ? const SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: Colors.white,
+                          ),
+                        )
+                      : const Text('Gönder'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+  // --- Şifre Sıfırlama Bitti ---
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
     return Scaffold(
       appBar: AppBar(title: const Text('Giriş Yap')),
-      // Klavye açıldığında taşmayı engellemek için SingleChildScrollView
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
         child: Form(
-          // <<< Form widget'ı eklendi
           key: _formKey,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center, // Ortalamak için
-            crossAxisAlignment:
-                CrossAxisAlignment.stretch, // Butonları genişletmek için
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Ekranın üst kısmında boşluk bırakmak için (isteğe bağlı)
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              // Logo veya karşılama mesajı için boşluk
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
+              Icon(Icons.quiz_rounded, size: 80, color: colorScheme.primary),
+              const SizedBox(height: 12),
+              Text(
+                'Tekrar Hoş Geldin!',
+                textAlign: TextAlign.center,
+                style: theme.textTheme.headlineSmall?.copyWith(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Giriş yaparak yarışmaya devam et.',
+                textAlign: TextAlign.center,
+                style: theme.textTheme.bodyMedium?.copyWith(
+                  color: colorScheme.onSurfaceVariant,
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.05),
 
               TextFormField(
-                // <<< TextField yerine TextFormField
                 controller: _emailController,
                 decoration: const InputDecoration(
                   labelText: 'E-posta',
-                  prefixIcon: Icon(Icons.email_outlined), // İkon eklendi
-                  border: OutlineInputBorder(), // Kenarlık eklendi
+                  prefixIcon: Icon(Icons.email_outlined),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                  ),
                 ),
                 keyboardType: TextInputType.emailAddress,
-                autovalidateMode:
-                    AutovalidateMode.onUserInteraction, // Yazarken kontrol et
+                autovalidateMode: AutovalidateMode.onUserInteraction,
                 validator: (value) {
-                  // <<< E-posta format kontrolü
-                  if (value == null || value.isEmpty) {
+                  if (value == null || value.isEmpty)
                     return 'E-posta boş olamaz.';
-                  }
-                  // Basit bir e-posta format kontrolü
-                  if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
+                  if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value))
                     return 'Lütfen geçerli bir e-posta girin.';
-                  }
-                  return null; // Geçerli
+                  return null;
                 },
               ),
-              const SizedBox(height: 12), // Boşluk ayarlandı
+              const SizedBox(height: 12),
               TextFormField(
-                // <<< TextField yerine TextFormField
                 controller: _passwordController,
                 decoration: const InputDecoration(
                   labelText: 'Şifre',
-                  prefixIcon: Icon(Icons.lock_outline), // İkon eklendi
-                  border: OutlineInputBorder(), // Kenarlık eklendi
+                  prefixIcon: Icon(Icons.lock_outline),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                  ),
                 ),
                 obscureText: true,
+                autovalidateMode: AutovalidateMode
+                    .onUserInteraction, // Yazarken kontrol etmesin
                 validator: (value) {
-                  // <<< Şifre boş kontrolü
-                  if (value == null || value.isEmpty) {
+                  if (value == null || value.isEmpty)
                     return 'Şifre boş olamaz.';
-                  }
-                  // İsteğe bağlı: Minimum karakter kontrolü eklenebilir
-                  // if (value.length < 6) {
-                  //   return 'Şifre en az 6 karakter olmalı.';
-                  // }
-                  return null; // Geçerli
+                  return null;
                 },
               ),
-              const SizedBox(height: 20),
+
+              // Şifremi Unuttum Butonu
+              Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: _isLoading ? null : _showForgotPasswordDialog,
+                  child: const Text('Şifremi Unuttum?'),
+                ),
+              ),
 
               // Hata mesajı alanı
               if (_errorMessage.isNotEmpty)
@@ -154,26 +297,22 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: const EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     _errorMessage,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.error,
-                    ), // Tema rengi
+                    style: TextStyle(color: colorScheme.error),
                     textAlign: TextAlign.center,
                   ),
                 ),
 
               // Giriş Yap Butonu
               ElevatedButton(
-                onPressed: _isLoading
-                    ? null
-                    : _login, // Yükleniyorsa devre dışı
+                onPressed: _isLoading ? null : _login,
                 style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 14,
-                  ), // Dikey padding
+                  padding: const EdgeInsets.symmetric(vertical: 14),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
                 child: _isLoading
                     ? const SizedBox(
-                        // <<< Yüklenme göstergesi
                         height: 20,
                         width: 20,
                         child: CircularProgressIndicator(
@@ -190,7 +329,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: _isLoading
                     ? null
                     : () {
-                        // Yükleniyorsa devre dışı
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) => const RegisterScreen(),
@@ -199,32 +337,63 @@ class _LoginScreenState extends State<LoginScreen> {
                       },
                 child: const Text('Hesabın yok mu? Kayıt Ol'),
               ),
-              const SizedBox(height: 20),
 
-              // Google ile Giriş Butonu
+              // "VEYA" Ayıracı
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        color: colorScheme.outline.withOpacity(0.5),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                      child: Text(
+                        'VEYA',
+                        style: theme.textTheme.bodySmall?.copyWith(
+                          color: colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        color: colorScheme.outline.withOpacity(0.5),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              // Google ile Giriş Butonu (Image.asset ile)
               ElevatedButton.icon(
-                // <<< ElevatedButton.icon kullanıldı
-                onPressed: _isLoading
-                    ? null
-                    : _loginWithGoogle, // Yükleniyorsa devre dışı
+                onPressed: _isLoading ? null : _loginWithGoogle,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white, // Arka plan
-                  foregroundColor: Colors.black87, // Yazı/İkon rengi
-                  padding: const EdgeInsets.symmetric(vertical: 12), // Padding
-                  side: BorderSide(color: Colors.grey.shade300), // Kenarlık
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black.withOpacity(0.7),
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  elevation: 1,
+                  side: BorderSide(color: colorScheme.outline.withOpacity(0.3)),
                 ),
                 icon: _isLoading
                     ? Container(
-                        // <<< Yüklenme göstergesi
-                        width: 20,
-                        height: 20,
+                        width: 22,
+                        height: 22,
                         padding: const EdgeInsets.all(2.0),
                         child: const CircularProgressIndicator(
                           strokeWidth: 2,
                           color: Colors.black54,
                         ),
                       )
-                    : const Icon(Icons.g_mobiledata, size: 24), // Google ikonu
+                    : Image.asset(
+                        'assets/google_logo.png', // pubspec.yaml'da tanımlı olmalı
+                        height: 22.0,
+                        width: 22.0,
+                      ),
                 label: const Text('Google ile Giriş Yap'),
               ),
             ],

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:bilgi_yarismasi/screens/result_screen.dart';
+import 'package:bilgi_yarismasi/screens/result_screen.dart'; // Normal sonuç ekranını kullanabiliriz
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 
 class TrialExamScreen extends StatefulWidget {
@@ -136,9 +136,18 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       }
       int score = (correctAnswers * 100) + (_secondsRemaining * 5);
 
-      // --- DEĞİŞİKLİK BURADA ---
+      // Kullanıcı adını ve emojisini asıl user belgesinden al
+      String kullaniciAdi = "Kullanıcı";
+      String emoji = "🙂";
+      final userDoc = await _firestore.collection('users').doc(user.uid).get();
+      if (userDoc.exists) {
+        kullaniciAdi = userDoc.data()?['kullaniciAdi'] ?? kullaniciAdi;
+        emoji = userDoc.data()?['emoji'] ?? emoji;
+      }
+
+      // 3. Sonucu trialExamResults'a kaydet
       Map<String, dynamic> resultData = {
-        'trialExamId': widget.trialExamId, // <<< BU ALAN EKLENDİ
+        'trialExamId': widget.trialExamId,
         'title': widget.title,
         'score': score,
         'correctAnswers': correctAnswers,
@@ -146,30 +155,19 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
         'totalQuestions': actualQuestionCount,
         'completionTime': FieldValue.serverTimestamp(),
         'timeSpentSeconds': (widget.durationMinutes * 60) - _secondsRemaining,
-        // Kullanıcı adını ve emojisini de ekleyelim ki sıralamada tekrar çekmeyelim
-        'kullaniciAdi':
-            _authService.currentUser?.displayName ??
-            'Kullanıcı', // Veya user belgesinden çek
-        'emoji': '🙂', // TODO: User belgesinden emoji'yi çek
-        'userId': user.uid, // Sıralamada 'kendin'i bulmak için
+        'kullaniciAdi': kullaniciAdi,
+        'emoji': emoji,
+        'userId': user.uid,
       };
-      // --- DEĞİŞİKLİK BİTTİ ---
-
-      // Kullanıcı adını ve emojisini asıl user belgesinden almak daha doğru:
-      final userDoc = await _firestore.collection('users').doc(user.uid).get();
-      if (userDoc.exists) {
-        resultData['kullaniciAdi'] =
-            userDoc.data()?['kullaniciAdi'] ?? 'Kullanıcı';
-        resultData['emoji'] = userDoc.data()?['emoji'] ?? '🙂';
-      }
-
       await resultDocRef.set(resultData);
 
-      final userDocRef = _firestore.collection('users').doc(user.uid);
-      await userDocRef.set({
-        'toplamPuan': FieldValue.increment(score),
-      }, SetOptions(merge: true));
+      // --- DEĞİŞİKLİK: 'toplamPuan' GÜNCELLEMESİ KALDIRILDI ---
+      // 4. Kullanıcının genel toplamPuan'ını GÜNCELLEME
+      // final userDocRef = _firestore.collection('users').doc(user.uid);
+      // await userDocRef.set({'toplamPuan': FieldValue.increment(score)}, SetOptions(merge: true));
+      // --- DEĞİŞİKLİK BİTTİ ---
 
+      // 5. Sonuç Ekranına Git
       if (mounted) {
         final resultFromScreen = await Navigator.push(
           context,
@@ -244,6 +242,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     final questionData = currentQuestion.data() as Map<String, dynamic>? ?? {};
     final questionText = questionData['soruMetni'] ?? 'Soru yüklenemedi';
     final options = List<String>.from(questionData['secenekler'] ?? []);
+    // (Resim URL'si desteği bu kodda yoktu, istenirse QuizScreen'den eklenebilir)
 
     return Scaffold(
       appBar: AppBar(
