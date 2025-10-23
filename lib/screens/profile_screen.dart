@@ -658,6 +658,214 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
     );
   }
+
+  // --- YENİ: Ayarlar Menüsü ---
+  void _showSettingsMenu() {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      builder: (context) {
+        return Container(
+          height: MediaQuery.of(context).size.height * 0.7,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.surface,
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            ),
+          ),
+          child: Column(
+            children: [
+              // Başlık
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16,
+                  horizontal: 20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Ayarlar',
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: const Icon(Icons.close),
+                    ),
+                  ],
+                ),
+              ),
+              const Divider(height: 1),
+
+              // İçerik
+              Expanded(
+                child: ListView(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  children: [
+                    // Şifre Değiştir
+                    ListTile(
+                      leading: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.grey.shade100,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(
+                          Icons.lock_reset_rounded,
+                          color: Colors.grey.shade600,
+                        ),
+                      ),
+                      title: const Text('Şifre Değiştir'),
+                      subtitle: const Text('Giriş şifreni güvenle güncelle'),
+                      onTap: () {
+                        Navigator.pop(context);
+                        // Sadece e-posta ile giriş yapanlar şifre değiştirebilir
+                        final userProvider = _authService
+                            .currentUser
+                            ?.providerData
+                            .first
+                            .providerId;
+                        if (userProvider == 'password') {
+                          _showChangePasswordDialog();
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Google ile giriş yaptığınız için şifre değiştiremezsiniz.',
+                              ),
+                              backgroundColor: Colors.orange.shade800,
+                            ),
+                          );
+                        }
+                      },
+                    ),
+
+                    // Tema Rengi
+                    ListTile(
+                      leading: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.purple.shade100,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(
+                          Icons.palette_rounded,
+                          color: Colors.purple.shade600,
+                        ),
+                      ),
+                      title: const Text('Tema Rengi'),
+                      subtitle: const Text('Uygulama görünümünü kişiselleştir'),
+                      onTap: () {
+                        Navigator.pop(context);
+                        _showThemeSelector();
+                      },
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  // --- YENİ: Tema Seçici ---
+  void _showThemeSelector() {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      builder: (context) {
+        return Container(
+          height: MediaQuery.of(context).size.height * 0.5,
+          decoration: BoxDecoration(
+            color: Theme.of(context).colorScheme.surface,
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(30),
+              topRight: Radius.circular(30),
+            ),
+          ),
+          child: Column(
+            children: [
+              // Başlık
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 16,
+                  horizontal: 20,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Tema Rengi',
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () => Navigator.pop(context),
+                      icon: const Icon(Icons.close),
+                    ),
+                  ],
+                ),
+              ),
+              const Divider(height: 1),
+
+              // Renk Seçenekleri
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: GridView.count(
+                    crossAxisCount: 3,
+                    childAspectRatio: 1,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 16,
+                    children: [
+                      _buildColorChoice(
+                        context,
+                        const Color.fromARGB(255, 243, 100, 33),
+                        'Turuncu',
+                      ), // Turuncu
+                      _buildColorChoice(
+                        context,
+                        Colors.blue.shade600,
+                        'Mavi',
+                      ), // Mavi
+                      _buildColorChoice(
+                        context,
+                        Colors.green.shade600,
+                        'Yeşil',
+                      ), // Yeşil
+                      _buildColorChoice(
+                        context,
+                        Colors.purple.shade600,
+                        'Mor',
+                      ), // Mor
+                      _buildColorChoice(
+                        context,
+                        Colors.red.shade600,
+                        'Kırmızı',
+                      ), // Kırmızı
+                      _buildColorChoice(
+                        context,
+                        Colors.teal.shade600,
+                        'Turkuaz',
+                      ), // Turkuaz
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
   // --- Fonksiyonlar Bitti ---
 
   // === build METODU (StreamBuilder ile) ===
@@ -678,6 +886,20 @@ class _ProfileScreenState extends State<ProfileScreen>
         backgroundColor: Colors.transparent,
         foregroundColor: colorScheme.onSurface,
         actions: [
+          // Ayarlar Butonu
+          Container(
+            margin: const EdgeInsets.only(right: 16),
+            decoration: BoxDecoration(
+              color: colorScheme.primaryContainer.withOpacity(0.2),
+              shape: BoxShape.circle,
+            ),
+            child: IconButton(
+              icon: Icon(Icons.settings_rounded, color: colorScheme.primary),
+              tooltip: 'Ayarlar',
+              onPressed: _showSettingsMenu,
+            ),
+          ),
+          // Çıkış Butonu
           Container(
             margin: const EdgeInsets.only(right: 16),
             decoration: BoxDecoration(
@@ -1031,102 +1253,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                             ),
                           ),
 
-                          // --- YENİ BUTON: Şifre Değiştir ---
-                          const SizedBox(height: 16),
-                          _buildModernNavigationButton(
-                            icon: Icons.lock_reset_rounded,
-                            title: 'Şifre Değiştir',
-                            subtitle: 'Giriş şifreni güvenle güncelle',
-                            color: Colors.grey.shade600, // Farklı bir renk
-                            onTap: () {
-                              // Sadece e-posta ile giriş yapanlar şifre değiştirebilir
-                              // Google ile giriş yapanlar şifre değiştiremez
-                              final userProvider = _authService
-                                  .currentUser
-                                  ?.providerData
-                                  .first
-                                  .providerId;
-                              if (userProvider == 'password') {
-                                _showChangePasswordDialog();
-                              } else {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      'Google ile giriş yaptığınız için şifre değiştiremezsiniz.',
-                                    ),
-                                    backgroundColor: Colors.orange.shade800,
-                                  ),
-                                );
-                              }
-                            },
-                          ),
-
-                          // --- YENİ BUTON BİTTİ ---
-                          const SizedBox(height: 32),
-
-                          // Tema Seçimi
-                          Align(
-                            alignment: Alignment.centerLeft,
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                left: 8.0,
-                                bottom: 16.0,
-                              ),
-                              child: Text(
-                                'Tema Rengi',
-                                style: textTheme.titleLarge?.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              color: colorScheme.surfaceVariant.withOpacity(
-                                0.3,
-                              ),
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(
-                                color: colorScheme.outlineVariant.withOpacity(
-                                  0.5,
-                                ),
-                              ),
-                            ),
-                            child: GridView.count(
-                              crossAxisCount: 6,
-                              shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              mainAxisSpacing: 12,
-                              crossAxisSpacing: 12,
-                              children: [
-                                _buildColorChoice(
-                                  context,
-                                  const Color.fromARGB(255, 243, 100, 33),
-                                ), // Turuncu
-                                _buildColorChoice(
-                                  context,
-                                  Colors.blue.shade600,
-                                ), // Mavi
-                                _buildColorChoice(
-                                  context,
-                                  Colors.green.shade600,
-                                ), // Yeşil
-                                _buildColorChoice(
-                                  context,
-                                  Colors.purple.shade600,
-                                ), // Mor
-                                _buildColorChoice(
-                                  context,
-                                  Colors.red.shade600,
-                                ), // Kırmızı
-                                _buildColorChoice(
-                                  context,
-                                  Colors.teal.shade600,
-                                ), // Turkuaz
-                              ],
-                            ),
-                          ),
                           const SizedBox(height: 32),
 
                           // Bilgilendirme Metni
@@ -1148,7 +1274,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 const SizedBox(width: 12),
                                 Expanded(
                                   child: Text(
-                                    'Emoji veya bilgilerinizi düzenlemek için kalem ikonlarına tıklayın.',
+                                    'Emoji veya bilgilerinizi düzenlemek için kalem ikonlarına tıklayın. Şifre değiştirme ve tema ayarları için üstteki ayarlar ikonunu kullanın.',
                                     style: textTheme.bodySmall?.copyWith(
                                       color: colorScheme.onSurfaceVariant,
                                     ),
@@ -1287,11 +1413,15 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   // Tema Seçim Widget'ı
-  Widget _buildColorChoice(BuildContext context, Color color) {
+  Widget _buildColorChoice(
+    BuildContext context,
+    Color color,
+    String colorName,
+  ) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     final bool isSelected = themeNotifier.seedColor.value == color.value;
     return Tooltip(
-      message: 'Bu temayı seç',
+      message: colorName,
       child: GestureDetector(
         onTap: () {
           Provider.of<ThemeNotifier>(
