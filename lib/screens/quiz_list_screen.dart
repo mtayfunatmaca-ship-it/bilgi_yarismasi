@@ -19,7 +19,6 @@ class QuizListScreen extends StatefulWidget {
 
 class _QuizListScreenState extends State<QuizListScreen>
     with TickerProviderStateMixin {
-  // 1. DEĞİŞİKLİK: SingleTickerProviderStateMixin -> TickerProviderStateMixin
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
 
@@ -331,7 +330,6 @@ class _QuizListScreenState extends State<QuizListScreen>
 
     return RefreshIndicator.adaptive(
       onRefresh: () async {
-        // Verileri yenilemek için bir işlem yapılabilir
         setState(() {});
       },
       color: colorScheme.primary,
@@ -343,10 +341,10 @@ class _QuizListScreenState extends State<QuizListScreen>
           var quizId = quiz.id;
           var quizData = quiz.data() as Map<String, dynamic>;
           var quizBaslik = quizData['baslik'] ?? 'Başlıksız Test';
-          var soruSayisi =
-              quizData['soruSayisi'] ??
-              0; // 2. DEĞİŞİKLİK: soruuSayisi -> soruSayisi
+          var soruSayisi = quizData['soruSayisi'] ?? 0;
           var sureDakika = quizData['sureDakika'] ?? 0;
+
+          // Sabit puan gösterme kodları kaldırıldı.
 
           return AnimatedContainer(
             duration: Duration(milliseconds: 300 + (index * 50)),
@@ -390,7 +388,6 @@ class _QuizListScreenState extends State<QuizListScreen>
                     );
 
                     if (result == true && mounted) {
-                      // StreamBuilder zaten canlı güncelliyor, ekstra yükleme gerek yok
                       setState(() {});
                     }
                   },
@@ -489,15 +486,16 @@ class _QuizListScreenState extends State<QuizListScreen>
                                   overflow: TextOverflow.ellipsis,
                                 ),
                                 const SizedBox(height: 8),
-                                Row(
+
+                                Wrap(
+                                  spacing: 8.0,
+                                  runSpacing: 4.0,
                                   children: [
                                     _buildInfoChip(
                                       icon: Icons.quiz_outlined,
-                                      text:
-                                          '$soruSayisi Soru', // 2. DEĞİŞİKLİK: soruuSayisi -> soruSayisi
+                                      text: '$soruSayisi Soru',
                                       colorScheme: colorScheme,
                                     ),
-                                    const SizedBox(width: 8),
                                     _buildInfoChip(
                                       icon: Icons.timer_outlined,
                                       text: '$sureDakika dk',
@@ -505,6 +503,11 @@ class _QuizListScreenState extends State<QuizListScreen>
                                     ),
                                   ],
                                 ),
+
+                                // === YENİ PUANLAMA BİLGİ SATIRI ===
+                                // Sadece çözmedikleri testlerde göster
+                                if (!isSolvedTab)
+                                  _buildScoringInfo(colorScheme),
                               ],
                             ),
                           ),
@@ -536,28 +539,64 @@ class _QuizListScreenState extends State<QuizListScreen>
     );
   }
 
+  // === YENİ FONKSİYON ===
+  // Puanlama bilgisini gösteren modern bilgi satırı
+  Widget _buildScoringInfo(ColorScheme colorScheme) {
+    return Padding(
+      // Çiplerle hizalı olması için hafif bir iç boşluk
+      padding: const EdgeInsets.only(top: 8.0, left: 4.0),
+      child: Row(
+        mainAxisSize: MainAxisSize.min, // Gereksiz yer kaplamasın
+        children: [
+          Icon(
+            Icons.auto_awesome, // Işıltı/Bonus ikonu
+            size: 14,
+            color: Colors.amber.shade700, // Vurgu rengi (altın)
+          ),
+          const SizedBox(width: 6),
+          Text(
+            "Puanlama: Hız + Doğruluk", // AÇIKLAMA METNİ
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+              color: Colors.amber.shade800,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // === _buildInfoChip GÜNCELLENDİ (Esnek haliyle duruyor) ===
   Widget _buildInfoChip({
     required IconData icon,
     required String text,
     required ColorScheme colorScheme,
+    Color? backgroundColor, // Opsiyonel arka plan rengi
+    Color? foregroundColor, // Opsiyonel ön plan (ikon/metin) rengi
   }) {
+    // Varsayılan renkleri belirle
+    final bgColor =
+        backgroundColor ?? colorScheme.surfaceVariant.withOpacity(0.7);
+    final fgColor = foregroundColor ?? colorScheme.onSurfaceVariant;
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: colorScheme.surfaceVariant.withOpacity(0.7),
+        color: bgColor,
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(icon, size: 14, color: colorScheme.onSurfaceVariant),
+          Icon(icon, size: 14, color: fgColor),
           const SizedBox(width: 4),
           Text(
             text,
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w500,
-              color: colorScheme.onSurfaceVariant,
+              color: fgColor,
             ),
           ),
         ],
