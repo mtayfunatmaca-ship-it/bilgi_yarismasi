@@ -60,6 +60,44 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     }
   }
 
+  // <-- GÜNCELLEME: Sınav durumunu hesaplayan yardımcı fonksiyon
+  ExamStatus _getExamStatus(Map<String, dynamic> examData, DateTime now) {
+    final Timestamp? startTimeTs = examData['startTime'];
+    final Timestamp? endTimeTs = examData['endTime'];
+    final DateTime? startTime = startTimeTs?.toDate();
+    final DateTime? endTime = endTimeTs?.toDate();
+
+    if (startTime != null && now.isBefore(startTime)) {
+      return ExamStatus.upcoming;
+    } else if (endTime != null && now.isAfter(endTime)) {
+      return ExamStatus.finished;
+    } else if (startTime != null &&
+        endTime != null &&
+        now.isAfter(startTime) &&
+        now.isBefore(endTime)) {
+      return ExamStatus.active;
+    }
+    return ExamStatus.unknown;
+  }
+
+  // <-- GÜNCELLEME: Sıralama için duruma öncelik atayan fonksiyon
+  int _getStatusPriority(ExamStatus status, bool hasTaken) {
+    if (hasTaken) {
+      return 3; // 3. Çözülenler (süresi bitsin bitmesin)
+    }
+    switch (status) {
+      case ExamStatus.active:
+        return 1; // 1. Aktif (girilmemiş) - En üstte
+      case ExamStatus.upcoming:
+        return 2; // 2. Yakında - Ortada
+      case ExamStatus.finished:
+        return 4; // 4. Biten (girilmemiş/kaçırılmış) - En altta
+      case ExamStatus.unknown:
+      default:
+        return 5; // 5. Bilinmeyen - En en altta
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final now = DateTime.now();
@@ -102,6 +140,68 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
 
                 var examDocs = snapshot.data!.docs;
 
+                // <-- GÜNCELLEME: İsteğe özel sıralama bloğu
+                final nowForSorting = DateTime.now();
+                examDocs.sort((a, b) {
+                  final aData = a.data() as Map<String, dynamic>? ?? {};
+                  final bData = b.data() as Map<String, dynamic>? ?? {};
+
+                  final aHasTaken = _userResults.containsKey(a.id);
+                  final bHasTaken = _userResults.containsKey(b.id);
+
+                  final aStatus = _getExamStatus(aData, nowForSorting);
+                  final bStatus = _getExamStatus(bData, nowForSorting);
+
+                  final aPriority = _getStatusPriority(aStatus, aHasTaken);
+                  final bPriority = _getStatusPriority(bStatus, bHasTaken);
+
+                  // 1. Ana Sıralama: Öncelik puanına göre
+                  if (aPriority != bPriority) {
+                    return aPriority.compareTo(bPriority);
+                  }
+
+                  // 2. İkincil Sıralama (Aynı kategoridelerse)
+                  final aStartTime = (aData['startTime'] as Timestamp?)
+                      ?.toDate();
+                  final bStartTime = (bData['startTime'] as Timestamp?)
+                      ?.toDate();
+                  final aEndTime = (aData['endTime'] as Timestamp?)?.toDate();
+                  final bEndTime = (bData['endTime'] as Timestamp?)?.toDate();
+
+                  final defaultPast = DateTime(1970);
+                  final defaultFuture = DateTime(2099);
+
+                  switch (aPriority) {
+                    case 1: // Aktif (girilmemiş) -> Bitiş tarihi en yakın olan üste (ASC)
+                      return (aEndTime ?? defaultFuture).compareTo(
+                        bEndTime ?? defaultFuture,
+                      );
+                    case 2: // Yakında -> Başlangıç tarihi en yakın olan üste (ASC)
+                      return (aStartTime ?? defaultFuture).compareTo(
+                        bStartTime ?? defaultFuture,
+                      );
+                    case 3: // Çözülenler -> Çözülme tarihine göre (DESC)
+                      final aResult =
+                          _userResults[a.id]?.data() as Map<String, dynamic>?;
+                      final bResult =
+                          _userResults[b.id]?.data() as Map<String, dynamic>?;
+                      final aCompTime =
+                          (aResult?['completionTime'] as Timestamp?)?.toDate();
+                      final bCompTime =
+                          (bResult?['completionTime'] as Timestamp?)?.toDate();
+                      return (bCompTime ?? defaultPast).compareTo(
+                        aCompTime ?? defaultPast,
+                      );
+                    case 4: // Biten (kaçırılmış) -> Bitiş tarihi en yeni olan üste (DESC)
+                      return (bEndTime ?? defaultPast).compareTo(
+                        aEndTime ?? defaultPast,
+                      );
+                    default:
+                      return 0;
+                  }
+                });
+                // --- SIRALAMA MANTIĞI SONU ---
+
                 return RefreshIndicator(
                   onRefresh: _loadUserResults,
                   color: colorScheme.primary,
@@ -125,19 +225,8 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                       final int questionCount =
                           (examData['questionCount'] as num? ?? 0).toInt();
 
-                      // Durumu hesapla
-                      ExamStatus status = ExamStatus.upcoming;
-                      if (startTime != null && now.isBefore(startTime))
-                        status = ExamStatus.upcoming;
-                      else if (endTime != null && now.isAfter(endTime))
-                        status = ExamStatus.finished;
-                      else if (startTime != null &&
-                          endTime != null &&
-                          now.isAfter(startTime) &&
-                          now.isBefore(endTime))
-                        status = ExamStatus.active;
-                      else
-                        status = ExamStatus.unknown;
+                      // <-- GÜNCELLEME: Durumu helper fonksiyondan al
+                      final ExamStatus status = _getExamStatus(examData, now);
 
                       // Kullanıcı girmiş mi?
                       final bool hasTaken = _userResults.containsKey(examId);
@@ -154,39 +243,23 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                       Color cardBackgroundColor;
                       Color contentColor;
                       IconData leadingIcon;
-                      Widget trailingWidget;
+                      Widget?
+                      trailingWidget; // <-- GÜNCELLEME: Nullable yapıldı
                       VoidCallback? listTileOnTap;
                       String subtitleText = '';
+                      double elevation = 1; // <-- GÜNCELLEME: Cilalı görünüm
+                      BorderSide borderSide =
+                          BorderSide.none; // <-- GÜNCELLEME: Cilalı görünüm
 
-                      // 1. GİRİLMİŞ (hasTaken == true) -> İsteğin üzerine KIRMIZI
-                      if (hasTaken) {
-                        statusColor = Colors.red.shade700;
-                        cardBackgroundColor = Colors.red.shade50.withOpacity(
-                          0.6,
-                        );
-                        contentColor = Colors.red.shade900;
-                        leadingIcon =
-                            Icons.history_edu_rounded; // 'Geçmiş' ikonu
-                        subtitleText =
-                            'Girdin | Puan: $userScore | Sıralamayı Gör';
-
-                        listTileOnTap = () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => TrialExamLeaderboardScreen(
-                              trialExamId: examId,
-                              title: title,
-                            ),
-                          ),
-                        );
-                      }
-                      // 2. AKTİF (girilmemiş) -> İsteğin üzerine YEŞİL
-                      else if (status == ExamStatus.active) {
+                      // 1. AKTİF (girilmemiş) -> YEŞİL (Priority 1)
+                      if (status == ExamStatus.active && !hasTaken) {
                         statusColor = Colors.green.shade600;
                         cardBackgroundColor = Colors.green.shade50;
                         contentColor = Colors.green.shade800;
                         leadingIcon = Icons.play_circle_fill_rounded;
                         subtitleText = 'SINAV ŞİMDİ AKTİF!';
+                        elevation = 6; // <-- GÜNCELLEME: Vurgu için
+                        borderSide = BorderSide(color: statusColor, width: 2.0);
 
                         startExamCallback() {
                           Navigator.push(
@@ -214,12 +287,16 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                         );
                         listTileOnTap = startExamCallback;
                       }
-                      // 3. YAKINDA -> İsteğin üzerine TURUNCU
+                      // 2. YAKINDA -> TURUNCU (Priority 2)
                       else if (status == ExamStatus.upcoming) {
                         statusColor = Colors.orange.shade700;
                         cardBackgroundColor = Colors.orange.shade50;
                         contentColor = Colors.orange.shade900;
                         leadingIcon = Icons.timer_outlined; // Zamanlayıcı ikonu
+                        borderSide = BorderSide(
+                          color: statusColor.withOpacity(0.5),
+                          width: 1.5,
+                        );
 
                         trailingWidget = Chip(
                           label: Text(
@@ -242,7 +319,41 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                               ),
                             );
                       }
-                      // 4. BİTMİŞ (girilmemiş) -> İsteğin üzerine KIRMIZI
+                      // 3. GİRİLMİŞ (hasTaken == true) -> KIRMIZI (Priority 3)
+                      else if (hasTaken) {
+                        statusColor = Colors.red.shade700;
+                        cardBackgroundColor = Colors.red.shade50.withOpacity(
+                          0.6,
+                        );
+                        contentColor = Colors.red.shade900;
+                        leadingIcon =
+                            Icons.history_edu_rounded; // 'Geçmiş' ikonu
+                        subtitleText =
+                            'Girdin | Puan: $userScore | Sıralamayı Gör';
+                        elevation = 0;
+                        borderSide = BorderSide(
+                          color: statusColor.withOpacity(0.4),
+                          width: 1,
+                        );
+
+                        // <-- GÜNCELLEME: İkon eklendi
+                        trailingWidget = Icon(
+                          Icons.arrow_forward_ios_rounded,
+                          color: contentColor,
+                          size: 18,
+                        );
+
+                        listTileOnTap = () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => TrialExamLeaderboardScreen(
+                              trialExamId: examId,
+                              title: title,
+                            ),
+                          ),
+                        );
+                      }
+                      // 4. BİTMİŞ (girilmemiş/KAÇIRILMIŞ) -> KIRMIZI (Priority 4)
                       else if (status == ExamStatus.finished) {
                         statusColor = Colors.red.shade700;
                         cardBackgroundColor = Colors.red.shade50.withOpacity(
@@ -251,10 +362,27 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                         contentColor = Colors.red.shade900;
                         leadingIcon = Icons.cancel_rounded; // Kaçırıldı ikonu
                         subtitleText =
-                            'Bu sınav bitti (Kaçırdın). Sıralamaya bak.';
+                            'Bu sınav bitti (Kaçırdın)'; // Sıralamaya bak metni butona taşındı
+                        elevation = 0;
+                        borderSide = BorderSide(
+                          color: statusColor.withOpacity(0.4),
+                          width: 1,
+                        );
 
                         trailingWidget = OutlinedButton(
-                          onPressed: () {}, // onTap halledecek
+                          onPressed: () {
+                            // <-- GÜNCELLEME: onPressed düzeltildi
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    TrialExamLeaderboardScreen(
+                                      trialExamId: examId,
+                                      title: title,
+                                    ),
+                              ),
+                            );
+                          },
                           style: OutlinedButton.styleFrom(
                             foregroundColor: contentColor,
                             side: BorderSide(
@@ -287,20 +415,22 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           color: Colors.grey,
                         );
                         listTileOnTap = null;
+                        borderSide = BorderSide(
+                          color: statusColor.withOpacity(0.3),
+                          width: 1,
+                        );
                       }
                       // --- MANTIK BİTTİ ---
 
                       return Card(
                         margin: const EdgeInsets.only(bottom: 14),
-                        elevation: (status == ExamStatus.active && !hasTaken)
-                            ? 3
-                            : 1,
+                        elevation: elevation, // <-- GÜNCELLEME
+                        shadowColor: status == ExamStatus.active && !hasTaken
+                            ? Colors.green.withOpacity(0.5)
+                            : null,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(16),
-                          side: BorderSide(
-                            color: statusColor.withOpacity(0.5),
-                            width: 1.5,
-                          ),
+                          side: borderSide, // <-- GÜNCELLEME
                         ),
                         clipBehavior: Clip.antiAlias,
                         child: InkWell(
@@ -369,6 +499,8 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                                     ),
                                   ),
                                   const SizedBox(width: 12),
+                                  // <-- GÜNCELLEME: trailingWidget eklendi
+                                  if (trailingWidget != null) trailingWidget,
                                 ],
                               ),
                             ),
