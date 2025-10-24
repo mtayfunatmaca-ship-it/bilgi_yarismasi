@@ -436,7 +436,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 )
                               : Image.asset(
-                                  'assets/google_logo.png',
+                                  'assets/images/google_logo.png',
                                   height: 22.0,
                                   width: 22.0,
                                 ),
