@@ -30,6 +30,8 @@ class SolvedQuizzesScreen extends StatelessWidget {
     }
 
     return Scaffold(
+      // Arka plan rengini biraz değiştirerek kartların öne çıkmasını sağlayabiliriz
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(title: const Text('Test Geçmişim')),
       body: StreamBuilder<QuerySnapshot>(
         stream: _firestore
@@ -38,7 +40,6 @@ class SolvedQuizzesScreen extends StatelessWidget {
             .collection('solvedQuizzes')
             .orderBy('tarih', descending: true)
             .snapshots(),
-
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
@@ -55,6 +56,7 @@ class SolvedQuizzesScreen extends StatelessWidget {
           var solvedDocs = snapshot.data!.docs;
 
           return ListView.builder(
+            padding: const EdgeInsets.all(12), // Liste için genel bir dolgu
             itemCount: solvedDocs.length,
             itemBuilder: (context, index) {
               var solvedData = solvedDocs[index].data() as Map<String, dynamic>;
@@ -65,13 +67,21 @@ class SolvedQuizzesScreen extends StatelessWidget {
                 solvedData['tarih'] as Timestamp?,
               );
 
+              // --- YENİ TASARIM ---
+              // ListTile yerine özel Card tasarımı
               return Card(
-                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                child: ListTile(
-                  leading: const Icon(Icons.check_circle, color: Colors.green),
-                  title: Text(quizBaslik),
-                  subtitle: Text('Puan: $puan - Tarih: $tarih'),
-                  trailing: const Icon(Icons.arrow_forward_ios),
+                margin: const EdgeInsets.only(bottom: 12),
+                elevation: 6, // "Kabarık" görünüm için gölge
+                shadowColor: Colors.blueGrey.withOpacity(0.2),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(
+                    20,
+                  ), // Görseldeki gibi yuvarlak köşeler
+                ),
+                clipBehavior:
+                    Clip.antiAlias, // İçeriğin köşelerden taşmasını engeller
+                child: InkWell(
+                  // Tıklanma efekti ve olayı için
                   onTap: () {
                     // Tıpkı QuizListScreen'deki gibi, geçmiş sonuç ekranına git
                     Navigator.push(
@@ -84,6 +94,78 @@ class SolvedQuizzesScreen extends StatelessWidget {
                       ),
                     );
                   },
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [
+                        // Sol Taraf: Renkli Arka Planlı İkon
+                        Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.green[100], // Renkli arka plan
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Icon(
+                            Icons.check_circle,
+                            color: Colors.green[800], // Renkli ikon
+                            size: 30,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+
+                        // Orta Kısım: Başlık, Puan ve Tarih
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                quizBaslik,
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                'Puan: $puan',
+                                style: TextStyle(
+                                  color: Colors.grey[800],
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                tarih,
+                                style: TextStyle(
+                                  color: Colors.grey[600],
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+
+                        // Sağ Taraf: Görseldeki gibi "Oynat" butonu (Burada "İleri" ikonu)
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color:
+                                Colors.orange[400], // Görseldeki gibi turuncu
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.white,
+                            size: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               );
             },
