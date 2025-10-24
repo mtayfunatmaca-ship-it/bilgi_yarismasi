@@ -514,6 +514,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
   }
 
   // Podyum Kullanıcısı Widget'ı (Puanlı)
+  // Podyum Kullanıcısı Widget'ı (Puanlı)
+  // GÜNCELLENMİŞ: 3D KÜP PODYUM ve "MEVCUT KULLANICI" İKONU EKLENDİ
   Widget _buildPodiumUser(
     DocumentSnapshot userDoc,
     int rank,
@@ -536,6 +538,24 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
         ? Colors.amber
         : (rank == 2 ? Colors.grey.shade400 : Colors.brown.shade400);
 
+    // --- YENİ EKLENEN 3D KÜP İÇİN RENK HESAPLAMALARI ---
+    final HSLColor hslColor = HSLColor.fromColor(podiumBaseColor);
+    // Üst yüzey için renkler
+    final Color lightColor = hslColor
+        .withLightness((hslColor.lightness + 0.1).clamp(0.0, 1.0))
+        .toColor();
+    final Color darkColor = hslColor
+        .withLightness((hslColor.lightness - 0.1).clamp(0.0, 1.0))
+        .toColor();
+    // Küpün "ön" yüzü için daha koyu bir renk
+    final Color frontFaceColor = hslColor
+        .withLightness((hslColor.lightness - 0.2).clamp(0.0, 1.0))
+        .toColor();
+    final Color numberColor = podiumShadowColor;
+    // Küpün "kalınlığı" (ön yüzünün yüksekliği)
+    const double podiumFrontFaceHeight = 15.0;
+    // --- YENİ EKLENTİ SONU ---
+
     return ScaleTransition(
       scale: animation,
       child: Column(
@@ -546,15 +566,53 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
           else
             const SizedBox(height: 30),
 
-          CircleAvatar(
-            radius: rank == 1 ? 36 : 30,
-            backgroundColor: isCurrentUser ? colorScheme.surface : rankColor,
-            child: CircleAvatar(
-              radius: (rank == 1 ? 36 : 30) - 3,
-              backgroundColor: podiumBaseColor,
-              child: Text(emoji, style: const TextStyle(fontSize: 32)),
-            ),
+          // --- GÜNCELLEME: Avatar "Stack" içine alındı ---
+          Stack(
+            clipBehavior: Clip.none,
+            children: [
+              CircleAvatar(
+                radius: rank == 1 ? 36 : 30,
+                backgroundColor: isCurrentUser
+                    ? colorScheme.surface
+                    : rankColor,
+                child: CircleAvatar(
+                  radius: (rank == 1 ? 36 : 30) - 3,
+                  backgroundColor: podiumBaseColor,
+                  child: Text(emoji, style: const TextStyle(fontSize: 32)),
+                ),
+              ),
+              // --- YENİ EKLENEN "KENDİSİ" İKONU ---
+              // Eğer mevcut kullanıcı ise VE 1. değilse (2. veya 3. ise) ikonu göster
+              if (isCurrentUser && rank != 1)
+                Positioned(
+                  top: -4,
+                  right: -4,
+                  child: Container(
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: colorScheme.surface, // Açık arkaplan
+                      shape: BoxShape.circle,
+                      border: Border.all(color: colorScheme.primary, width: 2),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 4,
+                          offset: const Offset(1, 1),
+                        ),
+                      ],
+                    ),
+                    child: Icon(
+                      Icons.my_location, // "Buradasınız" ikonu
+                      color: colorScheme.primary,
+                      size: 16,
+                    ),
+                  ),
+                ),
+              // --- YENİ EKLENTİ SONU ---
+            ],
           ),
+
+          // --- GÜNCELLEME SONU ---
           const SizedBox(height: 8),
 
           Text(
@@ -595,28 +653,91 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
           ),
           const SizedBox(height: 8),
 
-          Container(
-            height: height,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: podiumBaseColor,
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(12),
-                topRight: Radius.circular(12),
-              ),
-              border: Border.all(color: podiumShadowColor, width: 2),
-            ),
-            child: Center(
-              child: Text(
-                '$rank',
-                style: TextStyle(
-                  fontSize: rank == 1 ? 48 : 40,
-                  fontWeight: FontWeight.bold,
-                  color: podiumShadowColor,
+          // --- GÜNCELLENMİŞ 3D KÜP PODYUM KARTI ---
+          Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              // 1. KÜPÜN ÖN YÜZÜ (Alt katman, "kalınlık" verir)
+              Container(
+                height:
+                    height +
+                    podiumFrontFaceHeight, // Üst yüz + ön yüz yüksekliği
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  // Ön yüz (daha koyu)
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      darkColor, // Üst kenara yakın
+                      frontFaceColor, // Alt kenar (en koyu)
+                    ],
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(12),
+                    topRight: Radius.circular(12),
+                    bottomLeft: Radius.circular(8), // Alt köşeler
+                    bottomRight: Radius.circular(8), // Alt köşeler
+                  ),
+                  boxShadow: [
+                    // Podyumun yere düşen gölgesi
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.3),
+                      blurRadius: 15,
+                      offset: const Offset(0, 10),
+                    ),
+                  ],
                 ),
               ),
-            ),
+
+              // 2. KÜPÜN ÜST YÜZÜ (Üst katman, kabartma efektli)
+              Container(
+                height: height,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  // Üst yüz (kabartma efekti)
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [lightColor, podiumBaseColor, darkColor],
+                    stops: const [0.0, 0.4, 1.0],
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(12),
+                    topRight: Radius.circular(12),
+                  ),
+                  // Üst yüzün kenar vurgusu (parlama)
+                  border: Border.all(
+                    color: Colors.white.withOpacity(0.2),
+                    width: 1.5,
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    '$rank',
+                    style: TextStyle(
+                      fontSize: rank == 1 ? 48 : 40,
+                      fontWeight: FontWeight.bold,
+                      color: numberColor,
+                      shadows: [
+                        Shadow(
+                          color: Colors.black.withOpacity(0.2),
+                          offset: const Offset(2, 2),
+                          blurRadius: 4,
+                        ),
+                        Shadow(
+                          color: Colors.white.withOpacity(0.7),
+                          offset: const Offset(-1, -1),
+                          blurRadius: 2,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
+          // --- GÜNCELLEME SONU ---
         ],
       ),
     );
