@@ -339,7 +339,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
         else
           yanlisSayisi++;
       }
-      int puan = (dogruSayisi * 100) + (_secondsRemaining * 5);
+      int puan = (dogruSayisi * 5) + (_secondsRemaining * 1);
 
       // Çözülen teste kategoriId'yi ekle
       Map<String, dynamic> newSolvedData = {
