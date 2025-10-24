@@ -565,7 +565,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 ),
               ),
               FaIcon(
-                FontAwesomeIcons.pen,
+                FontAwesomeIcons.stopwatch,
                 color: colorScheme.onSecondary.withOpacity(0.2),
                 size: 80,
               ),

@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 
 class ConnectivityBanner extends StatefulWidget {
-  final Widget child; // Banner'ın altında gösterilecek asıl içerik
-
+  final Widget child;
   const ConnectivityBanner({super.key, required this.child});
 
   @override
@@ -12,82 +11,111 @@ class ConnectivityBanner extends StatefulWidget {
 }
 
 class _ConnectivityBannerState extends State<ConnectivityBanner> {
-  late StreamSubscription<List<ConnectivityResult>> _connectivitySubscription;
-  bool _isOffline = false; // Bağlantı durumu
+  late StreamSubscription<List<ConnectivityResult>> _subscription;
+  bool _isConnected = true; // Başlangıçta bağlı varsayalım
 
   @override
   void initState() {
     super.initState();
-    // İlk durumu kontrol et
-    _checkInitialConnectivity();
-    // Bağlantı değişikliklerini dinlemeye başla
-    _connectivitySubscription = Connectivity().onConnectivityChanged.listen(
+
+    // 1. Uygulama açılırken anlık durumu hemen kontrol et
+    _checkCurrentConnectivity();
+
+    // 2. Bağlantı değişikliklerini dinlemeye başla
+    _subscription = Connectivity().onConnectivityChanged.listen(
       _updateConnectionStatus,
     );
   }
 
   @override
   void dispose() {
-    _connectivitySubscription.cancel(); // Dinleyiciyi iptal et
+    _subscription.cancel();
     super.dispose();
   }
 
-  // Başlangıçtaki bağlantı durumunu kontrol eder
-  Future<void> _checkInitialConnectivity() async {
-    final connectivityResult = await Connectivity().checkConnectivity();
+  // Başlangıçtaki bağlantı durumunu kontrol eden fonksiyon
+  Future<void> _checkCurrentConnectivity() async {
+    final connectivityResult = await (Connectivity().checkConnectivity());
     _updateConnectionStatus(connectivityResult);
   }
 
-  // Bağlantı durumu değiştiğinde çağrılır
+  // --- DÜZELTİLMİŞ MANTIK BURADA ---
+  // Bu fonksiyon, bağlantı durumu değiştiğinde çağrılır
   void _updateConnectionStatus(List<ConnectivityResult> results) {
-    // Eğer sonuç listesi boşsa veya 'none' içeriyorsa offline kabul et
-    bool offline = results.isEmpty || results.contains(ConnectivityResult.none);
-    // Sadece durum değiştiyse setState çağır
-    if (offline != _isOffline && mounted) {
+    // connectivity_plus artık bir liste döndürebilir (örn: hem Wifi hem Mobil açık)
+
+    bool currentConnectionStatus;
+
+    // Eğer liste 'none' içeriyorsa VEYA boşsa internet yok demektir.
+    if (results.contains(ConnectivityResult.none) || results.isEmpty) {
+      currentConnectionStatus = false;
+    } else {
+      // Eğer 'none' içermiyorsa (yani wifi, mobile, ethernet vb. varsa)
+      // internet VAR sayılır.
+      currentConnectionStatus = true;
+    }
+
+    // Sadece durum değiştiyse ekranı yeniden çiz
+    if (mounted && _isConnected != currentConnectionStatus) {
       setState(() {
-        _isOffline = offline;
-        // Bağlantı geri geldiğinde veya ilk açılışta bilgi mesajı (opsiyonel)
-        /*
-         if(!offline){
-            ScaffoldMessenger.of(context).showSnackBar(
-               SnackBar(content: Text('İnternet bağlantısı sağlandı.'), backgroundColor: Colors.green)
-            );
-         }
-         */
+        _isConnected = currentConnectionStatus;
       });
     }
   }
+  // --- DÜZELTME BİTTİ ---
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    // Stack kullanarak ana uygulamayı (child) ve banner'ı üst üste bindiriyoruz
+    return Stack(
       children: [
-        // Eğer offline ise banner'ı göster
-        if (_isOffline)
-          Material(
-            // Banner'a Material görünümü verelim
-            color: Colors.red.shade700,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 4.0,
-              ), // Padding ayarlandı
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.wifi_off_rounded, color: Colors.white, size: 16),
-                  const SizedBox(width: 8),
-                  Text(
-                    'İnternet bağlantısı yok',
-                    style: TextStyle(color: Colors.white, fontSize: 12),
-                  ),
-                ],
+        // 1. Katman: Ana uygulaman (AuthWrapper -> MainScreen vs.)
+        widget.child,
+
+        // 2. Katman: İnternet Yok Banner'ı
+        // (AnimatedPositioned ile ekranın altından kayarak gelir/gider)
+        AnimatedPositioned(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeInOut,
+          // Bağlıysa ekranın dışına (-100), bağlı değilse ekranın altına (0)
+          bottom: _isConnected ? -100 : 0,
+          left: 0,
+          right: 0,
+          child: _buildBanner(context),
+        ),
+      ],
+    );
+  }
+
+  // İnternet yokken gösterilecek banner'ın tasarımı
+  Widget _buildBanner(BuildContext context) {
+    // Material widget'ı, Text'lerin doğru temada (beyaz) görünmesini sağlar
+    return Material(
+      color: Colors.transparent, // Arka plan rengini Container belirlesin
+      child: Container(
+        // Cihazın altındaki çentik/boşluk (SafeArea) kadar da padding ver
+        padding: EdgeInsets.fromLTRB(
+          16,
+          12,
+          16,
+          MediaQuery.of(context).padding.bottom + 12,
+        ),
+        color: Colors.red.shade700, // Koyu kırmızı
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.wifi_off_rounded, color: Colors.white, size: 18),
+            SizedBox(width: 10),
+            Text(
+              'İnternet bağlantısı yok.',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
               ),
             ),
-          ),
-        // Banner'ın altında asıl uygulama içeriğini göster
-        Expanded(child: widget.child),
-      ],
+          ],
+        ),
+      ),
     );
   }
 }
