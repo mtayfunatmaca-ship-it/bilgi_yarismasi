@@ -415,6 +415,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   // Hızlı Eylem Butonlarının yapı taşı
+  // Hızlı Eylem Butonlarının yapı taşı (Kabartma Efekti)
+  // Hızlı Eylem Butonlarının yapı taşı (Kabartma Efekti)
   Widget _buildQuickActionButton({
     required BuildContext context,
     required Color color,
@@ -423,41 +425,54 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     required VoidCallback onTap,
   }) {
     return Expanded(
-      child: GestureDetector(
-        onTap: onTap,
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 6),
-          padding: const EdgeInsets.symmetric(
-            vertical: 20,
-          ), // Yükseklik artırıldı
-          decoration: BoxDecoration(
-            color: color,
-            borderRadius: BorderRadius.circular(20), // Daha yuvarlak
-            gradient: LinearGradient(
-              colors: [color, Color.lerp(color, Colors.black, 0.2)!],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 6),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: color.withOpacity(0.3),
+              blurRadius: 10,
+              offset: const Offset(0, 5),
+              spreadRadius: 1,
             ),
-            boxShadow: [
-              BoxShadow(
-                color: color.withOpacity(0.3),
-                blurRadius: 10,
-                offset: const Offset(0, 5),
-              ),
-            ],
-          ),
-          child: Column(
-            children: [
-              FaIcon(icon, color: Colors.white, size: 28), // Boyut artırıldı
-              const SizedBox(height: 12),
-              Text(
-                label,
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
+            BoxShadow(
+              color: Colors.white.withOpacity(0.1),
+              blurRadius: 3,
+              offset: const Offset(-2, -2),
+              spreadRadius: 0,
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(20),
+            onTap: onTap,
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: LinearGradient(
+                  colors: [color, Color.lerp(color, Colors.black, 0.2)!],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
                 ),
               ),
-            ],
+              child: Column(
+                children: [
+                  FaIcon(icon, color: Colors.white, size: 28),
+                  const SizedBox(height: 12),
+                  Text(
+                    label,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
       ),
@@ -465,85 +480,97 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   // Deneme Sınavı Banner'ı
+  // Deneme Sınavı Banner'ı (Kabartma Efekti)
   Widget _buildTrialExamBanner(
     BuildContext context,
     ColorScheme colorScheme,
     TextTheme textTheme,
   ) {
-    // Shimmer'ı kaldırdık, temadan renk alıyor
     return FadeTransition(
       opacity: _fadeAnimation,
       child: Container(
-        margin: const EdgeInsets.fromLTRB(16, 24, 16, 16), // Boşluklar
-        padding: const EdgeInsets.all(20),
+        margin: const EdgeInsets.fromLTRB(16, 24, 16, 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
-          gradient: LinearGradient(
-            // Temanın İkincil Rengi
-            colors: [
-              colorScheme.secondary,
-              Color.lerp(colorScheme.secondary, Colors.black, 0.3)!,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
           boxShadow: [
             BoxShadow(
               color: colorScheme.secondary.withOpacity(0.3),
               blurRadius: 15,
               offset: const Offset(0, 8),
+              spreadRadius: 1,
+            ),
+            BoxShadow(
+              color: Colors.white.withOpacity(0.1),
+              blurRadius: 5,
+              offset: const Offset(-3, -3),
+              spreadRadius: 0,
             ),
           ],
         ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Deneme Sınavları', // "Daily Quiz" yerine
-                    style: textTheme.titleLarge?.copyWith(
-                      color: colorScheme.onSecondary,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    'Oyna, kazan, rekabet et!',
-                    style: textTheme.bodyMedium?.copyWith(
-                      color: colorScheme.onSecondary.withOpacity(0.9),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const TrialExamsListScreen(),
-                        ),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: colorScheme.onSecondary, // Buton rengi
-                      foregroundColor: colorScheme.secondary, // Yazı rengi
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(24),
+            gradient: LinearGradient(
+              colors: [
+                colorScheme.secondary,
+                Color.lerp(colorScheme.secondary, Colors.black, 0.3)!,
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Deneme Sınavları',
+                      style: textTheme.titleLarge?.copyWith(
+                        color: colorScheme.onSecondary,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    child: const Text('Hemen Katıl'),
-                  ),
-                ],
+                    const SizedBox(height: 4),
+                    Text(
+                      'Oyna, kazan, rekabet et!',
+                      style: textTheme.bodyMedium?.copyWith(
+                        color: colorScheme.onSecondary.withOpacity(0.9),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const TrialExamsListScreen(),
+                          ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: colorScheme.onSecondary,
+                        foregroundColor: colorScheme.secondary,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        elevation: 3,
+                        shadowColor: Colors.black.withOpacity(0.2),
+                      ),
+                      child: const Text('Hemen Katıl'),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            // Soru işaretleri (tasarımdaki gibi)
-            FaIcon(
-              FontAwesomeIcons.solidCommentDots,
-              color: colorScheme.onSecondary.withOpacity(0.2),
-              size: 80,
-            ),
-          ],
+              FaIcon(
+                FontAwesomeIcons.pen,
+                color: colorScheme.onSecondary.withOpacity(0.2),
+                size: 80,
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -679,6 +706,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   // Kategori Kartı (Resimdeki Tasarım)
+  // Kategori Kartı (Görseldeki Tasarım - Kabartma Efekti)
   Widget _buildCategoryCard(
     String docId,
     String kategoriAdi,
@@ -693,130 +721,176 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: LinearGradient(
-          colors: kategoriColor,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
         boxShadow: [
+          // Kabartma efekti için gölgeler
           BoxShadow(
-            color: kategoriColor.first.withOpacity(0.4),
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+            spreadRadius: 0,
+          ),
+          BoxShadow(
+            color: kategoriColor.first.withOpacity(0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
             spreadRadius: 1,
           ),
+          // İç gölge efekti
+          BoxShadow(
+            color: Colors.white.withOpacity(0.2),
+            blurRadius: 5,
+            offset: const Offset(-2, -2),
+            spreadRadius: 0,
+          ),
         ],
       ),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(20),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) =>
-                    QuizListScreen(kategoriId: docId, kategoriAd: kategoriAdi),
+      child: Stack(
+        children: [
+          // Ana kart
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              gradient: LinearGradient(
+                colors: kategoriColor,
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
-            ).then((_) => _loadCompletionStatus());
-          },
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Stack(
-              children: [
-                // Köşedeki büyük ikon
-                Positioned(
-                  top: -10,
-                  right: -10,
-                  child: FaIcon(
-                    kategoriIcon,
-                    color: Colors.white.withOpacity(0.2),
-                    size: 80,
-                  ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    // Başlık
-                    Text(
-                      kategoriAdi,
-                      style: theme.textTheme.titleMedium?.copyWith(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        shadows: [
-                          Shadow(
-                            color: Colors.black.withOpacity(0.3),
-                            offset: const Offset(1, 1),
-                            blurRadius: 2,
+            ),
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(20),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QuizListScreen(
+                        kategoriId: docId,
+                        kategoriAd: kategoriAdi,
+                      ),
+                    ),
+                  ).then((_) => _loadCompletionStatus());
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Stack(
+                    children: [
+                      // Köşedeki büyük ikon
+                      Positioned(
+                        top: -10,
+                        right: -10,
+                        child: FaIcon(
+                          kategoriIcon,
+                          color: Colors.white.withOpacity(0.2),
+                          size: 80,
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // Başlık
+                          Text(
+                            kategoriAdi,
+                            style: theme.textTheme.titleMedium?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              shadows: [
+                                Shadow(
+                                  color: Colors.black.withOpacity(0.3),
+                                  offset: const Offset(1, 1),
+                                  blurRadius: 2,
+                                ),
+                              ],
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+
+                          // Test Sayısı ve İlerleme
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                total > 0
+                                    ? '$total Test'
+                                    : (total == 0 ? 'Test Yok' : 'Hata'),
+                                style: theme.textTheme.bodySmall?.copyWith(
+                                  color: Colors.white.withOpacity(0.9),
+                                  fontWeight: FontWeight.w500,
+                                  shadows: [
+                                    Shadow(
+                                      color: Colors.black.withOpacity(0.3),
+                                      offset: const Offset(1, 1),
+                                      blurRadius: 2,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              if (total > 0 && !_isCompletionLoading)
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: LinearProgressIndicator(
+                                    value: progress.clamp(0.0, 1.0),
+                                    backgroundColor: Colors.white.withOpacity(
+                                      0.3,
+                                    ),
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      Colors.white,
+                                    ),
+                                    minHeight: 6,
+                                  ),
+                                )
+                              else if (_isCompletionLoading)
+                                Container(
+                                  height: 6,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.3),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                )
+                              else
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: Container(
+                                    height: 6,
+                                    color: Colors.white.withOpacity(0.3),
+                                  ),
+                                ),
+                            ],
                           ),
                         ],
                       ),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-
-                    // Test Sayısı ve İlerleme
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          total > 0
-                              ? '$total Test'
-                              : (total == 0 ? 'Test Yok' : 'Hata'),
-                          style: theme.textTheme.bodySmall?.copyWith(
-                            color: Colors.white.withOpacity(0.9),
-                            fontWeight: FontWeight.w500,
-                            shadows: [
-                              Shadow(
-                                color: Colors.black.withOpacity(0.3),
-                                offset: const Offset(1, 1),
-                                blurRadius: 2,
-                              ),
-                            ],
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        if (total > 0 && !_isCompletionLoading)
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: LinearProgressIndicator(
-                              value: progress.clamp(
-                                0.0,
-                                1.0,
-                              ), // Değerin 0-1 arasında olduğundan emin ol
-                              backgroundColor: Colors.white.withOpacity(0.3),
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.white,
-                              ),
-                              minHeight: 6,
-                            ),
-                          )
-                        else if (_isCompletionLoading)
-                          Container(
-                            height: 6,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.3),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          )
-                        else
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Container(
-                              height: 6,
-                              color: Colors.white.withOpacity(0.3),
-                            ),
-                          ),
-                      ],
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ],
+              ),
             ),
           ),
-        ),
+
+          // Üst köşe parlaklık efekti
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 40,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.white.withOpacity(0.15), Colors.transparent],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
