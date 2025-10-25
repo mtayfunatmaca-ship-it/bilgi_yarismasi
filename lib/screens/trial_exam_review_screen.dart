@@ -10,7 +10,7 @@ class TrialExamReviewScreen extends StatelessWidget {
     super.key,
     required this.questions,
     required this.userAnswers,
-    required this.correctAnswers,
+    required this.correctAnswers, required String trialExamId, required String trialExamTitle,
   });
 
   @override
