@@ -8,25 +8,71 @@
   ],
   "quizzes": [
     {
-      "id": "tarih_ilk_turkler",
-      "baslik": "İlk Atalarımız",
-      "kategoriId": "tarih",
+      "id": "vatandaslik_anayasa_1",
+      "baslik": "Anayasa Bilgisi Temel",
+      "kategoriId": "vatandaslik",
       "soruSayisi": 4,
       "sureDakika": 8,
       "sorular": [
-         {"soruMetni": "Şu an yürürlükte olan anayasa kaç yılında kabul edilmiştir?", "dogruCevapIndex": 2, "secenekler": ["1921", "1961", "1982", "1924"]},
-         {"soruMetni": "Anayasanın ilk üç maddesi değiştirilebilir mi?", "dogruCevapIndex": 1, "secenekler": ["Evet, TBMM kararıyla", "Hayır, değiştirilemez ve değiştirilmesi teklif edilemez", "Evet, referandumla", "Evet, Cumhurbaşkanı kararıyla"]},
-         {"soruMetni": "Anayasa Mahkemesi kaç üyeden oluşur?", "dogruCevapIndex": 0, "secenekler": ["15", "11", "17", "9"]},
-         {"soruMetni": "Milletvekili seçilme yaşı kaçtır?", "dogruCevapIndex": 0, "secenekler": ["18", "21", "25", "30"]}
+        {"soruMetni": "Şu an yürürlükte olan anayasa kaç yılında kabul edilmiştir?", "dogruCevapIndex": 2, "secenekler": ["1921", "1961", "1982", "1924"]},
+        {"soruMetni": "Anayasanın ilk üç maddesi değiştirilebilir mi?", "dogruCevapIndex": 1, "secenekler": ["Evet, TBMM kararıyla", "Hayır, değiştirilemez ve değiştirilmesi teklif edilemez", "Evet, referandumla", "Evet, Cumhurbaşkanı kararıyla"]},
+        {"soruMetni": "Anayasa Mahkemesi kaç üyeden oluşur?", "dogruCevapIndex": 0, "secenekler": ["15", "11", "17", "9"]},
+        {"soruMetni": "Milletvekili seçilme yaşı kaçtır?", "dogruCevapIndex": 0, "secenekler": ["18", "21", "25", "30"]}
+      ]
+    },
+    {
+      "id": "tarih_osmanli_1",
+      "baslik": "Osmanlı Yükselme",
+      "kategoriId": "tarih",
+      "soruSayisi": 3,
+      "sureDakika": 6,
+      "sorular": [
+        {"soruMetni": "İstanbul hangi padişah döneminde fethedilmiştir?", "dogruCevapIndex": 0, "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"]},
+        {"soruMetni": "Padişah imzasına ne ad verilir?", "dogruCevapIndex": 1, "secenekler": ["Ferman", "Tuğra", "Berat", "Hatt-ı Hümayun"]},
+        {"soruMetni": "Kutsal Roma İmparatorluğu'na karşı ilk büyük sefer hangisidir?", "dogruCevapIndex": 2, "secenekler": ["Preveze Deniz Savaşı", "Mohaç Meydan Muharebesi", "I. Viyana Kuşatması", "Rodos'un Fethi"]}
+      ]
+    },
+    {
+      "id": "matematik_temel_1",
+      "baslik": "Temel İşlemler",
+      "kategoriId": "matematik",
+      "soruSayisi": 3,
+      "sureDakika": 5,
+      "sorular": [
+        {"soruMetni": "2 + 2 * 2 kaçtır?", "dogruCevapIndex": 1, "secenekler": ["8", "6", "10", "4"]},
+        {"soruMetni": "100 sayısının %50'si kaçtır?", "dogruCevapIndex": 0, "secenekler": ["50", "25", "100", "5"]},
+        {"soruMetni": "Bir düzine kaç tanedir?", "dogruCevapIndex": 2, "secenekler": ["10", "6", "12", "20"]}
+      ]
+    },
+    {
+      "id": "cografya_turkiye_1",
+      "baslik": "Türkiye Coğrafyası",
+      "kategoriId": "cografya",
+      "soruSayisi": 3,
+      "sureDakika": 6,
+      "sorular": [
+        {"soruMetni": "Türkiye'nin en yüksek dağı hangisidir?", "dogruCevapIndex": 0, "secenekler": ["Ağrı Dağı", "Erciyes Dağı", "Süphan Dağı", "Kaçkar Dağı"]},
+        {"soruMetni": "Tuz Gölü hangi bölgemizdedir?", "dogruCevapIndex": 1, "secenekler": ["Doğu Anadolu", "İç Anadolu", "Ege", "Akdeniz"]},
+        {"soruMetni": "Fırat Nehri'nin en büyük kolu hangisidir?", "dogruCevapIndex": 0, "secenekler": ["Murat Nehri", "Karasu Nehri", "Dicle Nehri", "Aras Nehri"]}
+      ]
+    },
+    {
+      "id": "turkce_yazim_1",
+      "baslik": "Yazım Kuralları",
+      "kategoriId": "turkce",
+      "soruSayisi": 3,
+      "sureDakika": 5,
+      "sorular": [
+        {"soruMetni": "Aşağıdaki kelimelerden hangisinin yazımı doğrudur?", "dogruCevapIndex": 2, "secenekler": ["Herkez", "Yalnış", "Herkes", "Yanlız"]},
+        {"soruMetni": "'de' bağlacı hangi cümlede yanlış yazılmıştır?", "dogruCevapIndex": 0, "secenekler": ["Bende geliyorum.", "Evde kimse yok.", "Sen de gördün mü?", "Yarın da yağmur yağacak."]},
+        {"soruMetni": "Aşağıdakilerden hangisi bir 'zamir' (adıl) değildir?", "dogruCevapIndex": 3, "secenekler": ["Ben", "Şu", "Onlar", "Güzel"]}
       ]
     }
   ],
-
   "trialExams": [
-
     {
       "id": "turkiye_geneli_1",
-      "title": "Türkiye Geneli-1",
+      "title": "Türkiye Geneli-1 (Sadece Tarih)",
       "description": "Tarih konularından 3 soruluk mini deneme.",
       "startTime": "2025-10-21T12:00:00+03:00",
       "endTime": "2025-10-27T12:00:00+03:00",
@@ -34,10 +80,229 @@
       "questionCount": 3,
       "isMixedCategory": false,
       "sorular": [
-        {"soruMetni": "İstanbul hangi padişah döneminde fethedilmiştir?", "dogruCevapIndex": 0, "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"]},
-        {"soruMetni": "Ankara Savaşı hangi tarihte yapılmıştır?", "dogruCevapIndex": 0, "secenekler": ["1402", "1453", "1389", "1326"]},
-        {"soruMetni": "Mustafa Kemal'e 'Gazi' unvanı hangi savaştan sonra verilmiştir?", "dogruCevapIndex": 0, "secenekler": ["Sakarya Meydan Muharebesi", "Büyük Taarruz", "II. İnönü Savaşı", "Çanakkale Savaşı"]}
+        {
+          "soruMetni": "(TARİH) İstanbul hangi padişah döneminde fethedilmiştir?", 
+          "dogruCevapIndex": 0, 
+          "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"],
+          "kategoriId": "tarih",
+          "sira": 1
+        },
+        {
+          "soruMetni": "(TARİH) Ankara Savaşı hangi tarihte yapılmıştır?", 
+          "dogruCevapIndex": 0, 
+          "secenekler": ["1402", "1453", "1389", "1326"],
+          "kategoriId": "tarih",
+          "sira": 2
+        },
+        {
+          "soruMetni": "(TARİH) Mustafa Kemal'e 'Gazi' unvanı hangi savaştan sonra verilmiştir?", 
+          "dogruCevapIndex": 0, 
+          "secenekler": ["Sakarya Meydan Muharebesi", "Büyük Taarruz", "II. İnönü Savaşı", "Çanakkale Savaşı"],
+          "kategoriId": "tarih",
+          "sira": 3
+        }
       ]
+    },
+    {
+      "id": "turkiye_geneli_karma_1",
+      "title": "Türkiye Geneli - Karma Deneme 1",
+      "description": "Tüm kategorilerden 2'şer soru içeren 10 soruluk deneme.",
+      "startTime": "2025-10-25T10:00:00+03:00",
+      "endTime": "2025-10-30T23:59:00+03:00",
+      "durationMinutes": 15,
+      "questionCount": 10,
+      "isMixedCategory": true,
+      "sorular": [
+        {
+          "soruMetni": "(MATEMATİK) 20 sayısının %20'si kaçtır?",
+          "dogruCevapIndex": 1,
+          "secenekler": ["2", "4", "5", "10"],
+          "kategoriId": "matematik",
+          "sira": 1
+        },
+        {
+          "soruMetni": "(MATEMATİK) Bir üçgenin iç açıları toplamı kaçtır?",
+          "dogruCevapIndex": 2,
+          "secenekler": ["90", "360", "180", "120"],
+          "kategoriId": "matematik",
+          "sira": 2
+        },
+        {
+          "soruMetni": "(TÜRKÇE) 'Okul' kelimesinin kökü nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["Oku-", "Ok-", "Okul-", "Kul-"],
+          "kategoriId": "turkce",
+          "sira": 100
+        },
+        {
+          "soruMetni": "(TÜRKÇE) Aşağıdakilerden hangisi bir 'zamir' (adıl) değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": ["Ben", "Şu", "Onlar", "Güzel"],
+          "kategoriId": "turkce",
+          "sira": 101
+        },
+        {
+          "soruMetni": "(TARİH) Malazgirt Savaşı hangi tarihte yapılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": ["1075", "1071", "1080", "1066"],
+          "kategoriId": "tarih",
+          "sira": 200
+        },
+        {
+          "soruMetni": "(TARİH) Lozan Antlaşması hangi tarihte imzalanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": ["1920", "1922", "1923", "1921"],
+          "kategoriId": "tarih",
+          "sira": 201
+        },
+        {
+          "soruMetni": "(COĞRAFYA) Türkiye'nin en büyük gölü hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["Van Gölü", "Tuz Gölü", "Beyşehir Gölü", "Eğirdir Gölü"],
+          "kategoriId": "cografya",
+          "sira": 300
+        },
+        {
+          "soruMetni": "(COĞRAFYA) Peri bacaları hangi ilimizde ünlüdür?",
+          "dogruCevapIndex": 3,
+          "secenekler": ["Kapadokya", "Denizli", "Ağrı", "Nevşehir"],
+          "kategoriId": "cografya",
+          "sira": 301
+        },
+        {
+          "soruMetni": "(VATANDAŞLIK) Türkiye Büyük Millet Meclisi'nde (TBMM) kaç milletvekili bulunur?",
+          "dogruCevapIndex": 1,
+          "secenekler": ["550", "600", "450", "650"],
+          "kategoriId": "vatandaslik",
+          "sira": 400
+        },
+        {
+          "soruMetni": "(VATANDAŞLIK) Cumhurbaşkanı kaç yıllığına seçilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": ["5", "4", "6", "7"],
+          "kategoriId": "vatandaslik",
+          "sira": 401
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "ilk_adim",
+      "name": "İlk Adım",
+      "description": "İlk testini başarıyla tamamla.",
+      "emoji": "👟",
+      "criteria_type": "solved_count",
+      "criteria_value": 1
+    },
+    {
+      "id": "merakli_zihin",
+      "name": "Meraklı Zihin",
+      "description": "5 farklı testi başarıyla tamamla.",
+      "emoji": "🧠",
+      "criteria_type": "solved_count",
+      "criteria_value": 5
+    },
+    {
+      "id": "puan_avcisi",
+      "name": "Puan Avcısı",
+      "description": "Toplam 5000 puana ulaş.",
+      "emoji": "💰",
+      "criteria_type": "total_score",
+      "criteria_value": 5000
+    },
+    {
+      "id": "tarih_kurdu",
+      "name": "Tarih Kurdu",
+      "description": "Tarih kategorisinden 5 test çöz.",
+      "emoji": "📜",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "tarih",
+      "criteria_value": 5
+    },
+    {
+      "id": "matematik_ustasi",
+      "name": "Matematik Ustası",
+      "description": "Matematik kategorisinden 5 test çöz.",
+      "emoji": "🧮",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "matematik",
+      "criteria_value": 5
+    },
+    {
+      "id": "cografyaci",
+      "name": "Coğrafyacı",
+      "description": "Coğrafya kategorisinden 5 test çöz.",
+      "emoji": "🗺️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "cografya",
+      "criteria_value": 5
+    },
+    {
+      "id": "dil_bilgini",
+      "name": "Dil Bilgini",
+      "description": "Türkçe kategorisinden 5 test çöz.",
+      "emoji": "✍️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "turkce",
+      "criteria_value": 5
+    },
+    {
+      "id": "vatandas",
+      "name": "Vatandaş",
+      "description": "Vatandaşlık kategorisinden 5 test çöz.",
+      "emoji": "🏛️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "vatandaslik",
+      "criteria_value": 5
+    },
+    {
+      "id": "bilge",
+      "name": "Bilge",
+      "description": "Toplam 25 testi başarıyla tamamla.",
+      "emoji": "🦉",
+      "criteria_type": "solved_count",
+      "criteria_value": 25
+    },
+    {
+      "id": "skor_sampiyonu",
+      "name": "Skor Şampiyonu",
+      "description": "Toplam 20000 puana ulaş.",
+      "emoji": "👑",
+      "criteria_type": "total_score",
+      "criteria_value": 20000
+    },
+    {
+      "id": "puan_zengini",
+      "name": "Puan Zengini",
+      "description": "Toplam 50000 puana ulaş.",
+      "emoji": "💎",
+      "criteria_type": "total_score",
+      "criteria_value": 50000
+    },
+    {
+      "id": "efsane",
+      "name": "Efsane",
+      "description": "Toplam 50 testi başarıyla tamamla.",
+      "emoji": "🔥",
+      "criteria_type": "solved_count",
+      "criteria_value": 50
+    },
+    {
+      "id": "deneme_ilk_adim",
+      "name": "Cesur Adım",
+      "description": "İlk deneme sınavını başarıyla tamamla.",
+      "emoji": "🏃‍♂️",
+      "criteria_type": "trial_exam_solved_count",
+      "criteria_value": 1
+    },
+    {
+      "id": "deneme_uzmani",
+      "name": "Deneme Uzmanı",
+      "description": "Toplam 5 deneme sınavını tamamla.",
+      "emoji": "🎓",
+      "criteria_type": "trial_exam_solved_count",
+      "criteria_value": 5
     }
   ]
 }
