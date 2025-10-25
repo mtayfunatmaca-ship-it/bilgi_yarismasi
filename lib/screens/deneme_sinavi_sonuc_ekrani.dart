@@ -3,8 +3,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_review_screen.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_leaderboard_screen.dart'; 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'dart:async'; // Future.delayed için
 
-class TrialExamResultScreen extends StatelessWidget {
+class TrialExamResultScreen extends StatefulWidget { // <<< DEĞİŞİKLİK
   final String title;
   final double kpssPuan;
   final double netSayisi;
@@ -13,16 +14,18 @@ class TrialExamResultScreen extends StatelessWidget {
   final int bosSayisi;
   final int soruSayisi;
   
-  // Kategori Dökümü
   final Map<String, Map<String, int>> statsByCategory;
   final Map<String, String> categoryNameMap;
   
-  // İnceleme ve Sıralama
   final List<DocumentSnapshot> questions;
   final Map<int, int> userAnswers;
   final Map<int, int> correctAnswers;
   final String trialExamId;
   final String trialExamTitle;
+
+  // --- YENİ PARAMETRE (Başarı popup'ı için) ---
+  final List<Map<String, dynamic>>? newAchievements;
+  // --- BİTTİ ---
 
   const TrialExamResultScreen({
     super.key,
@@ -40,21 +43,99 @@ class TrialExamResultScreen extends StatelessWidget {
     required this.correctAnswers,
     required this.trialExamId,
     required this.trialExamTitle,
+    this.newAchievements, // <<< Eklendi
   });
+
+  @override
+  State<TrialExamResultScreen> createState() => _TrialExamResultScreenState();
+}
+
+class _TrialExamResultScreenState extends State<TrialExamResultScreen> { // <<< DEĞİŞİKLİK
+
+  @override
+  void initState() {
+    super.initState();
+    
+    // --- YENİ: Başarıları Gösterme Tetikleyicisi ---
+    if (widget.newAchievements != null && widget.newAchievements!.isNotEmpty) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _showEarnedAchievements(widget.newAchievements!);
+      });
+    }
+    // --- BİTTİ ---
+  }
+
+  // --- YENİ: Başarıları sırayla gösterme ---
+  Future<void> _showEarnedAchievements(List<Map<String, dynamic>> achievements) async {
+    for (var achievementData in achievements) {
+      if (mounted) {
+        await _showAchievementEarnedDialog(achievementData); 
+        await Future.delayed(const Duration(milliseconds: 300));
+      }
+    }
+  }
+
+  // --- YENİ: Popup fonksiyonu buraya taşındı ---
+  Future<void> _showAchievementEarnedDialog(Map<String, dynamic> achievementData) async {
+     if (!mounted) return;
+     final emoji = achievementData['emoji'] as String? ?? '🏆';
+     final name = achievementData['name'] as String? ?? 'Başarı';
+     final description = achievementData['description'] as String? ?? '';
+     
+     return showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: Colors.transparent,
+          child: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [Colors.blue.shade700, Colors.purple.shade700]),
+              borderRadius: BorderRadius.circular(24),
+              boxShadow: [ BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 20, offset: const Offset(0, 10)) ],
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                  Container(width: 80, height: 80, decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), shape: BoxShape.circle),
+                    child: Center(child: Text(emoji, style: const TextStyle(fontSize: 40)))),
+                  const SizedBox(height: 20),
+                  Text("Tebrikler!", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 16),
+                  Text(name, style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
+                  const SizedBox(height: 8),
+                  Text(description, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white.withOpacity(0.9)), textAlign: TextAlign.center),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white, foregroundColor: Colors.blue.shade700,
+                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    ),
+                    child: const Text("Harika!", style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+              ]),
+            ),
+          ),
+        );
+       },
+     );
+  }
+  // --- YENİ FONKSİYONLAR BİTTİ ---
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
 
-    final double finalPuan = kpssPuan > 100.0 ? 100.0 : kpssPuan;
+    final double finalPuan = widget.kpssPuan > 100.0 ? 100.0 : widget.kpssPuan;
     final bool isSuccessful = finalPuan >= 70;
 
-    // Kategori listesini sırala (Map'i List'e çevir)
-    final sortedCategories = statsByCategory.entries.toList()
+    final sortedCategories = widget.statsByCategory.entries.toList()
       ..sort((a, b) {
-         final nameA = categoryNameMap[a.key] ?? a.key;
-         final nameB = categoryNameMap[b.key] ?? b.key;
+         final nameA = widget.categoryNameMap[a.key] ?? a.key;
+         final nameB = widget.categoryNameMap[b.key] ?? b.key;
          return nameA.compareTo(nameB);
       });
 
@@ -82,7 +163,7 @@ class TrialExamResultScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                title,
+                widget.title,
                 style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.center,
               ),
@@ -114,7 +195,6 @@ class TrialExamResultScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               
-              // Toplam Net Detay Kartı
               Card(
                 elevation: 1,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -123,12 +203,12 @@ class TrialExamResultScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _buildStatColumn('Doğru', dogruSayisi.toString(), Colors.green.shade700),
-                      _buildStatColumn('Yanlış', yanlisSayisi.toString(), Colors.red.shade700),
-                      _buildStatColumn('Boş', bosSayisi.toString(), Colors.grey.shade700),
+                      _buildStatColumn('Doğru', widget.dogruSayisi.toString(), Colors.green.shade700),
+                      _buildStatColumn('Yanlış', widget.yanlisSayisi.toString(), Colors.red.shade700),
+                      _buildStatColumn('Boş', widget.bosSayisi.toString(), Colors.grey.shade700),
                       _buildStatColumn(
                         'TOPLAM NET', 
-                        netSayisi.toStringAsFixed(2), 
+                        widget.netSayisi.toStringAsFixed(2), 
                         colorScheme.primary
                       ),
                     ],
@@ -137,7 +217,6 @@ class TrialExamResultScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
 
-              // --- Kategori Bazlı Döküm ---
               Text(
                 'Derslere Göre Döküm',
                 style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
@@ -150,7 +229,6 @@ class TrialExamResultScreen extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    // Başlık Satırı
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 10.0),
                       child: Row(
@@ -164,7 +242,6 @@ class TrialExamResultScreen extends StatelessWidget {
                       ),
                     ),
                     const Divider(height: 1, thickness: 1),
-                    // Kategori Listesi
                     ListView.builder(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -173,7 +250,7 @@ class TrialExamResultScreen extends StatelessWidget {
                          final katEntry = sortedCategories[index];
                          final katId = katEntry.key;
                          final data = katEntry.value;
-                         final katAdi = categoryNameMap[katId] ?? 'Diğer';
+                         final katAdi = widget.categoryNameMap[katId] ?? 'Diğer';
                          final double katNet = (data['correct'] ?? 0) - ((data['wrong'] ?? 0) * 0.25);
                          
                          return Container(
@@ -197,11 +274,9 @@ class TrialExamResultScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // --- Döküm Bitti ---
 
               const SizedBox(height: 32),
               
-              // Butonlar
               ElevatedButton.icon(
                 icon: const Icon(Icons.rate_review_outlined),
                 label: const Text('Cevapları İncele'),
@@ -216,11 +291,11 @@ class TrialExamResultScreen extends StatelessWidget {
                      context,
                      MaterialPageRoute(
                        builder: (context) => TrialExamReviewScreen(
-                         questions: questions,
-                         userAnswers: userAnswers,
-                         correctAnswers: correctAnswers,
-                         trialExamId: trialExamId,
-                         trialExamTitle: trialExamTitle,
+                         questions: widget.questions,
+                         userAnswers: widget.userAnswers,
+                         correctAnswers: widget.correctAnswers,
+                         trialExamId: widget.trialExamId,
+                         trialExamTitle: widget.trialExamTitle,
                        ),
                      ),
                    );
@@ -240,8 +315,8 @@ class TrialExamResultScreen extends StatelessWidget {
                      context,
                      MaterialPageRoute(
                        builder: (context) => TrialExamLeaderboardScreen(
-                         trialExamId: trialExamId,
-                         title: trialExamTitle,
+                         trialExamId: widget.trialExamId,
+                         title: widget.trialExamTitle,
                        ),
                      ),
                    );
