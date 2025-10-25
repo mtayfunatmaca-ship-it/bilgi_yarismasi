@@ -4,16 +4,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/screens/deneme_sinavi_sonuc_ekrani.dart'; 
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// Gerekli import'lar (ResultScreen ve ReviewScreen)
-import 'package:bilgi_yarismasi/screens/result_screen.dart';
-import 'package:bilgi_yarismasi/screens/trial_exam_review_screen.dart';
-
+// (ResultScreen import'u kaldırıldı)
 
 class TrialExamScreen extends StatefulWidget {
   final String trialExamId;
   final String title;
   final int durationMinutes;
-  final int questionCount; // JSON'dan gelen toplam soru sayısı
+  final int questionCount;
 
   const TrialExamScreen({
     super.key,
@@ -28,20 +25,18 @@ class TrialExamScreen extends StatefulWidget {
 }
 
 class _TrialExamScreenState extends State<TrialExamScreen> {
+  // ... (Tüm state değişkenleri aynı) ...
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
   bool _isLoading = true;
   bool _isSubmitting = false;
   List<DocumentSnapshot> _questions = [];
-  
   final PageController _pageController = PageController();
   int _currentPage = 0;
   final Map<int, int> _selectedAnswers = {};
   String? _fetchError;
-
   Timer? _timer;
   int _secondsRemaining = 0;
-
   List<QueryDocumentSnapshot> _achievementDefinitions = [];
   Map<String, String> _categoryNameMap = {};
 
@@ -51,35 +46,25 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     _loadInitialData();
   }
 
+  // --- Fonksiyonlar (loadInitialData, startTimer, dispose, selectAnswer) ---
+  // --- BU FONKSİYONLARDA HİÇBİR DEĞİŞİKLİK YOK, ÖNCEKİ KODLA AYNILAR ---
   Future<void> _loadInitialData() async {
     if (!mounted) return;
     setState(() => _isLoading = true);
     try {
       final results = await Future.wait([
-        _firestore
-            .collection('questions')
-            .where('trialExamId', isEqualTo: widget.trialExamId)
-            .orderBy('sira')
-            .get(),
+        _firestore.collection('questions').where('trialExamId', isEqualTo: widget.trialExamId).orderBy('sira').get(),
         _firestore.collection('categories').get(),
         _firestore.collection('achievements').get(),
       ]);
-
       if (!mounted) return;
-
       final questionSnapshot = results[0] as QuerySnapshot;
       var fetchedQuestions = questionSnapshot.docs;
-      
       _questions = fetchedQuestions.take(widget.questionCount).toList();
-      
       final categoriesSnapshot = results[1] as QuerySnapshot;
-      _categoryNameMap = {
-        for (var doc in categoriesSnapshot.docs) doc.id: (doc.data() as Map<String, dynamic>)['ad'] as String? ?? doc.id
-      };
+      _categoryNameMap = { for (var doc in categoriesSnapshot.docs) doc.id: (doc.data() as Map<String, dynamic>)['ad'] as String? ?? doc.id };
       _categoryNameMap['diger'] = 'Diğer';
-
       _achievementDefinitions = (results[2] as QuerySnapshot).docs;
-
       if (_questions.isEmpty) {
          setState(() { _isLoading = false; _fetchError = "Bu denemeye ait soru bulunamadı."; });
       } else {
@@ -95,7 +80,6 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       }
     }
   }
-
   void _startTimer() {
     _secondsRemaining = widget.durationMinutes * 60;
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
@@ -110,21 +94,19 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       });
     });
   }
-
   @override
   void dispose() {
     _timer?.cancel();
     _pageController.dispose();
     super.dispose();
   }
-
   void _selectAnswer(int questionIndex, int selectedIndex) {
     setState(() {
       _selectedAnswers[questionIndex] = selectedIndex;
     });
   }
 
-  // --- _submitTrialExam GÜNCELLENDİ (Puanlama Düzeltmesi) ---
+  // --- _submitTrialExam GÜNCELLENDİ (newAchievements gönderiyor) ---
   Future<void> _submitTrialExam({bool isForfeit = false, bool isTimeUp = false}) async {
     _timer?.cancel();
     if (_isSubmitting || !mounted) return;
@@ -146,9 +128,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
         return;
       }
 
-      int totalCorrect = 0;
-      int totalWrong = 0;
-      int totalEmpty = 0;
+      int totalCorrect = 0, totalWrong = 0, totalEmpty = 0;
       int actualQuestionCount = _questions.length;
       Map<String, Map<String, int>> statsByCategory = {};
       Map<int, int> correctAnswersMap = {};
@@ -176,19 +156,13 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
          }
       }
       
-      // --- KPSS PUAN HESAPLAMASI (Taban Puanlı) ---
       double totalNet = totalCorrect - (totalWrong * 0.25);
-      
       const double tabanPuan = 50.0;
       final double katsayi = (100.0 - tabanPuan) / (actualQuestionCount > 0 ? actualQuestionCount : 1);
       double kpssPuan = tabanPuan + (totalNet * katsayi);
       if (kpssPuan < 0) kpssPuan = 0.0;
       if (kpssPuan > 100) kpssPuan = 100.0;
-      
-      // --- DÜZELTME: Sıralama puanı = KPSS Puanı ---
-      // (Sıralamada 85.5 puan 85'ten yüksek olsun diye 100 ile çarpıp int yapabiliriz)
-      int rankingScore = (kpssPuan * 100).round(); // Örn: 85.125 Puan -> 85125 Sıralama Puanı
-      // --- DÜZELTME BİTTİ ---
+      int rankingScore = (kpssPuan * 100).round();
       
       String kullaniciAdi = "Kullanıcı";
       String emoji = "🙂";
@@ -201,10 +175,8 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       }
       
       Map<String, dynamic> resultData = {
-        'trialExamId': widget.trialExamId, 'title': widget.title, 
-        'score': rankingScore, // Sıralama için (örn: 85125)
-        'kpssPuan': kpssPuan, // Gösterim için (örn: 85.125)
-        'netSayisi': totalNet,
+        'trialExamId': widget.trialExamId, 'title': widget.title, 'score': rankingScore,
+        'kpssPuan': kpssPuan, 'netSayisi': totalNet,
         'correctAnswers': totalCorrect, 'wrongAnswers': totalWrong, 'emptyAnswers': totalEmpty,
         'statsByCategory': statsByCategory,
         'totalQuestions': actualQuestionCount, 'completionTime': FieldValue.serverTimestamp(),
@@ -214,9 +186,12 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       };
       await resultDocRef.set(resultData);
 
+      // <<< DEĞİŞİKLİK: 'newAchievements' listesini al
+      List<Map<String, dynamic>> newAchievements = [];
       if (!isForfeit) {
-        await _checkTrialExamAchievements(user.uid);
+        newAchievements = await _checkTrialExamAchievements(user.uid);
       }
+      // --- BİTTİ ---
 
       if (mounted) {
         if (isForfeit) {
@@ -240,6 +215,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
                    correctAnswers: correctAnswersMap,
                    trialExamId: widget.trialExamId, 
                    trialExamTitle: widget.title,
+                   newAchievements: newAchievements, // <<< BAŞARI LİSTESİNİ GÖNDER
                 ),
               ),
            );
@@ -256,17 +232,19 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     }
   }
   
-  // --- Fonksiyonların geri kalanı (Değişiklik Yok) ---
+  // --- _checkTrialExamAchievements GÜNCELLENDİ (List döndürüyor) ---
+  Future<List<Map<String, dynamic>>> _checkTrialExamAchievements(String userId) async {
+    List<Map<String, dynamic>> newlyEarnedAchievements = [];
+    if (_achievementDefinitions.isEmpty || !mounted) return newlyEarnedAchievements;
 
-  Future<void> _checkTrialExamAchievements(String userId) async {
-    if (_achievementDefinitions.isEmpty || !mounted) return;
     try {
       final earnedSnapshot = await _firestore.collection('users').doc(userId).collection('earnedAchievements').get();
       final earnedAchievementIds = earnedSnapshot.docs.map((doc) => doc.id).toSet();
       final solvedTrialCountSnapshot = await _firestore.collection('users').doc(userId).collection('trialExamResults').count().get();
       final solvedTrialCount = solvedTrialCountSnapshot.count ?? 0;
+
       WriteBatch? batch;
-      List<Map<String, dynamic>> newlyEarnedAchievements = [];
+
       for (var achievementDoc in _achievementDefinitions) {
         final achievementId = achievementDoc.id;
         if (earnedAchievementIds.contains(achievementId)) continue;
@@ -275,11 +253,13 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
         final criteriaType = achievementData['criteria_type'] as String?;
         final criteriaValue = (achievementData['criteria_value'] as num?)?.toInt() ?? 0;
         bool earned = false;
+
         if (criteriaType == 'trial_exam_solved_count') {
           if (solvedTrialCount >= criteriaValue) {
             earned = true;
           }
         }
+        
         if (earned) {
           final String achievementName = achievementData['name'] as String? ?? 'İsimsiz Başarı';
           final String achievementEmoji = achievementData['emoji'] as String? ?? '🏆';
@@ -294,64 +274,17 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       if (batch != null) {
         await batch.commit();
         print("Kazanılan deneme başarıları kaydedildi.");
-        if (mounted) {
-          for (var achievementData in newlyEarnedAchievements) {
-             await Future.delayed(const Duration(milliseconds: 500));
-             if (mounted) _showAchievementEarnedDialog(achievementData);
-          }
-        }
       }
     } catch (e) {
       print("Deneme sınavı başarı kontrolü sırasında hata: $e");
     }
+    return newlyEarnedAchievements; // Listeyi döndür
   }
+  // --- BİTTİ ---
 
-  void _showAchievementEarnedDialog(Map<String, dynamic> achievementData) {
-     if (!mounted) return;
-     final emoji = achievementData['emoji'] as String? ?? '🏆';
-     final name = achievementData['name'] as String? ?? 'Başarı';
-     final description = achievementData['description'] as String? ?? '';
-     showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return Dialog(
-          backgroundColor: Colors.transparent,
-          child: Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [Colors.blue.shade700, Colors.purple.shade700]),
-              borderRadius: BorderRadius.circular(24),
-              boxShadow: [ BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 20, offset: const Offset(0, 10)) ],
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(24),
-              child: Column(mainAxisSize: MainAxisSize.min, children: [
-                  Container(width: 80, height: 80, decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), shape: BoxShape.circle),
-                    child: Center(child: Text(emoji, style: const TextStyle(fontSize: 40)))),
-                  const SizedBox(height: 20),
-                  Text("Tebrikler!", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 16),
-                  Text(name, style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
-                  const SizedBox(height: 8),
-                  Text(description, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white.withOpacity(0.9)), textAlign: TextAlign.center),
-                  const SizedBox(height: 24),
-                  ElevatedButton(
-                    onPressed: () => Navigator.of(context).pop(),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white, foregroundColor: Colors.blue.shade700,
-                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    ),
-                    child: const Text("Harika!", style: TextStyle(fontWeight: FontWeight.bold)),
-                  ),
-              ]),
-            ),
-          ),
-        );
-      },
-    );
-  }
+  // --- _showAchievementEarnedDialog FONKSİYONU BURADAN KALDIRILDI ---
   
+  // --- Kalan Fonksiyonlar (Aynı) ---
   Future<bool> _onWillPop() async {
     if (_isSubmitting) return false;
     final bool? shouldPop = await showDialog<bool>(
@@ -457,6 +390,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     );
   }
   
+  // build (Ana UI)
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -520,6 +454,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     );
   }
 
+  // Soru Sayfası
   Widget _buildQuestionPage(DocumentSnapshot question, int questionIndex) {
      final questionData = question.data() as Map<String, dynamic>? ?? {};
      final questionText = questionData['soruMetni'] ?? 'Soru yüklenemedi';
@@ -584,6 +519,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
      );
   }
 
+  // Navigasyon Başlığı
   Widget _buildNavigationHeader(ColorScheme colorScheme, TextTheme textTheme) {
     return Container(
       height: 60,
@@ -617,6 +553,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     );
   }
 
+  // Navigasyon Kontrolleri
   Widget _buildNavigationControls(ColorScheme colorScheme, TextTheme textTheme) {
      final bool isFirst = _currentPage == 0;
      final bool isLast = _currentPage == _questions.length - 1;
@@ -662,6 +599,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
      );
   }
   
+  // Sınavı Bitir Onay Dialog'u
   void _showSubmitConfirmation() {
      final notAnswered = _questions.length - _selectedAnswers.length;
      showDialog(
