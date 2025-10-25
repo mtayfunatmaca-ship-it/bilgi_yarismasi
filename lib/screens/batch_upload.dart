@@ -5,11 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class FirebaseDataUploader {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // --- YENİ YARDIMCI FONKSİYON: String tarihi Timestamp'e çevirir ---
   Timestamp? _parseDate(String? dateString) {
     if (dateString == null) return null;
     try {
-      // ISO 8601 formatını (örn: "2025-10-23T10:00:00+03:00") parse et
       DateTime parsedDate = DateTime.parse(dateString);
       return Timestamp.fromDate(parsedDate);
     } catch (e) {
@@ -18,23 +16,13 @@ class FirebaseDataUploader {
     }
   }
 
-  // --- YENİ YARDIMCI FONKSİYON: Soruları Silip Yeniden Ekler ---
-  // (Hem normal quiz hem de deneme sınavı için çalışır)
-  Future<void> _updateQuestionsForQuiz(
-    String id,
-    List sorular, {
-    required bool isTrial,
-  }) async {
-    // 'isTrial' bayrağına göre hangi alanda arama yapacağımızı seçiyoruz
+  // --- BU FONKSİYON GÜNCELLENDİ (kategoriId ve sira eklendi) ---
+  Future<void> _updateQuestionsForQuiz(String id, List sorular, {required bool isTrial}) async {
     final String idField = isTrial ? 'trialExamId' : 'quizId';
-
+    
     // 1. ESKİ SORULARI SİLME
     print('   -> Önceki sorular siliniyor ($idField: $id)...');
-    final questionsToDeleteQuery = await _firestore
-        .collection('questions')
-        .where(idField, isEqualTo: id)
-        .get();
-
+    final questionsToDeleteQuery = await _firestore.collection('questions').where(idField, isEqualTo: id).get();
     if (questionsToDeleteQuery.docs.isNotEmpty) {
       WriteBatch deleteBatch = _firestore.batch();
       for (var doc in questionsToDeleteQuery.docs) {
@@ -55,47 +43,51 @@ class FirebaseDataUploader {
       final int? dogruCevapIndex = (soru['dogruCevapIndex'] as num?)?.toInt();
       final List? secenekler = soru['secenekler'];
       final String? imageUrl = soru['imageUrl'] as String?;
+      
+      // --- YENİ ALANLARI OKU ---
+      final String? kategoriId = soru['kategoriId'] as String?;
+      final int? sira = (soru['sira'] as num?)?.toInt();
+      // --- BİTTİ ---
 
-      if (soruMetni != null &&
-          dogruCevapIndex != null &&
-          secenekler != null &&
-          secenekler.length >= 2) {
+      if (soruMetni != null && dogruCevapIndex != null && secenekler != null && secenekler.length >= 2) {
         final docRef = _firestore.collection('questions').doc();
-
+        
         final Map<String, dynamic> soruData = {
-          // 'quizId' veya 'trialExamId' olarak doğru alanı ekle
-          idField: id,
+          idField: id, 
           'soruMetni': soruMetni,
           'dogruCevapIndex': dogruCevapIndex,
           'secenekler': List<String>.from(secenekler.map((s) => s.toString())),
           if (imageUrl != null && imageUrl.isNotEmpty) 'imageUrl': imageUrl,
+          
+          // --- YENİ ALANLARI EKLE ---
+          // Eğer bu bir deneme sınavıysa (isTrial), kategori ve sıra bilgilerini de ekle
+          if (isTrial && kategoriId != null && kategoriId.isNotEmpty)
+             'kategoriId': kategoriId,
+          if (isTrial && sira != null)
+             'sira': sira,
+          // --- BİTTİ ---
         };
-
+        
         questionBatch.set(docRef, soruData);
         buQuizSoruSayac++;
       } else {
-        print(
-          "     >> Uyarı: '$id' için eksik alanlı soru bulundu, atlanıyor.",
-        );
+        print("     >> Uyarı: '$id' için eksik alanlı soru bulundu, atlanıyor.");
       }
     }
     await questionBatch.commit();
     print('   -> $buQuizSoruSayac adet yeni soru eklendi.');
   }
-  // --- YARDIMCI FONKSİYONLAR BİTTİ ---
+  // --- GÜNCELLEME BİTTİ ---
 
-  // Ana Yükleme Fonksiyonu
+
+  // Ana Yükleme Fonksiyonu (Tamamı)
   Future<void> uploadDataFromJson() async {
     print('--- Veri Yükleme Başlatılıyor (FirebaseDataUploader) ---');
-
     try {
-      // 1. JSON dosyasını 'assets' klasöründen oku
-      final String jsonString = await rootBundle.loadString(
-        'assets/sorular.json',
-      );
+      final String jsonString = await rootBundle.loadString('assets/sorular.json');
       final data = json.decode(jsonString);
 
-      // --- Kategorileri Yükle/Güncelle ---
+      // Kategoriler
       if (data['kategoriler'] != null && data['kategoriler'] is List) {
         print('Kategoriler işleniyor...');
         WriteBatch kategoriBatch = _firestore.batch();
@@ -104,121 +96,80 @@ class FirebaseDataUploader {
           final kategoriId = kategori['id'];
           if (kategoriId != null && kategoriId is String) {
             final docRef = _firestore.collection('categories').doc(kategoriId);
-            kategoriBatch.set(docRef, {
-              'ad': kategori['ad'],
-              'sira': kategori['sira'],
-            }, SetOptions(merge: true));
+            kategoriBatch.set(docRef, { 'ad': kategori['ad'], 'sira': kategori['sira'] }, SetOptions(merge: true));
             kategoriSayac++;
           }
         }
         await kategoriBatch.commit();
         print('-> $kategoriSayac kategori işlendi.');
-      } else {
-        print("JSON'da 'kategoriler' bulunamadı.");
-      }
+      } else { print("JSON'da 'kategoriler' bulunamadı."); }
 
-      // --- Normal Quizleri Yükle/Güncelle (Custom ID ile) ---
+      // Normal Quizler
       if (data['quizzes'] != null && data['quizzes'] is List) {
         print('Normal Quizler işleniyor...');
         int quizSayac = 0;
         for (var quiz in data['quizzes']) {
           final String? quizId = quiz['id'];
-          final String? baslik = quiz['baslik'];
-          final String? kategoriId = quiz['kategoriId'];
-          final List? sorular = quiz['sorular'];
-
-          if (quizId == null ||
-              quizId.isEmpty ||
-              baslik == null ||
-              kategoriId == null) {
-            print(
-              ">> Uyarı: JSON'da ID, başlık veya kategoriId eksik (Quiz), atlanıyor.",
-            );
-            continue;
-          }
-          if (sorular == null || sorular.isEmpty) {
-            print(
-              ">> Uyarı: '$baslik' ($quizId) quizinde soru yok, atlanıyor.",
-            );
-            continue;
-          }
-
-          print(' > İşleniyor (Quiz): $baslik ($quizId)');
+          if (quizId == null || quiz['baslik'] == null || quiz['kategoriId'] == null || quiz['sorular'] == null) continue;
+          print(' > İşleniyor (Quiz): ${quiz['baslik']} ($quizId)');
           quizSayac++;
-
           final quizRef = _firestore.collection('quizzes').doc(quizId);
-          final quizData = {
-            'baslik': baslik,
-            'kategoriId': kategoriId,
-            'soruSayisi': quiz['soruSayisi'],
-            'sureDakika': quiz['sureDakika'],
-          };
+          final quizData = { 'baslik': quiz['baslik'], 'kategoriId': quiz['kategoriId'], 'soruSayisi': quiz['soruSayisi'], 'sureDakika': quiz['sureDakika'] };
           await quizRef.set(quizData, SetOptions(merge: true));
-
-          // Sorularını yardımcı fonksiyonla güncelle
-          await _updateQuestionsForQuiz(quizId, sorular, isTrial: false);
-        } // Quiz döngüsü bitti
+          await _updateQuestionsForQuiz(quizId, quiz['sorular'] ?? [], isTrial: false);
+        }
         print('-> Toplam $quizSayac normal quiz işlendi.');
-      } else {
-        print("JSON'da 'quizzes' bulunamadı.");
-      }
+      } else { print("JSON'da 'quizzes' bulunamadı."); }
 
-      // --- YENİ BÖLÜM: Deneme Sınavlarını (TrialExams) Yükle/Güncelle ---
+      // Deneme Sınavları
       if (data['trialExams'] != null && data['trialExams'] is List) {
         print('Deneme Sınavları işleniyor...');
         int examSayac = 0;
         for (var exam in data['trialExams']) {
           final String? examId = exam['id'];
-          final String? title = exam['title'];
-          final List? sorular = exam['sorular'];
-
-          if (examId == null || examId.isEmpty || title == null) {
-            print(
-              ">> Uyarı: JSON'da ID veya title eksik (Deneme Sınavı), atlanıyor.",
-            );
-            continue;
-          }
-          if (sorular == null || sorular.isEmpty) {
-            print(
-              ">> Uyarı: '$title' ($examId) denemesinde soru yok, atlanıyor.",
-            );
-            continue;
-          }
-
-          print(' > İşleniyor (Deneme): $title ($examId)');
+          if (examId == null || exam['title'] == null || exam['sorular'] == null) continue;
+          print(' > İşleniyor (Deneme): ${exam['title']} ($examId)');
           examSayac++;
-
           final examRef = _firestore.collection('trialExams').doc(examId);
-
-          // JSON'daki String tarihleri Firestore Timestamp'e çevir
           final Timestamp? startTime = _parseDate(exam['startTime']);
           final Timestamp? endTime = _parseDate(exam['endTime']);
-
           if (startTime == null || endTime == null) {
-            print(
-              "   >> HATA: '$examId' için startTime veya endTime formatı yanlış (örn: 2025-10-25T14:00:00+03:00). Atlanıyor.",
-            );
-            continue;
+              print("   >> HATA: '$examId' için tarih formatı yanlış. Atlanıyor.");
+              continue;
           }
-
           await examRef.set({
-            'title': title,
-            'description': exam['description'],
-            'startTime': startTime,
-            'endTime': endTime,
-            'durationMinutes': exam['durationMinutes'],
-            'questionCount': exam['questionCount'],
+            'title': exam['title'], 'description': exam['description'],
+            'startTime': startTime, 'endTime': endTime,
+            'durationMinutes': exam['durationMinutes'], 'questionCount': exam['questionCount'],
             'isMixedCategory': exam['isMixedCategory'] ?? false,
           }, SetOptions(merge: true));
-
-          // Sorularını yardımcı fonksiyonla güncelle
-          await _updateQuestionsForQuiz(examId, sorular, isTrial: true);
-        } // Deneme döngüsü bitti
+          
+          // _updateQuestionsForQuiz fonksiyonu artık 'kategoriId' ve 'sira'yı da yüklüyor
+          await _updateQuestionsForQuiz(examId, exam['sorular'] ?? [], isTrial: true);
+        }
         print('-> Toplam $examSayac deneme sınavı işlendi.');
-      } else {
-        print("JSON'da 'trialExams' bulunamadı.");
-      }
-      // --- YENİ BÖLÜM BİTTİ ---
+      } else { print("JSON'da 'trialExams' bulunamadı."); }
+
+      // Başarılar (Achievements)
+      if (data['achievements'] != null && data['achievements'] is List) {
+        print('Başarılar (Achievements) işleniyor...');
+        WriteBatch achievementBatch = _firestore.batch();
+        int achievementSayac = 0;
+        for (var ach in data['achievements']) {
+          final String? achId = ach['id'];
+          if (achId == null || achId.isEmpty) { print(">> Uyarı: ID'si olmayan başarı bulundu, atlanıyor."); continue; }
+          final docRef = _firestore.collection('achievements').doc(achId);
+          Map<String, dynamic> achData = {
+             'name': ach['name'], 'description': ach['description'], 'emoji': ach['emoji'],
+             'criteria_type': ach['criteria_type'], 'criteria_value': ach['criteria_value'],
+             if (ach['criteria_category'] != null) 'criteria_category': ach['criteria_category'],
+          };
+          achievementBatch.set(docRef, achData, SetOptions(merge: true)); 
+          achievementSayac++;
+        }
+        await achievementBatch.commit();
+        print('-> $achievementSayac başarı (achievement) işlendi.');
+      } else { print("JSON'da 'achievements' listesi bulunamadı."); }
 
       print('✅ Veriler Firestore’a başarıyla yüklendi!');
     } catch (e, st) {
