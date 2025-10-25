@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-// YENİ İMPORT:
-import 'package:bilgi_yarismasi/screens/trial_exam_review_screen.dart';
+// trial_exam_review_screen import'u kaldırıldı
 
 class ResultScreen extends StatelessWidget {
-  // Eski parametreler (normal quizler için)
+  // Sadece normal quizler için
   final String? quizId;
   final int? puan;
   final int? dogruSayisi;
   final int? soruSayisi;
-
-  // Sadece geçmişten gelenler için
+  
+  // Geçmişten gelenler için
   final bool fromHistory;
-  final Map<String, dynamic>? solvedData;
-
-  // --- YENİ PARAMETRELER (Deneme Sınavı İncelemesi için) ---
-  final List<DocumentSnapshot>? questions; // Soruların tam listesi
-  final Map<int, int>?
-  userAnswers; // Kullanıcının cevapları (Index, SeçenekIndex)
-  final Map<int, int>? correctAnswers; // Doğru cevaplar (Index, DoğruIndex)
-  // --- YENİ PARAMETRELER BİTTİ ---
+  final Map<String, dynamic>? solvedData; // Bu 'null' olabilir
+  
+  final bool isReplay; // Tekrar çözümü belirtmek için
 
   const ResultScreen({
     super.key,
@@ -29,9 +23,8 @@ class ResultScreen extends StatelessWidget {
     this.soruSayisi,
     required this.fromHistory,
     this.solvedData,
-    this.questions, // Opsiyonel
-    this.userAnswers, // Opsiyonel
-    this.correctAnswers, // Opsiyonel
+    this.isReplay = false,
+    // Deneme sınavı parametreleri kaldırıldı
   });
 
   @override
@@ -39,25 +32,25 @@ class ResultScreen extends StatelessWidget {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
 
-    // Veriyi belirle (Yeni çözüldüyse parametreden, geçmişse solvedData'dan)
+    // --- HATA DÜZELTMESİ BURADA ---
+    // 'solvedData' null olabileceğinden, '?' ile güvenli erişim yap
     final int finalPuan = puan ?? (solvedData?['puan'] as num? ?? 0).toInt();
-    final int finalDogru =
-        dogruSayisi ?? (solvedData?['dogruSayisi'] as num? ?? 0).toInt();
-    final int finalToplamSoru =
-        soruSayisi ??
-        (solvedData?['totalQuestions'] as num? ?? 0)
-            .toInt(); // Denemeden geleni de kontrol et
-    final String finalBaslik =
-        solvedData?['quizBaslik'] ?? solvedData?['title'] ?? 'Sonuç';
-
-    final bool canReview =
-        (questions != null &&
-        userAnswers != null &&
-        correctAnswers != null); // İnceleme yapılabilir mi?
+    final int finalDogru = dogruSayisi ?? (solvedData?['dogruSayisi'] as num? ?? 0).toInt();
+    
+    int finalToplamSoru = soruSayisi ?? 0;
+    // solvedData null değilse içini kontrol et
+    if (finalToplamSoru == 0 && solvedData != null) { 
+       finalToplamSoru = (solvedData?['dogruSayisi'] as num? ?? 0).toInt() + (solvedData?['yanlisSayisi'] as num? ?? 0).toInt();
+    }
+    // Güvenlik için ek kontrol
+    if (finalToplamSoru == 0 && dogruSayisi != null && soruSayisi != null) {
+       finalToplamSoru = soruSayisi!;
+    }
+    
+    final String finalBaslik = solvedData?['quizBaslik'] ?? 'Sonuç';
+    // --- DÜZELTME BİTTİ ---
 
     return PopScope(
-      // Bu ekrandan geri tuşuyla çıkıldığında (pop) 'true' döndür
-      // (Böylece TrialExamsListScreen kendini yenileyebilir)
       canPop: true,
       onPopInvoked: (didPop) {
         if (didPop) return;
@@ -67,7 +60,6 @@ class ResultScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text(fromHistory ? 'Geçmiş Sonuç' : 'Test Bitti!'),
           centerTitle: true,
-          // Geri tuşuna da 'true' değerini ekle
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context, true),
@@ -82,23 +74,19 @@ class ResultScreen extends StatelessWidget {
               children: [
                 Text(
                   finalBaslik,
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 16),
                 Icon(
-                  Icons.emoji_events,
-                  color: Colors.amber.shade700,
+                  (finalDogru / (finalToplamSoru > 0 ? finalToplamSoru : 1)) >= 0.5 ? Icons.emoji_events : Icons.sentiment_satisfied_alt,
+                  color: (finalDogru / (finalToplamSoru > 0 ? finalToplamSoru : 1)) >= 0.5 ? Colors.amber.shade700 : colorScheme.primary,
                   size: 100,
                 ),
                 const SizedBox(height: 24),
                 Text(
-                  'Tebrikler!',
-                  style: theme.textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
+                  (finalDogru / (finalToplamSoru > 0 ? finalToplamSoru : 1)) >= 0.5 ? 'Tebrikler!' : 'Güzel Denedin!',
+                  style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 8),
@@ -110,72 +98,58 @@ class ResultScreen extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
+
+                // --- Tekrar Çözüm Uyarı Mesajı ---
+                if (isReplay && !fromHistory)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 12.0),
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.orange.shade100,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Text(
+                        'Bu bir tekrar çözümdür. Puanınız toplam puana eklenmedi.',
+                        textAlign: TextAlign.center,
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          color: Colors.orange.shade900,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                  ),
+                // --- Mesaj Bitti ---
+
                 const SizedBox(height: 24),
-                // Skor detay kartı
                 Card(
                   elevation: 1,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        _buildStatColumn(
-                          'Toplam Soru',
-                          finalToplamSoru.toString(),
-                          Colors.grey.shade700,
-                        ),
-                        _buildStatColumn(
-                          'Doğru',
-                          finalDogru.toString(),
-                          Colors.green.shade700,
-                        ),
-                        _buildStatColumn(
-                          'Yanlış',
-                          (finalToplamSoru - finalDogru).toString(),
-                          Colors.red.shade700,
-                        ),
+                        _buildStatColumn('Toplam Soru', finalToplamSoru.toString(), Colors.grey.shade700),
+                        _buildStatColumn('Doğru', finalDogru.toString(), Colors.green.shade700),
+                        _buildStatColumn('Yanlış', (finalToplamSoru - finalDogru).toString(), Colors.red.shade700),
                       ],
                     ),
                   ),
                 ),
                 const SizedBox(height: 32),
 
-                // --- YENİ BUTON: Cevapları İncele ---
-                if (canReview) // Sadece deneme sınavından gelindiyse göster
-                  ElevatedButton.icon(
-                    icon: const Icon(Icons.rate_review_outlined),
-                    label: const Text('Cevapları İncele'),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      backgroundColor: colorScheme.secondary,
-                      foregroundColor: colorScheme.onSecondary,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => TrialExamReviewScreen(
-                            questions: questions!,
-                            userAnswers: userAnswers!,
-                            correctAnswers: correctAnswers!,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                // --- Deneme sınavı butonları (İncele, Sıralama) kaldırıldı ---
 
-                // --- YENİ BUTON BİTTİ ---
-                const SizedBox(height: 12),
                 ElevatedButton(
                   onPressed: () {
-                    // 'true' değeriyle geri dön
                     Navigator.pop(context, true);
                   },
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 14),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    backgroundColor: colorScheme.primary,
+                    foregroundColor: colorScheme.onPrimary,
                   ),
                   child: const Text('Kapat'),
                 ),
@@ -193,11 +167,7 @@ class ResultScreen extends StatelessWidget {
       children: [
         Text(
           value,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: color,
-          ),
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: color),
         ),
         const SizedBox(height: 4),
         Text(
