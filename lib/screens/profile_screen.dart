@@ -34,6 +34,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   String? _currentUserId;
 
+  // <-- GÜNCELLEME: Puan değişimini takip etmek için eklendi
+  int _previousToplamPuan = -1;
+
   final List<String> _availableEmojis = [
     '🙂',
     '😎',
@@ -115,8 +118,9 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Başarıları Yükle
   Future<void> _loadAchievements() async {
-    // ... (Kod aynı, değişiklik yok)
-    if (!mounted || _currentUserId == null) return;
+    // <-- GÜNCELLEME: Fonksiyonun başına koruma eklendi
+    if (!mounted || _currentUserId == null || _isLoadingAchievements) return;
+
     if (mounted) setState(() => _isLoadingAchievements = true);
     try {
       final results = await Future.wait([
@@ -228,7 +232,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                       children: [
                         Text(
                           'Profil Emojisi Seç',
-                          style: Theme.of(context).textTheme.titleLarge
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
                               ?.copyWith(fontWeight: FontWeight.bold),
                         ),
                         IconButton(
@@ -244,10 +250,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                       child: GridView.builder(
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 6,
-                              mainAxisSpacing: 12,
-                              crossAxisSpacing: 12,
-                            ),
+                          crossAxisCount: 6,
+                          mainAxisSpacing: 12,
+                          crossAxisSpacing: 12,
+                        ),
                         itemCount: _availableEmojis.length,
                         itemBuilder: (context, index) {
                           final emoji = _availableEmojis[index];
@@ -269,13 +275,13 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 borderRadius: BorderRadius.circular(16),
                                 color: isSelected
                                     ? Theme.of(context)
-                                          .colorScheme
-                                          .primaryContainer
-                                          .withOpacity(0.6)
+                                        .colorScheme
+                                        .primaryContainer
+                                        .withOpacity(0.6)
                                     : Theme.of(context)
-                                          .colorScheme
-                                          .surfaceVariant
-                                          .withOpacity(0.3),
+                                        .colorScheme
+                                        .surfaceVariant
+                                        .withOpacity(0.3),
                                 border: isSelected
                                     ? Border.all(
                                         color: Theme.of(
@@ -365,11 +371,14 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Şifre Değiştirme Dialog'u
   void _showChangePasswordDialog() {
-    // ... (Kod aynı, değişiklik yok)
+    // <-- GÜNCELLEME: Kodun bu bloğu değiştirildi
     final _passwordFormKey = GlobalKey<FormState>();
     final TextEditingController currentPasswordController =
         TextEditingController();
     final TextEditingController newPasswordController = TextEditingController();
+    // <-- GÜNCELLEME: Yeni şifre onayı için controller eklendi
+    final TextEditingController newPasswordConfirmController =
+        TextEditingController();
     bool isPasswordSaving = false;
     String dialogError = '';
 
@@ -418,6 +427,26 @@ class _ProfileScreenState extends State<ProfileScreen>
                           return 'Yeni şifre boş olamaz.';
                         if (value.length < 6)
                           return 'Yeni şifre en az 6 karakter olmalıdır.';
+                        return null;
+                      },
+                    ),
+                    // <-- GÜNCELLEME: Yeni şifre onayı için TextFormField eklendi
+                    const SizedBox(height: 12),
+                    TextFormField(
+                      controller: newPasswordConfirmController,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: 'Yeni Şifre (Tekrar)',
+                        prefixIcon: Icon(Icons.lock_outline),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty)
+                          return 'Yeni şifreyi tekrar girin.';
+                        if (value != newPasswordController.text)
+                          return 'Şifreler eşleşmiyor.';
                         return null;
                       },
                     ),
@@ -493,6 +522,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
     );
   }
+  // <-- GÜNCELLEME BİTİŞİ
 
   // Tema Seçim Dialog'u
   void _showThemePicker(BuildContext context, ColorScheme colorScheme) {
@@ -929,7 +959,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // <-- GÜNCELLEME: AchievementsScreen'den kopyalanan rozet widget'ı
+  // Başarı Rozeti Widget'ı
   Widget _buildAchievementBadge(
     String emoji,
     String name,
@@ -938,8 +968,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     String earnedDate,
     ColorScheme colorScheme,
     TextTheme textTheme,
-    // index parametresi kaldırıldı, animasyonları doğrudan kullanacağız
   ) {
+    // ... (Kod aynı, değişiklik yok)
     return Tooltip(
       message: isEarned ? '$name\nKazanıldı: $earnedDate' : 'Kilitli: $name',
       child: GestureDetector(
@@ -1253,6 +1283,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Başarılar Grid'i
   Widget _buildAchievementsGrid(ColorScheme colorScheme, TextTheme textTheme) {
+    // ... (Kod aynı, değişiklik yok)
     if (_isLoadingAchievements) {
       // Yükleniyor durumu için iskelet (skeleton) gösterimi
       return SliverPadding(
@@ -1294,7 +1325,6 @@ class _ProfileScreenState extends State<ProfileScreen>
       );
     }
 
-    // <-- GÜNCELLEME: take(8) kaldırıldı, hepsi gösterilecek
     final achievementsToShow = _allAchievements;
 
     return SliverPadding(
@@ -1314,12 +1344,10 @@ class _ProfileScreenState extends State<ProfileScreen>
           final achievementData =
               achievementDoc.data() as Map<String, dynamic>? ?? {};
           final bool isEarned = _earnedAchievements.containsKey(achievementId);
-          final earnedData = isEarned
-              ? _earnedAchievements[achievementId]
-              : null;
-          final String earnedDate = isEarned
-              ? _formatTimestamp(earnedData?['earnedDate'])
-              : '';
+          final earnedData =
+              isEarned ? _earnedAchievements[achievementId] : null;
+          final String earnedDate =
+              isEarned ? _formatTimestamp(earnedData?['earnedDate']) : '';
           final String emoji = achievementData['emoji'] ?? '🏆';
           final String name = achievementData['name'] ?? 'Başarı';
           final String description =
@@ -1349,15 +1377,15 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // <-- GÜNCELLEME: AchievementsScreen'den kopyalanan detay dialog'u
+  // Başarı Detay Dialog'u
   void _showAchievementDetails(
     String emoji,
     String name,
     String description,
     bool isEarned,
     String earnedDate,
-    // colorScheme ve textTheme parametreleri kaldırıldı, context'ten alınacak
   ) {
+    // ... (Kod aynı, değişiklik yok)
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
@@ -1538,9 +1566,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       isEarned ? 'Kazanıldı: $earnedDate' : 'Henüz Kazanılmadı',
                       style: textTheme.bodyMedium?.copyWith(
                         color: isEarned
-                            ? Colors
-                                  .green
-                                  .shade800 // Koyu yeşil
+                            ? Colors.green.shade800 // Koyu yeşil
                             : colorScheme.onSurface.withOpacity(
                                 0.7,
                               ), // Gri yazı
@@ -1654,21 +1680,37 @@ class _ProfileScreenState extends State<ProfileScreen>
                 final String soyad = data['soyad'] ?? '';
                 final String displayName = (ad.isNotEmpty || soyad.isNotEmpty)
                     ? '$ad $soyad'
-                          .trim() // Ad veya soyad boşsa trim ile düzelt
+                        .trim() // Ad veya soyad boşsa trim ile düzelt
                     : kullaniciAdi;
                 final String emoji = data['emoji'] ?? '🙂';
-                final int toplamPuan = (data['toplamPuan'] as num? ?? 0)
-                    .toInt();
+                final int toplamPuan =
+                    (data['toplamPuan'] as num? ?? 0).toInt();
 
-                if (_liderlikSirasi == -1 && !_isRankLoading) {
-                  Future.microtask(() => _loadUserRank());
+                // <-- GÜNCELLEME:
+                // Puan değiştiyse veya sıralama hiç yüklenmediyse,
+                // sıralamayı ve başarıları yeniden yükle.
+                if (toplamPuan != _previousToplamPuan ||
+                    (_liderlikSirasi == -1 && !_isRankLoading)) {
+                      
+                  if (toplamPuan != _previousToplamPuan) {
+                    // Sadece puan değiştiyse önceki puanı güncelle
+                    _previousToplamPuan = toplamPuan;
+                  }
+
+                  // Fonksiyonlar zaten 'isLoading' kontrollerine sahip
+                  // olduğu için setState içinde olmadan çağırabiliriz.
+                  Future.microtask(() {
+                    _loadUserRank();
+                    _loadAchievements();
+                  });
                 }
+                // <-- GÜNCELLEME BİTİŞİ
 
                 final bool isGoogleUser =
                     _authService.currentUser?.providerData.any(
-                      (provider) => provider.providerId == 'google.com',
-                    ) ??
-                    false;
+                          (provider) => provider.providerId == 'google.com',
+                        ) ??
+                        false;
 
                 return CustomScrollView(
                   physics: const BouncingScrollPhysics(),
