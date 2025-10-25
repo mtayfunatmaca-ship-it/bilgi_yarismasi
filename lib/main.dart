@@ -14,8 +14,8 @@ void main() async {
   await initializeDateFormatting('tr_TR', null);
 
   // Yorum satırları (doğru)
-  //final uploader = FirebaseDataUploader();
-  //await uploader.uploadDataFromJson();
+  final uploader = FirebaseDataUploader();
+  await uploader.uploadDataFromJson();
 
   // --- DEĞİŞİKLİK: Uygulamayı ThemeNotifier ile sarmala ---
   runApp(
