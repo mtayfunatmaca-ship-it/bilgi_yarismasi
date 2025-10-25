@@ -27,7 +27,6 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
-  // ... (initState, dispose, ve diğer tüm fonksiyonlar AYNI) ...
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
   bool _isLoading = true;
@@ -42,6 +41,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   Map<String, bool?> _answerStatus = {};
   bool _autoAdvanceEnabled = true;
   Timer? _advanceTimer;
+
   late AnimationController _progressAnimationController;
   late AnimationController _fadeController;
   late AnimationController _slideController;
@@ -71,7 +71,9 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     }
   }
 
-  void _initializeAnimations() { /* ... (Tam kod öncekiyle aynı) ... */ 
+  // --- Fonksiyonlar (initializeAnimations, updateProgressAnimations, getProgressColor, loadAchievementDefinitions, fetchQuestions, startTimer, dispose, selectAnswer, moveToNextOrFinish) ---
+  // --- BU FONKSİYONLARDA HİÇBİR DEĞİŞİKLİK YOK, ÖNCEKİ KODLA AYNILAR ---
+  void _initializeAnimations() {
     final totalSeconds = (widget.sureDakika * 60).toDouble();
     if (totalSeconds == 0) return;
     final initialProgress = _secondsRemaining / totalSeconds;
@@ -82,7 +84,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     _fadeController.forward();
     _slideController.forward();
   }
-  void _updateProgressAnimations() { /* ... (Tam kod öncekiyle aynı) ... */ 
+  void _updateProgressAnimations() {
     final totalSeconds = (widget.sureDakika * 60).toDouble();
     if (totalSeconds == 0) return;
     final progressValue = _secondsRemaining / totalSeconds;
@@ -91,19 +93,19 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     _progressAnimationController.value = 0.0;
     _progressAnimationController.animateTo(1.0, duration: const Duration(seconds: 1), curve: Curves.linear);
   }
-  Color _getProgressColor(double progress) { /* ... (Tam kod öncekiyle aynı) ... */ 
+  Color _getProgressColor(double progress) {
     final colorScheme = Theme.of(context).colorScheme;
     if (progress > 0.4) return Colors.green.shade400;
     if (progress > 0.15) return Colors.orange.shade400;
     return colorScheme.error;
   }
-  Future<void> _loadAchievementDefinitions() async { /* ... (Tam kod öncekiyle aynı) ... */ 
-     try {
+  Future<void> _loadAchievementDefinitions() async {
+    try {
       final snapshot = await _firestore.collection('achievements').get();
       if (mounted) { setState(() { _achievementDefinitions = snapshot.docs; }); }
     } catch (e) { print("Başarı tanımları yüklenirken hata: $e"); }
   }
-  Future<void> _fetchQuestions() async { /* ... (Tam kod öncekiyle aynı) ... */ 
+  Future<void> _fetchQuestions() async {
     if (!mounted) return;
     setState(() { _isLoading = true; _fetchError = null; });
     try {
@@ -123,7 +125,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
       if (mounted) { setState(() { _isLoading = false; _fetchError = "Sorular yüklenemedi: $e"; }); }
     }
   }
-  void _startTimer() { /* ... (Tam kod öncekiyle aynı) ... */ 
+  void _startTimer() {
     _timer?.cancel();
     if(_animationsInitialized) {
        _progressAnimationController.reset();
@@ -141,12 +143,12 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     });
   }
   @override
-  void dispose() { /* ... (Tam kod öncekiyle aynı) ... */ 
+  void dispose() {
     _timer?.cancel(); _advanceTimer?.cancel();
     _progressAnimationController.dispose(); _fadeController.dispose(); _slideController.dispose();
     super.dispose();
   }
-  void _selectAnswer(String questionId, int selectedIndex, int correctIndex) { /* ... (Tam kod öncekiyle aynı) ... */ 
+  void _selectAnswer(String questionId, int selectedIndex, int correctIndex) {
     if (_answerStatus.containsKey(questionId) || _isLoading || _isSubmitting) return;
     _advanceTimer?.cancel();
     final bool isCorrect = selectedIndex == correctIndex;
@@ -160,7 +162,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
       });
     }
   }
-  void _moveToNextOrFinish() { /* ... (Tam kod öncekiyle aynı) ... */ 
+  void _moveToNextOrFinish() {
     _advanceTimer?.cancel();
     _advanceTimer = null; 
     if (_currentQuestionIndex < _questions.length - 1) {
@@ -170,7 +172,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
     }
   }
 
-  // --- _submitQuiz GÜNCELLENDİ (Sadece normal quiz verisi gönderiyor) ---
+  // --- _submitQuiz GÜNCELLENDİ (newAchievements gönderiyor) ---
   Future<void> _submitQuiz() async {
     _timer?.cancel();
     _advanceTimer?.cancel();
@@ -189,7 +191,9 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
       else
         yanlisSayisi++;
     }
-    int puan = (dogruSayisi * 10) + (_secondsRemaining * 1); 
+    int puan = (dogruSayisi * 5); 
+    
+    List<Map<String, dynamic>> newAchievements = []; // Boş liste
 
     try {
       if (widget.isReplay) {
@@ -218,15 +222,20 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
         final updatedTotalScore = (updatedUserDoc.data()?['toplamPuan'] as num? ?? 0).toInt();
         final updatedSolvedCountSnapshot = await _firestore.collection('users').doc(user.uid).collection('solvedQuizzes').count().get();
         final updatedSolvedCount = updatedSolvedCountSnapshot.count ?? 0;
-        await _checkAndGrantAchievements(userId: user.uid, solvedCount: updatedSolvedCount, totalScore: updatedTotalScore);
+        
+        // <<< DEĞİŞİKLİK: 'newAchievements' listesini doldur
+        newAchievements = await _checkAndGrantAchievements(
+          userId: user.uid, 
+          solvedCount: updatedSolvedCount, 
+          totalScore: updatedTotalScore
+        );
       
       } else {
          if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Puanı kaydetmek için giriş yapmalısınız.')));
       }
 
       if (mounted) {
-        // --- DEĞİŞİKLİK BURADA ---
-        // Artık deneme sınavı verilerini (questions, userAnswers vb.) göndermiyoruz
+        // <<< DEĞİŞİKLİK: 'newAchievements' listesini Sonuç Ekranına gönder
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -235,11 +244,11 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
               dogruSayisi: dogruSayisi,
               soruSayisi: actualQuestionCount,
               fromHistory: false, 
-              isReplay: widget.isReplay, // Sadece 'isReplay' bilgisi
+              isReplay: widget.isReplay,
+              newAchievements: newAchievements, // <<< YENİ KAZANILANLARI GÖNDER
             ),
           ),
         );
-        // --- DEĞİŞİKLİK BİTTİ ---
       }
     } catch (e) {
       print("Sonuçları kaydederken hata: $e");
@@ -255,10 +264,16 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   }
   // --- _submitQuiz Bitti ---
 
-  Future<void> _checkAndGrantAchievements({required String userId, required int solvedCount, required int totalScore}) async {
-     // ... (Bu fonksiyonun içi tam olarak öncekiyle aynı) ...
-     if (_achievementDefinitions.isEmpty || !mounted) return;
-     try {
+  // --- _checkAndGrantAchievements GÜNCELLENDİ (List döndürüyor) ---
+  Future<List<Map<String, dynamic>>> _checkAndGrantAchievements({
+    required String userId,
+    required int solvedCount,
+    required int totalScore,
+  }) async {
+    List<Map<String, dynamic>> newlyEarnedAchievements = []; // Döndürülecek liste
+    if (_achievementDefinitions.isEmpty || !mounted) return newlyEarnedAchievements;
+
+    try {
        final earnedSnapshot = await _firestore.collection('users').doc(userId).collection('earnedAchievements').get();
        final earnedAchievementIds = earnedSnapshot.docs.map((doc) => doc.id).toSet();
        final solvedByCategorySnapshot = await _firestore.collection('users').doc(userId).collection('solvedQuizzes').get();
@@ -269,7 +284,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
            if (categoryId != null) { solvedCountsByCategory[categoryId] = (solvedCountsByCategory[categoryId] ?? 0) + 1; }
        }
        WriteBatch? batch;
-       List<Map<String, dynamic>> newlyEarnedAchievements = [];
+       
        for (var achievementDoc in _achievementDefinitions) {
          final achievementId = achievementDoc.id;
          if (earnedAchievementIds.contains(achievementId)) continue;
@@ -292,87 +307,47 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
              final requiredCategory = achievementData['criteria_category'] as String?;
              if (requiredCategory != null && (solvedCountsByCategory[requiredCategory] ?? 0) >= criteriaValue) { earned = true; }
              break;
+           // trial_exam_solved_count burada kontrol edilmez
          }
          if (earned) {
            print("🎉 Yeni Başarı Kazanıldı: ${achievementName}");
            batch ??= _firestore.batch();
            final newEarnedRef = _firestore.collection('users').doc(userId).collection('earnedAchievements').doc(achievementId);
            batch.set(newEarnedRef, {'earnedDate': FieldValue.serverTimestamp(), 'name': achievementName, 'emoji': achievementEmoji});
+           
+           // Listeye ekle
            newlyEarnedAchievements.add({'name': achievementName, 'emoji': achievementEmoji, 'description': achievementDescription});
          }
        }
        if (batch != null) {
          await batch.commit();
          print("Kazanılan başarılar kaydedildi.");
-         if (mounted) {
-           for (var achievementData in newlyEarnedAchievements) {
-              await Future.delayed(const Duration(milliseconds: 500));
-              if (mounted) _showAchievementEarnedDialog(achievementData);
-           }
-         }
+         // Dialog gösterme kodları buradan KALDIRILDI
        }
      } catch (e) { print("Başarı kontrolü sırasında hata: $e"); }
+     
+     return newlyEarnedAchievements; // LİSTEYİ DÖNDÜR
   }
+  // --- BİTTİ ---
+
+  // --- _showAchievementEarnedDialog FONKSİYONU BURADAN KALDIRILDI ---
   
-  void _showAchievementEarnedDialog(Map<String, dynamic> achievementData) {
-    // ... (Bu fonksiyonun içi tam olarak öncekiyle aynı) ...
-     if (!mounted) return;
-     final emoji = achievementData['emoji'] as String? ?? '🏆';
-     final name = achievementData['name'] as String? ?? 'Başarı';
-     final description = achievementData['description'] as String? ?? '';
-     showDialog(context: context, barrierDismissible: false, builder: (BuildContext context) {
-         return Dialog(
-           backgroundColor: Colors.transparent,
-           child: Container(
-             decoration: BoxDecoration(
-               gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [Colors.blue.shade700, Colors.purple.shade700]),
-               borderRadius: BorderRadius.circular(24),
-               boxShadow: [ BoxShadow(color: Colors.black.withOpacity(0.3), blurRadius: 20, offset: const Offset(0, 10)) ],
-             ),
-             child: Padding(
-               padding: const EdgeInsets.all(24),
-               child: Column(mainAxisSize: MainAxisSize.min, children: [
-                   Container(width: 80, height: 80, decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), shape: BoxShape.circle),
-                     child: Center(child: Text(emoji, style: const TextStyle(fontSize: 40)))),
-                   const SizedBox(height: 20),
-                   Text("Tebrikler!", style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
-                   const SizedBox(height: 16),
-                   Text(name, style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white, fontWeight: FontWeight.bold), textAlign: TextAlign.center),
-                   const SizedBox(height: 8),
-                   Text(description, style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white.withOpacity(0.9)), textAlign: TextAlign.center),
-                   const SizedBox(height: 24),
-                   ElevatedButton(
-                     onPressed: () => Navigator.of(context).pop(),
-                     style: ElevatedButton.styleFrom(
-                       backgroundColor: Colors.white, foregroundColor: Colors.blue.shade700,
-                       padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                     ),
-                     child: const Text("Harika!", style: TextStyle(fontWeight: FontWeight.bold)),
-                   ),
-               ]),
-             ),
-           ),
-         );
-       },
-     );
-  }
-  
-  void _nextQuestion() async { /* ... (Tam kod öncekiyle aynı) ... */ 
+  // --- Kalan Fonksiyonlar (Aynı) ---
+  void _nextQuestion() async {
     _advanceTimer?.cancel(); _advanceTimer = null;
     if (_currentQuestionIndex < _questions.length - 1) {
       await _slideController.reverse(); 
       if (mounted) { setState(() => _currentQuestionIndex++); _slideController.forward(); }
     }
   }
-  void _previousQuestion() async { /* ... (Tam kod öncekiyle aynı) ... */ 
+  void _previousQuestion() async {
     _advanceTimer?.cancel(); _advanceTimer = null;
     if (_currentQuestionIndex > 0) {
       await _slideController.reverse();
       if (mounted) { setState(() => _currentQuestionIndex--); _slideController.forward(); }
     }
   }
-  String get _formattedTime { /* ... (Tam kod öncekiyle aynı) ... */ 
+  String get _formattedTime {
     final minutes = (_secondsRemaining ~/ 60).toString().padLeft(2, '0');
     final seconds = (_secondsRemaining % 60).toString().padLeft(2, '0');
     return '$minutes:$seconds';
@@ -381,7 +356,6 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   // === build METODU (Tam Kod - Değişiklik Yok) ===
   @override
   Widget build(BuildContext context) {
-    // ... (Bu fonksiyonun içi tam olarak öncekiyle aynı) ...
      final colorScheme = Theme.of(context).colorScheme;
      final textTheme = Theme.of(context).textTheme;
 
@@ -448,7 +422,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
          elevation: 0, centerTitle: true,
          leading: IconButton(
            icon: Icon(Icons.close_rounded, color: colorScheme.onBackground),
-           onPressed: () { _timer?.cancel(); _advanceTimer?.cancel(); Navigator.pop(context, true); },
+           onPressed: () { _timer?.cancel(); _advanceTimer?.cancel(); Navigator.pop(context, true); }, // 'true' döndür
          ),
          actions: [
            Tooltip(
