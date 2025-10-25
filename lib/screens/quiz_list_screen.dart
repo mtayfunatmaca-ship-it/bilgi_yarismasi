@@ -29,8 +29,8 @@ class _QuizListScreenState extends State<QuizListScreen>
   late Animation<Offset> _slideAnimation;
 
   // Puanlama sabitleri
-  static const int puanPerCorrect = 100;
-  static const int puanPerSecond = 5;
+  static const int puanPerCorrect = 5;
+
 
   @override
   void initState() {
@@ -131,7 +131,7 @@ class _QuizListScreenState extends State<QuizListScreen>
                   child: Column(
                     children: [
                        _buildInfoRow(context, Icons.check_circle_outline, 'Her Doğru Cevap:', '+$puanPerCorrect Puan'),
-                       _buildInfoRow(context, Icons.hourglass_top_rounded, 'Kalan Süre Bonusu:', '+$puanPerSecond Puan / Saniye'),
+                      
                     ],
                   ),
                 ),
