@@ -16,7 +16,6 @@ class FirebaseDataUploader {
     }
   }
 
-  // --- BU FONKSİYON GÜNCELLENDİ (kategoriId ve sira eklendi) ---
   Future<void> _updateQuestionsForQuiz(String id, List sorular, {required bool isTrial}) async {
     final String idField = isTrial ? 'trialExamId' : 'quizId';
     
@@ -43,11 +42,8 @@ class FirebaseDataUploader {
       final int? dogruCevapIndex = (soru['dogruCevapIndex'] as num?)?.toInt();
       final List? secenekler = soru['secenekler'];
       final String? imageUrl = soru['imageUrl'] as String?;
-      
-      // --- YENİ ALANLARI OKU ---
       final String? kategoriId = soru['kategoriId'] as String?;
       final int? sira = (soru['sira'] as num?)?.toInt();
-      // --- BİTTİ ---
 
       if (soruMetni != null && dogruCevapIndex != null && secenekler != null && secenekler.length >= 2) {
         final docRef = _firestore.collection('questions').doc();
@@ -59,13 +55,11 @@ class FirebaseDataUploader {
           'secenekler': List<String>.from(secenekler.map((s) => s.toString())),
           if (imageUrl != null && imageUrl.isNotEmpty) 'imageUrl': imageUrl,
           
-          // --- YENİ ALANLARI EKLE ---
-          // Eğer bu bir deneme sınavıysa (isTrial), kategori ve sıra bilgilerini de ekle
+          // Deneme sınavıysa kategori ve sıra bilgilerini de ekle
           if (isTrial && kategoriId != null && kategoriId.isNotEmpty)
-             'kategoriId': kategoriId,
+            'kategoriId': kategoriId,
           if (isTrial && sira != null)
-             'sira': sira,
-          // --- BİTTİ ---
+            'sira': sira,
         };
         
         questionBatch.set(docRef, soruData);
@@ -77,10 +71,9 @@ class FirebaseDataUploader {
     await questionBatch.commit();
     print('   -> $buQuizSoruSayac adet yeni soru eklendi.');
   }
-  // --- GÜNCELLEME BİTTİ ---
 
 
-  // Ana Yükleme Fonksiyonu (Tamamı)
+  // Ana Yükleme Fonksiyonu
   Future<void> uploadDataFromJson() async {
     print('--- Veri Yükleme Başlatılıyor (FirebaseDataUploader) ---');
     try {
@@ -121,7 +114,7 @@ class FirebaseDataUploader {
         print('-> Toplam $quizSayac normal quiz işlendi.');
       } else { print("JSON'da 'quizzes' bulunamadı."); }
 
-      // Deneme Sınavları
+      // --- Deneme Sınavları (GÜNCELLENDİ) ---
       if (data['trialExams'] != null && data['trialExams'] is List) {
         print('Deneme Sınavları işleniyor...');
         int examSayac = 0;
@@ -134,21 +127,33 @@ class FirebaseDataUploader {
           final Timestamp? startTime = _parseDate(exam['startTime']);
           final Timestamp? endTime = _parseDate(exam['endTime']);
           if (startTime == null || endTime == null) {
-              print("   >> HATA: '$examId' için tarih formatı yanlış. Atlanıyor.");
-              continue;
+             print("   >> HATA: '$examId' için tarih formatı yanlış. Atlanıyor.");
+             continue;
           }
+
+          // --- YENİ ALANLARI OKU (isPro ve isPublished) ---
+          final bool isPro = exam['isPro'] ?? false; // Varsayılan: false (PRO değil)
+          final bool isPublished = exam['isPublished'] ?? true; // Varsayılan: true (Yayınla)
+          // --- BİTTİ ---
+
           await examRef.set({
             'title': exam['title'], 'description': exam['description'],
             'startTime': startTime, 'endTime': endTime,
             'durationMinutes': exam['durationMinutes'], 'questionCount': exam['questionCount'],
             'isMixedCategory': exam['isMixedCategory'] ?? false,
-          }, SetOptions(merge: true));
+            
+            // --- YENİ ALANLARI FİRESTORE'A YAZ ---
+            'isPro': isPro,
+            'isPublished': isPublished,
+            // --- BİTTİ ---
+            
+          }, SetOptions(merge: true)); // merge:true sayesinde mevcut alanlar korunur
           
-          // _updateQuestionsForQuiz fonksiyonu artık 'kategoriId' ve 'sira'yı da yüklüyor
           await _updateQuestionsForQuiz(examId, exam['sorular'] ?? [], isTrial: true);
         }
         print('-> Toplam $examSayac deneme sınavı işlendi.');
       } else { print("JSON'da 'trialExams' bulunamadı."); }
+      // --- DENEME SINAVLARI BÖLÜMÜ GÜNCELLENDİ ---
 
       // Başarılar (Achievements)
       if (data['achievements'] != null && data['achievements'] is List) {

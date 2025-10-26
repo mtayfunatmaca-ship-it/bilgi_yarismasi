@@ -73,7 +73,9 @@
     {
       "id": "turkiye_geneli_1",
       "title": "Türkiye Geneli-1 (Sadece Tarih)",
+      "isPro": false,
       "description": "Tarih konularından 3 soruluk mini deneme.",
+      "isPublished": true,
       "startTime": "2025-10-21T12:00:00+03:00",
       "endTime": "2025-10-27T12:00:00+03:00",
       "durationMinutes": 5,
@@ -107,6 +109,8 @@
       "id": "turkiye_geneli_karma_1",
       "title": "Türkiye Geneli - Karma Deneme 1",
       "description": "Tüm kategorilerden 2'şer soru içeren 10 soruluk deneme.",
+      "isPro": false,
+      "isPublished": true,
       "startTime": "2025-10-25T10:00:00+03:00",
       "endTime": "2025-10-30T23:59:00+03:00",
       "durationMinutes": 15,
@@ -186,9 +190,9 @@
       ]
     }
   ],
-  "achievements": [
+ "achievements": [
     {
-      "id": "ilk_adim",
+      "id": "quiz_1",
       "name": "İlk Adım",
       "description": "İlk testini başarıyla tamamla.",
       "emoji": "👟",
@@ -196,7 +200,7 @@
       "criteria_value": 1
     },
     {
-      "id": "merakli_zihin",
+      "id": "quiz_5",
       "name": "Meraklı Zihin",
       "description": "5 farklı testi başarıyla tamamla.",
       "emoji": "🧠",
@@ -204,15 +208,159 @@
       "criteria_value": 5
     },
     {
-      "id": "puan_avcisi",
-      "name": "Puan Avcısı",
-      "description": "Toplam 5000 puana ulaş.",
+      "id": "quiz_10",
+      "name": "Acemi Bilgin",
+      "description": "10 farklı testi başarıyla tamamla.",
+      "emoji": "🧑‍🎓",
+      "criteria_type": "solved_count",
+      "criteria_value": 10
+    },
+    {
+      "id": "quiz_25",
+      "name": "Bilge",
+      "description": "25 farklı testi başarıyla tamamla.",
+      "emoji": "🦉",
+      "criteria_type": "solved_count",
+      "criteria_value": 25
+    },
+    {
+      "id": "quiz_50",
+      "name": "Efsane",
+      "description": "50 farklı testi başarıyla tamamla.",
+      "emoji": "🔥",
+      "criteria_type": "solved_count",
+      "criteria_value": 50
+    },
+    {
+      "id": "quiz_75",
+      "name": "Koleksiyoner",
+      "description": "75 farklı testi başarıyla tamamla.",
+      "emoji": "📚",
+      "criteria_type": "solved_count",
+      "criteria_value": 75
+    },
+    {
+      "id": "quiz_100",
+      "name": "Usta",
+      "description": "100 farklı testi başarıyla tamamla.",
+      "emoji": "🏆",
+      "criteria_type": "solved_count",
+      "criteria_value": 100
+    },
+    {
+      "id": "quiz_150",
+      "name": "Profesör",
+      "description": "150 farklı testi başarıyla tamamla.",
+      "emoji": "🧑‍🏫",
+      "criteria_type": "solved_count",
+      "criteria_value": 150
+    },
+    {
+      "id": "puan_100",
+      "name": "İlk Puan",
+      "description": "Toplam 100 puana ulaş.",
+      "emoji": "🎯",
+      "criteria_type": "total_score",
+      "criteria_value": 100
+    },
+    {
+      "id": "puan_500",
+      "name": "Puan Toplayıcı",
+      "description": "Toplam 500 puana ulaş.",
       "emoji": "💰",
+      "criteria_type": "total_score",
+      "criteria_value": 500
+    },
+    {
+      "id": "puan_1000",
+      "name": "Bin Puan",
+      "description": "Toplam 1,000 puana ulaş.",
+      "emoji": "🪙",
+      "criteria_type": "total_score",
+      "criteria_value": 1000
+    },
+    {
+      "id": "puan_2500",
+      "name": "Puan Avcısı",
+      "description": "Toplam 2,500 puana ulaş.",
+      "emoji": "💰💰",
+      "criteria_type": "total_score",
+      "criteria_value": 2500
+    },
+    {
+      "id": "puan_5000",
+      "name": "Elit",
+      "description": "Toplam 5,000 puana ulaş.",
+      "emoji": "✨",
       "criteria_type": "total_score",
       "criteria_value": 5000
     },
     {
-      "id": "tarih_kurdu",
+      "id": "puan_10000",
+      "name": "Skor Şampiyonu",
+      "description": "Toplam 10,000 puana ulaş.",
+      "emoji": "👑",
+      "criteria_type": "total_score",
+      "criteria_value": 10000
+    },
+    {
+      "id": "puan_20000",
+      "name": "Puan Zengini",
+      "description": "Toplam 20,000 puana ulaş.",
+      "emoji": "💎",
+      "criteria_type": "total_score",
+      "criteria_value": 20000
+    },
+    {
+      "id": "puan_30000",
+      "name": "Milyoner",
+      "description": "Toplam 30,000 puana ulaş.",
+      "emoji": "🤑",
+      "criteria_type": "total_score",
+      "criteria_value": 30000
+    },
+    {
+      "id": "puan_50000",
+      "name": "Skor Efsanesi",
+      "description": "Toplam 50,000 puana ulaş.",
+      "emoji": "🚀",
+      "criteria_type": "total_score",
+      "criteria_value": 50000
+    },
+    {
+      "id": "deneme_1",
+      "name": "Cesur Adım",
+      "description": "İlk deneme sınavını başarıyla tamamla.",
+      "emoji": "🏃‍♂️",
+      "criteria_type": "trial_exam_solved_count",
+      "criteria_value": 1
+    },
+    {
+      "id": "deneme_3",
+      "name": "Stratejist",
+      "description": "Toplam 3 deneme sınavını tamamla.",
+      "emoji": "📈",
+      "criteria_type": "trial_exam_solved_count",
+      "criteria_value": 3
+    },
+    {
+      "id": "deneme_5",
+      "name": "Deneme Uzmanı",
+      "description": "Toplam 5 deneme sınavını tamamla.",
+      "emoji": "🎓",
+      "criteria_type": "trial_exam_solved_count",
+      "criteria_value": 5
+    },
+    {
+      "id": "deneme_10",
+      "name": "Deneme Canavarı",
+      "description": "Toplam 10 deneme sınavını tamamla.",
+      "emoji": "👹",
+      "criteria_type": "trial_exam_solved_count",
+      "criteria_value": 10
+    },
+    {
+      "id": "tarih_1",
       "name": "Tarih Kurdu",
       "description": "Tarih kategorisinden 5 test çöz.",
       "emoji": "📜",
@@ -221,7 +369,25 @@
       "criteria_value": 5
     },
     {
-      "id": "matematik_ustasi",
+      "id": "tarih_2",
+      "name": "Kronolog",
+      "description": "Tarih kategorisinden 15 test çöz.",
+      "emoji": "⏳",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "tarih",
+      "criteria_value": 15
+    },
+    {
+      "id": "tarih_3",
+      "name": "Tarih Profesörü",
+      "description": "Tarih kategorisinden 30 test çöz.",
+      "emoji": "🏛️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "tarih",
+      "criteria_value": 30
+    },
+    {
+      "id": "mat_1",
       "name": "Matematik Ustası",
       "description": "Matematik kategorisinden 5 test çöz.",
       "emoji": "🧮",
@@ -230,7 +396,25 @@
       "criteria_value": 5
     },
     {
-      "id": "cografyaci",
+      "id": "mat_2",
+      "name": "Hesap Makinesi",
+      "description": "Matematik kategorisinden 15 test çöz.",
+      "emoji": "🤖",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "matematik",
+      "criteria_value": 15
+    },
+    {
+      "id": "mat_3",
+      "name": "Pi Sayısı",
+      "description": "Matematik kategorisinden 30 test çöz.",
+      "emoji": "π",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "matematik",
+      "criteria_value": 30
+    },
+    {
+      "id": "cografya_1",
       "name": "Coğrafyacı",
       "description": "Coğrafya kategorisinden 5 test çöz.",
       "emoji": "🗺️",
@@ -239,7 +423,25 @@
       "criteria_value": 5
     },
     {
-      "id": "dil_bilgini",
+      "id": "cografya_2",
+      "name": "Kaşif",
+      "description": "Coğrafya kategorisinden 15 test çöz.",
+      "emoji": "🧭",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "cografya",
+      "criteria_value": 15
+    },
+    {
+      "id": "cografya_3",
+      "name": "Piri Reis",
+      "description": "Coğrafya kategorisinden 30 test çöz.",
+      "emoji": "⛵",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "cografya",
+      "criteria_value": 30
+    },
+    {
+      "id": "turkce_1",
       "name": "Dil Bilgini",
       "description": "Türkçe kategorisinden 5 test çöz.",
       "emoji": "✍️",
@@ -248,61 +450,49 @@
       "criteria_value": 5
     },
     {
-      "id": "vatandas",
+      "id": "turkce_2",
+      "name": "Edebiyatçı",
+      "description": "Türkçe kategorisinden 15 test çöz.",
+      "emoji": "✒️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "turkce",
+      "criteria_value": 15
+    },
+    {
+      "id": "turkce_3",
+      "name": "Söz Ustası",
+      "description": "Türkçe kategorisinden 30 test çöz.",
+      "emoji": "🗣️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "turkce",
+      "criteria_value": 30
+    },
+    {
+      "id": "vatandaslik_1",
       "name": "Vatandaş",
       "description": "Vatandaşlık kategorisinden 5 test çöz.",
-      "emoji": "🏛️",
+      "emoji": "⚖️",
       "criteria_type": "category_solved_count",
       "criteria_category": "vatandaslik",
       "criteria_value": 5
     },
     {
-      "id": "bilge",
-      "name": "Bilge",
-      "description": "Toplam 25 testi başarıyla tamamla.",
-      "emoji": "🦉",
-      "criteria_type": "solved_count",
-      "criteria_value": 25
+      "id": "vatandaslik_2",
+      "name": "Hukukçu",
+      "description": "Vatandaşlık kategorisinden 15 test çöz.",
+      "emoji": "🧑‍⚖️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "vatandaslik",
+      "criteria_value": 15
     },
     {
-      "id": "skor_sampiyonu",
-      "name": "Skor Şampiyonu",
-      "description": "Toplam 20000 puana ulaş.",
-      "emoji": "👑",
-      "criteria_type": "total_score",
-      "criteria_value": 20000
-    },
-    {
-      "id": "puan_zengini",
-      "name": "Puan Zengini",
-      "description": "Toplam 50000 puana ulaş.",
-      "emoji": "💎",
-      "criteria_type": "total_score",
-      "criteria_value": 50000
-    },
-    {
-      "id": "efsane",
-      "name": "Efsane",
-      "description": "Toplam 50 testi başarıyla tamamla.",
-      "emoji": "🔥",
-      "criteria_type": "solved_count",
-      "criteria_value": 50
-    },
-    {
-      "id": "deneme_ilk_adim",
-      "name": "Cesur Adım",
-      "description": "İlk deneme sınavını başarıyla tamamla.",
-      "emoji": "🏃‍♂️",
-      "criteria_type": "trial_exam_solved_count",
-      "criteria_value": 1
-    },
-    {
-      "id": "deneme_uzmani",
-      "name": "Deneme Uzmanı",
-      "description": "Toplam 5 deneme sınavını tamamla.",
-      "emoji": "🎓",
-      "criteria_type": "trial_exam_solved_count",
-      "criteria_value": 5
+      "id": "vatandaslik_3",
+      "name": "Kanun Yapıcı",
+      "description": "Vatandaşlık kategorisinden 30 test çöz.",
+      "emoji": "🗳️",
+      "criteria_type": "category_solved_count",
+      "criteria_category": "vatandaslik",
+      "criteria_value": 30
     }
   ]
 }

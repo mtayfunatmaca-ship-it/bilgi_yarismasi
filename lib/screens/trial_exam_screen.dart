@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:bilgi_yarismasi/screens/deneme_sinavi_sonuc_ekrani.dart'; 
+import 'package:bilgi_yarismasi/screens/trial_exam_result.dart'; 
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // (ResultScreen import'u kaldırıldı)

@@ -1,13 +1,18 @@
-import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:bilgi_yarismasi/screens/purchase_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:bilgi_yarismasi/screens/statistics_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:bilgi_yarismasi/services/theme_notifier.dart';
 import 'package:intl/intl.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'dart:ui' as ui; // <<< FLULAŞTIRMA (BLUR) İÇİN EKLENDİ
+import 'dart:ui' as ui; // Flulaştırma (Blur) için
+import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
+// --- 1. YENİ IMPORT (Kullanıcı verisini ve PRO durumunu okumak için) ---
+import 'package:bilgi_yarismasi/services/user_data_provider.dart'; 
+// --- BİTTİ ---
+
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -21,12 +26,10 @@ class _ProfileScreenState extends State<ProfileScreen>
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
 
-  // State değişkenleri
   int _liderlikSirasi = -1;
   bool _isRankLoading = false;
   bool _isSaving = false;
 
-  // Başarılar (Rozetler) için state'ler
   List<QueryDocumentSnapshot> _allAchievements = [];
   Map<String, dynamic> _earnedAchievements = {};
   bool _isLoadingAchievements = true;
@@ -41,27 +44,23 @@ class _ProfileScreenState extends State<ProfileScreen>
     '🤩', '🥳', '🤯', '🤔', '🚀', '⭐', '💡', '📚', '🧠', '🎓', '🦉', '🦊',
   ];
   
-  late AnimationController _animationController;
-  late AnimationController _profileAnimationController;
-
   @override
   void initState() {
     super.initState();
     _currentUserId = _authService.currentUser?.uid;
 
-    _animationController = AnimationController(duration: const Duration(milliseconds: 1000), vsync: this);
-    _profileAnimationController = AnimationController(duration: const Duration(milliseconds: 800), vsync: this);
-    _shimmerController = AnimationController(duration: const Duration(milliseconds: 2500), vsync: this); // Parlama için
+    _shimmerController = AnimationController(
+      duration: const Duration(milliseconds: 2500),
+      vsync: this,
+    );
 
     if (_currentUserId != null) {
-      _refreshAllData(); // Hem profili hem başarıları yükle
+      _refreshAllData(); // Tüm verileri yükle
     }
   }
 
   @override
   void dispose() {
-    _animationController.dispose();
-    _profileAnimationController.dispose();
     _shimmerController.dispose();
     for (var controller in _badgeAnimationControllers) {
       controller.dispose();
@@ -76,20 +75,20 @@ class _ProfileScreenState extends State<ProfileScreen>
       _isLoadingAchievements = true; 
     });
     
+    // Animasyonları sıfırla
+    for (var controller in _badgeAnimationControllers) {
+      controller.reset();
+    }
+
     final rankFuture = _loadUserRank();
     final achievementsFuture = _loadAchievements();
     
     await Future.wait([rankFuture, achievementsFuture]);
-
-    _animationController.forward();
-    _profileAnimationController.forward();
   }
 
   String _formatTimestamp(Timestamp? timestamp) {
     if (timestamp == null) return '';
-    try {
-      return DateFormat.yMd('tr_TR').format(timestamp.toDate());
-    } catch (e) { return '?'; }
+    try { return DateFormat.yMd('tr_TR').format(timestamp.toDate()); } catch (e) { return '?'; }
   }
 
   Future<void> _loadUserRank() async {
@@ -103,12 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen>
          if (userDoc.id == _currentUserId) { sirasi = currentRank; break; }
          currentRank++;
        }
-       if (mounted) {
-         setState(() {
-           _liderlikSirasi = sirasi;
-           _isRankLoading = false;
-         });
-       }
+       if (mounted) { setState(() { _liderlikSirasi = sirasi; _isRankLoading = false; }); }
     } catch (e) {
        print("Sıralama yüklenirken hata: $e");
        if (mounted) setState(() => _isRankLoading = false);
@@ -126,6 +120,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       if (!mounted) return;
       final allSnapshot = results[0] as QuerySnapshot<Map<String, dynamic>>;
       final earnedSnapshot = results[1] as QuerySnapshot<Map<String, dynamic>>;
+      
       _allAchievements = allSnapshot.docs;
       Map<String, dynamic> earnedMap = {};
       for (var doc in earnedSnapshot.docs) { earnedMap[doc.id] = doc.data(); }
@@ -162,7 +157,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
   
-  // Emoji Seçici
+  // Emoji seçici (Tam Kod)
   void _showEmojiPicker(String currentEmoji) {
     showModalBottomSheet(
       context: context, backgroundColor: Colors.transparent, isScrollControlled: true,
@@ -224,7 +219,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
   
-  // Emoji kaydetme
+  // Emoji kaydetme (Tam Kod)
   Future<void> _saveEmoji(String newEmoji) async {
     if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
@@ -241,7 +236,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
-  // Ad/Soyad/Kullanıcı Adı düzenleme Dialog
+  // Ad/Soyad/Kullanıcı Adı düzenleme Dialog (Tam Kod)
   void _showEditInfoDialog(String currentUsername, String currentAd, String currentSoyad) {
     final TextEditingController usernameController = TextEditingController(text: currentUsername);
     final TextEditingController adController = TextEditingController(text: currentAd);
@@ -331,7 +326,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Ad/Soyad/Kullanıcı Adı kaydetme
+  // Ad/Soyad/Kullanıcı Adı kaydetme (Tam Kod)
   Future<String?> _saveUserInfo(String newUsername, String currentUsername, String newAd, String newSoyad) async {
     final user = _authService.currentUser;
     if (user == null) return "Kullanıcı bulunamadı.";
@@ -345,9 +340,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         }
       }
       await _firestore.collection('users').doc(user.uid).update({
-        'kullaniciAdi': newUsername,
-        'ad': newAd,
-        'soyad': newSoyad,
+        'kullaniciAdi': newUsername, 'ad': newAd, 'soyad': newSoyad,
       });
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: const Text('Bilgiler güncellendi!'), backgroundColor: Theme.of(context).colorScheme.primary, behavior: SnackBarBehavior.floating, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))));
@@ -363,7 +356,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
-  // Şifre Değiştirme Dialog'u (Doğrulama Eklendi)
+  // Şifre Değiştirme Dialog'u (Tam Kod)
   void _showChangePasswordDialog() {
      final _passwordFormKey = GlobalKey<FormState>();
      final TextEditingController currentPasswordController = TextEditingController();
@@ -457,7 +450,7 @@ class _ProfileScreenState extends State<ProfileScreen>
      );
   }
   
-  // Tema Seçim Dialog'u
+  // Tema Seçim Dialog'u (Tam Kod)
   void _showThemePicker(BuildContext context, ColorScheme colorScheme) {
      showModalBottomSheet(
       context: context,
@@ -497,8 +490,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
   
-  // Ayarlar Menüsü (Çıkış Butonu Burada)
-  void _showSettingsMenu(BuildContext context, ColorScheme colorScheme, bool isGoogleUser) {
+  // --- Ayarlar Menüsü (GÜNCELLENDİ: isPro kontrolü) ---
+  void _showSettingsMenu(BuildContext context, ColorScheme colorScheme, bool isGoogleUser, bool isPro) {
     showModalBottomSheet(
       context: context,
       backgroundColor: colorScheme.surface,
@@ -536,14 +529,40 @@ class _ProfileScreenState extends State<ProfileScreen>
                   _showThemePicker(context, colorScheme);
                 },
               ),
+              
+              // --- 1. KİLİTLEME: İstatistikler Butonu ---
               ListTile(
-                leading: Icon(Icons.bar_chart_rounded, color: colorScheme.secondary),
-                title: Text('İstatistiklerim', style: Theme.of(context).textTheme.bodyLarge),
+                leading: Icon(
+                  Icons.bar_chart_rounded, 
+                  color: isPro ? colorScheme.secondary : colorScheme.onSurface.withOpacity(0.3) // Kilitliyse soluk
+                ),
+                title: Row(
+                  children: [
+                    Text(
+                      'İstatistiklerim', 
+                      style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                         color: isPro ? colorScheme.onSurface : colorScheme.onSurface.withOpacity(0.5) // Kilitliyse soluk
+                      )
+                    ),
+                    if (!isPro) ...[ // PRO değilse
+                      const SizedBox(width: 8),
+                      Icon(Icons.lock, size: 16, color: Colors.orange.shade700),
+                    ]
+                  ],
+                ),
                 onTap: () {
-                   Navigator.pop(context);
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => const StatisticsScreen()));
+                   Navigator.pop(context); // Menüyü kapat
+                   if (isPro) {
+                     // PRO ise: Ekranı aç
+                     Navigator.push(context, MaterialPageRoute(builder: (context) => const StatisticsScreen()));
+                   } else {
+                     // PRO değilse: Uyarı dialog'u göster
+                     _showProFeatureDialog(context);
+                   }
                 },
               ),
+              // --- KİLİTLEME BİTTİ ---
+              
               const Divider(),
               ListTile(
                 leading: Icon(Icons.logout_rounded, color: colorScheme.error),
@@ -557,10 +576,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       actions: [
                         TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('İptal')),
                         ElevatedButton(
-                          onPressed: () { 
-                             Navigator.of(ctx).pop();
-                             _authService.signOut();
-                           },
+                          onPressed: () { Navigator.pop(ctx); _authService.signOut(); },
                           style: ElevatedButton.styleFrom(backgroundColor: colorScheme.error, foregroundColor: colorScheme.onError, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
                           child: const Text('Çıkış Yap'),
                         ),
@@ -576,12 +592,51 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
   
+  // --- 2. YENİ FONKSİYON: PRO Özellik Uyarısı ---
+  void _showProFeatureDialog(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    
+    showDialog(
+      context: context,
+      builder: (context) {
+         return AlertDialog(
+           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+           icon: Icon(Icons.lock_person_rounded, color: colorScheme.primary, size: 48),
+           title: const Text('PRO Özellik', style: TextStyle(fontWeight: FontWeight.bold)),
+           content: const Text('Detaylı istatistikler ve daha fazlası için PRO üyeliğe geçiş yapmanız gerekmektedir.'),
+           actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('Kapat'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                   Navigator.pop(context);
+                   // --- 3. DEĞİŞİKLİK: Satın alma ekranını aç ---
+                   Navigator.push(
+                     context,
+                     MaterialPageRoute(builder: (context) => const PurchaseScreen()),
+                   );
+                },
+                child: const Text('PRO\'ya Geç'),
+              ),
+           ],
+         );
+      },
+    );
+  }
+  // --- YENİ FONKSİYON BİTTİ ---
 
-  // === build METODU (YENİ TASARIM) ===
+  
+  // === build METODU (GÜNCELLENDİ) ===
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+
+    // --- 4. DEĞİŞİKLİK: isPro durumunu Provider'dan oku ---
+    final bool isPro = context.watch<UserDataProvider>().isPro; 
+    // --- DEĞİŞİKLİK BİTTİ ---
 
     return Scaffold(
       backgroundColor: colorScheme.background,
@@ -598,11 +653,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                   return Center(child: Text("Hata: Profil verisi okunamadı. ${snapshot.error}"));
                 }
                 if (!snapshot.hasData || !snapshot.data!.exists) {
-                   return _buildLoadingState(colorScheme, textTheme);
+                   return _buildLoadingState(colorScheme, textTheme); // Yükleniyor...
                 }
                 
                 final data = snapshot.data!.data() as Map<String, dynamic>;
-                final String email = data['email'] ?? 'E-posta yok';
                 final String kullaniciAdi = data['kullaniciAdi'] ?? 'İsimsiz';
                 final String ad = data['ad'] ?? '';
                 final String soyad = data['soyad'] ?? '';
@@ -614,97 +668,90 @@ class _ProfileScreenState extends State<ProfileScreen>
                    Future.microtask(() => _loadUserRank());
                 }
 
-                final bool isGoogleUser = _authService.currentUser?.providerData
-                        .any((provider) => provider.providerId == 'google.com') ?? false;
+                final bool isGoogleUser = _authService.currentUser?.providerData.any((p) => p.providerId == 'google.com') ?? false;
 
                 return RefreshIndicator(
-                    onRefresh: _refreshAllData,
-                    color: colorScheme.primary,
-                    child: CustomScrollView(
-                      physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
-                      slivers: [
-                        SliverAppBar(
-                          backgroundColor: colorScheme.background,
-                          foregroundColor: colorScheme.onSurface,
-                          elevation: 0,
-                          pinned: true,
-                          leading: IconButton(
-                            icon: const Icon(Icons.arrow_back_ios_new_rounded),
-                            onPressed: () => Navigator.pop(context),
-                          ),
-                          title: Text('Profile', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
-                          centerTitle: true,
-                          actions: [
-                            IconButton(
-                              onPressed: () {
-                                 _showSettingsMenu(context, colorScheme, isGoogleUser);
-                              },
-                              icon: const Icon(Icons.settings_outlined),
-                            ),
-                            const SizedBox(width: 8),
-                          ],
+                  onRefresh: _refreshAllData,
+                  color: colorScheme.primary,
+                  child: CustomScrollView(
+                    physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                    slivers: [
+                      SliverAppBar(
+                        backgroundColor: colorScheme.background,
+                        foregroundColor: colorScheme.onSurface,
+                        elevation: 0,
+                        pinned: true,
+                        leading: IconButton(
+                          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+                          onPressed: () => Navigator.pop(context),
                         ),
+                        title: Text('Profile', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        centerTitle: true,
+                        actions: [
+                          IconButton(
+                            onPressed: () {
+                               _showSettingsMenu(context, colorScheme, isGoogleUser, isPro);
+                            },
+                            icon: const Icon(Icons.settings_outlined),
+                          ),
+                          const SizedBox(width: 8),
+                        ],
+                      ),
 
-                        // Ana Profil İçeriği
-                        SliverToBoxAdapter(
-                          child: Column(
-                            children: [
-                              const SizedBox(height: 10),
-                              _buildProfileAvatar(emoji, () => _showEmojiPicker(emoji), colorScheme),
-                              const SizedBox(height: 16),
-                              
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Flexible(child: Text(displayName, style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold))),
-                                  IconButton(
-                                    onPressed: _isSaving ? null : () => _showEditInfoDialog(kullaniciAdi, ad, soyad),
-                                    icon: Icon(Icons.edit_note_rounded, color: colorScheme.onSurfaceVariant.withOpacity(0.7), size: 24),
-                                    padding: const EdgeInsets.only(left: 8, top: 4),
-                                    constraints: const BoxConstraints(),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(height: 8),
-                              
-                              _buildLevelAndXP(toplamPuan, textTheme, colorScheme),
-                              const SizedBox(height: 32),
-                              _buildStatCardsRow(toplamPuan, colorScheme, textTheme),
-                              const SizedBox(height: 32),
-                               Padding(
-                                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                                 child: Row(
-                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                   children: [
-                                     Text("Başarılarım", style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
-                                     
-                                     // --- "Tümünü Gör" Butonu (Sabit, artık gizli değil) ---
-                                     TextButton(
+                      SliverToBoxAdapter(
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 10),
+                            _buildProfileAvatar(emoji, () => _showEmojiPicker(emoji), colorScheme),
+                            const SizedBox(height: 16),
+                            Row(
+                               mainAxisAlignment: MainAxisAlignment.center,
+                               crossAxisAlignment: CrossAxisAlignment.center,
+                               children: [
+                                 Flexible(child: Text(displayName, style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold))),
+                                 IconButton(
+                                   onPressed: _isSaving ? null : () => _showEditInfoDialog(kullaniciAdi, ad, soyad),
+                                   icon: Icon(Icons.edit_note_rounded, color: colorScheme.onSurfaceVariant.withOpacity(0.7), size: 24),
+                                   padding: const EdgeInsets.only(left: 8, top: 4),
+                                   constraints: const BoxConstraints(),
+                                 ),
+                               ],
+                            ),
+                            const SizedBox(height: 8),
+                            _buildLevelAndXP(toplamPuan, textTheme, colorScheme),
+                            const SizedBox(height: 32),
+                            // --- 5. DEĞİŞİKLİK: isPro'yu Kartlara gönder ---
+                            _buildStatCardsRow(toplamPuan, colorScheme, textTheme, isPro),
+                            const SizedBox(height: 32),
+                             Padding(
+                               padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                               child: Row(
+                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                 children: [
+                                   Text("Başarılarım", style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                                   if (_allAchievements.length > 8)
+                                      TextButton(
                                         onPressed: (){
-                                           // Ayrı bir başarılar ekranı aç
                                            Navigator.push(context, MaterialPageRoute(builder: (context) => const AchievementsScreen()));
                                         },
                                         child: const Text("Tümünü Gör")
-                                     )
-                                     // --- BİTTİ ---
-                                   ],
-                                 ),
+                                      )
+                                 ],
                                ),
-                              const SizedBox(height: 16),
-                            ],
-                          ),
+                             ),
+                            const SizedBox(height: 16),
+                          ],
                         ),
-                        
-                        // --- GÜNCELLENDİ: Başarılar Grid'i (TÜMÜNÜ gösterir) ---
-                        _buildAchievementsGrid(colorScheme, textTheme),
-                        
-                        SliverToBoxAdapter(
-                          child: SizedBox(height: MediaQuery.of(context).padding.bottom + 40),
-                        )
-                      ],
-                    ),
-                  );
+                      ),
+                      
+                      _buildAchievementsGrid(colorScheme, textTheme),
+                      
+                      SliverToBoxAdapter(
+                        child: SizedBox(height: MediaQuery.of(context).padding.bottom + 40),
+                      )
+                    ],
+                  ),
+                );
               },
             ),
     );
@@ -770,7 +817,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     final int level = (toplamPuan / 1000).floor() + 1;
     final double currentXp = (toplamPuan % 1000).toDouble();
     const double nextLevelXp = 1000;
-    final double progress = currentXp / nextLevelXp;
+    final double progress = (currentXp / nextLevelXp).clamp(0.0, 1.0);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40.0),
@@ -820,7 +867,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   // 3'lü İstatistik Kartları
-  Widget _buildStatCardsRow(int toplamPuan, ColorScheme colorScheme, TextTheme textTheme) {
+  Widget _buildStatCardsRow(int toplamPuan, ColorScheme colorScheme, TextTheme textTheme, bool isPro) {
      return Padding(
        padding: const EdgeInsets.symmetric(horizontal: 16.0),
        child: Row(
@@ -831,6 +878,8 @@ class _ProfileScreenState extends State<ProfileScreen>
              icon: FontAwesomeIcons.trophy,
              color: const Color(0xFF6A5AE0),
              textTheme: textTheme,
+             isLocked: false,
+             onTap: (){}, // Tıklama eylemi (henüz yok)
            )),
            const SizedBox(width: 12),
            Expanded(child: _buildStatCard(
@@ -839,14 +888,24 @@ class _ProfileScreenState extends State<ProfileScreen>
              icon: FontAwesomeIcons.solidStar,
              color: const Color(0xFFF27A54),
              textTheme: textTheme,
+             isLocked: false,
+             onTap: (){},
            )),
            const SizedBox(width: 12),
            Expanded(child: _buildStatCard(
-             label: 'Rozetler', 
-             value: _isLoadingAchievements ? '...' : '${_earnedAchievements.length}', 
-             icon: FontAwesomeIcons.shieldHalved,
-             color: const Color(0xFF33CC99),
+             label: 'İstatistikler', // Değişti
+             value: _isLoadingAchievements ? '...' : '${_earnedAchievements.length}', // Rozet sayısını gösterir
+             icon: FontAwesomeIcons.chartPie, // Değişti
+             color: isPro ? const Color(0xFF33CC99) : Colors.grey.shade500, // Duruma göre renk
              textTheme: textTheme,
+             isLocked: !isPro, // Kilit durumu
+             onTap: () { // Tıklama eylemi
+               if (isPro) {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const StatisticsScreen()));
+               } else {
+                  _showProFeatureDialog(context);
+               }
+             },
            )),
          ],
        ),
@@ -854,42 +913,84 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   // Tek bir istatistik kartı
-  Widget _buildStatCard({required String label, required String value, required IconData icon, required Color color, required TextTheme textTheme}) {
-     return Container(
-       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
-       decoration: BoxDecoration(
-         color: color.withOpacity(0.1),
-         borderRadius: BorderRadius.circular(20),
-       ),
-       child: Column(
-         children: [
-           FaIcon(icon, color: color, size: 24),
-           const SizedBox(height: 8),
-           Text(value, style: textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold)),
-           const SizedBox(height: 2),
-           Text(label, style: textTheme.bodySmall?.copyWith(color: Colors.grey.shade600)),
-         ],
+  Widget _buildStatCard({
+    required String label, 
+    required String value, 
+    required IconData icon, 
+    required Color color, 
+    required TextTheme textTheme,
+    required bool isLocked,
+    required VoidCallback onTap,
+  }) {
+    final colorScheme = Theme.of(context).colorScheme;
+     return GestureDetector(
+       onTap: onTap,
+       child: Container(
+         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+         decoration: BoxDecoration(
+           color: color.withOpacity(isLocked ? 0.05 : 0.1),
+           borderRadius: BorderRadius.circular(20),
+           border: Border.all(color: color.withOpacity(isLocked ? 0.2 : 0.0))
+         ),
+         child: Stack(
+           alignment: Alignment.center,
+           clipBehavior: Clip.none,
+           children: [
+             Column(
+               children: [
+                 FaIcon(icon, color: isLocked ? color.withOpacity(0.5) : color, size: 24),
+                 const SizedBox(height: 8),
+                 Text(
+                   value, 
+                   style: textTheme.titleMedium?.copyWith(
+                     fontWeight: FontWeight.bold,
+                     color: isLocked ? colorScheme.onSurface.withOpacity(0.4) : colorScheme.onSurface
+                   )
+                 ),
+                 const SizedBox(height: 2),
+                 Text(
+                   label, 
+                   style: textTheme.bodySmall?.copyWith(
+                     color: isLocked ? Colors.grey.shade500 : Colors.grey.shade600
+                   )
+                 ),
+               ],
+             ),
+             if (isLocked)
+               Positioned(
+                 top: -10,
+                 right: -10,
+                 child: Container(
+                   padding: const EdgeInsets.all(4),
+                   decoration: BoxDecoration(
+                     color: Colors.orange.shade700,
+                     shape: BoxShape.circle,
+                   ),
+                   child: const Icon(Icons.lock, size: 12, color: Colors.white),
+                 ),
+               ),
+           ],
+         ),
        ),
      );
   }
 
-  // Başarılar Grid'i (SliverGrid) - TÜMÜNÜ GÖSTERİR
+  // Başarılar Grid'i (SliverGrid) - İlk 8'i göster
   Widget _buildAchievementsGrid(ColorScheme colorScheme, TextTheme textTheme) {
     if (_isLoadingAchievements) {
        return SliverPadding(
          padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
          sliver: SliverGrid(
            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4, crossAxisSpacing: 16, mainAxisSpacing: 16),
-           delegate: SliverChildBuilderDelegate((context, index) => _buildAchievementBadgePlaceholder(colorScheme), childCount: 8), // 8'li placeholder
+           delegate: SliverChildBuilderDelegate((context, index) => _buildAchievementBadgePlaceholder(colorScheme), childCount: 8),
          ),
        );
     }
     if (_allAchievements.isEmpty) {
-      return SliverToBoxAdapter(child: Center(child: Padding(padding: const EdgeInsets.all(32.0), child: Text("Başarı bulunamadı.", style: textTheme.bodyMedium))));
+      return SliverToBoxAdapter(child: Center(child: Padding(padding: const EdgeInsets.all(32.0), child: Text("Henüz hiç başarı kazanmadın.", style: textTheme.bodyMedium))));
     }
 
-    // --- DEĞİŞİKLİK: Artık TÜM başarıları göster (take(8) kaldırıldı) ---
-    // final achievementsToShow = _allAchievements.take(8).toList();
+    final achievementsToShow = _allAchievements.take(8).toList();
 
     return SliverPadding(
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
@@ -901,9 +1002,9 @@ class _ProfileScreenState extends State<ProfileScreen>
           childAspectRatio: 1.0,
         ),
         delegate: SliverChildBuilderDelegate((context, index) {
-          if (index >= _allAchievements.length) return null;
+          if (index >= achievementsToShow.length) return null;
           
-          final achievementDoc = _allAchievements[index];
+          final achievementDoc = achievementsToShow[index];
           final achievementId = achievementDoc.id;
           final achievementData = achievementDoc.data() as Map<String, dynamic>? ?? {};
           final bool isEarned = _earnedAchievements.containsKey(achievementId);
@@ -912,14 +1013,14 @@ class _ProfileScreenState extends State<ProfileScreen>
           final String emoji = achievementData['emoji'] ?? '🏆';
           final String name = achievementData['name'] ?? 'Başarı';
           final String description = achievementData['description'] ?? 'Açıklama yok';
-          
+
           Animation<double>? animation;
           if(index < _badgeAnimations.length) {
-            animation = _badgeAnimations[index];
+             animation = _badgeAnimations[index];
           }
-
+          
           return _buildAchievementBadge(emoji, name, description, isEarned, earnedDate, colorScheme, textTheme, animation);
-        }, childCount: _allAchievements.length), // <<< Bütün listeyi göster
+        }, childCount: achievementsToShow.length),
       ),
     );
   }
@@ -934,41 +1035,12 @@ class _ProfileScreenState extends State<ProfileScreen>
      );
   }
 
-  // Rozet Widget'ı (Tasarım GÜNCELLENDİ: Flulaştırma)
+  // Rozet Widget'ı (Yuvarlak Tasarım)
   Widget _buildAchievementBadge(
     String emoji, String name, String description,
     bool isEarned, String earnedDate,
     ColorScheme colorScheme, TextTheme textTheme, Animation<double>? animation
   ) {
-    
-    Widget emojiContent;
-    if (isEarned) {
-      // KAZANILDI: Parlak, canlı, net
-      emojiContent = Center(
-        child: Text(
-          emoji,
-          style: const TextStyle(fontSize: 32), // Tam renkli emoji
-        ),
-      );
-    } else {
-      // KİLİTLİ: Gri, Flulaştırılmış
-      emojiContent = Opacity(
-        opacity: 0.6, // Hafif soluk
-        child: ImageFiltered(
-          imageFilter: ui.ImageFilter.blur(sigmaX: 1.5, sigmaY: 1.5), // <<< FLULAŞTIRMA
-          child: Center(
-            child: Text(
-              emoji,
-              style: TextStyle(
-                fontSize: 32,
-                color: Colors.grey.shade400, // <<< GRİ/RENKSİZ
-              ),
-            ),
-          ),
-        ),
-      );
-    }
-
     Widget badge = Container(
       decoration: BoxDecoration(
         shape: BoxShape.circle,
@@ -982,12 +1054,30 @@ class _ProfileScreenState extends State<ProfileScreen>
           width: 1.5
         ),
         boxShadow: [
-          if (isEarned) // Kazanılana gölge
+          if (isEarned)
             BoxShadow(color: colorScheme.primary.withOpacity(0.15), blurRadius: 10, offset: const Offset(0, 4)),
         ],
       ),
-      child: emojiContent, // Flulaştırılmış veya net emojiyi bas
+      child: Center(
+        child: Text(
+          emoji,
+          style: TextStyle(
+            fontSize: 32,
+            color: isEarned ? null : Colors.grey.shade400,
+          ),
+        ),
+      ),
     );
+
+    if (!isEarned) {
+      badge = ImageFiltered(
+          imageFilter: ui.ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
+          child: Opacity(
+            opacity: 0.6,
+            child: badge,
+          ),
+      );
+    }
 
     return Tooltip(
       message: isEarned ? '$name\nKazanıldı: $earnedDate' : 'Kilitli: $name\n$description',
@@ -1105,7 +1195,7 @@ class _ProfileScreenState extends State<ProfileScreen>
             color: color,
             shape: BoxShape.circle,
             border: Border.all(
-              color: isSelected ? Theme.of(context).colorScheme.surface : Theme.of(context).colorScheme.outline.withOpacity(0.3),
+              color: isSelected ? Theme.of(context).colorScheme.onSurface : Theme.of(context).colorScheme.outline.withOpacity(0.3),
               width: isSelected ? 4 : 1.5,
             ),
             boxShadow: isSelected

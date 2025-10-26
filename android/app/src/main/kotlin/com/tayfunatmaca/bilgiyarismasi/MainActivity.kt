@@ -1,4 +1,4 @@
-package com.example.bilgi_yarismasi
+package com.tayfunatmaca.bilgiyarismasi
 
 import io.flutter.embedding.android.FlutterActivity
 
