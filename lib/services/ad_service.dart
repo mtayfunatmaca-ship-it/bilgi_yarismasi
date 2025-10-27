@@ -1,24 +1,27 @@
-// lib/services/ad_service.dart
-import 'package:flutter/material.dart'; // <<< ChangeNotifier için GEREKLİ
+import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'dart:io' show Platform;
 
-class AdService with ChangeNotifier { // <<< 'with ChangeNotifier' EKLELİ OLMALI
+class AdService with ChangeNotifier {
   InterstitialAd? _interstitialAd;
   int _interstitialLoadAttempts = 0;
   
+  // Sadece NORMAL quizler için sayaç
   int _quizCompletionCounter = 0;
-  static const int _showAdFrequency = 3;
+  // Normal quizlerde kaç testte bir reklam gösterilecek
+  static const int _showAdFrequency = 2; // (Senin ayarın 2'de kalmış)
 
+  // --- GERÇEK REKLAM ID'LERİN (Dokunmadım) ---
   static String get interstitialAdUnitId {
     if (Platform.isAndroid) {
-      return 'ca-app-pub-3940256099942544/1033173712';
+      return 'ca-app-pub-6415661016738887/9722150806';
     } else if (Platform.isIOS) {
-      return 'ca-app-pub-3940256099942544/4411468910';
+      return 'ca-app-pub-6415661016738887/4618724283';
     }
     return '';
   }
 
+  // 1. Reklamı Yükle (Aynı)
   void loadInterstitialAd() {
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
@@ -41,12 +44,13 @@ class AdService with ChangeNotifier { // <<< 'with ChangeNotifier' EKLELİ OLMAL
     );
   }
 
+  // 2. NORMAL Quiz Reklamı (Sayaçlı - Aynı)
   void showInterstitialAd({required bool isProUser, required Function onAdDismissed}) {
     _quizCompletionCounter++;
-    print("Test bitirme sayacı: $_quizCompletionCounter");
+    print("Normal Test Bitirme Sayacı: $_quizCompletionCounter");
 
     if (!isProUser && _quizCompletionCounter >= _showAdFrequency && _interstitialAd != null) {
-      print("Reklam gösteriliyor...");
+      print("Reklam gösteriliyor (Normal Quiz)...");
       
       _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (InterstitialAd ad) {
@@ -75,10 +79,47 @@ class AdService with ChangeNotifier { // <<< 'with ChangeNotifier' EKLELİ OLMAL
     }
   }
 
-  // Düzeltilmiş dispose metodu
+  // --- 3. YENİ FONKSİYON: Deneme Sınavı Reklamı (Sayaçsız) ---
+  void showTrialExamInterstitialAd({required bool isProUser, required Function onAdDismissed}) {
+    // Bu fonksiyon SAYAÇ KONTROLÜ YAPMAZ.
+    // Sadece PRO değilse ve reklam yüklüyse gösterir.
+    
+    print("Deneme Sınavı Reklamı kontrol ediliyor...");
+
+    if (!isProUser && _interstitialAd != null) {
+      print("Reklam gösteriliyor (Deneme Sınavı)...");
+      
+      _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
+        onAdDismissedFullScreenContent: (InterstitialAd ad) {
+          print('Reklam kapatıldı.');
+          ad.dispose();
+          loadInterstitialAd(); // Bir sonraki için yenisini yükle
+          onAdDismissed();
+        },
+        onAdFailedToShowFullScreenContent: (InterstitialAd ad, AdError error) {
+          print('Reklam gösterilemedi: $error');
+          ad.dispose();
+          loadInterstitialAd();
+          onAdDismissed();
+        },
+      );
+
+      _interstitialAd!.show();
+      _interstitialAd = null; // Reklamı temizle
+    } else {
+      // PRO ise veya reklam yüklenmediyse, direkt kapat
+      if (_interstitialAd == null && !isProUser) {
+         print("Reklam gösterilemedi (henüz yüklenmemişti). Yenisi yükleniyor.");
+         loadInterstitialAd(); // Bir sonrakine hazırlık yap
+      }
+      onAdDismissed();
+    }
+  }
+  // --- YENİ FONKSİYON BİTTİ ---
+
   @override
   void dispose() {
     _interstitialAd?.dispose();
-    super.dispose(); // <<< super.dispose() çağrılmalı
+    super.dispose();
   }
 }

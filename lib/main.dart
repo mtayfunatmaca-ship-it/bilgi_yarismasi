@@ -1,3 +1,4 @@
+import 'package:bilgi_yarismasi/screens/batch_upload.dart';
 import 'package:bilgi_yarismasi/widgets/connectivity_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,8 +26,8 @@ void main() async {
   final PurchaseService purchaseService = PurchaseService();
 
   // Veri yükleyici (Yorumda olduğundan emin ol)
-  // final uploader = FirebaseDataUploader();
-  // await uploader.uploadDataFromJson();
+  //final uploader = FirebaseDataUploader(); 
+  //await uploader.uploadDataFromJson();
   
   runApp(
     MultiProvider(

@@ -5,12 +5,14 @@ import 'package:bilgi_yarismasi/screens/trial_exam_review_screen.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_leaderboard_screen.dart'; 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:async';
-// --- YENİ IMPORTLAR (PRO KİLİDİ İÇİN) ---
 import 'package:provider/provider.dart';
 import 'package:bilgi_yarismasi/services/user_data_provider.dart';
+// --- YENİ IMPORT (Reklam Servisi) ---
+import 'package:bilgi_yarismasi/services/ad_service.dart';
 // --- BİTTİ ---
 
 class TrialExamResultScreen extends StatefulWidget {
+  // ... (parametreler aynı) ...
   final String title;
   final double kpssPuan;
   final double netSayisi;
@@ -18,10 +20,8 @@ class TrialExamResultScreen extends StatefulWidget {
   final int yanlisSayisi;
   final int bosSayisi;
   final int soruSayisi;
-  
   final Map<String, Map<String, int>> statsByCategory;
   final Map<String, String> categoryNameMap;
-  
   final List<DocumentSnapshot> questions;
   final Map<int, int> userAnswers;
   final Map<int, int> correctAnswers;
@@ -54,6 +54,8 @@ class TrialExamResultScreen extends StatefulWidget {
 
 class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
 
+  // (Bu ekranda Banner Ad yok, o yüzden o kodlar kaldırıldı)
+
   @override
   void initState() {
     super.initState();
@@ -65,7 +67,9 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
     }
   }
 
+  // --- Kalan fonksiyonlar (showAchievements, showProDialog, buildStatColumn) aynı ---
   Future<void> _showEarnedAchievements(List<Map<String, dynamic>> achievements) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     for (var achievementData in achievements) {
       if (mounted) {
         await _showAchievementEarnedDialog(achievementData); 
@@ -73,13 +77,12 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
       }
     }
   }
-
   Future<void> _showAchievementEarnedDialog(Map<String, dynamic> achievementData) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
      if (!mounted) return;
      final emoji = achievementData['emoji'] as String? ?? '🏆';
      final name = achievementData['name'] as String? ?? 'Başarı';
      final description = achievementData['description'] as String? ?? '';
-     
      return showDialog<void>(
        context: context,
        barrierDismissible: false,
@@ -120,9 +123,8 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
         },
       );
   }
-
-  // --- YENİ FONKSİYON: PRO Uyarı Dialog'u ---
- void _showProFeatureDialog(BuildContext context) {
+  void _showProFeatureDialog(BuildContext context) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final colorScheme = Theme.of(context).colorScheme;
     showDialog(
       context: context,
@@ -138,16 +140,13 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                 child: const Text('Kapat'),
               ),
               ElevatedButton(
-                // --- 2. DEĞİŞİKLİK BURADA ---
                 onPressed: () {
-                   Navigator.pop(context); // Dialog'u kapat
-                   // Satın alma ekranını aç
+                   Navigator.pop(context);
                    Navigator.push(
                      context,
                      MaterialPageRoute(builder: (context) => const PurchaseScreen()),
                    );
                 },
-                // --- DEĞİŞİKLİK BİTTİ ---
                 child: const Text('PRO\'ya Geç'),
               ),
            ],
@@ -155,13 +154,26 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
       },
     );
   }
+  Widget _buildStatColumn(String label, String value, Color color) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
+    return Column(
+      children: [
+        Text(value, style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: color)),
+        const SizedBox(height: 4),
+        Text(label, style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
+      ],
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
 
-    // --- YENİ KOD: isPro durumunu Provider'dan oku ---
+    // --- YENİ KOD: Provider'ları oku ---
     final bool isPro = context.watch<UserDataProvider>().isPro;
+    final adService = context.read<AdService>();
     // --- BİTTİ ---
 
     final double finalPuan = widget.kpssPuan > 100.0 ? 100.0 : widget.kpssPuan;
@@ -174,12 +186,26 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
         return nameA.compareTo(nameB);
       });
 
+    // --- GÜNCELLEME: Reklamı tetikleyen kapatma eylemi ---
+    void closeScreenAction() {
+      // Deneme sınavı bittiği için, sayaçsız olan YENİ fonksiyonu çağır
+      adService.showTrialExamInterstitialAd(
+        isProUser: isPro,
+        onAdDismissed: () {
+          if (Navigator.canPop(context)) {
+             Navigator.pop(context, true); // Reklamdan sonra ekranı kapat
+          }
+        },
+      );
+    }
+    // --- GÜNCELLEME BİTTİ ---
+
 
     return PopScope(
-      canPop: true,
+      canPop: false, // Manuel yöneteceğiz
       onPopInvoked: (didPop) {
          if (didPop) return;
-         Navigator.pop(context, true);
+         closeScreenAction(); // <<< Geri tuşu da reklamı tetikler
       },
       child: Scaffold(
         appBar: AppBar(
@@ -187,7 +213,7 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
           centerTitle: true,
           leading: IconButton(
              icon: const Icon(Icons.arrow_back),
-             onPressed: () => Navigator.pop(context, true),
+             onPressed: closeScreenAction, // <<< AppBar geri tuşu da reklamı tetikler
           ),
         ),
         body: SingleChildScrollView(
@@ -197,39 +223,16 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text(
-                widget.title,
-                style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
+              // ... (İçeriğin kalanı aynı) ...
+              Text(widget.title, style: theme.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold), textAlign: TextAlign.center),
               const SizedBox(height: 16),
-              Icon(
-                isSuccessful ? Icons.school_rounded : Icons.sentiment_dissatisfied_rounded,
-                color: isSuccessful ? Colors.green.shade700 : colorScheme.primary,
-                size: 100,
-              ),
+              Icon(isSuccessful ? Icons.school_rounded : Icons.sentiment_dissatisfied_rounded, color: isSuccessful ? Colors.green.shade700 : colorScheme.primary, size: 100),
               const SizedBox(height: 24),
-              Text(
-                isSuccessful ? 'Tebrikler!' : 'Daha İyi Olabilir!',
-                style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold),
-                textAlign: TextAlign.center,
-              ),
+              Text(isSuccessful ? 'Tebrikler!' : 'Daha İyi Olabilir!', style: theme.textTheme.headlineMedium?.copyWith(fontWeight: FontWeight.bold), textAlign: TextAlign.center),
               const SizedBox(height: 8),
-              Text(
-                'KPSS Puanınız:',
-                style: theme.textTheme.titleMedium?.copyWith(color: colorScheme.onSurfaceVariant),
-                textAlign: TextAlign.center,
-              ),
-               Text(
-                 finalPuan.toStringAsFixed(3), 
-                 style: theme.textTheme.displaySmall?.copyWith(
-                   color: colorScheme.primary,
-                   fontWeight: FontWeight.w800,
-                 ),
-                 textAlign: TextAlign.center,
-               ),
+              Text('KPSS Puanınız:', style: theme.textTheme.titleMedium?.copyWith(color: colorScheme.onSurfaceVariant), textAlign: TextAlign.center),
+              Text(finalPuan.toStringAsFixed(3), style: theme.textTheme.displaySmall?.copyWith(color: colorScheme.primary, fontWeight: FontWeight.w800), textAlign: TextAlign.center),
               const SizedBox(height: 24),
-              
               Card(
                 elevation: 1,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -241,27 +244,16 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                       _buildStatColumn('Doğru', widget.dogruSayisi.toString(), Colors.green.shade700),
                       _buildStatColumn('Yanlış', widget.yanlisSayisi.toString(), Colors.red.shade700),
                       _buildStatColumn('Boş', widget.bosSayisi.toString(), Colors.grey.shade700),
-                      _buildStatColumn(
-                        'TOPLAM NET', 
-                        widget.netSayisi.toStringAsFixed(2), 
-                        colorScheme.primary
-                      ),
+                      _buildStatColumn('TOPLAM NET', widget.netSayisi.toStringAsFixed(2), colorScheme.primary),
                     ],
                   ),
                 ),
               ),
               const SizedBox(height: 24),
-
-              Text(
-                'Derslere Göre Döküm',
-                style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-              ),
+              Text('Derslere Göre Döküm', style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
               const SizedBox(height: 12),
               Container(
-                decoration: BoxDecoration(
-                  color: colorScheme.surfaceVariant.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(12)
-                ),
+                decoration: BoxDecoration(color: colorScheme.surfaceVariant.withOpacity(0.3), borderRadius: BorderRadius.circular(12)),
                 child: Column(
                   children: [
                     Padding(
@@ -287,7 +279,6 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                         final data = katEntry.value;
                         final katAdi = widget.categoryNameMap[katId] ?? 'Diğer';
                         final double katNet = (data['correct'] ?? 0) - ((data['wrong'] ?? 0) * 0.25);
-                        
                         return Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 12.0),
                           decoration: BoxDecoration(
@@ -309,10 +300,9 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 32),
               
-              // --- GÜNCELLEME: "Cevapları İncele" Butonu (PRO Korumalı) ---
+              // "Cevapları İncele" (PRO Korumalı)
               ElevatedButton.icon(
                 icon: Icon(isPro ? Icons.rate_review_outlined : Icons.lock, size: 18),
                 label: Text(isPro ? 'Cevapları İncele' : 'Cevapları İncele (PRO)'),
@@ -325,10 +315,7 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                 ),
                 onPressed: () {
                   if (isPro) {
-                     // PRO ise: Ekranı aç
-                     Navigator.push(
-                       context,
-                       MaterialPageRoute(
+                     Navigator.push(context, MaterialPageRoute(
                          builder: (context) => TrialExamReviewScreen(
                            questions: widget.questions,
                            userAnswers: widget.userAnswers,
@@ -336,16 +323,12 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                            trialExamId: widget.trialExamId,
                            trialExamTitle: widget.trialExamTitle,
                          ),
-                       ),
-                     );
+                     ));
                   } else {
-                     // PRO değilse: Uyarı dialog'u göster
                      _showProFeatureDialog(context);
                   }
                 },
               ),
-              // --- GÜNCELLEME BİTTİ ---
-
               const SizedBox(height: 12),
               OutlinedButton.icon(
                 icon: const FaIcon(FontAwesomeIcons.trophy, size: 18),
@@ -356,22 +339,18 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                 ),
                 onPressed: () {
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(
+                   Navigator.push(context, MaterialPageRoute(
                        builder: (context) => TrialExamLeaderboardScreen(
                          trialExamId: widget.trialExamId,
                          title: widget.trialExamTitle,
                        ),
-                     ),
-                   );
+                   ));
                 },
               ),
               const SizedBox(height: 12),
+              
               ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context, true);
-                },
+                onPressed: closeScreenAction, // <<< Kapat butonu da reklamı tetikler
                 style: ElevatedButton.styleFrom(
                    padding: const EdgeInsets.symmetric(vertical: 14),
                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
@@ -383,23 +362,9 @@ class _TrialExamResultScreenState extends State<TrialExamResultScreen> {
             ],
           ),
         ),
+        // (Banner reklam bu ekrandan kaldırıldı, isteğin üzerine)
+        // bottomNavigationBar: null, 
       ),
-    );
-  }
-
-  Widget _buildStatColumn(String label, String value, Color color) {
-    return Column(
-      children: [
-        Text(
-          value,
-          style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: color),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          label,
-          style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
-        ),
-      ],
     );
   }
 }
