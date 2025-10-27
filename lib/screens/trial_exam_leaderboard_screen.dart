@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
-// Analytics (isteğe bağlı, LeaderboardScreen'den kopyalandı)
 import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// --- YENİ IMPORTLAR ---
+import 'package:confetti/confetti.dart';
+import 'dart:math'; // Konfeti için
+// --- BİTTİ ---
 
 class TrialExamLeaderboardScreen extends StatefulWidget {
   final String trialExamId;
@@ -21,83 +25,98 @@ class TrialExamLeaderboardScreen extends StatefulWidget {
 
 class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     with TickerProviderStateMixin {
-  // <<< Animasyon için Ticker eklendi
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
   String? _currentUserId;
 
-  // --- Animasyon State'leri (LeaderboardScreen'den kopyalandı) ---
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late AnimationController _podiumAnimationController;
   late List<Animation<double>> _podiumAnimations;
-  Stream<QuerySnapshot>? _examLeaderboardStream; // <<< Yenileme için Stream
-  // --- Animasyon State'leri Bitti ---
+  Stream<QuerySnapshot>? _examLeaderboardStream;
+
+  // --- YENİ STATE'LER ---
+  late ConfettiController _confettiController;
+  bool _isExamFinished = false; // Sınavın bitip bitmediğini tutar
+  // --- BİTTİ ---
 
   @override
   void initState() {
     super.initState();
     _currentUserId = _authService.currentUser?.uid;
 
-    // Stream'i başlat
     _initializeStream();
+    _checkExamStatus(); // <<< YENİ: Sınavın bitiş tarihini kontrol et
 
-    // Animasyonları başlat
-    _animationController = AnimationController(
-      duration: const Duration(milliseconds: 600),
-      vsync: this,
-    );
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
-    );
-
-    _podiumAnimationController = AnimationController(
-      duration: const Duration(milliseconds: 1200),
-      vsync: this,
-    );
+    // Animasyonlar (Aynı)
+    _animationController = AnimationController(duration: const Duration(milliseconds: 600), vsync: this);
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeIn));
+    _podiumAnimationController = AnimationController(duration: const Duration(milliseconds: 1200), vsync: this);
     _podiumAnimations = List.generate(3, (index) {
       double beginInterval = index == 0 ? 0.4 : (index == 1 ? 0.2 : 0.0);
       double endInterval = index == 0 ? 1.0 : (index == 1 ? 0.8 : 0.6);
-      return Tween<double>(begin: 0.0, end: 1.0).animate(
-        CurvedAnimation(
+      return Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
           parent: _podiumAnimationController,
-          curve: Interval(beginInterval, endInterval, curve: Curves.elasticOut),
-        ),
-      );
+          curve: Interval(beginInterval, endInterval, curve: Curves.elasticOut)));
     });
 
-    _animationController.forward();
-    _podiumAnimationController.forward(); // Sayfa açılırken animasyonu başlat
+    // --- YENİ: Konfeti Controller ---
+    _confettiController = ConfettiController(duration: const Duration(seconds: 2));
+    // --- BİTTİ ---
 
-    // Analytics (İsteğe bağlı)
+    _animationController.forward();
+    _podiumAnimationController.forward();
+
     FirebaseAnalytics.instance.logEvent(
       name: 'view_trial_leaderboard',
       parameters: {'exam_id': widget.trialExamId},
     );
   }
 
-  // Stream'i başlatan fonksiyon
+  // Stream'i başlatan fonksiyon (Aynı)
   void _initializeStream() {
     _examLeaderboardStream = _firestore
-        .collectionGroup('trialExamResults') // TÜM alt koleksiyonlarda ara
-        .where(
-          'trialExamId',
-          isEqualTo: widget.trialExamId,
-        ) // Sadece bu sınava ait olanları
-        .orderBy('score', descending: true) // Puana göre sırala (score alanı)
-        .limit(100) // İlk 100'ü al
+        .collectionGroup('trialExamResults')
+        .where('trialExamId', isEqualTo: widget.trialExamId)
+        .orderBy('score', descending: true)
+        .limit(100)
         .snapshots();
   }
+  
+  // --- YENİ FONKSİYON: Sınavın bitip bitmediğini kontrol eder ---
+  Future<void> _checkExamStatus() async {
+     try {
+       final examDoc = await _firestore.collection('trialExams').doc(widget.trialExamId).get();
+       if (!examDoc.exists || !mounted) return;
+       
+       final data = examDoc.data() as Map<String, dynamic>;
+       final Timestamp? endTimeTs = data['endTime'] as Timestamp?;
+       
+       if (endTimeTs != null) {
+          final DateTime endTime = endTimeTs.toDate();
+          if (DateTime.now().isAfter(endTime)) {
+             setState(() {
+               _isExamFinished = true; // Sınav bitmiş
+             });
+             _confettiController.play(); // Sınav bittiyse konfetiyi patlat
+          }
+       }
+     } catch (e) {
+        print("Sınav durumu kontrol hatası: $e");
+     }
+  }
+  // --- YENİ FONKSİYON BİTTİ ---
 
-  // Yenileme fonksiyonu
+  // Yenileme fonksiyonu (Aynı)
   Future<void> _refreshData() async {
     _animationController.reset();
     _podiumAnimationController.reset();
     _animationController.forward();
     _podiumAnimationController.forward();
     setState(() {
-      _initializeStream(); // Stream'i yeniden oluştur
+      _initializeStream();
     });
+    _checkExamStatus(); // Yenileyince durumu tekrar kontrol et
     await Future.delayed(const Duration(milliseconds: 500));
   }
 
@@ -105,6 +124,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
   void dispose() {
     _animationController.dispose();
     _podiumAnimationController.dispose();
+    _confettiController.dispose(); // <<< YENİ: Konfetiyi dispose et
     super.dispose();
   }
 
@@ -115,55 +135,66 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
 
     return Scaffold(
       backgroundColor: colorScheme.background,
-      body: RefreshIndicator(
-        onRefresh: _refreshData,
-        color: colorScheme.primary,
-        child: CustomScrollView(
-          slivers: [
-            // AppBar (Deneme sınavına özel)
-            SliverAppBar(
-              title: Text(
-                widget.title, // Sınavın başlığını göster
-                style: textTheme.titleLarge?.copyWith(
-                  fontWeight: FontWeight.bold,
+      // --- GÜNCELLEME: Stack ve Confetti eklendi ---
+      body: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          RefreshIndicator(
+            onRefresh: _refreshData,
+            color: colorScheme.primary,
+            child: CustomScrollView(
+              slivers: [
+                SliverAppBar(
+                  title: Text(
+                    widget.title,
+                    style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  centerTitle: true,
+                  pinned: true,
+                  floating: true,
+                  snap: true,
+                  elevation: 1,
+                  backgroundColor: colorScheme.surface,
+                  foregroundColor: colorScheme.onSurface,
                 ),
-                overflow: TextOverflow.ellipsis,
-              ),
-              centerTitle: true,
-              pinned: true,
-              floating: true,
-              snap: true,
-              elevation: 1,
-              backgroundColor: colorScheme.surface,
-              foregroundColor: colorScheme.onSurface,
-            ),
-
-            // Liderlik İçeriği
-            // (Segment kontrolü yok, doğrudan içerik)
-            SliverPadding(
-              padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).padding.bottom + 16,
-              ),
-              sliver: SliverToBoxAdapter(
-                child: _buildLeaderboardContent(
-                  stream:
-                      _examLeaderboardStream!, // Tanımladığımız stream'i kullan
-                  puanField: 'score', // <<< ALAN ADI: 'score'
-                  currentUserId: _currentUserId,
-                  emptyMessage: 'Bu deneme sınavına henüz kimse katılmamış.',
+                SliverPadding(
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
+                  sliver: SliverToBoxAdapter(
+                    child: _buildLeaderboardContent(
+                      stream: _examLeaderboardStream!,
+                      puanField: 'score',
+                      currentUserId: _currentUserId,
+                      emptyMessage: 'Bu deneme sınavına henüz kimse katılmamış.',
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
-        ),
+          ),
+          // --- Konfeti Widget'ı ---
+          Align(
+            alignment: Alignment.topCenter,
+            child: ConfettiWidget(
+              confettiController: _confettiController,
+              blastDirectionality: BlastDirectionality.explosive,
+              shouldLoop: false,
+              colors: const [Colors.green, Colors.blue, Colors.pink, Colors.orange, Colors.purple],
+              gravity: 0.1,
+              emissionFrequency: 0.05,
+              numberOfParticles: 20,
+            ),
+          ),
+          // --- GÜNCELLEME BİTTİ ---
+        ],
       ),
     );
   }
 
-  // Liderlik İçeriği Oluşturucu (LeaderboardScreen'den kopyalandı)
+  // Liderlik İçeriği Oluşturucu
   Widget _buildLeaderboardContent({
     required Stream<QuerySnapshot> stream,
-    required String puanField, // 'score' gelecek
+    required String puanField,
     required String? currentUserId,
     required String emptyMessage,
   }) {
@@ -175,25 +206,21 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         }
         if (snapshot.hasError) {
           print("Deneme Sıralama Hatası: ${snapshot.error}");
-          // Hata mesajını daha spesifik hale getir
           String errorMsg = 'Sıralama yüklenemedi. Lütfen tekrar deneyin.';
           if (snapshot.error.toString().contains('FAILED_PRECONDITION')) {
-            errorMsg =
-                'Sıralama için gerekli Firestore Index\'i oluşturulmamış.\nLütfen Debug Console\'daki linke tıklayın.';
+            errorMsg = 'Sıralama için gerekli Firestore Index\'i oluşturulmamış.\nLütfen Debug Console\'daki linke tıklayın.';
           }
-          return _buildErrorState(_refreshData, errorMsg); // Hata durumu
+          return _buildErrorState(_refreshData, errorMsg);
         }
         if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
           if (_podiumAnimationController.status == AnimationStatus.dismissed) {
             _podiumAnimationController.forward();
           }
-          return _buildEmptyState(emptyMessage, context); // Boş durum
+          return _buildEmptyState(emptyMessage, context);
         }
 
         var userDocs = snapshot.data!.docs;
-        final currentUserIndex = userDocs.indexWhere(
-          (u) => _isCurrentUser(u, currentUserId),
-        );
+        final currentUserIndex = userDocs.indexWhere((u) => _isCurrentUser(u, currentUserId));
         final topThree = userDocs.take(3).toList();
         final otherUsers = userDocs.skip(3).toList();
 
@@ -203,6 +230,12 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
 
         return Column(
           children: [
+            // --- YENİ: Şampiyon Kartı ---
+            // Sadece sınav bittiyse VE en az 1 kazanan varsa göster
+            if (_isExamFinished && topThree.isNotEmpty)
+              _buildWinnerCard(topThree[0].data() as Map<String, dynamic>, puanField),
+            // --- BİTTİ ---
+
             if (topThree.isNotEmpty)
               _buildPodiumSection(topThree, puanField, currentUserId),
             if (otherUsers.isNotEmpty)
@@ -218,8 +251,65 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
       },
     );
   }
+  
+  // --- YENİ WIDGET: Sınav Şampiyonu Kartı ---
+  Widget _buildWinnerCard(Map<String, dynamic> winnerData, String puanField) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
-  // Podyum Bölümü (LeaderboardScreen'den kopyalandı)
+    final String name = winnerData['kullaniciAdi'] ?? 'Bilinmiyor';
+    final String emoji = winnerData['emoji'] ?? '🏆';
+    final int puan = (winnerData[puanField] as num? ?? 0).toInt();
+    final double kpssPuan = (winnerData['kpssPuan'] as num? ?? 0.0).toDouble();
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.amber.shade600, Colors.orange.shade700],
+          begin: Alignment.topLeft, end: Alignment.bottomRight
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(color: Colors.amber.withOpacity(0.4), blurRadius: 10, offset: const Offset(0, 4))
+        ]
+      ),
+      child: Row(
+        children: [
+          Column(
+            children: [
+              Text(emoji, style: const TextStyle(fontSize: 32)),
+              const FaIcon(FontAwesomeIcons.crown, color: Colors.white, size: 18),
+            ],
+          ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'SINAV ŞAMPİYONU',
+                  style: textTheme.labelSmall?.copyWith(color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                ),
+                Text(
+                  name,
+                  style: textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  '${kpssPuan.toStringAsFixed(3)} KPSS Puanı ($puan Skor)',
+                  style: textTheme.bodyMedium?.copyWith(color: Colors.white.withOpacity(0.9)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  // --- BİTTİ ---
+
+  // Podyum Bölümü
   Widget _buildPodiumSection(
     List<QueryDocumentSnapshot> topThree,
     String puanField,
@@ -272,38 +362,27 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (podiumItems.length > 1)
-            Flexible(child: podiumItems[1])
-          else
-            const Spacer(),
+          if (podiumItems.length > 1) Flexible(child: podiumItems[1]) else const Spacer(),
           const SizedBox(width: 8),
-          if (podiumItems.isNotEmpty)
-            Flexible(child: podiumItems[0])
-          else
-            const Spacer(),
+          if (podiumItems.isNotEmpty) Flexible(child: podiumItems[0]) else const Spacer(),
           const SizedBox(width: 8),
-          if (podiumItems.length > 2)
-            Flexible(child: podiumItems[2])
-          else
-            const Spacer(),
+          if (podiumItems.length > 2) Flexible(child: podiumItems[2]) else const Spacer(),
         ],
       ),
     );
   }
 
-  // Podyum Kullanıcısı Widget'ı (LeaderboardScreen'den kopyalandı)
+  // Podyum Kullanıcısı Widget'ı (isPro kontrolü dahil)
   Widget _buildPodiumUser({
     required Map<String, dynamic> userData,
     required int rank,
     required String puanField,
     required bool isCurrentUser,
   }) {
-    final puan = (userData[puanField] as num? ?? 0)
-        .toInt(); // puanField 'score' olacak
-    final kullaniciAdi =
-        userData['kullaniciAdi'] ??
-        'İsimsiz'; // Veriye 'kullaniciAdi' eklemiştik
-    final emoji = userData['emoji'] ?? '🙂'; // Veriye 'emoji' eklemiştik
+    final puan = (userData[puanField] as num? ?? 0).toInt();
+    final kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
+    final emoji = userData['emoji'] ?? '🙂';
+    final bool isPro = userData['isPro'] ?? false;
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
@@ -311,51 +390,47 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     Color rankColor;
     IconData rankIcon;
     switch (rank) {
-      case 1:
-        rankColor = Colors.amber.shade600;
-        rankIcon = Icons.emoji_events;
-        break;
-      case 2:
-        rankColor = Colors.grey.shade500;
-        rankIcon = Icons.emoji_events;
-        break;
-      case 3:
-        rankColor = Colors.brown.shade400;
-        rankIcon = Icons.emoji_events;
-        break;
-      default:
-        rankColor = Colors.grey;
-        rankIcon = Icons.military_tech;
+      case 1: rankColor = Colors.amber.shade600; rankIcon = Icons.emoji_events; break;
+      case 2: rankColor = Colors.grey.shade500; rankIcon = Icons.emoji_events; break;
+      case 3: rankColor = Colors.brown.shade400; rankIcon = Icons.emoji_events; break;
+      default: rankColor = Colors.grey; rankIcon = Icons.military_tech;
     }
 
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        if (isCurrentUser) // "Siz" etiketi
+        if (isCurrentUser)
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
-            child: Icon(
-              Icons.person_pin_circle_rounded,
-              color: colorScheme.primary,
-              size: 18,
-            ),
+            child: Icon(Icons.person_pin_circle_rounded, color: colorScheme.primary, size: 18),
           ),
+        
         Padding(
-          // Kullanıcı adı
           padding: const EdgeInsets.only(bottom: 6),
-          child: Text(
-            kullaniciAdi,
-            textAlign: TextAlign.center,
-            style: textTheme.bodySmall?.copyWith(
-              fontWeight: FontWeight.w600,
-              color: isCurrentUser ? colorScheme.primary : null,
-            ),
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (isPro)
+                FaIcon(FontAwesomeIcons.crown, color: Colors.amber.shade700, size: 10),
+              if (isPro)
+                const SizedBox(width: 4),
+              Flexible(
+                child: Text(
+                  kullaniciAdi,
+                  textAlign: TextAlign.center,
+                  style: textTheme.bodySmall?.copyWith(
+                    fontWeight: FontWeight.w600,
+                    color: isCurrentUser ? colorScheme.primary : null,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ],
           ),
         ),
+
         Container(
-          // Podyum kutusu
           constraints: const BoxConstraints(maxWidth: 110),
           height: 100 * heightFactor,
           padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -365,25 +440,13 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               end: Alignment.bottomCenter,
               colors: [rankColor.withOpacity(0.9), rankColor.withOpacity(0.6)],
             ),
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(8),
-              topRight: Radius.circular(8),
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: rankColor.withOpacity(0.4),
-                blurRadius: 10,
-                offset: const Offset(0, 5),
-              ),
-            ],
+            borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
+            boxShadow: [ BoxShadow(color: rankColor.withOpacity(0.4), blurRadius: 10, offset: const Offset(0, 5)) ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                emoji,
-                style: TextStyle(fontSize: 24 + (4 * (4 - rank)).toDouble()),
-              ),
+              Text(emoji, style: TextStyle(fontSize: 24 + (4 * (4 - rank)).toDouble())),
               const SizedBox(height: 6),
               FittedBox(
                 fit: BoxFit.scaleDown,
@@ -399,15 +462,11 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
           ),
         ),
         Container(
-          // Sıra numarası
           constraints: const BoxConstraints(maxWidth: 110),
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
             color: rankColor.withOpacity(0.15),
-            borderRadius: const BorderRadius.only(
-              bottomLeft: Radius.circular(8),
-              bottomRight: Radius.circular(8),
-            ),
+            borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -416,11 +475,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               const SizedBox(width: 4),
               Text(
                 '$rank.',
-                style: TextStyle(
-                  color: rankColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
+                style: TextStyle(color: rankColor, fontWeight: FontWeight.bold, fontSize: 14),
               ),
             ],
           ),
@@ -429,7 +484,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Diğer Kullanıcılar Bölümü (LeaderboardScreen'den kopyalandı)
+  // Diğer Kullanıcılar Bölümü
   Widget _buildOtherUsersSection(
     List<QueryDocumentSnapshot> otherUsers,
     String puanField,
@@ -460,10 +515,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
             itemBuilder: (context, index) {
               final userData = otherUsers[index].data() as Map<String, dynamic>;
               final rank = 4 + index;
-              final isCurrentUser = _isCurrentUser(
-                otherUsers[index],
-                currentUserId,
-              );
+              final isCurrentUser = _isCurrentUser(otherUsers[index], currentUserId);
               return _buildUserListItem(
                 userData: userData,
                 rank: rank,
@@ -477,16 +529,17 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Liste Elemanı Widget'ı (LeaderboardScreen'den kopyalandı)
+  // Liste Elemanı Widget'ı (isPro kontrolü dahil)
   Widget _buildUserListItem({
     required Map<String, dynamic> userData,
     required int rank,
     required String puanField,
     required bool isCurrentUser,
   }) {
-    final puan = (userData[puanField] as num? ?? 0).toInt(); // 'score'
+    final puan = (userData[puanField] as num? ?? 0).toInt();
     final kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
     final emoji = userData['emoji'] ?? '🙂';
+    final bool isPro = userData['isPro'] ?? false;
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
@@ -513,13 +566,15 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
           children: [
             Text(emoji, style: const TextStyle(fontSize: 18)),
             const SizedBox(width: 10),
+            if (isPro)
+              FaIcon(FontAwesomeIcons.crown, color: Colors.amber.shade700, size: 12),
+            if (isPro)
+              const SizedBox(width: 6),
             Expanded(
               child: Text(
                 kullaniciAdi,
                 style: textTheme.bodyLarge?.copyWith(
-                  fontWeight: isCurrentUser
-                      ? FontWeight.bold
-                      : FontWeight.normal,
+                  fontWeight: isCurrentUser ? FontWeight.bold : FontWeight.normal,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -540,15 +595,14 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Mevcut Kullanıcı mı? (LeaderboardScreen'den kopyalandı)
+  // Mevcut Kullanıcı mı?
   bool _isCurrentUser(DocumentSnapshot userDoc, String? currentUserId) {
     var data = userDoc.data() as Map<String, dynamic>? ?? {};
-    // trialExamResults'a 'userId' eklediğimiz için onu kullanıyoruz
     var userId = data.containsKey('userId') ? data['userId'] : userDoc.id;
     return userId == currentUserId;
   }
 
-  // Hata Durumu Widget'ı (LeaderboardScreen'den kopyalandı, mesaj değiştirildi)
+  // Hata Durumu Widget'ı
   Widget _buildErrorState(VoidCallback onRetry, String message) {
     final colorScheme = Theme.of(context).colorScheme;
     return Center(
@@ -563,18 +617,12 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                 color: colorScheme.errorContainer.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
-              child: Icon(
-                Icons.error_outline_rounded,
-                color: colorScheme.error,
-                size: 64,
-              ),
+              child: Icon(Icons.error_outline_rounded, color: colorScheme.error, size: 64),
             ),
             const SizedBox(height: 24),
             Text(
               'Bir hata oluştu',
-              style: Theme.of(
-                context,
-              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             Text(
@@ -596,7 +644,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Boş Durum Widget'ı (LeaderboardScreen'den kopyalandı, buton ayarlandı)
+  // Boş Durum Widget'ı
   Widget _buildEmptyState(String message, BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return Center(
@@ -611,11 +659,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                 color: colorScheme.primaryContainer.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
-              child: Icon(
-                Icons.leaderboard_outlined,
-                color: colorScheme.primary,
-                size: 80,
-              ),
+              child: Icon(Icons.leaderboard_outlined, color: colorScheme.primary, size: 80),
             ),
             const SizedBox(height: 24),
             Padding(
@@ -632,14 +676,11 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
             ElevatedButton.icon(
               onPressed: () {
                 if (Navigator.canPop(context)) Navigator.pop(context);
-              }, // Geri dön
+              },
               icon: const Icon(Icons.arrow_back_rounded),
               label: const Text('Geri Dön'),
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 24,
-                  vertical: 12,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
               ),
             ),
           ],

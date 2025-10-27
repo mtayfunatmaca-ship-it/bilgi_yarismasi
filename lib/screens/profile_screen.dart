@@ -9,10 +9,7 @@ import 'package:intl/intl.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:ui' as ui; // Flulaştırma (Blur) için
 import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
-// --- 1. YENİ IMPORT (Kullanıcı verisini ve PRO durumunu okumak için) ---
 import 'package:bilgi_yarismasi/services/user_data_provider.dart'; 
-// --- BİTTİ ---
-
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -55,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
 
     if (_currentUserId != null) {
-      _refreshAllData(); // Tüm verileri yükle
+      _refreshAllData();
     }
   }
 
@@ -75,14 +72,9 @@ class _ProfileScreenState extends State<ProfileScreen>
       _isLoadingAchievements = true; 
     });
     
-    // Animasyonları sıfırla
-    for (var controller in _badgeAnimationControllers) {
-      controller.reset();
-    }
-
+    for (var controller in _badgeAnimationControllers) { controller.reset(); }
     final rankFuture = _loadUserRank();
     final achievementsFuture = _loadAchievements();
-    
     await Future.wait([rankFuture, achievementsFuture]);
   }
 
@@ -120,12 +112,10 @@ class _ProfileScreenState extends State<ProfileScreen>
       if (!mounted) return;
       final allSnapshot = results[0] as QuerySnapshot<Map<String, dynamic>>;
       final earnedSnapshot = results[1] as QuerySnapshot<Map<String, dynamic>>;
-      
       _allAchievements = allSnapshot.docs;
       Map<String, dynamic> earnedMap = {};
       for (var doc in earnedSnapshot.docs) { earnedMap[doc.id] = doc.data(); }
       _earnedAchievements = earnedMap;
-
       _allAchievements.sort((a, b) {
         final aIsEarned = _earnedAchievements.containsKey(a.id);
         final bIsEarned = _earnedAchievements.containsKey(b.id);
@@ -133,18 +123,20 @@ class _ProfileScreenState extends State<ProfileScreen>
         if (!aIsEarned && bIsEarned) return 1;
         return 0; 
       });
+      
+      // --- GÜNCELLEME: Animasyonları sadece gösterilecek olanlar için ayarla ---
+      final int itemsToAnimate = _allAchievements.length > 8 ? 8 : _allAchievements.length;
+      // --- BİTTİ ---
 
       for (var controller in _badgeAnimationControllers) { controller.dispose(); }
       _badgeAnimationControllers = List.generate(
-        _allAchievements.length,
+        itemsToAnimate, // <<< Sadece 8 (veya daha az)
         (index) => AnimationController(duration: Duration(milliseconds: 600 + (index * 50)), vsync: this),
       );
       _badgeAnimations = _badgeAnimationControllers
           .map((controller) => Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: controller, curve: Curves.elasticOut)))
           .toList();
-
       if (mounted) setState(() => _isLoadingAchievements = false);
-      
       _shimmerController.repeat();
       for (int i = 0; i < _badgeAnimationControllers.length; i++) {
          Future.delayed(Duration(milliseconds: i * 100), () {
@@ -157,8 +149,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
   
-  // Emoji seçici (Tam Kod)
   void _showEmojiPicker(String currentEmoji) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     showModalBottomSheet(
       context: context, backgroundColor: Colors.transparent, isScrollControlled: true,
       builder: (context) {
@@ -219,8 +211,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
   
-  // Emoji kaydetme (Tam Kod)
   Future<void> _saveEmoji(String newEmoji) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
     final user = _authService.currentUser;
@@ -236,9 +228,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     }
   }
 
-  // Ad/Soyad/Kullanıcı Adı düzenleme Dialog (Tam Kod)
-  void _showEditInfoDialog(String currentUsername, String currentAd, String currentSoyad) {
-    final TextEditingController usernameController = TextEditingController(text: currentUsername);
+  // --- GÜNCELLENDİ: Bilgileri Düzenle (Kullanıcı Adı Kaldırıldı) ---
+  void _showEditInfoDialog(String currentAd, String currentSoyad) {
     final TextEditingController adController = TextEditingController(text: currentAd);
     final TextEditingController soyadController = TextEditingController(text: currentSoyad);
     final _formKey = GlobalKey<FormState>();
@@ -249,7 +240,6 @@ class _ProfileScreenState extends State<ProfileScreen>
       builder: (context) {
         return StatefulBuilder(
           builder: (context, setDialogState) {
-            String? dialogError;
             return AlertDialog(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
               title: const Text('Bilgileri Düzenle'),
@@ -269,23 +259,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       textCapitalization: TextCapitalization.words,
                       validator: (value) => (value == null || value.trim().isEmpty) ? 'Soyad boş olamaz.' : null,
                     ),
-                    const SizedBox(height: 12),
-                    TextFormField(
-                      controller: usernameController, maxLength: 15,
-                      decoration: InputDecoration(
-                        labelText: 'Kullanıcı Adı', prefixIcon: Icon(Icons.alternate_email), counterText: "",
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                        errorText: dialogError,
-                      ),
-                       validator: (value) {
-                         if (value == null || value.trim().isEmpty) return 'Kullanıcı adı boş olamaz.';
-                         if (value.length > 15) return 'Maksimum 15 karakter olabilir.';
-                         return null;
-                       },
-                       onChanged: (_) {
-                         if(dialogError != null) setDialogState(() => dialogError = null);
-                       },
-                    ),
+                    // --- Kullanıcı adı TextFormField'u kaldırıldı ---
                 ]),
               ),
               actions: [
@@ -293,13 +267,18 @@ class _ProfileScreenState extends State<ProfileScreen>
                 ElevatedButton(
                   onPressed: isDialogSaving ? null : () async {
                     if (!(_formKey.currentState?.validate() ?? false)) return;
-                    final newUsername = usernameController.text.trim();
                     final newAd = adController.text.trim();
                     final newSoyad = soyadController.text.trim();
-                    if (newUsername == currentUsername && newAd == currentAd && newSoyad == currentSoyad) { Navigator.pop(context); return; }
-                    setDialogState(() { isDialogSaving = true; dialogError = null; });
                     
-                    final String? saveError = await _saveUserInfo(newUsername, currentUsername, newAd, newSoyad);
+                    if (newAd == currentAd && newSoyad == currentSoyad) {
+                       Navigator.pop(context); 
+                       return; 
+                    }
+                    
+                    setDialogState(() { isDialogSaving = true; });
+                    
+                    // _saveUserInfo'ya sadece ad ve soyad gönder
+                    final String? saveError = await _saveUserInfo(newAd, newSoyad);
 
                     if (!mounted) return;
                     setDialogState(() => isDialogSaving = false);
@@ -307,12 +286,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                     if (saveError == null) {
                        Navigator.pop(context); 
                     } else {
-                       if (saveError.contains('alınmış')) {
-                         setDialogState(() => dialogError = saveError);
-                       } else {
-                         Navigator.pop(context);
-                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(saveError), backgroundColor: Colors.red));
-                       }
+                       // Hata mesajını göster (Kullanıcı adı çakışması hatası artık yok)
+                       Navigator.pop(context);
+                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(saveError), backgroundColor: Colors.red));
                     }
                   },
                   style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
@@ -325,22 +301,18 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
     );
   }
+  // --- BİTTİ ---
 
-  // Ad/Soyad/Kullanıcı Adı kaydetme (Tam Kod)
-  Future<String?> _saveUserInfo(String newUsername, String currentUsername, String newAd, String newSoyad) async {
+  // --- GÜNCELLENDİ: Bilgi Kaydetme (Kullanıcı Adı Kaldırıldı) ---
+  Future<String?> _saveUserInfo(String newAd, String newSoyad) async {
     final user = _authService.currentUser;
     if (user == null) return "Kullanıcı bulunamadı.";
     setState(() => _isSaving = true);
     try {
-      if (newUsername != currentUsername) {
-        final querySnapshot = await _firestore.collection('users').where('kullaniciAdi', isEqualTo: newUsername).limit(1).get();
-        if (querySnapshot.docs.isNotEmpty) {
-           print("Kullanıcı adı çakışması: $newUsername zaten alınmış.");
-           return 'Bu kullanıcı adı zaten alınmış.';
-        }
-      }
+      // Kullanıcı adı kontrolü ve güncellemesi kaldırıldı
       await _firestore.collection('users').doc(user.uid).update({
-        'kullaniciAdi': newUsername, 'ad': newAd, 'soyad': newSoyad,
+        'ad': newAd,
+        'soyad': newSoyad,
       });
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: const Text('Bilgiler güncellendi!'), backgroundColor: Theme.of(context).colorScheme.primary, behavior: SnackBarBehavior.floating, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))));
@@ -355,16 +327,16 @@ class _ProfileScreenState extends State<ProfileScreen>
       if (mounted) setState(() => _isSaving = false);
     }
   }
+  // --- BİTTİ ---
 
-  // Şifre Değiştirme Dialog'u (Tam Kod)
   void _showChangePasswordDialog() {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
      final _passwordFormKey = GlobalKey<FormState>();
      final TextEditingController currentPasswordController = TextEditingController();
      final TextEditingController newPasswordController = TextEditingController();
      final TextEditingController newPasswordRepeatController = TextEditingController();
      bool isPasswordSaving = false;
      String dialogError = '';
-
      showDialog(
       context: context,
       builder: (context) {
@@ -420,15 +392,12 @@ class _ProfileScreenState extends State<ProfileScreen>
                    onPressed: isPasswordSaving ? null : () async {
                       if (_passwordFormKey.currentState?.validate() ?? false) {
                          setDialogState(() { isPasswordSaving = true; dialogError = ''; });
-                         
                          final error = await _authService.changePassword(
                            currentPasswordController.text,
                            newPasswordController.text
                          );
-                         
                          if (!mounted) return;
                          setDialogState(() { isPasswordSaving = false; });
-
                          if (error == null) {
                             Navigator.pop(context);
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -450,8 +419,8 @@ class _ProfileScreenState extends State<ProfileScreen>
      );
   }
   
-  // Tema Seçim Dialog'u (Tam Kod)
   void _showThemePicker(BuildContext context, ColorScheme colorScheme) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
      showModalBottomSheet(
       context: context,
       backgroundColor: colorScheme.surface,
@@ -490,7 +459,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
   
-  // --- Ayarlar Menüsü (GÜNCELLENDİ: isPro kontrolü) ---
+  // --- Ayarlar Menüsü (GÜNCELLENDİ: Tema Kilidi ve İstatistikler Kaldırıldı) ---
   void _showSettingsMenu(BuildContext context, ColorScheme colorScheme, bool isGoogleUser, bool isPro) {
     showModalBottomSheet(
       context: context,
@@ -521,47 +490,39 @@ class _ProfileScreenState extends State<ProfileScreen>
                     _showChangePasswordDialog();
                   },
                 ),
-              ListTile(
-                leading: Icon(Icons.palette_outlined, color: colorScheme.secondary),
-                title: Text('Temayı Değiştir', style: Theme.of(context).textTheme.bodyLarge),
-                onTap: () {
-                   Navigator.pop(context);
-                  _showThemePicker(context, colorScheme);
-                },
-              ),
-              
-              // --- 1. KİLİTLEME: İstatistikler Butonu ---
+                
+              // --- TEMA DEĞİŞTİRME KİLİDİ ---
               ListTile(
                 leading: Icon(
-                  Icons.bar_chart_rounded, 
-                  color: isPro ? colorScheme.secondary : colorScheme.onSurface.withOpacity(0.3) // Kilitliyse soluk
+                  Icons.palette_outlined, 
+                  color: isPro ? colorScheme.secondary : colorScheme.onSurface.withOpacity(0.3)
                 ),
                 title: Row(
                   children: [
                     Text(
-                      'İstatistiklerim', 
+                      'Temayı Değiştir', 
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                         color: isPro ? colorScheme.onSurface : colorScheme.onSurface.withOpacity(0.5) // Kilitliyse soluk
+                         color: isPro ? colorScheme.onSurface : colorScheme.onSurface.withOpacity(0.5)
                       )
                     ),
-                    if (!isPro) ...[ // PRO değilse
+                    if (!isPro) ...[
                       const SizedBox(width: 8),
                       Icon(Icons.lock, size: 16, color: Colors.orange.shade700),
                     ]
                   ],
                 ),
                 onTap: () {
-                   Navigator.pop(context); // Menüyü kapat
+                   Navigator.pop(context);
                    if (isPro) {
-                     // PRO ise: Ekranı aç
-                     Navigator.push(context, MaterialPageRoute(builder: (context) => const StatisticsScreen()));
+                     _showThemePicker(context, colorScheme);
                    } else {
-                     // PRO değilse: Uyarı dialog'u göster
-                     _showProFeatureDialog(context);
+                     _showProFeatureDialog(context, "Tema renklerini değiştirmek PRO üyelere özeldir.");
                    }
                 },
               ),
-              // --- KİLİTLEME BİTTİ ---
+              // --- TEMA KİLİDİ BİTTİ ---
+              
+              // --- İSTATİSTİKLER BUTONU KALDIRILDI ---
               
               const Divider(),
               ListTile(
@@ -592,8 +553,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
   
-  // --- 2. YENİ FONKSİYON: PRO Özellik Uyarısı ---
-  void _showProFeatureDialog(BuildContext context) {
+  // --- PRO Özellik Uyarısı (GÜNCELLENDİ: Mesaj parametresi aldı) ---
+  void _showProFeatureDialog(BuildContext context, String message) {
     final colorScheme = Theme.of(context).colorScheme;
     
     showDialog(
@@ -603,7 +564,7 @@ class _ProfileScreenState extends State<ProfileScreen>
            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
            icon: Icon(Icons.lock_person_rounded, color: colorScheme.primary, size: 48),
            title: const Text('PRO Özellik', style: TextStyle(fontWeight: FontWeight.bold)),
-           content: const Text('Detaylı istatistikler ve daha fazlası için PRO üyeliğe geçiş yapmanız gerekmektedir.'),
+           content: Text(message), // <<< Özelleştirilmiş mesaj
            actions: [
               TextButton(
                 onPressed: () => Navigator.pop(context),
@@ -612,7 +573,6 @@ class _ProfileScreenState extends State<ProfileScreen>
               ElevatedButton(
                 onPressed: () {
                    Navigator.pop(context);
-                   // --- 3. DEĞİŞİKLİK: Satın alma ekranını aç ---
                    Navigator.push(
                      context,
                      MaterialPageRoute(builder: (context) => const PurchaseScreen()),
@@ -625,7 +585,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
     );
   }
-  // --- YENİ FONKSİYON BİTTİ ---
+  // --- BİTTİ ---
 
   
   // === build METODU (GÜNCELLENDİ) ===
@@ -634,9 +594,7 @@ class _ProfileScreenState extends State<ProfileScreen>
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
 
-    // --- 4. DEĞİŞİKLİK: isPro durumunu Provider'dan oku ---
     final bool isPro = context.watch<UserDataProvider>().isPro; 
-    // --- DEĞİŞİKLİK BİTTİ ---
 
     return Scaffold(
       backgroundColor: colorScheme.background,
@@ -653,14 +611,14 @@ class _ProfileScreenState extends State<ProfileScreen>
                   return Center(child: Text("Hata: Profil verisi okunamadı. ${snapshot.error}"));
                 }
                 if (!snapshot.hasData || !snapshot.data!.exists) {
-                   return _buildLoadingState(colorScheme, textTheme); // Yükleniyor...
+                   return _buildLoadingState(colorScheme, textTheme);
                 }
                 
                 final data = snapshot.data!.data() as Map<String, dynamic>;
-                final String kullaniciAdi = data['kullaniciAdi'] ?? 'İsimsiz';
+                // final String kullaniciAdi = data['kullaniciAdi'] ?? 'İsimsiz'; // <<< Artık dialogda kullanılmıyor
                 final String ad = data['ad'] ?? '';
                 final String soyad = data['soyad'] ?? '';
-                final String displayName = (ad.isNotEmpty || soyad.isNotEmpty) ? '$ad $soyad' : kullaniciAdi;
+                final String displayName = (ad.isNotEmpty || soyad.isNotEmpty) ? '$ad $soyad' : (data['kullaniciAdi'] ?? 'İsimsiz'); // Fallback
                 final String emoji = data['emoji'] ?? '🙂';
                 final int toplamPuan = (data['toplamPuan'] as num? ?? 0).toInt();
                 
@@ -681,11 +639,10 @@ class _ProfileScreenState extends State<ProfileScreen>
                         foregroundColor: colorScheme.onSurface,
                         elevation: 0,
                         pinned: true,
-                        leading: IconButton(
-                          icon: const Icon(Icons.arrow_back_ios_new_rounded),
-                          onPressed: () => Navigator.pop(context),
-                        ),
-                        title: Text('Profile', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                        // --- Geri tuşu kaldırıldı ---
+                        leading: const SizedBox.shrink(), 
+                        // --- BİTTİ ---
+                        title: Text('Profil', style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
                         centerTitle: true,
                         actions: [
                           IconButton(
@@ -702,7 +659,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                         child: Column(
                           children: [
                             const SizedBox(height: 10),
-                            _buildProfileAvatar(emoji, () => _showEmojiPicker(emoji), colorScheme),
+                            // --- Avatar (isPro eklendi) ---
+                            _buildProfileAvatar(emoji, () => _showEmojiPicker(emoji), colorScheme, isPro),
+                            // --- BİTTİ ---
                             const SizedBox(height: 16),
                             Row(
                                mainAxisAlignment: MainAxisAlignment.center,
@@ -710,7 +669,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                                children: [
                                  Flexible(child: Text(displayName, style: textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold))),
                                  IconButton(
-                                   onPressed: _isSaving ? null : () => _showEditInfoDialog(kullaniciAdi, ad, soyad),
+                                   // --- GÜNCELLENDİ (Kullanıcı adı kaldırıldı) ---
+                                   onPressed: _isSaving ? null : () => _showEditInfoDialog(ad, soyad),
+                                   // --- BİTTİ ---
                                    icon: Icon(Icons.edit_note_rounded, color: colorScheme.onSurfaceVariant.withOpacity(0.7), size: 24),
                                    padding: const EdgeInsets.only(left: 8, top: 4),
                                    constraints: const BoxConstraints(),
@@ -720,7 +681,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                             const SizedBox(height: 8),
                             _buildLevelAndXP(toplamPuan, textTheme, colorScheme),
                             const SizedBox(height: 32),
-                            // --- 5. DEĞİŞİKLİK: isPro'yu Kartlara gönder ---
                             _buildStatCardsRow(toplamPuan, colorScheme, textTheme, isPro),
                             const SizedBox(height: 32),
                              Padding(
@@ -729,6 +689,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                  children: [
                                    Text("Başarılarım", style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold)),
+                                   // --- "Tümünü Gör" butonu geri eklendi ---
                                    if (_allAchievements.length > 8)
                                       TextButton(
                                         onPressed: (){
@@ -736,6 +697,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                         },
                                         child: const Text("Tümünü Gör")
                                       )
+                                   // --- BİTTİ ---
                                  ],
                                ),
                              ),
@@ -744,7 +706,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                         ),
                       ),
                       
+                      // --- Rozet grid'i 8 ile sınırlandı ---
                       _buildAchievementsGrid(colorScheme, textTheme),
+                      // --- BİTTİ ---
                       
                       SliverToBoxAdapter(
                         child: SizedBox(height: MediaQuery.of(context).padding.bottom + 40),
@@ -759,6 +723,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Yükleniyor Ekranı
   Widget _buildLoadingState(ColorScheme colorScheme, TextTheme textTheme) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -778,8 +743,13 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Profil Avatarı
-  Widget _buildProfileAvatar(String emoji, VoidCallback onTap, ColorScheme colorScheme) {
+  // --- Profil Avatarı (GÜNCELLENDİ: isPro eklendi) ---
+  Widget _buildProfileAvatar(String emoji, VoidCallback onTap, ColorScheme colorScheme, bool isPro) {
+    
+    // PRO ise altın rengi, değilse normal tema rengi
+    final Color borderColor = isPro ? Colors.amber.shade600 : colorScheme.primaryContainer;
+    final Color glowColor = isPro ? Colors.amber.shade700 : colorScheme.primary.withOpacity(0.1);
+
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -788,8 +758,15 @@ class _ProfileScreenState extends State<ProfileScreen>
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: colorScheme.surfaceContainerHighest,
-            border: Border.all(color: colorScheme.primaryContainer, width: 4),
-            boxShadow: [ BoxShadow(color: colorScheme.shadow.withOpacity(0.1), blurRadius: 20, offset: const Offset(0, 10)) ],
+            // PRO ise altın, değilse normal çerçeve
+            border: Border.all(color: borderColor, width: 4),
+            boxShadow: [ 
+              // PRO ise altın parlama (glow)
+              if (isPro)
+                BoxShadow(color: glowColor, blurRadius: 20, spreadRadius: 4, offset: const Offset(0, 0)),
+              // Normal gölge
+              BoxShadow(color: colorScheme.shadow.withOpacity(0.1), blurRadius: 20, offset: const Offset(0, 10)) 
+            ],
           ),
           child: Center(child: Text(emoji, style: const TextStyle(fontSize: 64))),
         ),
@@ -808,17 +785,33 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
           ),
         ),
+        // --- YENİ: PRO Taç İkonu ---
+        if (isPro)
+          Positioned(
+            top: -4, left: 4,
+            child: Container(
+              padding: const EdgeInsets.all(4),
+              decoration: BoxDecoration(
+                color: Colors.amber.shade700,
+                shape: BoxShape.circle,
+                boxShadow: [ BoxShadow(color: Colors.amber.withOpacity(0.5), blurRadius: 8) ]
+              ),
+              child: const FaIcon(FontAwesomeIcons.crown, color: Colors.white, size: 14),
+            ),
+          ),
+        // --- BİTTİ ---
       ],
     );
   }
+  // --- BİTTİ ---
 
   // Seviye/XP Barı
   Widget _buildLevelAndXP(int toplamPuan, TextTheme textTheme, ColorScheme colorScheme) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final int level = (toplamPuan / 1000).floor() + 1;
     final double currentXp = (toplamPuan % 1000).toDouble();
     const double nextLevelXp = 1000;
     final double progress = (currentXp / nextLevelXp).clamp(0.0, 1.0);
-
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40.0),
       child: Column(
@@ -866,8 +859,9 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // 3'lü İstatistik Kartları
+  // 3'lü İstatistik Kartları (PRO Korumalı)
   Widget _buildStatCardsRow(int toplamPuan, ColorScheme colorScheme, TextTheme textTheme, bool isPro) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
      return Padding(
        padding: const EdgeInsets.symmetric(horizontal: 16.0),
        child: Row(
@@ -879,7 +873,7 @@ class _ProfileScreenState extends State<ProfileScreen>
              color: const Color(0xFF6A5AE0),
              textTheme: textTheme,
              isLocked: false,
-             onTap: (){}, // Tıklama eylemi (henüz yok)
+             onTap: (){},
            )),
            const SizedBox(width: 12),
            Expanded(child: _buildStatCard(
@@ -893,17 +887,17 @@ class _ProfileScreenState extends State<ProfileScreen>
            )),
            const SizedBox(width: 12),
            Expanded(child: _buildStatCard(
-             label: 'İstatistikler', // Değişti
-             value: _isLoadingAchievements ? '...' : '${_earnedAchievements.length}', // Rozet sayısını gösterir
-             icon: FontAwesomeIcons.chartPie, // Değişti
-             color: isPro ? const Color(0xFF33CC99) : Colors.grey.shade500, // Duruma göre renk
+             label: 'İstatistikler',
+             value: _isLoadingAchievements ? '...' : '${_earnedAchievements.length}',
+             icon: FontAwesomeIcons.chartPie,
+             color: isPro ? const Color(0xFF33CC99) : Colors.grey.shade500,
              textTheme: textTheme,
-             isLocked: !isPro, // Kilit durumu
-             onTap: () { // Tıklama eylemi
+             isLocked: !isPro,
+             onTap: () {
                if (isPro) {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const StatisticsScreen()));
                } else {
-                  _showProFeatureDialog(context);
+                  _showProFeatureDialog(context, "Detaylı istatistikler PRO üyelere özeldir.");
                }
              },
            )),
@@ -914,6 +908,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Tek bir istatistik kartı
   Widget _buildStatCard({
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     required String label, 
     required String value, 
     required IconData icon, 
@@ -975,7 +970,7 @@ class _ProfileScreenState extends State<ProfileScreen>
      );
   }
 
-  // Başarılar Grid'i (SliverGrid) - İlk 8'i göster
+  // --- Başarılar Grid'i (GÜNCELLENDİ: Artık 8 sınırı var) ---
   Widget _buildAchievementsGrid(ColorScheme colorScheme, TextTheme textTheme) {
     if (_isLoadingAchievements) {
        return SliverPadding(
@@ -990,6 +985,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       return SliverToBoxAdapter(child: Center(child: Padding(padding: const EdgeInsets.all(32.0), child: Text("Henüz hiç başarı kazanmadın.", style: textTheme.bodyMedium))));
     }
 
+    // --- Sadece ilk 8'i al ---
     final achievementsToShow = _allAchievements.take(8).toList();
 
     return SliverPadding(
@@ -1004,7 +1000,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         delegate: SliverChildBuilderDelegate((context, index) {
           if (index >= achievementsToShow.length) return null;
           
-          final achievementDoc = achievementsToShow[index];
+          final achievementDoc = achievementsToShow[index]; // <<< Değişti
           final achievementId = achievementDoc.id;
           final achievementData = achievementDoc.data() as Map<String, dynamic>? ?? {};
           final bool isEarned = _earnedAchievements.containsKey(achievementId);
@@ -1020,13 +1016,15 @@ class _ProfileScreenState extends State<ProfileScreen>
           }
           
           return _buildAchievementBadge(emoji, name, description, isEarned, earnedDate, colorScheme, textTheme, animation);
-        }, childCount: achievementsToShow.length),
+        }, childCount: achievementsToShow.length), // <<< Değişti
       ),
     );
   }
+  // --- BİTTİ ---
   
   // Yükleniyor Placeholder
   Widget _buildAchievementBadgePlaceholder(ColorScheme colorScheme) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
      return Container(
        decoration: BoxDecoration(
          shape: BoxShape.circle,
@@ -1037,6 +1035,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Rozet Widget'ı (Yuvarlak Tasarım)
   Widget _buildAchievementBadge(
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     String emoji, String name, String description,
     bool isEarned, String earnedDate,
     ColorScheme colorScheme, TextTheme textTheme, Animation<double>? animation
@@ -1093,6 +1092,7 @@ class _ProfileScreenState extends State<ProfileScreen>
 
   // Rozet Detay Dialog'u
   void _showAchievementDetails(String emoji, String name, String description, bool isEarned, String earnedDate, ColorScheme colorScheme, TextTheme textTheme) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     showDialog(
       context: context,
       builder: (context) => Dialog(
@@ -1181,6 +1181,7 @@ class _ProfileScreenState extends State<ProfileScreen>
   
   // Tema Seçim Widget'ı
   Widget _buildColorChoice(BuildContext context, Color color, String colorName) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     final bool isSelected = themeNotifier.seedColor.value == color.value;
     return Tooltip(

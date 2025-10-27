@@ -4,9 +4,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/screens/trial_exam_result.dart'; 
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// (ResultScreen import'u kaldırıldı)
+// --- YENİ IMPORTLAR (Reklam ve PRO Kontrolü için) ---
+import 'package:provider/provider.dart';
+import 'package:bilgi_yarismasi/services/user_data_provider.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'dart:io' show Platform;
+// --- BİTTİ ---
 
 class TrialExamScreen extends StatefulWidget {
+  // ... (parametreler aynı) ...
   final String trialExamId;
   final String title;
   final int durationMinutes;
@@ -25,7 +31,7 @@ class TrialExamScreen extends StatefulWidget {
 }
 
 class _TrialExamScreenState extends State<TrialExamScreen> {
-  // ... (Tüm state değişkenleri aynı) ...
+  // ... (eski state'ler aynı) ...
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
   bool _isLoading = true;
@@ -40,14 +46,63 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
   List<QueryDocumentSnapshot> _achievementDefinitions = [];
   Map<String, String> _categoryNameMap = {};
 
+  // --- YENİ STATE'LER (Banner Reklam için) ---
+  BannerAd? _bannerAd;
+  bool _isBannerLoaded = false;
+  
+  // !!! ÖNEMLİ: Bunlar TEST ID'leridir. AdMob'dan BANNER ID alıp değiştir.
+  final String _bannerAdUnitId = Platform.isAndroid 
+      ? 'ca-app-pub-3940256099942544/6300978111' 
+      : 'ca-app-pub-3940256099942544/2934735716';
+  // --- BİTTİ ---
+
   @override
   void initState() {
     super.initState();
     _loadInitialData();
   }
 
-  // --- Fonksiyonlar (loadInitialData, startTimer, dispose, selectAnswer) ---
-  // --- BU FONKSİYONLARDA HİÇBİR DEĞİŞİKLİK YOK, ÖNCEKİ KODLA AYNILAR ---
+  // --- YENİ: didChangeDependencies (PRO değilse reklamı yükle) ---
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    
+    // isPro durumunu buradan oku
+    final bool isPro = context.watch<UserDataProvider>().isPro;
+
+    // Eğer kullanıcı PRO değilse VE reklam henüz yüklenmediyse, yükle
+    if (!isPro && _bannerAd == null) {
+      _loadBannerAd();
+    }
+  }
+  // --- BİTTİ ---
+
+  // --- YENİ FONKSİYON: Banner Reklamı Yükle ---
+  void _loadBannerAd() {
+    _bannerAd = BannerAd(
+      adUnitId: _bannerAdUnitId,
+      request: const AdRequest(),
+      size: AdSize.banner, // Standart banner boyutu
+      listener: BannerAdListener(
+        onAdLoaded: (Ad ad) {
+          print('Banner Ad (TrialExam) yüklendi.');
+          if (mounted) {
+             setState(() {
+               _isBannerLoaded = true;
+             });
+          }
+        },
+        onAdFailedToLoad: (Ad ad, LoadAdError error) {
+          print('Banner Ad (TrialExam) yüklenemedi: $error');
+          ad.dispose(); // Hata oluşursa kaynağı temizle
+        },
+      ),
+    );
+    _bannerAd?.load();
+  }
+  // --- BİTTİ ---
+
+  // ... (loadInitialData, startTimer aynı) ...
   Future<void> _loadInitialData() async {
     if (!mounted) return;
     setState(() => _isLoading = true);
@@ -60,24 +115,24 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       if (!mounted) return;
       final questionSnapshot = results[0] as QuerySnapshot;
       var fetchedQuestions = questionSnapshot.docs;
-      _questions = fetchedQuestions.take(widget.questionCount).toList();
+      _questions = fetchedQuestions.take(widget.questionCount).toList(); 
       final categoriesSnapshot = results[1] as QuerySnapshot;
       _categoryNameMap = { for (var doc in categoriesSnapshot.docs) doc.id: (doc.data() as Map<String, dynamic>)['ad'] as String? ?? doc.id };
       _categoryNameMap['diger'] = 'Diğer';
       _achievementDefinitions = (results[2] as QuerySnapshot).docs;
       if (_questions.isEmpty) {
-         setState(() { _isLoading = false; _fetchError = "Bu denemeye ait soru bulunamadı."; });
+          setState(() { _isLoading = false; _fetchError = "Bu denemeye ait soru bulunamadı."; });
       } else {
-         setState(() { _isLoading = false; });
-         _startTimer();
+          setState(() { _isLoading = false; });
+          _startTimer();
       }
     } catch (e) {
       print("Deneme sınavı verisi çekilirken hata: $e");
        if (e is FirebaseException && e.code == 'failed-precondition') {
          if (mounted) setState(() { _isLoading = false; _fetchError = "Veritabanı index hatası. Lütfen Firestore index'lerini kontrol edin."; });
-      } else {
+       } else {
          if (mounted) setState(() { _isLoading = false; _fetchError = "Sorular yüklenemedi: $e"; });
-      }
+       }
     }
   }
   void _startTimer() {
@@ -94,30 +149,31 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       });
     });
   }
+
   @override
   void dispose() {
     _timer?.cancel();
     _pageController.dispose();
+    _bannerAd?.dispose(); // <<< YENİ: Reklamı temizle
     super.dispose();
   }
+
   void _selectAnswer(int questionIndex, int selectedIndex) {
     setState(() {
       _selectedAnswers[questionIndex] = selectedIndex;
     });
   }
 
-  // --- _submitTrialExam GÜNCELLENDİ (newAchievements gönderiyor) ---
   Future<void> _submitTrialExam({bool isForfeit = false, bool isTimeUp = false}) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     _timer?.cancel();
     if (_isSubmitting || !mounted) return;
     setState(() => _isSubmitting = true);
-
     final user = _authService.currentUser;
     if (user == null) {
       if (mounted) setState(() => _isSubmitting = false);
       return;
     }
-
     try {
       final resultDocRef = _firestore.collection('users').doc(user.uid).collection('trialExamResults').doc(widget.trialExamId);
       final resultDoc = await resultDocRef.get();
@@ -127,14 +183,13 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
          if (mounted) setState(() => _isSubmitting = false);
         return;
       }
-
       int totalCorrect = 0, totalWrong = 0, totalEmpty = 0;
       int actualQuestionCount = _questions.length;
       Map<String, Map<String, int>> statsByCategory = {};
       Map<int, int> correctAnswersMap = {};
-
       if(isForfeit) {
          totalWrong = actualQuestionCount;
+         statsByCategory['diger'] = {'correct': 0, 'wrong': totalWrong, 'empty': 0};
       } else {
          for (int i = 0; i < actualQuestionCount; i++) {
            final qData = _questions[i].data() as Map<String, dynamic>;
@@ -154,8 +209,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
              totalWrong++;
            }
          }
-      }
-      
+       }
       double totalNet = totalCorrect - (totalWrong * 0.25);
       const double tabanPuan = 50.0;
       final double katsayi = (100.0 - tabanPuan) / (actualQuestionCount > 0 ? actualQuestionCount : 1);
@@ -163,7 +217,6 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
       if (kpssPuan < 0) kpssPuan = 0.0;
       if (kpssPuan > 100) kpssPuan = 100.0;
       int rankingScore = (kpssPuan * 100).round();
-      
       String kullaniciAdi = "Kullanıcı";
       String emoji = "🙂";
       String ad = "";
@@ -173,7 +226,6 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
          ad = userDoc.data()?['ad'] ?? '';
          emoji = userDoc.data()?['emoji'] ?? emoji;
       }
-      
       Map<String, dynamic> resultData = {
         'trialExamId': widget.trialExamId, 'title': widget.title, 'score': rankingScore,
         'kpssPuan': kpssPuan, 'netSayisi': totalNet,
@@ -185,41 +237,37 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
         'emoji': emoji, 'userId': user.uid,
       };
       await resultDocRef.set(resultData);
-
-      // <<< DEĞİŞİKLİK: 'newAchievements' listesini al
       List<Map<String, dynamic>> newAchievements = [];
       if (!isForfeit) {
         newAchievements = await _checkTrialExamAchievements(user.uid);
       }
-      // --- BİTTİ ---
-
       if (mounted) {
         if (isForfeit) {
            Navigator.pop(context, true);
         } else {
-           await Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                builder: (context) => TrialExamResultScreen(
-                   title: widget.title,
-                   kpssPuan: kpssPuan,
-                   netSayisi: totalNet,
-                   dogruSayisi: totalCorrect,
-                   yanlisSayisi: totalWrong,
-                   bosSayisi: totalEmpty,
-                   soruSayisi: actualQuestionCount,
-                   statsByCategory: statsByCategory,
-                   categoryNameMap: _categoryNameMap,
-                   questions: _questions, 
-                   userAnswers: _selectedAnswers,
-                   correctAnswers: correctAnswersMap,
-                   trialExamId: widget.trialExamId, 
-                   trialExamTitle: widget.title,
-                   newAchievements: newAchievements, // <<< BAŞARI LİSTESİNİ GÖNDER
-                ),
-              ),
+           final result = await Navigator.push( 
+             context,
+             MaterialPageRoute(
+               builder: (context) => TrialExamResultScreen(
+                  title: widget.title,
+                  kpssPuan: kpssPuan,
+                  netSayisi: totalNet,
+                  dogruSayisi: totalCorrect,
+                  yanlisSayisi: totalWrong,
+                  bosSayisi: totalEmpty,
+                  soruSayisi: actualQuestionCount,
+                  statsByCategory: statsByCategory,
+                  categoryNameMap: _categoryNameMap,
+                  questions: _questions, 
+                  userAnswers: _selectedAnswers,
+                  correctAnswers: correctAnswersMap,
+                  trialExamId: widget.trialExamId, 
+                  trialExamTitle: widget.title,
+                  newAchievements: newAchievements,
+               ),
+             ),
            );
-           if (mounted) {
+           if (mounted && (result == true)) {
               Navigator.pop(context, true);
            }
         }
@@ -232,19 +280,16 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     }
   }
   
-  // --- _checkTrialExamAchievements GÜNCELLENDİ (List döndürüyor) ---
   Future<List<Map<String, dynamic>>> _checkTrialExamAchievements(String userId) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     List<Map<String, dynamic>> newlyEarnedAchievements = [];
     if (_achievementDefinitions.isEmpty || !mounted) return newlyEarnedAchievements;
-
     try {
       final earnedSnapshot = await _firestore.collection('users').doc(userId).collection('earnedAchievements').get();
       final earnedAchievementIds = earnedSnapshot.docs.map((doc) => doc.id).toSet();
       final solvedTrialCountSnapshot = await _firestore.collection('users').doc(userId).collection('trialExamResults').count().get();
       final solvedTrialCount = solvedTrialCountSnapshot.count ?? 0;
-
       WriteBatch? batch;
-
       for (var achievementDoc in _achievementDefinitions) {
         final achievementId = achievementDoc.id;
         if (earnedAchievementIds.contains(achievementId)) continue;
@@ -253,13 +298,11 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
         final criteriaType = achievementData['criteria_type'] as String?;
         final criteriaValue = (achievementData['criteria_value'] as num?)?.toInt() ?? 0;
         bool earned = false;
-
         if (criteriaType == 'trial_exam_solved_count') {
           if (solvedTrialCount >= criteriaValue) {
             earned = true;
           }
         }
-        
         if (earned) {
           final String achievementName = achievementData['name'] as String? ?? 'İsimsiz Başarı';
           final String achievementEmoji = achievementData['emoji'] as String? ?? '🏆';
@@ -278,14 +321,11 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     } catch (e) {
       print("Deneme sınavı başarı kontrolü sırasında hata: $e");
     }
-    return newlyEarnedAchievements; // Listeyi döndür
+    return newlyEarnedAchievements;
   }
-  // --- BİTTİ ---
-
-  // --- _showAchievementEarnedDialog FONKSİYONU BURADAN KALDIRILDI ---
   
-  // --- Kalan Fonksiyonlar (Aynı) ---
   Future<bool> _onWillPop() async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     if (_isSubmitting) return false;
     final bool? shouldPop = await showDialog<bool>(
       context: context,
@@ -311,86 +351,115 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
   }
 
   String get _formattedTime {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final minutes = (_secondsRemaining ~/ 60).toString().padLeft(2, '0');
     final seconds = (_secondsRemaining % 60).toString().padLeft(2, '0');
     return '$minutes:$seconds';
   }
 
   void _showQuestionGridPicker() {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final colorScheme = Theme.of(context).colorScheme;
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-      ),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))),
       builder: (context) {
-        return ConstrainedBox(
-          constraints: BoxConstraints(
-             maxHeight: MediaQuery.of(context).size.height * 0.8,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text('Soruya Git', style: Theme.of(context).textTheme.titleLarge),
-              ),
-              const Divider(height: 1),
-              Expanded(
-                child: GridView.builder(
-                  padding: const EdgeInsets.all(20),
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 6, mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 1.0,
+        return StatefulBuilder( // <<< BottomSheet'in içini anlık güncellemek için
+          builder: (BuildContext context, StateSetter setModalState) {
+            return ConstrainedBox(
+              constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.8),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text('Soruya Git', style: Theme.of(context).textTheme.titleLarge),
                   ),
-                  itemCount: _questions.length,
-                  itemBuilder: (context, index) {
-                    final bool isCurrent = _currentPage == index;
-                    final bool isAnswered = _selectedAnswers.containsKey(index);
-                    Color boxColor = colorScheme.surface;
-                    Color borderColor = colorScheme.outline.withOpacity(0.5);
-                    Color textColor = colorScheme.onSurfaceVariant;
-                    if (isAnswered) {
-                       boxColor = colorScheme.primary.withOpacity(0.1);
-                       borderColor = colorScheme.primary;
-                       textColor = colorScheme.primary;
-                    }
-                    if (isCurrent) {
-                       boxColor = colorScheme.primary;
-                       borderColor = colorScheme.primary;
-                       textColor = colorScheme.onPrimary;
-                    }
-                    return GestureDetector(
-                      onTap: () {
-                         Navigator.pop(context);
-                         _pageController.jumpToPage(index);
-                      },
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 200),
-                        decoration: BoxDecoration(
-                           color: boxColor,
-                           borderRadius: BorderRadius.circular(8),
-                           border: Border.all(color: borderColor, width: 1.5),
-                        ),
-                        child: Center(
-                          child: Text(
-                            '${index + 1}',
-                            style: TextStyle(fontWeight: FontWeight.bold, color: textColor, fontSize: 14),
-                          ),
-                        ),
+                  const Divider(height: 1),
+                  Expanded(
+                    child: GridView.builder(
+                      padding: const EdgeInsets.all(20),
+                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 6, mainAxisSpacing: 10, crossAxisSpacing: 10, childAspectRatio: 1.0,
                       ),
-                    );
-                  },
-                ),
+                      itemCount: _questions.length,
+                      itemBuilder: (context, index) {
+                        final bool isCurrent = _currentPage == index;
+                        final bool isAnswered = _selectedAnswers.containsKey(index); 
+                        Color boxColor = colorScheme.surface;
+                        Color borderColor = colorScheme.outline.withOpacity(0.5);
+                        Color textColor = colorScheme.onSurfaceVariant;
+                        if (isAnswered) {
+                           boxColor = colorScheme.primary.withOpacity(0.1);
+                           borderColor = colorScheme.primary;
+                           textColor = colorScheme.primary;
+                        }
+                        if (isCurrent) {
+                           boxColor = colorScheme.primary;
+                           borderColor = colorScheme.primary;
+                           textColor = colorScheme.onPrimary;
+                        }
+                        return GestureDetector(
+                          onTap: () {
+                             Navigator.pop(context);
+                             _pageController.jumpToPage(index);
+                          },
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            decoration: BoxDecoration(
+                               color: boxColor,
+                               borderRadius: BorderRadius.circular(8),
+                               border: Border.all(color: borderColor, width: 1.5),
+                            ),
+                            child: Center(
+                              child: Text(
+                                '${index + 1}',
+                                style: TextStyle(fontWeight: FontWeight.bold, color: textColor, fontSize: 14),
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            );
+          },
         );
       },
     );
   }
   
-  // build (Ana UI)
+  void _showSubmitConfirmation() {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
+     final notAnswered = _questions.length - _selectedAnswers.length;
+     showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+         title: const Text('Sınavı Bitir'),
+         content: Text(
+           notAnswered > 0 
+           ? '$notAnswered adet boş sorunuz var. Yine de sınavı bitirmek istediğinizden emin misiniz?'
+           : 'Sınavı bitirmek istediğinizden emin misiniz?'
+         ),
+         actions: [
+           TextButton(onPressed: () => Navigator.pop(context), child: const Text('İptal')),
+           ElevatedButton(
+             style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+             onPressed: () {
+                Navigator.pop(context);
+                _submitTrialExam();
+             },
+             child: const Text('Bitir'),
+           ),
+         ],
+      ),
+    );
+  }
+  
+  // === build METODU (GÜNCELLENDİ: Reklam Eklendi) ===
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -427,6 +496,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
              )
           ],
         ),
+        // --- GÜNCELLEME: body ve bottomNavigationBar eklendi ---
         body: _isLoading
             ? const Center(child: CircularProgressIndicator())
             : _fetchError != null
@@ -450,18 +520,38 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
                     _buildNavigationControls(colorScheme, textTheme),
                   ],
                 ),
+        // Banner reklam için 'bottomNavigationBar' kullanmak en güvenli yoldur.
+        // İçeriği (özellikle _buildNavigationControls'ü) İTMEZ.
+        // Not: _buildNavigationControls'ün altındaki 'padding.bottom' reklam
+        // yüksekliğini hesaba katmalıdır.
+        bottomNavigationBar: _buildBannerAdWidget(),
+        // --- GÜNCELLEME BİTTİ ---
       ),
     );
   }
 
+  // --- YENİ WIDGET: Banner Reklamı Göster ---
+  Widget? _buildBannerAdWidget() {
+    // Sadece reklam yüklendiyse ve hata yoksa göster
+    if (_isBannerLoaded && _bannerAd != null) {
+      return Container(
+        height: _bannerAd!.size.height.toDouble(),
+        color: Theme.of(context).scaffoldBackgroundColor, 
+        child: AdWidget(ad: _bannerAd!),
+      );
+    }
+    return null; // Yüklenmediyse veya PRO ise boş alan
+  }
+  // --- BİTTİ ---
+
   // Soru Sayfası
   Widget _buildQuestionPage(DocumentSnapshot question, int questionIndex) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
      final questionData = question.data() as Map<String, dynamic>? ?? {};
      final questionText = questionData['soruMetni'] ?? 'Soru yüklenemedi';
      final options = List<String>.from(questionData['secenekler'] ?? []);
      final String? imageUrl = questionData['imageUrl'] as String?;
      final int? selectedOptionIndex = _selectedAnswers[questionIndex];
-
      return SingleChildScrollView(
        padding: const EdgeInsets.all(20.0),
        physics: const BouncingScrollPhysics(),
@@ -521,6 +611,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
 
   // Navigasyon Başlığı
   Widget _buildNavigationHeader(ColorScheme colorScheme, TextTheme textTheme) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     return Container(
       height: 60,
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
@@ -553,13 +644,19 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
     );
   }
 
-  // Navigasyon Kontrolleri
+  // --- GÜNCELLEME: Navigasyon Kontrolleri (Reklam payı için) ---
   Widget _buildNavigationControls(ColorScheme colorScheme, TextTheme textTheme) {
      final bool isFirst = _currentPage == 0;
      final bool isLast = _currentPage == _questions.length - 1;
 
+     // Reklam yüklendiyse, butonların altındaki 'padding'i kaldır
+     // (çünkü reklam alanı zaten o boşluğu sağlıyor)
+     final double bottomPadding = _isBannerLoaded 
+        ? 16.0 // Sadece normal padding
+        : MediaQuery.of(context).padding.bottom + 16.0; // Güvenli alan + padding
+
      return Container(
-       padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, MediaQuery.of(context).padding.bottom + 16.0),
+       padding: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, bottomPadding), // <<< GÜNCELLENDİ
        decoration: BoxDecoration(
          color: colorScheme.surface,
          boxShadow: [ BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, -5)) ],
@@ -597,32 +694,5 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
          ],
        ),
      );
-  }
-  
-  // Sınavı Bitir Onay Dialog'u
-  void _showSubmitConfirmation() {
-     final notAnswered = _questions.length - _selectedAnswers.length;
-     showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-         title: const Text('Sınavı Bitir'),
-         content: Text(
-           notAnswered > 0 
-           ? '$notAnswered adet boş sorunuz var. Yine de sınavı bitirmek istediğinizden emin misiniz?'
-           : 'Sınavı bitirmek istediğinizden emin misiniz?'
-         ),
-         actions: [
-           TextButton(onPressed: () => Navigator.pop(context), child: const Text('İptal')),
-           ElevatedButton(
-             style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-             onPressed: () {
-                Navigator.pop(context);
-                _submitTrialExam();
-             },
-             child: const Text('Bitir'),
-           ),
-         ],
-      ),
-    );
   }
 }

@@ -1,75 +1,1198 @@
 {
   "kategoriler": [
-    { "id": "tarih", "ad": "Tarih", "sira": 1 },
+    { "id": "turkce", "ad": "Türkçe", "sira": 1 },
     { "id": "matematik", "ad": "Matematik", "sira": 2 },
-    { "id": "cografya", "ad": "Coğrafya", "sira": 3 },
-    { "id": "turkce", "ad": "Türkçe", "sira": 4 },
+    { "id": "tarih", "ad": "Tarih", "sira": 3 },
+    { "id": "cografya", "ad": "Coğrafya", "sira": 4 },
     { "id": "vatandaslik", "ad": "Vatandaşlık", "sira": 5 }
   ],
   "quizzes": [
+{
+  "id": "islamiyet_oncesi_turk_devletleri_1",
+  "baslik": "İslamiyet Öncesi Türk Devletleri",
+  "kategoriId": "tarih",
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
     {
-      "id": "vatandaslik_anayasa_1",
-      "baslik": "Anayasa Bilgisi Temel",
-      "kategoriId": "vatandaslik",
-      "soruSayisi": 4,
-      "sureDakika": 8,
-      "sorular": [
-        {"soruMetni": "Şu an yürürlükte olan anayasa kaç yılında kabul edilmiştir?", "dogruCevapIndex": 2, "secenekler": ["1921", "1961", "1982", "1924"]},
-        {"soruMetni": "Anayasanın ilk üç maddesi değiştirilebilir mi?", "dogruCevapIndex": 1, "secenekler": ["Evet, TBMM kararıyla", "Hayır, değiştirilemez ve değiştirilmesi teklif edilemez", "Evet, referandumla", "Evet, Cumhurbaşkanı kararıyla"]},
-        {"soruMetni": "Anayasa Mahkemesi kaç üyeden oluşur?", "dogruCevapIndex": 0, "secenekler": ["15", "11", "17", "9"]},
-        {"soruMetni": "Milletvekili seçilme yaşı kaçtır?", "dogruCevapIndex": 0, "secenekler": ["18", "21", "25", "30"]}
+      "soruMetni": "Asya Hun Devleti'nin en parlak dönemini yaşatan ve orduda 'onlu sistemi' kurarak dünya askeri tarihini etkileyen hükümdar aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Teoman",
+        "Mete Han",
+        "Ki-ok",
+        "Balamir"
       ]
     },
     {
-      "id": "tarih_osmanli_1",
-      "baslik": "Osmanlı Yükselme",
-      "kategoriId": "tarih",
-      "soruSayisi": 3,
-      "sureDakika": 6,
-      "sorular": [
-        {"soruMetni": "İstanbul hangi padişah döneminde fethedilmiştir?", "dogruCevapIndex": 0, "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"]},
-        {"soruMetni": "Padişah imzasına ne ad verilir?", "dogruCevapIndex": 1, "secenekler": ["Ferman", "Tuğra", "Berat", "Hatt-ı Hümayun"]},
-        {"soruMetni": "Kutsal Roma İmparatorluğu'na karşı ilk büyük sefer hangisidir?", "dogruCevapIndex": 2, "secenekler": ["Preveze Deniz Savaşı", "Mohaç Meydan Muharebesi", "I. Viyana Kuşatması", "Rodos'un Fethi"]}
+      "soruMetni": "Aşağıdakilerden hangisi, Hunların batıya doğru hareketiyle başlayan Kavimler Göçü'nün (M.S. 375) siyasi sonuçlarından biri olarak gösterilemez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Roma İmparatorluğu'nun Batı ve Doğu olarak ikiye ayrılması",
+        "Avrupa'da feodalite (derebeylik) rejiminin ortaya çıkması",
+        "Avrupa Hun Devleti'nin kurulması",
+        "Skolastik düşüncenin zayıflaması"
       ]
     },
     {
-      "id": "matematik_temel_1",
-      "baslik": "Temel İşlemler",
-      "kategoriId": "matematik",
-      "soruSayisi": 3,
-      "sureDakika": 5,
-      "sorular": [
-        {"soruMetni": "2 + 2 * 2 kaçtır?", "dogruCevapIndex": 1, "secenekler": ["8", "6", "10", "4"]},
-        {"soruMetni": "100 sayısının %50'si kaçtır?", "dogruCevapIndex": 0, "secenekler": ["50", "25", "100", "5"]},
-        {"soruMetni": "Bir düzine kaç tanedir?", "dogruCevapIndex": 2, "secenekler": ["10", "6", "12", "20"]}
+      "soruMetni": "'Tanrı'nın Kırbacı' (Flagellum Dei) olarak bilinen ve Bizans'ı Margos ve Anatolios antlaşmalarıyla vergiye bağlayan Avrupa Hun hükümdarı kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Atilla",
+        "Balamir",
+        "Uldız",
+        "Rua"
       ]
     },
     {
-      "id": "cografya_turkiye_1",
-      "baslik": "Türkiye Coğrafyası",
-      "kategoriId": "cografya",
-      "soruSayisi": 3,
-      "sureDakika": 6,
-      "sorular": [
-        {"soruMetni": "Türkiye'nin en yüksek dağı hangisidir?", "dogruCevapIndex": 0, "secenekler": ["Ağrı Dağı", "Erciyes Dağı", "Süphan Dağı", "Kaçkar Dağı"]},
-        {"soruMetni": "Tuz Gölü hangi bölgemizdedir?", "dogruCevapIndex": 1, "secenekler": ["Doğu Anadolu", "İç Anadolu", "Ege", "Akdeniz"]},
-        {"soruMetni": "Fırat Nehri'nin en büyük kolu hangisidir?", "dogruCevapIndex": 0, "secenekler": ["Murat Nehri", "Karasu Nehri", "Dicle Nehri", "Aras Nehri"]}
+      "soruMetni": "Tarihte 'Türk' adını resmi devlet adı olarak kullanan ilk Türk devleti aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Asya Hun Devleti",
+        "Uygur Kağanlığı",
+        "Göktürk Kağanlığı",
+        "Avrupa Hun Devleti"
       ]
     },
     {
-      "id": "turkce_yazim_1",
-      "baslik": "Yazım Kuralları",
-      "kategoriId": "turkce",
-      "soruSayisi": 3,
-      "sureDakika": 5,
-      "sorular": [
-        {"soruMetni": "Aşağıdaki kelimelerden hangisinin yazımı doğrudur?", "dogruCevapIndex": 2, "secenekler": ["Herkez", "Yalnış", "Herkes", "Yanlız"]},
-        {"soruMetni": "'de' bağlacı hangi cümlede yanlış yazılmıştır?", "dogruCevapIndex": 0, "secenekler": ["Bende geliyorum.", "Evde kimse yok.", "Sen de gördün mü?", "Yarın da yağmur yağacak."]},
-        {"soruMetni": "Aşağıdakilerden hangisi bir 'zamir' (adıl) değildir?", "dogruCevapIndex": 3, "secenekler": ["Ben", "Şu", "Onlar", "Güzel"]}
+      "soruMetni": "İlk Türk devletlerinde görülen 'İkili Teşkilat' (Doğu-Batı yönetimi) anlayışının temel amacı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Taht kavgalarını tamamen engellemek",
+        "Ülke yönetimini kolaylaştırmak",
+        "Çin'in siyasi modelini örnek almak",
+        "Federatif bir yapıya geçiş yapmak"
+      ]
+    },
+    {
+      "soruMetni": "Türk tarihi ve edebiyatının ilk yazılı kaynakları olan Orhun Abideleri (Göktürk Kitabeleri), aşağıdaki Türk devletlerinden hangisi döneminde dikilmiştir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Asya Hun Devleti",
+        "I. Göktürk Kağanlığı",
+        "Uygur Kağanlığı",
+        "II. Göktürk (Kutluk) Devleti"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türk devletleri arasında, Maniheizm dinini benimseyerek yerleşik hayata geçen ve tarımsal faaliyetlere başlayan ilk Türk devleti hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Göktürkler",
+        "Hazarlar",
+        "Uygurlar",
+        "Türgişler"
+      ]
+    },
+    {
+      "soruMetni": "Uygurların yerleşik hayata geçmelerinin aşağıdakilerden hangisine ortam hazırladığı savunulamaz?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kalıcı mimari eserler (tapınaklar, saraylar) bırakmalarına",
+        "Tarım kültürünün gelişmesine",
+        "Yazılı kültürün ve matbaanın gelişmesine",
+        "Savaşçılık yeteneklerinin artmasına"
+      ]
+    },
+    {
+      "soruMetni": "Hem Asya'da hem de Avrupa'da devlet kuran, İstanbul'u Sasanilerle birlikte iki kez (619 ve 626) kuşatan Türk devleti aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Hunlar",
+        "Peçenekler",
+        "Avarlar",
+        "Bulgarlar"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde 'Kurultay' (Toy/Kengeş) ile ilgili aşağıda verilen bilgilerden hangisi yanlıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Devletin en üst düzey danışma meclisidir.",
+        "Kağanın yetkilerini 'Töre'ye göre sınırlayabilirdi.",
+        "Sadece hanedan üyelerinin katılımıyla toplanırdı.",
+        "Kağan seçiminde ve savaş kararında etkili olurdu."
+      ]
+    },
+    {
+      "soruMetni": "Emevilerin Orta Asya'da ilerleyişini durdurarak bölgenin Araplaşmasını engelleyen ve hükümdarı Baga Tarkan adına para bastıran Türk devleti aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Göktürkler",
+        "Türgişler",
+        "Karluklar",
+        "Hazarlar"
+      ]
+    },
+    {
+      "soruMetni": "751 yılındaki Talas Savaşı'nda Çin'e karşı Abbasilerin yanında yer alarak savaşın kazanılmasında rol oynayan ve İslamiyet'i toplu olarak kabul eden ilk Türk topluluğu (boyu) aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Karluklar",
+        "Oğuzlar (Yabgu Devleti)",
+        "Bulgarlar (İtil)",
+        "Uygurlar"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türk devletlerinde sosyal yapıyı oluşturan unsurların küçükten büyüğe doğru sıralanışı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Oguş (Aile) - Urug (Soy) - Boy (Kabile) - Budun (Millet) - İl (Devlet)",
+        "Boy - Budun - Urug - Oguş - İl",
+        "Urug - Oguş - Boy - İl - Budun",
+        "Oguş - Boy - Urug - Budun - İl"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi, ilk Türk devletlerinde 'Töre' (Törü) olarak adlandırılan sözlü hukuk kurallarının özellikleri arasında yer almaz?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kaynakları arasında Kağan emirleri ve Kurultay kararları bulunur.",
+        "Zamana ve koşullara göre değişmez, dogmatik kurallardır.",
+        "Hem yönetenleri (Kağan dahil) hem de yönetilenleri bağlardı.",
+        "Uygurlar döneminde yerleşik hayata geçişle birlikte yazılı hale getirilmiştir."
+      ]
+    },
+    {
+      "soruMetni": "Ötüken'i merkez olarak kullanan son Türk devleti olan ve 'Manas Destanı' ile bilinen Türk devleti/topluluğu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kırgızlar",
+        "Göktürkler",
+        "Uygurlar",
+        "Karluklar"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türklerde 'Gök Tanrı' inancı ile ilgili aşağıdakilerden hangisi söylenemez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Tek tanrılı (monoteist) bir yapıya sahiptir.",
+        "Ölümden sonra yaşama (ahiret) inancı vardır.",
+        "Kağan'ın gücünün ('Kut') tanrısal kaynaklı olduğuna inanılır.",
+        "İbadetler için yapılmış putlara (fetişizm) tapınılırdı."
+      ]
+    },
+    {
+      "soruMetni": "Oğuz Kağan Destanı aşağıdaki Türk devletlerinden hangisiyle ilişkilendirilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Göktürkler",
+        "Uygurlar",
+        "Asya Hunları",
+        "Avrupa Hunları"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki Türk devletlerinden hangisi, kurulduğu coğrafya bakımından diğerlerinden farklıdır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Asya Hun Devleti",
+        "Göktürk Kağanlığı",
+        "İtil Bulgar Devleti",
+        "Uygur Kağanlığı"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde 'Kut' anlayışı, kağana yönetme yetkisinin Tanrı tarafından verildiğine inanılması esasına dayanıyordu. Bu durumun, öncelikle aşağıdakilerden hangisine zemin hazırladığı söylenebilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kağanın yetkilerinin Kurultay tarafından tamamen kısıtlanmasına",
+        "Demokratik bir yönetim anlayışının gelişmesine",
+        "Hanedan üyeleri arasında taht kavgalarının yaşanmasına",
+        "Ülkede din birliğinin sağlanamamasına"
+      ]
+    },
+    {
+      "soruMetni": "Türk tarihinde, Bizans ordusunda paralı askerlik yaparken Malazgirt Savaşı (1071) sırasında Selçuklu saflarına geçerek savaşın seyrini değiştiren Türk topluluğu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Peçenekler",
+        "Kumanlar (Kıpçaklar)",
+        "Avarlar",
+        "Türgişler"
       ]
     }
-  ],
-  "trialExams": [
+  ]
+},
+{
+  "id": "islamiyet_oncesi_turk_devletleri_2",
+  "baslik": "İslamiyet Öncesi Türk Devletleri - 2",
+  "kategoriId": "tarih",
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Göktürklerin 50 yıl süren Çin esaretinden sonra İlteriş Kağan liderliğinde bağımsızlıklarını kazanmaları, Türk tarihindeki hangi özelliğin güçlü bir göstergesidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yerleşik hayata geçme arzusunun",
+        "Farklı dinlere karşı hoşgörünün",
+        "Bağımsızlık (Oksızlık) mücadelesi karakterinin",
+        "Ticari yollara hakim olma hedefinin"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet'i kabul eden ilk Türk devleti olan İtil (Volga) Bulgar Devleti'nin hükümdarı, Abbasi halifesinden din alimleri ve mimarlar istemiştir. Bu hükümdar aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Almış Han",
+        "Baga Tarkan",
+        "Bilge Kül Kadir Han",
+        "Bögü Kağan"
+      ]
+    },
+    {
+      "soruMetni": "Uygurların, tarım yaptıkları bölgelerde sulama kanalları (Tötö Kanalı gibi) inşa etmeleri, onların öncelikle hangi alanda geliştiklerini gösterir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sadece askeri mimaride",
+        "Şehircilik ve mühendislikte",
+        "Göçebe yaşam tarzında",
+        "Sözlü hukuk kurallarında"
+      ]
+    },
+    {
+      "soruMetni": "'Codex Cumanicus' (Kuman Kitabı) adlı sözlük, hangi Türk topluluğunun dili üzerine Latin, Fars ve Alman misyonerler tarafından hazırlanmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kumanlar (Kıpçaklar)",
+        "Karluklar",
+        "Oğuzlar",
+        "Kırgızlar"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde Kağan'ın eşi olan 'Hatun'un (Katun) siyasi yetkilere sahip olması, elçi kabul edebilmesi ve Kurultay'a katılması, aşağıdakilerden hangisinin bir göstergesidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Devletin teokratik bir yapıya sahip olduğunun",
+        "Toplumsal hayatta kadının statüsünün yüksek olduğunun",
+        "Ülkenin 'Hatun' adına yönetildiğinin",
+        "Özel mülkiyetin gelişmediğinin"
+      ]
+    },
+    {
+      "soruMetni": "II. Göktürk (Kutluk) Devleti'nin kurucusu İlteriş Kağan'ın en büyük yardımcısı olan ve \"Apa Tarkan\" unvanını kullanan, Türk tarihinin ilk \"veziri\" ve \"tarihçisi\" (yazar) olarak kabul edilen devlet adamı kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Vezir Tonyukuk",
+        "Bilge Kağan",
+        "Kültigin",
+        "Kapgan Kağan"
+      ]
+    },
+    {
+      "soruMetni": "Göktürklerin, Bizans ve Sasani imparatorlukları ile aynı dönemde var olmaları ve bu devletlerle yoğun diplomatik (elçi gönderme/kabul etme) ve askeri ilişkilere girmeleri, aşağıdakilerden hangisinin kanıtıdır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bu devletlerin hukuk sistemini benimsediklerinin",
+        "Dünya siyasetinde denge unsuru olan bir güç olduklarının",
+        "Çin ile ilişkilerini tamamen kestiklerinin",
+        "Yerleşik hayata geçtiklerinin"
+      ]
+    },
+    {
+      "soruMetni": "Orta Asya Türk tarihi ile ilgili araştırmalar yapan ve Orhun Abideleri'ni ilk kez okuyarak (çözen) bilim dünyasına tanıtan Danimarkalı dil bilimci aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Vilhelm Thomsen",
+        "Wilhelm Radloff",
+        "Louis Bazin",
+        "Németh Gyula"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde göçebe yaşam tarzı (bozkır kültürü), aşağıdaki sanatlardan hangisinin gelişmesini yavaşlatmış veya engellemiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Maden işlemeciliği (Demircilik)",
+        "Dokumacılık (Halı/Kilim)",
+        "Kalıcı mimari",
+        "Dericilik (Koşum takımları)"
+      ]
+    },
+    {
+      "soruMetni": "Avrupa Hun hükümdarı Atilla, Batı Roma İmparatorluğu üzerine sefere çıkmış ve Roma'ya kadar ilerlemiştir. Papa I. Leo'nun ricası üzerine Roma'yı almaktan vazgeçmiştir. Bu seferin adı nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Galya Seferi",
+        "Balkan Seferi",
+        "İtalya Seferi",
+        "Anatolios Seferi"
+      ]
+    },
+    {
+      "soruMetni": "Uygur alfabesi, hangi alfabeden etkilenerek oluşturulmuştur ve daha sonra Moğollar tarafından da kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Sogd Alfabesi",
+        "Çin Alfabesi",
+        "Kiril Alfabesi",
+        "Runik (Göktürk) Alfabe"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türk devletlerinin İpek Yolu üzerinde hakimiyet kurmak için Çin, Sasani ve Bizans gibi devletlerle sürekli mücadele etmesi, onların en çok hangi alana önem verdiklerini gösterir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Dini yayılmacılığa",
+        "Ekonomik çıkarlara",
+        "Deniz ticaretine",
+        "Tarımsal üretime"
+      ]
+    },
+    {
+      "soruMetni": "Türk tarihinde \"Bozkırın Kuyumcuları\" olarak bilinen ve altın işlemeciliğinde (Hayvan Üslubu) çok ileri giden, ancak tam teşekküllü bir devletten çok bir topluluk olarak var olan kavim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kırgızlar",
+        "İskitler (Sakalar)",
+        "Karluklar",
+        "Türgişler"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde hükümdarın \"Töre\"ye uymak zorunda olması, aksi takdirde \"Kut\"unun Tanrı tarafından geri alınacağına inanılması, aşağıdakilerden hangisini sağlamaya yönelik bir kontrol mekanizmasıdır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Hükümdarın keyfi ve adaletsiz yönetimini engellemek",
+        "Göçebe yaşam tarzını korumak",
+        "Yeni dinlerin benimsenmesini hızlandırmak",
+        "Ordunun \"onlu sistem\"e göre yapılandırılmasını sağlamak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki Türk devletlerinden hangisi, kurulduğu coğrafya bakımından diğerlerinden belirgin bir şekilde farklıdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Karluklar",
+        "Göktürkler",
+        "Uygurlar",
+        "Avarlar"
+      ]
+    },
+    {
+      "soruMetni": "\"Ergenekon\" ve \"Bozkurt\" destanları, hangi Türk devletinin kuruluşunu ve yeniden doğuşunu anlatan milli destanlarıdır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Asya Hunları",
+        "Uygurlar",
+        "Göktürkler",
+        "Kırgızlar"
+      ]
+    },
+    {
+      "soruMetni": "I. Göktürk Devleti'nde devletin batı kanadını \"Yabgu\" unvanıyla yöneten ve Sasanilere karşı Bizans ile ilk diplomatik ilişkileri kuran devlet adamı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "İstemi Yabgu",
+        "Bumin Kağan",
+        "Mukan Kağan",
+        "Tapo Kağan"
+      ]
+    },
+    {
+      "soruMetni": "II. Göktürk (Kutluk) Devleti, Çin esaretine karşı bağımsızlık mücadelesi vererek kurulmuştur. Bu devletin kurucusu olan ve \"İlteriş\" (Devleti derleyen, toparlayan) unvanını alan hükümdar kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Bilge Kağan",
+        "Kapgan Kağan",
+        "Kutluk Kağan",
+        "Bumin Kağan"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi İslamiyet öncesi Türk devletlerindeki \"ordu-millet\" anlayışını en iyi açıklar?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ordunun sadece hanedan üyelerinden oluşması",
+        "Her Türk bireyinin potansiyel asker sayılması",
+        "Ordunun ücretli ve yabancı askerlerden oluşması",
+        "Sadece savaş tehlikesi olduğunda ordu toplanması"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz'in kuzeyinde yaşamış, Rusların 'İgor Destanı'na ve 'Dede Korkut Hikayeleri'ne konu olmuş Türk topluluğu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Hazarlar",
+        "Avarlar",
+        "Peçenekler",
+        "Kıpçaklar (Kumanlar)"
+      ]
+    }
+  ]
+},
+{
+  "id": "islamiyet_oncesi_turk_devletleri_3",
+  "baslik": "İslamiyet Öncesi Türk Devletleri - 3",
+  "kategoriId": "tarih",
+  "soruSayisi": 15,
+  "sureDakika": 15,
+  "sorular": [
+    {
+      "soruMetni": "1071 Malazgirt Savaşı sırasında Bizans ordusunda paralı askerken, Selçuklu ordusunun Türk olduğunu fark ederek Sultan Alparslan'ın tarafına geçen iki Türk topluluğu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Karluklar ve Kırgızlar",
+        "Avarlar ve Bulgarlar",
+        "Peçenekler ve Oğuzlar (Uzlar)",
+        "Türgişler ve Hazarlar"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türk devletlerinde 'hükümet' veya 'bakanlar kurulu' anlamında kullanılan terim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Ayukı",
+        "Kurultay",
+        "Tudun",
+        "Yarlığ"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde Kağan'dan sonra gelen en yetkili kişi olan vezir (başbakan) için kullanılan unvan aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Aygucı",
+        "Şad",
+        "Yabgu",
+        "Tigin"
+      ]
+    },
+    {
+      "soruMetni": "Uygurların, Soğd alfabesini geliştirerek oluşturdukları ve yerleşik hayata geçişle birlikte yaygınlaşan alfabe aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Orhun Alfabesi",
+        "Uygur Alfabesi",
+        "Latin Alfabesi",
+        "Brahmi Alfabesi"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türklerde, ölen kişinin mezarının başına, hayattayken öldürdüğü düşman sayısını temsilen dikilen küçük taş heykellere ne ad verilirdi?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kurgan",
+        "Balbal",
+        "Stupa",
+        "Bengütaş"
+      ]
+    },
+    {
+      "soruMetni": "Göktürklere ait olan ve bir dağın içinde sıkışıp kaldıktan sonra, bir demirci önderliğinde dağı eriterek (Bozkurt'un rehberliğinde) yurda dönüşü anlatan destan aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Oğuz Kağan Destanı",
+        "Göç Destanı",
+        "Ergenekon Destanı",
+        "Türeyiş Destanı"
+      ]
+    },
+    {
+      "soruMetni": "Uygurlara ait olan ve ülkedeki kıtlığın nedenini kutsal 'Yada Taşı'nın Çinlilere verilmesine bağlayarak yaşanan büyük göçü anlatan destan aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Türeyiş Destanı",
+        "Göç Destanı",
+        "Manas Destanı",
+        "Ergenekon Destanı"
+      ]
+    },
+    {
+      "soruMetni": "Çin'in kuzeyinde kurulan, Budizm'i benimseyen ve zamanla Çin kültürü içinde asimile olarak Türklük özelliklerini kaybeden Türk devleti aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Türgişler",
+        "Tabgaçlar",
+        "Akhunlar (Eftalitler)",
+        "Karluklar"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türklerde 'Kut' anlayışı aşağıdakilerden hangisini ifade eder?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Devletin sözlü hukuk kurallarını",
+        "Ülkenin doğu ve batı olarak yönetilmesini",
+        "Hükümdara yönetme yetkisinin Tanrı tarafından verilmesini",
+        "Ordunun onlu sisteme göre teşkilatlanmasını"
+      ]
+    },
+    {
+      "soruMetni": "I. Göktürk Devleti, İpek Yolu hakimiyeti için Sasanilerle ittifak kurarak aşağıdaki devletlerden hangisinin yıkılmasını sağlamıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Akhunlar (Eftalitler)",
+        "Asya Hunları",
+        "Bizans İmparatorluğu",
+        "Tabgaçlar"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türk sanatında, özellikle Uygurlar döneminde Maniheizm ve Budizm'in etkisiyle gelişen 'duvar resmi' sanatına ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Fresk",
+        "Minyatür",
+        "Tezhip",
+        "Vitray"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türk devletlerinde Kağan'ın emirlerine ve fermanlarına verilen isim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yarlığ",
+        "Bitig",
+        "Tamga",
+        "Tudun"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türklerde Gök Tanrı inancı dışındaki yaygın inanç sistemlerinde (Şamanizm) din adamlarına verilen genel isim nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kam (Baksı)",
+        "Ataman",
+        "Böri",
+        "Subaşı"
+      ]
+    },
+    {
+      "soruMetni": "Bizans kaynaklarında \"devlet kuramayan\" ancak \"ordu kurabilen\" bir topluluk olarak nitelendirilen, sık sık Bizans ordusunda paralı askerlik yapan ve Çaka Bey ile İstanbul kuşatmasına katılan Türk topluluğu hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kıpçaklar",
+        "Hazarlar",
+        "Avarlar",
+        "Peçenekler"
+      ]
+    },
+    {
+      "soruMetni": "İlk Türk devletlerinde vergi toplayan görevliye verilen ad aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Tudun",
+        "Tarkan",
+        "Apa",
+        "Bitigçi"
+      ]
+    }
+  ]
+},
+{
+  "id": "tarih_turk_islam_1",
+  "baslik": "İlk Türk-İslam Devletleri-1",
+  "kategoriId": "tarih",
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Karahanlıların İslamiyet'i kabul etmelerine rağmen Uygur alfabesini kullanmaya devam etmeleri, \"Han, Hakan\" gibi eski Türk unvanlarını sürdürmeleri ve ikili teşkilat yapısını korumaları, onların hangi özelliğini ön plana çıkarmaktadır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İslamiyet'i tam olarak benimsemediklerini",
+        "Ulusal kimliklerini (benliklerini) korumaya özen gösterdiklerini",
+        "Çin kültürünün etkisi altında kaldıklarını",
+        "Yerleşik hayata geçemediklerini"
+      ]
+    },
+    {
+      "soruMetni": "Gazneli Mahmut'un, Abbasi Halifesini Şii Büveyhoğulları'nın baskısından kurtarması üzerine, Halife'nin Gazneli Mahmut'a \"Sultan\" unvanını vermesi, aşağıdakilerden hangisinin önemli bir göstergesidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Gaznelilerin resmen halifeliği devraldığının",
+        "İslam dünyasındaki mezhep çatışmalarının sona erdiğinin",
+        "İslam dünyasının siyasi liderliğinin Türk hanedanlarına geçtiğinin",
+        "Gaznelilerin sadece Hindistan ile ilgilendiğinin"
+      ]
+    },
+    {
+      "soruMetni": "1040 yılında Gazneliler ile Büyük Selçuklular arasında yapılan Dandanakan Savaşı'nın sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Büyük Selçuklu Devleti'nin resmen kurulması",
+        "Gazneli Devleti'nin yıkılış sürecine girmesi",
+        "Anadolu'nun kapılarının kesin olarak Türklere açılması",
+        "Horasan ve çevresinin Selçuklu hakimiyetine girmesi"
+      ]
+    },
+    {
+      "soruMetni": "Büyük Selçuklu Hükümdarı Tuğrul Bey'in 1055'te Bağdat Seferi ile Abbasi Halifesini himaye altına alması ve \"Doğu'nun ve Batı'nın Sultanı\" unvanını almasının en önemli sonucu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Halifeliğin Türklere geçmesi",
+        "Dini ve siyasi otoritenin birbirinden ayrılması (Sultan siyasi, Halife dini lider)",
+        "Bizans İmparatorluğu'nun Selçukluların üstünlüğünü tanıması",
+        "Batınilik faaliyetlerinin sona ermesi"
+      ]
+    },
+    {
+      "soruMetni": "Büyük Selçuklu Devleti'nde Vezir Nizamülmülk tarafından kurulan Nizamiye Medreselerinin kurulma amaçları arasında aşağıdakilerden hangisi gösterilemez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Batınilik (Haşhaşilik) hareketinin yıkıcı propagandalarına karşı ilmi mücadele yürütmek",
+        "Devletin idari kademeleri için vasıflı memur yetiştirmek",
+        "Sünni İslam anlayışını güçlendirmek ve yaymak",
+        "Gayrimüslim tebaanın devlete bağlılığını artırmak"
+      ]
+    },
+    {
+      "soruMetni": "Mısır'da kurulan ilk Türk-İslam devleti olan ve \"Maristan\" adı verilen ücretsiz hastaneler ve eczaneler kurarak sosyal devlet anlayışının ilk örneklerini veren devlet hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İhşidîler",
+        "Tolunoğulları",
+        "Eyyubiler",
+        "Memlükler"
+      ]
+    },
+    {
+      "soruMetni": "1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alarak III. Haçlı Seferi'nin başlamasına neden olan hükümdar aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sultan Baybars",
+        "Nureddin Zengi",
+        "Selahaddin Eyyubi",
+        "Kalavun"
+      ]
+    },
+    {
+      "soruMetni": "Veraset sistemi (tahta geçiş) bakımından diğer Türk-İslam devletlerinden farklılık gösteren ve \"El-Devlet'üt Türkiyye\" (Türkiye Devleti) olarak bilinen, her emirin (komutanın) sultan olma hakkının bulunduğu devlet aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Memlükler",
+        "Harzemşahlar",
+        "Gazneliler",
+        "Anadolu Selçukluları"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Hükümdarı I. Kılıçarslan'ın, I. Haçlı Seferi sonucunda başkenti İznik'ten Konya'ya taşımak zorunda kalmasının temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Konya'nın daha iyi bir tarım merkezi olması",
+        "Moğol istilasının başlaması",
+        "İznik'in Haçlıların eline geçmesi ve stratejik önemini yitirmesi",
+        "Bizans ile barış antlaşması yapılması"
+      ]
+    },
+    {
+      "soruMetni": "1176 Miryokefalon (Yurt Tutan) Savaşı'nın Türk tarihi açısından en önemli sonucu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bizans İmparatorluğu'nun yıkılması",
+        "Anadolu'nun Türk yurdu olduğunun kesinleşmesi ve Bizans'ın Türkleri atma ümidinin sona ermesi",
+        "Haçlı Seferleri'nin başlaması",
+        "Anadolu'da ilk Türk beyliklerinin kurulması"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti'nin kervansaraylar inşa etmesi, liman şehirlerini fethetmesi ve ticari sigorta uygulamaları başlatmasının temel amacı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Haçlı seferlerine karşı önlem almak",
+        "Anadolu'daki Hristiyan nüfusu azaltmak",
+        "Anadolu'yu uluslararası ticaret yollarının merkezi haline getirmek",
+        "Tarımsal üretimi artırmak"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti'nde esnaf ve zanaatkarların örgütlendiği; üyelerine mesleki, ahlaki ve dini eğitim veren, aynı zamanda sosyal yardımlaşmayı sağlayan teşkilatın adı nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İkta",
+        "Gulam",
+        "Ahilik",
+        "Divan-ı Pervane"
+      ]
+    },
+    {
+      "soruMetni": "1240 yılında Anadolu Selçuklu Devleti'nde çıkan ve devletin otoritesini sarsarak zayıflamasına neden olan, Moğol istilasını kolaylaştıran büyük dini ve sosyal nitelikli isyan aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Baba İshak İsyanı",
+        "Şeyh Bedreddin İsyanı",
+        "Kalenderoğlu İsyanı",
+        "Bozoklu Celal İsyanı"
+      ]
+    },
+    {
+      "soruMetni": "1243 Kösedağ Savaşı'nda Moğollara (İlhanlılar) yenilen Anadolu Selçuklu Devleti'nin yıkılış sürecine girmesinin Anadolu'daki en önemli siyasi sonucu ne olmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bizans'ın Anadolu'da tekrar güçlenmesi",
+        "Anadolu'da II. Türk Beylikleri Dönemi'nin başlaması",
+        "Haçlı Seferleri'nin yeniden başlaması",
+        "Ahilik teşkilatının dağılması"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde, hükümdarın erkek çocuklarını (Melik) eyaletlere vali olarak atarken, onların devlet yönetiminde tecrübe kazanmaları için yanlarına verilen tecrübeli devlet adamlarına (eğitmen) ne ad verilirdi?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Atabey",
+        "Subaşı",
+        "Kadı",
+        "Muhtesip"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam mimarisinde, yolcuların, tüccarların ve orduların konaklaması, dinlenmesi ve güvenliğini sağlaması amacıyla ana yollar üzerine kurulan yapılara ne ad verilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bimarhane",
+        "Kervansaray (Ribat)",
+        "Kümbet",
+        "Medrese"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu'da kurulan ilk Türk beylikleri arasında, Sivas, Malatya ve Kayseri civarında hüküm süren, Anadolu'daki ilk medrese olan Yağıbasan Medresesi'ni kuran beylik hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Saltuklular",
+        "Artuklular",
+        "Danişmentliler",
+        "Mengücekliler"
+      ]
+    },
+    {
+      "soruMetni": "UNESCO Dünya Mirası Listesi'nde yer alan, eşsiz taş işçiliğiyle ünlü Divriği Ulu Camii ve Darüşşifası, aşağıdaki Anadolu beyliklerinden hangisinin dönemine aittir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Mengücekliler",
+        "Artuklular",
+        "Çaka Beyliği",
+        "Danişmentliler"
+      ]
+    },
+    {
+      "soruMetni": "Büyük Selçuklu Devleti'nde \"Siyasetname\" adlı eseri kaleme alan, Nizamiye Medreselerini kuran ve İkta sistemini düzenleyen ünlü vezir aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gazali",
+        "Nizamülmülk",
+        "Kaşgarlı Mahmut",
+        "Ömer Hayyam"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde, hizmet veya maaş karşılığında, belirli bir bölgenin vergi gelirlerinin devlete asker beslemesi koşuluyla komutan veya devlet adamlarına bırakılması esasına dayanan toprak sistemi aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Vakıf Sistemi",
+        "Gulam Sistemi",
+        "İkta Sistemi",
+        "Devşirme Sistemi"
+      ]
+    }
+  ]
+},
+{
+  "id": "tarih_turk_islam_2",
+  "baslik": "İlk Türk-İslam Devletleri-2",
+  "kategoriId": "tarih",
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "\"El-Medinetü'l-Fâzıla\" (Erdemli Şehir) adlı eseriyle tanınan ve Aristo'nun felsefesini İslam dünyasına tanıttığı için \"Muallim-i Sani\" (İkinci Öğretmen) olarak bilinen ünlü Türk-İslam filozofu kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İbn-i Sina",
+        "Farabi",
+        "Biruni",
+        "Gazali"
+      ]
+    },
+    {
+      "soruMetni": "Büyük Selçuklu Devleti'nde mali işlerden (gelir-gider) sorumlu olan ve başında \"Müstevfi\" bulunan divan aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Divan-ı Arz",
+        "Divan-ı İşraf",
+        "Divan-ı İnşa (Tuğra)",
+        "Divan-ı İstifa"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde şer'i (dini) hukukun başındaki en üst düzey görevli, yani \"Kadıların Kadısı\" anlamına gelen unvan nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Emir-i Dad",
+        "Kadı'l-kudât",
+        "Muhtesip",
+        "Subaşı"
+      ]
+    },
+    {
+      "soruMetni": "Avrupa'da \"Avicenna\" adıyla tanınan, \"El-Kanun fi't-Tıb\" (Tıbbın Kanunu) adlı eseri yüzyıllarca tıp fakültelerinde okutulan ve \"Şeyh el-Reis\" (Hekimlerin Başı) olarak bilinen bilim insanı kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Farabi",
+        "El-Cezeri",
+        "İbn-i Sina",
+        "İbn-i Rüşd"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde, hükümdarın şahsına bağlı, farklı milletlerden devşirilen veya satın alınan kölelerin özel olarak yetiştirilmesiyle oluşturulan saray ordusuna ne ad verilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İkta Askerleri",
+        "Türkmen Birlikleri",
+        "Gulam (Hassa) Ordusu",
+        "Akıncılar"
+      ]
+    },
+    {
+      "soruMetni": "Karahanlılar döneminde Yusuf Has Hacib tarafından yazılan, \"Mutluluk Veren Bilgi\" anlamına gelen ve Türk-İslam edebiyatının ilk siyasetname örneği kabul edilen eser hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Divânu Lügati't-Türk",
+        "Kutadgu Bilig",
+        "Atabetü'l-Hakayık",
+        "Divan-ı Hikmet"
+      ]
+    },
+    {
+      "soruMetni": "Moğol istilası sırasında yaşanan ve Cengiz Han'ın Türk-İslam dünyasına yönelmesine neden olan \"Otrar Faciası\", aşağıdaki devletlerden hangisinin yıkılışını hızlandırmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gazneliler",
+        "Harzemşahlar",
+        "Büyük Selçuklular",
+        "Anadolu Selçukluları"
+      ]
+    },
+    {
+      "soruMetni": "1402 Ankara Savaşı'nda Osmanlı Hükümdarı Yıldırım Bayezid'i yenilgiye uğratarak Osmanlı Devleti'nde \"Fetret Devri\"nin başlamasına neden olan Türk hükümdarı kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Timur",
+        "Uzun Hasan",
+        "Cengiz Han",
+        "Hülagü Han"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti'nin en parlak dönemini yaşatan, Alanya (Alaiye) ve Sinop'u fethederek Anadolu'da ilk tersaneyi kuran ve \"Sultanü'l-Bahreyn\" (İki Denizin Sultanı) olarak anılan hükümdar kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "II. Kılıçarslan",
+        "I. Gıyaseddin Keyhüsrev",
+        "I. Alaeddin Keykubad",
+        "I. Mesud"
+      ]
+    },
+    {
+      "soruMetni": "1473 Otlukbeli Savaşı'nda Fatih Sultan Mehmet'e yenilen, Kur'an-ı Kerim'i Türkçeye çevirten ve \"Küçük Türk\" olarak bilinen Akkoyunlu hükümdarı kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kara Yülük Osman Bey",
+        "Şah İsmail",
+        "Uzun Hasan",
+        "Cihangir Mirza"
+      ]
+    },
+    {
+      "soruMetni": "Kaşgarlı Mahmut tarafından, Abbasi Halifesine sunulan, Araplara Türkçeyi öğretmek ve Türkçenin zenginliğini göstermek amacıyla yazılan ilk Türk dili sözlüğü ve ansiklopedisi hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kutadgu Bilig",
+        "Divan-ı Hikmet",
+        "Mukaddimetü'l-Edeb",
+        "Divânu Lügati't-Türk"
+      ]
+    },
+    {
+      "soruMetni": "Moğolları 1260 Ayn Calut ve 1277 Elbistan savaşlarında yenilgiye uğratarak Ortadoğu'daki Moğol ilerleyişini kesin olarak durduran Türk devleti aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Eyyubiler",
+        "Harzemşahlar",
+        "Memlükler",
+        "Anadolu Selçukluları"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde çarşı ve pazarlardaki fiyatları, tartı ve ölçü aletlerini, üretilen malın kalitesini denetleyen görevliye ne ad verilirdi?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kadı",
+        "Muhtesip",
+        "Emir-i Dad",
+        "Müstevfi"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam mimarisinde, devlet adamları veya önemli şahsiyetler için inşa edilen, genellikle silindirik veya çokgen gövdeli, üzeri konik (külah) bir çatıyla örtülü anıt mezar yapısına ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kümbet",
+        "Ribat",
+        "Bedesten",
+        "İmarethane"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti'nde, ikta (dirlik) topraklarının kayıtlarını tutan ve arazi dağıtımından sorumlu olan divan görevlisine verilen isim nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Pervaneci",
+        "Müstevfi",
+        "Tuğrai",
+        "Emir-i Arz"
+      ]
+    },
+    {
+      "soruMetni": "Sibernetik (Robotik) biliminin kurucusu kabul edilen, \"Kitâb'ül-Hiyel\" (Mekanik Hareketler) adlı eseriyle tanınan ve otomatik makineler tasarlayan El-Cezeri, aşağıdaki Türk beyliklerinden hangisinin himayesinde yaşamıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Danişmentliler",
+        "Saltuklular",
+        "Artuklular",
+        "Mengücekliler"
+      ]
+    },
+    {
+      "soruMetni": "Edip Ahmet Yükneki tarafından yazılan, \"Hakikatlerin Eşiği\" anlamına gelen, ahlaki öğütler içeren didaktik (öğretici) Karahanlı dönemi eseri aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Atabetü'l-Hakayık",
+        "Divan-ı Hikmet",
+        "Şehname",
+        "Siyasetname"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde, gelirleri cami, medrese, hastane (darüşşifa), imarethane (aşevi) gibi sosyal kurumların masraflarını karşılamak üzere ayrılan topraklara ne ad verilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İkta",
+        "Has",
+        "Vakıf",
+        "Mülk"
+      ]
+    },
+    {
+      "soruMetni": "Büyük Selçuklu Devleti'nde yazışmalardan sorumlu olan ve başında \"Tuğrai\" veya \"Münşi\" bulunan divan aşağıdakilerden hangisidir?",
+      "dogruCawapIndex": 3,
+      "secenekler": [
+        "Divan-ı Arz",
+        "Divan-ı İstifa",
+        "Divan-ı İşraf",
+        "Divan-ı İnşa"
+      ]
+    },
+    {
+      "soruMetni": "Tuğrul Bey'in 1055'te Abbasi Halifesini Şii Büveyhoğulları'nın baskısından kurtarması üzerine, Halife'nin Tuğrul Bey'e \"Doğu'nun ve Batı'nın Sultanı\" unvanını vermesi, İslam dünyasında nasıl bir değişimin yaşandığını göstermektedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Halifelik makamının Selçuklu hanedanına geçtiğini",
+        "İslam dünyasındaki mezhep ayrılıklarının sona erdiğini",
+        "İslam'ın siyasi koruyuculuğunun (liderliğinin) Türk hanedanına geçtiğini",
+        "Bizans'ın, Selçukluları İslam'ın temsilcisi olarak tanıdığını"
+      ]
+    }
+  ]
+},
+{
+  "id": "tarih_turk_islam_3",
+  "baslik": "İlk Türk-İslam Devletleri-3",
+  "kategoriId": "tarih",
+  "soruSayisi": 17,
+  "sureDakika": 17,
+  "sorular": [
+    {
+      "soruMetni": "Mısır'da kurulan Memlük Devleti'nde, diğer Türk-İslam devletlerinden farklı olarak, saltanatın babadan oğula geçmesi (hanedan) kuralı kesin değildir. Güçlü olan her komutanın (emir) sultan olma hakkı vardır.\nBu özgün veraset sisteminin aşağıdakilerden hangisine yol açtığı söylenebilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Devletin siyasi istikrarının sürekli olmasına",
+        "Taht kavgalarının sık yaşanmasına rağmen liyakatli (güçlü) kişilerin başa geçmesine",
+        "Devletin kısa sürede yıkılmasına",
+        "Abbasi Halifeliği'nin devleti denetim altına almasına"
+      ]
+    },
+    {
+      "soruMetni": "1040 Dandanakan Savaşı'nda Selçukluların Gaznelileri yenmesi, Horasan'a hakim olmaları ve resmen devletleşmeleriyle sonuçlanmıştır.\nBu durumun aşağıdakilerden hangisine ortam hazırladığı söylenemez?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Gazneli Devleti'nin yıkılış sürecine girmesine",
+        "Selçukluların batı yönlü (Anadolu) politikalarının güçlenmesine",
+        "İslam dünyasındaki Şii-Sünni çekişmesinin sona ermesine",
+        "Büyük Selçuklu Devleti'nin Yakın Doğu'da en büyük güç haline gelmeye başlamasına"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti, ticareti geliştirmek amacıyla Antalya, Sinop ve Alanya gibi liman kentlerini fethetmiş, Venedik ve Cenevizlilerle ticaret antlaşmaları yapmış, Kervansaraylar inşa etmiş ve \"devlet sigortası\" sistemini uygulamıştır.\nBu faaliyetlerin temel amacı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Haçlı seferlerini engellemek",
+        "Bizans'ın deniz gücünü kırmak",
+        "Anadolu'yu uluslararası ticaret yollarının merkezi (transit) haline getirmek",
+        "Tarımsal üretimi artırmak"
+      ]
+    },
+    {
+      "soruMetni": "1230 Yassıçemen Savaşı'nda Anadolu Selçukluları, Harzemşahları yenilgiye uğratmıştır.\nBu savaşın görünüşte bir zafer olmasına rağmen, Anadolu Selçuklu Devleti için olumsuz sonuç doğuran yönü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Haçlıların Anadolu'ya saldırması",
+        "Moğollar ile Anadolu Selçukluları arasındaki tampon (ara) bölgenin ortadan kalkması",
+        "Baba İshak İsyanı'nın çıkması",
+        "Harzemşahların Bizans ile ittifak kurması"
+      ]
+    },
+    {
+      "soruMetni": "1243 Kösedağ Savaşı'nda Anadolu Selçuklu Devleti'nin Moğol (İlhanlı) ordularına yenilmesinin sonuçları arasında hangisi gösterilemez?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Anadolu'daki siyasi birliğin bozulması ve II. Türk Beylikleri'nin kurulmaya başlaması",
+        "Anadolu Selçuklu Devleti'nin Moğollara bağlı (vasal) hale gelmesi",
+        "Anadolu'da Moğol baskısından kaçan Türkmen göçlerinin durması",
+        "Anadolu'daki ticaret yollarının güvenliğinin sarsılması"
+      ]
+    },
+    {
+      "soruMetni": "\"Tehâfütü'l-Felâsife\" (Filozofların Tutarsızlığı) adlı eseriyle İbn-i Sina ve Farabi gibi filozofları eleştiren, Nizamiye Medreselerinde baş müderrislik yapan ve Sünni kelamının en önemli savunucularından olan \"Hüccet'ül İslam\" kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Gazali",
+        "İbn-i Rüşd",
+        "Ömer Hayyam",
+        "El-Cezeri"
+      ]
+    },
+    {
+      "soruMetni": "Ahi Evran tarafından kurulan Ahilik Teşkilatı, Anadolu'daki esnaf ve zanaatkarları örgütlemiştir.\nAşağıdakilerden hangisi Ahilik Teşkilatı'nın fonksiyonlarından biri değildir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Üretilen malların kalitesini ve fiyatını (Narh) denetlemek",
+        "Gayrimüslim esnaflarla Müslüman esnafları aynı çatı altında birleştirmek",
+        "Üyelerine mesleki eğitim (çırak, kalfa, usta) vermek",
+        "İhtiyacı olan üyelere sosyal ve ekonomik yardım sağlamak"
+      ]
+    },
+    {
+      "soruMetni": "1071 Malazgirt Savaşı'ndan sonra Anadolu'da kurulan I. Türk Beylikleri'nin (Danişmentliler, Saltuklular, Mengücekliler, Artuklular) en önemli ortak özelliği aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hepsinin denizcilikle uğraşması",
+        "Anadolu'yu Bizans ve Haçlı saldırılarına karşı savunarak Türkleştirmeleri",
+        "Moğol istilasına karşı kurulmuş olmaları",
+        "Osmanlı Devleti'ne katılan ilk beylik olmaları"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti'nin en parlak dönemi olan Sultan Alaeddin Keykubad devrinde, devletin ticari ve siyasi gücünün zirvesinde olmasına rağmen, merkezi otoriteyi sarsacak hangi sosyal ve dini gelişmenin temelleri atılmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Haçlı Seferleri'nin başlaması",
+        "Moğol istilası nedeniyle Anadolu'ya gelen göçebe Türkmenlerin (Babailer) artan hoşnutsuzluğu",
+        "Bizans'ın taht kavgalarına karışması",
+        "Kösedağ Savaşı'nın kaybedilmesi"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam tarihinde, \"Büyük Selçuklu Devleti'nin mirasçısı\" (Varisi) olma iddiasıyla ortaya çıkan ve Anadolu Selçukluları ile Moğollara karşı mücadele eden devlet aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Eyyubiler",
+        "Gazneliler",
+        "Harzemşahlar",
+        "Memlükler"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam mimarisinde cami, medrese, türbe, kütüphane, hamam ve imarethane gibi yapıların bir arada bulunduğu toplu yapı komplekslerine ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Külliye",
+        "Bedesten",
+        "Ribat",
+        "Kapan"
+      ]
+    },
+    {
+      "soruMetni": "İslamiyet öncesi Türklerdeki \"Balbal\" (mezar taşı heykeli) geleneği, İslamiyet'in kabulünden sonra tasvir yasağının da etkisiyle nasıl bir değişime uğramıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Tamamen ortadan kalkmıştır",
+        "Minyatür sanatına dönüşmüştür",
+        "Mimari bir form kazanarak \"Kümbet\" ve \"Türbe\"ye dönüşmüştür",
+        "Fresk (duvar resmi) olarak devam etmiştir"
+      ]
+    },
+    {
+      "soruMetni": "Türk-İslam devletlerinde, gelirleri doğrudan devlet hazinesine değil, sosyal yardım kurumlarına (cami, medrese, hastane, aşevi) harcanmak üzere ayrılan topraklara ne ad verilirdi?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İkta Arazi",
+        "Mülk Arazi",
+        "Vakıf Arazi",
+        "Has Arazi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki Türk-İslam eserlerinden hangisi, \"Siyasetname\" (Hükümdara öğüt) özelliği taşırken, aynı zamanda \"Türk-İslam Edebiyatı'nın ilk örneği\" kabul edilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Divânu Lügati't-Türk (Kaşgarlı Mahmut)",
+        "Kutadgu Bilig (Yusuf Has Hacib)",
+        "Divan-ı Hikmet (Ahmed Yesevi)",
+        "Atabetü'l-Hakayık (Edip Ahmet Yükneki)"
+      ]
+    },
+    {
+      "soruMetni": "1402 Ankara Savaşı'nda Yıldırım Bayezid'i yenen Timur'un bu seferinin, aşağıdakilerden hangisine yönelik olduğu söylenemez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Osmanlı Devleti'nin batı yönündeki ilerleyişini durdurmaya",
+        "Anadolu'daki Türk beyliklerini yeniden canlandırmaya",
+        "Çin seferi öncesinde batıdaki tehlikeleri ortadan kaldırmaya",
+        "İslam dünyasında Sünni birliği sağlamaya"
+      ]
+    },
+    {
+      "soruMetni": "Anadolu Selçuklu Devleti'nde, Moğol baskısının arttığı bir dönemde, \"Bugünden sonra divanda, dergahta ve bargahta Türkçeden başka dil kullanılmayacaktır\" fermanını yayınlayarak Türkçeyi resmi dil ilan eden devlet adamı ve beylik aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Ahi Evran / Ahilik Teşkilatı",
+        "Osman Bey / Osmanoğulları",
+        "Karamanoğlu Mehmet Bey / Karamanoğulları",
+        "Mevlana Celaleddin Rumi / Konya"
+      ]
+    },
+    {
+      "soruMetni": "Gazneli Mahmut'un Hindistan'a yaptığı 17 seferin, İslamiyet'in yayılması ve bölgenin zenginliklerinin ele geçirilmesi dışında, Hindistan'ın toplumsal yapısı üzerindeki en önemli etkisi ne olmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bölgenin tamamen Türkleşmesi",
+        "Kast sisteminin zayıflamasına zemin hazırlaması",
+        "Çin ile olan ticari ilişkilerin kesilmesi",
+        "Hindistan'da feodal düzenin başlaması"
+      ]
+    }
+  ]
+}
+ ],
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ "trialExams": [
     {
       "id": "turkiye_geneli_1",
       "title": "Türkiye Geneli-1 (Sadece Tarih)",
