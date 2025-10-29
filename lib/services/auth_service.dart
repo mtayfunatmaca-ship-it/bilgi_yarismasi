@@ -54,9 +54,12 @@ class AuthService {
       }
       return null;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'weak-password') return 'Şifre çok zayıf. En az 6 karakter olmalı.';
-      else if (e.code == 'email-already-in-use') return 'Bu e-posta adresi zaten kullanılıyor.';
-      else if (e.code == 'invalid-email') return 'Geçersiz e-posta adresi formatı.';
+      if (e.code == 'weak-password')
+        return 'Şifre çok zayıf. En az 6 karakter olmalı.';
+      else if (e.code == 'email-already-in-use')
+        return 'Bu e-posta adresi zaten kullanılıyor.';
+      else if (e.code == 'invalid-email')
+        return 'Geçersiz e-posta adresi formatı.';
       return 'Kayıt sırasında bir hata oluştu.';
     } catch (e) {
       print('Bilinmeyen Kayıt Hatası: $e');
@@ -65,12 +68,21 @@ class AuthService {
   }
 
   // --- E-POSTA İLE GİRİŞ (Aynı) ---
-  Future<String?> signInWithEmailAndPassword(String email, String password) async {
-     try {
-      await _auth.signInWithEmailAndPassword(email: email.trim(), password: password);
+  Future<String?> signInWithEmailAndPassword(
+    String email,
+    String password,
+  ) async {
+    try {
+      await _auth.signInWithEmailAndPassword(
+        email: email.trim(),
+        password: password,
+      );
       return null;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found' || e.code == 'wrong-password' || e.code == 'invalid-credential') return 'E-posta veya şifre hatalı.';
+      if (e.code == 'user-not-found' ||
+          e.code == 'wrong-password' ||
+          e.code == 'invalid-credential')
+        return 'E-posta veya şifre hatalı.';
       return 'Giriş yapılamadı.';
     } catch (e) {
       print('Bilinmeyen Giriş Hatası: $e');
@@ -84,7 +96,8 @@ class AuthService {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser == null) return 'Google ile giriş iptal edildi.';
 
-      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
@@ -97,22 +110,27 @@ class AuthService {
         final docRef = _firestore.collection('users').doc(user.uid);
         final doc = await docRef.get();
         if (!doc.exists) {
-          
           String ad = 'Google Kullanıcısı';
           String soyad = '';
-          String kullaniciAdi = user.email?.split('@').first ?? 'kullanici_${user.uid.substring(0, 5)}';
+          String kullaniciAdi =
+              user.email?.split('@').first ??
+              'kullanici_${user.uid.substring(0, 5)}';
 
           if (user.displayName != null && user.displayName!.isNotEmpty) {
-             final parts = user.displayName!.split(' ');
-             if (parts.isNotEmpty) {
-                ad = parts.first;
-                if (parts.length > 1) soyad = parts.sublist(1).join(' ');
-             }
+            final parts = user.displayName!.split(' ');
+            if (parts.isNotEmpty) {
+              ad = parts.first;
+              if (parts.length > 1) soyad = parts.sublist(1).join(' ');
+            }
           }
-          
-          final existingUser = await _firestore.collection('users').where('kullaniciAdi', isEqualTo: kullaniciAdi).limit(1).get();
+
+          final existingUser = await _firestore
+              .collection('users')
+              .where('kullaniciAdi', isEqualTo: kullaniciAdi)
+              .limit(1)
+              .get();
           if (existingUser.docs.isNotEmpty) {
-             kullaniciAdi = '${kullaniciAdi}_${user.uid.substring(0, 4)}';
+            kullaniciAdi = '${kullaniciAdi}_${user.uid.substring(0, 4)}';
           }
 
           await docRef.set({
@@ -130,8 +148,9 @@ class AuthService {
       }
       return null;
     } on FirebaseAuthException catch (e) {
-       if (e.code == 'account-exists-with-different-credential') return 'Bu e-posta ile farklı bir yöntemle (örn: şifre) hesap oluşturulmuş.';
-       return 'Google ile giriş sırasında bir hata oluştu.';
+      if (e.code == 'account-exists-with-different-credential')
+        return 'Bu e-posta ile farklı bir yöntemle (örn: şifre) hesap oluşturulmuş.';
+      return 'Google ile giriş sırasında bir hata oluştu.';
     } catch (e) {
       print('Bilinmeyen Google Giriş Hatası: $e');
       return 'Beklenmedik bir hata oluştu.';
@@ -155,7 +174,8 @@ class AuthService {
       await _auth.sendPasswordResetEmail(email: email.trim());
       return null;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'user-not-found' || e.code == 'invalid-email') return 'Bu e-posta adresi ile kayıtlı bir kullanıcı bulunamadı.';
+      if (e.code == 'user-not-found' || e.code == 'invalid-email')
+        return 'Bu e-posta adresi ile kayıtlı bir kullanıcı bulunamadı.';
       return 'Bir hata oluştu, lütfen tekrar deneyin.';
     } catch (e) {
       return 'Beklenmedik bir hata oluştu.';
@@ -163,21 +183,30 @@ class AuthService {
   }
 
   // --- ŞİFRE DEĞİŞTİRME (Aynı) ---
-  Future<String?> changePassword(String currentPassword, String newPassword) async {
-    if (currentPassword.isEmpty || newPassword.isEmpty) return "Alanlar boş olamaz.";
+  Future<String?> changePassword(
+    String currentPassword,
+    String newPassword,
+  ) async {
+    if (currentPassword.isEmpty || newPassword.isEmpty)
+      return "Alanlar boş olamaz.";
     if (newPassword.length < 6) return "Yeni şifre en az 6 karakter olmalıdır.";
-    
+
     User? user = _auth.currentUser;
     if (user == null || user.email == null) return "Kullanıcı bulunamadı.";
 
     try {
-      AuthCredential credential = EmailAuthProvider.credential(email: user.email!, password: currentPassword);
+      AuthCredential credential = EmailAuthProvider.credential(
+        email: user.email!,
+        password: currentPassword,
+      );
       await user.reauthenticateWithCredential(credential);
       await user.updatePassword(newPassword);
       return null;
     } on FirebaseAuthException catch (e) {
-      if (e.code == 'wrong-password' || e.code == 'invalid-credential') return "Mevcut şifreniz hatalı.";
-      else if (e.code == 'weak-password') return "Yeni şifre çok zayıf.";
+      if (e.code == 'wrong-password' || e.code == 'invalid-credential')
+        return "Mevcut şifreniz hatalı.";
+      else if (e.code == 'weak-password')
+        return "Yeni şifre çok zayıf.";
       return "Bir hata oluştu: ${e.message}";
     } catch (e) {
       return "Beklenmedik bir hata oluştu.";

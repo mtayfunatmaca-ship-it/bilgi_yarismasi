@@ -35,10 +35,13 @@ dependencies:
   confetti: ^0.8.0
 
 
+# pubspec.yaml (dosyanın alt kısımları)
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+# --- EKLEME BİTTİ ---
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
@@ -46,10 +49,11 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
   change_app_package_name: ^1.5.0
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-
+  flutter_launcher_icons: ^0.14.4
+flutter_launcher_icons:
+  android: "launcher_icon" # Android için dosya adını belirler
+  ios: true                # iOS için de oluştur
+  image_path: "assets/images/logo.png" # 1. Adım'da kopyaladığımız dosyanın yolu
 flutter:
   assets:
     - assets/sorular.json

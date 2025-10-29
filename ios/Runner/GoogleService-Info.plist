@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>826947687877-6hpcltpsd9ke0d4at5f5u81oglumubk5.apps.googleusercontent.com</string>
+	<string>826947687877-p5jnualor5avmu6tr053etjmhroknhkm.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.826947687877-6hpcltpsd9ke0d4at5f5u81oglumubk5</string>
+	<string>com.googleusercontent.apps.826947687877-p5jnualor5avmu6tr053etjmhroknhkm</string>
 	<key>ANDROID_CLIENT_ID</key>
 	<string>826947687877-5jvk1bkfefnf78odsamdp13l6q5ajmkf.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.tayfunatmaca.bilgiyarismasi</string>
+	<string>com.bilgiyarismasi.bilgiyarismasi</string>
 	<key>PROJECT_ID</key>
 	<string>bilgi-yarismasi-76128</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,6 +31,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:826947687877:ios:09b4b37e7c7d99f2cfe7ac</string>
+	<string>1:826947687877:ios:933d407e73c76de2cfe7ac</string>
 </dict>
 </plist>
