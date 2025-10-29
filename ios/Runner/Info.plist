@@ -65,5 +65,34 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+<<<<<<< HEAD
+=======
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
+	<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>com.googleusercontent.apps.826947687877-e1bab66p9j9fk7m63uhvj6vrpi016hgp</string>
+    </array>
+  </dict>
+</array>
+</dict>
+</plist>
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-6415661016738887~6701962147</string> 
+<key>SKAdNetworkItems</key>
+<array>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cstr6suwn9.skadnetwork</string>
+  </dict>
+</array>
+>>>>>>> e319d6d42342c7fd1f5201ef3f407b6d53f26e16
 </dict>
 </plist>
