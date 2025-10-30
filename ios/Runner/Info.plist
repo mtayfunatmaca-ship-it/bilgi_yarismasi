@@ -65,8 +65,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-<<<<<<< HEAD
-=======
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
@@ -93,6 +91,5 @@
     <string>cstr6suwn9.skadnetwork</string>
   </dict>
 </array>
->>>>>>> e319d6d42342c7fd1f5201ef3f407b6d53f26e16
 </dict>
 </plist>
