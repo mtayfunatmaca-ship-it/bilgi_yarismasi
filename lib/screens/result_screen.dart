@@ -74,7 +74,6 @@ class _ResultScreenState extends State<ResultScreen> {
   Future<void> _showEarnedAchievements(
     List<Map<String, dynamic>> achievements,
   ) async {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     for (var achievementData in achievements) {
       if (mounted) {
         await _showAchievementEarnedDialog(achievementData);
@@ -87,7 +86,6 @@ class _ResultScreenState extends State<ResultScreen> {
   Future<void> _showAchievementEarnedDialog(
     Map<String, dynamic> achievementData,
   ) async {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     if (!mounted) return;
     final emoji = achievementData['emoji'] as String? ?? '🏆';
     final name = achievementData['name'] as String? ?? 'Başarı';
@@ -306,159 +304,176 @@ class _ResultScreenState extends State<ResultScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                // Başlık - Daha minimalist
                 Text(
                   finalBaslik,
-                  style: theme.textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 16),
-                Icon(
-                  (finalDogru / (finalToplamSoru > 0 ? finalToplamSoru : 1)) >=
-                          0.5
-                      ? Icons.emoji_events
-                      : Icons.sentiment_satisfied_alt,
-                  color:
-                      (finalDogru /
-                              (finalToplamSoru > 0 ? finalToplamSoru : 1)) >=
-                          0.5
-                      ? Colors.amber.shade700
-                      : colorScheme.primary,
-                  size: 100,
-                ),
-                const SizedBox(height: 24),
-                Text(
-                  (finalDogru / (finalToplamSoru > 0 ? finalToplamSoru : 1)) >=
-                          0.5
-                      ? 'Tebrikler!'
-                      : 'Güzel Denedin!',
-                  style: theme.textTheme.headlineMedium?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Puanınız: $finalPuan',
                   style: theme.textTheme.titleLarge?.copyWith(
-                    color: colorScheme.primary,
                     fontWeight: FontWeight.w600,
+                    color: colorScheme.onSurface.withOpacity(0.8),
                   ),
                   textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 32),
+
+                // Puan Göstergesi - Modern kart tasarımı
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    color: colorScheme.primaryContainer,
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 12,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Kazanılan Puan',
+                        style: theme.textTheme.bodyLarge?.copyWith(
+                          color: colorScheme.onPrimaryContainer.withOpacity(
+                            0.7,
+                          ),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        '$finalPuan',
+                        style: theme.textTheme.headlineLarge?.copyWith(
+                          color: colorScheme.onPrimaryContainer,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 32),
+
+                // İstatistikler - Modern grid tasarımı
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: colorScheme.surface,
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: colorScheme.outline.withOpacity(0.2),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _buildModernStatItem(
+                        'Toplam',
+                        finalToplamSoru.toString(),
+                        Icons.format_list_numbered,
+                        colorScheme.primary,
+                      ),
+                      _buildModernStatItem(
+                        'Doğru',
+                        finalDogru.toString(),
+                        Icons.check_circle,
+                        Colors.green,
+                      ),
+                      _buildModernStatItem(
+                        'Yanlış',
+                        (finalToplamSoru - finalDogru).toString(),
+                        Icons.cancel,
+                        Colors.red,
+                      ),
+                    ],
+                  ),
                 ),
 
                 if (widget.isReplay && !widget.fromHistory)
                   Padding(
-                    // ... (Tekrar çözüm uyarısı) ...
-                    padding: const EdgeInsets.only(top: 12.0),
+                    padding: const EdgeInsets.only(top: 16.0),
                     child: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.orange.shade100,
+                        color: Colors.orange.shade50,
                         borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.orange.shade200),
                       ),
                       child: Text(
                         'Bu bir tekrar çözümdür. Puanınız toplam puana eklenmedi.',
                         textAlign: TextAlign.center,
                         style: theme.textTheme.bodyMedium?.copyWith(
-                          color: Colors.orange.shade900,
+                          color: Colors.orange.shade800,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                     ),
                   ),
 
-                const SizedBox(height: 24),
-                Card(
-                  elevation: 1,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        _buildStatColumn(
-                          'Toplam Soru',
-                          finalToplamSoru.toString(),
-                          Colors.grey.shade700,
-                        ),
-                        _buildStatColumn(
-                          'Doğru',
-                          finalDogru.toString(),
-                          Colors.green.shade700,
-                        ),
-                        _buildStatColumn(
-                          'Yanlış',
-                          (finalToplamSoru - finalDogru).toString(),
-                          Colors.red.shade700,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
                 const SizedBox(height: 32),
 
                 // --- YENİ: "Cevapları İncele" Butonu (PRO Korumalı) ---
-                if (canReview) // Sadece veriler geldiyse (yani geçmişten gelmiyorsa)
-                  ElevatedButton.icon(
-                    icon: Icon(
-                      isPro ? Icons.rate_review_outlined : Icons.lock,
-                      size: 18,
-                    ),
-                    label: Text(
-                      isPro ? 'Cevapları İncele' : 'Cevapları İncele (PRO)',
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(vertical: 14),
-                      backgroundColor: isPro
-                          ? colorScheme.secondary
-                          : colorScheme.surfaceVariant,
-                      foregroundColor: isPro
-                          ? colorScheme.onSecondary
-                          : colorScheme.onSurfaceVariant,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                if (canReview)
+                  Container(
+                    margin: const EdgeInsets.only(bottom: 12),
+                    child: ElevatedButton.icon(
+                      icon: Icon(
+                        isPro ? Icons.analytics_outlined : Icons.lock_outline,
+                        size: 20,
                       ),
-                    ),
-                    onPressed: () {
-                      if (isPro) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => TrialExamReviewScreen(
-                              questions: widget.questions!,
-                              userAnswers: widget.userAnswers!,
-                              correctAnswers: widget.correctAnswers!,
-                              // Normal quizler 'trialExamId' kullanmaz, 'quizId' kullanır.
-                              // ReviewScreen esnekse bunu 'title' olarak kullanabiliriz.
-                              trialExamId: widget.quizId ?? 'quiz',
-                              trialExamTitle: finalBaslik,
+                      label: Text(
+                        isPro ? 'Cevapları İncele' : 'Cevapları İncele (PRO)',
+                        style: const TextStyle(fontWeight: FontWeight.w600),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        backgroundColor: isPro
+                            ? colorScheme.secondary
+                            : colorScheme.surfaceVariant,
+                        foregroundColor: isPro
+                            ? colorScheme.onSecondary
+                            : colorScheme.onSurfaceVariant,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        elevation: 0,
+                      ),
+                      onPressed: () {
+                        if (isPro) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => TrialExamReviewScreen(
+                                questions: widget.questions!,
+                                userAnswers: widget.userAnswers!,
+                                correctAnswers: widget.correctAnswers!,
+                                trialExamId: widget.quizId ?? 'quiz',
+                                trialExamTitle: finalBaslik,
+                              ),
                             ),
-                          ),
-                        );
-                      } else {
-                        _showProFeatureDialog(context);
-                      }
-                    },
+                          );
+                        } else {
+                          _showProFeatureDialog(context);
+                        }
+                      },
+                    ),
                   ),
-                const SizedBox(height: 12),
 
-                // --- BİTTİ ---
+                // Ana Kapatma Butonu
                 ElevatedButton(
-                  onPressed:
-                      closeScreenAction, // <<< Reklamı tetikleyen fonksiyon
+                  onPressed: closeScreenAction,
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
                     backgroundColor: colorScheme.primary,
                     foregroundColor: colorScheme.onPrimary,
+                    elevation: 0,
                   ),
-                  child: const Text('Kapat'),
+                  child: const Text(
+                    'Kapat',
+                    style: TextStyle(fontWeight: FontWeight.w600),
+                  ),
                 ),
               ],
             ),
@@ -468,22 +483,37 @@ class _ResultScreenState extends State<ResultScreen> {
     );
   }
 
-  Widget _buildStatColumn(String label, String value, Color color) {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
+  // Modern istatistik öğesi widget'ı
+  Widget _buildModernStatItem(
+    String label,
+    String value,
+    IconData icon,
+    Color color,
+  ) {
     return Column(
       children: [
+        Container(
+          width: 50,
+          height: 50,
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(icon, color: color, size: 24),
+        ),
+        const SizedBox(height: 8),
         Text(
           value,
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: color,
-          ),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 4),
         Text(
           label,
-          style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
+          style: TextStyle(
+            fontSize: 12,
+            color: Colors.grey.shade600,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ],
     );
