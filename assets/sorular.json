@@ -76,7 +76,7 @@
           "soruMetni": "Aşağıdakilerden hangisi, Hunların batıya doğru hareketiyle başlayan Kavimler Göçü'nün (M.S. 375) siyasi sonuçlarından biri olarak gösterilemez?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Roma İmparatorluğu'nun Batı ve Doğu olarak ikiye ayrılması",
+            "Roma İmparatorluğu'nun Batı-Doğu olarak ikiye ayrılması",
             "Avrupa'da feodalite (derebeylik) rejiminin ortaya çıkması",
             "Avrupa Hun Devleti'nin kurulması",
             "Skolastik düşüncenin zayıflaması"
@@ -136,7 +136,7 @@
           "soruMetni": "Uygurların yerleşik hayata geçmelerinin aşağıdakilerden hangisine ortam hazırladığı savunulamaz?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Kalıcı mimari eserler (tapınaklar, saraylar) bırakmalarına",
+            "Kalıcı mimari eserler bırakmalarına",
             "Tarım kültürünün gelişmesine",
             "Yazılı kültürün ve matbaanın gelişmesine",
             "Savaşçılık yeteneklerinin artmasına"
@@ -186,7 +186,7 @@
           "soruMetni": "İslamiyet öncesi Türk devletlerinde sosyal yapıyı oluşturan unsurların küçükten büyüğe doğru sıralanışı aşağıdakilerden hangisidir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Oguş (Aile) - Urug (Soy) - Boy (Kabile) - Budun (Millet) - İl (Devlet)",
+            "Oguş - Urug - Boy - Budun - İl",
             "Boy - Budun - Urug - Oguş - İl",
             "Urug - Oguş - Boy - İl - Budun",
             "Oguş - Boy - Urug - Budun - İl"
@@ -198,7 +198,7 @@
           "secenekler": [
             "Kaynakları arasında Kağan emirleri ve Kurultay kararları bulunur.",
             "Zamana ve koşullara göre değişmez, dogmatik kurallardır.",
-            "Hem yönetenleri (Kağan dahil) hem de yönetilenleri bağlardı.",
+            "Hem yönetenleri hem de yönetilenleri bağlardı.",
             "Uygurlar döneminde yerleşik hayata geçişle birlikte yazılı hale getirilmiştir."
           ]
         },
@@ -216,10 +216,10 @@
           "soruMetni": "İslamiyet öncesi Türklerde 'Gök Tanrı' inancı ile ilgili aşağıdakilerden hangisi söylenemez?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Tek tanrılı (monoteist) bir yapıya sahiptir.",
+            "Tek tanrılı bir yapıya sahiptir.",
             "Ölümden sonra yaşama (ahiret) inancı vardır.",
-            "Kağan'ın gücünün ('Kut') tanrısal kaynaklı olduğuna inanılır.",
-            "İbadetler için yapılmış putlara (fetişizm) tapınılırdı."
+            "Kağan'ın gücünün tanrısal kaynaklı olduğuna inanılır.",
+            "İbadetler için yapılmış putlara tapınılırdı."
           ]
         },
         {
@@ -257,7 +257,7 @@
           "dogruCevapIndex": 0,
           "secenekler": [
             "Peçenekler",
-            "Kumanlar (Kıpçaklar)",
+            "Kumanlar",
             "Avarlar",
             "Türgişler"
           ]
@@ -279,7 +279,7 @@
           "secenekler": [
             "Yerleşik hayata geçme arzusunun",
             "Farklı dinlere karşı hoşgörünün",
-            "Bağımsızlık (Oksızlık) mücadelesi karakterinin",
+            "Bağımsızlık mücadelesi karakterinin",
             "Ticari yollara hakim olma hedefinin"
           ]
         },
@@ -357,10 +357,10 @@
           "soruMetni": "İlk Türk devletlerinde göçebe yaşam tarzı (bozkır kültürü), aşağıdaki sanatlardan hangisinin gelişmesini yavaşlatmış veya engellemiştir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Maden işlemeciliği (Demircilik)",
-            "Dokumacılık (Halı/Kilim)",
+            "Maden işlemeciliği",
+            "Dokumacılık",
             "Kalıcı mimari",
-            "Dericilik (Koşum takımları)"
+            "Dericilik "
           ]
         },
         {
@@ -1241,7 +1241,7 @@
     },
     {
       "id": "tarih_osmanli_kurulus_1",
-      "baslik": "Osmanlı Devleti Kuruluş Dönemi-1",
+      "baslik": "Osmanlı Devleti Kuruluş Dönemi - 1",
       "kategoriId": "tarih",
       "konuId":"osmanli_devleti_kurulus_donemi",
       "isNew": false,
@@ -2809,7 +2809,7 @@
     },
     {
       "id": "tarih_osmanli_duraklama_1",
-      "baslik": "Osmanlı Devleti Duraklama Dönemi-1",
+      "baslik": "Osmanlı Devleti Duraklama Dönemi - 1",
       "kategoriId": "tarih",
       "konuId":"osmanli_devleti_duraklama_donemi",
       "isNew": false,
