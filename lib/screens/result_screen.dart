@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:async'; // Future.delayed için
+import 'dart:async';
 
 // --- YENİ IMPORTLAR (Reklam ve PRO Kontrolü için) ---
 import 'package:provider/provider.dart';
@@ -14,27 +14,19 @@ import 'package:bilgi_yarismasi/screens/purchase_screen.dart';
 // --- BİTTİ ---
 
 class ResultScreen extends StatefulWidget {
-  // Normal quizler için
+  // Parametreler aynı
   final String? quizId;
   final int? puan;
   final int? dogruSayisi;
   final int? soruSayisi;
-
-  // Geçmişten gelenler için
   final bool fromHistory;
   final Map<String, dynamic>? solvedData;
-
   final bool isReplay;
-
-  // Başarı popup'ı için
   final List<Map<String, dynamic>>? newAchievements;
-
-  // --- YENİ PARAMETRELER (Cevap İnceleme için QuizScreen'den geldi) ---
   final List<DocumentSnapshot>? questions;
   final Map<int, int>? userAnswers;
   final Map<int, int>? correctAnswers;
-  final String? trialExamTitle; // (QuizScreen'deki 'quizBaslik' buraya gelecek)
-  // --- BİTTİ ---
+  final String? trialExamTitle;
 
   const ResultScreen({
     super.key,
@@ -46,7 +38,6 @@ class ResultScreen extends StatefulWidget {
     this.solvedData,
     this.isReplay = false,
     this.newAchievements,
-    // Yeni parametreler
     this.questions,
     this.userAnswers,
     this.correctAnswers,
@@ -58,22 +49,53 @@ class ResultScreen extends StatefulWidget {
 }
 
 class _ResultScreenState extends State<ResultScreen> {
+  bool _adAttempted = false;
+
   @override
   void initState() {
     super.initState();
 
-    // Başarıları Gösterme Tetikleyicisi
     if (widget.newAchievements != null && widget.newAchievements!.isNotEmpty) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         _showEarnedAchievements(widget.newAchievements!);
       });
     }
+
+    // --- REKLAM TETİKLEME MANTIĞI GÜNCELLENDİ ---
+    // Eğer geçmişten gelmiyorsak (yani sonuç yeni bittiyse - ilk veya tekrar çözüm)
+    if (!widget.fromHistory) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _triggerInterstitialAd(context);
+      });
+    }
+    // --- BİTTİ ---
   }
 
-  // Başarıları sırayla gösterme
+  // --- YENİ FONKSİYON: Reklamı Başlatan Mekanizma ---
+  void _triggerInterstitialAd(BuildContext context) {
+    // Sadece geçmişten gelmiyorsak (yani yeni bir çözüm ise) ve zaten denenmediyse çalıştır
+    if (_adAttempted) return;
+    _adAttempted = true;
+
+    final bool isPro = context.read<UserDataProvider>().isPro;
+    final adService = context.read<AdService>();
+
+    // Normal quiz reklamını (sayaçlı) tetikle
+    adService.showInterstitialAd(
+      isProUser: isPro,
+      // Reklam gösterilse de gösterilmese de (PRO ise, yüklenmediyse),
+      // reklam servisi bu fonksiyonu çağırır.
+      onAdDismissed: () {
+        print("Reklam akışı tamamlandı. Kullanıcı artık serbest.");
+      },
+    );
+  }
+  // --- BİTTİ ---
+
   Future<void> _showEarnedAchievements(
     List<Map<String, dynamic>> achievements,
   ) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     for (var achievementData in achievements) {
       if (mounted) {
         await _showAchievementEarnedDialog(achievementData);
@@ -82,10 +104,10 @@ class _ResultScreenState extends State<ResultScreen> {
     }
   }
 
-  // Başarı Popup'ı (Tam Kod)
   Future<void> _showAchievementEarnedDialog(
     Map<String, dynamic> achievementData,
   ) async {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     if (!mounted) return;
     final emoji = achievementData['emoji'] as String? ?? '🏆';
     final name = achievementData['name'] as String? ?? 'Başarı';
@@ -181,8 +203,8 @@ class _ResultScreenState extends State<ResultScreen> {
     );
   }
 
-  // --- YENİ FONKSİYON: PRO Uyarı Dialog'u ---
   void _showProFeatureDialog(BuildContext context) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final colorScheme = Theme.of(context).colorScheme;
     showDialog(
       context: context,
@@ -225,68 +247,70 @@ class _ResultScreenState extends State<ResultScreen> {
       },
     );
   }
-  // --- BİTTİ ---
+
+  Widget _buildStatColumn(String label, String value, Color color) {
+    // ... (Bu fonksiyon aynı, değişiklik yok) ...
+    return Column(
+      children: [
+        Text(
+          value,
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: color,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: TextStyle(fontSize: 14, color: Colors.grey.shade600),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-
-    // --- Provider'ları oku ---
     final bool isPro = context.watch<UserDataProvider>().isPro;
-    final adService = context.read<AdService>();
-    // --- BİTTİ ---
 
-    // --- GÜNCELLENDİ: Veri belirleme ---
+    // Veri belirleme
     final int finalPuan =
         widget.puan ?? (widget.solvedData?['puan'] as num? ?? 0).toInt();
     final int finalDogru =
         widget.dogruSayisi ??
         (widget.solvedData?['dogruSayisi'] as num? ?? 0).toInt();
-
     int finalToplamSoru = widget.soruSayisi ?? 0;
     if (finalToplamSoru == 0 && widget.solvedData != null) {
       finalToplamSoru = (widget.solvedData?['totalQuestions'] as num? ?? 0)
-          .toInt(); // Geçmişten gelen veri
+          .toInt();
       if (finalToplamSoru == 0) {
-        // 'totalQuestions' yoksa eski yöntemi dene
         finalToplamSoru =
             (widget.solvedData?['dogruSayisi'] as num? ?? 0).toInt() +
             (widget.solvedData?['yanlisSayisi'] as num? ?? 0).toInt();
       }
     }
-
     final String finalBaslik =
         widget.trialExamTitle ?? widget.solvedData?['quizBaslik'] ?? 'Sonuç';
-
-    // "Cevapları İncele" butonu için verilerin gelip gelmediğini kontrol et
     final bool canReview =
         (widget.questions != null &&
         widget.userAnswers != null &&
         widget.correctAnswers != null);
+
+    // --- GÜNCELLEME: Kapatma aksiyonu (Reklamsız) ---
+    void closeScreenAction() {
+      // Artık closeScreenAction() reklamı tetiklemez, sadece kapatır.
+      // Reklam initState'te (tetiklenme anında) zaten denenmiştir.
+      Navigator.pop(context, true);
+    }
     // --- GÜNCELLEME BİTTİ ---
 
-    // Reklamı tetikleyen kapatma eylemi
-    void closeScreenAction() {
-      if (!widget.fromHistory) {
-        adService.showInterstitialAd(
-          isProUser: isPro,
-          onAdDismissed: () {
-            if (Navigator.canPop(context)) {
-              Navigator.pop(context, true);
-            }
-          },
-        );
-      } else {
-        Navigator.pop(context, true);
-      }
-    }
-
     return PopScope(
-      canPop: false,
+      canPop: false, // Geri tuşunu manuel yöneteceğiz
       onPopInvoked: (didPop) {
         if (didPop) return;
-        closeScreenAction();
+        closeScreenAction(); // <<< Geri tuşu direkt kapatır
       },
       child: Scaffold(
         appBar: AppBar(
@@ -294,7 +318,7 @@ class _ResultScreenState extends State<ResultScreen> {
           centerTitle: true,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
-            onPressed: closeScreenAction,
+            onPressed: closeScreenAction, // <<< AppBar geri tuşu direkt kapatır
           ),
         ),
         body: Center(
@@ -304,7 +328,7 @@ class _ResultScreenState extends State<ResultScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                // Başlık - Daha minimalist
+                // Başlık
                 Text(
                   finalBaslik,
                   style: theme.textTheme.titleLarge?.copyWith(
@@ -315,7 +339,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
                 const SizedBox(height: 32),
 
-                // Puan Göstergesi - Modern kart tasarımı
+                // Puan Göstergesi
                 Container(
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
@@ -353,7 +377,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
                 const SizedBox(height: 32),
 
-                // İstatistikler - Modern grid tasarımı
+                // İstatistikler
                 Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
@@ -411,7 +435,7 @@ class _ResultScreenState extends State<ResultScreen> {
 
                 const SizedBox(height: 32),
 
-                // --- YENİ: "Cevapları İncele" Butonu (PRO Korumalı) ---
+                // "Cevapları İncele" Butonu (PRO Korumalı)
                 if (canReview)
                   Container(
                     margin: const EdgeInsets.only(bottom: 12),
@@ -460,7 +484,8 @@ class _ResultScreenState extends State<ResultScreen> {
 
                 // Ana Kapatma Butonu
                 ElevatedButton(
-                  onPressed: closeScreenAction,
+                  onPressed:
+                      closeScreenAction, // <<< Kapat butonu direkt kapatır
                   style: ElevatedButton.styleFrom(
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     shape: RoundedRectangleBorder(
@@ -483,7 +508,6 @@ class _ResultScreenState extends State<ResultScreen> {
     );
   }
 
-  // Modern istatistik öğesi widget'ı
   Widget _buildModernStatItem(
     String label,
     String value,
