@@ -215,7 +215,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
                       ),
                       // 2: Genel
                       _buildLeaderboardTab(
-                        header: null,
+                        header: null, // Genelde özel kart yok
                         content: _buildLeaderboardContent(
                           stream: _generalStream!,
                           puanField: 'toplamPuan',
@@ -269,10 +269,12 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
     Widget? header,
     required Widget timingCard,
   }) {
+    // Burada DraggableScrollableSheet'in başlangıç yüksekliğine müdahale etmiyoruz.
+    // timingCard da Column'un bir parçası olarak kalıyor.
     return Column(
       children: [
         if (header != null) header,
-        timingCard, // <<< YENİ: Bilgilendirme kartı eklendi
+        timingCard,
         Expanded(child: content),
       ],
     );
@@ -312,31 +314,206 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
 
   // Geçen Haftanın Lideri Kartı
   Widget _buildWeeklyWinnerCard(ColorScheme colorScheme, TextTheme textTheme) {
-    // Sadece Pazar günleri göster
     bool showWinnerCard = DateTime.now().weekday == DateTime.sunday;
+    if (!showWinnerCard) {
+      return const SizedBox.shrink();
+    }
 
-    // YUKARIDAN KALDIRILDI: Bu kartın görünmesini isteyen bir kişi varsa,
-    // bunu true yaparak test edebilir. (Şimdilik kodda kalabilir, aktif değildir.)
-    // if (!showWinnerCard) { return const SizedBox.shrink(); }
+    return StreamBuilder<DocumentSnapshot>(
+      stream: _firestore.collection('leaders').doc('weeklyWinner').snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || !snapshot.data!.exists) {
+          return const SizedBox.shrink();
+        }
 
-    // GÖSTERİLMEYEN GÜNLERDE YENİ HAFTALIK SIRALAMA GÖRÜNDÜĞÜNDEN EMİN OLALIM
-    return const SizedBox.shrink(); // Şimdilik sadece yer tutucu olarak kalsın.
+        final data = snapshot.data!.data() as Map<String, dynamic>;
+        final String name = data['kullaniciAdi'] ?? 'Bilinmiyor';
+        final String emoji = data['emoji'] ?? '🏆';
+        final int puan = (data['puan'] as num? ?? 0).toInt();
+        final bool isPro = data['isPro'] ?? false;
+
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _confettiController.play();
+        });
+
+        return Container(
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.amber.shade600, Colors.orange.shade700],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.amber.withOpacity(0.4),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Text(emoji, style: const TextStyle(fontSize: 32)),
+                  const FaIcon(
+                    FontAwesomeIcons.crown,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                ],
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'GEÇEN HAFTANIN ŞAMPİYONU',
+                      style: textTheme.labelSmall?.copyWith(
+                        color: Colors.white.withOpacity(0.9),
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        if (isPro)
+                          FaIcon(
+                            FontAwesomeIcons.crown,
+                            color: Colors.white,
+                            size: 14,
+                          ),
+                        if (isPro) const SizedBox(width: 6),
+                        Text(
+                          name,
+                          style: textTheme.titleLarge?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      '${NumberFormat.compact().format(puan)} Puan ile',
+                      style: textTheme.bodyMedium?.copyWith(
+                        color: Colors.white.withOpacity(0.9),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   // Geçen Ayın Lideri Kartı
   Widget _buildMonthlyWinnerCard(ColorScheme colorScheme, TextTheme textTheme) {
-    // Sadece Ayın 1'inde göster
     bool showWinnerCard = DateTime.now().day == 1;
 
-    // YUKARIDAN KALDIRILDI: Bu kartın görünmesini isteyen bir kişi varsa,
-    // bunu true yaparak test edebilir. (Şimdilik kodda kalabilir, aktif değildir.)
-    // if (!showWinnerCard) { return const SizedBox.shrink(); }
+    if (!showWinnerCard) {
+      return const SizedBox.shrink();
+    }
 
-    // GÖSTERİLMEYEN GÜNLERDE YENİ AYLIK SIRALAMA GÖRÜNDÜĞÜNDEN EMİN OLALIM
-    return const SizedBox.shrink(); // Şimdilik sadece yer tutucu olarak kalsın.
+    return StreamBuilder<DocumentSnapshot>(
+      stream: _firestore.collection('leaders').doc('monthlyWinner').snapshots(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData || !snapshot.data!.exists) {
+          return const SizedBox.shrink();
+        }
+
+        final data = snapshot.data!.data() as Map<String, dynamic>;
+        final String name = data['kullaniciAdi'] ?? 'Bilinmiyor';
+        final String emoji = data['emoji'] ?? '🏆';
+        final int puan = (data['puan'] as num? ?? 0).toInt();
+        final bool isPro = data['isPro'] ?? false;
+
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted) _confettiController.play();
+        });
+
+        return Container(
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.purple.shade600, Colors.deepPurple.shade700],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.purple.withOpacity(0.4),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Column(
+                children: [
+                  Text(emoji, style: const TextStyle(fontSize: 32)),
+                  const FaIcon(
+                    FontAwesomeIcons.crown,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                ],
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'GEÇEN AYIN ŞAMPİYONU',
+                      style: textTheme.labelSmall?.copyWith(
+                        color: Colors.white.withOpacity(0.9),
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.5,
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        if (isPro)
+                          FaIcon(
+                            FontAwesomeIcons.crown,
+                            color: Colors.amber.shade300,
+                            size: 14,
+                          ), // Renk farklı
+                        if (isPro) const SizedBox(width: 6),
+                        Text(
+                          name,
+                          style: textTheme.titleLarge?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      '${NumberFormat.compact().format(puan)} Puan ile',
+                      style: textTheme.bodyMedium?.copyWith(
+                        color: Colors.white.withOpacity(0.9),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
-
-  // ... (Kalan fonksiyonlar aynı) ...
 
   Widget _buildSegmentControl(
     BuildContext context,
@@ -513,9 +690,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
               podiumShadowColor,
             ),
             DraggableScrollableSheet(
-              initialChildSize: 0.45,
-              minChildSize: 0.4,
+              // --- PODYUM GÖRÜNÜRLÜK DÜZELTMESİ BURADA ---
+              initialChildSize: 0.38, // %45'ten %38'e düşürüldü
+              minChildSize: 0.38,
               maxChildSize: 0.9,
+              // --- DÜZELTME BİTTİ ---
               builder: (context, scrollController) {
                 return Container(
                   decoration: BoxDecoration(
