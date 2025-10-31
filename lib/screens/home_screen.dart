@@ -80,28 +80,41 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     showDialog(
       context: context,
       builder: (context) {
-         return AlertDialog(
-           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-           icon: Icon(Icons.lock_person_rounded, color: colorScheme.primary, size: 48),
-           title: const Text('PRO Özellik', style: TextStyle(fontWeight: FontWeight.bold)),
-           content: const Text('Detaylı istatistikler ve daha fazlası için PRO üyeliğe geçiş yapmanız gerekmektedir.'),
-           actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('Kapat'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                   Navigator.pop(context); // Dialog'u kapat
-                   Navigator.push(
-                     context,
-                     MaterialPageRoute(builder: (context) => const PurchaseScreen()),
-                   );
-                },
-                child: const Text('PRO\'ya Geç'),
-              ),
-           ],
-         );
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          icon: Icon(
+            Icons.lock_person_rounded,
+            color: colorScheme.primary,
+            size: 48,
+          ),
+          title: const Text(
+            'PRO Özellik',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: const Text(
+            'Detaylı istatistikler ve daha fazlası için PRO üyeliğe geçiş yapmanız gerekmektedir.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Kapat'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context); // Dialog'u kapat
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PurchaseScreen(),
+                  ),
+                );
+              },
+              child: const Text('PRO\'ya Geç'),
+            ),
+          ],
+        );
       },
     );
   }
@@ -113,15 +126,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     }
     setState(() => _isCompletionLoading = true);
     try {
-      final categoriesSnapshotFuture =
-          _firestore.collection('categories').get();
+      final categoriesSnapshotFuture = _firestore
+          .collection('categories')
+          .get();
       final solvedSnapshotFuture = _firestore
           .collection('users')
           .doc(_currentUserId!)
           .collection('solvedQuizzes')
           .get();
-      final results =
-          await Future.wait([categoriesSnapshotFuture, solvedSnapshotFuture]);
+      final results = await Future.wait([
+        categoriesSnapshotFuture,
+        solvedSnapshotFuture,
+      ]);
       if (!mounted) return;
       final categoriesSnapshot =
           results[0] as QuerySnapshot<Map<String, dynamic>>;
@@ -157,9 +173,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     totalQuizCounts[categoryId] = aggregate.count ?? 0,
               )
               .catchError((e) {
-            print("Toplam test sayısı alınırken hata ($categoryId): $e");
-            totalQuizCounts[categoryId] = -1;
-          }),
+                print("Toplam test sayısı alınırken hata ($categoryId): $e");
+                totalQuizCounts[categoryId] = -1;
+              }),
         );
       }
       await Future.wait(quizCountFutures);
@@ -198,7 +214,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final textTheme = theme.textTheme;
-    final String currentUserEmail = _authService.currentUser?.email ?? 'Kullanıcı';
+    final String currentUserEmail =
+        _authService.currentUser?.email ?? 'Kullanıcı';
 
     final bool isPro = context.watch<UserDataProvider>().isPro;
 
@@ -209,12 +226,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         child: AppBar(elevation: 0, backgroundColor: colorScheme.background),
       ),
       body: _currentUserId == null
-          ? _buildErrorUI('Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.', theme)
+          ? _buildErrorUI(
+              'Kullanıcı bilgisi bulunamadı. Lütfen tekrar giriş yapın.',
+              theme,
+            )
           : RefreshIndicator(
               onRefresh: _reloadAllData,
               color: colorScheme.primary,
               child: StreamBuilder<DocumentSnapshot>(
-                stream: _firestore.collection('users').doc(_currentUserId).snapshots(),
+                stream: _firestore
+                    .collection('users')
+                    .doc(_currentUserId)
+                    .snapshots(),
                 builder: (context, userSnapshot) {
                   String displayName = 'Kullanıcı';
                   String emoji = '🙂';
@@ -223,25 +246,56 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
                   if (userSnapshot.hasError) {
                     print("Kullanıcı adı okuma hatası: ${userSnapshot.error}");
-                    headerStatusWidget = _buildSimpleHeader('Profil Yüklenemedi', theme, colorScheme, hasError: true);
-                  } else if (userSnapshot.connectionState == ConnectionState.waiting && !userSnapshot.hasData) {
-                    headerStatusWidget = _buildSimpleHeader('Yükleniyor...', theme, colorScheme, showProgress: true);
-                  } else if (userSnapshot.hasData && userSnapshot.data!.exists) {
-                    var userData = userSnapshot.data!.data() as Map<String, dynamic>? ?? {};
-                    displayName = userData['ad'] ?? userData['kullaniciAdi'] ?? currentUserEmail;
+                    headerStatusWidget = _buildSimpleHeader(
+                      'Profil Yüklenemedi',
+                      theme,
+                      colorScheme,
+                      hasError: true,
+                    );
+                  } else if (userSnapshot.connectionState ==
+                          ConnectionState.waiting &&
+                      !userSnapshot.hasData) {
+                    headerStatusWidget = _buildSimpleHeader(
+                      'Yükleniyor...',
+                      theme,
+                      colorScheme,
+                      showProgress: true,
+                    );
+                  } else if (userSnapshot.hasData &&
+                      userSnapshot.data!.exists) {
+                    var userData =
+                        userSnapshot.data!.data() as Map<String, dynamic>? ??
+                        {};
+                    displayName =
+                        userData['ad'] ??
+                        userData['kullaniciAdi'] ??
+                        currentUserEmail;
                     emoji = userData['emoji'] ?? '🙂';
                     puan = (userData['toplamPuan'] as num?)?.toInt() ?? 0;
                   }
 
                   return ListView(
                     padding: EdgeInsets.zero,
-                    physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+                    physics: const BouncingScrollPhysics(
+                      parent: AlwaysScrollableScrollPhysics(),
+                    ),
                     children: [
-                      _buildProfileHeader(displayName, emoji, puan, theme, colorScheme),
-                      _buildQuickActions(context, colorScheme, textTheme, isPro),
+                      _buildProfileHeader(
+                        displayName,
+                        emoji,
+                        puan,
+                        theme,
+                        colorScheme,
+                      ),
+                      _buildQuickActions(
+                        context,
+                        colorScheme,
+                        textTheme,
+                        isPro,
+                      ),
                       _buildTrialExamBanner(context, colorScheme, textTheme),
                       if (!isPro)
-                         _buildGoProBanner(context, colorScheme, textTheme),
+                        _buildGoProBanner(context, colorScheme, textTheme),
                       _buildCategoriesHeader(context, colorScheme, textTheme),
                       _buildCategoriesGrid(theme, colorScheme),
                       const SizedBox(height: 40),
@@ -254,10 +308,15 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
 
   // --- GÜNCELLENDİ: Header (Saate göre karşılama) ---
-  Widget _buildProfileHeader(String displayName, String emoji, int puan, ThemeData theme, ColorScheme colorScheme) {
-    
+  Widget _buildProfileHeader(
+    String displayName,
+    String emoji,
+    int puan,
+    ThemeData theme,
+    ColorScheme colorScheme,
+  ) {
     // Saate göre karşılama metnini al
-    final String greeting = _getGreeting(); 
+    final String greeting = _getGreeting();
 
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
@@ -266,16 +325,31 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         child: Row(
           children: [
             GestureDetector(
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen())),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfileScreen()),
+              ),
               child: Container(
-                width: 56, height: 56,
+                width: 56,
+                height: 56,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: colorScheme.surface,
-                  border: Border.all(color: colorScheme.primaryContainer.withOpacity(0.5), width: 2),
-                  boxShadow: [ BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 10, offset: const Offset(0, 4)) ],
+                  border: Border.all(
+                    color: colorScheme.primaryContainer.withOpacity(0.5),
+                    width: 2,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
                 ),
-                child: Center(child: Text(emoji, style: const TextStyle(fontSize: 28))),
+                child: Center(
+                  child: Text(emoji, style: const TextStyle(fontSize: 28)),
+                ),
               ),
             ),
             const SizedBox(width: 16),
@@ -285,11 +359,16 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 children: [
                   Text(
                     greeting, // <<< "İyi günler!" DEĞİŞTİRİLDİ
-                    style: theme.textTheme.bodyMedium?.copyWith(color: colorScheme.onSurfaceVariant),
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: colorScheme.onSurfaceVariant,
+                    ),
                   ),
                   Text(
                     displayName,
-                    style: theme.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold, color: colorScheme.onSurface),
+                    style: theme.textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.onSurface,
+                    ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
@@ -305,11 +384,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.star_rounded, color: Colors.amber.shade800, size: 20),
+                  Icon(
+                    Icons.star_rounded,
+                    color: Colors.amber.shade800,
+                    size: 20,
+                  ),
                   const SizedBox(width: 6),
                   Text(
                     NumberFormat.compact().format(puan),
-                    style: theme.textTheme.titleSmall?.copyWith(color: Colors.amber.shade900, fontWeight: FontWeight.bold),
+                    style: theme.textTheme.titleSmall?.copyWith(
+                      color: Colors.amber.shade900,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ],
               ),
@@ -321,7 +407,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   }
   // --- BİTTİ ---
 
-  Widget _buildQuickActions(BuildContext context, ColorScheme colorScheme, TextTheme textTheme, bool isPro) {
+  Widget _buildQuickActions(
+    BuildContext context,
+    ColorScheme colorScheme,
+    TextTheme textTheme,
+    bool isPro,
+  ) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
     return FadeTransition(
       opacity: _animationController,
@@ -335,7 +426,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               icon: FontAwesomeIcons.trophy,
               label: 'Sıralama',
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const LeaderboardScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LeaderboardScreen(),
+                  ),
+                );
               },
               isLocked: false,
             ),
@@ -346,7 +442,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               icon: FontAwesomeIcons.shieldHalved,
               label: 'Başarılar',
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const AchievementsScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AchievementsScreen(),
+                  ),
+                );
               },
               isLocked: false,
             ),
@@ -358,7 +459,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               label: 'İstatistik',
               onTap: () {
                 if (isPro) {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => StatisticsScreen()));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StatisticsScreen()),
+                  );
                 } else {
                   _showProFeatureDialog(context);
                 }
@@ -372,7 +476,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               icon: FontAwesomeIcons.clockRotateLeft,
               label: 'Geçmiş',
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SolvedQuizzesScreen()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SolvedQuizzesScreen(),
+                  ),
+                );
               },
               isLocked: false,
             ),
@@ -420,10 +529,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 gradient: LinearGradient(
-                  colors: [
-                    color, 
-                    Color.lerp(color, Colors.black, 0.2)!
-                  ],
+                  colors: [color, Color.lerp(color, Colors.black, 0.2)!],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -438,9 +544,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                        ),
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ],
               ),
@@ -451,7 +557,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget _buildTrialExamBanner(BuildContext context, ColorScheme colorScheme, TextTheme textTheme) {
+  Widget _buildTrialExamBanner(
+    BuildContext context,
+    ColorScheme colorScheme,
+    TextTheme textTheme,
+  ) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
     return FadeTransition(
       opacity: _animationController,
@@ -496,7 +606,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'Oyna, kazan, rekabet et!',
+                      'Çöz, yüksek puan al, rekabet et!',
                       style: textTheme.bodyMedium?.copyWith(
                         color: colorScheme.onSecondary.withOpacity(0.9),
                       ),
@@ -537,7 +647,11 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget _buildGoProBanner(BuildContext context, ColorScheme colorScheme, TextTheme textTheme) {
+  Widget _buildGoProBanner(
+    BuildContext context,
+    ColorScheme colorScheme,
+    TextTheme textTheme,
+  ) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
     return FadeTransition(
       opacity: _animationController,
@@ -547,28 +661,37 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           borderRadius: BorderRadius.circular(24),
           gradient: LinearGradient(
             colors: [Colors.deepPurple.shade400, Colors.purple.shade700],
-            begin: Alignment.topLeft, end: Alignment.bottomRight,
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
           boxShadow: [
-            BoxShadow(color: Colors.purple.withOpacity(0.3), blurRadius: 15, offset: const Offset(0, 8)),
+            BoxShadow(
+              color: Colors.purple.withOpacity(0.3),
+              blurRadius: 15,
+              offset: const Offset(0, 8),
+            ),
           ],
         ),
         child: Material(
           color: Colors.transparent,
           child: InkWell(
             onTap: () {
-               // Yönlendirme zaten doğru
-               Navigator.push(
-                 context,
-                 MaterialPageRoute(builder: (context) => const PurchaseScreen()),
-               );
+              // Yönlendirme zaten doğru
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const PurchaseScreen()),
+              );
             },
             borderRadius: BorderRadius.circular(24),
             child: Padding(
               padding: const EdgeInsets.all(20.0),
               child: Row(
                 children: [
-                  Icon(Icons.workspace_premium_rounded, color: Colors.amber.shade300, size: 48),
+                  Icon(
+                    Icons.workspace_premium_rounded,
+                    color: Colors.amber.shade300,
+                    size: 48,
+                  ),
                   const SizedBox(width: 16),
                   Expanded(
                     child: Column(
@@ -576,18 +699,26 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       children: [
                         Text(
                           'PRO\'ya Geçiş Yap',
-                          style: textTheme.titleMedium?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                          style: textTheme.titleMedium?.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         const SizedBox(height: 4),
                         Text(
                           'Reklamları kaldır ve tüm özelliklere eriş!',
-                          style: textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.8)),
+                          style: textTheme.bodySmall?.copyWith(
+                            color: Colors.white.withOpacity(0.8),
+                          ),
                         ),
                       ],
                     ),
                   ),
                   const SizedBox(width: 8),
-                  Icon(Icons.arrow_forward_ios_rounded, color: Colors.white.withOpacity(0.7)),
+                  Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white.withOpacity(0.7),
+                  ),
                 ],
               ),
             ),
@@ -597,113 +728,126 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget _buildCategoriesHeader(BuildContext context, ColorScheme colorScheme, TextTheme textTheme) {
+  Widget _buildCategoriesHeader(
+    BuildContext context,
+    ColorScheme colorScheme,
+    TextTheme textTheme,
+  ) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
-     return Padding(
-       padding: const EdgeInsets.fromLTRB(20.0, 24.0, 20.0, 16.0),
-       child: Row(
-         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-         children: [
-           Text(
-             'Kategorileri Keşfet',
-             style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
-           ),
-         ],
-       ),
-     );
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(20.0, 24.0, 20.0, 16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            'Kategorileri Keşfet',
+            style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildCategoriesGrid(ThemeData theme, ColorScheme colorScheme) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
-     return StreamBuilder<QuerySnapshot>(
-       stream: _firestore.collection('categories').orderBy('sira').snapshots(),
-       builder: (context, catSnapshot) {
-         if (catSnapshot.connectionState == ConnectionState.waiting ||
-             _isCompletionLoading) {
-           return const Center(
-               child: Padding(
-                   padding: EdgeInsets.symmetric(vertical: 40.0),
-                   child: CircularProgressIndicator()));
-         }
-         if (catSnapshot.hasError) {
-           print("Kategori okuma hatası: ${catSnapshot.error}");
-           return Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-               child: _buildErrorUI(
-                   'Kategoriler yüklenirken bir sorun oluştu.', theme,
-                   onRetry: _reloadAllData));
-         }
-         if (!catSnapshot.hasData || catSnapshot.data!.docs.isEmpty) {
-           return Padding(
-               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-               child: _buildErrorUI(
-                 'Görsterilecek kategori bulunamadı...',
-                 theme,
-                 iconWidget: FaIcon(
-                   FontAwesomeIcons.frownOpen,
-                   color: colorScheme.secondary,
-                   size: 60,
-                 ),
-               ));
-         }
+    return StreamBuilder<QuerySnapshot>(
+      stream: _firestore.collection('categories').orderBy('sira').snapshots(),
+      builder: (context, catSnapshot) {
+        if (catSnapshot.connectionState == ConnectionState.waiting ||
+            _isCompletionLoading) {
+          return const Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 40.0),
+              child: CircularProgressIndicator(),
+            ),
+          );
+        }
+        if (catSnapshot.hasError) {
+          print("Kategori okuma hatası: ${catSnapshot.error}");
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: _buildErrorUI(
+              'Kategoriler yüklenirken bir sorun oluştu.',
+              theme,
+              onRetry: _reloadAllData,
+            ),
+          );
+        }
+        if (!catSnapshot.hasData || catSnapshot.data!.docs.isEmpty) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            child: _buildErrorUI(
+              'Görsterilecek kategori bulunamadı...',
+              theme,
+              iconWidget: FaIcon(
+                FontAwesomeIcons.frownOpen,
+                color: colorScheme.secondary,
+                size: 60,
+              ),
+            ),
+          );
+        }
 
-         var documents = catSnapshot.data!.docs;
+        var documents = catSnapshot.data!.docs;
 
-         return GridView.builder(
-           shrinkWrap: true,
-           physics: const NeverScrollableScrollPhysics(),
-           padding: const EdgeInsets.only(
-             left: 16, right: 16, bottom: 16, top: 0,
-           ),
-           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-             crossAxisCount: 2,
-             crossAxisSpacing: 16,
-             mainAxisSpacing: 16,
-             childAspectRatio: 0.95,
-           ),
-           itemCount: documents.length,
-           itemBuilder: (context, index) {
-             final itemAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
-               CurvedAnimation(
-                 parent: _animationController,
-                 curve: Interval(
-                   (0.3 + (0.1 * index)).clamp(0.0, 1.0),
-                   (0.9 + (0.1 * index)).clamp(0.0, 1.0),
-                   curve: Curves.easeOut,
-                 ),
-               ),
-             );
+        return GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          padding: const EdgeInsets.only(
+            left: 16,
+            right: 16,
+            bottom: 16,
+            top: 0,
+          ),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
+            childAspectRatio: 0.95,
+          ),
+          itemCount: documents.length,
+          itemBuilder: (context, index) {
+            final itemAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+              CurvedAnimation(
+                parent: _animationController,
+                curve: Interval(
+                  (0.3 + (0.1 * index)).clamp(0.0, 1.0),
+                  (0.9 + (0.1 * index)).clamp(0.0, 1.0),
+                  curve: Curves.easeOut,
+                ),
+              ),
+            );
 
-             var data = documents[index].data() as Map<String, dynamic>;
-             var docId = documents[index].id;
-             var kategoriAdi = data['ad'] ?? 'İsimsiz Kategori';
-             var kategoriIcon = _getCategoryIcon(docId);
-             var kategoriColor = _getCategoryColor(docId, colorScheme);
+            var data = documents[index].data() as Map<String, dynamic>;
+            var docId = documents[index].id;
+            var kategoriAdi = data['ad'] ?? 'İsimsiz Kategori';
+            var kategoriIcon = _getCategoryIcon(docId);
+            var kategoriColor = _getCategoryColor(docId, colorScheme);
 
-             final completionInfo = _categoryCompletion[docId];
-             final total = completionInfo?['total'] ?? 0;
-             final solved = completionInfo?['solved'] ?? 0;
-             final progress = total > 0 ? solved / total : 0.0;
+            final completionInfo = _categoryCompletion[docId];
+            final total = completionInfo?['total'] ?? 0;
+            final solved = completionInfo?['solved'] ?? 0;
+            final progress = total > 0 ? solved / total : 0.0;
 
-             return FadeTransition(
-               opacity: itemAnimation,
-               child: _buildCategoryCard(
-                 docId,
-                 kategoriAdi,
-                 kategoriIcon,
-                 kategoriColor,
-                 progress,
-                 solved,
-                 total,
-                 theme,
-                 colorScheme,
-               ),
-             );
-           },
-         );
-       },
-     );
-   }
+            return FadeTransition(
+              opacity: itemAnimation,
+              child: _buildCategoryCard(
+                docId,
+                kategoriAdi,
+                kategoriIcon,
+                kategoriColor,
+                progress,
+                solved,
+                total,
+                theme,
+                colorScheme,
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
 
   Widget _buildCategoryCard(
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
@@ -825,8 +969,12 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                                   borderRadius: BorderRadius.circular(10),
                                   child: LinearProgressIndicator(
                                     value: progress.clamp(0.0, 1.0),
-                                    backgroundColor: Colors.white.withOpacity(0.3),
-                                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                    backgroundColor: Colors.white.withOpacity(
+                                      0.3,
+                                    ),
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      Colors.white,
+                                    ),
                                     minHeight: 6,
                                   ),
                                 )
@@ -890,12 +1038,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     Widget? iconWidget,
   }) {
     final colorScheme = theme.colorScheme;
-    final Widget finalIconWidget = iconWidget ?? Icon(
-        icon ?? Icons.error_outline_rounded,
-        color: icon == Icons.error_outline_rounded ? colorScheme.error : colorScheme.secondary,
-        size: 60,
-    );
-    final Color iconBgColor = (icon == Icons.error_outline_rounded || icon == null)
+    final Widget finalIconWidget =
+        iconWidget ??
+        Icon(
+          icon ?? Icons.error_outline_rounded,
+          color: icon == Icons.error_outline_rounded
+              ? colorScheme.error
+              : colorScheme.secondary,
+          size: 60,
+        );
+    final Color iconBgColor =
+        (icon == Icons.error_outline_rounded || icon == null)
         ? colorScheme.errorContainer
         : colorScheme.secondaryContainer;
 
@@ -929,8 +1082,13 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                 style: ElevatedButton.styleFrom(
                   foregroundColor: colorScheme.onPrimary,
                   backgroundColor: colorScheme.primary,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 24,
+                    vertical: 12,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
                 onPressed: onRetry,
               ),
@@ -956,9 +1114,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
         children: [
           if (showProgress)
             const SizedBox(
-                width: 18,
-                height: 18,
-                child: CircularProgressIndicator(strokeWidth: 2))
+              width: 18,
+              height: 18,
+              child: CircularProgressIndicator(strokeWidth: 2),
+            )
           else
             Icon(
               hasError ? Icons.warning_amber_rounded : Icons.info_outline,
@@ -977,17 +1136,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   List<Color> _getCategoryColor(String categoryId, ColorScheme colorScheme) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
     switch (categoryId) {
-       case 'turkce':
+      case 'turkce':
         return [const Color(0xFF9775FA), const Color(0xFF6741D9)];
-       case 'matematik':
+      case 'matematik':
         return [const Color(0xFF4DABF7), const Color(0xFF1864AB)];
-       case 'tarih':
-        return [const Color(0xFFFF6B6B), const Color(0xFFC92A2A)]; 
-       case 'cografya':
+      case 'tarih':
+        return [const Color(0xFFFF6B6B), const Color(0xFFC92A2A)];
+      case 'cografya':
         return [const Color(0xFF51CF66), const Color(0xFF2B8A3E)];
-       case 'vatandaslik':
+      case 'vatandaslik':
         return [const Color(0xFFFF922B), const Color(0xFFE8590C)];
-       default:
+      default:
         return [colorScheme.secondary, colorScheme.secondary.withOpacity(0.7)];
     }
   }
@@ -995,12 +1154,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   IconData _getCategoryIcon(String categoryId) {
     // ... (Bu fonksiyon aynı, değişiklik yok) ...
     switch (categoryId) {
-       case 'turkce': return FontAwesomeIcons.penNib;
-      case 'matematik': return FontAwesomeIcons.calculator; 
-      case 'tarih': return FontAwesomeIcons.bookOpen;
-      case 'cografya': return FontAwesomeIcons.globeAmericas;
-      case 'vatandaslik': return FontAwesomeIcons.scaleBalanced;
-      default: return FontAwesomeIcons.question;
+      case 'turkce':
+        return FontAwesomeIcons.penNib;
+      case 'matematik':
+        return FontAwesomeIcons.calculator;
+      case 'tarih':
+        return FontAwesomeIcons.bookOpen;
+      case 'cografya':
+        return FontAwesomeIcons.globeAmericas;
+      case 'vatandaslik':
+        return FontAwesomeIcons.scaleBalanced;
+      default:
+        return FontAwesomeIcons.question;
     }
   }
 }
