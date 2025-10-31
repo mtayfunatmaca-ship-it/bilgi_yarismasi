@@ -1,20 +1,17 @@
-// --- 1. DEĞİŞİKLİK: Eksik import'lar eklendi ---
-// BU İKİ SATIR DOĞRU VE KALMALI
+// android/app/build.gradle.kts
+
 import java.util.Properties
 import java.io.FileInputStream
-// --- DEĞİŞİKLİK BİTTİ ---
 
 plugins {
     id("com.android.application")
     id("com.google.gms.google-services")
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// Bu blok, "key.properties" dosyasını okur
 val keyProperties = Properties().apply {
-    val keyPropertiesFile = rootProject.file("key.properties") // Proje kök dizinine bakar
+    val keyPropertiesFile = rootProject.file("key.properties")
     if (keyPropertiesFile.exists()) {
         load(FileInputStream(keyPropertiesFile))
     }
@@ -26,12 +23,16 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        // --- Java 8 Desugaring için ZORUNLU AYARLAR ---
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+        isCoreLibraryDesugaringEnabled = true // Core Desugaring'i etkinleştir
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        // --- KRİTİK ÇÖZÜM: Kotlin'i Java 8'e eşitle ---
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        // --- BİTTİ ---
     }
 
     defaultConfig {
@@ -44,7 +45,6 @@ android {
 
     signingConfigs {
         create("release") {
-            // --- Burası key.properties'ten değerleri güvenle yükler ---
             val storeFilePath = keyProperties["storeFile"] as? String
             if (!storeFilePath.isNullOrBlank()) {
                 storeFile = file(storeFilePath.replace("\\", "/"))
@@ -66,7 +66,6 @@ android {
             )
         }
         getByName("debug") {
-            // Debug'da da aynı anahtar kullanılacak
             signingConfig = signingConfigs.getByName("release")
         }
     }
@@ -74,4 +73,13 @@ android {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Implementasyonu manuel Kotlin sürümüne değiştirildi (örn: 1.8.0)
+    // Bu, 'kotlinVersion' değişkeni hatasını çözmelidir.
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") 
+    
+    // Core Library Desugaring bağımlılığını ekler
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }
