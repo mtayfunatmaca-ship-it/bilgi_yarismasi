@@ -33,6 +33,10 @@ dependencies:
   google_mobile_ads: ^6.0.0
   in_app_purchase: ^3.2.3
   confetti: ^0.8.0
+  flutter_local_notifications: ^19.5.0
+  flutter_localizations:
+    sdk: flutter
+  
 
 
 # pubspec.yaml (dosyanın alt kısımları)
