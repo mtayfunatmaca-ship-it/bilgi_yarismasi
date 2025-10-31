@@ -3,6 +3,7 @@
 /* eslint-disable max-len */
 
 const {onSchedule} = require("firebase-functions/v2/scheduler");
+const {onDocumentWritten, onDocumentCreated} = require("firebase-functions/v2/firestore"); // YENİ IMPORT
 const {logger} = require("firebase-functions");
 const admin = require("firebase-admin");
 
@@ -19,139 +20,162 @@ function getStartOfWeek(date) {
   return startOfWeek;
 }
 
-/**
- * MEVCUT HAFTALIK Liderlik Tablosunu Hesaplar.
- * Her 10 dakikada bir çalışır.
- */
-exports.calculateCurrentWeeklyLeaderboard = onSchedule({
-  schedule: "*/10 * * * *",
-  timeZone: "Europe/Istanbul",
-}, async (event) => {
-  logger.info("MEVCUT HAFTALIK liderlik hesaplaması başlıyor (10dk)...");
+// === YARDIMCI FONKSİYON: Kullanıcı Verisini Alır (PRO Dahil) ===
+async function getUserDetails(userId) {
+  const userDoc = await db.collection("users").doc(userId).get();
+  if (userDoc.exists) {
+    const userData = userDoc.data();
+    return {
+      kullaniciAdi: userData.ad || userData.kullaniciAdi || userData.email || "İsimsiz",
+      emoji: userData.emoji || "🙂",
+      isPro: userData.isPro || false,
+      userId: userId,
+    };
+  }
+  return { kullaniciAdi: "Kullanıcı", emoji: "🙂", isPro: false, userId: userId };
+}
+
+// === YARDIMCI FONKSİYON: Haftalık/Aylık Skorları TEKRAR HESAPLAR ===
+async function recalculateLeaderboardScores(userId) {
+  // Bu fonksiyon, kullanıcının o haftaki/aydaki toplam skorunu yeniden hesaplar
 
   const now = new Date();
   const startOfThisWeek = getStartOfWeek(now);
-  logger.info(`Hesaplanan Hafta Aralığı: ${startOfThisWeek.toISOString()} - ${now.toISOString()}`);
-
-  const solvedQuizzesRef = db
-      .collectionGroup("solvedQuizzes")
-      .where("tarih", ">=", startOfThisWeek);
-  const snapshot = await solvedQuizzesRef.get();
-
-  const weeklyScores = new Map();
-  snapshot.forEach((doc) => {
-    const data = doc.data();
-    const puan = data.puan || 0;
-    const userId = doc.ref.parent.parent.id;
-    const currentScore = weeklyScores.get(userId) || 0;
-    weeklyScores.set(userId, currentScore + puan);
-  });
-  logger.info(`Toplam ${weeklyScores.size} kullanıcının puanı hesaplandı.`);
-
-  const batch = db.batch();
-  const leaderboardRef = db.collection("mevcutHaftalikLiderlik");
-
-  const oldEntries = await leaderboardRef.get();
-  oldEntries.forEach((doc) => batch.delete(doc.ref));
-
-  for (const [userId, puan] of weeklyScores.entries()) {
-    const userDoc = await db.collection("users").doc(userId).get();
-    let kullaniciAdi = "İsimsiz Kullanıcı";
-    let emoji = "🙂"; // Varsayılan emoji
-
-    if (userDoc.exists) {
-      const userData = userDoc.data();
-      // --- DÜZELTME: 'kullaniciAdi' alma mantığı ---
-      if (userData && userData.kullaniciAdi) {
-        kullaniciAdi = userData.kullaniciAdi;
-      } else if (userData && userData.email) {
-        kullaniciAdi = userData.email;
-      }
-      // --- DÜZELTME: 'emoji' alma mantığı (?. kaldırıldı) ---
-      if (userData && userData.emoji) {
-        emoji = userData.emoji;
-      }
-    }
-
-    batch.set(leaderboardRef.doc(userId), {
-      puan: puan,
-      kullaniciAdi: kullaniciAdi,
-      userId: userId,
-      emoji: emoji, // Düzeltilmiş değişkeni kullan
-    });
-  }
-
-  await batch.commit();
-  logger.info("MEVCUT HAFTALIK liderlik tablosu başarıyla güncellendi.");
-  return null;
-}); // Haftalık fonksiyon bitti
-
-
-/**
- * MEVCUT AYLIK Liderlik Tablosunu Hesaplar.
- * Her 10 dakikada bir çalışır.
- */
-exports.calculateCurrentMonthlyLeaderboard = onSchedule({
-  schedule: "*/10 * * * *",
-  timeZone: "Europe/Istanbul",
-}, async (event) => {
-  logger.info("MEVCUT AYLIK liderlik hesaplaması başlıyor (10dk)...");
-
-  const now = new Date();
   const startOfThisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
   startOfThisMonth.setHours(0, 0, 0, 0);
 
-  logger.info(`Hesaplanan Ay Aralığı: ${startOfThisMonth.toISOString()} - ${now.toISOString()}`);
+  const userSolvedQuizzesRef = db.collection("users").doc(userId).collection("solvedQuizzes");
 
-  const solvedQuizzesRef = db
-      .collectionGroup("solvedQuizzes")
-      .where("tarih", ">=", startOfThisMonth);
-  const snapshot = await solvedQuizzesRef.get();
-
-  const monthlyScores = new Map();
-  snapshot.forEach((doc) => {
-    const data = doc.data();
-    const puan = data.puan || 0;
-    const userId = doc.ref.parent.parent.id;
-    const currentScore = monthlyScores.get(userId) || 0;
-    monthlyScores.set(userId, currentScore + puan);
+  // 1. HAFTALIK SKOR HESAPLA
+  let totalWeeklyScore = 0;
+  const weeklySnapshot = await userSolvedQuizzesRef
+      .where("tarih", ">=", startOfThisWeek)
+      .get();
+  weeklySnapshot.forEach((doc) => {
+    totalWeeklyScore += doc.data().puan || 0;
   });
-  logger.info(`Toplam ${monthlyScores.size} kullanıcının aylık puanı hesaplandı.`);
+
+  // 2. AYLIK SKOR HESAPLA
+  let totalMonthlyScore = 0;
+  const monthlySnapshot = await userSolvedQuizzesRef
+      .where("tarih", ">=", startOfThisMonth)
+      .get();
+  monthlySnapshot.forEach((doc) => {
+    totalMonthlyScore += doc.data().puan || 0;
+  });
+
+  return { totalWeeklyScore, totalMonthlyScore };
+}
+
+
+/**
+ * KRİTİK: ANLIK SKOR GÜNCELLEMESİ (onDocumentWritten)
+ * Bir kullanıcı bir testi çözdüğünde (yani 'solvedQuizzes' alt koleksiyonuna yeni belge yazıldığında) çalışır.
+ */
+exports.updateLeaderboardsInstantly = onDocumentWritten({
+  document: "users/{userId}/solvedQuizzes/{quizId}", // Hangi belgenin tetiklediği
+  region: "europe-west3", // Fonksiyonunuzun bölgesi
+}, async (event) => {
+  if (!event.data) return null; // Belge yoksa çık
+
+  const userId = event.params.userId;
+  logger.info(`Anlık Leaderboard Güncellemesi Tetiklendi: Kullanıcı ${userId}`);
+
+  // Tüm skorları yeniden hesapla (Çözülen test sayısındaki değişiklik nedeniyle)
+  const { totalWeeklyScore, totalMonthlyScore } = await recalculateLeaderboardScores(userId);
+  const userDetails = await getUserDetails(userId);
 
   const batch = db.batch();
-  const leaderboardRef = db.collection("mevcutAylikLiderlik");
 
-  const oldEntries = await leaderboardRef.get();
-  oldEntries.forEach((doc) => batch.delete(doc.ref));
+  // 1. HAFTALIK LİDERLİK GÜNCELLEMESİ
+  const weeklyRef = db.collection("mevcutHaftalikLiderlik").doc(userId);
+  batch.set(weeklyRef, {
+    puan: totalWeeklyScore,
+    kullaniciAdi: userDetails.kullaniciAdi,
+    userId: userId,
+    emoji: userDetails.emoji,
+    isPro: userDetails.isPro,
+    sonGuncelleme: admin.firestore.FieldValue.serverTimestamp(),
+  }, { merge: true });
 
-  for (const [userId, puan] of monthlyScores.entries()) {
-    const userDoc = await db.collection("users").doc(userId).get();
-    let kullaniciAdi = "İsimsiz Kullanıcı";
-    let emoji = "🙂"; // Varsayılan emoji
-
-    if (userDoc.exists) {
-      const userData = userDoc.data();
-      // --- DÜZELTME: 'kullaniciAdi' alma mantığı ---
-      if (userData && userData.kullaniciAdi) {
-        kullaniciAdi = userData.kullaniciAdi;
-      } else if (userData && userData.email) {
-        kullaniciAdi = userData.email;
-      }
-      // --- DÜZELTME: 'emoji' alma mantığı (?. kaldırıldı) ---
-      if (userData && userData.emoji) {
-        emoji = userData.emoji;
-      }
-    }
-
-    batch.set(leaderboardRef.doc(userId), {
-      puan: puan,
-      kullaniciAdi: kullaniciAdi,
-      userId: userId,
-      emoji: emoji, // Düzeltilmiş değişkeni kullan
-    });
-  }
+  // 2. AYLIK LİDERLİK GÜNCELLEMESİ
+  const monthlyRef = db.collection("mevcutAylikLiderlik").doc(userId);
+  batch.set(monthlyRef, {
+    puan: totalMonthlyScore,
+    kullaniciAdi: userDetails.kullaniciAdi,
+    userId: userId,
+    emoji: userDetails.emoji,
+    isPro: userDetails.isPro,
+    sonGuncelleme: admin.firestore.FieldValue.serverTimestamp(),
+  }, { merge: true });
 
   await batch.commit();
-  logger.info("MEVCUT AYLIK liderlik tablosu başarıyla güncellendi.");
+  logger.info(`Anlık skorlar kaydedildi. Haftalık: ${totalWeeklyScore}, Aylık: ${totalMonthlyScore}`);
   return null;
-}); // Aylık fonksiyon bitti
+});
+// --- KRİTİK FONKSİYON BİTTİ ---
+
+
+/**
+ * HAFTALIK LİDERİ İLAN EDER. (Pazar 23:59) (SADECE İLAN)
+ * Artık puan hesaplamaz, sadece lideri kopyalar.
+ */
+exports.announceWeeklyWinner = onSchedule({
+  schedule: "59 23 * * 0",
+  timeZone: "Europe/Istanbul",
+}, async (event) => {
+  logger.info("HAFTALIK LİDER İLAN EDİLİYOR...");
+
+  const leaderboardRef = db.collection("mevcutHaftalikLiderlik");
+  const leadersSnapshot = await leaderboardRef.orderBy("puan", "desc").limit(1).get();
+
+  if (!leadersSnapshot.empty) {
+    const winnerData = leadersSnapshot.docs[0].data();
+    const winnerRef = db.collection("leaders").doc("weeklyWinner");
+    const winnerDetails = await getUserDetails(winnerData.userId);
+
+    await winnerRef.set({
+      kullaniciAdi: winnerDetails.kullaniciAdi,
+      emoji: winnerDetails.emoji,
+      puan: winnerData.puan,
+      userId: winnerData.userId,
+      isPro: winnerDetails.isPro,
+      announcementTime: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
+    logger.info(`🎉 Haftanın Lideri İlan Edildi: ${winnerDetails.kullaniciAdi}`);
+  }
+  return null;
+});
+
+/**
+ * AYLIK LİDERİ İLAN EDER. (Ayın 1'i 23:59) (SADECE İLAN)
+ * Artık puan hesaplamaz, sadece lideri kopyalar.
+ */
+exports.announceMonthlyWinner = onSchedule({
+  schedule: "59 23 1 * *",
+  timeZone: "Europe/Istanbul",
+}, async (event) => {
+  logger.info("AYLIK LİDER İLAN EDİLİYOR...");
+
+  const leaderboardRef = db.collection("mevcutAylikLiderlik");
+  const leadersSnapshot = await leaderboardRef.orderBy("puan", "desc").limit(1).get();
+
+  if (!leadersSnapshot.empty) {
+    const winnerData = leadersSnapshot.docs[0].data();
+    const winnerRef = db.collection("leaders").doc("monthlyWinner");
+    const winnerDetails = await getUserDetails(winnerData.userId);
+
+    await winnerRef.set({
+      kullaniciAdi: winnerDetails.kullaniciAdi,
+      emoji: winnerDetails.emoji,
+      puan: winnerData.puan,
+      userId: winnerData.userId,
+      isPro: winnerDetails.isPro,
+      announcementTime: admin.firestore.FieldValue.serverTimestamp(),
+    });
+
+    logger.info(`🎉 Ayın Lideri İlan Edildi: ${winnerDetails.kullaniciAdi}`);
+  }
+  return null;
+});
