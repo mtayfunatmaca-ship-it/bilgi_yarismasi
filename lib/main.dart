@@ -1,3 +1,5 @@
+// main.dart
+
 import 'package:bilgi_yarismasi/screens/batch_upload.dart';
 import 'package:bilgi_yarismasi/widgets/connectivity_banner.dart';
 import 'package:flutter/material.dart';
@@ -12,9 +14,20 @@ import 'package:bilgi_yarismasi/services/user_data_provider.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:bilgi_yarismasi/services/ad_service.dart';
 import 'package:bilgi_yarismasi/services/purchase_service.dart';
+import 'package:bilgi_yarismasi/services/notification_service.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+// 🔔 KRİTİK BİLDİRİM ZAMANLAMA ÇÖZÜMÜ İÇİN İMPORTLAR
+import 'package:timezone/data/latest_all.dart' as tz;
+import 'package:timezone/timezone.dart' as tz;
+// --------------------------------------------------------
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // 🔔 DÜZELTME 1: ZAMAN DİLİMİ BAŞLATMA
+  tz.initializeTimeZones(); 
+  
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeDateFormatting('tr_TR', null);
   await MobileAds.instance.initialize();
@@ -22,9 +35,17 @@ void main() async {
   // Servisleri başlat
   final AuthService authService = AuthService();
   final AdService adService = AdService();
-  adService.loadInterstitialAd(); // İlk reklamı yükle
+  adService.loadInterstitialAd(); 
   final PurchaseService purchaseService = PurchaseService();
-
+  
+  final NotificationService notificationService = NotificationService();
+  await notificationService.initializeNotifications();
+  
+  // 🔔 DÜZELTME 2: Platform bağımsız izin isteme metodunu çağırıyoruz
+  // Bu metod, hem iOS hem de Android (API 33+) için izin isteğini yönetir.
+  await notificationService.requestPermissions(); 
+  // -------------------------------------------------------------------
+  
   // Veri yükleyici (Yorumda olduğundan emin ol)
   //final uploader = FirebaseDataUploader();
   //await uploader.uploadDataFromJson();
@@ -33,27 +54,13 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeNotifier()),
-        ChangeNotifierProvider(
-          create: (context) => UserDataProvider(authService),
-        ),
-        Provider<AuthService>(
-          // AuthService 'ChangeNotifier' değil, o yüzden 'Provider' kalmalı
-          create: (_) => authService,
-        ),
+        ChangeNotifierProvider(create: (context) => UserDataProvider(authService)),
+        Provider<AuthService>(create: (_) => authService),
 
-        // --- DÜZELTME BURADA ---
-        // 'dispose:' parametresi kaldırıldı, çünkü ChangeNotifierProvider bunu otomatik yapar.
-        ChangeNotifierProvider<AdService>(
-          create: (_) => adService,
-          // dispose: (_, adService) => adService.dispose(), // <<< BU SATIR HATA VERİYORDU, KALDIRILDI
-        ),
+        ChangeNotifierProvider<AdService>(create: (_) => adService),
+        ChangeNotifierProvider<PurchaseService>(create: (_) => purchaseService),
 
-        // 'dispose:' parametresi kaldırıldı
-        ChangeNotifierProvider<PurchaseService>(
-          create: (_) => purchaseService,
-          // dispose: (_, purchaseService) => purchaseService.dispose(), // <<< BU SATIR HATA VERİYORDU, KALDIRILDI
-        ),
-        // --- DÜZELTME BİTTİ ---
+        Provider<NotificationService>(create: (_) => notificationService),
       ],
       child: const MyApp(),
     ),
@@ -78,6 +85,18 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
+          
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: const [
+            Locale('tr', 'TR'), 
+            Locale('en', 'US'), 
+          ],
+          locale: const Locale('tr', 'TR'), 
+
           home: const ConnectivityBanner(child: AuthWrapper()),
         );
       },
