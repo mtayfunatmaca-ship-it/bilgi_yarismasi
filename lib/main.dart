@@ -27,7 +27,7 @@ void main() async {
 
   // Veri yükleyici (Yorumda olduğundan emin ol)
   //final uploader = FirebaseDataUploader();
- // await uploader.uploadDataFromJson();
+  //await uploader.uploadDataFromJson();
 
   runApp(
     MultiProvider(
