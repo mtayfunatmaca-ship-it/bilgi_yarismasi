@@ -16,18 +16,13 @@ import 'package:bilgi_yarismasi/services/ad_service.dart';
 import 'package:bilgi_yarismasi/services/purchase_service.dart';
 import 'package:bilgi_yarismasi/services/notification_service.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-// 🔔 KRİTİK BİLDİRİM ZAMANLAMA ÇÖZÜMÜ İÇİN İMPORTLAR
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-// --------------------------------------------------------
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // 🔔 DÜZELTME 1: ZAMAN DİLİMİ BAŞLATMA
-  tz.initializeTimeZones(); 
-  
+  tz.initializeTimeZones();
+
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await initializeDateFormatting('tr_TR', null);
   await MobileAds.instance.initialize();
@@ -35,17 +30,14 @@ void main() async {
   // Servisleri başlat
   final AuthService authService = AuthService();
   final AdService adService = AdService();
-  adService.loadInterstitialAd(); 
+  adService.loadInterstitialAd();
   final PurchaseService purchaseService = PurchaseService();
-  
+
   final NotificationService notificationService = NotificationService();
   await notificationService.initializeNotifications();
-  
-  // 🔔 DÜZELTME 2: Platform bağımsız izin isteme metodunu çağırıyoruz
-  // Bu metod, hem iOS hem de Android (API 33+) için izin isteğini yönetir.
-  await notificationService.requestPermissions(); 
+  await notificationService.requestPermissions();
   // -------------------------------------------------------------------
-  
+
   // Veri yükleyici (Yorumda olduğundan emin ol)
   //final uploader = FirebaseDataUploader();
   //await uploader.uploadDataFromJson();
@@ -54,7 +46,9 @@ void main() async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => ThemeNotifier()),
-        ChangeNotifierProvider(create: (context) => UserDataProvider(authService)),
+        ChangeNotifierProvider(
+          create: (context) => UserDataProvider(authService),
+        ),
         Provider<AuthService>(create: (_) => authService),
 
         ChangeNotifierProvider<AdService>(create: (_) => adService),
@@ -85,17 +79,14 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
-          
+
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          supportedLocales: const [
-            Locale('tr', 'TR'), 
-            Locale('en', 'US'), 
-          ],
-          locale: const Locale('tr', 'TR'), 
+          supportedLocales: const [Locale('tr', 'TR'), Locale('en', 'US')],
+          locale: const Locale('tr', 'TR'),
 
           home: const ConnectivityBanner(child: AuthWrapper()),
         );
