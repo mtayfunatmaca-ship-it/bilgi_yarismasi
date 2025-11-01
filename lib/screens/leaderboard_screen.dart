@@ -31,6 +31,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
 
   late ConfettiController _confettiController;
 
+  // --- Kullanılmayan state değişkenleri kaldırıldı ---
+
   @override
   void initState() {
     super.initState();
@@ -137,7 +139,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
     super.dispose();
   }
 
-  // === build METODU (GÜNCELLENDİ) ===
+  // === build METODU (GÜNCEL) ===
   @override
   Widget build(BuildContext context) {
     final String? currentUserId = _authService.currentUser?.uid;
@@ -191,7 +193,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
                           podiumShadowColor: podiumShadowColor,
                         ),
                         timingCard: _buildTimingInfoCard(
-                          'Haftalık sıralama sonuçları her Pazartesi 00:00\'da güncellenir.',
+                          'Haftanın lideri pazar günü saat 00.00 da yayınlanır.',
                           colorScheme,
                         ),
                       ),
@@ -209,7 +211,7 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
                           podiumShadowColor: podiumShadowColor,
                         ),
                         timingCard: _buildTimingInfoCard(
-                          'Aylık sıralama sonuçları her ayın 2\'sinde 00:00\'da güncellenir.',
+                          'Ayın lideri sonraki ayın 1 inde saat 00:00 da ilan edilir.',
                           colorScheme,
                         ),
                       ),
@@ -261,16 +263,12 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
   }
   // === build METODU SONU ===
 
-  // === YENİ VE YARDIMCI WIDGET'LAR ===
-
   // Liderlik sekmesini (başlıklı veya başlıksız) oluşturan ana widget
   Widget _buildLeaderboardTab({
     required Widget content,
     Widget? header,
     required Widget timingCard,
   }) {
-    // Burada DraggableScrollableSheet'in başlangıç yüksekliğine müdahale etmiyoruz.
-    // timingCard da Column'un bir parçası olarak kalıyor.
     return Column(
       children: [
         if (header != null) header,
@@ -314,8 +312,9 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
 
   // Geçen Haftanın Lideri Kartı
   Widget _buildWeeklyWinnerCard(ColorScheme colorScheme, TextTheme textTheme) {
+    // HAFTALIK İLAN GÜNÜ KONTROLÜ: Sadece Pazar günü göster. (Dart'ta Pazar=7)
     bool showWinnerCard = DateTime.now().weekday == DateTime.sunday;
-    if (!showWinnerCard) {
+    if (!showWinnerCard || _currentSegment != 0) {
       return const SizedBox.shrink();
     }
 
@@ -332,9 +331,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
         final int puan = (data['puan'] as num? ?? 0).toInt();
         final bool isPro = data['isPro'] ?? false;
 
+        // --- KRİTİK KONFETİ DÜZELTMESİ BURADA (Hata almamak için sadece play) ---
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (mounted) _confettiController.play();
+          _confettiController.play();
         });
+        // --- DÜZELTME BİTTİ ---
 
         return Container(
           padding: const EdgeInsets.all(16),
@@ -434,9 +435,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
         final int puan = (data['puan'] as num? ?? 0).toInt();
         final bool isPro = data['isPro'] ?? false;
 
+        // --- KRİTİK KONFETİ DÜZELTMESİ BURADA (Hata almamak için sadece play) ---
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (mounted) _confettiController.play();
+          _confettiController.play();
         });
+        // --- DÜZELTME BİTTİ ---
 
         return Container(
           padding: const EdgeInsets.all(16),
@@ -558,6 +561,8 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
               _podiumAnimationController.forward();
               _listAnimationController.forward();
             });
+            // Konfeti kontrolcüsünü segment değiştiğinde durdur
+            _confettiController.stop();
           }
         },
         child: AnimatedContainer(
