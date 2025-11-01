@@ -121,7 +121,7 @@ exports.updateLeaderboardsInstantly = onDocumentWritten({
  * Artık puan hesaplamaz, sadece lideri kopyalar.
  */
 exports.announceWeeklyWinner = onSchedule({
-  schedule: "59 23 * * 0",
+  schedule: "00 00 * * 0",
   timeZone: "Europe/Istanbul",
 }, async (event) => {
   logger.info("HAFTALIK LİDER İLAN EDİLİYOR...");
@@ -153,7 +153,7 @@ exports.announceWeeklyWinner = onSchedule({
  * Artık puan hesaplamaz, sadece lideri kopyalar.
  */
 exports.announceMonthlyWinner = onSchedule({
-  schedule: "59 23 1 * *",
+  schedule: "00 00 1 * *",
   timeZone: "Europe/Istanbul",
 }, async (event) => {
   logger.info("AYLIK LİDER İLAN EDİLİYOR...");
