@@ -79,6 +79,24 @@
       "ad": "Atatürk İlkeleri ve İnkılapları", 
       "kategoriId": "tarih", 
       "sira": 11
+    },
+        {
+      "id": "cok_partili_hayata_gecis_donemi", 
+      "ad": "Çok Partili Hayata Geçiş Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 12
+    },
+            {
+      "id": "ataturk_donemi_dis_politika", 
+      "ad": "Atatürk Dönemi Dış Politika", 
+      "kategoriId": "tarih", 
+      "sira": 13
+    },
+                {
+      "id": "ataturk_sonrasi_donem", 
+      "ad": "Atatürk Sonrası Dönem", 
+      "kategoriId": "tarih", 
+      "sira": 14
     }
   ],
   
@@ -9563,7 +9581,1695 @@
           ]
         }
       ]
+    },
+    {
+  "id": "cok_partili_hayata_gecis_donemi_1",
+  "baslik": "Çok Partili Hayata Geçiş Dönemi-1",
+  "kategoriId": "tarih",
+  "konuId": "cok_partili_hayata_gecis_donemi",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye Cumhuriyeti tarihinde kurulan ilk muhalefet partisi aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Serbest Cumhuriyet Fırkası",
+        "Cumhuriyet Halk Fırkası",
+        "Terakkiperver Cumhuriyet Fırkası",
+        "Demokrat Parti"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Terakkiperver Cumhuriyet Fırkası'nın (TCF) kurucuları arasında yer almaz?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kâzım Karabekir",
+        "Ali Fuat Cebesoy",
+        "Rauf Orbay",
+        "Fethi Okyar"
+      ]
+    },
+    {
+      "soruMetni": "Terakkiperver Cumhuriyet Fırkası'nın parti programında yer alan \"Partimiz dini inançlara ve fikirlere saygılıdır.\" maddesi, hangi ilkenin istismar edilmesine zemin hazırlamıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Devletçilik",
+        "Laiklik",
+        "Halkçılık",
+        "Milliyetçilik"
+      ]
+    },
+    {
+      "soruMetni": "1925 yılında Doğu Anadolu'da çıkan ve Terakkiperver Cumhuriyet Fırkası'nın kapatılmasına zemin hazırlayan olay hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Menemen Olayı",
+        "Şeyh Sait İsyanı",
+        "İzmir Suikastı Girişimi",
+        "Ağrı İsyanları"
+      ]
+    },
+    {
+      "soruMetni": "Şeyh Sait İsyanı'nın ardından Hükümete olağanüstü yetkiler veren ve rejimi korumayı amaçlayan kanun aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Hıyanet-i Vataniye Kanunu",
+        "Tevhid-i Tedrisat Kanunu",
+        "Takrir-i Sükûn Kanunu",
+        "Kabotaj Kanunu"
+      ]
+    },
+    {
+      "soruMetni": "1926'daki İzmir Suikastı Girişimi'nin ardından, suçluları yargılamak için hangi mahkemeler görevlendirilmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Divan-ı Harp",
+        "İstiklal Mahkemeleri",
+        "Yüce Divan",
+        "Ankara Ağır Ceza Mahkemesi"
+      ]
+    },
+    {
+      "soruMetni": "İzmir Suikastı davasında, eski İttihatçılarla birlikte hangi partinin eski üyeleri de yargılanmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Serbest Cumhuriyet Fırkası",
+        "Cumhuriyet Halk Fırkası",
+        "Demokrat Parti",
+        "Terakkiperver Cumhuriyet Fırkası"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk'ün 1929 Dünya Ekonomik Bunalımı'nın etkilerini tartışmak ve hükümeti denetleyecek bir yapı oluşturmak amacıyla kurulmasını teşvik ettiği parti hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Demokrat Parti",
+        "Terakkiperver Cumhuriyet Fırkası",
+        "Milli Kalkınma Partisi",
+        "Serbest Cumhuriyet Fırkası"
+      ]
+    },
+    {
+      "soruMetni": "Serbest Cumhuriyet Fırkası (SCF), iktidardaki Cumhuriyet Halk Fırkası'ndan (CHF) hangi temel ekonomik konuda ayrılmaktadır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Tarımda makineleşme",
+        "Liberalizm (Serbest Piyasa Ekonomisi)",
+        "Demiryolu yapımı",
+        "Aşar vergisinin kaldırılması"
+      ]
+    },
+    {
+      "soruMetni": "Serbest Cumhuriyet Fırkası'nın kısa sürede (yaklaşık 3 ay) kendini feshetmesinin temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Mustafa Kemal'in desteğini çekmesi",
+        "Şeyh Sait İsyanı'nın başlaması",
+        "Parti içinde rejim karşıtlarının ve laiklik düşmanlarının toplanması",
+        "1930 yerel seçimlerini kaybetmesi"
+      ]
+    },
+    {
+      "soruMetni": "Serbest Cumhuriyet Fırkası'nın kendini feshetmesinden kısa bir süre sonra, 1930'da İzmir'de meydana gelen ve rejimin temellerini sarsan olay hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kubilay (Menemen) Olayı",
+        "Bursa Olayı",
+        "İzmir Suikastı Girişimi",
+        "Razgrad Olayı"
+      ]
+    },
+    {
+      "soruMetni": "Menemen Olayı'nın en önemli siyasi sonucu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Terakkiperver Cumhuriyet Fırkası'nın kapatılması",
+        "Takrir-i Sükûn Kanunu'nun çıkarılması",
+        "Çok partili hayata geçiş denemelerine uzun bir süre (1945'e kadar) ara verilmesi",
+        "Ankara'nın başkent ilan edilmesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi hem Terakkiperver Cumhuriyet Fırkası'nın hem de Serbest Cumhuriyet Fırkası'nın ortak özelliklerinden biridir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Atatürk'ün isteğiyle kurulmaları",
+        "Liberal ekonomi modelini savunmaları",
+        "Şeyh Sait İsyanı sonrası kapatılmaları",
+        "Kurucularının tamamının asker kökenli olması"
+      ]
+    },
+    {
+      "soruMetni": "Cumhuriyet Halk Fırkası'nın (CHF) temelini oluşturan ve 9 Eylül 1923'te kurulan partinin ilk adı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Anadolu ve Rumeli Müdâfaa-i Hukuk Cemiyeti",
+        "Halk Fırkası",
+        "İttihat ve Terakki Fırkası",
+        "Cumhuriyetçi Güven Partisi"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk dönemi çok partili hayat denemelerinin başarısız olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ekonomik liberalizmi savunmaları",
+        "Toplumun henüz demokratik olgunluğa erişmemiş olması ve inkılap karşıtlarının bu partileri kullanması",
+        "Mustafa Kemal'in tek partili yönetimi tercih etmesi",
+        "Ordu komutanlarının siyasete müdahale etmesi"
+      ]
+    },
+    {
+      "soruMetni": "1929 Dünya Ekonomik Bunalımı, Türkiye'de hangi partinin ekonomi politikasının (Devletçilik) güçlenmesine zemin hazırlamıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Cumhuriyet Halk Fırkası",
+        "Serbest Cumhuriyet Fırkası",
+        "Terakkiperver Cumhuriyet Fırkası",
+        "Demokrat Parti"
+      ]
+    },
+    {
+      "soruMetni": "TCF'nin kurulmasından hemen önce, \"Ordu mensuplarının siyaset yapmasını\" yasaklayan kanunun çıkarılmasının amacı nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Orduyu siyaset dışı tutmak",
+        "TCF'nin kuruluşunu engellemek",
+        "Lozan Antlaşması'nın şartlarını yerine getirmek",
+        "Saltanat yanlılarını ordudan temizlemek"
+      ]
+    },
+    {
+      "soruMetni": "Mustafa Kemal Paşa'nın Nutuk (Söylev) adlı eserinde en çok eleştirdiği grup ve siyasi oluşum aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Serbest Cumhuriyet Fırkası kurucuları",
+        "Terakkiperver Cumhuriyet Fırkası kurucuları ve İttihatçılar",
+        "İstanbul Hükümeti ve Padişah Vahdettin",
+        "Temsil Heyeti üyeleri"
+      ]
+    },
+    {
+      "soruMetni": "Şeyh Sait İsyanı'nın çıkması, Türkiye'nin hangi önemli dış politika meselesini olumsuz etkilemiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Hatay'ın ana vatana katılması",
+        "Boğazlar Komisyonu'nun kaldırılması",
+        "Musul sorununun (Irak sınırı) çözülmesi",
+        "Yabancı okullar sorunu"
+      ]
+    },
+    {
+      "soruMetni": "Mustafa Kemal Paşa'nın \"Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.\" sözünü hangi olay üzerine söylediği kabul edilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Şeyh Sait İsyanı",
+        "Cumhuriyet'in ilanı",
+        "İzmir Suikastı Girişimi",
+        "Menemen Olayı"
+      ]
     }
+  ]
+    },
+    {
+  "id": "cok_partili_hayata_gecis_donemi_2",
+  "baslik": "Çok Partili Hayata Geçiş Dönemi-2",
+  "kategoriId": "tarih",
+  "konuId": "cok_partili_hayata_gecis_donemi",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "\"Halk Fırkası\"nın adının başına \"Cumhuriyet\" kelimesi hangi olaydan sonra eklenmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Saltanatın kaldırılması",
+        "Cumhuriyet'in ilanı",
+        "Halifeliğin kaldırılması",
+        "İzmir İktisat Kongresi"
+      ]
+    },
+    {
+      "soruMetni": "Hem Şeyh Sait İsyanı hem de Menemen Olayı'nın ortak özelliği aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Çok partili hayat denemeleri sırasında ortaya çıkmaları",
+        "İzmir'de gerçekleşmeleri",
+        "Laik Cumhuriyete ve inkılaplara karşı olmaları",
+        "Musul meselesini olumsuz etkilemeleri"
+      ]
+    },
+    {
+      "soruMetni": "Terakkiperver Cumhuriyet Fırkası, aşağıdaki konulardan hangisinde Cumhuriyet Halk Fırkası ile aynı görüşü savunmamıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Cumhuriyetçilik",
+        "İnkılapların hızlı ve köktenci (radikal) bir şekilde yapılması",
+        "Misak-ı Millî'nin gerçekleştirilmesi",
+        "Ulusal bağımsızlık"
+      ]
+    },
+    {
+      "soruMetni": "Serbest Cumhuriyet Fırkası'nın parti programında, Cumhuriyet Halk Fırkası'ndan farklı olarak savunduğu görüşlerden biri de şudur:",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kadınlara siyasi hakların verilmesi",
+        "Tek dereceli seçim sistemine geçilmesi",
+        "Devletçilik ilkesinin sıkıca uygulanması",
+        "Halifeliğin geri getirilmesi"
+      ]
+    },
+    {
+      "soruMetni": "1925-1929 yılları arasında uygulanan Takrir-i Sükûn dönemi, hangi ilkenin yerleşmesinde otoriter bir yöntem izlenmesine neden olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Devletçilik",
+        "Halkçılık",
+        "Laiklik ve İnkılapçılık",
+        "Milliyetçilik"
+      ]
+    },
+    {
+      "soruMetni": "Mustafa Kemal Paşa'nın, Serbest Cumhuriyet Fırkası'nın kurulması için Fethi Okyar'ı görevlendirmesinin temel amacı nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Devletçilik politikasını terk etmek",
+        "Kendi iktidarını güçlendirmek",
+        "Hükümetin denetlenmesini sağlamak ve demokratik bir yapı oluşturmak",
+        "İnkılaplara karşı olanları tespit etmek"
+      ]
+    },
+    {
+      "soruMetni": "Serbest Cumhuriyet Fırkası'na katılanlar arasında, Atatürk'ün kız kardeşi olan isim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Afet İnan",
+        "Sabiha Gökçen",
+        "Fikriye Hanım",
+        "Makbule Atadan"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi, Atatürk dönemindeki çok partili hayat denemelerinin (TCF ve SCF) başarısızlıkla sonuçlanmasının toplumsal nedenidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ordunun siyasete karışması",
+        "İnkılapların henüz halk tarafından tam olarak benimsenmemiş olması",
+        "Güçlü bir ekonomik burjuvazinin olmaması",
+        "İki partinin de liberalizmi savunması"
+      ]
+    },
+    {
+      "soruMetni": "\"İki dereceli seçim\" sisteminden \"tek dereceli seçim\" sistemine geçişi savunan ilk parti aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Cumhuriyet Halk Fırkası",
+        "Terakkiperver Cumhuriyet Fırkası",
+        "Serbest Cumhuriyet Fırkası",
+        "Demokrat Parti"
+      ]
+    },
+    {
+      "soruMetni": "Şeyh Sait İsyanı sırasında Başbakan (Hükümet Başkanı) kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İsmet İnönü",
+        "Fethi Okyar",
+        "Celal Bayar",
+        "Rauf Orbay"
+      ]
+    },
+    {
+      "soruMetni": "Menemen Olayı'nda şehit edilen Asteğmen Mustafa Fehmi Kubilay'ın görevi neydi?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Jandarma Komutanı",
+        "Emniyet Müdürü",
+        "Öğretmen",
+        "Kaymakam"
+      ]
+    },
+    {
+      "soruMetni": "Cumhuriyet Halk Fırkası'nın temelini oluşturan \"Anadolu ve Rumeli Müdâfaa-i Hukuk Cemiyeti\"nin bir siyasi partiye dönüşme kararı nerede alınmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Erzurum Kongresi",
+        "Sivas Kongresi",
+        "İzmir İktisat Kongresi",
+        "TBMM'nin açılışı"
+      ]
+    },
+    {
+      "soruMetni": "Terakkiperver Cumhuriyet Fırkası'nın (TCF) kapatılmasının hukuki dayanağı hangi kanundur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hıyanet-i Vataniye Kanunu",
+        "Takrir-i Sükûn Kanunu",
+        "Teşvik-i Sanayi Kanunu",
+        "Medeni Kanun"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk döneminde (1923-1938) kurulan partiler arasında aşağıdakilerden hangisi yer almaz?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Cumhuriyet Halk Fırkası",
+        "Terakkiperver Cumhuriyet Fırkası",
+        "Serbest Cumhuriyet Fırkası",
+        "Milli Kalkınma Partisi"
+      ]
+    },
+    {
+      "soruMetni": "1930 yılındaki ikinci çok partili hayat denemesinin (SCF) ilkinden (TCF) temel farkı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Liberalizmi savunması",
+        "Atatürk'ün teşviki ve kontrolü altında kurulması",
+        "Kurucularının asker olması",
+        "Laikliğe karşı olması"
+      ]
+    },
+    {
+      "soruMetni": "\"Cumhuriyetçilik\" ve \"Laiklik\" ilkelerine karşı çıkan grupların sığındığı ilk organize siyasi yapı hangisi olmuştur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Cumhuriyet Halk Fırkası",
+        "Serbest Cumhuriyet Fırkası",
+        "İstanbul Hükümeti",
+        "Terakkiperver Cumhuriyet Fırkası"
+      ]
+    },
+    {
+      "soruMetni": "Menemen Olayı faillerinin yargılandığı mahkeme aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İstiklal Mahkemeleri",
+        "Divan-ı Harp (Askeri Mahkeme)",
+        "Yüce Divan",
+        "İzmir Ağır Ceza Mahkemesi"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk'ün vefatına kadar süren (1923-1938) dönemin büyük bölümünde, Cumhuriyet Halk Fırkası'nın \"değişmez genel başkanı\" kim olmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İsmet İnönü",
+        "Mustafa Kemal Atatürk",
+        "Celal Bayar",
+        "Fethi Okyar"
+      ]
+    },
+    {
+      "soruMetni": "Cumhuriyet Halk Fırkası'nın 1930'lu yıllarda benimsediği ve I. Beş Yıllık Sanayi Planı'nı uyguladığı ekonomik ilke nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Liberalizm",
+        "Devletçilik",
+        "Sosyalizm",
+        "Karma Ekonomi"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk dönemi iç politikasında yaşanan rejim karşıtı isyanların (Şeyh Sait, Menemen) bastırılması, hangi ilkenin yerleşmesini zorunlu ve öncelikli kılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Devletçilik",
+        "Halkçılık",
+        "Laiklik",
+        "Milliyetçilik"
+      ]
+    }
+  ]
+    },
+    {
+  "id": "ataturk_donemi_dis_politika_1",
+  "baslik": "Atatürk Dönemi Dış Politika-1",
+  "kategoriId": "tarih",
+  "konuId": "ataturk_donemi_dis_politika",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Atatürk dönemi Türk dış politikasının temel ilkesini ifade eden söz aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Ne mutlu Türk'üm diyene!\"",
+        "\"Geldikleri gibi giderler.\"",
+        "\"Yurtta sulh, cihanda sulh.\"",
+        "\"Hayatta en hakiki mürşit ilimdir.\""
+      ]
+    },
+    {
+      "soruMetni": "Lozan Barış Antlaşması'nda çözüme kavuşturulamayan ve daha sonraya bırakılan tek konu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Boğazlar sorunu",
+        "Musul sorunu (Irak sınırı)",
+        "Nüfus mübadelesi",
+        "Kapitülasyonlar"
+      ]
+    },
+    {
+      "soruMetni": "Musul sorununun Türkiye aleyhine sonuçlanmasında etkili olan iç gelişme aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Menemen Olayı",
+        "İzmir Suikastı Girişimi",
+        "Şeyh Sait İsyanı",
+        "Serbest Cumhuriyet Fırkası'nın kurulması"
+      ]
+    },
+    {
+      "soruMetni": "Musul meselesi, 1926 yılında hangi antlaşma ile Türkiye aleyhine çözüme kavuşmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Lozan Antlaşması",
+        "Ankara Antlaşması",
+        "Kars Antlaşması",
+        "Mudanya Ateşkesi"
+      ]
+    },
+    {
+      "soruMetni": "1926 Ankara Antlaşması'na göre Musul, hangi devlete bağlı Irak yönetimine bırakılmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Fransa",
+        "İtalya",
+        "Sovyet Rusya",
+        "İngiltere"
+      ]
+    },
+    {
+      "soruMetni": "Lozan Antlaşması'ndan sonra Türkiye'nin dış politikada en çok sorun yaşadığı devlet aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yunanistan (Nüfus mübadelesi)",
+        "Fransa (Yabancı okullar, Borçlar)",
+        "Sovyet Rusya (Boğazlar)",
+        "İtalya (Akdeniz'deki yayılmacılık)"
+      ]
+    },
+    {
+      "soruMetni": "Yabancı Okullar meselesinde Türkiye'nin, başta Fransa olmak üzere Batılı devletlere kabul ettirdiği temel politika ne olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Okulların kapatılması",
+        "Okulların Milletler Cemiyeti'ne devredilmesi",
+        "Konunun bir iç mesele olduğu ve Türk kanunlarına uyulması gerektiği",
+        "Okulların eğitim dilinin sadece Türkçe olması"
+      ]
+    },
+    {
+      "soruMetni": "Lozan Antlaşması gereği Türkiye ile Yunanistan arasında yaşanan Nüfus Mübadelesi (Değişimi) sorununda, anlaşmazlığa neden olan temel kavram nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Etabli\" (Yerleşik) tanımı",
+        "Tazminat miktarı",
+        "Değişimin yapılacağı tarih",
+        "Patrikhane'nin statüsü"
+      ]
+    },
+    {
+      "soruMetni": "Yunanistan ile yaşanan Nüfus Mübadelesi sorunu, hangi antlaşma ile çözüme kavuşmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1926 Ankara Antlaşması",
+        "1930 Ahali Mübadelesi Antlaşması",
+        "Balkan Antantı",
+        "Montrö Sözleşmesi"
+      ]
+    },
+    {
+      "soruMetni": "1930'lu yıllarda Türk-Yunan ilişkilerinin düzelmesinde etkili olan ve Atatürk'ü Nobel Barış Ödülü'ne aday gösteren Yunan devlet adamı kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Metaksas",
+        "Çaldaris",
+        "Venizelos",
+        "Papandreu"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye, dünya barışına katkı sağlamak amacıyla 1932 yılında hangi uluslararası kuruluşa üye olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Birleşmiş Milletler",
+        "NATO",
+        "Milletler Cemiyeti (Cemiyet-i Akvam)",
+        "Sadabat Paktı"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin Milletler Cemiyeti'ne davet edilmesinde hangi iki ülke öncülük etmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İngiltere ve Fransa",
+        "İspanya ve Yunanistan",
+        "ABD ve Sovyet Rusya",
+        "Almanya ve İtalya"
+      ]
+    },
+    {
+      "soruMetni": "1930'larda Almanya ve İtalya'nın yayılmacı politikaları (Revizyonizm) üzerine, Türkiye'nin batı sınırını güvence altına almak için 1934'te öncülük ettiği pakt hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sadabat Paktı",
+        "Balkan Antantı",
+        "Montrö Sözleşmesi",
+        "Nyon Konferansı"
+      ]
+    },
+    {
+      "soruMetni": "Balkan Antantı'na aşağıdaki devletlerden hangisi katılmamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Türkiye",
+        "Yunanistan",
+        "Yugoslavya",
+        "Bulgaristan"
+      ]
+    },
+    {
+      "soruMetni": "Balkan Antantı üyeleri (TAYYAR) hangi seçenekte doğru verilmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Türkiye, Arnavutluk, Yugoslavya, Yunanistan",
+        "Türkiye, Yunanistan, Yugoslavya, Romanya",
+        "Türkiye, Bulgaristan, Romanya, Arnavutluk",
+        "Türkiye, Yunanistan, Bulgaristan, Romanya"
+      ]
+    },
+    {
+      "soruMetni": "Bulgaristan'ın Balkan Antantı'na katılmamasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sovyet Rusya'nın baskısı",
+        "Sınırlarını genişletme (Revizyonist) politikası izlemesi",
+        "Ekonomik olarak zayıf olması",
+        "Türkiye ile nüfus sorunu yaşaması"
+      ]
+    },
+    {
+      "soruMetni": "Lozan Antlaşması'nda Boğazlar'ın yönetimi uluslararası bir komisyona bırakılmışken, Türkiye'nin 1936'da Montrö Sözleşmesi ile Boğazlar'da tam egemenlik kurmasını sağlayan uluslararası gelişme nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1929 Dünya Ekonomik Bunalımı",
+        "İtalya'nın Habeşistan'ı işgali ve Almanya'nın Ren bölgesine girmesi",
+        "Şeyh Sait İsyanı",
+        "İspanya İç Savaşı'nın çıkması"
+      ]
+    },
+    {
+      "soruMetni": "Montrö Boğazlar Sözleşmesi ile kazanılan en önemli diplomatik başarı nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Boğazlar Komisyonu'nun kaldırılarak tam Türk egemenliğinin sağlanması",
+        "Sovyet Rusya'nın Karadeniz'deki üstünlüğünün sona ermesi",
+        "Boğazlar'dan geçişin tamamen yasaklanması",
+        "İngiltere ve Fransa'nın desteğinin alınması"
+      ]
+    },
+    {
+      "soruMetni": "Montrö Boğazlar Sözleşmesi'nde, Karadeniz'e kıyısı olmadığı halde geçiş hakları konusunda en çok tartışma çıkaran ve sözleşmeyi imzalamakta geciken devlet hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İngiltere",
+        "Sovyet Rusya",
+        "İtalya",
+        "ABD"
+      ]
+    },
+    {
+      "soruMetni": "Montrö Boğazlar Sözleşmesi'nin imzalanmasıyla, Lozan'dan kalan hangi sorun kesin olarak çözüme kavuşmuştur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Musul sorunu",
+        "Borçlar sorunu",
+        "Nüfus mübadelesi",
+        "Boğazlar sorunu"
+      ]
+    }
+  ]
+    },
+{
+  "id": "ataturk_donemi_dis_politika_2",
+  "baslik": "Atatürk Dönemi Dış Politika-2",
+  "kategoriId": "tarih",
+  "konuId": "ataturk_donemi_dis_politika",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "İtalya'nın 1935'te Habeşistan'ı işgal etmesi ve Doğu Akdeniz'de yayılmacı bir politika izlemesi üzerine, Türkiye'nin doğu sınırını güvence altına almak için 1937'de öncülük ettiği pakt hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Balkan Antantı",
+        "Sadabat Paktı",
+        "Nyon Konferansı",
+        "Akdeniz Paktı"
+      ]
+    },
+    {
+      "soruMetni": "Sadabat Paktı'na aşağıdaki devletlerden hangisi katılmamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Türkiye",
+        "İran",
+        "Irak",
+        "Suriye"
+      ]
+    },
+    {
+      "soruMetni": "Sadabat Paktı üyeleri (TİİA) hangi seçenekte doğru verilmiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Türkiye, İran, Irak, Afganistan",
+        "Türkiye, Irak, İran, Azerbaycan",
+        "Türkiye, İran, Suriye, Afganistan",
+        "Türkiye, Irak, Suriye, Lübnan"
+      ]
+    },
+    {
+      "soruMetni": "Balkan Antantı ve Sadabat Paktı'nın ortak amacı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sovyet Rusya'nın yayılmacılığını engellemek",
+        "Milletler Cemiyeti'ne alternatif oluşturmak",
+        "Mevcut sınırları korumak ve yayılmacı (Revizyonist) devletlere karşı önlem almak",
+        "Ekonomik bir birlik kurmak"
+      ]
+    },
+    {
+      "soruMetni": "Türk-Fransız gemilerinin Ege Denizi'nde çarpışması üzerine davanın Lahey Adalet Divanı'na taşındığı ve Türkiye'nin kazandığı hukuki zafer hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Razgrad Olayı",
+        "Vagon-Li Olayı",
+        "Bozkurt-Lotus Olayı",
+        "Chester Projesi"
+      ]
+    },
+    {
+      "soruMetni": "Bozkurt-Lotus Davası'nda Türkiye'yi Lahey'de savunan ve \"Bozkurt\" soyadını alan Adalet Bakanı kimdir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Tevfik Rüştü Aras",
+        "Fethi Okyar",
+        "Şükrü Saraçoğlu",
+        "Mahmut Esat Bozkurt"
+      ]
+    },
+    {
+      "soruMetni": "Bozkurt-Lotus Davası'nın kazanılması, Türkiye'nin hangi alandaki bağımsızlığını uluslararası alanda kanıtlamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Ekonomik",
+        "Askeri",
+        "Siyasi",
+        "Hukuki"
+      ]
+    },
+    {
+      "soruMetni": "Hatay sorununun temeli, hangi antlaşma ile Hatay'ın Misak-ı Millî dışında kalmasına dayanır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1921 Kars Antlaşması",
+        "1921 Ankara Antlaşması",
+        "1926 Ankara Antlaşması",
+        "1923 Lozan Antlaşması"
+      ]
+    },
+    {
+      "soruMetni": "Hatay sorunu, 1936'da hangi gelişme üzerine yeniden uluslararası gündeme gelmiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Fransa'nın Suriye üzerindeki mandasını kaldırarak çekilme kararı alması",
+        "İtalya'nın Hatay'ı işgal etmesi",
+        "Milletler Cemiyeti'nin Hatay'ı Suriye'ye vermesi",
+        "Hatay'da iç isyan çıkması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye, Hatay meselesinin çözümü için hangi uluslararası kuruluşa başvurmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Lahey Adalet Divanı",
+        "Milletler Cemiyeti",
+        "Balkan Antantı Konseyi",
+        "Sadabat Paktı Konseyi"
+      ]
+    },
+    {
+      "soruMetni": "Milletler Cemiyeti'nin Hatay'daki Türk nüfusunun çoğunlukta olduğunu belirten ve bölgenin statüsü için çözüm öneren raporu hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Sandler Raporu",
+        "Brüksel Hattı Raporu",
+        "General Harbord Raporu",
+        "Amiral Bristol Raporu"
+      ]
+    },
+    {
+      "soruMetni": "Mustafa Kemal Atatürk'ün \"Benim şahsi meselem\" olarak tanımladığı dış politika sorunu hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Musul sorunu",
+        "Boğazlar sorunu",
+        "Hatay sorunu",
+        "Nüfus mübadelesi"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk'ün, Hatay sorunuyla ilgili olarak \"Asım Üs\" takma adıyla yazılar yazdığı gazete hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hâkimiyet-i Milliye",
+        "Kurun",
+        "İrade-i Milliye",
+        "Minber"
+      ]
+    },
+    {
+      "soruMetni": "Milletler Cemiyeti'nin kararı doğrultusunda 1938'de kurulan Bağımsız Hatay Cumhuriyeti'nin ilk Cumhurbaşkanı kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Abdurrahman Melek",
+        "Tayfur Sökmen",
+        "Rıfat Uray",
+        "Cemil Mardam"
+      ]
+    },
+    {
+      "soruMetni": "Bağımsız Hatay Cumhuriyeti'nin ilk Başbakanı kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Abdurrahman Melek",
+        "Tayfur Sökmen",
+        "Fevzi Çakmak",
+        "İsmet İnönü"
+      ]
+    },
+    {
+      "soruMetni": "Hatay Meclisi'nin oybirliği ile anavatana katılma kararı aldığı tarih (29 Haziran 1939) itibarıyla Türkiye Cumhuriyeti Cumhurbaşkanı kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Mustafa Kemal Atatürk",
+        "İsmet İnönü",
+        "Celal Bayar",
+        "Fevzi Çakmak"
+      ]
+    },
+    {
+      "soruMetni": "Hatay'ın anavatana katılmasıyla Misak-ı Millî sınırları içinde olup da dışarıda kalan hangi önemli bölge kalmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Batı Trakya",
+        "Musul",
+        "Batum",
+        "Kars"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk dönemi dış politikasında, 1923-1930 arası dönemde en gergin ilişki hangi ülkeyle Musul meselesi yüzünden yaşanmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Fransa",
+        "Yunanistan",
+        "Sovyet Rusya",
+        "İngiltere"
+      ]
+    },
+    {
+      "soruMetni": "1930'lu yıllarda İngiltere ve Türkiye'nin birbirine yakınlaşmasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Musul petrollerinin paylaşımı",
+        "İtalya ve Almanya'nın yayılmacı (Revizyonist) politikaları",
+        "Sovyet Rusya'nın Boğazlar'ı tehdit etmesi",
+        "Nüfus mübadelesinin çözülmesi"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk dönemi Türk dış politikası için \"Statükocu (Mevcut durumu koruyucu)\" denilmesinin nedeni nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yayılmacı politikalara karşı olması ve barışı savunması",
+        "İnkılapları yavaşlatmak istemesi",
+        "Osmanlı borçlarını ödemeyi kabul etmesi",
+        "Tek partili yönetimi sürdürmesi"
+      ]
+    }
+  ]
+},
+{
+  "id": "ataturk_donemi_dis_politika_3",
+  "baslik": "Atatürk Dönemi Dış Politika-3",
+  "kategoriId": "tarih",
+  "konuId": "ataturk_donemi_dis_politika",
+  "isNew": true,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Osmanlı Devleti'nden kalan borçlar (Düyûn-ı Umûmiye) sorunu, en çok hangi ülkeyle yaşanmış ve 1933 Paris Antlaşması ile çözüme kavuşmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İngiltere",
+        "Almanya",
+        "Fransa",
+        "İtalya"
+      ]
+    },
+    {
+      "soruMetni": "İstanbul'daki bir Fransız firması olan Vagon-Li Şirketi'nde Türkçe konuşan memurun işten atılması üzerine başlayan protestolar, hangi ilkenin dış politikadaki yansımasıdır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Devletçilik",
+        "Milliyetçilik",
+        "Halkçılık",
+        "Laiklik"
+      ]
+    },
+    {
+      "soruMetni": "Bulgaristan'ın Razgrad şehrinde Türk mezarlarına yapılan saldırı üzerine Türkiye'de büyük protestoların yaşandığı olay nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Vagon-Li Olayı",
+        "Razgrad Olayı",
+        "Nyon Konferansı",
+        "Bozkurt-Lotus Olayı"
+      ]
+    },
+    {
+      "soruMetni": "İtalya'nın Akdeniz'deki \"korsan\" denizaltı faaliyetlerine karşı Türkiye'nin de katıldığı ve Akdeniz'in güvenliğini sağlamayı amaçlayan 1937 tarihli konferans hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Montrö Konferansı",
+        "Nyon Konferansı",
+        "Lozan Konferansı",
+        "Brüksel Konferansı"
+      ]
+    },
+    {
+      "soruMetni": "Nüfus Mübadelesi Antlaşması gereği, mübadele dışında tutulan bölgeler (ahali) hangileridir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "İstanbul Rumları ile Batı Trakya Türkleri",
+        "Gökçeada Rumları ile Selanik Türkleri",
+        "İzmir Rumları ile Gümülcine Türkleri",
+        "Kıbrıs Türkleri ile Ege Adaları Rumları"
+      ]
+    },
+    {
+      "soruMetni": "Milletler Cemiyeti'nin Musul konusunda İngiltere lehine karar vermesinde etkili olan ve Türkiye'nin kabul etmediği sınır hattı nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sandler Raporu",
+        "Chester Hattı",
+        "Brüksel Hattı",
+        "Curzon Hattı"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk dönemi dış politikasında 1920'li yıllarda Sovyet Rusya ile iyi ilişkiler kurulmasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Rejim benzerliği (Komünizm)",
+        "Batılı (İtilaf) devletlerin ortak tehdit oluşturması",
+        "Musul meselesinde SSCB'nin Türkiye'yi desteklemesi",
+        "Ticari ilişkilerin gelişmiş olması"
+      ]
+    },
+    {
+      "soruMetni": "1930'lu yıllarda Türkiye'nin Sovyet Rusya ile ilişkilerinin Montrö görüşmeleri sırasında gerilmesinin nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "SSCB'nin Hatay konusunda Fransa'yı desteklemesi",
+        "SSCB'nin Boğazlar üzerinde tam kontrol istemesi, Türkiye'nin ise tam egemenlik istemesi",
+        "Türkiye'nin Balkan Antantı'nı kurması",
+        "Türkiye'nin Sadabat Paktı'nı kurması"
+      ]
+    },
+    {
+      "soruMetni": "Balkan Antantı'na İtalya'nın baskısı nedeniyle katılmayan Balkan devleti hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Bulgaristan",
+        "Yugoslavya",
+        "Romanya",
+        "Arnavutluk"
+      ]
+    },
+    {
+      "soruMetni": "1921 Ankara Antlaşması'nda Hatay için tanınan özel statünün (özerklik) temel dayanağı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bölgenin ekonomik zenginliği",
+        "Bölgedeki Türk nüfusunun yoğunluğu",
+        "Fransa'nın bölgeyi Milletler Cemiyeti'ne bırakmak istemesi",
+        "Suriye'nin bu bölge üzerinde hak iddia etmesi"
+      ]
+    },
+    {
+      "soruMetni": "Lozan Antlaşması'nda çözülen ancak Türkiye'nin istediği gibi çözülmeyen sorunlar hangileridir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kapitülasyonlar - Ermeni yurdu",
+        "Musul - Hatay - Boğazlar",
+        "Nüfus Mübadelesi - Dış Borçlar",
+        "Yabancı Okullar - Patrikhane"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Lozan Antlaşması'nda Türkiye'nin lehine ve kesin olarak çözülen bir konudur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Boğazlar",
+        "Musul",
+        "Kapitülasyonlar",
+        "Hatay"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin Musul üzerindeki hak iddialarını uluslararası alanda zayıflatan ve İngiltere'nin elini güçlendiren iç gelişme nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1929 Dünya Ekonomik Bunalımı",
+        "Şeyh Sait İsyanı",
+        "İzmir Suikastı Girişimi",
+        "Nüfus Mübadelesi sorunu"
+      ]
+    },
+    {
+      "soruMetni": "1926 Ankara Antlaşması ile Türkiye, Musul petrollerinden 25 yıl süreyle %10 pay almayı kabul etmiştir. Türkiye bu hakkını daha sonra nasıl kullanmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Süre sonuna kadar pay almıştır",
+        "Hakkını Sovyet Rusya'ya devretmiştir",
+        "Hakkını Fransa'ya devretmiştir",
+        "Bir defaya mahsus 500 bin İngiliz Sterlini alarak hakkından vazgeçmiştir"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Montrö Boğazlar Sözleşmesi'nin getirdiği yeniliklerden biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Boğazlar Komisyonu'nun kaldırılması",
+        "Boğazlar'ın her iki yakasında asker bulundurma hakkının tanınması",
+        "Boğazlar'ın yönetiminin tamamen Türkiye'ye bırakılması",
+        "Karadeniz'e kıyısı olmayan devletlerin savaş gemilerinin geçişinin yasaklanması"
+      ]
+    },
+    {
+      "soruMetni": "1921 Ankara Antlaşması (Fransa ile) ve 1921 Moskova Antlaşması'nın (SSCB ile) ortak sonucu nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Her ikisiyle de Hatay sınırı çizilmiştir",
+        "Her ikisi de Sevr'i reddeden büyük devletlerle imzalanmıştır",
+        "Her ikisi de Boğazlar sorununu çözmüştür",
+        "Her ikisi de kapitülasyonları kaldırmıştır"
+      ]
+    },
+    {
+      "soruMetni": "Atatürk dönemi dış politikasında 1934 (Balkan Antantı) ve 1937 (Sadabat Paktı) yıllarında kurulan ittifakların temel felsefesi nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yayılmacılık (Revizyonizm)",
+        "Tarafsızlık (İzolasyonizm)",
+        "Mevcut sınırları koruma (Statükoculuk)",
+        "Sovyet Rusya'ya karşı bir cephe oluşturma"
+      ]
+    },
+    {
+      "soruMetni": "Sadabat Paktı'nın imzalanmasında Türkiye'nin hangi komşusuyla yaşadığı sınır anlaşmazlığı (Ağrı Dağı isyanlarının etkisi) paktın gecikmesine neden olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Irak",
+        "Suriye",
+        "İran",
+        "Sovyet Rusya"
+      ]
+    },
+    {
+      "soruMetni": "1923-1930 yılları arasındaki Türk dış politikasının ana gündemini belirleyen konu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Lozan'dan kalan sorunların (Musul, Mübadele, Borçlar) çözülmesi",
+        "Hatay'ın anavatana katılması",
+        "Montrö Sözleşmesi'nin imzalanması",
+        "Balkan Antantı'nın kurulması"
+      ]
+    },
+    {
+      "soruMetni": "1930-1938 yılları arasındaki Türk dış politikasının ana gündemini belirleyen konu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Nüfus Mübadelesi sorunu",
+        "Musul meselesi",
+        "Yaklaşan II. Dünya Savaşı tehlikesine karşı sınır güvenliğini (Boğazlar, Paktlar, Hatay) sağlama",
+        "Yabancı okullar sorunu"
+      ]
+    }
+  ]
+},
+{
+  "id": "ataturk_sonrasi_donem_1",
+  "baslik": "Atatürk Sonrası Dönem-1",
+  "kategoriId": "tarih",
+  "konuId": "ataturk_sonrasi_donem",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Mustafa Kemal Atatürk'ün vefatının ardından 11 Kasım 1938'de TBMM tarafından Cumhurbaşkanı seçilen devlet adamı kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Celal Bayar",
+        "Fevzi Çakmak",
+        "İsmet İnönü",
+        "Şükrü Saraçoğlu"
+      ]
+    },
+    {
+      "soruMetni": "İsmet İnönü'nün Cumhurbaşkanlığı dönemine (1938-1950) verilen ve kendisinin \"değişmez genel başkan\" olarak anıldığı dönem nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Milli Şef Dönemi",
+        "Restorasyon Dönemi",
+        "Fetret Dönemi",
+        "Tek Parti Dönemi"
+      ]
+    },
+    {
+      "soruMetni": "1 Eylül 1939'da Almanya'nın Polonya'yı işgaliyle başlayan II. Dünya Savaşı sırasında Türkiye'nin Cumhurbaşkanı kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Mustafa Kemal Atatürk",
+        "İsmet İnönü",
+        "Celal Bayar",
+        "Fevzi Çakmak"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı (1939-1945) yıllarında Türkiye'nin izlediği temel dış politika aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Almanya'nın yanında savaşa girmek",
+        "Sovyet Rusya ile birlikte hareket etmek",
+        "Savaş dışı kalmayı amaçlayan \"denge politikası\"",
+        "Müttefik Devletler safında hemen savaşa girmek"
+      ]
+    },
+    {
+      "soruMetni": "Savaş yıllarında (1940) ekonomiyi devlet kontrolü altına almak, fiyatları belirlemek ve temel ihtiyaç maddelerinin dağıtımını düzenlemek amacıyla çıkarılan kanun hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Milli Korunma Kanunu",
+        "Takrir-i Sükûn Kanunu",
+        "Teşvik-i Sanayi Kanunu",
+        "Varlık Vergisi Kanunu"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı yıllarında olağanüstü kazançları vergilendirmek ve devlet gelirlerini artırmak amacıyla 1942'de çıkarılan, ancak uygulamada özellikle gayrimüslim azınlıkları hedef almasıyla eleştirilen vergi hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Aşar Vergisi",
+        "Toprak Mahsulleri Vergisi",
+        "Varlık Vergisi",
+        "Yol Vergisi"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı yıllarında kırsal kesimdeki çocukların eğitimi için açılan, ancak savaş sonrası dönemde siyasi tartışmaların odağı haline gelerek kapatılan eğitim kurumları hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Halkevleri",
+        "Millet Mektepleri",
+        "Köy Enstitüleri",
+        "Darülfünun"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı'nda Müttefik Devletler'in (İngiltere ve ABD) Türkiye'yi savaşa dahil etmek için ısrar ettiği, İnönü'nün ise \"teçhizat eksikliği\" gerekçesiyle direndiği görüşmeler hangileridir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Adana ve Kahire Görüşmeleri",
+        "Yalta ve Potsdam Konferansları",
+        "Zürih ve Londra Antlaşmaları",
+        "Paris ve San Francisco Konferansları"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin, II. Dünya Savaşı'na fiilen girmemesine rağmen 23 Şubat 1945'te Almanya ve Japonya'ya savaş ilan etmesinin temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Almanya'nın Türkiye sınırına dayanması",
+        "Sovyet Rusya'nın baskı yapması",
+        "Savaş sonrası kurulacak Birleşmiş Milletler'e kurucu üye olabilmek",
+        "İtalya'nın Rodos'u işgal etmesi"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı'nın sona ermesiyle birlikte, Sovyet Rusya'nın Türkiye'den hangi taleplerde bulunması, Türk-Sovyet ilişkilerini bozmuş ve Türkiye'yi Batı bloğuna itmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Musul ve Kerkük'ün terk edilmesi",
+        "Boğazlar'da üs verilmesi ve Kars-Ardahan'ın istenmesi",
+        "Montrö Sözleşmesi'nin kaldırılması",
+        "Kıbrıs'ta hak iddia edilmesi"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı sonrası Türkiye'de çok partili hayata geçişi hızlandıran en önemli iç gelişme nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Nuri Demirağ'ın Milli Kalkınma Partisi'ni kurması",
+        "CHP içinden dört milletvekilinin \"Dörtlü Takrir\"i vermesi",
+        "1946 seçimlerinin yapılması",
+        "Varlık Vergisi'nin kaldırılması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Demokrat Parti'nin (DP) kurucuları olan \"Dörtlü Takrir\" üyelerinden biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Celal Bayar",
+        "Adnan Menderes",
+        "Fuat Köprülü",
+        "İsmet İnönü"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de Atatürk dönemi sonrasında kurulan ilk muhalefet partisi (1945) aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Demokrat Parti",
+        "Millet Partisi",
+        "Milli Kalkınma Partisi",
+        "Terakkiperver Cumhuriyet Fırkası"
+      ]
+    },
+    {
+      "soruMetni": "Milli Kalkınma Partisi'nin kurucusu olan ve sanayi ile havacılık alanındaki yatırımlarıyla tanınan iş insanı kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Nuri Demirağ",
+        "Vehbi Koç",
+        "Nuri Killigil",
+        "Şakir Zümre"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti (DP) 7 Ocak 1946'da kurulduğunda, iktidardaki Cumhuriyet Halk Partisi'nin (CHP) hangi temel politikasına karşı çıkmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Laiklik",
+        "Milliyetçilik",
+        "Devletçilik",
+        "Cumhuriyetçilik"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye tarihinde \"Şaibeli Seçim\" veya \"Sopalı Seçim\" olarak anılan, \"Açık Oy - Gizli Tasnif\" usulüyle yapılan seçimler hangi yıl gerçekleşmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1945",
+        "1946",
+        "1950",
+        "1954"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı sonrası Sovyet tehdidine karşı ABD'nin, Türkiye ve Yunanistan'a askeri yardım yapmasını öngören politika hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Marshall Planı",
+        "Truman Doktrini",
+        "Eisenhower Doktrini",
+        "Monroe Doktrini"
+      ]
+    },
+    {
+      "soruMetni": "ABD'nin, aralarında Türkiye'nin de bulunduğu Avrupa ülkelerine II. Dünya Savaşı sonrası ekonomik kalkınma yardımı yaptığı programın adı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Truman Doktrini",
+        "Marshall Planı",
+        "Atlantik Bildirisi",
+        "Hoover Moratoryumu"
+      ]
+    },
+    {
+      "soruMetni": "14 Mayıs 1950 seçimlerinin \"Beyaz Devrim\" olarak adlandırılmasının temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Seçimleri Demokrat Parti'nin kazanması",
+        "Seçimlerin kış ayında yapılması",
+        "İktidarın seçim yoluyla ve kansız bir şekilde el değiştirmesi",
+        "CHP'nin seçimlere katılmaması"
+      ]
+    },
+    {
+      "soruMetni": "1950 seçimlerinde \"Gizli Oy - Açık Tasnif\" yönteminin uygulanmasını sağlayan kanun hangi yıl çıkarılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "1946",
+        "1948",
+        "1950",
+        "1954"
+      ]
+    }
+  ]
+},
+{
+  "id": "ataturk_sonrasi_donem_2",
+  "baslik": "Atatürk Sonrası Dönem-2",
+  "kategoriId": "tarih",
+  "konuId": "ataturk_sonrasi_donem",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "1950 seçimleri sonucunda iktidara gelen Demokrat Parti döneminde Cumhurbaşkanı olan siyasetçi kimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Adnan Menderes",
+        "İsmet İnönü",
+        "Celal Bayar",
+        "Fevzi Çakmak"
+      ]
+    },
+    {
+      "soruMetni": "1950-1960 yılları arasında 10 yıl boyunca Başbakanlık yapan Demokrat Parti lideri kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Celal Bayar",
+        "Adnan Menderes",
+        "Fatin Rüştü Zorlu",
+        "Refik Koraltan"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti'nin iktidara geldikten sonra yaptığı ilk icraatlardan biri olan ve toplumsal alanda geniş yankı bulan değişiklik hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Varlık Vergisi'nin kaldırılması",
+        "Köy Enstitüleri'nin kapatılması",
+        "Ezanın Arapça okunması yasağının kaldırılması",
+        "Marshall Yardımı'nın kabul edilmesi"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti döneminde Türkiye, hangi olaya asker göndererek Batı bloğuna (NATO) bağlılığını göstermiş ve 1952'de NATO'ya üye olmuştur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kore Savaşı",
+        "Vietnam Savaşı",
+        "Süveyş Krizi",
+        "Arap-İsrail Savaşı"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti döneminde Türkiye'nin NATO'ya üye olmasının temel amacı nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Almanya'nın yayılmacılığına karşı önlem almak",
+        "Ortadoğu'da etkinliğini artırmak",
+        "Sovyetler Birliği'nin (SSCB) tehditlerine karşı güvenliğini sağlamak",
+        "Yunanistan ile ilişkileri düzeltmek"
+      ]
+    },
+    {
+      "soruMetni": "1953 yılında Türkiye, Yunanistan ve Yugoslavya arasında, Sovyet tehdidine karşı kurulan ancak Yugoslavya'nın SSCB ile yakınlaşmasıyla önemini yitiren pakt hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bağdat Paktı",
+        "Balkan Paktı (Antantı)",
+        "Sadabat Paktı",
+        "Akdeniz Paktı"
+      ]
+    },
+    {
+      "soruMetni": "1955 yılında Sovyetler Birliği'nin Ortadoğu'daki yayılmasını engellemek amacıyla Türkiye, Irak, İran, Pakistan ve İngiltere'nin katılımıyla kurulan pakt hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Balkan Paktı",
+        "NATO",
+        "Varşova Paktı",
+        "Bağdat Paktı (CENTO)"
+      ]
+    },
+    {
+      "soruMetni": "Bağdat Paktı, 1958'de hangi üyesinin paktan çekilmesi üzerine merkezini Ankara'ya taşımış ve \"CENTO\" adını almıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Irak",
+        "İran",
+        "Pakistan",
+        "İngiltere"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti döneminde, Marshall Planı ve dış kredilerin etkisiyle en çok gelişme gösteren ekonomik sektör hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ağır sanayi",
+        "Tarım (Traktörleşme ve karayolu yapımı)",
+        "Bankacılık",
+        "Madencilik"
+      ]
+    },
+    {
+      "soruMetni": "1950'li yılların ortalarından itibaren Demokrat Parti Hükümeti'nin en çok eleştirildiği konu ne olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Dış politikada Batı yanlısı olması",
+        "Tarıma destek vermesi",
+        "Dış borçlanma, enflasyon ve ekonomik darboğaz",
+        "Laiklik ilkesinden taviz vermesi"
+      ]
+    },
+    {
+      "soruMetni": "1950'li yıllarda Yunanistan ile Türkiye arasında yaşanan ve 1959 Zürih-Londra Antlaşmaları ile geçici çözüme kavuşan sorun hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ege Adaları'nın silahlandırılması",
+        "Kıbrıs Sorunu",
+        "Kıta Sahanlığı",
+        "Patrikhane'nin statüsü"
+      ]
+    },
+    {
+      "soruMetni": "1959 Zürih ve Londra Antlaşmaları sonucunda kurulan Bağımsız Kıbrıs Cumhuriyeti'nin üç \"Garantör\" devleti hangileridir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Türkiye, Yunanistan, İngiltere",
+        "Türkiye, ABD, Sovyet Rusya",
+        "Yunanistan, İngiltere, ABD",
+        "Türkiye, İngiltere, İtalya"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti'nin 1950'li yılların sonuna doğru artan muhalefet ve basın eleştirilerini engellemek amacıyla 1960'ta TBMM'de kurduğu olağanüstü yetkilere sahip komisyon nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Milli Korunma Komisyonu",
+        "Yassıada Divanı",
+        "Tahkikat Komisyonu",
+        "Vatan Cephesi"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti dönemine (1950-1960) son veren askeri müdahale hangi tarihte gerçekleşmiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "12 Mart 1971",
+        "12 Eylül 1980",
+        "27 Mayıs 1960",
+        "28 Şubat 1997"
+      ]
+    },
+    {
+      "soruMetni": "27 Mayıs 1960 darbesini gerçekleştiren Türk Silahlı Kuvvetleri içerisindeki cunta yapılanmasının adı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Milli Güvenlik Konseyi",
+        "Milli Birlik Komitesi",
+        "Yüksek Askeri Şûra",
+        "Tahkikat Komisyonu"
+      ]
+    },
+    {
+      "soruMetni": "27 Mayıs 1960 Darbesi'nin ardından Demokrat Parti yöneticilerinin yargılandığı mahkemeler nerede kurulmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ankara İstiklal Mahkemesi",
+        "Yassıada",
+        "İmralı Adası",
+        "Sivas Kongre Binası"
+      ]
+    },
+    {
+      "soruMetni": "Yassıada Yargılamaları sonucunda idam cezasına çarptırılan Demokrat Parti dönemi siyasetçileri aşağıdakilerden hangileridir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Adnan Menderes, Celal Bayar, Refik Koraltan",
+        "Adnan Menderes, Fatin Rüştü Zorlu, Hasan Polatkan",
+        "Celal Bayar, Fuat Köprülü, Fatin Rüştü Zorlu",
+        "Adnan Menderes, Hasan Polatkan, Celal Bayar"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı yıllarında (1939-1945) Türkiye'de Başbakanlık yapan isimler hangi seçenekte doğru verilmiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Refik Saydam ve Şükrü Saraçoğlu",
+        "İsmet İnönü ve Celal Bayar",
+        "Fethi Okyar ve Adnan Menderes",
+        "Şükrü Saraçoğlu ve Celal Bayar"
+      ]
+    },
+    {
+      "soruMetni": "1957 seçimlerinden sonra DP Hükümeti'ne ve artan ekonomik sıkıntılara karşı muhalefetin güçlenmesi üzerine DP'nin oluşturduğu partizan örgütlenme modeli nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Köy Enstitüleri",
+        "Halkevleri",
+        "Vatan Cephesi",
+        "Millet Partisi"
+      ]
+    },
+    {
+      "soruMetni": "1954 yılında, DP'den ayrılarak muhalefet partisi kuran ve DP'nin laiklik karşıtı uygulamalarını eleştiren siyasetçi kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Fevzi Lütfi Karaosmanoğlu (Hürriyet Partisi)",
+        "Osman Bölükbaşı (Millet Partisi)",
+        "Nuri Demirağ (Milli Kalkınma Partisi)",
+        "İsmet İnönü (CHP)"
+      ]
+    }
+  ]
+},
+{
+  "id": "ataturk_sonrasi_done_3",
+  "baslik": "Atatürk Sonrası Dönem-3",
+  "kategoriId": "tarih",
+  "konuId": "ataturk_sonrasi_donem",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "II. Dünya Savaşı sırasında Türkiye'de olası bir hava saldırısına karşı geceleri şehirlerde ışıkların karartılması uygulamasına ne ad verilmiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İaşe sistemi",
+        "Karneli sistem",
+        "Karartma Geceleri",
+        "Milli Korunma"
+      ]
+    },
+    {
+      "soruMetni": "1948 yılında, DP'nin muhalefetinden çekinen CHP Hükümeti'nin, Köy Enstitüleri'ni kapatan ve Millet Partisi'nin kurulmasına yol açan Milli Eğitim Bakanı kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hasan Âli Yücel",
+        "Reşat Şemsettin Sirer",
+        "İsmail Hakkı Tonguç",
+        "Şükrü Saraçoğlu"
+      ]
+    },
+    {
+      "soruMetni": "1948'de Mareşal Fevzi Çakmak'ın onursal başkanlığında kurulan, DP'den daha sert bir muhalefet yürüten parti hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hürriyet Partisi",
+        "Millet Partisi",
+        "Milli Kalkınma Partisi",
+        "Cumhuriyetçi Köylü Millet Partisi"
+      ]
+    },
+    {
+      "soruMetni": "1950'de Demokrat Parti'nin seçim sloganı aşağıdakilerden hangisiydi?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Yurtta Sulh, Cihanda Sulh\"",
+        "\"Ne Ezen, Ne Ezilen\"",
+        "\"Yeter! Söz Milletindir!\"",
+        "\"Önce Ahlak ve Maneviyat\""
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı sonrası ABD'nin \"Sovyet yayılmacılığını çevreleme\" (Containment) politikası doğrultusunda Türkiye'de en çok önem verdiği askeri yardım nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Truman Doktrini",
+        "Marshall Planı",
+        "Varlık Vergisi",
+        "Milli Korunma Kanunu"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı yıllarında tarımsal üretimi artırmak ve topraksız köylüye toprak dağıtmak amacıyla çıkarılan, ancak toprak ağalarının tepkisiyle tam uygulanamayan kanun hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Çiftçiyi Topraklandırma Kanunu",
+        "Aşar Vergisinin Kaldırılması Kanunu",
+        "Milli Korunma Kanunu",
+        "Varlık Vergisi Kanunu"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti döneminde İstanbul'da yaşanan ve Rum azınlığın mallarına yönelik tahrip ve yağma eylemlerine dönüşen toplumsal olay (1955) hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Menemen Olayı",
+        "Razgrad Olayı",
+        "6-7 Eylül Olayları",
+        "Vagon-Li Olayı"
+      ]
+    },
+    {
+      "soruMetni": "6-7 Eylül Olayları'nın (1955) çıkmasına neden olan görünürdeki gerekçe nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kıbrıs'taki EOKA terörü",
+        "Atatürk'ün Selanik'teki evine bomba atıldığı yönündeki yalan haber",
+        "Varlık Vergisi'nin uygulanması",
+        "Yunanistan'ın Ege'de hak iddia etmesi"
+      ]
+    },
+    {
+      "soruMetni": "27 Mayıs 1960 Darbesi'nden sonra Milli Birlik Komitesi'nin (MBK) Devlet Başkanı olarak atadığı orgeneral kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Cemal Gürsel",
+        "Cevdet Sunay",
+        "Kenan Evren",
+        "Faruk Gürler"
+      ]
+    },
+    {
+      "soruMetni": "27 Mayıs Darbesi sonrası hazırlanan ve Türkiye Cumhuriyeti'nin en özgürlükçü anayasası olarak kabul edilen anayasa hangi tarihlidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1924 Anayasası",
+        "1961 Anayasası",
+        "1982 Anayasası",
+        "2017 Anayasa Değişikliği"
+      ]
+    },
+    {
+      "soruMetni": "1950-1960 döneminde DP iktidarının temelini oluşturan ve \"Milli Şef\" döneminin sona ermesini sağlayan Cumhurbaşkanı kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İsmet İnönü",
+        "Celal Bayar",
+        "Adnan Menderes",
+        "Fevzi Çakmak"
+      ]
+    },
+    {
+      "soruMetni": "II. Dünya Savaşı sırasında Türkiye'de ekmek, şeker, kumaş gibi temel ihtiyaç maddelerinin karne ile dağıtılması, hangi kanunun bir uygulamasıdır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Milli Korunma Kanunu",
+        "Takrir-i Sükûn Kanunu",
+        "Varlık Vergisi",
+        "Teşvik-i Sanayi Kanunu"
+      ]
+    },
+    {
+      "soruMetni": "1939'da Hatay'ın anavatana katılması sırasında Cumhurbaşkanı kimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Mustafa Kemal Atatürk",
+        "İsmet İnönü",
+        "Celal Bayar",
+        "Fevzi Çakmak"
+      ]
+    },
+    {
+      "soruMetni": "Demokrat Parti döneminde (1952) Atatürk'ün naaşı, Etnografya Müzesi'ndeki geçici kabrinden alınarak nereye nakledilmiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Anıtkabir",
+        "Dolmabahçe Sarayı",
+        "TBMM",
+        "Çankaya Köşkü"
+      ]
+    },
+    {
+      "soruMetni": "1950'li yıllarda DP iktidarının ekonomide zorlanması üzerine ABD'den istediği kredilerin reddedilmesi, Türkiye'yi hangi kuruluşa (1958) muhtaç bırakmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Birleşmiş Milletler",
+        "NATO",
+        "Uluslararası Para Fonu (IMF)",
+        "Dünya Bankası"
+      ]
+    },
+    {
+      "soruMetni": "1958'de DP Hükümeti'nin IMF baskısıyla almak zorunda kaldığı ve yüksek devalüasyon içeren ekonomik kararlara ne ad verilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "24 Ocak Kararları",
+        "Milli Korunma Kararları",
+        "4 Ağustos İstikrar Kararları",
+        "Dörtlü Takrir"
+      ]
+    },
+    {
+      "soruMetni": "27 Mayıs 1960 müdahalesi, anayasal düzeni kimden aldığı yetkiyle değil, fiili bir durumla değiştirmiştir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "TBMM",
+        "Halk",
+        "Cumhurbaşkanı",
+        "TSK İç Hizmet Kanunu (fiili gerekçe)"
+      ]
+    },
+    {
+      "soruMetni": "1950'de iktidara gelen DP'nin, CHP'nin hangi uygulamalarını eleştirerek halkın desteğini aldığı söylenemez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Köy Enstitüleri'nin uygulamaları",
+        "Dini konulardaki katı laikçi tutum",
+        "Savaş yıllarındaki ekonomik sıkıntılar (Varlık Vergisi vb.)",
+        "NATO'ya üye olma çabaları"
+      ]
+    },
+    {
+      "soruMetni": "1950'de Kore'ye gönderilen Türk Tugayı'nın komutanı kimdir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Tahsin Yazıcı",
+        "Fevzi Çakmak",
+        "Cemal Gürsel",
+        "Cevdet Sunay"
+      ]
+    },
+    {
+      "soruMetni": "27 Mayıs 1960 Darbesi'nin ardından Cumhurbaşkanı Celal Bayar'ın idam cezasının yaş haddi (65 yaş üstü) nedeniyle müebbet hapse çevrilmesi, hangi DP yöneticilerinin idamını engellememiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Başbakan (Menderes), Dışişleri Bakanı (Zorlu), Maliye Bakanı (Polatkan)",
+        "Meclis Başkanı (Koraltan) ve tüm kabine üyeleri",
+        "Sadece Adnan Menderes",
+        "Sadece Celal Bayar dışındaki herkes"
+      ]
+    }
+  ]
+}
 
      ],
  
