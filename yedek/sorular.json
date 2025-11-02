@@ -61,6 +61,24 @@
       "ad": "20. Yüzyıl Osmanlı Devleti", 
       "kategoriId": "tarih", 
       "sira": 8
+    },
+    {
+      "id": "1_tbmm_donemi", 
+      "ad": "1. TBMM Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 9
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi", 
+      "ad": "Kurtuluş Savaşı Muharebeler Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 10
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari", 
+      "ad": "Atatürk İlkeleri ve İnkılapları", 
+      "kategoriId": "tarih", 
+      "sira": 11
     }
   ],
   
@@ -6818,7 +6836,7 @@
       "baslik": "20. Yüzyıl Osmanlı Devleti - 3",
       "kategoriId": "tarih",
       "konuId": "osmanli_dagilma_donemi",
-      "isNew": true,
+      "isNew": false,
       "soruSayisi": 20,
       "sureDakika": 20,
       "sorular": [
@@ -7023,7 +7041,2530 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1_tbmm_donemi_1",
+      "baslik": "I. TBMM Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId": "1_tbmm_doonemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Mustafa Kemal'in 24 Nisan 1920'de Meclis'e sunduğu önergede yer alan \"TBMM'nin üstünde bir güç yoktur\" maddesi, aşağıdakilerden hangisini yok saymıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Temsil Heyeti'ni",
+            "İstanbul Hükümeti'ni ve Padişahı",
+            "Kuva-yi Milliye'yi",
+            "Mebusan Meclisi'ni"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin yasama, yürütme ve yargı yetkilerini kendinde toplamasına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Güçler Birliği",
+            "Güçler Ayrılığı",
+            "Meşruti Monarşi",
+            "Adem-i Merkeziyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin \"Güçler Birliği\" ilkesini benimsemesinin temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Padişahın yetkilerini kısıtlamak",
+            "Savaş koşullarında hızlı karar alıp uygulamak",
+            "Modern demokrasileri örnek almak",
+            "Azınlıkların yönetime katılmasını sağlamak"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin, üyeleri içinde azınlıklara yer vermemesi, onun en çok hangi özelliğini vurgular?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laik karakterini",
+            "İnkılapçı karakterini",
+            "Ulusal (Milli) karakterini",
+            "Teslimiyetçi karakterini"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'de uygulanan \"Meclis Hükümeti Sistemi\"nin tanımı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Padişahın seçtiği bir Sadrazamın, Meclis'e karşı sorumlu olması.",
+            "Meclis Başkanı'nın aynı zamanda Hükümetin de Başkanı olması.",
+            "Güçlü bir Başbakanın, Meclis dışından bakanlar atayabilmesi.",
+            "Yasama ve yürütme yetkilerinin kesin çizgilerle ayrılması."
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin çıkardığı ilk kanun aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hıyanet-i Vataniye Kanunu",
+            "Ağnam Vergisinin Artırılması Kanunu",
+            "Firariler Kanunu",
+            "Men-i Müskirat Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin, Meclis'e ve Milli Mücadele'ye karşı çıkanları yargılamak amacıyla 29 Nisan 1920'de çıkardığı kanun hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hıyanet-i Vataniye Kanunu",
+            "Teşkilat-ı Esasiye Kanunu",
+            "Tekalif-i Milliye Emirleri",
+            "Nisab-ı Müzakere Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin, Hıyanet-i Vataniye Kanunu'nu uygulamak ve asker kaçaklarını (Firariler Kanunu) yargılamak için kurduğu mahkemeler hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Divan-ı Harb",
+            "Nizamiye Mahkemeleri",
+            "İstiklal Mahkemeleri",
+            "Şer'iye Mahkemeleri"
+          ]
+        },
+        {
+          "soruMetni": "İstiklal Mahkemelerinin üyelerinin milletvekilleri arasından seçilmesi, I. TBMM'nin hangi yetkisini kullandığını gösterir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yasama",
+            "Yürütme",
+            "Yargı",
+            "Basın-Yayın"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin 18 Eylül 1920'de çıkardığı ve Meclis'in çalışma usullerini belirleyen kanun hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Men-i İsrafat Kanunu",
+            "Nisab-ı Müzakere Kanunu",
+            "Başkomutanlık Kanunu",
+            "Firariler Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM döneminde içki ve tütün kullanımını yasaklayan kanun hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Men-i Müskirat Kanunu",
+            "Hıyanet-i Vataniye Kanunu",
+            "Men-i İsrafat Kanunu",
+            "Tekalif-i Milliye Emirleri"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'ye karşı doğrudan İstanbul Hükümeti (Damat Ferit) tarafından çıkarılan ve Halifelik Ordusu olarak da bilinen isyan hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Anzavur İsyanı",
+            "Kuva-yi İnzibatiye",
+            "Çapanoğlu İsyanı",
+            "Koçgiri İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "İstanbul Hükümeti'nin kışkırtmasıyla çıkan ve boğazların güvenliğini sağlamayı amaçlayan isyan hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Anzavur İsyanı",
+            "Çerkez Ethem İsyanı",
+            "Delibaş Mehmet İsyanı",
+            "Milli Aşireti İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'ye karşı Yozgat ve çevresinde çıkan, bastırılması uzun süren ve Çerkez Ethem'in bastırdığı isyan hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Koçgiri İsyanı",
+            "Delibaş Mehmet İsyanı",
+            "Çapanoğlu İsyanı",
+            "Şeyh Eşref İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'ye karşı Konya ve çevresinde çıkan gerici nitelikli isyan hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Delibaş Mehmet İsyanı",
+            "Cemil Çeto İsyanı",
+            "Ali Batı İsyanı",
+            "Koçgiri İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM döneminde Sivas, Erzincan ve Tunceli bölgesinde çıkan, hem aşiret hem de ayrılıkçı nitelik taşıyan isyan hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Koçgiri İsyanı",
+            "Milli Aşireti İsyanı",
+            "Şeyh Eşref İsyanı",
+            "Çapanoğlu İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Başlangıçta Milli Mücadele'ye destek olup, Düzenli Ordu emrine girmeyi reddederek I. İnönü Savaşı sırasında isyan eden Kuva-yi Milliyeci kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Çerkez Ethem",
+            "Demirci Mehmet Efe",
+            "Yörük Ali Efe",
+            "Şahin Bey"
+          ]
+        },
+        {
+          "soruMetni": "TBMM'ye karşı çıkan isyanlara karşı İstanbul Hükümeti Şeyhülislamı Dürrizade Abdullah Efendi'nin fetvasına karşılık, Ankara Müftüsü kim karşı fetva yayınlamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mehmet Akif Ersoy",
+            "Rıfat Börekçi",
+            "Adnan Adıvar",
+            "Celalettin Arif Bey"
+          ]
+        },
+        {
+          "soruMetni": "10 Ağustos 1920'de imzalanan, Osmanlı Devleti'ni hukuken sona erdiren ancak TBMM tarafından hiçbir zaman kabul edilmeyen antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mondros Ateşkes Antlaşması",
+            "Sevr Barış Antlaşması",
+            "Mudanya Ateşkes Antlaşması",
+            "Lozan Barış Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Sevr Antlaşması'nı imzalayan Saltanat Şurası üyelerini TBMM hangi kanunla vatan haini ilan etmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hıyanet-i Vataniye Kanunu",
+            "Firariler Kanunu",
+            "Nisab-ı Müzakere Kanunu",
+            "Men-i Müskirat Kanunu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1_tbmm_donemi_2",
+      "baslik": "I. TBMM Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId": "1_tbmm_doonemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Kurtuluş Savaşı'nda Doğu Cephesi Komutanı olarak Ermenilere karşı mücadele eden ve onları Gümrü Antlaşması'na zorlayan komutan kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsmet İnönü",
+            "Ali Fuat Cebesoy",
+            "Kazım Karabekir",
+            "Refet Bele"
+          ]
+        },
+        {
+          "soruMetni": "3 Aralık 1920'de imzalanan Gümrü Antlaşması'nın en önemli özelliği nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "TBMM'nin imzaladığı ilk uluslararası antlaşma olması ve Ermenistan'ın TBMM'yi tanıması",
+            "Doğu sınırını kesin olarak çizmesi",
+            "Sovyet Rusya ile ittifak kurulması",
+            "Hatay'ın alınması"
+          ]
+        },
+        {
+          "soruMetni": "Gümrü Antlaşması ile Ermenistan'ın ilk kez hangi belgenin geçersizliğini kabul ettiği belirtilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mondros Ateşkes Antlaşması",
+            "Sevr Antlaşması",
+            "Berlin Antlaşması",
+            "Paris Barış Konferansı Kararları"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'nde Maraş'ta Fransızlara karşı direnişin sembolü olan ve \"İstiklal Madalyası\" alan ilk şehir olan yer neresidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Antep",
+            "Urfa",
+            "Maraş",
+            "Adana"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'nde \"Gazi\" unvanını en son alan şehir hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Maraş (Kahraman)",
+            "Urfa (Şanlı)",
+            "Antep (Gazi)",
+            "İnebolu"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'nde \"Şanlı\" unvanını alan şehir hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Maraş",
+            "Urfa",
+            "Antep",
+            "Adana"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'ndeki (Çukurova) Fransız ve Ermeni işgalini hangi antlaşma sona erdirmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gümrü Antlaşması",
+            "Moskova Antlaşması",
+            "1921 Ankara Antlaşması",
+            "Mudanya Ateşkes Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Kuva-yi Milliye birliklerinin Batı Cephesi'nde Yunanlılara karşı başarısız olduğu ve Düzenli Ordu'nun kurulmasını zorunlu hale getiren taarruz hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. İnönü Savaşı",
+            "II. İnönü Savaşı",
+            "Gediz Taarruzu",
+            "Sakarya Meydan Muharebesi"
+          ]
+        },
+        {
+          "soruMetni": "Gediz Taarruzu'ndan sonra Batı Cephesi Komutanlığı'na atanan ve Düzenli Ordu'yu kuran komutan kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İsmet (İnönü) Bey",
+            "Ali Fuat (Cebesoy) Paşa",
+            "Refet (Bele) Bey",
+            "Kazım (Karabekir) Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Düzenli Ordunun Batı Cephesi'nde kazandığı ilk zafer aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I. İnönü Muharebesi",
+            "II. İnönü Muharebesi",
+            "Gediz Taarruzu",
+            "Sakarya Meydan Muharebesi"
+          ]
+        },
+        {
+          "soruMetni": "I. İnönü Zaferi'nin iç politikadaki en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "1921 Anayasası'nın (Teşkilat-ı Esasiye) kabul edilmesi",
+            "İstiklal Marşı'nın kabul edilmesi",
+            "Başkomutanlık Kanunu'nun çıkması",
+            "Saltanatın kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "I. İnönü Zaferi'nin dış politikadaki en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kars Antlaşması'nın imzalanması",
+            "TBMM'nin Londra Konferansı'na davet edilmesi",
+            "Ankara Antlaşması'nın imzalanması",
+            "Mudanya Ateşkesi'nin imzalanması"
+          ]
+        },
+        {
+          "soruMetni": "1921 Anayasası'nın (Teşkilat-ı Esasiye) en önemli maddesi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Seçimler iki yılda bir yapılır.",
+            "Egemenlik kayıtsız şartsız milletindir.",
+            "Devletin dini İslam'dır.",
+            "Başkent Ankara'dır."
+          ]
+        },
+        {
+          "soruMetni": "Londra Konferansı'na İtilaf Devletleri'nin İstanbul Hükümeti ile birlikte TBMM'yi de davet etmesinin temel amacı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "TBMM'yi resmen tanımak",
+            "İki hükümet arasında ikilik çıkararak Sevr'i kabul ettirmek",
+            "Yunan ordusuna zaman kazandırmak",
+            "Rusya'nın tepkisini çekmek"
+          ]
+        },
+        {
+          "soruMetni": "Londra Konferansı'nda İstanbul Hükümeti temsilcisi Tevfik Paşa'nın \"Söz milletin gerçek temsilcisi olan TBMM heyetinindir\" demesi, neyin göstergesidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İtilaf Devletleri'nin planının başarısız olduğunun",
+            "Padişahın TBMM'yi tanıdığının",
+            "İki hükümetin birleştiğinin",
+            "Savaşın sona erdiğinin"
+          ]
+        },
+        {
+          "soruMetni": "Londra Konferansı'nın en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sevr Antlaşması yumuşatılmıştır.",
+            "TBMM, İtilaf Devletleri tarafından hukuken tanınmıştır.",
+            "İstanbul işgalden kurtarılmıştır.",
+            "Yunanlılar geri çekilmiştir."
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'ni ilk tanıyan Müslüman devlet hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sovyet Rusya",
+            "Azerbaycan",
+            "Mısır",
+            "Afganistan"
+          ]
+        },
+        {
+          "soruMetni": "I. İnönü Zaferi'nden sonra Mehmet Akif Ersoy tarafından yazılan İstiklal Marşı, hangi yarışma sonucunda kabul edilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Maarif Vekaleti (Milli Eğitim Bakanlığı)",
+            "Dışişleri Bakanlığı",
+            "Genelkurmay Başkanlığı",
+            "Meclis Başkanlığı"
+          ]
+        },
+        {
+          "soruMetni": "16 Mart 1921'de Sovyet Rusya ile imzalanan Moskova Antlaşması'nın en önemli sonucu nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sovyet Rusya'nın TBMM'yi ve Misak-ı Milli'yi tanıyan ilk büyük Avrupa devleti olması",
+            "Doğu sınırının kesinleşmesi",
+            "Hatay'ın alınması",
+            "Kapitülasyonların kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Moskova Antlaşması'nda \"İki taraftan birinin tanımadığı antlaşmayı diğeri de tanımayacaktır\" maddesi, hangi antlaşmaya karşı bir duruştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sevr Antlaşması",
+            "Mondros Ateşkes Antlaşması",
+            "Gümrü Antlaşması",
+            "Uşi Antlaşması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1_tbmm_donemi_3",
+      "baslik": "I. TBMM Dönemi-3",
+      "kategoriId": "tarih",
+      "konuId": "1_tbmm_doonemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Misak-ı Milli'den verilen ilk taviz olan Batum'un Gürcistan'a bırakılması, hangi antlaşma ile gerçekleşmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gümrü Antlaşması",
+            "Moskova Antlaşması",
+            "Kars Antlaşması",
+            "Ankara Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal'in II. İnönü Zaferi'nden sonra İsmet Paşa'ya çektiği telgrafta \"Siz orada yalnız düşmanı değil, milletin makus (kötü) talihini de yendiniz\" demesi, neyin göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Savaşın sona erdiğinin",
+            "Zaferin sadece askeri değil, psikolojik bir dönüm noktası olduğunun",
+            "İstanbul Hükümeti'nin istifa ettiğinin",
+            "İtalya'nın Anadolu'dan çekildiğinin"
+          ]
+        },
+        {
+          "soruMetni": "Kurtuluş Savaşı'nda Düzenli Ordunun tek yenilgisi olan savaş hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. İnönü",
+            "Gediz",
+            "Kütahya-Eskişehir Savaşları",
+            "Sakarya"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları'nın en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ordunun Sakarya nehrinin doğusuna çekilmesi ve Meclis'in Kayseri'ye taşınmasının gündeme gelmesi",
+            "Düzenli ordunun dağıtılması",
+            "Mustafa Kemal'in askerlikten istifa etmesi",
+            "Fransa'nın TBMM ile anlasma imzalaması"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir yenilgisinden sonra Meclis'in tüm yetkilerinin (Yasama, Yürütme, Yargı) 3 aylığına Mustafa Kemal'e devredildiği kanun hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Teşkilat-ı Esasiye",
+            "Başkomutanlık Kanunu",
+            "Hıyanet-i Vataniye Kanunu",
+            "Firariler Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal'in Başkomutanlık yetkisini kullanarak ordunun ihtiyaçlarını karşılamak amacıyla çıkardığı ulusal vergi emirleri hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ağnam Vergisi",
+            "Tekalif-i Milliye Emirleri",
+            "Men-i İsrafat Kanunu",
+            "Hıyanet-i Vataniye Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "Tekalif-i Milliye Emirleri'nin uygulanmasını hızlandırmak için hangi kurumlar yeniden görevlendirilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Divan-ı Harb",
+            "İstiklal Mahkemeleri",
+            "Kuva-yi Milliye",
+            "Temsil Heyeti"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal'in \"Hattı müdafaa yoktur, sathı müdafaa vardır. O satıh bütün vatandır.\" emrini verdiği savaş hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. İnönü",
+            "Kütahya-Eskişehir",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Meydan Muharebesi'nin en önemli askeri sonucu nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yunanlıların Anadolu'dan tamamen atılması",
+            "Türklerin 1683 Viyana Kuşatması'ndan beri süren geri çekilişinin sona ermesi",
+            "Düzenli ordunun kurulması",
+            "Batı Cephesi'nin kapanması"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal'e \"Gazilik\" unvanı ve \"Mareşallik\" rütbesi hangi savaştan sonra verilmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. İnönü",
+            "Kütahya-Eskişehir",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nin ardından Sovyet Rusya'ya bağlı Kafkas Cumhuriyetleri (Azerbaycan, Ermenistan, Gürcistan) ile imzalanan ve Doğu sınırını kesin olarak çizen antlaşma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gümrü Antlaşması",
+            "Moskova Antlaşması",
+            "Kars Antlaşması",
+            "Ankara Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nin ardından Fransa ile imzalanan ve TBMM'yi tanıyan ilk İtilaf Devleti'nin Fransa olmasını sağlayan antlaşma hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Gümrü Antlaşması",
+            "Moskova Antlaşması",
+            "Kars Antlaşması",
+            "1921 Ankara Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1921 Ankara Antlaşması ile Misak-ı Milli'den taviz verilen yer neresidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Batum",
+            "Musul",
+            "Hatay",
+            "Boğazlar"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'dan önce Başkomutanlık yetkisinin süresiz uzatılmasına karşı çıkan ve Mustafa Kemal ile anlaşmazlığa düşen \"İkinci Grup\" milletvekilleri neyi savunuyordu?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Padişahın geri gelmesini",
+            "Manda ve himayeyi",
+            "Meclis'in otoritesinin Padişahtan bile üstün olması gerektiğini",
+            "Demokratik yetkilerin tek kişide toplanmasına karşı Meclis üstünlüğünü"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz, Başkomutanlık Meydan Muharebesi ve Dumlupınar Meydan Muharebesi olarak da bilinen savaşın amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yunan ordusunu savunmaya çekmek",
+            "İtalyanları Anadolu'dan atmak",
+            "Düşmanı Anadolu'dan kesin olarak atmak",
+            "İstanbul'u işgalden kurtarmak"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal'in \"Ordular! İlk hedefiniz Akdeniz'dir. İleri!\" emrini verdiği savaş hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz",
+            "II. İnönü",
+            "I. İnönü"
+          ]
+        },
+        {
+          "soruMetni": "Milli Mücadele'nin askeri safhasını sona erdiren ve İstanbul, Boğazlar ve Doğu Trakya'nın savaşılmadan kurtarılmasını sağlayan antlaşma hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Mudanya Ateşkes Antlaşması",
+            "Mondros Ateşkes Antlaşması",
+            "Lozan Barış Antlaşması",
+            "Ankara Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması'na hangi İtilaf Devleti katılmamış, heyetini göndermemiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İngiltere",
+            "Fransa",
+            "İtalya",
+            "Yunanistan"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması ile hangi bölgenin yönetimi doğrudan TBMM'ye bırakılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İstanbul, Boğazlar ve Doğu Trakya",
+            "Musul ve Kerkük",
+            "Batı Trakya",
+            "Ege Adaları"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkesi'nin imzalanması, hangi devletin hukuken sona erdiğini göstermiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türkiye Cumhuriyeti",
+            "Osmanlı Devleti",
+            "Sovyet Rusya",
+            "İtilaf Devletleri"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1_tbmm_donemi_4",
+      "baslik": "I. TBMM Dönemi-4",
+      "kategoriId": "tarih",
+      "konuId": "1_tbmm_doonemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "İtilaf Devletleri'nin Lozan Konferansı'na TBMM Hükümeti ile birlikte İstanbul Hükümeti'ni de davet etmesi, hangi inkılabın yapılmasını hızlandırmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhuriyet'in ilanı",
+            "Halifeliğin kaldırılması",
+            "Saltanatın kaldırılması",
+            "Ankara'nın başkent olması"
+          ]
+        },
+        {
+          "soruMetni": "Saltanatın kaldırılması (1 Kasım 1922) en çok hangi ilke doğrultusunda atılmış bir adımdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Devletçilik",
+            "İnkılapçılık",
+            "Laiklik",
+            "Cumhuriyetçilik (Milli Egemenlik)"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin yaptığı ilk ve tek inkılap aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Saltanatın kaldırılması",
+            "Cumhuriyet'in ilanı",
+            "Halifeliğin kaldırılması",
+            "Medeni Kanun'un kabulü"
+          ]
+        },
+        {
+          "soruMetni": "Saltanatın kaldırılmasından sonra TBMM tarafından \"Halife\" ilan edilen, ancak siyasi yetkisi olmayan son Osmanlı hanedan üyesi kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "VI. Mehmet Vahdettin",
+            "II. Abdülhamid",
+            "Abdülmecid Efendi",
+            "V. Mehmet Reşat"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Barış Konferansı'na TBMM Hükümeti adına baş delege olarak katılan devlet adamı kimdir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Mustafa Kemal Paşa",
+            "Rauf Orbay",
+            "Kazım Karabekir Paşa",
+            "İsmet İnönü"
+          ]
+        },
+        {
+          "soruMetni": "İsmet İnönü'nün Lozan'a giderken TBMM'den aldığı talimatta, asla taviz verilmemesi istenen iki konu hangileridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Musul ve Boğazlar",
+            "Kapitülasyonlar ve Ermeni Yurdu",
+            "Borçlar ve Nüfus Mübadelesi",
+            "Savaş Tazminatı ve Azınlıklar"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Konferansı'nın kesintiye uğramasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Boğazlar sorunu",
+            "Kapitülasyonların kaldırılması ve Musul meselesi",
+            "Yunanistan'ın savaş tazminatı ödemeyi reddetmesi",
+            "Saltanatın kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Konferansı kesintiye uğradığı sırada, Türkiye'de ekonomik bağımsızlığı vurgulamak amacıyla toplanan kongre hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sivas Kongresi",
+            "İzmir İktisat Kongresi",
+            "Erzurum Kongresi",
+            "Pozantı Kongresi"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Barış Antlaşması'nda, çözümü sonraya bırakılan ve TBMM ile İngiltere arasında ikili görüşmelere terk edilen tek konu hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Boğazlar Sorunu",
+            "Musul Sorunu (Irak Sınırı)",
+            "Nüfus Mübadelesi",
+            "Kapitülasyonlar"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Barış Antlaşması'nda Boğazların statüsü nasıl belirlenmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tamamen TBMM'ye bırakılmıştır.",
+            "Rusya'nın kontrolüne bırakılmıştır.",
+            "Başkanı Türk olan uluslararası bir komisyona bırakılmıştır.",
+            "İngiltere ve Fransa'nın garantörlüğüne bırakılmıştır."
+          ]
+        },
+        {
+          "soruMetni": "Lozan Barış Antlaşması'nda Yunanistan ile Türkiye arasında kararlaştırılan \"Nüfus Mübadelesi\" (Değişim) dışında tutulan yerler hangileridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Batı Trakya Türkleri ile İstanbul Rumları",
+            "Gökçeada ve Bozcaada Rumları",
+            "Doğu Trakya Türkleri ile Selanik Rumları",
+            "Ege Adaları Türkleri ile Kıbrıs Rumları"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Barış Antlaşması'nın en büyük diplomatik ve ekonomik başarısı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kapitülasyonların tamamen kaldırılması",
+            "Savaş tazminatı alınması",
+            "Boğazlar Komisyonu'nun kurulması",
+            "Düyun-ı Umumiye'nin kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Yeni Türk Devleti'nin tapu senedi olarak kabul edilen ve Misak-ı Milli'yi büyük ölçüde gerçekleştiren antlaşma hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Mondros Ateşkes Antlaşması",
+            "Sevr Antlaşması",
+            "Mudanya Ateşkes Antlaşması",
+            "Lozan Barış Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'de Mustafa Kemal'e muhalif olan ve Meclis'in otoritesini savunan grubun adı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Felah-ı Vatan",
+            "İkinci Grup (Müdafaa-i Hukuk Zümresi)",
+            "Islahat Grubu",
+            "Tesanüt Grubu"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal ve arkadaşlarının I. TBMM'de oluşturduğu grubun adı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Birinci Grup (Anadolu ve Rumeli Müdafaa-i Hukuk Grubu)",
+            "Halk Fırkası",
+            "İttihat ve Terakki",
+            "İstiklal Grubu"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin \"Gazi Meclis\" unvanını alması hangi savaştan sonradır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "I. İnönü",
+            "Sakarya",
+            "Büyük Taarruz",
+            "II. İnönü"
+          ]
+        },
+        {
+          "soruMetni": "I. TBMM'nin olağanüstü yetkilere (Güçler Birliği) sahip olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Demokratik olmaması",
+            "Padişaha bağlı olması",
+            "Savaş Meclisi olması",
+            "İnkılapçı olması"
+          ]
+        },
+        {
+          "soruMetni": "\"TBMM'yi tanıyan ilk İtilaf Devleti\" aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İngiltere",
+            "İtalya",
+            "Sovyet Rusya",
+            "Fransa"
+          ]
+        },
+        {
+          "soruMetni": "\"TBMM'yi ve Misak-ı Milli'yi tanıyan ilk büyük Avrupa devleti\" aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fransa",
+            "İngiltere",
+            "Sovyet Rusya",
+            "İtalya"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi_1",
+      "baslik": "Kurtuluş Savaşı Muharebeler Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId": "kurtulus_savasi_muharebeler_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Batı Cephesi'nde Kuva-yı Milliye'nin kaldırılıp düzenli ordunun kurulmasını hızlandıran temel askerî gelişme aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çerkez Ethem İsyanı'nın başlaması",
+            "Gediz Taarruzu'ndaki başarısızlık",
+            "Kütahya-Eskişehir yenilgisi",
+            "I. İnönü Zaferi'nin kazanılması"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Cephesi Komutanı Kâzım Karabekir Paşa'nın Mondros Mütarekesi'ne uymayarak terhis etmediği ve Doğu Cephesi'nin temel gücünü oluşturan kolordu hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "15. Kolordu",
+            "20. Kolordu",
+            "3. Ordu",
+            "9. Ordu"
+          ]
+        },
+        {
+          "soruMetni": "İtilaf Devletleri'nin, I. İnönü Zaferi'nden sonra TBMM'yi Londra Konferansı'na davet etmelerindeki asıl amaçları neydi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "TBMM'yi resmen tanımak",
+            "Sevr Antlaşması'nı küçük değişikliklerle kabul ettirmek",
+            "Yunanistan'a karşı savaşı durdurmak",
+            "Sovyet Rusya ile TBMM'nin yakınlaşmasını engellemek"
+          ]
+        },
+        {
+          "soruMetni": "I. İnönü Zaferi'nin ardından yaşanan aşağıdaki gelişmelerden hangisi, TBMM'nin \"kurucu meclis\" özelliği taşıdığını en belirgin şekilde kanıtlar?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İstiklal Marşı'nın kabul edilmesi",
+            "1921 Anayasası'nın (Teşkilat-ı Esasiye) ilan edilmesi",
+            "Moskova Antlaşması'nın imzalanması",
+            "Düzenli orduya güvenin artması"
+          ]
+        },
+        {
+          "soruMetni": "\"Benim cesedimi çiğnemeden Antep'e giremezsiniz.\" diyerek Fransızlara karşı direnişin sembolü olan ve Kilis yolunda şehit düşen kahramanımız kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sütçü İmam",
+            "Ali Saip Bey",
+            "Şahin Bey",
+            "Yörük Ali Efe"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın, Batı Cephesi Komutanı İsmet Paşa'ya \"Siz orada yalnız düşmanı değil, milletin makûs (kötü) talihini de yendiniz.\" telgrafını çektiği savaş hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "I. İnönü Muharebesi",
+            "II. İnönü Muharebesi",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Düzenli ordunun Batı Cephesi'ndeki tek yenilgisi olan Kütahya-Eskişehir Savaşları'ndan sonra, ordunun daha fazla kayıp vermemesi için Mustafa Kemal Paşa'nın emriyle çekildiği hat neresidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Afyon-Kütahya hattı",
+            "Polatlı-Haymana hattı",
+            "Sakarya Nehri'nin doğusu",
+            "Gediz Nehri'nin batısı"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları'nın en buhranlı günlerinde, TBMM tarafından 5 Ağustos 1921'de çıkarılan Başkomutanlık Kanunu ile Mustafa Kemal Paşa'ya devredilen yetkiler hangileridir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnızca Yürütme",
+            "Yasama ve Yürütme",
+            "Yasama, Yürütme ve Yargı",
+            "Yalnızca Askeri Yetkiler"
+          ]
+        },
+        {
+          "soruMetni": "Başkomutan Mustafa Kemal Paşa'nın, ordunun ihtiyaçlarını karşılamak için çıkardığı Tekâlif-i Milliye Emirleri'nin uygulanmasını denetlemekle görevlendirilen kurum hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İstiklal Mahkemeleri",
+            "Divan-ı Harb",
+            "Askeri İnzibat",
+            "TBMM Muhafız Birliği"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın \"Hattı müdafaa yoktur, sathı müdafaa vardır. O satıh bütün vatandır.\" şeklindeki dünyaca ünlü savaş taktiğini uyguladığı muharebe hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "II. İnönü Muharebesi",
+            "Kütahya-Eskişehir Muharebeleri",
+            "Sakarya Meydan Muharebesi",
+            "Başkomutanlık Meydan Muharebesi"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Meydan Muharebesi'nin kazanılmasının ardından, TBMM tarafından Mustafa Kemal Paşa'ya hangi rütbe ve unvan verilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Başkomutan",
+            "Mareşal ve Gazi",
+            "Orgeneral",
+            "Başöğretmen"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nin ardından Fransa ile imzalanan 1921 Ankara Antlaşması'nın en önemli dış politika sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu sınırının kesinleşmesi",
+            "İtalya'nın Anadolu'dan çekilmesi",
+            "Güney Cephesi'nin kapanması ve Hatay hariç güney sınırının çizilmesi",
+            "Boğazlar Komisyonu'nun kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'nin Doğu sınırını kesinleştiren Kars Antlaşması, aşağıdaki savaşlardan hangisinin diplomatik bir sonucudur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. İnönü Muharebesi",
+            "Gümrü Zaferi",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un \"Başkomutanlık Meydan Muharebesi\" olarak da anılmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yunan Başkomutanı Trikopis'in esir alınması",
+            "Çok geniş bir alanda yapılması",
+            "Mustafa Kemal Paşa tarafından bizzat stratejisinin çizilmesi ve idare edilmesi",
+            "Savaşın Dumlupınar'da kazanılması"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın \"Ordular, ilk hedefiniz Akdeniz'dir. İleri!\" emrini verdiği ve Kurtuluş Savaşı'nın askerî safhasını sonlandıran taarruz hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Gediz Taarruzu",
+            "Sakarya Meydan Muharebesi",
+            "II. İnönü Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Kurtuluş Savaşı'nın silahlı mücadele dönemini sona erdiren ve diplomatik süreci (Lozan) başlatan antlaşma aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gümrü Antlaşması",
+            "Lozan Barış Antlaşması",
+            "Mudanya Ateşkes Antlaşması",
+            "Ankara Antlaşması (1921)"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması'ndaki diplomatik başarısından dolayı Lozan Konferansı'na da baş delege olarak gönderilen devlet adamı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mustafa Kemal Paşa",
+            "İsmet Paşa",
+            "Rauf Orbay",
+            "Kâzım Karabekir"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması ile savaş yapılmadan kurtarılan yerler arasında aşağıdakilerden hangisi bulunmaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İstanbul",
+            "Boğazlar",
+            "Doğu Trakya",
+            "İzmir ve Batı Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "TBMM'nin imzaladığı ilk askerî ve siyasi antlaşma olan Gümrü Antlaşması, hangi devlete karşı kazanılan zaferin sonucunda imzalanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gürcistan",
+            "Sovyet Rusya",
+            "Ermenistan",
+            "Fransa"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'ndeki direnişi sonucunda TBMM tarafından \"Kahraman\" unvanı verilen şehrimiz hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Antep",
+            "Urfa",
+            "Maraş",
+            "Adana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi_2",
+      "baslik": "Kurtuluş Savaşı Muharebeler Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId": "kurtulus_savasi_muharebeler_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Güney Cephesi'ndeki direnişi sonucunda TBMM tarafından \"Şanlı\" unvanı verilen şehrimiz hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Antep",
+            "Urfa",
+            "Maraş",
+            "Adana"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'ndeki direnişi sonucunda TBMM tarafından \"Gazi\" unvanı verilen şehrimiz hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Antep",
+            "Urfa",
+            "Maraş",
+            "Adana"
+          ]
+        },
+        {
+          "soruMetni": "TBMM'yi tanıyan ilk Müslüman ülke hangisidir ve bu diplomatik başarı hangi zaferden sonra gerçekleşmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Pakistan - Sakarya Zaferi",
+            "Afganistan - I. İnönü Zaferi",
+            "Mısır - Büyük Taarruz",
+            "Azerbaycan - Gümrü Zaferi"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'nin, I. İnönü Zaferi'nin ardından imzaladığı Moskova Antlaşması aşağıdaki devletlerden hangisiyle yapılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fransa",
+            "İngiltere",
+            "Ermenistan",
+            "Sovyet Rusya"
+          ]
+        },
+        {
+          "soruMetni": "Moskova Antlaşması'nda yer alan \"Taraflardan birinin tanımadığı uluslararası bir antlaşmayı diğeri de tanımayacaktır.\" maddesi ile hangi antlaşmanın geçersizliği vurgulanmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Lozan Antlaşması",
+            "Sevr Antlaşması",
+            "Gümrü Antlaşması",
+            "Mondros Mütarekesi"
+          ]
+        },
+        {
+          "soruMetni": "Misak-ı Millî'den verilen ilk taviz olan Batum, hangi antlaşma ile Gürcistan'a (Sovyet Rusya denetiminde) bırakılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gümrü Antlaşması",
+            "Kars Antlaşması",
+            "Moskova Antlaşması",
+            "Ankara Antlaşması (1921)"
+          ]
+        },
+        {
+          "soruMetni": "II. İnönü Zaferi'nin ardından Anadolu'daki işgal bölgelerinden (Antalya, Konya) çekilme kararı alan ve Sakarya Zaferi sonrası Anadolu'yu tamamen terk eden İtilaf devleti hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İngiltere",
+            "Fransa",
+            "İtalya",
+            "Yunanistan"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları'nın yenilgiyle sonuçlandığı günlerde, Mustafa Kemal Paşa'nın Ankara'da toplayarak eğitime verdiği önemi gösterdiği kongre hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İktisat Kongresi",
+            "Maarif Kongresi",
+            "Tıp Kongresi",
+            "Sivas Kongresi"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Meydan Muharebesi'nin \"Subaylar Savaşı\" (Melhame-i Kübra) olarak da anılmasının nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Savaşın sadece subaylar arasında geçmesi",
+            "Savaşta çok fazla subay (zabit) kaybı verilmesi",
+            "Savaşın rütbeli komutanlarca yönetilmesi",
+            "Yunan subaylarının tamamının esir alınması"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un hazırlıklarının Sakarya Zaferi'nden sonra yaklaşık bir yıl sürmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ordunun eksiklerini tamamlayıp taarruz gücüne ulaşmasını beklemek",
+            "İtilaf Devletleri ile diplomatik görüşmelere zaman tanımak",
+            "TBMM'deki muhalefetten onay almakta zorlanmak",
+            "Sovyet Rusya'dan gelecek askerî yardımı beklemek"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz sırasında Yunan Başkomutanı General Nikolaos Trikopis hangi ilimiz sınırları içinde esir alınmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kocatepe",
+            "Afyonkarahisar",
+            "Dumlupınar",
+            "Uşak"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması'nın aşağıdaki maddelerinden hangisi, Osmanlı Devleti'nin hukuken sona erdiğini göstermektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türk-Yunan savaşının sona ermesi",
+            "İstanbul ve Boğazlar'ın yönetiminin TBMM Hükümeti'ne bırakılması",
+            "Doğu Trakya'nın TBMM'ye teslim edilmesi",
+            "Barış antlaşması yapılıncaya kadar İtilaf askerlerinin İstanbul'da kalması"
+          ]
+        },
+        {
+          "soruMetni": "Gümrü Antlaşması'nın \"TBMM'yi tanıyan ilk devlet Ermenistan oldu\" şeklinde yorumlanmasının dayanağı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ermenistan'ın Sevr Antlaşması'nı tanımadığını kabul etmesi",
+            "Antlaşma metninde \"Türkiye Devleti\" ibaresinin geçmesi",
+            "Kars ve çevresinin geri alınması",
+            "Ermenistan'ın yayılmacı politikasından vazgeçmesi"
+          ]
+        },
+        {
+          "soruMetni": "Batı Cephesi Komutanlığı, Ali Fuat Paşa'nın Gediz'deki başarısızlığı sonrası ikiye ayrılmıştır. Cephenin Batı kısmına İsmet Paşa atanırken, Güney (Güneybatı) kısmına kim atanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kâzım Karabekir",
+            "Fevzi Çakmak",
+            "Refet Bele",
+            "Mustafa Kemal Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Düzenli orduya katılmak istemeyerek I. İnönü Savaşı sırasında TBMM'ye karşı isyan eden ve Yunan ilerleyişini dolaylı olarak kolaylaştıran Kuva-yı Milliye lideri kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Demirci Mehmet Efe",
+            "Yörük Ali Efe",
+            "Çerkez Ethem",
+            "Koçgiri"
+          ]
+        },
+        {
+          "soruMetni": "Kurtuluş Savaşı'nda cephanenin ve lojistik malzemelerin İstanbul ve Sovyet Rusya'dan Ankara'ya taşındığı, \"İstiklal Yolu\" olarak da bilinen güzergâhın başlangıç noktası neresidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Trabzon Limanı",
+            "İnebolu Limanı",
+            "Samsun Limanı",
+            "Antalya Limanı"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları sonrası mecliste oluşan karamsar hava nedeniyle yaşanan en önemli siyasi gelişme ve tartışma konusu ne olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Saltanatın kaldırılması",
+            "Başkomutanlık Kanunu'nun çıkarılması ve yetkilerin devri",
+            "Lozan Konferansı'na katılma kararı",
+            "Tekâlif-i Milliye Emirleri'nin iptali"
+          ]
+        },
+        {
+          "soruMetni": "1921 Ankara Antlaşması ile hangi İtilaf devleti TBMM'yi ve Misak-ı Millî'yi resmen tanıyan ilk Batılı devlet olmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İtalya",
+            "İngiltere",
+            "Sovyet Rusya",
+            "Fransa"
+          ]
+        },
+        {
+          "soruMetni": "1921 Ankara Antlaşması ile Misak-ı Millî sınırları dışında kalan ve özel bir yönetim kurulması kararlaştırılan toprağımız hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Musul",
+            "Batı Trakya",
+            "Hatay (İskenderun Sancağı)",
+            "Batum"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nden sonra imzalanan ve Doğu sınırımızı kesinleştiren Kars Antlaşması, aşağıdaki devletlerden hangisi ile imzalanmamıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Azerbaycan",
+            "Gürcistan",
+            "Ermenistan",
+            "Ukrayna"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi_3",
+      "baslik": "Kurtuluş Savaşı Muharebeler Dönemi-3",
+      "kategoriId": "tarih",
+      "konuId": "kurtulus_savasi_muharebeler_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Mudanya Ateşkes görüşmelerine hangi devlet, doğrudan katılmayıp, görüşmeleri bir gemiden takip etmiş ve antlaşmayı imzalamak zorunda kalmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İngiltere",
+            "Fransa",
+            "İtalya",
+            "Yunanistan"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Konferansı'na İtilaf Devletleri'nin hem TBMM Hükümeti'ni hem de İstanbul Hükümeti'ni birlikte davet etmesi, aşağıdaki hangi önemli iç siyasi gelişmeye yol açmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyetin ilan edilmesi",
+            "Saltanatın kaldırılması",
+            "Başkomutanlık Kanunu'nun süresiz uzatılması",
+            "Ankara'nın başkent ilan edilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Meydan Muharebesi, Türk tarihi açısından 1683 yılındaki hangi olaydan beri süregelen geri çekilişi durduran \"savunma\" savaşı olarak kabul edilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "I. Viyana Kuşatması",
+            "II. Viyana Kuşatması",
+            "Prut Antlaşması",
+            "Karlofça Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Başkomutan Mustafa Kemal Paşa'nın, yasamayı fiilen kullanarak çıkardığı Tekâlif-i Milliye Emirleri'nin temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "TBMM'ye karşı çıkan isyanları bastırmak",
+            "Düzenli orduya zorunlu asker toplamak",
+            "Ordunun silah, mühimmat, giyecek ve yiyecek ihtiyacını karşılamak",
+            "Yeni bir anayasa için halkın görüşünü almak"
+          ]
+        },
+        {
+          "soruMetni": "I. İnönü Muharebesi'nin kazanılmasında, aynı savaş sırasında bastırılan hangi iç isyanın da rolü büyük olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Koçgiri İsyanı",
+            "Demirci Mehmet Efe İsyanı",
+            "Çerkez Ethem İsyanı",
+            "Delibaş Mehmet İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'ni ve Misak-ı Millî'yi tanıyan ilk İtilaf devleti hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İtalya",
+            "İngiltere",
+            "Fransa",
+            "Sovyet Rusya"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'ni tanıyan ilk Avrupalı büyük devlet hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fransa",
+            "İtalya",
+            "Almanya",
+            "Sovyet Rusya"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'ni tanıyan ilk devlet aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Afganistan",
+            "Ermenistan",
+            "Sovyet Rusya",
+            "Fransa"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'nde Maraş'taki direnişin başlamasında sembolik bir rol oynayan \"Sütçü İmam Olayı\" hangi devlete karşı direnişi tetiklemiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İngiliz",
+            "Fransız (ve Ermeni Lejyonu)",
+            "Yunan",
+            "İtalyan"
+          ]
+        },
+        {
+          "soruMetni": "Kuva-yı Milliye komutanlarından Ali Fuat Paşa'nın Gediz Taarruzu'ndaki başarısızlığı üzerine Moskova'ya büyükelçi olarak atanması, hangi cephenin yeniden yapılandırılmasına yol açmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu Cephesi",
+            "Güney Cephesi",
+            "Batı Cephesi",
+            "Merkez Ordusu"
+          ]
+        },
+        {
+          "soruMetni": "II. İnönü Zaferi'nin ardından Fransa hangi işgal bölgesinden askerlerini çekmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Zonguldak",
+            "Adana",
+            "Antep",
+            "Musul"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları'ndan sonra çıkarılan Başkomutanlık Kanunu ile Mustafa Kemal Paşa'ya verilen yetkilerin ilk süresi ne kadardır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Süresiz",
+            "1 Yıl",
+            "6 Ay",
+            "3 Ay"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın Başkomutanlık yetkisiyle yönettiği ilk savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "II. İnönü Muharebesi",
+            "Kütahya-Eskişehir Muharebeleri",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın Başkomutan olarak yönettiği son savaş (savaş meydanında) aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "II. İnönü Muharebesi",
+            "Sakarya Meydan Muharebesi",
+            "Kütahya-Eskişehir Muharebeleri",
+            "Büyük Taarruz (Başkomutanlık Meydan Muharebesi)"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması'ndan sonra Doğu Trakya'yı (Edirne, Kırklareli) TBMM adına teslim alan komutan kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsmet Paşa",
+            "Fevzi Paşa",
+            "Refet Paşa (Bele)",
+            "Kâzım Karabekir"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un başladığı 26 Ağustos 1922 sabahı, taarruzun yönetildiği tepe aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dumlupınar",
+            "Kocatepe",
+            "Anıttepe",
+            "Metristepe"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un kesin zaferle sonuçlandığı ve \"Dumlupınar Meydan Muharebesi\" olarak da bilinen savaş hangi tarihte gerçekleşmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "26 Ağustos 1922",
+            "30 Ağustos 1922",
+            "9 Eylül 1922",
+            "11 Ekim 1922"
+          ]
+        },
+        {
+          "soruMetni": "9 Eylül 1922 tarihinde Türk ordusunun girdiği ve Yunan işgalinden kurtardığı, \"ilk hedef\" olarak gösterilen şehir hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bursa",
+            "İstanbul",
+            "İzmir",
+            "Çanakkale"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nden sonra İngiltere ile yapılan esir değişimi antlaşmasını TBMM Hükümeti adına imzalayan devlet adamı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsmet Paşa",
+            "Bekir Sami Bey",
+            "Yusuf Kemal Tengirşenk",
+            "Fethi Okyar"
+          ]
+        },
+        {
+          "soruMetni": "Londra Konferansı'na TBMM Hükümeti adına katılan heyetin başkanı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet Paşa",
+            "Bekir Sami Bey",
+            "Yusuf Kemal Tengirşenk",
+            "Rauf Orbay"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi_4",
+      "baslik": "Kurtuluş Savaşı Muharebeler Dönemi-4",
+      "kategoriId": "tarih",
+      "konuId": "kurtulus_savasi_muharebeler_donemi",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Londra Konferansı'nda İstanbul Hükümeti adına katılan ve \"Ben sözü milletin gerçek temsilcisi olan TBMM heyetine bırakıyorum.\" diyerek İtilaf Devletleri'nin ikilik çıkarma planını bozan Sadrazam kimdir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Damat Ferit Paşa",
+            "Ali Rıza Paşa",
+            "Salih Paşa",
+            "Tevfik Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Kars Antlaşması'nın (1921) imzalanmasında hangi devletin arabuluculuğu ve siyasi desteği etkili olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fransa",
+            "İngiltere",
+            "Sovyet Rusya",
+            "İtalya"
+          ]
+        },
+        {
+          "soruMetni": "Gümrü Antlaşması'nda Ermenistan'ın Sevr Antlaşması'nı tanımadığını belirtmesi, aşağıdakilerden hangisinin önemli bir göstergesidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sevr Antlaşması'nın hukuken geçersiz olduğunun",
+            "Ermenistan'ın Misak-ı Millî'yi tanıdığının",
+            "TBMM'nin uluslararası alanda güç kazandığının",
+            "B ve C şıklarının her ikisinin de"
+          ]
+        },
+        {
+          "soruMetni": "Milli Mücadele'nin sembolü olan İstiklal Marşı, hangi savaşın kazanılmasından sonra ulusal marş olarak kabul edilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "II. İnönü Muharebesi",
+            "I. İnönü Muharebesi",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "1921 Anayasası (Teşkilat-ı Esasiye), \"Egemenlik kayıtsız şartsız milletindir\" maddesiyle hangi temel ilkeye dayanmaktadır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güçler ayrılığı",
+            "Padişahın egemenliği",
+            "Ulusal egemenlik (ve güçler birliği)",
+            "Liberal ekonomi"
+          ]
+        },
+        {
+          "soruMetni": "Yunanlıların I. İnönü Savaşı'nı başlatmalarının nedenleri arasında aşağıdakilerden hangisi gösterilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Ankara'yı ele geçirip TBMM'yi dağıtmak",
+            "Çerkez Ethem İsyanı'ndan faydalanmak",
+            "Sevr Antlaşması'nı TBMM'ye zorla kabul ettirmek",
+            "İtalyanların Anadolu'dan çekilmesini engellemek"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Meydan Muharebesi'nde Yunan ordusunun Polatlı'ya kadar gelmesi üzerine TBMM'nin Kayseri'ye taşınması tartışmaları yaşanmıştır. Bu durum hangi savaşın sonucunda ortaya çıkmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. İnönü",
+            "II. İnönü",
+            "Kütahya-Eskişehir",
+            "Sakarya (sırasında)"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un zaferle sonuçlanması ve Türk ordusunun Boğazlar'a yürümesi üzerine, \"Çanakkale Krizi\" yaşanmış ve bu kriz İngiltere'de hangi başbakanın istifasına yol açmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Winston Churchill",
+            "Lloyd George",
+            "Neville Chamberlain",
+            "Lord Curzon"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un gizliliğini sağlamak ve bir baskın gerçekleştirmek için Mustafa Kemal Paşa'nın Akşehir'de düzenlediği oyalama amaçlı sosyal etkinlik nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çay partisi",
+            "Askerî futbol maçı",
+            "Askeri geçit töreni",
+            "Bir balo"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'ndeki mücadelenin (Maraş, Antep, Urfa) Doğu ve Batı Cephelerinden en temel farkı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Savaşın Fransızlara karşı yapılması",
+            "Zaferin düzenli ordu birlikleri yerine Kuva-yı Milliye (halk) direnişiyle kazanılması",
+            "Daha kısa sürmesi",
+            "Sovyet Rusya'dan yardım alınması"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Cephesi Komutanı Kâzım Karabekir'e Ermenilere karşı kazandığı zafer ve Gümrü Antlaşması'ndaki başarısından dolayı \"Şark Fatihi\" unvanı nerede verilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "TBMM tarafından",
+            "Erzurum Kongresi'nde",
+            "Halk tarafından",
+            "Sivas Kongresi'nde"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Batı Cephesi'nde kazanılan bir \"savunma\" savaşı değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "I. İnönü Muharebesi",
+            "II. İnönü Muharebesi",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Kurtuluş Savaşı devam ederken TBMM Hükümeti ile Ukrayna arasında Dostluk Antlaşması imzalanması, TBMM'nin hangi devletle olan ilişkilerinin bir parçası olarak gelişmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sovyet Rusya",
+            "Fransa",
+            "İngiltere",
+            "İtalya"
+          ]
+        },
+        {
+          "soruMetni": "\"İstiklal Yolu\" olarak bilinen İnebolu-Ankara hattında cephane taşırken donarak şehit olan ve Kurtuluş Savaşı'nın sembol kadın kahramanlarından biri olan kişi kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nene Hatun",
+            "Şerife Bacı",
+            "Halide Edip Adıvar",
+            "Kara Fatma (Fatma Seher Erden)"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları'nın kaybedilmesinde;\nI. Ordunun henüz taarruz gücüne ulaşmamış olması\nII. Yunan ordusunun sayıca ve teçhizatça üstün olması\nIII. Çerkez Ethem İsyanı'nın etkisi\nfaktörlerinden hangileri etkili olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yalnız I",
+            "I ve II",
+            "II ve III",
+            "Yalnız II"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nin ardından İtilaf Devletleri'nin TBMM'ye sunduğu barış tekliflerinin reddedilme sebebi nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tam bağımsızlığa (Misak-ı Millî'ye) aykırı olması ve Sevr'i yumuşatmayı hedeflemesi",
+            "Sadece Yunanistan'ın çekilmesini önermesi",
+            "Büyük Taarruz hazırlıklarının tamamlanmış olması",
+            "Sovyet Rusya'nın bu tekliflere karşı çıkması"
+          ]
+        },
+        {
+          "soruMetni": "Türk ordusunun 9 Eylül'de İzmir'e girmesinden sonra Mudanya Ateşkesi'ne kadar geçen sürede, Türk ordusunun Boğazlar'a yürümesi üzerine İngiltere ile yaşanan ve savaşı göze aldığı olay nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Boğazlar Krizi (Çanakkale Olayı)",
+            "Musul Sorunu",
+            "Hatay Sorunu",
+            "İstanbul'un işgali"
+          ]
+        },
+        {
+          "soruMetni": "1 Kasım 1922'de Saltanat'ın kaldırılmasının en acil ve temel gerekçesi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Padişah Vahdettin'in vatan haini ilan edilmesi",
+            "İtilaf Devletleri'nin Lozan Konferansı'na İstanbul Hükümeti'ni de davet ederek ikilik çıkarmak istemesi",
+            "Cumhuriyet rejimine geçişin zorunlu olması",
+            "Osmanlı Devleti'nin Mudanya Ateşkesi ile hukuken sona ermiş olması"
+          ]
+        },
+        {
+          "soruMetni": "Gümrü Antlaşması'yla belirlenen doğu sınırı, hangi antlaşma ile son (kesin) şeklini almıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Moskova Antlaşması",
+            "Kars Antlaşması",
+            "Ankara Antlaşması (1921)",
+            "Lozan Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Kurtuluş Savaşı Muharebeler Dönemi'nde hangi cephede düzenli ordu birlikleri savaşmamış, zafer tamamen Kuva-yı Milliye ve halk direnişiyle kazanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu Cephesi",
+            "Batı Cephesi",
+            "Güney Cephesi",
+            "Boğazlar Cephesi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_1",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-1",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, Atatürk'ün \"Cumhuriyetçilik\" ilkesinin temelini oluşturan ana kavramdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ulusal bağımsızlık",
+            "Ulusal egemenlik",
+            "Ekonomik kalkınma",
+            "Çağdaşlaşma"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nin ilk anayasası olan 1921 Anayasası'nın (Teşkilat-ı Esasiye) en belirgin özelliği aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güçler ayrılığı ilkesini benimsemesi",
+            "Padişaha sembolik yetkiler vermesi",
+            "Egemenliği kayıtsız şartsız millete vermesi",
+            "Laiklik ilkesini anayasal güvenceye alması"
+          ]
+        },
+        {
+          "soruMetni": "Türk Tarih Kurumu (TTK) ve Türk Dil Kurumu'nun (TDK) kurulması, Atatürk ilkelerinden hangisiyle doğrudan ilgilidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçilik",
+            "Milliyetçilik",
+            "Halkçılık",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, toplumsal alanda eşitliği sağlamaya yönelik \"Halkçılık\" ilkesi doğrultusunda yapılan inkılaplardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Aşar vergisinin kaldırılması",
+            "Soyadı Kanunu'nun kabul edilmesi",
+            "Ağa, hacı, molla gibi unvanların yasaklanması",
+            "I. Beş Yıllık Sanayi Planı'nın uygulanması"
+          ]
+        },
+        {
+          "soruMetni": "Özel sektörün yetersiz kaldığı durumlarda, büyük yatırımların devlet eliyle yapılmasını öngören ve 1930'lu yıllarda uygulanan Atatürk ilkesi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "İnkılapçılık",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Akıl ve bilimi\" temel rehber kabul eden, din ve vicdan özgürlüğünü savunan, devletin tüm inançlara eşit mesafede durmasını sağlayan ilke aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Milliyetçilik",
+            "Laiklik",
+            "Devletçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk ilkelerinin durağanlığı reddeden, sürekli gelişmeyi ve çağdaşlaşmayı (muasır medeniyet) hedefleyen dinamik yönünü ifade eden ilke hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halkçılık",
+            "İnkılapçılık",
+            "Cumhuriyetçilik",
+            "Devletçilik"
+          ]
+        },
+        {
+          "soruMetni": "Saltanatın kaldırılması (1 Kasım 1922), aşağıdaki ilkelerden hangisinin uygulanmasında atılan ilk ve en önemli adımdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cumhuriyetçilik",
+            "Devletçilik",
+            "Milliyetçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "3 Mart 1924 tarihinde gerçekleştirilen aşağıdaki inkılaplardan hangisi, \"Laiklik\" ilkesinin en önemli aşaması olarak kabul edilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tevhid-i Tedrisat Kanunu'nun kabulü",
+            "Halifeliğin kaldırılması",
+            "Şer'iye ve Evkaf Vekaleti'nin kaldırılması",
+            "Erkan-ı Harbiye Vekaleti'nin kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nde hukuk birliğini sağlamak ve laik hukuk sistemine geçiş yapmak amacıyla 1926'da kabul edilen Medeni Kanun, hangi ülkeden uyarlanmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fransa",
+            "İsviçre",
+            "Almanya",
+            "İtalya"
+          ]
+        },
+        {
+          "soruMetni": "Eğitim ve öğretim kurumlarının tamamının Milli Eğitim Bakanlığı'na bağlanarak eğitimde birliği sağlayan kanun aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tevhid-i Tedrisat Kanunu",
+            "Maarif Teşkilatı Kanunu",
+            "Kabotaj Kanunu",
+            "Soyadı Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "Yeni Türk harflerinin (Latin alfabesi) kabul edilmesinden (1928) sonra, halka okuma-yazma öğretmek amacıyla açılan yaygın eğitim kurumları hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halkevleri",
+            "Köy Enstitüleri",
+            "Millet Mektepleri",
+            "Darülfünun"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Ne mutlu Türk'üm diyene!\" sözü, hangi ilkenin temel felsefesini oluşturur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halkçılık",
+            "Cumhuriyetçilik",
+            "Milliyetçilik",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "Toplumsal yaşamda ayrıcalık belirten unvan ve lakapların kaldırılması, doğrudan hangi ilkenin bir gereğidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Laiklik",
+            "Halkçılık",
+            "Devletçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Türk karasularında gemi işletme (deniz taşımacılığı) hakkının yalnızca Türk vatandaşlarına ait olmasını sağlayan kanun aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Teşvik-i Sanayi Kanunu",
+            "Kabotaj Kanunu",
+            "Medeni Kanun",
+            "Ticaret Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "Kabotaj Kanunu'nun çıkarılması, aşağıdaki bütünleyici ilkelerden hangisiyle doğrudan ilgilidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ulusal egemenlik",
+            "Akılcılık ve bilimsellik",
+            "Ulusal bağımsızlık (Ekonomik)",
+            "Barışçılık"
+          ]
+        },
+        {
+          "soruMetni": "1925 yılında çıkarılan \"Şapka İktisası Hakkında Kanun\" (Şapka Kanunu), öncelikle hangi ilke doğrultusunda atılmış bir adımdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halkçılık",
+            "Devletçilik",
+            "İnkılapçılık (Çağdaşlaşma)",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Toplumsal yaşamı düzenleyen tekke, zaviye ve türbelerin kapatılması, aşağıdaki ilkelerden hangisiyle en güçlü şekilde ilişkilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi Türk kadınına siyasi hakların verilme kronolojisi hangi seçenekte doğru sıralanmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Milletvekili (1930) - Belediye (1933) - Muhtarlık (1934)",
+            "Belediye (1930) - Muhtarlık (1933) - Milletvekili (1934)",
+            "Muhtarlık (1930) - Milletvekili (1933) - Belediye (1934)",
+            "Belediye (1930) - Milletvekili (1933) - Muhtarlık (1934)"
+          ]
+        },
+        {
+          "soruMetni": "Türk kadınına siyasi hakların verilmesi (seçme ve seçilme), en güçlü şekilde hangi iki ilkeyi tamamlamaktadır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cumhuriyetçilik ve Halkçılık",
+            "Laiklik ve Devletçilik",
+            "Milliyetçilik ve İnkılapçılık",
+            "Devletçilik ve Milliyetçilik"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_2",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-2",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1924 Anayasası'ndan \"Devletin dini İslam'dır\" maddesinin çıkarılması hangi yıl gerçekleşmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1926",
+            "1928",
+            "1934",
+            "1937"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün 6 temel ilkesinin (Cumhuriyetçilik, Milliyetçilik, Halkçılık, Devletçilik, Laiklik, İnkılapçılık) tamamı, anayasaya hangi yıl eklenmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "1924",
+            "1928",
+            "1931",
+            "1937"
+          ]
+        },
+        {
+          "soruMetni": "İzmir İktisat Kongresi'nde (1923) alınan kararlar (Misak-ı İktisadi) incelendiğinde, Cumhuriyet'in ilk yıllarında hangi ekonomi modelinin hedeflendiği görülür?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçi model",
+            "Liberal (Serbest Piyasa) model",
+            "Karma model",
+            "Sosyalist model"
+          ]
+        },
+        {
+          "soruMetni": "1929 Dünya Ekonomik Bunalımı'nın Türkiye'ye etkisi, hangi ilkenin zorunlu olarak benimsenmesine yol açmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Halkçılık",
+            "Devletçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "1925 yılında köylünün üzerindeki ağır bir yükü kaldıran ve \"Halkçılık\" ilkesinin en önemli adımlarından biri olan gelişme hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Medeni Kanun'un kabulü",
+            "Aşar (Öşür) vergisinin kaldırılması",
+            "Teşvik-i Sanayi Kanunu'nun çıkarılması",
+            "Soyadı Kanunu'nun kabulü"
+          ]
+        },
+        {
+          "soruMetni": "Soyadı Kanunu'nun (1934) temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Toplumsal alanda eşitliği sağlamak ve resmi işlerdeki karışıklığı gidermek",
+            "Türk dilini zenginleştirmek",
+            "Milli ekonomiyi güçlendirmek",
+            "Eğitimde birliği sağlamak"
+          ]
+        },
+        {
+          "soruMetni": "3 Mart 1924'te Halifeliğin kaldırıldığı gün kabul edilen diğer kanunlar arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tevhid-i Tedrisat Kanunu",
+            "Şer'iye ve Evkaf Vekaleti'nin kaldırılması",
+            "Medeni Kanun'un kabulü",
+            "Erkan-ı Harbiye Vekaleti'nin kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Erkan-ı Harbiye Vekaleti'nin kaldırılıp yerine Genelkurmay Başkanlığı'nın kurulmasının temel amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Orduyu siyasetten ayırmak",
+            "Eğitimde birliği sağlamak",
+            "Ekonomik yatırımları planlamak",
+            "Hukuk sistemini laikleştirmek"
+          ]
+        },
+        {
+          "soruMetni": "Darülfünun'un kapatılarak yerine İstanbul Üniversitesi'nin kurulması (1933 Üniversite Reformu), hangi ilkenin bir gereğidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçilik",
+            "Laiklik (Akılcılık ve Bilimsellik)",
+            "Halkçılık",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Uluslararası ticarette ve ilişkilerde yaşanan uyum sorunlarını çözmek amacıyla 1925-1931 yılları arasında yapılan inkılap hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Harf İnkılabı",
+            "Soyadı Kanunu",
+            "Takvim, saat ve ölçülerde değişiklik",
+            "Şapka Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "1927'de çıkarılan Teşvik-i Sanayi Kanunu'nun beklenen başarıyı gösterememesinin temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yeterli özel sermaye birikiminin ve teknik bilginin olmaması",
+            "Aşar vergisinin kaldırılması",
+            "Kabotaj Kanunu'nun çıkarılması",
+            "Kanuna karşı isyanların çıkması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"Milliyetçilik\" ilkesi doğrultusunda atılmış adımlardan biri olarak kabul edilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türk Tarih Kurumu'nun kurulması",
+            "Kapitülasyonların kaldırılması",
+            "Kabotaj Kanunu'nun çıkarılması",
+            "Medeni Kanun'un kabul edilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Medeni Kanun'un kabul edilmesiyle Türk kadını aşağıdaki haklardan hangisini elde etmemiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mirasta erkekle eşitlik",
+            "Boşanma hakkı",
+            "Seçme ve seçilme hakkı",
+            "Resmi nikah zorunluluğu"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk ilkelerinin ortak amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Türkiye'yi muasır medeniyetler seviyesinin üzerine çıkarmak",
+            "Devletin ekonomideki payını artırmak",
+            "Saltanat ve hilafeti geri getirmek",
+            "Batıdaki tüm kurumları olduğu gibi almak"
+          ]
+        },
+        {
+          "soruMetni": "\"Halkçılık\" ilkesi, hangi diğer iki ilkenin doğal bir sonucu olarak ortaya çıkmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Laiklik ve Devletçilik",
+            "Cumhuriyetçilik ve Milliyetçilik",
+            "Devletçilik ve İnkılapçılık",
+            "Milliyetçilik ve Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "\"Egemenliğin bir kişiye veya zümreye değil, bütün halka ait olması\" tanımı, hangi ilkeyi ifade eder?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halkçılık",
+            "Cumhuriyetçilik",
+            "Laiklik",
+            "Devletçilik"
+          ]
+        },
+        {
+          "soruMetni": "Sümerbank ve Etibank gibi devlet bankalarının kurulması, hangi ilkenin uygulanmasına örnek olarak gösterilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halkçılık",
+            "Laiklik",
+            "Devletçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Yurtta sulh, cihanda sulh\" (Yurtta barış, dünyada barış) sözü, hangi ilkenin dış politikadaki temel yansımasıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Cumhuriyetçilik",
+            "Halkçılık",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi siyasi alanda yapılan inkılaplardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Saltanatın kaldırılması",
+            "Cumhuriyetin ilanı",
+            "Halifeliğin kaldırılması",
+            "Türk Dil Kurumu'nun kurulması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi toplumsal alanda yapılan inkılaplardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Soyadı Kanunu",
+            "Kılık-kıyafet değişikliği",
+            "Tekke ve zaviyelerin kapatılması",
+            "Kabotaj Kanunu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_3",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-3",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Harf İnkılabı'nın (1928) temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Okuma-yazmayı kolaylaştırarak okur-yazar oranını artırmak",
+            "Batı ile ekonomik ilişkileri geliştirmek",
+            "Laiklik ilkesini yerleştirmek",
+            "Türkçeyi yabancı dillerin etkisinden kurtarmak"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde çok partili hayata geçiş denemelerinin (Terakkiperver Cumhuriyet Fırkası, Serbest Cumhuriyet Fırkası) başarısız olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordunun siyasete müdahale etmesi",
+            "Ekonomik krizin derinleşmesi",
+            "Henüz demokratik olgunluğa erişilmemiş olması ve rejim karşıtlarının bu partileri kullanması",
+            "Mustafa Kemal'in çok partili hayata karşı olması"
+          ]
+        },
+        {
+          "soruMetni": "1925'te kapatılan Terakkiperver Cumhuriyet Fırkası'nın (TCF) kapatılma gerekçesi olan olay hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Ağrı İsyanları"
+          ]
+        },
+        {
+          "soruMetni": "1930'da yaşanan Menemen (Kubilay) Olayı, hangi ilkenin henüz tam olarak yerleşmediğini gösteren acı bir tecrübedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Laiklik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın isteğiyle 1930'da kurulan ve Fethi Okyar'ın başkanlığını yaptığı, ikinci çok partili hayat denemesi olan parti hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "Ahali Cumhuriyet Fırkası",
+            "Demokrat Parti"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'nın kurucuları tarafından feshedilmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Partinin ekonomik liberalizmi savunması",
+            "Mustafa Kemal Paşa'nın desteğini çekmesi",
+            "Rejim karşıtlarının parti içinde toplanmaya başlaması",
+            "Menemen Olayı'nın çıkması"
+          ]
+        },
+        {
+          "soruMetni": "Hukuk alanındaki inkılapların temel amacı aşağıdakilerden hangisi değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hukuk birliğini sağlamak",
+            "Hukuk sistemini laikleştirmek",
+            "Şer'i hukuku modernleştirmek",
+            "Çağdaş hukuk kurallarını benimsemek"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından (29 Ekim 1923) sonra Türkiye Cumhuriyeti'nin ilk Başbakanı kim olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fethi Okyar",
+            "Rauf Orbay",
+            "İsmet İnönü",
+            "Celal Bayar"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından sonra Türkiye Cumhuriyeti'nin ilk Cumhurbaşkanı kim olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet İnönü",
+            "Mustafa Kemal Atatürk",
+            "Kâzım Karabekir",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından sonra Türkiye Cumhuriyeti'nin ilk Meclis Başkanı kim olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fethi Okyar",
+            "Kâzım Karabekir",
+            "Rauf Orbay",
+            "İsmet İnönü"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal Egemenlik\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal Bağımsızlık\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Laiklik",
+            "Halkçılık",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Akılcılık ve Bilimsellik\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçilik",
+            "Laiklik",
+            "Cumhuriyetçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "\"Çağdaşlaşma ve Batılılaşma\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Halkçılık",
+            "Devletçilik",
+            "Milliyetçilik",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"İnsan ve insanlık sevgisi / Barışçılık\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Cumhuriyetçilik",
+            "Devletçilik",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "1925'te çıkarılan Takrir-i Sükûn (Huzuru Sağlama) Kanunu, hangi olayın sonucunda çıkarılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Serbest Cumhuriyet Fırkası'nın feshi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Devletçilik ilkesinin uygulanmasıyla kurulan kurumlardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sümerbank",
+            "Etibank",
+            "Maden Tetkik Arama Enstitüsü (MTA)",
+            "İş Bankası"
+          ]
+        },
+        {
+          "soruMetni": "I. Beş Yıllık Sanayi Planı'nın (1934) hazırlanmasında hangi ülkeden teknik destek alınmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "ABD",
+            "Almanya",
+            "Sovyetler Birliği",
+            "İngiltere"
+          ]
+        },
+        {
+          "soruMetni": "1924 Anayasası'nda 1928'de yapılan değişiklikle yemin metninden \"vallahi\" sözcüğünün çıkarılması hangi ilkeyle ilgilidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halkçılık",
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Hayatta en hakiki mürşit ilimdir, fendir\" sözü, hangi iki ilkeyi doğrudan vurgulamaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyetçilik ve Milliyetçilik",
+            "Laiklik ve İnkılapçılık",
+            "Devletçilik ve Halkçılık",
+            "Milliyetçilik ve Halkçılık"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_4",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-4",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Atatürkçü düşünce sisteminde \"Milliyetçilik\" anlayışının temeli nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Irk ve din birliği",
+            "Sınıf mücadelesi",
+            "Ümmetçilik",
+            "Kültürel birlik ve vatan ortaklığı (Tarih ve dil birliği)"
+          ]
+        },
+        {
+          "soruMetni": "Ankara'nın başkent ilan edilmesi (13 Ekim 1923) hangi olaydan önce gerçekleşmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cumhuriyetin ilanı",
+            "Saltanatın kaldırılması",
+            "Halifeliğin kaldırılması",
+            "Lozan Antlaşması'nın imzalanması"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde açılan Halkevleri'nin temel amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İnkılapları halka anlatmak ve kültürel gelişimi sağlamak",
+            "Ekonomik yatırımları yönetmek",
+            "Çok partili hayata geçişi sağlamak",
+            "Siyasi muhalefet oluşturmak"
+          ]
+        },
+        {
+          "soruMetni": "Terakkiperver Cumhuriyet Fırkası'nın (TCF) parti programında yer alan \"Partimiz dini inançlara ve fikirlere saygılıdır\" maddesi, hangi ilkenin istismar edilmesine zemin hazırlamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "Laiklik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nde ulusal (milli) ekonominin temellerinin atıldığı ilk önemli toplantı hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sivas Kongresi",
+            "Erzurum Kongresi",
+            "İzmir İktisat Kongresi",
+            "Londra Konferansı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi eğitim ve kültür alanında yapılan inkılaplardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Harf İnkılabı",
+            "Millet Mekteplerinin açılması",
+            "Üniversite Reformu",
+            "Hafta tatilinin Pazar gününe alınması"
+          ]
+        },
+        {
+          "soruMetni": "Hafta tatilinin Cuma gününden Pazar gününe alınmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dini gerekçeler",
+            "Uluslararası (özellikle Batı) ekonomik ve sosyal ilişkilerde uyum sağlamak",
+            "Halkın taleplerini karşılamak",
+            "Laiklik ilkesini pekiştirmek"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk ilkeleri arasında, devletin sosyal adalet ve eşitlik konularındaki görevlerini vurgulayan ilke hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Halkçılık",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "1921 ve 1924 Anayasalarının ortak temel ilkesi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Laiklik",
+            "Ulusal egemenlik",
+            "Güçler ayrılığı",
+            "Devletçilik"
+          ]
+        },
+        {
+          "soruMetni": "\"Atatürkçülük\" veya \"Kemalizm\" olarak da adlandırılan düşünce sisteminin en temel özelliği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Durağan (dogmatik) olması",
+            "Sadece Türk ulusuna özgü olması",
+            "Akla ve bilime dayanması, dinamik olması",
+            "Ekonomide katı devletçiliği savunması"
+          ]
+        },
+        {
+          "soruMetni": "3 Mart 1924'te çıkarılan Tevhid-i Tedrisat Kanunu (Öğretim Birliği) ile aşağıdaki kurumlardan hangisinin varlığı sona ermiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Medreseler",
+            "Üniversiteler",
+            "Halkevleri",
+            "Millet Mektepleri"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Vatanını en çok seven, görevini en iyi yapandır\" sözü, hangi ilkeyle ilişkilendirilebilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Milliyetçilik (Yurt sevgisi)",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "İsviçre Medeni Kanunu'nun seçilmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "O dönemde yazılmış en yeni, en akılcı ve en laik kanun olması",
+            "İsviçre'nin siyasi destek vermesi",
+            "Almanya'ya tepki göstermek",
+            "Dini kurallara en yakın kanun olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangisi, hem \"Laiklik\" hem de \"İnkılapçılık\" ilkesiyle güçlü bir bağa sahiptir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tekke, zaviye ve türbelerin kapatılması",
+            "Kabotaj Kanunu",
+            "Aşar vergisinin kaldırılması",
+            "I. Beş Yıllık Sanayi Planı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangisi, hem \"Halkçılık\" (eşitlik) hem de \"İnkılapçılık\" (çağdaşlaşma) ile doğrudan ilgilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Soyadı Kanunu",
+            "Halifeliğin kaldırılması",
+            "Teşvik-i Sanayi Kanunu",
+            "Kabotaj Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangisi hem \"Milliyetçilik\" (ulusal ekonomi) hem de \"Devletçilik\" ilkesiyle ilgilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Etibank'ın kurulması",
+            "Medeni Kanun'un kabulü",
+            "Harf İnkılabı",
+            "Şapka Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal egemenlik\" ve \"ulusal bağımsızlık\" kavramları arasındaki temel fark nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Egemenlik iç yönetimi, bağımsızlık dışa karşı özgürlüğü ifade eder.",
+            "Egemenlik ekonomiyi, bağımsızlık siyaseti ifade eder.",
+            "İkisi arasında hiçbir fark yoktur.",
+            "Egemenlik padişahı, bağımsızlık halkı temsil eder."
+          ]
+        },
+        {
+          "soruMetni": "1924 Anayasası'nda yapılan aşağıdaki değişikliklerden hangisi, \"Halkçılık\" ve \"Cumhuriyetçilik\" ilkelerini pekiştirmeye yöneliktir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin dininin İslam olduğunun belirtilmesi",
+            "Kadınlara seçme ve seçilme hakkının tanınması",
+            "Başkentin Ankara olduğunun belirtilmesi",
+            "Devletçilik ilkesinin eklenmesi"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün Nutuk (Söylev) adlı eseri, hangi yıllar arasındaki olayları kapsamaktadır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "1919 - 1927",
+            "1914 - 1923",
+            "1923 - 1938",
+            "1908 - 1918"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi dış politikasının temel amacı, hangi ilke doğrultusunda \"tam bağımsızlığı\" korumak ve \"barışı\" sürdürmek olmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Cumhuriyetçilik",
+            "Milliyetçilik"
+          ]
+        }
+      ]
     }
+
      ],
  
  "trialExams": [
