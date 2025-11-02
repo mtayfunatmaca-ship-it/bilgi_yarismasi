@@ -3,7 +3,7 @@
 /* eslint-disable max-len */
 
 const {onSchedule} = require("firebase-functions/v2/scheduler");
-const {onDocumentWritten, onDocumentCreated} = require("firebase-functions/v2/firestore"); // YENİ IMPORT
+const {onDocumentWritten} = require("firebase-functions/v2/firestore"); 
 const {logger} = require("firebase-functions");
 const admin = require("firebase-admin");
 
@@ -37,8 +37,6 @@ async function getUserDetails(userId) {
 
 // === YARDIMCI FONKSİYON: Haftalık/Aylık Skorları TEKRAR HESAPLAR ===
 async function recalculateLeaderboardScores(userId) {
-  // Bu fonksiyon, kullanıcının o haftaki/aydaki toplam skorunu yeniden hesaplar
-
   const now = new Date();
   const startOfThisWeek = getStartOfWeek(now);
   const startOfThisMonth = new Date(now.getFullYear(), now.getMonth(), 1);
@@ -46,7 +44,7 @@ async function recalculateLeaderboardScores(userId) {
 
   const userSolvedQuizzesRef = db.collection("users").doc(userId).collection("solvedQuizzes");
 
-  // 1. HAFTALIK SKOR HESAPLA
+  // 1. HAFTALIK SKOR HESAPLA (Pazartesi'den beri)
   let totalWeeklyScore = 0;
   const weeklySnapshot = await userSolvedQuizzesRef
       .where("tarih", ">=", startOfThisWeek)
@@ -55,7 +53,7 @@ async function recalculateLeaderboardScores(userId) {
     totalWeeklyScore += doc.data().puan || 0;
   });
 
-  // 2. AYLIK SKOR HESAPLA
+  // 2. AYLIK SKOR HESAPLA (Ayın 1'inden beri)
   let totalMonthlyScore = 0;
   const monthlySnapshot = await userSolvedQuizzesRef
       .where("tarih", ">=", startOfThisMonth)
@@ -69,25 +67,24 @@ async function recalculateLeaderboardScores(userId) {
 
 
 /**
- * KRİTİK: ANLIK SKOR GÜNCELLEMESİ (onDocumentWritten)
- * Bir kullanıcı bir testi çözdüğünde (yani 'solvedQuizzes' alt koleksiyonuna yeni belge yazıldığında) çalışır.
+ * KRİTİK 1: ANLIK SKOR GÜNCELLEMESİ (Test bitince tetiklenir)
+ * Alt koleksiyonu dinler ve puanları yeniden hesaplar.
  */
 exports.updateLeaderboardsInstantly = onDocumentWritten({
-  document: "users/{userId}/solvedQuizzes/{quizId}", // Hangi belgenin tetiklediği
-  region: "europe-west3", // Fonksiyonunuzun bölgesi
+  document: "users/{userId}/solvedQuizzes/{quizId}", // DOĞRU TETİKLEYİCİ YOLU
+  region: "europe-west3",
 }, async (event) => {
-  if (!event.data) return null; // Belge yoksa çık
+  if (!event.data) return null; 
 
   const userId = event.params.userId;
-  logger.info(`Anlık Leaderboard Güncellemesi Tetiklendi: Kullanıcı ${userId}`);
+  logger.info(`ANLIK SKOR GÜNCELLEME TETİKLENDİ: Kullanıcı ${userId} yeni test çözdü.`);
 
-  // Tüm skorları yeniden hesapla (Çözülen test sayısındaki değişiklik nedeniyle)
   const { totalWeeklyScore, totalMonthlyScore } = await recalculateLeaderboardScores(userId);
   const userDetails = await getUserDetails(userId);
 
   const batch = db.batch();
 
-  // 1. HAFTALIK LİDERLİK GÜNCELLEMESİ
+  // 1. HAFTALIK LİDERLİK GÜNCELLEMESİ (Canlı)
   const weeklyRef = db.collection("mevcutHaftalikLiderlik").doc(userId);
   batch.set(weeklyRef, {
     puan: totalWeeklyScore,
@@ -98,7 +95,7 @@ exports.updateLeaderboardsInstantly = onDocumentWritten({
     sonGuncelleme: admin.firestore.FieldValue.serverTimestamp(),
   }, { merge: true });
 
-  // 2. AYLIK LİDERLİK GÜNCELLEMESİ
+  // 2. AYLIK LİDERLİK GÜNCELLEMESİ (Canlı)
   const monthlyRef = db.collection("mevcutAylikLiderlik").doc(userId);
   batch.set(monthlyRef, {
     puan: totalMonthlyScore,
@@ -110,18 +107,73 @@ exports.updateLeaderboardsInstantly = onDocumentWritten({
   }, { merge: true });
 
   await batch.commit();
-  logger.info(`Anlık skorlar kaydedildi. Haftalık: ${totalWeeklyScore}, Aylık: ${totalMonthlyScore}`);
+  logger.info(`✅ Anlık skorlar güncellendi. Haftalık: ${totalWeeklyScore}, Aylık: ${totalMonthlyScore}`);
   return null;
 });
-// --- KRİTİK FONKSİYON BİTTİ ---
 
 
 /**
- * HAFTALIK LİDERİ İLAN EDER. (Pazar 23:59) (SADECE İLAN)
- * Artık puan hesaplamaz, sadece lideri kopyalar.
+ * KRİTİK 2: PROFİL DETAY GÜNCELLEMESİ (Emoji/Ad/PRO değişince tetiklenir)
+ * Ana kullanıcı belgesini dinler ve haftalık/aylık tablolara sadece EMOGİ, AD, PRO bilgisini kopyalar.
+ */
+exports.updateLeaderboardUserDetails = onDocumentWritten({
+  document: "users/{userId}", // <<< DOĞRU TETİKLEYİCİ: Ana belgeyi dinler
+  region: "europe-west3",
+}, async (event) => {
+  // Belge silme işlemi (delete) değilse ve veri varsa devam et
+  if (!event.data) return null; 
+  
+  const userId = event.params.userId;
+  logger.info(`PROFİL DETAY GÜNCELLEMESİ TETİKLENDİ: Kullanıcı ${userId}`);
+
+  const userDetails = await getUserDetails(userId); 
+  
+  const batch = db.batch();
+
+  // 1. Canlı Haftalık Tabloyu Güncelle (Puanı koru)
+  const weeklyRef = db.collection("mevcutHaftalikLiderlik").doc(userId);
+  batch.set(weeklyRef, {
+    kullaniciAdi: userDetails.kullaniciAdi,
+    emoji: userDetails.emoji,
+    isPro: userDetails.isPro,
+  }, { merge: true });
+
+  // 2. Canlı Aylık Tabloyu Güncelle (Puanı koru)
+  const monthlyRef = db.collection("mevcutAylikLiderlik").doc(userId);
+  batch.set(monthlyRef, {
+    kullaniciAdi: userDetails.kullaniciAdi,
+    emoji: userDetails.emoji,
+    isPro: userDetails.isPro,
+  }, { merge: true });
+  
+  // --- KRİTİK DÜZELTME: İlan Edilmiş Liderin Bilgisini KONTROLLÜ Güncelleme ---
+  // Sadece emojiyi ve adı güncelle, puanı KESİNLİKLE elleme.
+  const winnerDetailsUpdate = {
+    kullaniciAdi: userDetails.kullaniciAdi,
+    emoji: userDetails.emoji,
+    isPro: userDetails.isPro,
+  };
+
+  const weeklyWinnerRef = db.collection("leaders").doc("weeklyWinner");
+  const monthlyWinnerRef = db.collection("leaders").doc("monthlyWinner");
+
+  // NOT: Liderin ID'si değişmediği sürece bu güvenlidir.
+  // UPDATE yerine SET(merge: true) kullandığımız için puan korunur.
+  batch.set(weeklyWinnerRef, winnerDetailsUpdate, { merge: true });
+  batch.set(monthlyWinnerRef, winnerDetailsUpdate, { merge: true });
+  
+  await batch.commit();
+  logger.info(`✅ Kullanıcı detayları (Emoji/PRO/Ad) anlık olarak yansıtıldı.`);
+  return null;
+});
+// --- PROFİL GÜNCELLEMESİ BİTTİ ---
+
+
+/**
+ * HAFTALIK LİDERİ İLAN EDER. (Pazartesi 00:00) 
  */
 exports.announceWeeklyWinner = onSchedule({
-  schedule: "00 00 * * 0",
+  schedule: "00 00 * * 1", // Pazartesi 00:00
   timeZone: "Europe/Istanbul",
 }, async (event) => {
   logger.info("HAFTALIK LİDER İLAN EDİLİYOR...");
@@ -132,12 +184,13 @@ exports.announceWeeklyWinner = onSchedule({
   if (!leadersSnapshot.empty) {
     const winnerData = leadersSnapshot.docs[0].data();
     const winnerRef = db.collection("leaders").doc("weeklyWinner");
+
     const winnerDetails = await getUserDetails(winnerData.userId);
 
     await winnerRef.set({
       kullaniciAdi: winnerDetails.kullaniciAdi,
       emoji: winnerDetails.emoji,
-      puan: winnerData.puan,
+      puan: winnerData.puan, // Bu, sabitlenen puandır
       userId: winnerData.userId,
       isPro: winnerDetails.isPro,
       announcementTime: admin.firestore.FieldValue.serverTimestamp(),
@@ -149,11 +202,10 @@ exports.announceWeeklyWinner = onSchedule({
 });
 
 /**
- * AYLIK LİDERİ İLAN EDER. (Ayın 1'i 23:59) (SADECE İLAN)
- * Artık puan hesaplamaz, sadece lideri kopyalar.
+ * AYLIK LİDERİ İLAN EDER. (Ayın 2'si 00:00) 
  */
 exports.announceMonthlyWinner = onSchedule({
-  schedule: "00 00 1 * *",
+  schedule: "00 00 2 * *", // Ayın 2'si 00:00
   timeZone: "Europe/Istanbul",
 }, async (event) => {
   logger.info("AYLIK LİDER İLAN EDİLİYOR...");
@@ -164,12 +216,13 @@ exports.announceMonthlyWinner = onSchedule({
   if (!leadersSnapshot.empty) {
     const winnerData = leadersSnapshot.docs[0].data();
     const winnerRef = db.collection("leaders").doc("monthlyWinner");
+
     const winnerDetails = await getUserDetails(winnerData.userId);
 
     await winnerRef.set({
       kullaniciAdi: winnerDetails.kullaniciAdi,
       emoji: winnerDetails.emoji,
-      puan: winnerData.puan,
+      puan: winnerData.puan, // Bu, sabitlenen puandır
       userId: winnerData.userId,
       isPro: winnerDetails.isPro,
       announcementTime: admin.firestore.FieldValue.serverTimestamp(),
