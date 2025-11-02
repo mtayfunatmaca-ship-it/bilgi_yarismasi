@@ -49,19 +49,32 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     _checkExamStatus(); // <<< YENİ: Sınavın bitiş tarihini kontrol et
 
     // Animasyonlar (Aynı)
-    _animationController = AnimationController(duration: const Duration(milliseconds: 600), vsync: this);
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(parent: _animationController, curve: Curves.easeIn));
-    _podiumAnimationController = AnimationController(duration: const Duration(milliseconds: 1200), vsync: this);
+    _animationController = AnimationController(
+      duration: const Duration(milliseconds: 600),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
+    );
+    _podiumAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 1200),
+      vsync: this,
+    );
     _podiumAnimations = List.generate(3, (index) {
       double beginInterval = index == 0 ? 0.4 : (index == 1 ? 0.2 : 0.0);
       double endInterval = index == 0 ? 1.0 : (index == 1 ? 0.8 : 0.6);
-      return Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+      return Tween<double>(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
           parent: _podiumAnimationController,
-          curve: Interval(beginInterval, endInterval, curve: Curves.elasticOut)));
+          curve: Interval(beginInterval, endInterval, curve: Curves.elasticOut),
+        ),
+      );
     });
 
     // --- YENİ: Konfeti Controller ---
-    _confettiController = ConfettiController(duration: const Duration(seconds: 2));
+    _confettiController = ConfettiController(
+      duration: const Duration(seconds: 2),
+    );
     // --- BİTTİ ---
 
     _animationController.forward();
@@ -82,28 +95,31 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         .limit(100)
         .snapshots();
   }
-  
+
   // --- YENİ FONKSİYON: Sınavın bitip bitmediğini kontrol eder ---
   Future<void> _checkExamStatus() async {
-     try {
-       final examDoc = await _firestore.collection('trialExams').doc(widget.trialExamId).get();
-       if (!examDoc.exists || !mounted) return;
-       
-       final data = examDoc.data() as Map<String, dynamic>;
-       final Timestamp? endTimeTs = data['endTime'] as Timestamp?;
-       
-       if (endTimeTs != null) {
-          final DateTime endTime = endTimeTs.toDate();
-          if (DateTime.now().isAfter(endTime)) {
-             setState(() {
-               _isExamFinished = true; // Sınav bitmiş
-             });
-             _confettiController.play(); // Sınav bittiyse konfetiyi patlat
-          }
-       }
-     } catch (e) {
-        print("Sınav durumu kontrol hatası: $e");
-     }
+    try {
+      final examDoc = await _firestore
+          .collection('trialExams')
+          .doc(widget.trialExamId)
+          .get();
+      if (!examDoc.exists || !mounted) return;
+
+      final data = examDoc.data() as Map<String, dynamic>;
+      final Timestamp? endTimeTs = data['endTime'] as Timestamp?;
+
+      if (endTimeTs != null) {
+        final DateTime endTime = endTimeTs.toDate();
+        if (DateTime.now().isAfter(endTime)) {
+          setState(() {
+            _isExamFinished = true; // Sınav bitmiş
+          });
+          _confettiController.play(); // Sınav bittiyse konfetiyi patlat
+        }
+      }
+    } catch (e) {
+      print("Sınav durumu kontrol hatası: $e");
+    }
   }
   // --- YENİ FONKSİYON BİTTİ ---
 
@@ -147,7 +163,9 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                 SliverAppBar(
                   title: Text(
                     widget.title,
-                    style: textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                    style: textTheme.titleLarge?.copyWith(
+                      fontWeight: FontWeight.bold,
+                    ),
                     overflow: TextOverflow.ellipsis,
                   ),
                   centerTitle: true,
@@ -159,13 +177,16 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                   foregroundColor: colorScheme.onSurface,
                 ),
                 SliverPadding(
-                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
+                  padding: EdgeInsets.only(
+                    bottom: MediaQuery.of(context).padding.bottom + 16,
+                  ),
                   sliver: SliverToBoxAdapter(
                     child: _buildLeaderboardContent(
                       stream: _examLeaderboardStream!,
                       puanField: 'score',
                       currentUserId: _currentUserId,
-                      emptyMessage: 'Bu deneme sınavına henüz kimse katılmamış.',
+                      emptyMessage:
+                          'Bu deneme sınavına henüz kimse katılmamış.',
                     ),
                   ),
                 ),
@@ -179,7 +200,13 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               confettiController: _confettiController,
               blastDirectionality: BlastDirectionality.explosive,
               shouldLoop: false,
-              colors: const [Colors.green, Colors.blue, Colors.pink, Colors.orange, Colors.purple],
+              colors: const [
+                Colors.green,
+                Colors.blue,
+                Colors.pink,
+                Colors.orange,
+                Colors.purple,
+              ],
               gravity: 0.1,
               emissionFrequency: 0.05,
               numberOfParticles: 20,
@@ -208,7 +235,8 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
           print("Deneme Sıralama Hatası: ${snapshot.error}");
           String errorMsg = 'Sıralama yüklenemedi. Lütfen tekrar deneyin.';
           if (snapshot.error.toString().contains('FAILED_PRECONDITION')) {
-            errorMsg = 'Sıralama için gerekli Firestore Index\'i oluşturulmamış.\nLütfen Debug Console\'daki linke tıklayın.';
+            errorMsg =
+                'Sıralama için gerekli Firestore Index\'i oluşturulmamış.\nLütfen Debug Console\'daki linke tıklayın.';
           }
           return _buildErrorState(_refreshData, errorMsg);
         }
@@ -220,7 +248,9 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         }
 
         var userDocs = snapshot.data!.docs;
-        final currentUserIndex = userDocs.indexWhere((u) => _isCurrentUser(u, currentUserId));
+        final currentUserIndex = userDocs.indexWhere(
+          (u) => _isCurrentUser(u, currentUserId),
+        );
         final topThree = userDocs.take(3).toList();
         final otherUsers = userDocs.skip(3).toList();
 
@@ -233,9 +263,12 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
             // --- YENİ: Şampiyon Kartı ---
             // Sadece sınav bittiyse VE en az 1 kazanan varsa göster
             if (_isExamFinished && topThree.isNotEmpty)
-              _buildWinnerCard(topThree[0].data() as Map<String, dynamic>, puanField),
-            // --- BİTTİ ---
+              _buildWinnerCard(
+                topThree[0].data() as Map<String, dynamic>,
+                puanField,
+              ),
 
+            // --- BİTTİ ---
             if (topThree.isNotEmpty)
               _buildPodiumSection(topThree, puanField, currentUserId),
             if (otherUsers.isNotEmpty)
@@ -251,7 +284,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
       },
     );
   }
-  
+
   // --- YENİ WIDGET: Sınav Şampiyonu Kartı ---
   Widget _buildWinnerCard(Map<String, dynamic> winnerData, String puanField) {
     final colorScheme = Theme.of(context).colorScheme;
@@ -268,19 +301,28 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [Colors.amber.shade600, Colors.orange.shade700],
-          begin: Alignment.topLeft, end: Alignment.bottomRight
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
-          BoxShadow(color: Colors.amber.withOpacity(0.4), blurRadius: 10, offset: const Offset(0, 4))
-        ]
+          BoxShadow(
+            color: Colors.amber.withOpacity(0.4),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Row(
         children: [
           Column(
             children: [
               Text(emoji, style: const TextStyle(fontSize: 32)),
-              const FaIcon(FontAwesomeIcons.crown, color: Colors.white, size: 18),
+              const FaIcon(
+                FontAwesomeIcons.crown,
+                color: Colors.white,
+                size: 18,
+              ),
             ],
           ),
           const SizedBox(width: 16),
@@ -290,15 +332,24 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               children: [
                 Text(
                   'SINAV ŞAMPİYONU',
-                  style: textTheme.labelSmall?.copyWith(color: Colors.white.withOpacity(0.9), fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                  style: textTheme.labelSmall?.copyWith(
+                    color: Colors.white.withOpacity(0.9),
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 0.5,
+                  ),
                 ),
                 Text(
                   name,
-                  style: textTheme.titleLarge?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+                  style: textTheme.titleLarge?.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(
                   '${kpssPuan.toStringAsFixed(3)} KPSS Puanı ($puan Skor)',
-                  style: textTheme.bodyMedium?.copyWith(color: Colors.white.withOpacity(0.9)),
+                  style: textTheme.bodyMedium?.copyWith(
+                    color: Colors.white.withOpacity(0.9),
+                  ),
                 ),
               ],
             ),
@@ -362,11 +413,20 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (podiumItems.length > 1) Flexible(child: podiumItems[1]) else const Spacer(),
+          if (podiumItems.length > 1)
+            Flexible(child: podiumItems[1])
+          else
+            const Spacer(),
           const SizedBox(width: 8),
-          if (podiumItems.isNotEmpty) Flexible(child: podiumItems[0]) else const Spacer(),
+          if (podiumItems.isNotEmpty)
+            Flexible(child: podiumItems[0])
+          else
+            const Spacer(),
           const SizedBox(width: 8),
-          if (podiumItems.length > 2) Flexible(child: podiumItems[2]) else const Spacer(),
+          if (podiumItems.length > 2)
+            Flexible(child: podiumItems[2])
+          else
+            const Spacer(),
         ],
       ),
     );
@@ -390,10 +450,21 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     Color rankColor;
     IconData rankIcon;
     switch (rank) {
-      case 1: rankColor = Colors.amber.shade600; rankIcon = Icons.emoji_events; break;
-      case 2: rankColor = Colors.grey.shade500; rankIcon = Icons.emoji_events; break;
-      case 3: rankColor = Colors.brown.shade400; rankIcon = Icons.emoji_events; break;
-      default: rankColor = Colors.grey; rankIcon = Icons.military_tech;
+      case 1:
+        rankColor = Colors.amber.shade600;
+        rankIcon = Icons.emoji_events;
+        break;
+      case 2:
+        rankColor = Colors.grey.shade500;
+        rankIcon = Icons.emoji_events;
+        break;
+      case 3:
+        rankColor = Colors.brown.shade400;
+        rankIcon = Icons.emoji_events;
+        break;
+      default:
+        rankColor = Colors.grey;
+        rankIcon = Icons.military_tech;
     }
 
     return Column(
@@ -402,18 +473,25 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         if (isCurrentUser)
           Padding(
             padding: const EdgeInsets.only(top: 8.0),
-            child: Icon(Icons.person_pin_circle_rounded, color: colorScheme.primary, size: 18),
+            child: Icon(
+              Icons.person_pin_circle_rounded,
+              color: colorScheme.primary,
+              size: 18,
+            ),
           ),
-        
+
         Padding(
           padding: const EdgeInsets.only(bottom: 6),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               if (isPro)
-                FaIcon(FontAwesomeIcons.crown, color: Colors.amber.shade700, size: 10),
-              if (isPro)
-                const SizedBox(width: 4),
+                FaIcon(
+                  FontAwesomeIcons.crown,
+                  color: Colors.amber.shade700,
+                  size: 10,
+                ),
+              if (isPro) const SizedBox(width: 4),
               Flexible(
                 child: Text(
                   kullaniciAdi,
@@ -440,13 +518,25 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               end: Alignment.bottomCenter,
               colors: [rankColor.withOpacity(0.9), rankColor.withOpacity(0.6)],
             ),
-            borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), topRight: Radius.circular(8)),
-            boxShadow: [ BoxShadow(color: rankColor.withOpacity(0.4), blurRadius: 10, offset: const Offset(0, 5)) ],
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(8),
+              topRight: Radius.circular(8),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: rankColor.withOpacity(0.4),
+                blurRadius: 10,
+                offset: const Offset(0, 5),
+              ),
+            ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(emoji, style: TextStyle(fontSize: 24 + (4 * (4 - rank)).toDouble())),
+              Text(
+                emoji,
+                style: TextStyle(fontSize: 24 + (4 * (4 - rank)).toDouble()),
+              ),
               const SizedBox(height: 6),
               FittedBox(
                 fit: BoxFit.scaleDown,
@@ -466,7 +556,10 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
           padding: const EdgeInsets.symmetric(vertical: 8),
           decoration: BoxDecoration(
             color: rankColor.withOpacity(0.15),
-            borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(8), bottomRight: Radius.circular(8)),
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(8),
+              bottomRight: Radius.circular(8),
+            ),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -475,7 +568,11 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               const SizedBox(width: 4),
               Text(
                 '$rank.',
-                style: TextStyle(color: rankColor, fontWeight: FontWeight.bold, fontSize: 14),
+                style: TextStyle(
+                  color: rankColor,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
               ),
             ],
           ),
@@ -515,7 +612,10 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
             itemBuilder: (context, index) {
               final userData = otherUsers[index].data() as Map<String, dynamic>;
               final rank = 4 + index;
-              final isCurrentUser = _isCurrentUser(otherUsers[index], currentUserId);
+              final isCurrentUser = _isCurrentUser(
+                otherUsers[index],
+                currentUserId,
+              );
               return _buildUserListItem(
                 userData: userData,
                 rank: rank,
@@ -567,14 +667,19 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
             Text(emoji, style: const TextStyle(fontSize: 18)),
             const SizedBox(width: 10),
             if (isPro)
-              FaIcon(FontAwesomeIcons.crown, color: Colors.amber.shade700, size: 12),
-            if (isPro)
-              const SizedBox(width: 6),
+              FaIcon(
+                FontAwesomeIcons.crown,
+                color: Colors.amber.shade700,
+                size: 12,
+              ),
+            if (isPro) const SizedBox(width: 6),
             Expanded(
               child: Text(
                 kullaniciAdi,
                 style: textTheme.bodyLarge?.copyWith(
-                  fontWeight: isCurrentUser ? FontWeight.bold : FontWeight.normal,
+                  fontWeight: isCurrentUser
+                      ? FontWeight.bold
+                      : FontWeight.normal,
                 ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
@@ -617,12 +722,18 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                 color: colorScheme.errorContainer.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icons.error_outline_rounded, color: colorScheme.error, size: 64),
+              child: Icon(
+                Icons.error_outline_rounded,
+                color: colorScheme.error,
+                size: 64,
+              ),
             ),
             const SizedBox(height: 24),
             Text(
               'Bir hata oluştu',
-              style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(
+                context,
+              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             Text(
@@ -659,7 +770,11 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                 color: colorScheme.primaryContainer.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icons.leaderboard_outlined, color: colorScheme.primary, size: 80),
+              child: Icon(
+                Icons.leaderboard_outlined,
+                color: colorScheme.primary,
+                size: 80,
+              ),
             ),
             const SizedBox(height: 24),
             Padding(
@@ -680,7 +795,10 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               icon: const Icon(Icons.arrow_back_rounded),
               label: const Text('Geri Dön'),
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
               ),
             ),
           ],

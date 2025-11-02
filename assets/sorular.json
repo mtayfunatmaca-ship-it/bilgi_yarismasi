@@ -80,23 +80,35 @@
       "kategoriId": "tarih", 
       "sira": 11
     },
-        {
+    {
       "id": "cok_partili_hayata_gecis_donemi", 
       "ad": "Çok Partili Hayata Geçiş Dönemi", 
       "kategoriId": "tarih", 
       "sira": 12
     },
-            {
+    {
       "id": "ataturk_donemi_dis_politika", 
       "ad": "Atatürk Dönemi Dış Politika", 
       "kategoriId": "tarih", 
       "sira": 13
     },
-                {
-      "id": "ataturk_sonrasi_donem", 
-      "ad": "Atatürk Sonrası Dönem", 
-      "kategoriId": "tarih", 
-      "sira": 14
+    {
+      "id": "turkiyenin_cografi_konumu", 
+      "ad": "Türkiye'nin Coğrafi Konumu", 
+      "kategoriId": "cografya", 
+      "sira": 1
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri", 
+      "ad": "Türkiye'nin Yerşekilleri ve Özellikleri", 
+      "kategoriId": "cografya", 
+      "sira": 2
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu", 
+      "ad": "Türkiye'nin İklimi ve Bitki Örtüsü", 
+      "kategoriId": "cografya", 
+      "sira": 3
     }
   ],
   
@@ -11060,7 +11072,7 @@
   ]
 },
 {
-  "id": "ataturk_sonrasi_done_3",
+  "id": "ataturk_sonrasi_donem_3",
   "baslik": "Atatürk Sonrası Dönem-3",
   "kategoriId": "tarih",
   "konuId": "ataturk_sonrasi_donem",
@@ -11266,6 +11278,2538 @@
         "Meclis Başkanı (Koraltan) ve tüm kabine üyeleri",
         "Sadece Adnan Menderes",
         "Sadece Celal Bayar dışındaki herkes"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_cografi_konumu_1",
+  "baslik": "Türkiye'nin Coğrafi Konumu-1",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_cografi_konumu",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye, 36° - 42° kuzey paralelleri ile 26° - 45° doğu meridyenleri arasında yer almaktadır.\nAşağıdakilerden hangisi, Türkiye’nin bu mutlak konumunun sonuçlarından biri değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Dört mevsimin belirgin olarak yaşanması",
+        "Yıl boyunca gölge boyunun sıfır olmaması",
+        "Batıdan doğuya doğru ortalama yükseltinin artması",
+        "Güneyden kuzeye doğru güneş ışınlarının geliş açısının küçülmesi"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en doğusu (Iğdır) ile en batısı (Gökçeada) arasında yaklaşık 76 dakikalık yerel saat farkı bulunmaktadır.\nBu durum aşağıdakilerden hangisinin bir sonucudur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kuzey Yarım Küre'de yer almasının",
+        "19 meridyenlik bir genişlikte yer almasının",
+        "Ortalama yükseltisinin fazla olmasının",
+        "Asya ve Avrupa kıtaları arasında yer almasının"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Kuzey Yarım Küre'de yer aldığını kanıtlayan durumlardan biridir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yıl içinde dört mevsimin yaşanması",
+        "21 Haziran'da en uzun gündüzün yaşanması",
+        "En doğusu ile en batısı arasında saat farkı olması",
+        "Dağlık ve engebeli bir yapıya sahip olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de kuzeyden esen rüzgârların (Poyraz, Karayel, Yıldız) sıcaklığı düşürmesi, güneyden esen rüzgârların (Lodos, Kıble, Samyeli) ise sıcaklığı artırması, Türkiye'nin hangi özelliği ile doğrudan ilgilidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yükseltisinin batıdan doğuya artması",
+        "Üç tarafının denizlerle çevrili olması",
+        "Kuzey Yarım Küre'de yer alması",
+        "Başlangıç Meridyeni'nin doğusunda yer alması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de dağların \"bakı\" etkisi (güneşe dönük yamaç) yıl boyunca güney yamaçlarda görülür.\nBu durumun temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yengeç Dönencesi'nin kuzeyinde yer alması",
+        "Ilıman (Orta) kuşakta yer alması",
+        "Yerel saat farkının fazla olması",
+        "Doğu meridyenlerinde yer alması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin göreceli (özel) konumunun sonuçları arasında yer alır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Cephesel yağışların görülmesi",
+        "İstanbul ve Çanakkale boğazlarına sahip olması",
+        "Güneyden kuzeye doğru deniz suyu tuzluluğunun azalması",
+        "Dört mevsimin belirgin yaşanması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de batıdan doğuya doğru gidildikçe sıcaklıkların düşmesi ve tarım ürünlerinin olgunlaşma süresinin uzaması, öncelikle aşağıdakilerden hangisiyle açıklanır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Paralel derecelerinin değişmesi",
+        "Yükseltinin artması",
+        "Meridyen farkının artması",
+        "Karasallık şiddetinin azalması"
+      ]
+    },
+    {
+      "soruMetni": "21 Haziran tarihinde, haritada verilen illerden hangisinde gündüz süresi diğerlerinden daha uzundur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hatay",
+        "Sinop",
+        "İzmir",
+        "Iğdır"
+      ]
+    },
+    {
+      "soruMetni": "21 Aralık tarihinde, aşağıdaki illerin hangisinde yaşanan gece süresi diğerlerinden daha kısadır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kırklareli",
+        "Zonguldak",
+        "Trabzon",
+        "Mersin"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin ılıman (orta) kuşakta yer almasının bir sonucu olarak aşağıdaki iklim ve bitki örtüsü özelliklerinden hangisi görülür?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yıl boyunca yağışlı tropikal ormanlar",
+        "Akdeniz, Karadeniz, Karasal ve Step iklimlerinin bir arada görülmesi",
+        "Yıl boyunca donmuş olan Tundra bitki örtüsü",
+        "Sadece çöl iklimi ve kaktüs bitkileri"
+      ]
+    },
+    {
+      "soruMetni": "Ege Bölgesi'nde dağların kıyıya dik uzanması, aşağıdakilerden hangisine neden olmamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Denizel (nemli) iklimin iç kesimlere kadar sokulmasına",
+        "Kıyıda girinti ve çıkıntının (koy, körfez) fazla olmasına",
+        "Kıyı ile iç kesimler arasında ulaşımın kolay olmasına",
+        "Falez (yalıyar) oluşumunun çok yaygın olmasına"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz ve Karadeniz bölgelerinde dağların kıyıya paralel uzanmasının ortak sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kıyı ile iç kesimler arasında ulaşımın zor ve geçitlerle sağlanması",
+        "Kıyı şeridinin (kıta sahanlığı) dar olması",
+        "Falez oluşumunun yaygın olması",
+        "Kıyıdaki limanların iç bölgelerle (hinterland) bağlantısının çok güçlü olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin jeopolitik önemini artıran en önemli faktör aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Ortalama yükseltisinin fazla olması",
+        "Zengin bor yataklarına sahip olması",
+        "Asya ve Avrupa kıtaları arasında bir köprü konumunda olması",
+        "Kuzey Yarım Küre'de yer alması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin göreceli konumu ile ilgili bir özellik değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Asya, Avrupa ve Afrika kıtalarının birbirine en çok yaklaştığı yerde bulunması",
+        "Önemli enerji kaynaklarına (Petrol, Doğalgaz) sahip komşularının bulunması",
+        "Ilıman kuşakta yer alması nedeniyle tarım ürünü çeşitliliğinin fazla olması",
+        "Üç tarafının denizlerle çevrili olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin ulusal saat olarak 45° Doğu meridyeninin (Iğdır) yerel saatini kullanmasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yıl içinde dört mevsimi yaşaması",
+        "Güneş enerjisinden daha fazla yararlanmak ve enerji tasarrufu sağlamak",
+        "Türkiye'nin en doğu noktası olması",
+        "Başlangıç Meridyeni'ne daha yakın olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en uzun kara sınırı aşağıdaki ülkelerden hangisiyle başlar?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İran",
+        "Irak",
+        "Suriye",
+        "Ermenistan"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en kısa kara sınırı hangi ülkeyledir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yunanistan",
+        "Gürcistan",
+        "Azerbaycan (Nahçıvan)",
+        "Ermenistan"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin aşağıdaki komşularından hangisiyle olan sınırı diğerlerine göre en eskidir ve büyük ölçüde değişmemiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "İran (Kasr-ı Şirin Antlaşması)",
+        "Suriye (Hatay'ın katılması)",
+        "Bulgaristan (Balkan Savaşları)",
+        "Yunanistan (Lozan Antlaşması)"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en işlek kara sınır kapısı olan Kapıkule, aşağıdaki ülkelerden hangisine açılmaktadır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yunanistan",
+        "Bulgaristan",
+        "Gürcistan",
+        "Suriye"
+      ]
+    },
+    {
+      "soruMetni": "Irak'a açılan ve Orta Doğu'ya yönelik ticarette kilit rol oynayan sınır kapımız aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gürbulak",
+        "Habur",
+        "Cilvegözü",
+        "Sarp"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_cografi_konumu_2",
+  "baslik": "Türkiye'nin Coğrafi Konumu-2",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_cografi_konumu",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "İran'a açılan ve Transit Ticaret Yolu üzerinde bulunan önemli sınır kapımız aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kapıkule",
+        "İpsala",
+        "Gürbulak",
+        "Dereköy"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin Gürcistan ile olan sınır kapısı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Habur",
+        "Gürbulak",
+        "Sarp",
+        "Kapıköy"
+      ]
+    },
+    {
+      "soruMetni": "I. Aynı anda farklı iklim özelliklerinin yaşanması\nII. Petrol ve doğalgaz boru hatlarının geçiş güzergâhında olması\nIII. Dört mevsimin belirgin olarak yaşanması\nIV. Akdeniz iklim kuşağında yer alması\nYukarıdakilerden hangileri Türkiye'nin göreceli (özel) konumunun sonuçlarındandır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "I ve II",
+        "I ve III",
+        "II ve IV",
+        "III ve IV"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin \"Jeopolitik\" konumunun sonuçlarından biri olarak gösterilemez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "NATO üyesi olması",
+        "Önemli enerji koridorları üzerinde yer alması",
+        "Boğazlar üzerinde tam egemenliğe sahip olması",
+        "Güney yamaçların daha sıcak olması"
+      ]
+    },
+    {
+      "soruMetni": "\"Türkiye, Yengeç Dönencesi'nin kuzeyindedir.\"\nAşağıdakilerden hangisi bu yargıyı destekleyen bir kanıttır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Cisimlerin gölgesinin yıl boyunca kuzeye düşmesi",
+        "Yıl içinde dört mevsimin yaşanması",
+        "Batıdan doğuya doğru sıcaklığın azalması",
+        "Karadeniz'in tuzluluk oranının Akdeniz'den az olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de Akdeniz'in tuzluluk oranının, Karadeniz'den daha fazla olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Akdeniz'in daha derin olması",
+        "Karadeniz'e daha çok akarsuyun dökülmesi",
+        "Akdeniz'in Ekvator'a daha yakın olması (Buharlaşma)",
+        "Karadeniz'in Cebelitarık Boğazı'na uzak olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en son çizilen kara sınırı hangi komşumuzladır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İran",
+        "Yunanistan",
+        "Suriye (Hatay'ın 1939'da katılmasıyla)",
+        "Bulgaristan"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin hem Ege Denizi'ne hem de Marmara Denizi'ne kıyısı vardır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Çanakkale",
+        "Balıkesir",
+        "Tekirdağ",
+        "Bursa"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin mutlak konumunun (paralel ve meridyenler) tarıma olan etkilerinden biridir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Batıdan doğuya doğru ürünlerin olgunlaşma süresinin uzaması",
+        "Kıyı bölgelerde narenciye tarımının yapılabilmesi",
+        "İç bölgelerde sulama ihtiyacının fazla olması",
+        "Güneyden kuzeye doğru tarım ürünlerinin olgunlaşma süresinin uzaması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin hem Asya hem de Avrupa kıtasında toprağı bulunan \"transkontinental\" bir ülke olması, hangi ilimizin bu özelliğe sahip olmasına yol açmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Çanakkale",
+        "İstanbul",
+        "Kocaeli",
+        "Hem A hem B"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de aşağıdaki tarihlerden hangisinde gölge boyu en uzundur ve kuzeyi gösterir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "21 Mart",
+        "21 Haziran",
+        "23 Eylül",
+        "21 Aralık"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de yıl boyunca güneş ışınlarını en dik (en büyük) açıyla alan il aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sinop",
+        "Hatay",
+        "Iğdır",
+        "Çanakkale"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin ulusal saat (GMT+3 / 45°D) ile yerel saati arasındaki fark en azdır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İzmir",
+        "Ankara",
+        "Iğdır",
+        "Edirne"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin ulusal saat ile yerel saati arasındaki fark en fazladır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kars",
+        "Sivas",
+        "Çanakkale",
+        "Van"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en uç noktaları düşünüldüğünde, aşağıdaki il ve yön eşleştirmelerinden hangisi yanlıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "En Kuzey - Sinop (İnceburun)",
+        "En Güney - Hatay (Beysun Köyü / Topraktutan)",
+        "En Doğu - Iğdır (Dilucu)",
+        "En Batı - Muğla (Datça)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin \"göreceli konumu\"nun sonuçlarından biridir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kısa mesafelerde iklim ve bitki örtüsünün değişmesi",
+        "Akdeniz iklim kuşağında yer alması",
+        "Kuzeye doğru çizgisel hızın azalması",
+        "Cephesel yağışların görülmesi"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye, 26° Doğu meridyeni ile 45° Doğu meridyeni arasında yer alır.\nAşağıdakilerden hangisi bu durumun bir sonucudur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "2. ve 3. saat dilimlerinde yer alması",
+        "Güneş ışınlarının hiçbir zaman dik gelmemesi",
+        "Dört mevsimin yaşanması",
+        "Bakı etkisinin güneyde olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin önemli petrol ve doğalgaz boru hatlarının (TANAP, BTC, TürkAkım) kavşak noktasında olması, hangi konumunun bir sonucudur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Mutlak Konum",
+        "Jeopolitik Konum",
+        "Jeolojik Konum",
+        "Jeomorfolojik Konum"
+      ]
+    },
+    {
+      "soruMetni": "Yunanistan ile sınırımızı oluşturan akarsu ve sınır kapısı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Aras - Dilucu",
+        "Meriç - İpsala",
+        "Asi - Cilvegözü",
+        "Fırat - Karkamış"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Orta Kuşak'ta yer aldığının kanıtlarından biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Dört mevsimin belirgin yaşanması",
+        "Cephesel yağış sistemlerinin etkili olması",
+        "Batı rüzgârlarının etkili olması",
+        "Yükseltinin batıdan doğuya doğru artması"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_cografi_konumu_3",
+  "baslik": "Türkiye'nin Coğrafi Konumu-3",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_cografi_konumu",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye'de yıl içerisinde dört mevsimin belirgin olarak yaşanması \"mutlak konum\" (Orta Kuşak) ile açıklanırken; aynı anda (örneğin ilkbaharda) bir yerde denize girilirken (Antalya) başka bir yerde kayak (Erzurum) yapılabilmesi ne ile açıklanır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Bakı etkisi",
+        "Meridyen genişliği",
+        "Göreceli konum (Yükselti ve yer şekilleri)",
+        "Saat dilimleri"
+      ]
+    },
+    {
+      "soruMetni": "I. Yükselti\nII. Denize göre konum\nIII. Meridyen\nIV. Ekvator'a uzaklık\nYukarıdakilerden hangileri Türkiye'de iklimi etkileyen \"göreceli konum\" faktörlerindendir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "I ve II",
+        "II ve III",
+        "III ve IV",
+        "I ve IV"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Asya kıtasında yer alan topraklarına verilen isimdir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Trakya",
+        "Mezopotamya",
+        "Anadolu (Anatolia)",
+        "Kafkasya"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Avrupa kıtasında yer alan topraklarına verilen isimdir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Anadolu",
+        "Doğu Trakya",
+        "Kapadokya",
+        "Batı Trakya"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en büyük yüzölçümüne sahip komşusu aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Suriye",
+        "Irak",
+        "İran",
+        "Gürcistan"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sınır kapılarından hangisi Suriye'ye açılmaktadır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sarp",
+        "Habur",
+        "Cilvegözü",
+        "Gürbulak"
+      ]
+    },
+    {
+      "soruMetni": "Ermenistan ile sınırımızı oluşturan ancak siyasi nedenlerle kapalı olan sınır kapımız aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Dilucu",
+        "Akyaka (Doğukapı)",
+        "Türkgözü",
+        "İpsala"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ülkelerden hangisi Türkiye'nin hem kara hem de deniz komşusudur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Bulgaristan",
+        "Suriye",
+        "İran",
+        "Irak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ülkelerden hangisi Türkiye'nin sadece deniz komşusudur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yunanistan",
+        "Gürcistan",
+        "Rusya (Karadeniz'den)",
+        "Azerbaycan"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin Ege Denizi'nde Yunanistan ile yaşadığı temel sorunlar (Kıta sahanlığı, FIR hattı vb.) coğrafi konumun hangi yönünün bir sonucudur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Jeopolitik konum",
+        "Mutlak konum",
+        "Jeolojik yapı",
+        "İklimsel konum"
+      ]
+    },
+    {
+      "soruMetni": "Iğdır'da yerel saat 12.00 iken, aynı anda aşağıdaki illerden hangisinde yerel saat daha geridir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Van",
+        "Kars",
+        "Erzurum",
+        "Ankara"
+      ]
+    },
+    {
+      "soruMetni": "21 Mart tarihinde Iğdır'da (45°D) güneş doğduktan kaç dakika sonra Çanakkale'de (26°D) güneş doğar?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "19 dakika",
+        "45 dakika",
+        "76 dakika",
+        "120 dakika"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin jeopolitik önemini artıran doğal su yollarıdır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Fırat ve Dicle Nehirleri",
+        "İstanbul ve Çanakkale Boğazları",
+        "Sakarya ve Kızılırmak Nehirleri",
+        "Süveyş ve Panama Kanalları"
+      ]
+    },
+    {
+      "soruMetni": "\"Türkiye, Alp-Himalaya kıvrım kuşağı üzerinde yer alır.\"\nBu bilgi, Türkiye'nin hangi özelliği hakkında doğrudan bilgi verir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yıl içinde dört mevsim yaşaması",
+        "Genç oluşumlu, deprem riski yüksek ve dağlık olması",
+        "Önemli enerji koridoru olması",
+        "Kuzey Yarım Küre'de yer alması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin Karadeniz'e kıyısı yoktur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Ordu",
+        "Giresun",
+        "Gümüşhane",
+        "Zonguldak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin Akdeniz'e kıyısı yoktur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Hatay",
+        "Adana",
+        "Osmaniye",
+        "Kahramanmaraş"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin Ege Denizi'ne kıyısı yoktur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Aydın",
+        "Muğla",
+        "Manisa",
+        "Denizli"
+      ]
+    },
+    {
+      "soruMetni": "\"Kıta sahanlığı\" (Şelf alanı), bir ülkenin deniz altında devam eden 200 metre derinliğe kadar olan kara parçasıdır.\nDağların denize uzanışı düşünüldüğünde, kıta sahanlığının en geniş olduğu kıyılarımız hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Ege kıyıları",
+        "Doğu Karadeniz kıyıları",
+        "Batı Karadeniz kıyıları",
+        "Antalya kıyıları"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Orta Kuşak'ta yer aldığını kanıtlayan bir durumdur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Cephesel (Frontal) yağışların görülmesi",
+        "Yükseltinin fazla olması",
+        "Ortalama sıcaklığın yüksek olması",
+        "Asya ve Avrupa'da toprağı olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin mutlak konumu (36°-42° K) düşünüldüğünde, aşağıdaki tarım ürünlerinden hangisinin yetişme alanı daha dardır ve güney kıyılarla sınırlıdır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Buğday",
+        "Elma",
+        "Muz",
+        "Üzüm"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_cografi_konumu_4",
+  "baslik": "Türkiye'nin Coğrafi Konumu-4",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_cografi_konumu",
+  "isNew": true,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye'de çizgisel hızın (Dünya'nın dönüş hızı) en fazla olduğu il aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sinop",
+        "Trabzon",
+        "Hatay",
+        "Kırklareli"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de çizgisel hızın en az olduğu il aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Hatay",
+        "Antalya",
+        "İzmir",
+        "Sinop"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de 21 Haziran'dan 21 Aralık'a doğru gidildikçe yaşanan değişim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gündüzler uzar, geceler kısalır.",
+        "Geceler uzar, gündüzler kısalır.",
+        "Gölge boyları kısalır.",
+        "Güneş ışınlarının geliş açısı büyür."
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin 26° Doğu meridyeni ile 45° Doğu meridyeni arasında yer alması, hangi saat dilimlerini kullandığı anlamına gelir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "GMT 0 ve GMT +1",
+        "GMT +1 ve GMT +2",
+        "GMT +2 ve GMT +3",
+        "GMT +3 ve GMT +4"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin aşağıdaki komşularından hangisiyle olan sınırı bir akarsu (Arpaçay ve Aras) ile çizilmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gürcistan",
+        "Ermenistan",
+        "İran",
+        "Irak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin göreceli konumunun (yer şekilleri) bir sonucudur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "İç Anadolu'nun karasal iklime sahip olması",
+        "Güney kıyılarının kuzey kıyılarından sıcak olması",
+        "Yıl içinde gölge boyunun değişmesi",
+        "Başlangıç Meridyeni'nin doğusunda yer alması"
+      ]
+    },
+    {
+      "soruMetni": "I. TANAP (Trans-Anadolu Doğalgaz Boru Hattı)\nII. BTC (Bakü-Tiflis-Ceyhan Petrol Boru Hattı)\nIII. TürkAkım\nYukarıdaki enerji projeleri, Türkiye'nin hangi özelliğinin önemini artırmaktadır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Jeopolitik konumu",
+        "Mutlak konumu",
+        "Jeolojik yapısı",
+        "Yükselti ortalaması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin hem Karadeniz'e hem de Ege Denizi'ne kıyısı olan yarımada aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Datça Yarımadası",
+        "Kapıdağ Yarımadası",
+        "Gelibolu Yarımadası",
+        "Biga Yarımadası"
+      ]
+    },
+    {
+      "soruMetni": "Iğdır'da (45°D) güneş tam tepe noktasındayken (saat 12.00) İzmit'te (30°D) yerel saat kaçtır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "11.00",
+        "11.30",
+        "12.00",
+        "13.00"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en büyük adası olan Gökçeada (İmroz), hangi denizde yer alır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Karadeniz",
+        "Marmara Denizi",
+        "Ege Denizi",
+        "Akdeniz"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin ikinci büyük adası olan Marmara Adası, hangi denizde yer alır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Karadeniz",
+        "Marmara Denizi",
+        "Ege Denizi",
+        "Akdeniz"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki denizlerimizden hangisi tamamen Türkiye'nin iç suları niteliğindedir ve mutlak egemenliği altındadır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Karadeniz",
+        "Marmara Denizi",
+        "Ege Denizi",
+        "Akdeniz"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin birden fazla ülkeyle kara sınırı vardır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Edirne (Yunanistan, Bulgaristan)",
+        "Hatay (Suriye)",
+        "Kars (Ermenistan)",
+        "Artvin (Gürcistan)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin birden fazla ülkeyle kara sınırı vardır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kırklareli",
+        "Ağrı",
+        "Van",
+        "Hakkâri (Irak, İran)"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin Asya ile Avrupa arasındaki kara yolu geçişlerinin büyük kısmının sağlandığı sınır kapısı hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Habur",
+        "Kapıkule",
+        "Sarp",
+        "Gürbulak"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de aynı anda sadece bir ortak saat kullanılmasına rağmen, yerel saat farkının en fazla olmasının nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kuzey-güney yönünde geniş olması",
+        "Doğu-batı yönünde geniş (19 meridyen) olması",
+        "Yükseltisinin fazla olması",
+        "Dört mevsimin yaşanması"
+      ]
+    },
+    {
+      "soruMetni": "21 Haziran'da Sinop'ta yaşanan gündüz süresi, Hatay'da yaşanan gündüz süresinden daha uzundur.\nBu durumun temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Eksen eğikliği ve enlem etkisi",
+        "Yükselti farkı",
+        "Boylam farkı",
+        "Denize göre konum"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en batısındaki Gökçeada (26°D) ile en doğusundaki Iğdır (45°D) arasında kaç meridyen fark vardır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "19",
+        "6",
+        "76",
+        "45"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de fiyort ve skyer tipi kıyılar görülmez.\nBu durumun temel nedeni Türkiye'nin hangi özelliğidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Göreceli konumu (Buzul çağında buzulların kıyılara inmemesi)",
+        "Mutlak konumu (Orta Kuşak'ta yer alması)",
+        "Yükseltisinin fazla olması",
+        "Dağların kıyıya paralel uzanması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de Haliç (Estuar) tipi kıyılar (Gelgit etkili) belirgin olarak görülmez.\nBu durumun temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yükseltinin fazla olması",
+        "Okyanusa kıyısının olmaması (iç denizlerde yer alması)",
+        "Akarsu debilerinin düşük olması",
+        "Ortalama sıcaklığın yüksek olması"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_yersekilleri_ve_ozellikleri_1",
+  "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-1",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye'nin genç bir jeolojik yapıya sahip olmasının en önemli kanıtı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Zengin bitki örtüsüne sahip olması",
+        "Ortalama yükseltisinin fazla ve engebeli olması",
+        "Ilıman iklim kuşağında yer alması",
+        "Üç tarafının denizlerle çevrili olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin jeolojik olarak genç oluşumlu olmasının sonuçlarından biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Deprem riskinin yüksek olması",
+        "Sıcak su kaynaklarının yaygın olması",
+        "Linyit ve bor gibi maden yataklarının bulunması",
+        "Taş kömürü yataklarının yaygın olması"
+      ]
+    },
+    {
+      "soruMetni": "Ege Bölgesi'ndeki dağların (Kaz Dağı, Madra, Yunt, Bozdağlar) oluşum şekli aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kıvrılma",
+        "Volkanizma",
+        "Kırılma",
+        "Buzul aşındırması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de Kuzey Anadolu ve Doğu Anadolu fay hatları boyunca deprem riskinin yüksek olması, bu bölgelerin hangi özelliğiyle doğrudan ilgilidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Ortalama yükseltinin fazla olmasıyla",
+        "Volkanik arazilerin geniş yer kaplamasıyla",
+        "Arazinin jeolojik olarak kırıklı yapıda olmasıyla",
+        "Akarsu ağının sık olmasıyla"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi, Türkiye'nin Alp-Himalaya dağ kuşağı üzerinde yer aldığını gösteren en güçlü kanıttır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Doğu-batı yönünde uzanan yüksek dağ sıralarının varlığı",
+        "Delta ovalarının geniş yer kaplaması",
+        "İç bölgelerde bozkır bitki örtüsünün görülmesi",
+        "Karstik şekillerin yaygın olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye arazisinin büyük bölümünün toptan yükselmesi (epirojenez) aşağıdakilerden hangisine yol açmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Akarsuların yatak eğimlerinin ve aşındırma güçlerinin artmasına",
+        "Kıyı çizgisinin değişmez kalmasına",
+        "Volkanik faaliyetlerin sona ermesine",
+        "Geniş buzul alanlarının oluşmasına"
+      ]
+    },
+    {
+      "soruMetni": "Teke ve Taşeli platolarında lapya, dolin, uvala gibi yerşekillerinin yaygın olmasının temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Arazinin volkanik kayaçlardan oluşması",
+        "Bölgenin şiddetli rüzgarlara açık olması",
+        "Suda kolay çözünebilen kayaçların yaygın olması",
+        "Bölgede donma-çözülme olaylarının sık yaşanması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de volkanik arazilerin en yoğun olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ege Bölgesi",
+        "Doğu Anadolu Bölgesi",
+        "Karadeniz Bölgesi",
+        "Marmara Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki dağlardan hangisi oluşum bakımından diğerlerinden farklıdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Ağrı Dağı",
+        "Erciyes Dağı",
+        "Hasan Dağı",
+        "Kaçkar Dağları"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de fiyort ve skyer tipi kıyıların görülmemesinin temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Dağların kıyıya uzanış doğrultusu",
+        "Ortalama yükseltinin az olması",
+        "Matematik konum",
+        "Gelgit genliğinin düşük olması"
+      ]
+    },
+    {
+      "soruMetni": "Ege Bölgesi'nde dağların denize dik uzanmasının aşağıdakilerden hangisine yol açtığı söylenemez?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kıyı ile iç kesimler arasında ulaşımın zorlaşmasına",
+        "Kıyıda girinti ve çıkıntının fazla olmasına",
+        "Denizel iklimin iç kesimlere kadar sokulabilmesine",
+        "Kıyıdaki delta ovalarının oluşumunun kolaylaşmasına"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz ve Akdeniz bölgelerinde dağların kıyıya paralel uzanması, aşağıdakilerden hangisini engellemiştir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kıyıda falez oluşumunu",
+        "Yıllık yağış miktarının fazla olmasını",
+        "Kıyı ile iç kesimler arasındaki iklim farkının belirginleşmesini",
+        "Denizel iklimin iç kesimlere sokulmasını"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ovalardan hangisi oluşum bakımından bir delta ovası değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Çukurova",
+        "Bafra Ovası",
+        "Çarşamba Ovası",
+        "Muş Ovası"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'deki akarsuların denize döküldükleri yerlerde delta ovası oluşturabilmeleri, öncelikle aşağıdakilerden hangisine bağlıdır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Akarsuyun bol alüvyon taşımasına",
+        "Kıyıda güçlü gelgit yaşanmamasına",
+        "Akarsu rejiminin düzenli olmasına",
+        "Akarsuyun yatak eğiminin az olmasına"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'deki platolar içinde karstik oluşumlu platolara en iyi örnekler hangi bölgede yer alır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Akdeniz Bölgesi",
+        "İç Anadolu Bölgesi",
+        "Doğu Anadolu Bölgesi",
+        "Güneydoğu Anadolu Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki platolardan hangisi oluşum bakımından diğerlerinden farklı bir özelliğe sahiptir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Erzurum-Kars Platosu",
+        "Cihanbeyli Platosu",
+        "Haymana Platosu",
+        "Obruk Platosu"
+      ]
+    },
+    {
+      "soruMetni": "İstanbul ve Çanakkale boğazlarının oluşumu, aşağıdaki kıyı tiplerinden hangisine örnektir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Fiyort Tipi Kıyı",
+        "Ria Tipi Kıyı",
+        "Boyuna Tipi Kıyı",
+        "Dalmaçya Tipi Kıyı"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz Bölgesi'nde, Fethiye-Kaş arasında görülen ve kıyıya paralel uzanan adaların bulunduğu kıyı tipi aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Enine Kıyı",
+        "Ria Tipi Kıyı",
+        "Dalmaçya Tipi Kıyı",
+        "Limanlı Kıyı"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye akarsularının genel bir özelliği olarak aşağıdakilerden hangisi söylenemez?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Ulaşım ve taşımacılığa elverişli olmaları",
+        "Rejimlerinin genellikle düzensiz olması",
+        "Hidroelektrik potansiyellerinin yüksek olması",
+        "Yatak eğimlerinin fazla olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye akarsularının rejimlerinin genel olarak düzensiz olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yatak eğimlerinin fazla olması",
+        "Boylarının kısa olması",
+        "Yağış rejiminin düzensiz olması",
+        "Ulaşıma elverişli olmamaları"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_yersekilleri_ve_ozellikleri_2",
+  "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-2",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki akarsulardan hangisi sularını Türkiye sınırları dışındaki bir denize boşaltır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kızılırmak",
+        "Fırat Nehri",
+        "Sakarya Nehri",
+        "Gediz Nehri"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de yerşekillerinin çeşitlilik göstermesi, aşağıdakilerden hangisi üzerinde en az etkiye sahiptir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Tarım ürünleri çeşitliliği",
+        "İklim çeşitliliği",
+        "Yıllık ve günlük sıcaklık farkları",
+        "Jeopolitik konum"
+      ]
+    },
+    {
+      "soruMetni": "İç Anadolu Bölgesi'nde rüzgar erozyonunun şiddetli olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Arazinin yüksek ve engebeli olması",
+        "Bölgenin fay hattı üzerinde yer alması",
+        "Bitki örtüsünün cılız ve iklimin yarı kurak olması",
+        "Kış aylarının çok soğuk geçmesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki göllerden hangisi oluşum bakımından karstik bir göldür?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Tuz Gölü",
+        "Van Gölü",
+        "Beyşehir Gölü",
+        "Tortum Gölü"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki göllerden hangisi bir heyelan set gölüdür?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Büyükçekmece Gölü",
+        "Sapanca Gölü",
+        "Tortum Gölü",
+        "Nemrut Gölü"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de en yaygın görülen toprak tipi olan bozkır toprakları, en çok hangi bölgemizde görülür?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Karadeniz ve Marmara",
+        "Akdeniz ve Ege",
+        "İç Anadolu ve Güneydoğu Anadolu",
+        "Doğu Anadolu ve Karadeniz"
+      ]
+    },
+    {
+      "soruMetni": "Erzurum-Kars Platosu'nda çernezyom adı verilen verimli toprakların oluşmasının temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Bölgenin volkanik arazilerle kaplı olması",
+        "Yükseltinin fazla olması",
+        "Yaz yağışlarıyla yeşeren gür çayırların toprak altında kalması",
+        "Kışların çok sert geçmesi"
+      ]
+    },
+    {
+      "soruMetni": "Batı Toroslar'da tarımsal faaliyetlerin sınırlı olmasının ve nüfusun seyrek olmasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yıllık yağış miktarının az olması",
+        "Arazinin çok engebeli ve karstik yapıda olması",
+        "Kışların çok soğuk ve karlı geçmesi",
+        "Ulaşımın sadece deniz yoluyla sağlanması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ova ve oluşum şekli eşleştirmelerinden hangisi yanlıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Çukurova - Delta Ovası",
+        "Konya Ovası - Tektonik Ova",
+        "Elmalı Ovası - Karstik Ova",
+        "Erzurum Ovası - Lav Örtüsü Ovası"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Doğu Karadeniz kıyılarının özelliklerinden biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kıyıda girinti çıkıntının az olması",
+        "Kıyı ile iç kesimler arasında ulaşımın zor olması",
+        "Kıyıda falez oluşumunun yaygın olması",
+        "Kıta sahanlığının geniş olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de yüksek dağların zirvelerinde buzul aşındırma ve biriktirme şekillerine rastlanması, aşağıdakilerden hangisinin kanıtıdır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Türkiye'nin orta kuşakta yer aldığının",
+        "IV. Jeolojik Zaman'daki iklim değişikliklerinin",
+        "Fay hatlarının aktif olduğunun",
+        "Ortalama yükseltinin az olduğunun"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki bölgelerden hangisinde rüzgarın oluşturduğu yerşekillerine rastlanma olasılığı en yüksektir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Doğu Karadeniz",
+        "İç Anadolu",
+        "Yıldız Dağları",
+        "Menteşe Yöresi"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de akarsu aşındırmasının şiddetli olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Akarsu boylarının kısa olması",
+        "Yıllık yağış miktarının az olması",
+        "Arazinin engebeli ve yatak eğimlerinin fazla olması",
+        "Akarsuların kapalı havzalara dökülmesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki delta ovalarından hangisi Ege Denizi kıyısında yer almaz?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Balat Ovası",
+        "Çarşamba Ovası",
+        "Menemen Ovası",
+        "Selçuk Ovası"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de karstik arazilerin en az yaygın olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Batı Toroslar",
+        "Orta Toroslar",
+        "İç Anadolu",
+        "Ergene Havzası"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki göllerden hangisinin suları acıdır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Eğirdir Gölü",
+        "Beyşehir Gölü",
+        "Burdur Gölü",
+        "Hazar Gölü"
+      ]
+    },
+    {
+      "soruMetni": "İç Anadolu Bölgesi'ndeki platoların genel adı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Lav örtüsü platosu",
+        "Karstik plato",
+        "Tabaka düzlüğü platosu",
+        "Aşınım platosu"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin aşağıdaki özelliklerinden hangisi göreceli (özel) konumu ile açıklanır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Dört mevsimin belirgin olarak yaşanması",
+        "Güneyden kuzeye gidildikçe sıcaklığın düşmesi",
+        "Doğu-batı yönlü dağ sıralarına sahip olması",
+        "Batı rüzgarlarının etkisinde kalması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki kıyı tiplerinden hangisi Türkiye'de görülmez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Enine kıyı",
+        "Boyuna kıyı",
+        "Ria tipi kıyı",
+        "Haliç tipi kıyı"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ovalardan hangisi tektonik oluşumlu ovalara örnek olarak gösterilebilir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Bafra Ovası",
+        "Çarşamba Ovası",
+        "Erzincan Ovası",
+        "Çukurova"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_yersekilleri_ve_ozellikleri_3",
+  "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-3",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki toprak tiplerinden hangisi Türkiye'de sadece dar bir alanda görülür?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Terra-rossa",
+        "Çernezyom",
+        "Kahverengi orman toprağı",
+        "Alüvyal toprak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki akarsulardan hangisinin oluşturduğu delta ovası diğerlerinden farklı bir denizdedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kızılırmak",
+        "Yeşilırmak",
+        "Seyhan",
+        "Sakarya"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki göllerden hangisi volkanik set gölüne örnektir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Van Gölü",
+        "Tuz Gölü",
+        "Sapanca Gölü",
+        "Köyceğiz Gölü"
+      ]
+    },
+    {
+      "soruMetni": "Doğu Karadeniz Bölümü'nde kıyı ile iç kesimler arasında ulaşımın geçitlerle sağlanmasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kıyıda falezlerin yaygın olması",
+        "Dağların kıyıya paralel ve yüksek olması",
+        "Yıllık yağış miktarının fazla olması",
+        "Akarsu debilerinin yüksek olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de en yaygın görülen doğal afet aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Volkanik patlama",
+        "Deprem",
+        "Tsunami",
+        "Çığ"
+      ]
+    },
+    {
+      "soruMetni": "Menteşe Yöresi'nin (Güneybatı Ege) dağlık ve engebeli olması, bu alanın hangi jeolojik süreçle ilgili olduğunu gösterir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Volkanizma",
+        "Orojenez (Kıvrılma-Kırılma)",
+        "Buzullaşma",
+        "Rüzgar aşındırması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'deki kapalı havzaların oluşumundaki en önemli etken aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yerşekillerinin engebeli olması ve iklim",
+        "Bitki örtüsünün cılız olması",
+        "Arazinin volkanik olması",
+        "Toprak tipinin elverişsiz olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin ortalama yükseltisinin fazla olmasının sonuçlarından biri değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "İklim çeşitliliğinin artması",
+        "Tarım ürünleri çeşitliliğinin artması",
+        "Kıyı ile iç kesimler arası ulaşımın kolaylaşması",
+        "Hidroelektrik potansiyelin yüksek olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki platolardan hangisi üzerinde tarımsal faaliyetlerden çok büyükbaş hayvancılık yapılır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Cihanbeyli Platosu",
+        "Haymana Platosu",
+        "Erzurum-Kars Platosu",
+        "Gaziantep Platosu"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en büyük gölü olan Van Gölü'nün sularının sodalı olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Çevresindeki volkanik kayaçlar",
+        "Gölün gideğeninin olmaması (kapalı havza)",
+        "Gölün çok derin olması",
+        "Bölgede yağışın az olması"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz iklim bölgesinin tipik toprağı olan terra-rossaların oluşumunda hangi kayaç türü etkilidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kalker (Kireçtaşı)",
+        "Granit",
+        "Bazalt",
+        "Andezit"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi bir akarsuyun denge profiline ulaştığını gösterir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Akış hızının fazla olması",
+        "Aşındırma gücünün yüksek olması",
+        "Yatak eğiminin azalmış olması",
+        "Hidroelektrik potansiyelinin yüksek olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'deki akarsuların denge profiline ulaşmamış olmasının temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Akarsu boylarının kısa olması",
+        "Yağış rejimlerinin düzensiz olması",
+        "Arazinin yakın jeolojik zamanda toptan yükselmesi",
+        "Akarsuların açık havzalara dökülmesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki yerşekillerinden hangisinin oluşumunda rüzgar aşındırması doğrudan etkilidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Falez",
+        "Dolin",
+        "Mantarkaya",
+        "Sirk"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki göllerden hangisi kıyı set gölü oluşumuna örnektir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Abant Gölü",
+        "Büyükçekmece Gölü",
+        "Salda Gölü",
+        "Çıldır Gölü"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de en şiddetli buzul aşındırmasının yaşandığı dağ aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Uludağ",
+        "Erciyes Dağı",
+        "Hakkari Dağları (Cilo-Sat)",
+        "Yıldız Dağları"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ova ve oluşum eşleştirmelerinden hangisi yanlıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Konya Ovası - Tektonik",
+        "Muğla Ovası - Karstik",
+        "Silifke Ovası - Delta",
+        "Iğdır Ovası - Buzul"
+      ]
+    },
+    {
+      "soruMetni": "İç Anadolu ve Güneydoğu Anadolu'da şiddetli rüzgar erozyonu yaşanırken, Karadeniz kıyılarında bu durumun görülmemesi ne ile açıklanır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Arazinin eğimi",
+        "Bitki örtüsünün gür olması",
+        "Yükseltinin az olması",
+        "Toprağın killi yapıda olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki dağlardan hangisi Güneydoğu Toroslar'ın bir parçasıdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Bolkar Dağları",
+        "Aladağlar",
+        "Tahtalı Dağları",
+        "Hakkari Dağları"
+      ]
+    },
+    {
+      "soruMetni": "I. Jeolojik Zaman'a (Paleozoik) ait araziler Türkiye'de en çok nerede bulunur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Zonguldak ve çevresi",
+        "Erzurum-Kars Platosu",
+        "Konya Havzası",
+        "Ege kıyıları"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_yersekilleri_ve_ozellikleri_4",
+  "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-4",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+  "isNew": true,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Kapadokya yöresinde (Nevşehir-Ürgüp) bulunan peribacalarının oluşumunda hangi iki dış kuvvet birlikte etkili olmuştur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Rüzgar ve Buzullar",
+        "Akarsu ve Rüzgar",
+        "Akarsu ve Dalgalar",
+        "Dalga ve Buzullar"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin en büyük delta ovası olan Çukurova'yı hangi iki nehir oluşturmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Fırat ve Dicle",
+        "Kızılırmak ve Yeşilırmak",
+        "Seyhan ve Ceyhan",
+        "Gediz ve Büyük Menderes"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi bir akarsu biriktirme şekli değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Delta",
+        "Birikinti konisi",
+        "Kırgıbayır (Badlands)",
+        "Irmak adası"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki göllerden hangisi Türkiye'nin en derin gölü olma özelliğini taşır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Van Gölü",
+        "Beyşehir Gölü",
+        "Tuz Gölü",
+        "Eğirdir Gölü"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'deki ovaların büyük çoğunluğunun oluşumunda hangi iç kuvvet doğrudan etkili olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Volkanizma",
+        "Orojenez",
+        "Tektonik hareketler (Çökmeler)",
+        "Epirojenez"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki yerlerden hangisinde dalga aşındırması sonucu oluşan falezlere rastlanma olasılığı en yüksektir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Batı Karadeniz kıyıları",
+        "Ege kıyıları (Edremit-Kuşadası arası)",
+        "Çukurova deltası",
+        "Çarşamba deltası"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Doğu Anadolu Bölgesi'nin genel yerşekli özelliklerinden biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Yükselti ve engebenin fazla olması",
+        "Geniş volkanik plato ve dağların varlığı",
+        "Tektonik ova sayısının fazla olması",
+        "Geniş delta ovalarına sahip olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki jeolojik zamanların hangisinde Türkiye'de linyit, bor ve tuz yatakları oluşmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "I. Zaman (Paleozoik)",
+        "II. Zaman (Mezozoik)",
+        "III. Zaman (Tersiyer)",
+        "IV. Zaman (Kuarterner)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisi Kuzey Anadolu Fay Hattı üzerinde yer almaz?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Erzincan",
+        "Tokat",
+        "Bolu",
+        "Kırşehir"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de akarsuların hidroelektrik potansiyelinin en yüksek olduğu bölge hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Marmara Bölgesi",
+        "Ege Bölgesi",
+        "Doğu Anadolu Bölgesi",
+        "İç Anadolu Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Büyük Menderes, Küçük Menderes ve Gediz nehirlerinin yataklarında menderesler (büklümler) çizerek akmasının temel nedeni nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yatak eğimlerinin çok az olması",
+        "Rejimlerinin düzensiz olması",
+        "Bol alüvyon taşımaları",
+        "Açık havzaya dökülmeleri"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki yerşekillerinden hangisinin oluşumunda dış kuvvetlerin etkisi yoktur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Peribacası",
+        "Falez",
+        "Horst",
+        "Delta"
+      ]
+    },
+    {
+      "soruMetni": "Obruk Platosu'nun (İç Anadolu) bu ismi almasında, bölgede hangi yerşeklinin yaygın olması etkili olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Volkan konileri",
+        "Buzul vadileri",
+        "Karstik çöküntü çukurları (Dolinler)",
+        "Heyelan setleri"
+      ]
+    },
+    {
+      "soruMetni": "Doğu Karadeniz'deki yaylaların varlığı, öncelikle hangi ekonomik faaliyeti desteklemiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sanayi",
+        "Madencilik",
+        "Büyükbaş hayvancılık",
+        "Kış turizmi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin genç oluşumlu bir arazi olduğunu gösteren kanıtlardan biri değildir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ortalama yükseltinin fazla olması",
+        "Ilıman iklim kuşağında yer alması",
+        "Tektonik depremlerin sık yaşanması",
+        "Jeotermal kaynakların zengin olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de laterit benzeri toprakların (kırmızı-sarı podzolik) görüldüğü yer aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Konya Ovası",
+        "Erzurum-Kars Platosu",
+        "Doğu Karadeniz kıyıları",
+        "Teke Platosu"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ovalardan hangisi bir dağ eteği ovası özelliği gösterir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Bursa Ovası",
+        "Konya Ovası",
+        "Ergene Ovası",
+        "Çukurova"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye kıyılarında gelgitin etkisiz olması aşağıdakilerden hangisine ortam hazırlamıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Fiyort tipi kıyıların oluşmasına",
+        "Dalmaçya tipi kıyıların oluşmasına",
+        "Delta ovalarının kolay oluşmasına",
+        "Falezlerin yaygınlaşmasına"
+      ]
+    },
+    {
+      "soruMetni": "Sivas ve Çankırı çevresinde yaygın olarak bulunan jips (alçıtaşı) karstı üzerinde oluşan yerşekilleri hangi bölgede yoğunlaşmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Ege Bölgesi",
+        "Akdeniz Bölgesi",
+        "Doğu Anadolu Bölgesi",
+        "İç Anadolu Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki dağ sıralarından hangisi Ege Bölgesi'nde yer alan kırık (horst) dağlarından biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kaz Dağları",
+        "Bozdağlar",
+        "Aydın Dağları",
+        "Küre Dağları"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_iklimi_ve_bitki_ortusu_1",
+  "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-1",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin matematik konumunun iklim üzerindeki etkilerinden biridir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Batıdan doğuya doğru sıcaklığın azalması",
+        "Dört mevsimin belirgin olarak yaşanması",
+        "Kısa mesafelerde iklimin değişmesi",
+        "Kıyı ile iç kesimler arasında sıcaklık farkı olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de batıdan doğuya doğru gidildikçe yıllık ortalama sıcaklıkların düşmesinin temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Enlem",
+        "Yükselti",
+        "Karasallık",
+        "Bakı"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz ve Akdeniz bölgelerinde dağların kıyıya paralel uzanması, aşağıdakilerden hangisine neden olmuştur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kıyı ile iç kesimler arasında iklim farkının belirginleşmesine",
+        "Yıllık yağış miktarının azalmasına",
+        "Kıyılarda donlu gün sayısının artmasına",
+        "Cephesel yağışların azalmasına"
+      ]
+    },
+    {
+      "soruMetni": "Ege Bölgesi'nde dağların kıyıya dik uzanması, aşağıdakilerden hangisine olanak sağlamıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yıllık sıcaklık farkının artmasına",
+        "Denizel iklimin iç kesimlere kadar sokulmasına",
+        "Karstik arazilerin geniş yer kaplamasına",
+        "Bölgenin kışın daha soğuk olmasına"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin özel konumunun iklim üzerindeki etkilerinden biri değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Üç tarafının denizlerle çevrili olması",
+        "Ortalama yükseltisinin fazla olması",
+        "Güneyden kuzeye gidildikçe sıcaklıkların azalması",
+        "Doğu-batı yönlü dağ sıralarının bulunması"
+      ]
+    },
+    {
+      "soruMetni": "Toros Dağları'nın güneye bakan yamaçlarının kuzeye bakan yamaçlarına göre daha sıcak olmasını sağlayan faktör aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Bakı",
+        "Enlem",
+        "Yükselti",
+        "Denizellik"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de yıllık sıcaklık farkının en fazla olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Akdeniz Bölgesi",
+        "Karadeniz Bölgesi",
+        "Doğu Anadolu Bölgesi",
+        "Ege Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de yıllık sıcaklık farkının en az olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İç Anadolu Bölgesi",
+        "Karadeniz Bölgesi",
+        "Güneydoğu Anadolu Bölgesi",
+        "Marmara Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Yaz aylarında Türkiye'nin en sıcak bölgesinin Güneydoğu Anadolu olmasının temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yükseltinin az olması",
+        "Enlem ve karasallık",
+        "Bitki örtüsünün cılız olması",
+        "Fay hatları üzerinde olması"
+      ]
+    },
+    {
+      "soruMetni": "Kış aylarında Türkiye'nin en soğuk bölgesinin Doğu Anadolu olmasının temel nedeni nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yükselti ve karasallık",
+        "Bitki örtüsünün çayır olması",
+        "Volkanik arazilerin varlığı",
+        "Akarsu ağının sık olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de en fazla yağış alan yer aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Menteşe Yöresi",
+        "Doğu Karadeniz (Rize çevresi)",
+        "Yıldız Dağları",
+        "Batı Toroslar (Teke)"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de en az yağış alan yer aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Ergene Havzası",
+        "Güneydoğu Anadolu (Mardin çevresi)",
+        "Tuz Gölü ve çevresi",
+        "Malatya Ovası"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz iklim bölgesinde yağışların en fazla düştüğü mevsim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kış",
+        "İlkbahar",
+        "Yaz",
+        "Sonbahar"
+      ]
+    },
+    {
+      "soruMetni": "İç Anadolu Bölgesi'ndeki karasal iklimde yağışların en fazla düştüğü mevsim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kış",
+        "İlkbahar",
+        "Yaz",
+        "Sonbahar"
+      ]
+    },
+    {
+      "soruMetni": "Erzurum-Kars Platosu'nda (Sert Karasal) yağışların en fazla düştüğü mevsim aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kış",
+        "İlkbahar",
+        "Yaz",
+        "Sonbahar"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz iklim bölgesinin yağış rejimi için aşağıdakilerden hangisi söylenebilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "En fazla yağış kışın düşer",
+        "Yağışlar mevsimlere düzenli dağılmıştır",
+        "En kurak mevsim yazdır",
+        "İlkbahar yağışları belirgindir"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Akdeniz ikliminin karakteristik özelliklerinden biridir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yazlar sıcak ve kurak, kışlar ılık ve yağışlı",
+        "Her mevsim yağışlı ve ılıman",
+        "Kışlar çok soğuk ve karlı, yazlar serin",
+        "Yazlar kurak, kışlar soğuk ve kar yağışlı"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz ikliminin bitki örtüsü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Bozkır",
+        "Çayır",
+        "Maki",
+        "Tundra"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi maki topluluğunu oluşturan bitkilerden biri değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Zeytin",
+        "Defne",
+        "Keçiboynuzu",
+        "Ladin"
+      ]
+    },
+    {
+      "soruMetni": "Makilerin tahrip edildiği alanlarda ortaya çıkan daha kısa boylu çalılara ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Garig",
+        "Psödomaki",
+        "Bozkır",
+        "Tundra"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_iklimi_ve_bitki_ortusu_2",
+  "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-2",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Karadeniz ikliminin karakteristik bitki örtüsü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kestane ve gürgen ormanları",
+        "İğne yapraklı tayga ormanları",
+        "Kurakçıl otlar ve çalılar",
+        "Alpin çayırlar"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz Bölgesi'nde kıyıdan itibaren yükseldikçe görülen orman kuşağında aşağıdakilerden hangisi en yüksekte yer alır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Geniş yapraklı ağaçlar",
+        "İğne yapraklı ağaçlar (Ladin, Sarıçam)",
+        "Makiler",
+        "Zeytin ağaçları"
+      ]
+    },
+    {
+      "soruMetni": "İç Anadolu Bölgesi'nin doğal bitki örtüsü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Maki",
+        "Orman",
+        "Bozkır",
+        "Çayır"
+      ]
+    },
+    {
+      "soruMetni": "Erzurum-Kars Platosu'nda yaz yağışlarına bağlı olarak gelişen gür ot topluluklarına ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Alpin çayırlar",
+        "Antropojen bozkır",
+        "Garig",
+        "Psödomaki"
+      ]
+    },
+    {
+      "soruMetni": "İç bölgelerde ormanların insanlar tarafından tahrip edilmesi sonucu oluşan bozkırlara ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Antropojen bozkır",
+        "Yalancı maki",
+        "Relikt bitki",
+        "Endemik bitki"
+      ]
+    },
+    {
+      "soruMetni": "Yalnızca belirli bir bölgede yetişen ve başka yerde görülmeyen bitki türlerine ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Endemik",
+        "Relikt",
+        "Kozmopolit",
+        "Formasyon"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de endemik bitki türü çeşitliliğinin en fazla olduğu yer neresidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Karadeniz Dağları",
+        "Toros Dağları",
+        "Ergene Havzası",
+        "Tuz Gölü çevresi"
+      ]
+    },
+    {
+      "soruMetni": "Köyceğiz Gölü çevresinde yaygın olarak bulunan endemik ağaç türü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kazdağı Göknarı",
+        "Sığla (Günlük) Ağacı",
+        "İspir Meşesi",
+        "Datça Hurması"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz Bölgesi'nde, Akdeniz iklim kuşağına ait olmayan ancak makiye benzeyen çalılıklara ne ad verilir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Garig",
+        "Bozkır",
+        "Tundra",
+        "Psödomaki (Yalancı maki)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinde Akdeniz iklimi görülmez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Antalya",
+        "İzmir",
+        "Gaziantep",
+        "Trabzon"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinde Karadeniz iklimi görülmez?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Rize",
+        "Zonguldak",
+        "Sinop",
+        "Konya"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinde karasal iklim en belirgin şekilde yaşanır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Mersin",
+        "Sivas",
+        "Muğla",
+        "Artvin"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de buharlaşma şiddetinin en fazla olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Karadeniz",
+        "Marmara",
+        "Güneydoğu Anadolu",
+        "Ege"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de güneşlenme süresinin en az olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Doğu Karadeniz",
+        "Akdeniz",
+        "Güneydoğu Anadolu",
+        "İç Anadolu"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de güneşlenme süresinin en fazla olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Doğu Karadeniz",
+        "Yıldız Dağları",
+        "Güneydoğu Anadolu",
+        "Batı Karadeniz"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de kış aylarında donlu gün sayısının en az olduğu yer neresidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Erzurum çevresi",
+        "Akdeniz kıyı şeridi",
+        "İç Anadolu platosu",
+        "Edirne çevresi"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de kış aylarında donlu gün sayısının en fazla olduğu yer neresidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Ege kıyıları",
+        "Antalya Körfezi",
+        "Çukurova",
+        "Doğu Anadolu (Kars-Ardahan)"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'yi kuzeybatıdan (Balkanlar) etkileyen soğuk ve kuru yerel rüzgar aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Lodos",
+        "Kıble",
+        "Karayel",
+        "Samyeli"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'yi güneybatıdan (Akdeniz) etkileyen ılık ve nemli yerel rüzgar aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Poyraz",
+        "Lodos",
+        "Yıldız",
+        "Etezyen"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'yi kış aylarında etkisi altına alan, Sibirya kökenli soğuk ve kuru hava kütlesi hangi basınç merkezinden kaynaklanır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Sibirya Termik Yüksek Basıncı",
+        "Basra Termik Alçak Basıncı",
+        "İzlanda Dinamik Alçak Basıncı",
+        "Asor Dinamik Yüksek Basıncı"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_iklimi_ve_bitki_ortusu_3",
+  "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-3",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+  "isNew": true,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye'yi yaz aylarında etkisi altına alan, Güneydoğu'da aşırı sıcak ve kuraklığa neden olan basınç merkezi hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Sibirya Yüksek Basıncı",
+        "İzlanda Alçak Basıncı",
+        "Asor Yüksek Basıncı",
+        "Basra Alçak Basıncı"
+      ]
+    },
+    {
+      "soruMetni": "Rize'de turunçgil, Iğdır'da pamuk, Anamur'da muz yetiştirilebilmesi aşağıdakilerden hangisine örnektir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Mikroklima",
+        "Makroklima",
+        "Matematik konum",
+        "Toprak yapısı"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de orman varlığının en zengin olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Ege Bölgesi",
+        "İç Anadolu Bölgesi",
+        "Karadeniz Bölgesi",
+        "Güneydoğu Anadolu Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de orman varlığının en fakir olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Akdeniz Bölgesi",
+        "Marmara Bölgesi",
+        "Doğu Anadolu Bölgesi",
+        "Güneydoğu Anadolu Bölgesi"
+      ]
+    },
+    {
+      "soruMetni": "İç Anadolu'da ilkbaharda görülen ani ve kısa süreli sağanak yağışların oluşum türü nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Orografik (Yamaç)",
+        "Konveksiyonel (Yükselim)",
+        "Cephesel (Frontal)",
+        "Muson"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz Dağları'nın kuzey yamaçlarının bol yağış alması hangi yağış oluşum türüne örnektir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Konveksiyonel",
+        "Cephesel",
+        "Orografik",
+        "Muson"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de özellikle kış aylarında Akdeniz iklim bölgesinde görülen yağışların büyük çoğunluğu hangi oluşum türüne aittir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Cephesel",
+        "Konveksiyonel",
+        "Orografik",
+        "Zenital"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz iklim bölgesinde maki üst sınırı güneyden kuzeye (Hatay'dan Çanakkale'ye) gidildikçe neden alçalır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yükselti",
+        "Enlem (Sıcaklık azalması)",
+        "Denizellik",
+        "Yağış miktarı"
+      ]
+    },
+    {
+      "soruMetni": "Karadeniz Bölgesi'nde orman alt sınırının deniz seviyesinden başlamasının temel nedeni nedir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Toprak yapısı",
+        "Yükseltinin az olması",
+        "Nemlilik ve yağış fazlalığı",
+        "Dağların kıyıya paralel uzanması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisinin yıllık yağış miktarı diğerlerinden daha azdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Rize",
+        "Antalya",
+        "Zonguldak",
+        "Aksaray"
+      ]
+    },
+    {
+      "soruMetni": "Ege Bölgesi'nde yaz aylarında kuzeyden esen serin rüzgara ne ad verilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "İmbat",
+        "Lodos",
+        "Samyeli",
+        "Fön"
+      ]
+    },
+    {
+      "soruMetni": "Bir dağ yamacı boyunca alçalan hava kütlesinin sıcaklığı artırmasıyla oluşan rüzgara ne ad verilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Lodos",
+        "Fön (Föhn)",
+        "Meltem",
+        "Karayel"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de mutlak nem miktarının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "İç Anadolu",
+        "Akdeniz",
+        "Doğu Anadolu",
+        "Güneydoğu Anadolu"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de bağıl nem oranının yıl boyunca en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Karadeniz",
+        "Ege",
+        "Marmara",
+        "Güneydoğu Anadolu"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'de karasallığın sonuçlarından biri değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yıllık ve günlük sıcaklık farklarının fazla olması",
+        "Kışların sert ve kar yağışlı geçmesi",
+        "Yağış rejiminin düzenli olması",
+        "Bitki örtüsünün bozkır olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Türkiye'de denizelliğin görüldüğü yerlerin ortak özelliğidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yıllık sıcaklık farkının az olması",
+        "En fazla yağışın yazın düşmesi",
+        "Donlu gün sayısının fazla olması",
+        "Bitki örtüsünün çayır olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de aynı enlem üzerinde yer alan İzmir ve Van'ın yıllık ortalama sıcaklıklarının farklı olmasının nedeni nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Yükselti ve karasallık",
+        "Bakı farkı",
+        "Enlem farkı",
+        "Toprak türü"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de en yaygın görülen iklim tipi aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Karadeniz iklimi",
+        "Akdeniz iklimi",
+        "Karasal iklim",
+        "Sert karasal iklim"
+      ]
+    },
+    {
+      "soruMetni": "Güneydoğu Anadolu Bölgesi'nde yaz kuraklığının çok şiddetli olmasının temel nedeni nedir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Enlem ve Basra Alçak Basıncı",
+        "Yükseltinin az olması",
+        "Bitki örtüsünün cılızlığı",
+        "Fırat ve Dicle nehirleri"
+      ]
+    },
+    {
+      "soruMetni": "Marmara Bölgesi'nin \"geçiş iklimi\" özelliği taşımasının kanıtı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ortalama yükseltisinin az olması",
+        "Farklı iklim tiplerinin bir arada görülmesi",
+        "Boğazlara sahip olması",
+        "Sanayinin gelişmiş olması"
+      ]
+    }
+  ]
+},
+{
+  "id": "turkiyenin_iklimi_ve_bitki_ortusu_4",
+  "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-4",
+  "kategoriId": "cografya",
+  "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+  "isNew": true,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Türkiye'de en geniş alanda etkili olan ve güneydoğudan esen sıcak, kuru rüzgar aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Lodos",
+        "Kıble",
+        "Samyeli (Keşişleme)",
+        "Poyraz"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin iklim çeşitliliği aşağıdakilerden hangisini doğrudan etkilemiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Fay hatlarının dağılışını",
+        "Maden çeşitliliğini",
+        "Tarım ürünü ve bitki örtüsü çeşitliliğini",
+        "Ortalama yükseltiyi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi Kızılçam ormanlarının tahrip edildiği yerlerde ortaya çıkan bitki topluluğudur?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Maki",
+        "Bozkır",
+        "Çayır",
+        "Psödomaki"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de orman üst sınırının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Karadeniz",
+        "Marmara",
+        "Ege",
+        "Doğu Anadolu"
+      ]
+    },
+    {
+      "soruMetni": "Geçmiş jeolojik dönemlerden kalma, günümüz iklim koşullarında varlığını sürdüren bitkilere ne ad verilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Endemik bitki",
+        "Relikt (Kalıntı) bitki",
+        "Kozmopolit bitki",
+        "Formasyon"
+      ]
+    },
+    {
+      "soruMetni": "Ergene Havzası'nda karasal iklimin görülmesi, bu bölümün hangi özelliğinden kaynaklanır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ortalama yükseltisinin az olması",
+        "Deniz etkisine kapalı olması",
+        "Sanayinin gelişmiş olması",
+        "Topraklarının verimli olması"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ağaç türlerinden hangisi Türkiye'deki Karadeniz ormanlarına ait değildir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kayın",
+        "Ladin",
+        "Gürgen",
+        "Sandal"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki bitki türlerinden hangisi İç Anadolu bozkırlarına ait değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Geven",
+        "Çoban yastığı",
+        "Fındık",
+        "Sığır kuyruğu"
+      ]
+    },
+    {
+      "soruMetni": "Batı Toroslar'ın yüksek kesimlerinde yaygın olarak görülen ve endemik önemi olan ağaç türü hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Ladin",
+        "Sedir (Katran)",
+        "Kayın",
+        "Kestane"
+      ]
+    },
+    {
+      "soruMetni": "Güneydoğu Anadolu Bölgesi'nde yaz aylarında yaşanan aşırı kuraklığın temel nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yükseltinin azlığı",
+        "Buharlaşmanın şiddetli olması",
+        "Akarsu rejimlerinin düzensizliği",
+        "Toprağın verimsizliği"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki illerden hangisi Türkiye'nin en kurak alanı içinde yer alır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Antalya",
+        "Rize",
+        "Kars",
+        "Karaman"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki yerlerden hangisi Türkiye'nin en yağışlı alanlarından biri değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Doğu Karadeniz",
+        "Menteşe Yöresi",
+        "Iğdır Ovası",
+        "Yıldız Dağları"
+      ]
+    },
+    {
+      "soruMetni": "Hangi iklim tipinin görüldüğü alanlarda kimyasal çözünme en fazladır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Karadeniz iklimi",
+        "Karasal iklim",
+        "Sert karasal iklim",
+        "Güneydoğu Anadolu iklimi"
+      ]
+    },
+    {
+      "soruMetni": "Hangi iklim tipinin görüldüğü alanlarda fiziksel (mekanik) çözünme en fazladır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Karadeniz iklimi",
+        "Akdeniz iklimi",
+        "İç Anadolu (Karasal) iklimi",
+        "Marmara iklimi"
+      ]
+    },
+    {
+      "soruMetni": "Lodos rüzgarının estiği dönemlerde soba zehirlenmelerinin artmasının nedeni nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sıcaklığı aşırı düşürmesi",
+        "Bacadan ters eserek dumanı içeri vermesi",
+        "Bol miktarda yağmur getirmesi",
+        "Havasızlığa neden olması"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de sisli gün sayısının en fazla olduğu yer neresidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Güneydoğu Anadolu",
+        "Akdeniz kıyıları",
+        "Karadeniz kıyıları",
+        "Ege kıyıları"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki dağların hangisinde bakı etkisinden dolayı güney yamaçtaki yerleşme ve tarım sınırı kuzey yamaçtan daha yüksektir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kaçkar Dağları",
+        "Küre Dağları",
+        "Toros Dağları",
+        "Yıldız Dağları"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'de bitki örtüsü çeşitliliğinin fazla olmasının temel nedeni aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Nüfusun yoğun olması",
+        "İklim ve yerşekli çeşitliliği",
+        "Toprak türlerinin tekdüze olması",
+        "Akarsu boylarının kısa olması"
+      ]
+    },
+    {
+      "soruMetni": "Akdeniz ve Ege kıyılarında yaygın olarak görülen, kırmızı renkli Akdeniz toprağının adı nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Çernezyom",
+        "Terra-rossa",
+        "Podzol",
+        "Alüvyal"
+      ]
+    },
+    {
+      "soruMetni": "Türkiye'nin iklimi üzerinde aşağıdakilerden hangisinin etkisi yoktur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yükselti",
+        "Enlem",
+        "Gelgit",
+        "Karasallık"
       ]
     }
   ]
