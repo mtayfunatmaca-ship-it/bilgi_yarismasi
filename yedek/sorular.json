@@ -211,6 +211,18 @@
       "ad": "Ses Bilgisi", 
       "kategoriId": "turkce", 
       "sira": 4
+    },
+    {
+      "id": "yapi_bilgisi", 
+      "ad": "Yapı Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 5
+    },
+    {
+      "id": "sozcukte_yapi", 
+      "ad": "Sözcükte Yapı", 
+      "kategoriId": "turkce", 
+      "sira": 6
     }
   ],
   
@@ -26569,6 +26581,1061 @@
         "Kaybolan cüzdanı ararken yorulduk. (Ünlü düşmesi, ünsüz yumuşaması)",
         "Daracık odada bekleşiyorlar. (Ünlü türemesi)",
         "Affettiği için ona minnettarız. (Ünsüz türemesi, ünsüz sertleşmesi)"
+      ]
+    }
+  ]
+},
+{
+  "id": "yapi_bilgisi_1",
+  "baslik": "Yapı Bilgisi-1",
+  "kategoriId": "turkce",
+  "konuId": "yapi_bilgisi",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki altı çizili sözcüklerden hangisi isim köküne sahiptir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bütün gün \"koştuğu\" için çok yorulmuştu.",
+        "Bu işte başarıya ulaşmak için \"sabrı\" öğrenmelisin.",
+        "Yemeği yaparken tuzu fazla \"kattı\".",
+        "Ağaçlar, sonbaharda yapraklarını \"döktü\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü, türü bakımından diğerlerinden farklıdır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Sevinçli",
+        "Gözlemci",
+        "İleride",
+        "Övgüler"
+      ]
+    },
+    {
+      "soruMetni": "\"Yayımlanan\" sözcüğünün kökü ve bu kökün türü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yayı- (Fiil Kökü)",
+        "Yay- (İsim Kökü)",
+        "Yay- (Fiil Kökü)",
+        "Ya- (İsim Kökü)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü ile gövdesi arasında anlam ilişkisi diğerlerinden daha zayıftır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gözlükçü (göz-gözlük)",
+        "Sınavlar (sın-sınav)",
+        "Sevinçli (sev-sevinç)",
+        "Bilgisayar (bil-bilgi-bilgisayar)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi ortak köke sahiptir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sıcaklık",
+        "Boya",
+        "Kitapçı",
+        "Gözlem"
+      ]
+    },
+    {
+      "soruMetni": "\"Yağmur\" sözcüğü, aşağıdaki cümlelerin hangisinde fiil kökünden türediği anlamıyla kullanılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Sabahtan beri dışarıda şiddetli bir \"yağmur\" var.",
+        "Yere düşen meyveleri hemen \"yağmur\"la temizlediler.",
+        "Yere düşen su damlaları, sanki gökten \"yağmur\" olmuştu.",
+        "Soğuk hava, yolları buzla \"yağmur\" gibi kapladı."
+      ]
+    },
+    {
+      "soruMetni": "\"İlerlemek\" sözcüğünün kökü ve gövdesi arasındaki ilişki aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kök (İsim) \u2192 Gövde (İsimden Fiil)",
+        "Kök (Fiil) \u2192 Gövde (Fiilden Fiil)",
+        "Kök (İsim) \u2192 Gövde (İsimden İsim)",
+        "Kök (Fiil) \u2192 Gövde (Fiilden İsim)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi gövdeden türemiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Seçimlik",
+        "Çalışkan",
+        "Gözlemci",
+        "Yorgunluk"
+      ]
+    },
+    {
+      "soruMetni": "\"Söylev\" sözcüğünün kökü aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Söz-",
+        "Söyle-",
+        "Sev-",
+        "Sö-"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü yansıma sözcüktür?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Gürültü",
+        "Sessizlik",
+        "Soğukluk",
+        "Morarma"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi fiilden isim yapan yapım eki almıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Yoksulluk",
+        "Durak",
+        "İyimser",
+        "Başak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, isimden fiil yapan yapım eki almıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Köyün havası, bizi yeniden \"canlandırdı\".",
+        "Öğrenci, ders çalışmaktan \"yorulmuştu\".",
+        "Yeni çıkan bu eseri hemen \"okumuş\".",
+        "Duvarları maviye \"boyadı\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Çoğul Eki (çekim eki) alan bir sözcük, cümleye farklı bir anlam katmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bütün gün evde \"kitaplar\" okudu.",
+        "Sabahları Ali \"Beyler\" kahvaltıya geç kalmaz.",
+        "Çocuklar, okulun bahçesinde \"oynuyorlar\".",
+        "Toplantıya gelen \"konuşmacılar\" çok tecrübeliydi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi, Farklı türde bir yapım eki almıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sevgi (Fiilden İsim)",
+        "Bilgili (İsimden İsim)",
+        "Görüş (Fiilden İsim)",
+        "Başarı (Fiilden İsim)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisinde iki farklı yapım eki kullanılmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Gözlük",
+        "Boyasız",
+        "Yaşam",
+        "Sınıflandır"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde ilgi eki (tamlayan eki) alan sözcük, aynı zamanda iyelik eki almıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Onun \"kitabını\" okumayı çok seviyorum.",
+        "Bizim \"evimiz\" size çok yakındır.",
+        "Annemin \"yemeğini\" özledim.",
+        "Arabanın \"tekerleği\" patlamıştı."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde yönelme hâl eki (-e, -a) alan sözcük, mecaz anlam kazanmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bütün gün \"denize\" bakıp durdu.",
+        "Aldığı bütün para \"hayale\" gitti.",
+        "Duvarın \"tepesine\" tırmandı.",
+        "Arabayı \"yana\" çekmesini söyledi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi fiile gelerek yeni bir fiil türetmiştir (Fiilden Fiil Yapan Ek)?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Yıkılmak",
+        "Koşuşmak",
+        "Görüşmek",
+        "Hepsi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Zaman (Kip) Eki alan sözcük, cümleye gerçekleşmemiş bir beklenti anlamı katmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Sana dün akşam mutlaka \"uğrayacaktım\".",
+        "Her sabah erken \"kalkar\".",
+        "Şimdiye kadar çoktan \"gitmiştir\".",
+        "Dışarıda şiddetli bir yağmur \"yağıyor\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, iyelik eki almıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Elindeki kitabı hemen \"bırak\".",
+        "Çocuk, babasına bir \"söz\" verdi.",
+        "\"Kitabı\" çok sürükleyiciydi.",
+        "Okulun \"kitabı\" kayboldu."
+      ]
+    }
+  ]
+},
+{
+  "id": "yapi_bilgisi_2",
+  "baslik": "Yapı Bilgisi-2",
+  "kategoriId": "turkce",
+  "konuId": "yapi_bilgisi",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Tamlayan Eki (-ın, -in) alan bir sözcük yoktur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kapının kolu yerinden çıkmıştı.",
+        "Sınavın sonucu herkesi şaşırttı.",
+        "Arabası yolda kalınca geri döndü.",
+        "Öğrencilerin hepsi dersi dinliyordu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi hem iyelik hem de hâl eki almıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Evimizden",
+        "Okulda",
+        "Kitabımızı",
+        "Yorgunluktan"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Bildirme Eki (-dir) kesinlik anlamı katmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "O, şimdiye kadar varmıştır.",
+        "Türkiye'nin başkenti Ankara'dır.",
+        "Sınavlar bu hafta başlayacaktır.",
+        "Söyledikleri doğru değildir."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi fiile gelerek onu kalıcı isim yapmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Koşuşma (isim-fiil)",
+        "Geçit (Fiilden İsim)",
+        "Yemeği (İyelik eki)",
+        "Görmüş (Görülen geçmiş zaman)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerin hangisi farklı bir kişi eki almıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gittiniz",
+        "Yaptılar",
+        "Koşarsın",
+        "Görüyorum"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Basit Yapılı bir sözcük yoktur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Sabahleyin erkenden uyanıp okula gitti.",
+        "Başarı, ancak sürekli çalışmakla elde edilir.",
+        "O, bu teklife olumsuz bir yanıt verdi.",
+        "Ağaçlar, sonbaharda yapraklarını döktü."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi Türemiş Yapılı bir sözcüktür?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kedi",
+        "Pencere",
+        "Bilgisayar",
+        "Gözlemci"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi Birleşik Yapılı bir sözcüktür?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Öğretmenlik",
+        "Uçaksavar",
+        "Yorgunluk",
+        "Çalışkan"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik isim ve birleşik fiil bir arada kullanılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Ayakkabısının\" bağları çözülmüştü.",
+        "\"Dedikodu\" yapmayı hiç sevmem.",
+        "Bu işte \"başarılı olmak\" için \"elbirliği\" gerekiyor.",
+        "\"Kaybolan\" eşyaları ararken çok yorulduk."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi Hem yapım hem de çekim eki almıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Gözlükler",
+        "Boyacının",
+        "Ağaçta",
+        "Evimiz"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Üç farklı yapıda sözcük (Basit, Türemiş, Birleşik) bir arada kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Kuşbakışı\" manzara, \"bize\" harika \"gözüktü\".",
+        "\"Çalışkan\" öğrenci, \"okulda\" \"kitap okudu\".",
+        "\"Denizaltı\" \"suları\" oldukça \"soğuktu\".",
+        "\"Gelincikler\", \"yazın\" \"kızıl\" olur."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi isim gövdesinden türemiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Duygusal",
+        "Seçenek",
+        "Öğretmen",
+        "Kaçamak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi Fiil + Fiil türünde bir birleşik sözcüktür?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Uçaksavar",
+        "Gelgit",
+        "Cankurtaran",
+        "Gecekondu"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Birleşik Yapılı bir fiil yoktur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Bu durumu hemen \"fark ettim\".",
+        "Bizi gördüğünde \"gülümseyiverdi\".",
+        "Kapıyı yavaşça \"açtı\".",
+        "Yıllar sonra tekrar \"hissedebildi\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisi türetilirken isimden isim yapan ek almıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Benzinli",
+        "Görüş",
+        "Uykucu",
+        "Başak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü yansıma değildir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Vızıltı",
+        "Çatırtı",
+        "Soğuk",
+        "Horultu"
+      ]
+    },
+    {
+      "soruMetni": "\"Okuyucuların\" sözcüğünün yapısı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Basit",
+        "Türemiş",
+        "Birleşik",
+        "Hem Türemiş hem Birleşik"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, İsimden İsim Yapan yapım eki almıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Hava aniden \"karardı\".",
+        "Sabahları \"uykusuz\" kalmayı sevmez.",
+        "Yemeğe tuzu fazla \"kattı\".",
+        "Bütün gün \"koştu\"."
+      ]
+    },
+    {
+      "soruMetni": "\"Kaybolmuştu\" sözcüğünün yapısı aşağıdakilerden hangisidir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Basit",
+        "Türemiş",
+        "Birleşik",
+        "Gövdeden Türemiş"
+      ]
+    },
+    {
+      "soruMetni": "\"Gözden geçirdi\" sözcüğü, yapı bakımından nasıl bir ifadedir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Basit Fiil",
+        "Türemiş Fiil",
+        "Birleşik Fiil",
+        "Deyimleşmiş Birleşik Fiil"
+      ]
+    }
+  ]
+},
+{
+  "id": "sozcukte_yapi_1",
+  "baslik": "Sözcükte Yapı-1",
+  "kategoriId": "turkce",
+  "konuId": "sozcukte_yapi",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Varlıkların Türüne Göre diğerlerinden farklı bir isim kullanılmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bütün \"ağaçlar\" sonbaharda yapraklarını döker.",
+        "\"İstanbul\", dünyanın en kalabalık şehirlerinden biridir.",
+        "Odada sadece \"masa\" ve bir sandalye vardı.",
+        "O, bu işin \"sabrını\" öğrenmeliydi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Varlıkların Sayılarına Göre farklı bir isim kullanılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Dağların eteklerinde \"sürüler\" otluyordu.",
+        "Bu akşam tiyatroya \"ailece\" gideceğiz.",
+        "\"Kitaplar\", en iyi dostlarımızdır.",
+        "Sınıfın önünde duran \"orman\", çok güzeldi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, ayrılma (çıkma) hâl eki almıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Evin \"önünden\" hızla geçti.",
+        "\"Yemeği\" hızlıca yedik.",
+        "\"Sınava\" iyi hazırlanmalıydı.",
+        "Bütün gün \"evde\" oturdu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde İsim Tamlaması kullanılmamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Odanın \"kapısı\" aniden açıldı.",
+        "Soğuk havada \"kış lastiği\" kullanmalısın.",
+        "\"Yağmur sesi\" bize huzur veriyordu.",
+        "Öğrenciler, \"yeni kitabı\" inceledi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki isim tamlamalarından hangisi Belirtisiz İsim Tamlaması'na örnektir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Günün sonu\"",
+        "\"Okul bahçesi\"",
+        "\"Onun sözleri\"",
+        "\"Pencerenin önü\""
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki isim tamlamalarından hangisi Zincirleme İsim Tamlaması'dır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Okulun bahçe kapısı\"",
+        "\"İnsanların kaderi\"",
+        "\"Ağaçların gölgesi\"",
+        "\"Ankara Kalesi\""
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Tamlayanı düşmüş isim tamlaması vardır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Kitabı\" bende kalmış.",
+        "\"Bizim evimiz\" buraya çok yakındır.",
+        "\"Evin çatısı\" akıyordu.",
+        "\"Babamın sesi\" duyuldu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde bir isim, hem iyelik hem de bulunma hâl eki almıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Kalemimde\" mürekkep kalmadı.",
+        "\"Gözlerimde\" yaşlar birikti.",
+        "\"Kitabında\" önemli notlar vardı.",
+        "\"Sınıfımızda\" yeni öğrenciler var."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde tamlayanı ile tamlananı yer değiştirmiş bir Belirtili İsim Tamlaması vardır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Kitabı kayboldu, \"çocuğun\".",
+        "Çok güzeldi \"gölün suyu\".",
+        "Odanın \"kapısı\" açıktı.",
+        "Bizi \"evin önünde\" bekliyordu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki isimlerden hangisi yapısı bakımından diğerlerinden farklıdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Kitaplık (Türemiş)",
+        "Gözlük (Türemiş)",
+        "Öğretmen (Türemiş)",
+        "Pencere (Basit)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Soyut İsim kullanılmamıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "O, bu \"hayalin\" peşinden yıllarca koştu.",
+        "Masanın üzerinde duran \"gözlüğü\" aldı.",
+        "Yaşadığı \"pişmanlık\", onu çok üzmüştü.",
+        "Hayatta en önemli şey \"sevgi\"dir."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Hem basit hem de birleşik isim bir arada kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Gecekondu\" evler, \"sabah\" yıkıldı.",
+        "\"Gözlükçü\", yeni bir \"işyeri\" açtı.",
+        "\"Denizaltı\" çalışmaları \"hızlandı\".",
+        "\"Kitaplık\", \"uzun\" bir duvara monte edildi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Tamlayanı sıfat almış bir İsim Tamlaması vardır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Evin boyası\" çok kötüydü.",
+        "\"Kırmızı arabanın tekerleği\" patladı.",
+        "\"Yağmur sesi\" bizi uyandırdı.",
+        "\"Yeni öğretmenin sözleri\" etkiliydi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde bir isim belirtme (yükleme) hâl eki almıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Okula\" geç kaldı.",
+        "\"Suyu\" hızlıca içti.",
+        "\"Evde\" kimse yoktu.",
+        "\"Gözlükten\" sıkılmıştı."
+      ]
+    },
+    {
+      "soruMetni": "\"Öğrenci\" sözcüğü aşağıdaki cümlelerin hangisinde topluluk adı olarak kullanılmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Öğrenci\", soruları hızlıca çözdü.",
+        "Bütün \"öğrenci\", dersi dinliyordu.",
+        "\"Öğrencilerin\" tamamı sınava girdi.",
+        "Sınıfın en çalışkan \"öğrencisi\" oydu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde İşaret Zamiri kullanılmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Bu\" kitabı okumalısın.",
+        "\"Öteki\" daha güzeldi, \"onu\" alalım.",
+        "Elindekini \"bana\" ver.",
+        "\"Kimi\" zaman gelir, \"kimi\" zaman gitmez."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Kişi Zamiri yoktur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Sana\" bütün gerçeği anlatacağım.",
+        "\"Bana\" göre bu işi o yapmalı.",
+        "\"Biz\", size her zaman destek oluruz.",
+        "\"Şurada\" duran adam, \"bizim\" komşumuz."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Belgisiz Zamir kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Gelenlerden \"birkaçı\" hemen içeri girdi.",
+        "\"Hangi\" evde oturuyor?",
+        "\"Kim\" bu soruyu çözebilir?",
+        "\"Şunun\" rengi daha güzel."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Soru Zamiri kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Neyi\" kaybettin, söyle bana.",
+        "\"Nasıl\" bir evde oturuyorsunuz?",
+        "\"Kaç\" öğrenci buraya geldi?",
+        "\"Niçin\" bizi dinlemiyorsun?"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde İlgi Zamiri (-ki) kullanılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Penceredeki \"kuş\" ötüyordu.",
+        "Duydum \"ki\", sen de geliyorsun.",
+        "Benim \"arabam\" seninkinden daha eski.",
+        "Öyle yoruldum \"ki\", hemen uyumalıyım."
+      ]
+    }
+  ]
+},
+{
+  "id": "sozcukte_yapi_2",
+  "baslik": "Sözcükte Yapı-2",
+  "kategoriId": "turkce",
+  "konuId": "sozcukte_yapi",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde bir zamir farklı bir türdedir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Kimi\" bizi dinler, \"kimi\" dinlemez.",
+        "\"Şunu\" alıp \"bunu\" bırak.",
+        "\"Onun\" sözleri \"beni\" çok etkiledi.",
+        "\"Kimden\" yardım isteyeceğimizi bilmiyoruz."
+      ]
+    },
+    {
+      "soruMetni": "\"Kendisi\" sözcüğü aşağıdaki cümlelerin hangisinde farklı bir zamir türüne örnektir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Kendisi\", bu konuda yanılıyor.",
+        "Onun yerine \"kendi\" gitmiş.",
+        "İşin tamamını \"kendi\" yaptı.",
+        "\"Senin\" kendine güvenin yok mu?"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde zamir kullanılmamıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"O\" kitabı okuduğunu biliyorum.",
+        "\"Beni\" arayan \"sendin\".",
+        "\"Herkes\", onun yalan söylediğini anladı.",
+        "\"Bu\" bina, \"yeni yapıldı\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde İşaret Zamiri, isim tamlamasının tamlayanı olmuştur?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Bunun\" rengi daha güzeldi.",
+        "\"Şunun\" fiyatı ne kadar?",
+        "\"Şunun\" camı kırılmış.",
+        "\"O\" ev, bize çok yakındır."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Belgisiz Zamir, tamlanan durumundadır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Gelenlerin \"bazısı\" içeriye girdi.",
+        "\"Birkaçı\" bu işi becerebilir.",
+        "\"Çoğu\" kişi yalan söylüyordu.",
+        "\"Hiçbirimiz\" gerçeği bilmiyorduk."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Niteleme Sıfatı kullanılmamıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Büyük\" bir evde oturuyorlardı.",
+        "Pencereden \"masmavi\" gökyüzünü izledi.",
+        "\"Üç\" kişi dışarıda bizi bekliyordu.",
+        "Elindeki \"kırmızı\" kalemi düşürdü."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Belirtme Sıfatlarından farklı bir tür kullanılmıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Hangi\" yoldan gideceğiz? (Soru Sıfatı)",
+        "\"Birkaç\" öğrenci dışarı çıktı. (Belgisiz Sıfat)",
+        "\"Bu\" masa eski görünüyor. (İşaret Sıfatı)",
+        "\"İyi\" bir insandı, herkese yardım ederdi. (Niteleme Sıfatı)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Adlaşmış Sıfat vardır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bütün \"çalışanlar\", toplantıya katıldı.",
+        "\"Yaşlılar\", gençlere sürekli nasihat veriyordu.",
+        "\"Sıcak\" hava herkesi yormuştu.",
+        "\"Her\" şeyi dikkatlice inceledi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde sayı sıfatı kullanılmamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Üçüncü\" katta oturuyorlar. (Sıra Sayı Sıfatı)",
+        "\"Yüzde\" elli zam yapıldı. (Üleştirme Sayı Sıfatı)",
+        "\"Beşer\" kişi gruplar halinde ayrıldı. (Üleştirme Sayı Sıfatı)",
+        "\"Bir\" kitap alıp hemen okudu. (Belgisiz Sıfat)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde sıfat bir adı değil, zamiri nitelemiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Soğuk\" bir hava vardı.",
+        "\"Çalışkan\" öğrenci, dersi dinliyordu.",
+        "\"Zeki\" olanı, hemen anladı. (Adlaşmış sıfat)",
+        "O, \"yeni\" bir \"kitap\" almıştı."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde pekiştirilmiş sıfat kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Dışarıda \"masmavi\" bir gökyüzü vardı.",
+        "O, bu konuda \"en iyi\" olandı.",
+        "\"Büyük\" bir başarı elde etti.",
+        "\"İlk\" görevini başarıyla tamamladı."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde bir ad, birden fazla sıfat ile nitelenmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Küçük\" bir \"köyde\" yaşıyorlardı.",
+        "\"Uzun\", \"kırmızı\" bir \"kazak\" giymişti.",
+        "\"Herkes\" yorgun ve \"bitkindi\".",
+        "\"Kimi\" zaman \"hızlı\" yürürdü."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Soru Sıfatı, adlaşmış sıfat olmuştur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Hangi\" kitabı okumalısın?",
+        "\"Kaçı\" bu soruyu çözebilir?",
+        "\"Hangimiz\" doğru söylüyor?",
+        "\"Kimi\" zaman gelir?"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde belgisiz sıfat vardır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Çoğu\" öğrenci sessizdi.",
+        "\"Herkes\" sessizdi.",
+        "\"Hiçbiri\" gelmedi.",
+        "\"Bazısı\" yalan söylüyordu."
+      ]
+    },
+    {
+      "soruMetni": "\"O\" sözcüğü aşağıdaki cümlelerin hangisinde sıfat olarak kullanılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"O\", bu konuda yanılıyor.",
+        "\"Onun\" arabası yeni.",
+        "\"O\" evi çok beğendim.",
+        "\"Bunun\" fiyatı ne kadar?"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Durum Zarfı vardır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Kapının önüne \"hemen\" geldi.",
+        "Soruyu \"kolayca\" çözdü.",
+        "\"Yukarı\" çıkıp bizi bekledi.",
+        "Bütün gün \"çok\" çalıştı."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Yer-Yön Zarfı kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Arabayı \"dışarı\" park ettik.",
+        "Çocuk \"içeriye\" girdi.",
+        "\"Aşağıdan\" sesler geliyordu.",
+        "\"Buraya\" gelip beni buldu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Zaman Zarfı vardır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bütün gün \"hızlı\" yürüdü.",
+        "\"Akşam\" geliriz, merak etmeyin.",
+        "İşleri \"yavaş\" ilerliyor.",
+        "Bizi \"iyi\" karşıladı."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Ölçü-Miktar Zarfı bir sıfatı derecelendirmiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "O, bu işi \"çok\" iyi bilir.",
+        "Bizi \"daha\" \"az\" bekletti.",
+        "Bu, \"çok\" \"güzel\" bir evdi.",
+        "Bütün gün \"fazla\" yürüdük."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Soru Zarfı kullanılmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bize \"ne\" getirdin?",
+        "Buraya \"nasıl\" geldin?",
+        "\"Hangi\" yemeği yapalım?",
+        "\"Kaçı\" dersi dinliyor?"
+      ]
+    }
+  ]
+},
+{
+  "id": "sozcukte_yapi_3",
+  "baslik": "Sözcükte Yapı-3",
+  "kategoriId": "turkce",
+  "konuId": "sozcukte_yapi",
+  "isNew": true,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde zarf kullanılmamıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Dışarı\" çıktı ve etrafa bakındı.",
+        "Bizi \"iyi\" ağırladı.",
+        "\"Gelecek yıl\" tatile çıkacağız.",
+        "\"Uzun\" bir yolculuk yaptık."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki zarflardan hangisi cümleye kesinlik anlamı katmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "\"Belki\" yarın gelir.",
+        "Bu işi \"mutlaka\" bitirmelisin.",
+        "\"Sanki\" bir şey olacak.",
+        "\"Tahminen\" bir saat sürer."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde bir sözcük, hem isim hem de zarf görevinde kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Sabah\" erken kalktı. / \"Sabahın\" \"soğuğu\" hissediliyordu.",
+        "\"Hızlı\" yürüdü. / \"Hızlı\" bir \"koşucuydu\".",
+        "\"Sıcak\" karşıladı. / \"Sıcak\" bir \"hava\" vardı.",
+        "\"İyi\" konuştu. / \"İyi\" \"insan\"dı."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Ölçü-Miktar Zarfı bir fiili belirtmiştir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "O, bu konuda \"en\" başarılı olandı.",
+        "\"Çok\" yürüdüğümüz için yorulduk.",
+        "Bu, \"daha\" \"az\" yorucu bir işti.",
+        "\"Ağır\" \"hareket\" ediyordu."
+      ]
+    },
+    {
+      "soruMetni": "\"İçeri\" sözcüğü aşağıdaki cümlelerin hangisinde zarf görevinde kullanılmıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"İçerisi\" çok kalabalıktı.",
+        "\"İçeriye\" kimse girmesin.",
+        "Kapıyı açıp \"içeri\" baktı.",
+        "\"İçeride\" kimse yoktu."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Edat (İlgeç) kullanılmamıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Yağmur \"yağdığı için\" dışarı çıkamadık.",
+        "\"Gelecek gibi\" bir hâli vardı.",
+        "Sen de \"kitap\" almalısın.",
+        "Eve doğru \"hızlıca\" yürüdü."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Bağlaç görevli bir sözcük yoktur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Ne arayan \"ne\" soran var.",
+        "Kitabı aldı \"ve\" okumaya başladı.",
+        "\"Geldim\" ama seni bulamadım.",
+        "\"Oysa\" her şey çok güzeldi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Ünlem görevli bir sözcük yoktur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "\"Hey\", buraya gel!",
+        "\"Eyvah\", yine geç kaldım!",
+        "\"Yaşasın\", maçı kazandık!",
+        "\"Ah\", o günler ne güzeldi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki fiillerden hangisi İş (Kılış) Fiili'dir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Büyümek",
+        "Uyumak",
+        "Koşmak",
+        "Okumak"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki fiillerden hangisi Oluş Fiili'dir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Uyumak",
+        "Büyümek",
+        "Gelmek",
+        "Yemek"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki fiillerden hangisi Duyulan Geçmiş Zaman kipiyle çekimlenmiştir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Gelmiş",
+        "Geliyor",
+        "Gelecek",
+        "Gelmeli"
+      ]
+    },
+    {
+      "soruMetni": "\"Babam, her sabah erken kalkar.\" cümlesinde fiil, hangi kiple çekimlenmiştir?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Öğrenilen Geçmiş Zaman",
+        "Şimdiki Zaman",
+        "Geniş Zaman",
+        "Gelecek Zaman"
+      ]
+    },
+    {
+      "soruMetni": "\"Haftaya buraya geliyorsun.\" cümlesinde görülen anlam (zaman) kayması nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Duyulan Geçmiş Zaman $\rightarrow$ Şimdiki Zaman",
+        "Şimdiki Zaman $\rightarrow$ Gelecek Zaman",
+        "Geniş Zaman $\rightarrow$ Emir Kipi",
+        "Şimdiki Zaman $\rightarrow$ İstek Kipi"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Ek Fiil (Ek Eylem) kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "Hava bugün çok \"güzeldi\".",
+        "Okuldan \"geliyorum\".",
+        "Kitabı \"okumuş\".",
+        "Buraya \"gelecek\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde fiil, geçişli olduğu hâlde nesne kullanılmamıştır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Çocuk camı \"kırdı\".",
+        "Bütün gün \"koştu\".",
+        "\"Okudu\" ve uyudu.",
+        "Hava aniden \"karardı\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde isim görevli bir Fiilimsi kullanılmıştır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "\"Gülüşü\", herkesi mutlu etti.",
+        "\"Geldiğini\" gördüm.",
+        "Koşan \"adamı\" gördüm.",
+        "\"Gelecek\" yıl tatile çıkacağız."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Yardımcı Fiil ile kurulmuş birleşik fiil vardır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Bizi görünce çok \"seviniverdi\".",
+        "Bu konuda ona \"yardım ettim\".",
+        "Kapıyı hızlıca \"açabildi\".",
+        "Bütün gün \"uyuyakaldı\"."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Fiilimsilerle oluşturulmuş bir grup vardır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "\"Çalışmaya\" devam etti.",
+        "\"Koşan\" çocukları gördüm.",
+        "\"Duvarları\" boyayan \"adam\" hızlıydı.",
+        "\"Koşarak\" yanıma geldi."
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde fiil farklı bir çatı özelliği taşır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "Kapı aniden \"açıldı\". (Edilgen)",
+        "Yollar \"temizlendi\". (Edilgen)",
+        "Öğrenci bu konuyu \"anladı\". (Etken)",
+        "Bütün sınıfta bu konu \"konuşuldu\". (Edilgen)"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki cümlelerin hangisinde Edat, cümleye neden-sonuç anlamı katmıştır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "Senin \"gibi\" birini görmedim.",
+        "Hava \"soğuk olduğu için\" kalın giyindik.",
+        "Onu görmek \"üzere\" buraya geldi.",
+        "Kitap \"ile\" kalem masadaydı."
       ]
     }
   ]
