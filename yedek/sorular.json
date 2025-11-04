@@ -139,7 +139,6 @@
       "ad": "Türkiye'nin Coğrafi Bölgeleri", 
       "kategoriId": "cografya", 
       "sira": 8
-<<<<<<< HEAD
     },
     {
       "id": "hukukun_temel_kavramlari", 
@@ -188,8 +187,6 @@
       "ad": "Uluslararası Kuruluşlar", 
       "kategoriId": "vatandaslik", 
       "sira": 8
-=======
->>>>>>> 3af5b1736379005a5abc5660d16a732b906e9199
     }
   ],
   
@@ -23075,11 +23072,7 @@
         "description": "Tarih konularından 3 soruluk mini deneme.",
         "isPublished": true,
         "startTime": "2025-10-21T12:00:00+03:00",
-<<<<<<< HEAD
         "endTime": "2025-12-27T12:00:00+03:00",
-=======
-        "endTime": "2025-10-27T12:00:00+03:00",
->>>>>>> 3af5b1736379005a5abc5660d16a732b906e9199
         "durationMinutes": 5,
         "questionCount": 3,
         "isMixedCategory": false,
@@ -23113,13 +23106,8 @@
         "description": "Tüm kategorilerden 2'şer soru içeren 10 soruluk deneme.",
         "isPro": false,
         "isPublished": true,
-<<<<<<< HEAD
         "startTime": "2025-11-25T10:00:00+03:00",
         "endTime": "2025-12-30T23:59:00+03:00",
-=======
-        "startTime": "2025-10-25T10:00:00+03:00",
-        "endTime": "2025-10-30T23:59:00+03:00",
->>>>>>> 3af5b1736379005a5abc5660d16a732b906e9199
         "durationMinutes": 15,
         "questionCount": 10,
         "isMixedCategory": true,
@@ -23502,8 +23490,4 @@
         "criteria_value": 30
       }
     ]
-<<<<<<< HEAD
   } 
-=======
-  } 
->>>>>>> 3af5b1736379005a5abc5660d16a732b906e9199
