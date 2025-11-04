@@ -16,13 +16,20 @@ class UserDataProvider with ChangeNotifier {
   StreamSubscription<DocumentSnapshot>? _firestoreSubscription;
 
   UserModel? get userModel => _userModel;
-  bool get isPro => _userModel?.isPro ?? false; // PRO olup olmadığını hızlıca kontrol et
+  bool get isPro =>
+      _userModel?.isPro ?? false; // PRO olup olmadığını hızlıca kontrol et
 
   UserDataProvider(this._authService) {
     // AuthService'deki değişiklikleri dinlemeye başla
-    _authSubscription = _authService.authStateChanges.listen(_onAuthStateChanged);
-    _onAuthStateChanged(_authService.currentUser); // Başlangıç durumunu kontrol et
+    _authSubscription = _authService.authStateChanges.listen(
+      _onAuthStateChanged,
+    );
+    _onAuthStateChanged(
+      _authService.currentUser,
+    ); // Başlangıç durumunu kontrol et
   }
+
+  get ad => null;
 
   // Kullanıcı giriş/çıkış yaptığında tetiklenir
   void _onAuthStateChanged(User? user) {
@@ -35,15 +42,17 @@ class UserDataProvider with ChangeNotifier {
           .doc(user.uid)
           .snapshots() // <<< SNAPSHOTS (canlı dinleme)
           .listen((snapshot) {
-        if (snapshot.exists) {
-          _userModel = UserModel.fromFirestore(snapshot);
-        } else {
-          _userModel = null;
-          print("HATA: Kullanıcı giriş yaptı ama Firestore belgesi bulunamadı!");
-          // (AuthService'in belgeyi oluşturması beklenir)
-        }
-        notifyListeners(); // Değişikliği tüm uygulamaya bildir
-      });
+            if (snapshot.exists) {
+              _userModel = UserModel.fromFirestore(snapshot);
+            } else {
+              _userModel = null;
+              print(
+                "HATA: Kullanıcı giriş yaptı ama Firestore belgesi bulunamadı!",
+              );
+              // (AuthService'in belgeyi oluşturması beklenir)
+            }
+            notifyListeners(); // Değişikliği tüm uygulamaya bildir
+          });
     } else {
       // Kullanıcı ÇIKIŞ YAPTI
       _userModel = null;
