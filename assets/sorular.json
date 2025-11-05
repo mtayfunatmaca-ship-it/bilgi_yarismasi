@@ -9,1072 +9,2541 @@
   
   "konuBasliklari": [
     {
-      "id": "yapi_bilgisi", 
-      "ad": "Yapı Bilgisi", 
-      "kategoriId": "turkce", 
-      "sira": 5
-    },
-    {
-      "id": "sozcukte_yapi", 
-      "ad": "Sözcükte Yapı", 
+      "id": "cumle_bilgisi", 
+      "ad": "Cümle Bilgisi", 
       "kategoriId": "turkce", 
       "sira": 6
+    },
+    {
+      "id": "yazim_kurallari", 
+      "ad": "Yazım Kuralları", 
+      "kategoriId": "turkce", 
+      "sira": 7
+    },
+    {
+      "id": "noktalama_isaretleri", 
+      "ad": "Noktalama İşaretleri", 
+      "kategoriId": "turkce", 
+      "sira": 8
+    },
+    {
+      "id": "anlatim_bozuklugu", 
+      "ad": "Anlatım Bozukluğu", 
+      "kategoriId": "turkce", 
+      "sira": 9
     }
    
   ],
   
   "quizzes": [
     {
-      "id": "yapi_bilgisi_1",
-      "baslik": "Yapı Bilgisi-1",
+      "id": "cumle_bilgisi_1",
+      "baslik": "Cümle Bilgisi-1",
       "kategoriId": "turkce",
-      "konuId": "yapi_bilgisi",
+      "konuId": "cumle_bilgisi",
       "isNew": false,
       "soruSayisi": 20,
       "sureDakika": 20,
       "sorular": [
         {
-          "soruMetni": "Aşağıdaki altı çizili sözcüklerden hangisi isim köküne sahiptir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Bütün gün \"koştuğu\" için çok yorulmuştu.",
-            "Bu işte başarıya ulaşmak için \"sabrı\" öğrenmelisin.",
-            "Yemeği yaparken tuzu fazla \"kattı\".",
-            "Ağaçlar, sonbaharda yapraklarını \"döktü\"."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü, türü bakımından diğerlerinden farklıdır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde belirtili nesne kullanılmıştır?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Sevinçli",
-            "Gözlemci",
-            "İleride",
-            "Övgüler"
+            "Bütün gün evde seni \"bekledim\".",
+            "Çocuk, elinde bir \"oyuncak\" taşıyordu.",
+            "\"Kuşlar\", ağacın tepesine kondu.",
+            "Yıllardır bu \"bölgede\" yaşıyoruz."
           ]
         },
         {
-          "soruMetni": "\"Yayımlanan\" sözcüğünün kökü ve bu kökün türü aşağıdakilerden hangisidir?",
+          "soruMetni": "\"Oraya ulaşmak için tam üç saat yürüdüler.\" cümlesinin öge dizilişi aşağıdakilerin hangisinde doğru verilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Dolaylı Tümleç - Zarf Tümleci - Zarf Tümleci - Yüklem",
+            "Özne - Zarf Tümleci - Zarf Tümleci - Yüklem",
+            "Dolaylı Tümleç - Zarf Tümleci - Yüklem",
+            "Zarf Tümleci - Zarf Tümleci - Yüklem"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde özne bir söz grubu değildir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Yayı- (Fiil Kökü)",
-            "Yay- (İsim Kökü)",
-            "Yay- (Fiil Kökü)",
-            "Ya- (İsim Kökü)"
+            "Uzun boylu \"genç\", kapıda bizi bekliyordu.",
+            "\"Kitap okumak\", insana yeni dünyalar açar.",
+            "O günlerde \"herkes\", bu olayın etkisindeydi.",
+            "Masadaki \"bütün eşyalar\" kaybolmuş."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü ile gövdesi arasında anlam ilişkisi diğerlerinden daha zayıftır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Gözlükçü (göz-gözlük)",
-            "Sınavlar (sın-sınav)",
-            "Sevinçli (sev-sevinç)",
-            "Bilgisayar (bil-bilgi-bilgisayar)"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi ortak köke sahiptir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Sıcaklık",
-            "Boya",
-            "Kitapçı",
-            "Gözlem"
-          ]
-        },
-        {
-          "soruMetni": "\"Yağmur\" sözcüğü, aşağıdaki cümlelerin hangisinde fiil kökünden türediği anlamıyla kullanılmıştır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Sabahtan beri dışarıda şiddetli bir \"yağmur\" var.",
-            "Yere düşen meyveleri hemen \"yağmur\"la temizlediler.",
-            "Yere düşen su damlaları, sanki gökten \"yağmur\" olmuştu.",
-            "Soğuk hava, yolları buzla \"yağmur\" gibi kapladı."
-          ]
-        },
-        {
-          "soruMetni": "\"İlerlemek\" sözcüğünün kökü ve gövdesi arasındaki ilişki aşağıdakilerden hangisidir?",
+          "soruMetni": "\"Dışarıdaki gürültü, bütün mahalledeki insanları rahatsız etti.\" cümlesinde hangi öge fiilimsi grubundan oluşmuştur?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Kök (İsim) \u2192 Gövde (İsimden Fiil)",
-            "Kök (Fiil) \u2192 Gövde (Fiilden Fiil)",
-            "Kök (İsim) \u2192 Gövde (İsimden İsim)",
-            "Kök (Fiil) \u2192 Gövde (Fiilden İsim)"
+            "Özne",
+            "Nesne",
+            "Dolaylı Tümleç",
+            "Yüklem"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi gövdeden türemiştir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Seçimlik",
-            "Çalışkan",
-            "Gözlemci",
-            "Yorgunluk"
-          ]
-        },
-        {
-          "soruMetni": "\"Söylev\" sözcüğünün kökü aşağıdakilerden hangisidir?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde Edat Tümleci vardır?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Söz-",
-            "Söyle-",
-            "Sev-",
-            "Sö-"
+            "Hızlı yürüdüğü \"için\" otobüse yetişti.",
+            "Buraya sadece \"seninle\" gelirim.",
+            "Kapının \"önünde\" büyük bir kalabalık toplandı.",
+            "Akşam \"olunca\", herkes evine döndü."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü yansıma sözcüktür?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Gürültü",
-            "Sessizlik",
-            "Soğukluk",
-            "Morarma"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi fiilden isim yapan yapım eki almıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Yoksulluk",
-            "Durak",
-            "İyimser",
-            "Başak"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, isimden fiil yapan yapım eki almıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Köyün havası, bizi yeniden \"canlandırdı\".",
-            "Öğrenci, ders çalışmaktan \"yorulmuştu\".",
-            "Yeni çıkan bu eseri hemen \"okumuş\".",
-            "Duvarları maviye \"boyadı\"."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Çoğul Eki (çekim eki) alan bir sözcük, cümleye farklı bir anlam katmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Bütün gün evde \"kitaplar\" okudu.",
-            "Sabahları Ali \"Beyler\" kahvaltıya geç kalmaz.",
-            "Çocuklar, okulun bahçesinde \"oynuyorlar\".",
-            "Toplantıya gelen \"konuşmacılar\" çok tecrübeliydi."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi, Farklı türde bir yapım eki almıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Sevgi (Fiilden İsim)",
-            "Bilgili (İsimden İsim)",
-            "Görüş (Fiilden İsim)",
-            "Başarı (Fiilden İsim)"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisinde iki farklı yapım eki kullanılmıştır?",
+          "soruMetni": "\"Gelen bütün misafirler, bize çok yakındı.\" cümlesinde hangi öge yoktur?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Gözlük",
-            "Boyasız",
-            "Yaşam",
-            "Sınıflandır"
+            "Özne",
+            "Dolaylı Tümleç",
+            "Yüklem",
+            "Zarf Tümleci"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde ilgi eki (tamlayan eki) alan sözcük, aynı zamanda iyelik eki almıştır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Onun \"kitabını\" okumayı çok seviyorum.",
-            "Bizim \"evimiz\" size çok yakındır.",
-            "Annemin \"yemeğini\" özledim.",
-            "Arabanın \"tekerleği\" patlamıştı."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde yönelme hâl eki (-e, -a) alan sözcük, mecaz anlam kazanmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Bütün gün \"denize\" bakıp durdu.",
-            "Aldığı bütün para \"hayale\" gitti.",
-            "Duvarın \"tepesine\" tırmandı.",
-            "Arabayı \"yana\" çekmesini söyledi."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi fiile gelerek yeni bir fiil türetmiştir (Fiilden Fiil Yapan Ek)?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Yıkılmak",
-            "Koşuşmak",
-            "Görüşmek",
-            "Hepsi"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Zaman (Kip) Eki alan sözcük, cümleye gerçekleşmemiş bir beklenti anlamı katmıştır?",
+          "soruMetni": "Aşağıdaki cümlenin öge dizilişi aşağıdakilerin hangisinde doğru verilmiştir?\n\"Odanın camı, rüzgârın şiddetinden dün gece kırılmıştı.\"",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Sana dün akşam mutlaka \"uğrayacaktım\".",
-            "Her sabah erken \"kalkar\".",
-            "Şimdiye kadar çoktan \"gitmiştir\".",
-            "Dışarıda şiddetli bir yağmur \"yağıyor\"."
+            "Özne - Zarf Tümleci - Zarf Tümleci - Yüklem",
+            "Özne - Zarf Tümleci - Dolaylı Tümleç - Yüklem",
+            "Özne - Zarf Tümleci - Nesne - Yüklem",
+            "Özne - Dolaylı Tümleç - Yüklem"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, iyelik eki almıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde dolaylı tümleç bir söz grubu değildir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Elindeki kitabı hemen \"bırak\".",
-            "Çocuk, babasına bir \"söz\" verdi.",
-            "\"Kitabı\" çok sürükleyiciydi.",
-            "Okulun \"kitabı\" kayboldu."
+            "\"Kapının önünden\" hızla geçti.",
+            "\"Onun sözlerine\" inanmamalısın.",
+            "\"Bana\" yardım etti.",
+            "\"Sınavın sonucuna\" çok sevindi."
+          ]
+        },
+        {
+          "soruMetni": "\"Çok para kazanmak, onun tek hedefiydi.\" cümlesinde yan cümle hangi öge görevindedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Nesne",
+            "Dolaylı Tümleç",
+            "Özne",
+            "Zarf Tümleci"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem bir isim tamlamasından oluşmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hayatın anlamı, \"sevgidir\".",
+            "Gözlerindeki pırıltı, \"çocukluğumun iziydi\".",
+            "Bütün gece sadece \"yürüdü\".",
+            "Bu işi yapmak, \"onun görevi\" idi."
+          ]
+        },
+        {
+          "soruMetni": "\"Sana göre haklıydın, ben ise haksızdım.\" cümlesinde, ilk cümlenin Edat Tümleci nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "sana",
+            "sana göre",
+            "haklıydın",
+            "ben"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde belirtisiz nesne kullanılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "\"Odayı\" hızlıca temizledi.",
+            "\"Yerde\" bir cüzdan buldu.",
+            "\"Kitabı\" hemen okumalısın.",
+            "\"Sana\" güzel bir hediye aldık."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlenin öge dizilişi doğru verilmiştir:\n\"Ankara'ya gitmek üzere, sabahın ilk ışıklarında yola çıktık.\"",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Dolaylı Tümleç - Zarf Tümleci - Zarf Tümleci - Yüklem",
+            "Zarf Tümleci - Zarf Tümleci - Yüklem",
+            "Dolaylı Tümleç - Zarf Tümleci - Yüklem",
+            "Zarf Tümleci - Zarf Tümleci - Dolaylı Tümleç - Yüklem"
+          ]
+        },
+        {
+          "soruMetni": "\"O, her şeyi çok iyi biliyordu.\" cümlesinde zarf tümleci hangi ögeyi derecelendirmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Özne",
+            "Nesne",
+            "Dolaylı Tümleç",
+            "Yüklem (fiili)"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde gizli özne vardır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bütün hazırlıklar eksiksiz olarak tamamlandı.",
+            "Kapının önünde kimse yoktu.",
+            "Yeni bir kitap yazmaya başladım.",
+            "Soğuk bir rüzgâr esiyordu."
+          ]
+        },
+        {
+          "soruMetni": "\"Öğrencilerin bu konuyu anlaması, öğretmen için çok önemlidir.\" cümlesinde yan cümle hangi öge görevindedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nesne",
+            "Özne",
+            "Dolaylı Tümleç",
+            "Zarf Tümleci"
+          ]
+        },
+        {
+          "soruMetni": "\"Oraya doğru hızla koşuyordu.\" cümlesinde \"Oraya doğru\" söz grubu hangi öge görevindedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Zarf Tümleci",
+            "Dolaylı Tümleç",
+            "Edat Tümleci",
+            "Özne"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde \"y\" yardımcı sesi, öge görevinde değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Arabanın \"suyu\" bitmişti.",
+            "Kapı \"onun\" sesiyle açıldı.",
+            "Bu yemeği \"seninle\" yapalım.",
+            "\"Ali'yi\" arıyor."
+          ]
+        },
+        {
+          "soruMetni": "\"Gelen bütün misafirleri kapıda tek tek karşıladı.\" cümlesinin öge dizilişi nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Nesne - Dolaylı Tümleç - Zarf Tümleci - Yüklem",
+            "Özne - Nesne - Zarf Tümleci - Yüklem",
+            "Belirtili Nesne - Dolaylı Tümleç - Zarf Tümleci - Yüklem",
+            "Belirtili Nesne - Zarf Tümleci - Zarf Tümleci - Yüklem"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde zarf tümleci yoktur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "\"Akşama kadar\" seni bekledik.",
+            "\"Kırmızı\" elma, masadaydı.",
+            "\"İçeri\" girip kapıyı kapattı.",
+            "Soruyu \"kolayca\" çözdü."
           ]
         }
       ]
     },
     {
-      "id": "yapi_bilgisi_2",
-      "baslik": "Yapı Bilgisi-2",
+      "id": "cumle_bilgisi_2",
+      "baslik": "Cümle Bilgisi-2",
       "kategoriId": "turkce",
-      "konuId": "yapi_bilgisi",
+      "konuId": "cumlenin_ogeleri",
       "isNew": false,
-      "soruSayisi": 20,
-      "sureDakika": 20,
+      "soruSayisi": 19,
+      "sureDakika": 19,
       "sorular": [
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Tamlayan Eki (-ın, -in) alan bir sözcük yoktur?",
+          "soruMetni": "\"Senden başka herkes, bu konuyu biliyordu.\" cümlesinde \"senden başka\" söz grubu hangi öge görevindedir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Kapının kolu yerinden çıkmıştı.",
-            "Sınavın sonucu herkesi şaşırttı.",
-            "Arabası yolda kalınca geri döndü.",
-            "Öğrencilerin hepsi dersi dinliyordu."
+            "Dolaylı Tümleç",
+            "Zarf Tümleci",
+            "Edat Tümleci",
+            "Özne"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi hem iyelik hem de hâl eki almıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde \"nesne\" kullanılmamıştır?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Evimizden",
-            "Okulda",
-            "Kitabımızı",
-            "Yorgunluktan"
+            "Öğrenci \"kitabını\" açtı.",
+            "\"Yıllarca\" bu hayali kurdu.",
+            "\"Bütün gün\" yürüdü.",
+            "\"Söylediklerini\" dinledim."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Bildirme Eki (-dir) kesinlik anlamı katmıştır?",
-          "dogruCevapIndex": 1,
+          "soruMetni": "\"Hayat, bir yoldur.\" cümlesinin öge dizilişi nedir?",
+          "dogruCevapIndex": 0,
           "secenekler": [
-            "O, şimdiye kadar varmıştır.",
-            "Türkiye'nin başkenti Ankara'dır.",
-            "Sınavlar bu hafta başlayacaktır.",
-            "Söyledikleri doğru değildir."
+            "Özne - Yüklem",
+            "Özne - Nesne - Yüklem",
+            "Özne - Zarf Tümleci - Yüklem",
+            "Özne - Dolaylı Tümleç - Yüklem"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi fiile gelerek onu kalıcı isim yapmıştır?",
-          "dogruCevapIndex": 1,
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem bir deyimden oluşmuştur?",
+          "dogruCevapIndex": 2,
           "secenekler": [
-            "Koşuşma (isim-fiil)",
-            "Geçit (Fiilden İsim)",
-            "Yemeği (İyelik eki)",
-            "Görmüş (Görülen geçmiş zaman)"
+            "O günkü olaylar beni çok \"üzmüştü\".",
+            "Yaptığı \"hatayı fark etmemişti\".",
+            "Sınavdan sonra \"yüzü güldü\".",
+            "Elindeki \"kitabı\" düşürdü."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerin hangisi farklı bir kişi eki almıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Gittiniz",
-            "Yaptılar",
-            "Koşarsın",
-            "Görüyorum"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Basit Yapılı bir sözcük yoktur?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Sabahleyin erkenden uyanıp okula gitti.",
-            "Başarı, ancak sürekli çalışmakla elde edilir.",
-            "O, bu teklife olumsuz bir yanıt verdi.",
-            "Ağaçlar, sonbaharda yapraklarını döktü."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi Türemiş Yapılı bir sözcüktür?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yükleminin türüne göre isim cümlesidir?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Kedi",
-            "Pencere",
-            "Bilgisayar",
-            "Gözlemci"
+            "Dün akşam onu arayıp davet ettim.",
+            "Gelen misafirlerimize ikramda bulunduk.",
+            "Hava çoktan \"kararmıştı\".",
+            "Bu, tam da \"beklediğimiz haberdi\"."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi Birleşik Yapılı bir sözcüktür?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yükleminin yerine (dizilişine) göre kurallı (düz) cümledir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Öğretmenlik",
-            "Uçaksavar",
-            "Yorgunluk",
-            "Çalışkan"
+            "Çözememişti zor soruları.",
+            "Bizim evin bahçesi çok büyüktü.",
+            "Geç kaldılar bu yüzden.",
+            "Bir çare arıyordu çaresizce."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik isim ve birleşik fiil bir arada kullanılmıştır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "\"Ayakkabısının\" bağları çözülmüştü.",
-            "\"Dedikodu\" yapmayı hiç sevmem.",
-            "Bu işte \"başarılı olmak\" için \"elbirliği\" gerekiyor.",
-            "\"Kaybolan\" eşyaları ararken çok yorulduk."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi Hem yapım hem de çekim eki almıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Gözlükler",
-            "Boyacının",
-            "Ağaçta",
-            "Evimiz"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Üç farklı yapıda sözcük (Basit, Türemiş, Birleşik) bir arada kullanılmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "\"Kuşbakışı\" manzara, \"bize\" harika \"gözüktü\".",
-            "\"Çalışkan\" öğrenci, \"okulda\" \"kitap okudu\".",
-            "\"Denizaltı\" \"suları\" oldukça \"soğuktu\".",
-            "\"Gelincikler\", \"yazın\" \"kızıl\" olur."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi isim gövdesinden türemiştir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Duygusal",
-            "Seçenek",
-            "Öğretmen",
-            "Kaçamak"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi Fiil + Fiil türünde bir birleşik sözcüktür?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Uçaksavar",
-            "Gelgit",
-            "Cankurtaran",
-            "Gecekondu"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Birleşik Yapılı bir fiil yoktur?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Bu durumu hemen \"fark ettim\".",
-            "Bizi gördüğünde \"gülümseyiverdi\".",
-            "Kapıyı yavaşça \"açtı\".",
-            "Yıllar sonra tekrar \"hissedebildi\"."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisi türetilirken isimden isim yapan ek almıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Benzinli",
-            "Görüş",
-            "Uykucu",
-            "Başak"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki sözcüklerden hangisinin kökü yansıma değildir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Vızıltı",
-            "Çatırtı",
-            "Soğuk",
-            "Horultu"
-          ]
-        },
-        {
-          "soruMetni": "\"Okuyucuların\" sözcüğünün yapısı aşağıdakilerden hangisidir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Basit",
-            "Türemiş",
-            "Birleşik",
-            "Hem Türemiş hem Birleşik"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, İsimden İsim Yapan yapım eki almıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Hava aniden \"karardı\".",
-            "Sabahları \"uykusuz\" kalmayı sevmez.",
-            "Yemeğe tuzu fazla \"kattı\".",
-            "Bütün gün \"koştu\"."
-          ]
-        },
-        {
-          "soruMetni": "\"Kaybolmuştu\" sözcüğünün yapısı aşağıdakilerden hangisidir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Basit",
-            "Türemiş",
-            "Birleşik",
-            "Gövdeden Türemiş"
-          ]
-        },
-        {
-          "soruMetni": "\"Gözden geçirdi\" sözcüğü, yapı bakımından nasıl bir ifadedir?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yapısına göre Basit Cümledir?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Basit Fiil",
-            "Türemiş Fiil",
-            "Birleşik Fiil",
-            "Deyimleşmiş Birleşik Fiil"
+            "Oraya \"giden\" kimse geri gelmedi.",
+            "Erken kalktı ve kahvaltısını hazırladı.",
+            "Gelen \"sesler\", herkesi korkuttu.",
+            "\"Misafirler\" içeri buyur ettik."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yapısına göre Girişik Birleşik Cümledir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ona \"yardım edersen\", işi daha hızlı bitirir.",
+            "Herkes, senin yalan söylediğini biliyor.",
+            "Çocuk ağladı, annesi onu susturdu.",
+            "\"Yarın gelirim.\" diye bize haber verdi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yapısına göre Sıralı Cümledir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "\"Kapıyı açtı\" ve hemen içeri girdi.",
+            "\"Dışarı çıktı\", etrafına bakındı.",
+            "Onu aradım ama ulaşamadım.",
+            "\"Kitap okumak\" onu mutlu ediyordu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yapısına göre Bağlı Cümledir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "\"Yağmur yağınca\" dışarı çıkamadık.",
+            "Ne arayan \"ne de\" soran var.",
+            "Bizimle gel, \"yoksa\" çok üzülürsün.",
+            "\"Geleceksin\" ve bizi göreceksin."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi olumsuz isim cümlesidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu işi yapmak hiç kolay \"değildi\".",
+            "Dün akşam sizi \"aramadım\".",
+            "Burada hiçbir sorun \"yok\".",
+            "Kimse onu \"görmemiş\"."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi yapıca basit, anlamca olumsuz bir cümledir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kapıyı açtı, içeri girmedi.",
+            "Ne beni aradı ne de sordu.",
+            "Gelmiyor, çünkü çok yorgun.",
+            "O, buraya gelecek biri değil."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi iç içe birleşik cümledir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "\"Dışarıdaki gürültü\" bizi rahatsız etti.",
+            "Herkes, onun \"haksız\" olduğunu biliyordu.",
+            "\"Bugün gelirim\", diye söz verdi.",
+            "\"Gelsen\" iyi olur."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde isim cümlesi bir yan cümle görevi üstlenmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "\"Başarılı olmak\" onun tek amacıydı.",
+            "Seni gören \"birisi\" bana haber verdi.",
+            "Hava \"güzeldi ki\", dışarı çıktık.",
+            "Buranın ne kadar \"kalabalık\" olduğunu gördün mü?"
+          ]
+        },
+        {
+          "soruMetni": "\"Oraya varmadan önce, sana haber vereceğim.\" cümlesi yapısına göre nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sıralı Cümle",
+            "Bağlı Cümle",
+            "Şartlı Birleşik Cümle",
+            "Girişik Birleşik Cümle"
+          ]
+        },
+        {
+          "soruMetni": "\"Akşam oldu mu, ben hemen uyurum.\" cümlesi yapısına göre nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Girişik Birleşik Cümle",
+            "Şartlı Birleşik Cümle",
+            "İç İçe Birleşik Cümle",
+            "Basit Cümle"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklemin yer değiştirmesiyle farklı bir anlam vurgulanmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "O, bu işi \"yapmayacak\" dedi.",
+            "Çok yorgun \"görünüyordu\" o adam.",
+            "\"Güzel\" bir gündü dün.",
+            "Bana yardım etmesi \"gerekir\"."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerden hangisi hem fiil cümlesi hem de kurallı bir cümledir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Dün akşam bizi arayan \"sendin\".",
+            "Bütün gün evde \"oturmadı\".",
+            "Oraya erken gitmemiz \"gerekirdi\".",
+            "\"Yürüdü\" hızlı adımlarla."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sıralı cümlenin ögeleri arasında ortaklık (bağımlılık) vardır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kuşlar uçuyor, insanlar onlara bakıyordu.",
+            "Çocuk koştu, \"topu\" yakaladı.",
+            "Hava soğuktu, yağmur da yağıyordu.",
+            "Kapı çalındı, kimse açmadı."
           ]
         }
       ]
     },
     {
-      "id": "sozcukte_yapi_1",
-      "baslik": "Sözcükte Yapı-1",
+      "id": "cumle_bilgisi_3",
+      "baslik": "Cümle Bilgisi-3",
       "kategoriId": "turkce",
-      "konuId": "sozcukte_yapi",
+      "konuId": "cumle_bilgisi",
       "isNew": false,
-      "soruSayisi": 20,
-      "sureDakika": 20,
+      "soruSayisi": 19,
+      "sureDakika": 19,
       "sorular": [
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Varlıkların Türüne Göre diğerlerinden farklı bir isim kullanılmıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisi olumlu isim cümlesidir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Bütün \"ağaçlar\" sonbaharda yapraklarını döker.",
-            "\"İstanbul\", dünyanın en kalabalık şehirlerinden biridir.",
-            "Odada sadece \"masa\" ve bir sandalye vardı.",
-            "O, bu işin \"sabrını\" öğrenmeliydi."
+            "Bu işi yapmak kolay değildir.",
+            "Bütün gün evdeydi.",
+            "Hava güzeldi ama soğuktu.",
+            "Sınıfta kimse yoktu."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Varlıkların Sayılarına Göre farklı bir isim kullanılmıştır?",
+          "soruMetni": "\"Onu affedecek değilim.\" cümlesi, anlamca ve yapıca hangi türdendir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yapıca olumsuz, anlamca olumlu",
+            "Yapıca olumlu, anlamca olumsuz",
+            "Yapıca olumsuz, anlamca olumsuz",
+            "Yapıca olumlu, anlamca olumlu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem bir söz grubundan oluşmamıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bugün hava çok \"güzelsin\".",
+            "O, bu işin \"ustasıydı\".",
+            "Elindeki tek şey \"kitaptı\".",
+            "Buraya \"yürüyerek\" gelmişti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi Bağımsız Sıralı Cümledir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ali güldü, Ayşe ağladı.",
+            "Kapıyı açtı, misafirleri içeri davet etti.",
+            "Erken kalktı, hemen işine başladı.",
+            "Kitapları okudu, onları kütüphaneye bıraktı."
+          ]
+        },
+        {
+          "soruMetni": "\"Hava kararmadan önce, bu işi bitir!\" cümlesi yapısına göre nedir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Dağların eteklerinde \"sürüler\" otluyordu.",
-            "Bu akşam tiyatroya \"ailece\" gideceğiz.",
-            "\"Kitaplar\", en iyi dostlarımızdır.",
-            "Sınıfın önünde duran \"orman\", çok güzeldi."
+            "Basit Cümle",
+            "Sıralı Cümle",
+            "Girişik Birleşik Cümle",
+            "Bağlı Cümle"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde altı çizili sözcük, ayrılma (çıkma) hâl eki almıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Evin \"önünden\" hızla geçti.",
-            "\"Yemeği\" hızlıca yedik.",
-            "\"Sınava\" iyi hazırlanmalıydı.",
-            "Bütün gün \"evde\" oturdu."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde İsim Tamlaması kullanılmamıştır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Odanın \"kapısı\" aniden açıldı.",
-            "Soğuk havada \"kış lastiği\" kullanmalısın.",
-            "\"Yağmur sesi\" bize huzur veriyordu.",
-            "Öğrenciler, \"yeni kitabı\" inceledi."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki isim tamlamalarından hangisi Belirtisiz İsim Tamlaması'na örnektir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Günün sonu\"",
-            "\"Okul bahçesi\"",
-            "\"Onun sözleri\"",
-            "\"Pencerenin önü\""
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki isim tamlamalarından hangisi Zincirleme İsim Tamlaması'dır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "\"Okulun bahçe kapısı\"",
-            "\"İnsanların kaderi\"",
-            "\"Ağaçların gölgesi\"",
-            "\"Ankara Kalesi\""
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Tamlayanı düşmüş isim tamlaması vardır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "\"Kitabı\" bende kalmış.",
-            "\"Bizim evimiz\" buraya çok yakındır.",
-            "\"Evin çatısı\" akıyordu.",
-            "\"Babamın sesi\" duyuldu."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir isim, hem iyelik hem de bulunma hâl eki almıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem başta yer almıştır?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "\"Kalemimde\" mürekkep kalmadı.",
-            "\"Gözlerimde\" yaşlar birikti.",
-            "\"Kitabında\" önemli notlar vardı.",
-            "\"Sınıfımızda\" yeni öğrenciler var."
+            "Gördüm seni o kalabalıkta.",
+            "Çok büyüktü evin bahçesi.",
+            "\"Git\" buradan hemen.",
+            "Bizi o bekliyordu."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde tamlayanı ile tamlananı yer değiştirmiş bir Belirtili İsim Tamlaması vardır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Kitabı kayboldu, \"çocuğun\".",
-            "Çok güzeldi \"gölün suyu\".",
-            "Odanın \"kapısı\" açıktı.",
-            "Bizi \"evin önünde\" bekliyordu."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki isimlerden hangisi yapısı bakımından diğerlerinden farklıdır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Kitaplık (Türemiş)",
-            "Gözlük (Türemiş)",
-            "Öğretmen (Türemiş)",
-            "Pencere (Basit)"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Soyut İsim kullanılmamıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "O, bu \"hayalin\" peşinden yıllarca koştu.",
-            "Masanın üzerinde duran \"gözlüğü\" aldı.",
-            "Yaşadığı \"pişmanlık\", onu çok üzmüştü.",
-            "Hayatta en önemli şey \"sevgi\"dir."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Hem basit hem de birleşik isim bir arada kullanılmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "\"Gecekondu\" evler, \"sabah\" yıkıldı.",
-            "\"Gözlükçü\", yeni bir \"işyeri\" açtı.",
-            "\"Denizaltı\" çalışmaları \"hızlandı\".",
-            "\"Kitaplık\", \"uzun\" bir duvara monte edildi."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Tamlayanı sıfat almış bir İsim Tamlaması vardır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Evin boyası\" çok kötüydü.",
-            "\"Kırmızı arabanın tekerleği\" patladı.",
-            "\"Yağmur sesi\" bizi uyandırdı.",
-            "\"Yeni öğretmenin sözleri\" etkiliydi."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir isim belirtme (yükleme) hâl eki almıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Okula\" geç kaldı.",
-            "\"Suyu\" hızlıca içti.",
-            "\"Evde\" kimse yoktu.",
-            "\"Gözlükten\" sıkılmıştı."
-          ]
-        },
-        {
-          "soruMetni": "\"Öğrenci\" sözcüğü aşağıdaki cümlelerin hangisinde topluluk adı olarak kullanılmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Öğrenci\", soruları hızlıca çözdü.",
-            "Bütün \"öğrenci\", dersi dinliyordu.",
-            "\"Öğrencilerin\" tamamı sınava girdi.",
-            "Sınıfın en çalışkan \"öğrencisi\" oydu."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde İşaret Zamiri kullanılmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Bu\" kitabı okumalısın.",
-            "\"Öteki\" daha güzeldi, \"onu\" alalım.",
-            "Elindekini \"bana\" ver.",
-            "\"Kimi\" zaman gelir, \"kimi\" zaman gitmez."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Kişi Zamiri yoktur?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "\"Sana\" bütün gerçeği anlatacağım.",
-            "\"Bana\" göre bu işi o yapmalı.",
-            "\"Biz\", size her zaman destek oluruz.",
-            "\"Şurada\" duran adam, \"bizim\" komşumuz."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Belgisiz Zamir kullanılmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Gelenlerden \"birkaçı\" hemen içeri girdi.",
-            "\"Hangi\" evde oturuyor?",
-            "\"Kim\" bu soruyu çözebilir?",
-            "\"Şunun\" rengi daha güzel."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Soru Zamiri kullanılmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "\"Neyi\" kaybettin, söyle bana.",
-            "\"Nasıl\" bir evde oturuyorsunuz?",
-            "\"Kaç\" öğrenci buraya geldi?",
-            "\"Niçin\" bizi dinlemiyorsun?"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde İlgi Zamiri (-ki) kullanılmıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde Dolaylı Tümleç, isim tamlamasından oluşmuştur?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Penceredeki \"kuş\" ötüyordu.",
-            "Duydum \"ki\", sen de geliyorsun.",
-            "Benim \"arabam\" seninkinden daha eski.",
-            "Öyle yoruldum \"ki\", hemen uyumalıyım."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "sozcukte_yapi_2",
-      "baslik": "Sözcükte Yapı-2",
-      "kategoriId": "turkce",
-      "konuId": "sozcukte_yapi",
-      "isNew": false,
-      "soruSayisi": 20,
-      "sureDakika": 20,
-      "sorular": [
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir zamir farklı bir türdedir?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "\"Kimi\" bizi dinler, \"kimi\" dinlemez.",
-            "\"Şunu\" alıp \"bunu\" bırak.",
-            "\"Onun\" sözleri \"beni\" çok etkiledi.",
-            "\"Kimden\" yardım isteyeceğimizi bilmiyoruz."
+            "\"Evin önünden\" geçti.",
+            "\"Okul kapısına\" doğru yürüdü.",
+            "\"Arkadaşımın sözlerine\" inandım.",
+            "\"Sana\" güzel bir hediye aldım."
           ]
         },
         {
-          "soruMetni": "\"Kendisi\" sözcüğü aşağıdaki cümlelerin hangisinde farklı bir zamir türüne örnektir?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "\"Kendisi\", bu konuda yanılıyor.",
-            "Onun yerine \"kendi\" gitmiş.",
-            "İşin tamamını \"kendi\" yaptı.",
-            "\"Senin\" kendine güvenin yok mu?"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde zamir kullanılmamıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde Özne, Edat grubuyla kurulmuştur?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "\"O\" kitabı okuduğunu biliyorum.",
+            "\"Ayşe kadar çalışkan\" kimse yok.",
+            "\"Bize göre\" bu işin çözümü yok.",
+            "\"Seninle\" konuşmak istedim.",
+            "\"Kitap okumak\" onu mutlu ediyordu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde zarf tümleci yoktur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "\"Hızlı\" hareket etti.",
+            "Olanlar \"bizi\" şaşırttı.",
+            "Bizi \"iyi\" karşıladı.",
+            "\"Yarın\" gelirim."
+          ]
+        },
+        {
+          "soruMetni": "\"Yazarın ele aldığı konu, güncel bir sorundu.\" cümlesi, yükleminin türüne göre nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fiil cümlesi",
+            "İsim cümlesi",
+            "Fiilimsi cümlesi",
+            "Devrik cümle"
+          ]
+        },
+        {
+          "soruMetni": "\"Bu işi yaparsan, sana yardım ederim.\" cümlesi yapısına göre nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sıralı Cümle",
+            "Bağlı Cümle",
+            "Şartlı Birleşik Cümle",
+            "Girişik Birleşik Cümle"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde nesne, zamirden oluşmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
             "\"Beni\" arayan \"sendin\".",
-            "\"Herkes\", onun yalan söylediğini anladı.",
-            "\"Bu\" bina, \"yeni yapıldı\"."
+            "\"Herkes\" onu tanır.",
+            "\"Bu\" kitabı okumalısın.",
+            "\"Onun\" sözlerini dinle."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde İşaret Zamiri, isim tamlamasının tamlayanı olmuştur?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "\"Bunun\" rengi daha güzeldi.",
-            "\"Şunun\" fiyatı ne kadar?",
-            "\"Şunun\" camı kırılmış.",
-            "\"O\" ev, bize çok yakındır."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Belgisiz Zamir, tamlanan durumundadır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem, fiilimsi grubundan oluşmuştur?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Gelenlerin \"bazısı\" içeriye girdi.",
-            "\"Birkaçı\" bu işi becerebilir.",
-            "\"Çoğu\" kişi yalan söylüyordu.",
-            "\"Hiçbirimiz\" gerçeği bilmiyorduk."
+            "Onun tek amacı, \"başarılı olmaktı\".",
+            "Bugün hava çok \"rüzgârlıydı\".",
+            "Soruyu çözmesi \"gerekiyordu\".",
+            "Buradan hemen \"gitmelisin\"."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Niteleme Sıfatı kullanılmamıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem ile özne yer değiştirmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Onu bu durum çok \"üzmüştü\".",
+            "\"Masanın üzerindeydi\" yeni kitap.",
+            "Gelen misafirler \"buradaydı\".",
+            "Bizi arayan \"sendin\"."
+          ]
+        },
+        {
+          "soruMetni": "\"Bütün gün evde oturdu, kimseyi aramadı.\" cümlesi yapısına göre nedir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "\"Büyük\" bir evde oturuyorlardı.",
-            "Pencereden \"masmavi\" gökyüzünü izledi.",
-            "\"Üç\" kişi dışarıda bizi bekliyordu.",
-            "Elindeki \"kırmızı\" kalemi düşürdü."
+            "Bağımlı Sıralı Cümle",
+            "Bağlı Cümle",
+            "Bağımsız Sıralı Cümle",
+            "Girişik Birleşik Cümle"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Belirtme Sıfatlarından farklı bir tür kullanılmıştır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "\"Hangi\" yoldan gideceğiz? (Soru Sıfatı)",
-            "\"Birkaç\" öğrenci dışarı çıktı. (Belgisiz Sıfat)",
-            "\"Bu\" masa eski görünüyor. (İşaret Sıfatı)",
-            "\"İyi\" bir insandı, herkese yardım ederdi. (Niteleme Sıfatı)"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Adlaşmış Sıfat vardır?",
+          "soruMetni": "\"Bize anlattığı bütün olaylar, tamamen \"yalandı\".\" cümlesi yükleminin türüne göre nedir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Bütün \"çalışanlar\", toplantıya katıldı.",
-            "\"Yaşlılar\", gençlere sürekli nasihat veriyordu.",
-            "\"Sıcak\" hava herkesi yormuştu.",
-            "\"Her\" şeyi dikkatlice inceledi."
+            "Fiil cümlesi",
+            "İsim cümlesi",
+            "Devrik cümle",
+            "Birleşik cümle"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde sayı sıfatı kullanılmamıştır?",
-          "dogruCevapIndex": 3,
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde gizli özne vardır?",
+          "dogruCevapIndex": 1,
           "secenekler": [
-            "\"Üçüncü\" katta oturuyorlar. (Sıra Sayı Sıfatı)",
-            "\"Yüzde\" elli zam yapıldı. (Üleştirme Sayı Sıfatı)",
-            "\"Beşer\" kişi gruplar halinde ayrıldı. (Üleştirme Sayı Sıfatı)",
-            "\"Bir\" kitap alıp hemen okudu. (Belgisiz Sıfat)"
+            "Kapının önünde kimse yoktu.",
+            "Onu görünce çok sevindik.",
+            "Yeni bir kitap yayımlandı.",
+            "Hava soğuktu."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde sıfat bir adı değil, zamiri nitelemiştir?",
+          "soruMetni": "\"O, bu kadar yalan söylediğini inkâr etti.\" cümlesi yapısına göre nedir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "\"Soğuk\" bir hava vardı.",
-            "\"Çalışkan\" öğrenci, dersi dinliyordu.",
-            "\"Zeki\" olanı, hemen anladı. (Adlaşmış sıfat)",
-            "O, \"yeni\" bir \"kitap\" almıştı."
+            "Sıralı Cümle",
+            "İç İçe Birleşik Cümle",
+            "Girişik Birleşik Cümle",
+            "Bağlı Cümle"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde pekiştirilmiş sıfat kullanılmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Dışarıda \"masmavi\" bir gökyüzü vardı.",
-            "O, bu konuda \"en iyi\" olandı.",
-            "\"Büyük\" bir başarı elde etti.",
-            "\"İlk\" görevini başarıyla tamamladı."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir ad, birden fazla sıfat ile nitelenmiştir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Küçük\" bir \"köyde\" yaşıyorlardı.",
-            "\"Uzun\", \"kırmızı\" bir \"kazak\" giymişti.",
-            "\"Herkes\" yorgun ve \"bitkindi\".",
-            "\"Kimi\" zaman \"hızlı\" yürürdü."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Soru Sıfatı, adlaşmış sıfat olmuştur?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "\"Hangi\" kitabı okumalısın?",
-            "\"Kaçı\" bu soruyu çözebilir?",
-            "\"Hangimiz\" doğru söylüyor?",
-            "\"Kimi\" zaman gelir?"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde belgisiz sıfat vardır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "\"Çoğu\" öğrenci sessizdi.",
-            "\"Herkes\" sessizdi.",
-            "\"Hiçbiri\" gelmedi.",
-            "\"Bazısı\" yalan söylüyordu."
-          ]
-        },
-        {
-          "soruMetni": "\"O\" sözcüğü aşağıdaki cümlelerin hangisinde sıfat olarak kullanılmıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisi hem isim cümlesi hem de devrik bir cümledir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "\"O\", bu konuda yanılıyor.",
-            "\"Onun\" arabası yeni.",
-            "\"O\" evi çok beğendim.",
-            "\"Bunun\" fiyatı ne kadar?"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Durum Zarfı vardır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Kapının önüne \"hemen\" geldi.",
-            "Soruyu \"kolayca\" çözdü.",
-            "\"Yukarı\" çıkıp bizi bekledi.",
-            "Bütün gün \"çok\" çalıştı."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Yer-Yön Zarfı kullanılmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Arabayı \"dışarı\" park ettik.",
-            "Çocuk \"içeriye\" girdi.",
-            "\"Aşağıdan\" sesler geliyordu.",
-            "\"Buraya\" gelip beni buldu."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Zaman Zarfı vardır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Bütün gün \"hızlı\" yürüdü.",
-            "\"Akşam\" geliriz, merak etmeyin.",
-            "İşleri \"yavaş\" ilerliyor.",
-            "Bizi \"iyi\" karşıladı."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Ölçü-Miktar Zarfı bir sıfatı derecelendirmiştir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "O, bu işi \"çok\" iyi bilir.",
-            "Bizi \"daha\" \"az\" bekletti.",
-            "Bu, \"çok\" \"güzel\" bir evdi.",
-            "Bütün gün \"fazla\" yürüdük."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Soru Zarfı kullanılmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Bize \"ne\" getirdin?",
-            "Buraya \"nasıl\" geldin?",
-            "\"Hangi\" yemeği yapalım?",
-            "\"Kaçı\" dersi dinliyor?"
+            "Söylediklerini dinlemedik hiç.",
+            "O günkü hava \"soğuk\" değildi.",
+            "Çok güzel bir \"insandı\" o.",
+            "Oraya gitmek, \"zorunluydu\"."
           ]
         }
       ]
     },
     {
-      "id": "sozcukte_yapi_3",
-      "baslik": "Sözcükte Yapı-3",
+      "id": "yazim_kurallari_1",
+      "baslik": "Yazım Kuralları-1",
       "kategoriId": "turkce",
-      "konuId": "sozcukte_yapi",
+      "konuId": "yazim_kurallari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde büyük harflerin kullanımıyla ilgili bir yazım yanlışı vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Eskişehir valiliği'nden yapılan açıklamaya göre okullar tatil edildi.",
+            "Annem, teyzemle birlikte Fırat Nehri'ni görmeye gitti.",
+            "Cumhuriyet Bayramı'nı coşkuyla kutladık.",
+            "Öğretmenler Günü, 24 Kasım'da kutlanır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yer adlarının yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Asya Kıtası'nın en kalabalık ülkesi Çin'dir.",
+            "İstanbul Boğazı'ndan geçen gemi sayısı giderek artıyor.",
+            "Ege denizinin suları oldukça soğuktu.",
+            "Ağrı Dağı'nın etekleri kışın bembeyaz olur."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde tarihlerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türkiye Büyük Millet Meclisi 23 Nisan 1920'de açıldı.",
+            "29 mayıs 1453'te İstanbul fethedildi.",
+            "Gelecek yılın Temmuz ayında tatile çıkacağız.",
+            "Toplantımız 10 Ocak Cuma günü yapılacaktır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde unvan ve saygı sözlerinin yazımında hata yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fatma Hanım, bize misafirliğe gelecekti.",
+            "Dün akşam Ayşe teyzemlere uğradık.",
+            "Köyün en yaşlısı Ahmet dede bize hikâye anlattı.",
+            "Mahallemizin muhtarı Ali Bey çok yardımseverdir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir kurum adının yazımında yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türk Dil Kurumu'nun yeni sözlüğünü aldım.",
+            "İstanbul Üniversitesi Hukuk Fakültesi'nde okuyor.",
+            "Türkiye Büyük Millet Meclisi'nin açılışı törenle yapıldı.",
+            "Milli Eğitim Bakanlığından bir açıklama geldi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde özel ada getirilen ekin yazımında hata yapılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Cemil Meriç'in eserlerini okumalısın.",
+            "Türkiye'nin batısı daha kalabalıktır.",
+            "Ankara'ya yarın gideceğiz.",
+            "Türkçenin dil bilgisi kuralları önemlidir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yön adının yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Arabamızla Ege'nin Kuzeyini dolaştık.",
+            "Anadolu'nun doğusu kışın çok soğuk olur.",
+            "İstanbul'dan batıya doğru hareket ettik.",
+            "Ülkenin güneydoğusu tarım için elverişlidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Toplantıda Bütün katılımcılar Hazır bulunuyordu.\" cümlesindeki yazım yanlışının nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cümle başındaki harfin küçük yazılması",
+            "Topluluk adının büyük harfle yazılması",
+            "Tür adının sebepsiz yere büyük harfle başlaması",
+            "Özel adların arasına boşluk bırakılması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde özel ada dâhil olmayan 'il' adının yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Konya ili, Türkiye'nin yüz ölçümü en büyük ilidir.",
+            "Van Gölü'nün etrafında tarihi kalıntılar vardır.",
+            "Kayseri'nin Pınarbaşı ilçesi kışın çok soğuk olur.",
+            "İstanbul Boğazı'nın görüntüsü harikaydı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde 'ki' bağlacının yazımında bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Öyle yorgunumki, hemen uyumalıyım.",
+            "Duydum ki, sen de geliyormuşsun.",
+            "Seninki daha güzel olmuş.",
+            "Evdeki eşyaları düzenledi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde 'de' bağlacının yazımı yanlıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sen de bizimle gelmelisin.",
+            "Çalıştım da başardım.",
+            "Çok konuşan da bu konu hakkında hiçbir şey bilmiyor.",
+            "Masada kitap kalmamış."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı yoktur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Öğretmenimiz 'Lale Devri'ni' anlattı.",
+            "Bu yaz Turgutlu Ovası'na gideceğiz.",
+            "Yarışmaya katılan herkes çok iyiydi.",
+            "Yıllarca Doğu Batı meselesini tartıştı."
+          ]
+        },
+        {
+          "soruMetni": "\"Mavi kalemlerimizi de alıp sınıfa girdik.\" cümlesinde büyük harfle başlayan kelime sayısı kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ses olaylarına bağlı bir yazım yanlışı vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu işi haledememişti.",
+            "Sanatçının resimlerini sergiledik.",
+            "Kapıyı hızlıca açtı.",
+            "Köyün etrafında gürültü yoktu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde özel ada getirilen yapım eki, kesme işaretiyle ayrılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türkçenin en zor konusu dil bilgisidir.",
+            "Avrupalı gençler buraya gezmeye geldi.",
+            "İzmirliler bu konuda çok hassastır.",
+            "Türklüğe ait duyguları şiirinde işledi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde coğrafi bir terimin yazımında hata yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Asya'nın güneyinde Büyük Sahra Çölü yer alır.",
+            "Tuz Gölü'nün suları yazın buharlaşır.",
+            "Çanakkale boğazını geçmek zorlu bir deneyimdi.",
+            "Erciyes Dağı, Kayseri'nin sembolüdür."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde din ve mitoloji ile ilgili bir adın yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cennet, inananların ödüllendirileceği yerdir.",
+            "Zeus, Yunan mitolojisindeki en güçlü Tanrı'dır.",
+            "Kutsal Kitap'ta bu konu detaylıca anlatılır.",
+            "Müslümanlık, barış dinidir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde özel ismin kısaltmasından sonra getirilen ekin yazımı doğrudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "TDK’dan yapılan açıklama önemlidir.",
+            "TBMM.'ye yeni kanun teklifi sunuldu.",
+            "Dr. Ali'ye danıştık.",
+            "Prof. Dr. Ahmet'ten ders aldık."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde başlık yazımı yanlıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türk romanında Modernleşme Sorunu",
+            "Edebiyat ve Toplum Arasındaki İlişki",
+            "Kırmızı ve Siyah",
+            "Bütün Çalışanlar Buradaydı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde para birimlerinin yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cebimde sadece on Lira kalmıştı.",
+            "Bu ürünün fiyatı 20 Dolar'dır.",
+            "Türkiye'nin para birimi Türk lirasıdır.",
+            "Bu makinenin fiyatı 1000 Euro'dur."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yazim_kurallari_2",
+      "baslik": "Yazım Kuralları-2",
+      "kategoriId": "turkce",
+      "konuId": "yazim_kurallari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmaların yazımıyla ilgili bir hata yapılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bu işi yapmak için İTÜ'ye başvurmalısın.",
+            "TBMM'de bu konu görüşüldü.",
+            "ABD'yi ziyaret etti.",
+            "T.D.K.'nın yeni kararı açıklandı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmaya getirilen ek yanlış yazılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "MEB'in kararı bekleniyor.",
+            "TRT'den yeni bir belgesel izledik.",
+            "PTT'nin şubesi buradaydı.",
+            "NATO'ya üye ülkeler toplandı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sayının yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İkişer kişilik gruplar halinde ayrıldılar.",
+            "Toplantıya onbeş kişi katıldı.",
+            "Sınavda yirmi iki soru vardı.",
+            "Yarışmada üçüncü oldu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sıra sayılarının yazımıyla ilgili bir hata yapılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "5'inci katta oturuyorlar.",
+            "Yarışmada I. oldu.",
+            "19. yüzyılda bu olay yaşandı.",
+            "3.'ü bu işi yapacaktı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde para ile ilgili sayının yazımında bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kasa, 500.00 (beş yüz) TL açık vermişti.",
+            "Ayakkabı için 250 TL ödedim.",
+            "Notları 15 bin 300 kelimeydi.",
+            "Çek defterine 500,00 (beş yüz) TL yazdım."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde saat ve dakikanın yazımı doğrudur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Toplantı 14:00'da başlayacak.",
+            "Tren 09:15'te kalktı.",
+            "15.30 da buluşuruz.",
+            "Derse 10.40’ta girdi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmaya getirilen ek, kısaltmanın okunuşuna göre doğru yazılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "TÜBİTAK'ın araştırması yayımlandı.",
+            "NATO'nın üyeleri toplandı.",
+            "PTT'nin şubesi kapalıydı.",
+            "ABD'deki hayat pahalıdır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüzde işaretinin kullanımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "% 25 indirim yaptık.",
+            "%25'lik bir indirim uygulandı.",
+            "%25 indirim yapıldı.",
+            "%25'i bu işi yapacaktı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmanın yazımıyla ilgili bir hata yoktur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Türkiye'nin GSYİH'si artıyor.",
+            "T.C.'de bu kurallar geçerlidir.",
+            "YDS.'den yüksek puan aldı.",
+            "Prof. doktor Ali, bir seminer verdi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sayıların yazımında hata yapılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yazdığı şiir onbir kıtadan oluşuyordu.",
+            "Beşinci katta oturuyorlar.",
+            "Yirmi altı bin lira para toplandı.",
+            "Sınıfta 40 öğrenci vardı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ikilemenin yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hızlı hızlı yürüdü ve otobüse yetişti.",
+            "Eş dost bir araya gelip eğlendik.",
+            "Eğri büğrü yollar, bizi yordu.",
+            "Aşağı yukarı iki saat sonra geleceğim."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde deyimin yazımında bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu işi yapmak için göze almak gerekir.",
+            "Olanlara göz yummamalıyız.",
+            "Ayşe'nin etekleri zil çalıyordu.",
+            "Yalan söylediği için yüzü kızardı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik kelimenin yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Pazarda dolma biber satılıyordu.",
+            "Bu yıl 'açıköğretim' fakültesinde okuyor.",
+            "Birkaç öğrenci bahçede top oynuyordu.",
+            "Akşamüstü yola çıkacağız."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde bitişik yazılması gereken birleşik kelime ayrı yazılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu yazarın eserleri 'gözardı' edilmemeli.",
+            "'Cankurtaran' ekibi hemen geldi.",
+            "'Demirbaş' eşyaları kontrol ettik.",
+            "'Basınç' odası hemen şuradaydı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ayrı yazılması gereken birleşik kelime bitişik yazılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "'Açıkgöz' bir öğrenciydi.",
+            "Bu 'haftasonu' tatile çıkacağız.",
+            "'Arabulucu' rolünü üstlendi.",
+            "'Midyat'ta' yer altı şehirleri var."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde somut olarak yer bildiren birleşik kelimenin yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "'Yalıçapkını' kuşu denizde avlanıyordu.",
+            "'Yeraltı' suları çok temizdi.",
+            "'Ayakaltında' dolaşmasınlar.",
+            "'Gözaltına' alınanlar serbest bırakıldı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ikileme arasına virgül koymak bir yazım yanlışıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Aşağı, yukarı iki saat sonra geleceğim.",
+            "Yavaş yavaş ilerliyordu.",
+            "Tıklım tıklım doluydu salon.",
+            "İyi kötü bir iş buldu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik sözcük oluşumu sırasında ses düşmesi olmasına rağmen doğru yazılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kahvaltıda sadece zeytin yedik.",
+            "Ne için buraya geldin?",
+            "Cumaertesi günü buluşalım.",
+            "Nasıl bir plan yaptın?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki birleşik kelimelerden hangisi ayrı yazılmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Açıkgöz",
+            "Kuşburnu",
+            "Hafta sonu",
+            "Sivrisinek"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik kelime oluşumu sırasında ses türemesi olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hissettiğim bütün duygular sahte değildi.",
+            "Kaybolan eşyalarını arıyordu.",
+            "Affedersiniz, buradan nasıl giderim?",
+            "Birbiri ardınca koşuyorlardı."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yazim_kurallari_3",
+      "baslik": "Yazım Kuralları-3",
+      "kategoriId": "turkce",
+      "konuId": "yazim_kurallari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ikileme arasına edat koymak yazım yanlışına neden olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "'Şıkır şıkır' elbiseler giymişti.",
+            "'Ağır ağır' ilerliyordu.",
+            "'Yalan yanlış' bilgiler verdi.",
+            "'Tıpış tıpış' eve gitmeliydik."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde deyimin yazımı doğrudur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yaptıklarına göz yumdu.",
+            "Bu işten elini eteğini çekti.",
+            "Sözlerime kulak asmadı.",
+            "Olayı kulak ardı etti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik fiilin yazımı yanlıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bu konuda ona yardım edelim.",
+            "Yaptığı hatayı fark etmedi.",
+            "Olayı hemen hisetti.",
+            "Bu duruma itiraz etti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki birleşik kelimelerden hangisi bitişik yazılmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Art niyet",
+            "Açık oturum",
+            "Denizaltı",
+            "Çok bilmiş"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik kelime oluşumu sırasında ünlü düşmesi olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kaybolan eşyalarını arıyordu.",
+            "Affetmek büyüklüktür.",
+            "Hissettiği acı büyüktü.",
+            "O, çokbilmiş biriydi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yön adının yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Doğu Anadolu'da kar yağışı etkili oldu.",
+            "Marmara'nın güneyini dolaştık.",
+            "Rüzgâr kuzeyden esiyordu.",
+            "Anadolu'nun doğusunda kış erken başlar."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlü daralması olmasına rağmen yazım yanlışı vardır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çocuk niye ağlıyor?",
+            "Bana neden gelmiyorsun?",
+            "Bunu bilmiyormuydun?",
+            "Oraya gidiyorum."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ikilemenin yazımı doğrudur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bize 'yalan yanlış' bilgiler verdi.",
+            "'İyi kötü' bir iş buldu.",
+            "'Abur cubur' yemeyi bıraktı.",
+            "'Eğri büğrü' yollardan geçtik."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde bitişik yazılan birleşik kelimenin yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'Açıksözlü' biriydi.",
+            "'Gözaltına' alınanlar serbest bırakıldı.",
+            "'Demirbaş'ları kontrol ettik.",
+            "'Midyat'ta' yer altı şehirleri var."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde 'mı/mi' soru ekinin yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Onu gördünmü?",
+            "Sen de gelecek misin?",
+            "Kitabı okudun mu?",
+            "Hava güzel mi güzel?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlü yumuşaması kuralına uyulmamasından kaynaklanan yazım yanlışı vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu, onun hukuğu değildi.",
+            "Toplantıda herkes 'hukuk' kurallarını tartıştı.",
+            "'Topa' hızlıca vurdu.",
+            "Çocuğun 'kitabı' yıpranmıştı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde Ünsüz benzeşmesi kuralına uymamaktan kaynaklanan yazım yanlışı vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İşden erken ayrıldı.",
+            "Sınavda başarılı oldu.",
+            "Kitapcıya uğrayalım.",
+            "1985'te doğdu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yabancı özel adın yazımında hata yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Dün akşam William Shakespeare'in bir oyununu izledik.",
+            "Mimar, 'Le Corbusier'den' ilham almıştı.",
+            "Toplantıda George Orwell'ın '1984''ü konuşuldu.",
+            "Sanatçı, Picasso'dan çok etkilenmişti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ikilemenin yazımı doğrudur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "'Teker meker' ilerliyordu.",
+            "'Abur cubur' yemeği bıraktı.",
+            "'İyi kötü' bir iş buldu.",
+            "'Eğri büğrü' yollardan geçtik."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik kelimenin yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'Açıkgöz' bir öğrenciydi.",
+            "'Kuşadası'na' tatile gittik.",
+            "'Çevre' kirliliği artıyor.",
+            "'Kuşburnu' çayı içtik."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmaya getirilen ek doğru yazılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dr. Ali'ye danıştık.",
+            "ABD'den gelen heyet toplandı.",
+            "Prof. Dr.'a çiçek gönderdik.",
+            "TCDD.'ye başvurduk."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlü düşmesi olan bir sözcüğün yazımı yanlıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnız kaldığını biliyordu.",
+            "Alnı terlemişti.",
+            "Burnunda bir sızı vardı.",
+            "Oynayan çocuklar ses çıkarıyordu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde isimden fiil yapan birleşik fiilin yazımı yanlıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bu durumu \"fark ettim\".",
+            "Seni gördüğünde \"hissedemedi\".",
+            "Bu teklifi \"redetti\".",
+            "Ona \"yardım etmeliyiz\"."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlü daralmasından kaynaklanan yazım yanlışı vardır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bana niye gelmiyorsun?",
+            "Onu görmiyeli uzun zaman oldu.",
+            "Bu işi yapmıyormuyuz?",
+            "Çok ağlıyor."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sayının yazımı yanlıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "5'inci katta oturuyorlar.",
+            "Yirmiüç kişi toplantıya katıldı.",
+            "1985'te doğdu.",
+            "15 Mart'ta geldiler."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noktalama_isaretleri_1",
+      "baslik": "Noktalama İşaretleri-1",
+      "kategoriId": "turkce",
+      "konuId": "noktalama_isaretleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde nokta (.) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Saat 14.30’da toplantı başladı.",
+            "Dr. Ali beye sorularımızı yönelttik.",
+            "Kitapları tek tek rafa dizdi.",
+            "Türkiye Büyük Millet Meclisi (T.B.M.M.) 1920’de açıldı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde virgül (,) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Küçük, yorgun, yaşlı bir adamdı.",
+            "Geldi, seni sordu, hemen gitti.",
+            "O, bu teklife sıcak bakmıyor.",
+            "Eve geç geldiği için, annesi ona kızdı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalı virgül (;) doğru kullanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Pazardan elma, armut; domates, salatalık aldım.",
+            "Bu işi sen yapmalısın; ben değil.",
+            "At ölür, meydan kalır; yiğit ölür, şan kalır.",
+            "Mutluydu; çünkü sınavdan yüksek almıştı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde iki nokta (:) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türkçede iki temel kök türü vardır: İsim ve fiil.",
+            "Ahmet: Sen de bizimle gel.",
+            "Sınava hazırlanırken şunlara dikkat et: Planlı çalışmak, düzenli tekrar.",
+            "Yemek çok lezzetliydi: O kadar çok yedim ki."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde üç nokta (...) doğru kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sözümü bitirmeden araya girdi...",
+            "İstanbul’a gidecektim ama...",
+            "O kadar yoruldum ki...",
+            "Yanında getirdiği her şeyi gösterdi: kalem, defter..."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde soru işareti (?) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bu işi nasıl bitireceğini biliyor musun?",
+            "Oraya saat kaçta (15.00?) gideceğimizi sordu.",
+            "Oradan bize ne getireceksin?",
+            "Bu kitabı okuyan sen miydin?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlem işareti (!) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Vah vah, zavallı çocuk!",
+            "Aman Allah’ım, bu ne güzellik!",
+            "Keşke o gün oraya gitmeseydim!",
+            "Hey, buraya gel!"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısa çizgi (-) doğru kullanılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Türkçe-İngilizce sözlük aldık.",
+            "Toplantıya 10–15 kişi katıldı.",
+            "Ali eve geç geldi-herkes meraklandı.",
+            "Bu eserde 'sevgi-nefret' karşıtlığı işlenmiştir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde tırnak işareti (“ ”) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Öğretmen \"Yarın derse herkes hazırlıklı gelsin\" dedi.",
+            "'Vatan yahut Silistre' adlı eseri okumalısın.",
+            "Sanatçı, \"yalnızlık\" kavramını eserinde çokça kullandı.",
+            "Ahmet Haşim’in \"Şiirde Mana\" başlıklı yazısını okudum."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde parantez ( ) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ek fiil (ek eylem) dört görevi vardır.",
+            "Cahit Sıtkı Tarancı (1910–1956) edebiyatımızın önemli şairidir.",
+            "Yazarın bu son eseri (yayımlanmamış), büyük ilgi gördü.",
+            "'Mübalağa (abartma) sanatı, şiire güç katar."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kesme işareti (') yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "TDK'nin yeni kararı yayımlandı.",
+            "Bize göre bu işte Ali'nin hatası var.",
+            "İstanbul Boğazı'nın eşsiz manzarası vardı.",
+            "Türkçenin gücünü fark etmeliyiz."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalama hatası yoktur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yeni, büyük bir ev arıyorduk.",
+            "Geldi, hemen yattı.",
+            "Sanatın amacı, insanı; mutlu etmektir.",
+            "Dün akşam onu (Ali'yi) aradım."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalama işaretinin kullanımı diğerlerinden farklı bir amaca hizmet etmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hayvanlar, bitkiler, insanlar... her şey canlıdır.",
+            "Geldi, ders çalıştı, hemen uyudu.",
+            "O, bu konuda sessiz kalmayı tercih etti.",
+            "Küçük, sevimli, yaramaz bir kediydi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalı virgül (;) kullanılması gerekmektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Evde kimse yoktu, herkes dışarı çıkmıştı.",
+            "Kitap, defter, kalem; çanta ve ayakkabı aldı.",
+            "O; Ali, Ahmet, Mehmet'ten daha çalışkandı.",
+            "Gelen misafirleri içeri buyur etti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmaya getirilen ekin yazımı yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "MEB’ten gelen yazıya göre hareket ettik.",
+            "AB’ye üyelik süreci devam ediyor.",
+            "TÜBİTAK’ın araştırması sonuçlandı.",
+            "TBMM'nin açılışı törenle yapıldı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sıra sayılarını göstermek için kullanılan noktalama işareti yanlıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "5’inci katta oturuyorlardı.",
+            "Yarışmada III. oldu.",
+            "20. yüzyılda bu olay yaşandı.",
+            "II. Murat döneminde gerçekleşti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlem işareti (!) parantez içinde kullanılarak farklı bir anlam katmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bu işi tek başına (yapamam!) dedi.",
+            "O kadar zeki (!) ki, herkesi kandırdı.",
+            "Eyvah, yine geç kaldım!",
+            "Dur, buraya gel!"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kesme işareti (' ) gereksiz kullanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Türk Dil Kurum’una başvurduk.",
+            "Savaş döneminde Çanakkale Boğazı’nın önemi büyüktü.",
+            "İstanbul Üniversitesi’nde okuyor.",
+            "1985’te doğdu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde soru anlamı taşıyan sözcüğün sonuna soru işareti (?) konulmamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Buraya ne zaman geleceksin?",
+            "Bana ne aldığını bilmiyorum.",
+            "Kitabı okuyan sen miydin?",
+            "Bu işi nasıl yaptığını sorabilir miyiz?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalı virgül (;) kullanılması zorunlu değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Atilla, Ayşe, Kemal; Ahmet, Mehmet bu toplantıya katıldı.",
+            "Yeni işinde başarılı olsun; bunu çok istiyoruz.",
+            "Erkek çocuklarına Ali, Veli, Murat; kız çocuklarına ise Ayşe, Fatma, Canan adı verildi.",
+            "Ben geldim; o ise hâlâ uyuyordu."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noktalama_isaretleri_2",
+      "baslik": "Noktalama İşaretleri-2",
+      "kategoriId": "turkce",
+      "konuId": "noktalama_isaretleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Olay yerinde şunlar vardı ( ) çanta ( ) kitap ( ) defter ( ) kalem.",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(:) (,) (,) (...)",
+            "(;) (,) (,) (.)",
+            "(:) (,) (,) (.)",
+            "(:) (;) (,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Annem ( ) bize dönerek ( ) Bu yıl tatil yapmayacağız ( ) dedi.",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(,) (:) (“) (.)",
+            "(,) (:) (“) (”)",
+            "(,) (:) ( ) (”)",
+            "(;) (,) (“) (.)"
+          ]
+        },
+        {
+          "soruMetni": "Yeni aldığı araba ( ) eski arabasına göre ( ) daha hızlı ( ) daha konforluydu.",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(,) (;) (,)",
+            "(,) (,) (,)",
+            "(;) (,) (,)",
+            "(,) (,) (.)"
+          ]
+        },
+        {
+          "soruMetni": "Ali eve geç kalmıştı ( ) ancak bu durum kimseyi şaşırtmadı.",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,)",
+            "(;)",
+            "(:)",
+            "(.)"
+          ]
+        },
+        {
+          "soruMetni": "Yazar ( ) romanında ( ) aşk ( ) yalnızlık ( ) ölüm gibi temaları işler.",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(,) (;) (,) (,)",
+            "(,) (,) (,) (;)",
+            "(,) (,) (,) (,)",
+            "(;) (,) (,) (,)"
+          ]
+        },
+        {
+          "soruMetni": "İki tür cümle vardır ( ) basit ve birleşik.",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "(.)",
+            "(,)",
+            "(;)",
+            "(:)"
+          ]
+        },
+        {
+          "soruMetni": "Babamın sesi ( ) sanki evin içini dolduruyordu ( )",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (.)",
+            "(;) (.)",
+            "( ) ( )",
+            "( ) (,)"
+          ]
+        },
+        {
+          "soruMetni": "Yaşlı adam ( ) küçük kulübesinde ( ) tek başına yaşıyordu.",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "(,) (,)",
+            "(,) ( )",
+            "( ) (,)",
+            "( ) ( )"
+          ]
+        },
+        {
+          "soruMetni": "Öğretmen ( ) Ali’yi tahtaya çağırdı ( ) Çocuk hemen kalktı ( )",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(,) (;) (.)",
+            "(,) (,) (.)",
+            "( ) (,) (.)",
+            "(,) (:) (.)"
+          ]
+        },
+        {
+          "soruMetni": "Şairin en önemli eseri ( ) Çile ( ) adlı şiir kitabıdır.",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(“) (”)",
+            "( ) ( )",
+            "(’) (’)",
+            "(:) (!)"
+          ]
+        },
+        {
+          "soruMetni": "Eve gelirken şunları al ( ) ekmek ( ) süt ( ) yumurta ( )",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(:) (,) (,) (,)",
+            "(:) (,) (,) (.)",
+            "(:) (,) (,) (...)",
+            "(;) (,) (,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Köyün her yanı bembeyazdı ( ) Bütün evler ( ) ağaçlar kara gömülmüştü.",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(;) (,)",
+            "(,) (,)",
+            "(.) (,)",
+            "(:) (,)"
+          ]
+        },
+        {
+          "soruMetni": "Olay yerinde üç kişi vardı ( ) Ali ( ) Ahmet ve Mehmet ( )",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(:) (,) (.)",
+            "(;) (,) (.)",
+            "(:) (;) (.)",
+            "(:) (,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Hey ( ) Bana bak ( ) hemen buraya gel ( )",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (.) (!)",
+            "(,) (!) (!)",
+            "(!) (,) (!)",
+            "(,) (.) (!)"
+          ]
+        },
+        {
+          "soruMetni": "Bir de baktık ki ( ) kapıda bekleyen ( ) yaşlı ( ) yorgun bir adamdı.",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (,) (,)",
+            "(;) (,) (,)",
+            "( ) (,) (,)",
+            "(,) ( ) (,)"
+          ]
+        },
+        {
+          "soruMetni": "Bu soruyu kim çözecek ( ) Sen mi ( )",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "(?) (?)",
+            "( ) (?)",
+            "(:) (?)",
+            "(,) (?)"
+          ]
+        },
+        {
+          "soruMetni": "Yeni evimiz çok güzeldi ( ) geniş ( ) ferah ve aydınlık ( )",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(:) (,) (.)",
+            "(;) (,) (.)",
+            "(,) (,) (.)",
+            "(:) (,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Hayatımda üç şeyi çok severim ( ) kitap okumayı ( ) yürüyüş yapmayı ve denizi seyretmeyi.",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(:) (,) (.)",
+            "(;) (,) (.)",
+            "(:) (;) (.)",
+            "(,) (,) (.)"
+          ]
+        },
+        {
+          "soruMetni": "Ona ( ) bir daha buraya gelme ( ) dedim.",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (”)",
+            "(:) (”)",
+            "(;) (”)",
+            "( ) ( )"
+          ]
+        },
+        {
+          "soruMetni": "O ( ) dün okula gelmedi ( ) çünkü hastaydı.",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(,) (.)",
+            "( ) (;)",
+            "(,) (,)",
+            "(,) (:)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noktalama_isaretleri_3",
+      "baslik": "Noktalama İşaretleri-3",
+      "kategoriId": "turkce",
+      "konuId": "noktalama_isaretleri",
       "isNew": true,
       "soruSayisi": 20,
       "sureDakika": 20,
       "sorular": [
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde zarf kullanılmamıştır?",
+          "soruMetni": "Edebiyatın en önemli sorunu ( ) şiir mi ( ) roman mı daha önemlidir ( ) tartışmasıdır.\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(,) (,) (?)",
+            "(:) (,) (?)",
+            "(;) (,) (?)",
+            "(,) (;) (?)"
+          ]
+        },
+        {
+          "soruMetni": "Birinci Dünya Savaşı (1914 – 1918) sonrasında birçok imparatorluk yıkıldı.\nBu cümlede (–) uzun çizgi yerine hangi noktalama işareti kullanılabilir?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "\"Dışarı\" çıktı ve etrafa bakındı.",
-            "Bizi \"iyi\" ağırladı.",
-            "\"Gelecek yıl\" tatile çıkacağız.",
-            "\"Uzun\" bir yolculuk yaptık."
+            "Noktalı virgül (;)",
+            "İki nokta (:)",
+            "Eğik çizgi (/)",
+            "Kısa çizgi (-)"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki zarflardan hangisi cümleye kesinlik anlamı katmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "\"Belki\" yarın gelir.",
-            "Bu işi \"mutlaka\" bitirmelisin.",
-            "\"Sanki\" bir şey olacak.",
-            "\"Tahminen\" bir saat sürer."
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir sözcük, hem isim hem de zarf görevinde kullanılmıştır?",
+          "soruMetni": "Yeter artık ( ) Buraya ne zaman geleceksin ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "\"Sabah\" erken kalktı. / \"Sabahın\" \"soğuğu\" hissediliyordu.",
-            "\"Hızlı\" yürüdü. / \"Hızlı\" bir \"koşucuydu\".",
-            "\"Sıcak\" karşıladı. / \"Sıcak\" bir \"hava\" vardı.",
-            "\"İyi\" konuştu. / \"İyi\" \"insan\"dı."
+            "(!) (?)",
+            "(,) (?)",
+            "(.) (?)",
+            "(!) ( )"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Ölçü-Miktar Zarfı bir fiili belirtmiştir?",
+          "soruMetni": "Oysa o günler ( ) ne kadar da güzeldi ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (!)",
+            "( ) (!)",
+            "(,) (.)",
+            "(,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlenin hangisinde kesme işareti (' ) doğru kullanılmıştır?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "O, bu konuda \"en\" başarılı olandı.",
-            "\"Çok\" yürüdüğümüz için yorulduk.",
-            "Bu, \"daha\" \"az\" yorucu bir işti.",
-            "\"Ağır\" \"hareket\" ediyordu."
+            "TDK'ya göre bu kural değişmiştir.",
+            "TRT'nin yeni programı başladı.",
+            "ABD'nden gelen heyet buradaydı.",
+            "Türkçeyi doğru kullanmalıyız."
           ]
         },
         {
-          "soruMetni": "\"İçeri\" sözcüğü aşağıdaki cümlelerin hangisinde zarf görevinde kullanılmıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde tırnak işareti (“ ”) gereksiz kullanılmıştır?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "\"İçerisi\" çok kalabalıktı.",
-            "\"İçeriye\" kimse girmesin.",
-            "Kapıyı açıp \"içeri\" baktı.",
-            "\"İçeride\" kimse yoktu."
+            "Öğretmen \"Ders çalışın\" diye uyardı.",
+            "Kitabın adı “Yalnızlık” idi.",
+            "Şair, “ölüm” kavramına sıkça değinir.",
+            "“Sinekli Bakkal” adlı eseri okudum."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Edat (İlgeç) kullanılmamıştır?",
+          "soruMetni": "Babamdan sonra annem geldi ( ) o ise hâlâ uyuyordu.\nBu cümlede parantez içine hangi noktalama işareti getirilmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,)",
+            "(;)",
+            "(:)",
+            "(.)"
+          ]
+        },
+        {
+          "soruMetni": "Yeni bir işe başladım ( ) zor ( ) ama heyecan verici ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Yağmur \"yağdığı için\" dışarı çıkamadık.",
-            "\"Gelecek gibi\" bir hâli vardı.",
-            "Sen de \"kitap\" almalısın.",
-            "Eve doğru \"hızlıca\" yürüdü."
+            "(:) (,) (.)",
+            "(;) (,) (.)",
+            "(,) (,) (...)",
+            "(:) (,) (...)"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Bağlaç görevli bir sözcük yoktur?",
+          "soruMetni": "Ali’nin ( ) bu işi yapacağını ( ) kimse tahmin edemezdi.\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(,) ( )",
+            "( ) (,)",
+            "(,) (;)",
+            "( ) ( )"
+          ]
+        },
+        {
+          "soruMetni": "Bu eserin üç ana teması vardır ( ) aşk ( ) yalnızlık ( ) kaçış ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Ne arayan \"ne\" soran var.",
-            "Kitabı aldı \"ve\" okumaya başladı.",
-            "\"Geldim\" ama seni bulamadım.",
-            "\"Oysa\" her şey çok güzeldi."
+            "(:) (,) (,) (...)",
+            "(:) (,) (;) (.)",
+            "(;) (,) (,) (...)",
+            "(:) (,) (,) (.)"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Ünlem görevli bir sözcük yoktur?",
+          "soruMetni": "Dışarıda üç kişi vardı ( ) uzun boylu ( ) kısa boylu ( ) şişman ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(:) (,) (,) (...)",
+            "(:) (,) (;) (.)",
+            "(,) (,) (,) (...)",
+            "(;) (,) (,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Arkadaşı, \"Ali ( ) hemen buraya gel ( )\" diye bağırdı.\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (!)",
+            "( ) (!)",
+            "(,) (.)",
+            "(,) ( )"
+          ]
+        },
+        {
+          "soruMetni": "Kitabı okudum ( ) anladım ( ) hemen özetledim ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (,) (.)",
+            "(;) (,) (.)",
+            "(:) (,) (.)",
+            "(,) (,) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Onun tek amacı ( ) mutlu olmaktı ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "(,) (.)",
+            "( ) (.)",
+            "(:) (.)",
+            "(;) (.)"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yabancı özel ada getirilen ekin yazımı doğrudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "George'a göre bu iş yanlıştı.",
+            "Paris’e gitmek istiyordu.",
+            "Shakespeare’in oyunlarını okuduk.",
+            "Cervantes'ten sonra bu tür gelişti."
+          ]
+        },
+        {
+          "soruMetni": "Türkçede iki temel zaman vardır ( ) geçmiş ve şimdiki zaman.\nBu cümlede parantez içine hangi noktalama işareti getirilmelidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(,)",
+            "(;)",
+            "(:)",
+            "(...)"
+          ]
+        },
+        {
+          "soruMetni": "Yaşasın ( ) Maçı kazandık ( )\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(,) (!)",
+            "(!) (.)",
+            "(,) (.)",
+            "(!) (...)"
+          ]
+        },
+        {
+          "soruMetni": "Çocukluğumun geçtiği yer ( ) o eski ev ( ) artık yok.\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(;) (,)",
+            "(,) (,)",
+            "( ) ( )",
+            "(,) (;)"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalama hatası yoktur?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "\"Hey\", buraya gel!",
-            "\"Eyvah\", yine geç kaldım!",
-            "\"Yaşasın\", maçı kazandık!",
-            "\"Ah\", o günler ne güzeldi."
+            "Sınav, zor, ama yapılabilirdi.",
+            "Sanatın amacı; insana güzeli göstermektir.",
+            "O, bu konuda, sessiz kaldı.",
+            "Köyün havası, suyu çok güzeldi."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki fiillerden hangisi İş (Kılış) Fiili'dir?",
+          "soruMetni": "Ali ( ) Veli ( ) Ahmet ( ) Ayşe’den daha çalışkandır.\nBu cümlede parantez içine sırasıyla hangi noktalama işaretleri getirilmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "(,) (;) (,)",
+            "(,) (,) (;)",
+            "(;) (,) (,)",
+            "(,) (,) (,)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anlatim_bozuklugu_1",
+      "baslik": "Anlatım Bozukluğu-1",
+      "kategoriId": "turkce",
+      "konuId": "anlatim_bozuklugu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "\"Bu zorlu görevi başarıyla tamamladı; ancak hiç kimse takdir etmedi.\" cümlesinde anlatım bozukluğunu gidermek için yapılması gereken en uygun ekleme aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cümlenin başına \"Çocuk\" öznesi getirilmelidir.",
+            "İlk cümlenin sonuna \"onu\" nesnesi getirilmelidir.",
+            "İkinci cümlenin başına \"onu\" nesnesi getirilmelidir.",
+            "İkinci cümlenin sonuna \"edilmedi\" yüklemi getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde, anlatım bozukluğunun nedeni \"aynı zamanda çelişen anlamlar\" içermesidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Arkadaşının evini aradı, fakat bulamadı.",
+            "Bu işte bana yardım eder misin, yoksa etmez misin?",
+            "Tam üç aydır, sanırım bu konuyu tartışıyoruz.",
+            "O, bu teklife olumsuz bir yanıt verdi."
+          ]
+        },
+        {
+          "soruMetni": "\"İnsanların eğitimi ve sağlığı için çok çalışılmalı, gereken önem verilmelidir.\" cümlesindeki anlatım bozukluğunun nedeni aşağıdakilerin hangisinde doğru verilmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Nesne eksikliği",
+            "Özne-yüklem uyuşmazlığı",
+            "Dolaylı tümleç eksikliği",
+            "Tamlama yanlışlığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğu, cümlenin yükleminin etken (I. cümle) olmasından kaynaklanmaktadır?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Büyümek",
-            "Uyumak",
-            "Koşmak",
-            "Okumak"
+            "(I) Kapı yavaşça açıldı ve (II) içeri girildi.",
+            "(I) Önce bütün dersler tekrar edildi, (II) sonra çalışmaya başlandı.",
+            "(I) Bütün belgeler toplandı, (II) incelenmeye alındı.",
+            "(I) Bütün görevler verildi ama (II) kimse üstlenmedi."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki fiillerden hangisi Oluş Fiili'dir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Uyumak",
-            "Büyümek",
-            "Gelmek",
-            "Yemek"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki fiillerden hangisi Duyulan Geçmiş Zaman kipiyle çekimlenmiştir?",
+          "soruMetni": "Aşağıdaki cümlelerden hangisi, sadece bir sözcük değiştirilerek anlam belirsizliği giderilebilir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Gelmiş",
-            "Geliyor",
-            "Gelecek",
-            "Gelmeli"
+            "Okulda onu çok özlediğini söyledi.",
+            "Sınavdaki başarısı, herkesi şaşırttı.",
+            "Çok yürüdüğü için ayakları şişmişti.",
+            "Ona, bu konuyu anlatmalısın."
           ]
         },
         {
-          "soruMetni": "\"Babam, her sabah erken kalkar.\" cümlesinde fiil, hangi kiple çekimlenmiştir?",
+          "soruMetni": "\"Yeni aldığı araba, eski arabasına göre daha pahalıydı.\" cümlesindeki anlatım bozukluğu türü ve giderme yolu aşağıdakilerden hangisidir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Öğrenilen Geçmiş Zaman",
-            "Şimdiki Zaman",
-            "Geniş Zaman",
-            "Gelecek Zaman"
+            "Gereksiz sözcük kullanımı \u2192 'daha' sözcüğü çıkarılmalıdır.",
+            "Karşılaştırma hatası \u2192 'göre' edatı çıkarılmalıdır.",
+            "Tamlama yanlışlığı \u2192 'eski arabasına göre' yerine 'eski arabasından' getirilmelidir.",
+            "Çelişen anlamlar \u2192 'pahalıydı' yerine 'ucuzdu' getirilmelidir."
           ]
         },
         {
-          "soruMetni": "\"Haftaya buraya geliyorsun.\" cümlesinde görülen anlam (zaman) kayması nedir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Duyulan Geçmiş Zaman $\rightarrow$ Şimdiki Zaman",
-            "Şimdiki Zaman $\rightarrow$ Gelecek Zaman",
-            "Geniş Zaman $\rightarrow$ Emir Kipi",
-            "Şimdiki Zaman $\rightarrow$ İstek Kipi"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Ek Fiil (Ek Eylem) kullanılmıştır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğunun nedeni, bir ismin iki farklı tamlayanla kullanılamamasıdır?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Hava bugün çok \"güzeldi\".",
-            "Okuldan \"geliyorum\".",
-            "Kitabı \"okumuş\".",
-            "Buraya \"gelecek\"."
+            "Ekonomik ve sağlık alanında sorunlar yaşandı.",
+            "Kimse onu takdir etmiyor, sevmiyor.",
+            "O, bu konuda bana güvenir, yardım eder.",
+            "Kitap okumayı sever, değer verir."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde fiil, geçişli olduğu hâlde nesne kullanılmamıştır?",
+          "soruMetni": "\"Onun için söylenen bütün sözleri kulağının arkasına attı.\" cümlesindeki anlatım bozukluğunu gidermek için hangi sözcükle yer değiştirmek gerekir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Çocuk camı \"kırdı\".",
-            "Bütün gün \"koştu\".",
-            "\"Okudu\" ve uyudu.",
-            "Hava aniden \"karardı\"."
+            "\u2192 göz ardı etti",
+            "\u2192 kulak astı",
+            "\u2192 kulak arkası etti",
+            "\u2192 önemsemedi"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde isim görevli bir Fiilimsi kullanılmıştır?",
+          "soruMetni": "\"Onun çok yorgun olduğu belliydi.\" cümlesindeki anlatım bozukluğunun nedeni, aşağıdakilerin hangisinde yanlış gösterilmiştir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "\"Gülüşü\", herkesi mutlu etti.",
-            "\"Geldiğini\" gördüm.",
-            "Koşan \"adamı\" gördüm.",
-            "\"Gelecek\" yıl tatile çıkacağız."
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Gereksiz sözcük kullanımı",
+            "Anlam belirsizliği",
+            "Çelişen sözcüklerin bir arada kullanılması"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Yardımcı Fiil ile kurulmuş birleşik fiil vardır?",
+          "soruMetni": "\"İlk defa evine gittik; ancak pek kalamadık.\" cümlesinin anlam bütünlüğünü sağlamak için II. cümlenin başına hangi öge getirilmelidir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Bizi görünce çok \"seviniverdi\".",
-            "Bu konuda ona \"yardım ettim\".",
-            "Kapıyı hızlıca \"açabildi\".",
-            "Bütün gün \"uyuyakaldı\"."
+            "Bizi",
+            "Orada",
+            "Biz",
+            "Onlar"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Fiilimsilerle oluşturulmuş bir grup vardır?",
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğunun nedeni yüklemin tekil olmasıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hiçbiri ders çalışmıyorlardı.",
+            "Bütün çocuklar dışarı çıktı.",
+            "Ali ve Ayşe dışarı çıktılar.",
+            "Birkaç öğrenci içeri girdi."
+          ]
+        },
+        {
+          "soruMetni": "\"Sınavda başarılı olamazsa, onu ailesi de desteklemeyecektir.\" cümlesindeki anlatım bozukluğunun giderilmesi için ne yapılmalıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'onu' sözcüğü cümleden çıkarılmalıdır.",
+            "'ona' dolaylı tümleci getirilmelidir.",
+            "'aileler' şeklinde çoğul yapılmalıdır.",
+            "'başarılı olamazsa' yerine 'başarısız olursa' getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "\"O, bu işi çok, ben ise az isterim.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "\"Çalışmaya\" devam etti.",
-            "\"Koşan\" çocukları gördüm.",
-            "\"Duvarları\" boyayan \"adam\" hızlıydı.",
-            "\"Koşarak\" yanıma geldi."
+            "İkinci cümlenin başına 'istemeyi' nesnesi getirilmelidir.",
+            "İkinci cümlenin sonuna 'isterim' yüklemi getirilmelidir.",
+            "İlk cümlenin sonuna 'ister' yüklemi getirilmelidir.",
+            "İkinci cümlenin başına 'para' nesnesi getirilmelidir."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde fiil farklı bir çatı özelliği taşır?",
+          "soruMetni": "\"Kapı çalındı, kimse içeri alındı.\" cümlesindeki anlatım bozukluğunu gidermek için II. cümlenin başına ne getirilmelidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "\u2192 Çocuk",
+            "\u2192 Adam",
+            "\u2192 Kapıyı çalan",
+            "\u2192 Gelen"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi, Özne Eksikliğinden kaynaklanan bir anlatım bozukluğuna sahiptir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Kapı aniden \"açıldı\". (Edilgen)",
-            "Yollar \"temizlendi\". (Edilgen)",
-            "Öğrenci bu konuyu \"anladı\". (Etken)",
-            "Bütün sınıfta bu konu \"konuşuldu\". (Edilgen)"
+            "Yalan söylemeyi sevmez, inanmaz.",
+            "Ona güvenir, yardım ederim.",
+            "Kapı onarıldı, hemen boyandı.",
+            "Arkadaşını çok sever, sürekli ziyaret eder."
           ]
         },
         {
-          "soruMetni": "Aşağıdaki cümlelerin hangisinde Edat, cümleye neden-sonuç anlamı katmıştır?",
+          "soruMetni": "\"Bu kadar küçük bir hatadan dolayı onu kesinlikle affedebilirim.\" cümlesindeki anlatım bozukluğunun nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Sözcüğün yanlış yerde kullanılması",
+            "Anlamca çelişen sözcüklerin bir arada kullanılması",
+            "Mantık hatası"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde aynı ögenin iki farklı türde kullanılamaması bir anlatım bozukluğuna yol açmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Özel ve kamuya ait projeler denetlendi.",
+            "Ona güvenir ve yardım ederim.",
+            "Kitabı okudu, hemen özetledi.",
+            "Hiçbiri ders çalışmıyorlardı."
+          ]
+        },
+        {
+          "soruMetni": "\"Ona saygı duyar, yardım ederim.\" cümlesindeki anlatım bozukluğunu gidermek için, II. cümlenin başına hangi öge getirilmelidir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Senin \"gibi\" birini görmedim.",
-            "Hava \"soğuk olduğu için\" kalın giyindik.",
-            "Onu görmek \"üzere\" buraya geldi.",
-            "Kitap \"ile\" kalem masadaydı."
+            "\u2192 onu (Nesne)",
+            "\u2192 ona (Dolaylı Tümleç)",
+            "\u2192 o (Özne)",
+            "\u2192 buraya (Dolaylı Tümleç)"
+          ]
+        },
+        {
+          "soruMetni": "\"Çocukların kırmızı yanakları vardı.\" ifadesindeki anlatım bozukluğunu gidermek için hangi sözcükle yer değiştirmek gerekir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "\u2192 al yanakları",
+            "\u2192 kırmızı yüzleri",
+            "\u2192 alı yanakları",
+            "\u2192 kıpkırmızı yanakları"
+          ]
+        },
+        {
+          "soruMetni": "\"Sana yalan söylemeyi sevmez, inanmaz.\" cümlesindeki anlatım bozukluğunu gidermek için I. cümlenin sonuna ne eklenmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "\u2192 yalan söylemeye (Dolaylı Tümleç)",
+            "\u2192 ona (Dolaylı Tümleç)",
+            "\u2192 yalanı (Nesne)",
+            "\u2192 söyleyeni (Özne)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anlatim_bozuklugu_2",
+      "baslik": "Anlatım Bozukluğu-2",
+      "kategoriId": "turkce",
+      "konuId": "anlatim_bozuklugu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "\"Genç yazarın hayatında en büyük korktuğu şey, eserinin okunmamasıydı.\" cümlesindeki anlatım bozukluğunun nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sözcüğün yanlış yerde kullanılması",
+            "Gereksiz sözcük kullanımı",
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Anlamca çelişen sözcüklerin bir arada kullanılması"
+          ]
+        },
+        {
+          "soruMetni": "\"Bırakın karpuzu, kavun bile yetiştiremedik bu yıl.\" cümlesindeki mantık hatasını gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cümleden 'bile' sözcüğü çıkarılmalıdır.",
+            "'kavun' ile 'karpuzu' sözcükleri yer değiştirmelidir.",
+            "'karpuzu' sözcüğünün yerine 'domatesi' getirilmelidir.",
+            "'yetiştiremedik' yerine 'satamadık' getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Yazdığı denemeleri okuyunca çok beğendim.\" cümlesindeki anlam belirsizliğini gidermek için cümlenin başına hangi sözcüklerden biri getirilmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ben / Sen",
+            "Onun / Senin",
+            "Kitabı / Yazıyı",
+            "Yazar / Eleştirmen"
+          ]
+        },
+        {
+          "soruMetni": "\"Yaptığı araştırmalar, konuya yeterince ışık tutmuyor.\" cümlesindeki anlatım bozukluğunu gidermek için en uygun değişiklik aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'yeterince' yerine 'çok az' getirilmelidir.",
+            "'araştırmalar' sözcüğü çıkarılmalıdır.",
+            "'konuya' yerine 'konuyu' getirilmelidir.",
+            "Cümle olumsuzdan olumluya çevrilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Dün akşam Ali ile karşılıklı dertleştik.\" cümlesindeki anlatım bozukluğunun nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gereksiz ek kullanımı",
+            "Gereksiz sözcük kullanımı",
+            "Sözcüğün yanlış yerde kullanılması",
+            "Anlam belirsizliği"
+          ]
+        },
+        {
+          "soruMetni": "\"Ders çalışmaya başlayınca hemen uyuyuverdi.\" cümlesinde bulunan anlatım bozukluğunun nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Deyim yanlışlığı",
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Çelişen anlamlar",
+            "Çatı uyuşmazlığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğunun nedeni dolaylı tümleç eksikliğidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bu işi yapmak bana göre çok zor.",
+            "Yaşadığı şehri çok sever, sık sık ziyaret ederdi.",
+            "Ona güvenir, saygı duyardı.",
+            "Arkadaşını çok sever, sürekli ziyaret ederdi."
+          ]
+        },
+        {
+          "soruMetni": "\"Okulda onun çok başarılı olduğunu duydum.\" cümlesindeki anlam belirsizliğini gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "'onun' yerine 'sizin' zamiri getirilmelidir.",
+            "'olduğunu' yerine 'duymasını' getirilmelidir.",
+            "'onun' sözcüğü çıkarılmalıdır.",
+            "Cümlenin başına 'Ben' öznesi getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Özel ve devlet okulları bu projeye katılacak.\" cümlesindeki anlatım bozukluğunu gidermenin en pratik yolu nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'devlet' yerine 'kamu' sözcüğü getirilmelidir.",
+            "'özel' sözcüğü çıkarılmalıdır.",
+            "'özel'den sonra 'eğitim' sözcüğü eklenmelidir.",
+            "'devlet' sözcüğü çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "\"Yalan söylemeyi sevmez, kimseye inanmaz.\" cümlesindeki anlatım bozukluğunu gidermek için I. cümlenin sonuna hangi öge eklenmelidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "-> yalanı (Belirtili Nesne)",
+            "-> kimseye (Dolaylı Tümleç)",
+            "-> kimseyi (Belirtili Nesne)",
+            "-> yalan söylemeye (Dolaylı Tümleç)"
+          ]
+        },
+        {
+          "soruMetni": "\"Hiçbirimiz bu konuda ona yardım etmedik.\" cümlesindeki anlatım bozukluğunun nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nesne eksikliği",
+            "Özne-yüklem uyuşmazlığı",
+            "Tamlama yanlışlığı",
+            "Çatı uyuşmazlığı"
+          ]
+        },
+        {
+          "soruMetni": "\"Bu işi yapınca, sana büyük bir ün kazanmasını sağlayacağım.\" cümlesindeki anlatım bozukluğunu gidermek için en uygun değişiklik aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "'kazanmasını' yerine 'kazanacağını' getirilmelidir.",
+            "'sağlayacağım' yerine 'kazandıracağım' getirilmelidir.",
+            "'yapınca' yerine 'yaptığında' getirilmelidir.",
+            "'sana' yerine 'senin' getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Bu kadar çok çalıştığı için kesinlikle başarılı olabilir.\" cümlesinin anlamını düzeltmek için ne yapılmalıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "'kesinlikle' sözcüğü çıkarılmalıdır.",
+            "'olabilir' yerine 'olacaktır' getirilmelidir.",
+            "'çalıştığı' yerine 'çalıştığına göre' getirilmelidir.",
+            "'olabilir' ve 'kesinlikle' sözcüklerinden biri çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "\"O, her gün bize yardım etmeyi çok istiyordu.\" cümlesindeki anlatım bozukluğunun nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gereksiz sözcük kullanımı",
+            "Sözcüğün yanlış yerde kullanılması",
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Anlam belirsizliği"
+          ]
+        },
+        {
+          "soruMetni": "\"Çocuklar bahçede top oynuyorlardı.\" cümlesindeki anlatım bozukluğu nedeni ve düzeltilmiş şekli aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Özne-yüklem uyuşmazlığı; 'oynuyorlardı' yerine 'oynuyordu' getirilmelidir.",
+            "Özne-yüklem uyuşmazlığı; 'çocuklar' yerine 'çocuk' getirilmelidir.",
+            "Yüklem eksikliği; cümlenin sonuna 'biz' öznesi eklenmelidir.",
+            "Gereksiz sözcük kullanımı; 'top' çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğunun nedeni öznenin insan dışı bir varlık olmasıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bütün çiçekler açmışlardı.",
+            "Ali ile Ayşe dışarı çıktılar.",
+            "Hiçbiri ders çalışmıyorlardı.",
+            "O, bu teklifi kabul etmedi."
+          ]
+        },
+        {
+          "soruMetni": "\"Önce bütün dersler tekrar edildi, sonra çalışıldı.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İkinci yüklem 'çalışmaya başlandı' şeklinde değiştirilmelidir.",
+            "Birinci yüklem 'tekrar edildi' yerine 'tekrar edildiği için' getirilmelidir.",
+            "İkinci cümlenin başına 'biz' öznesi getirilmelidir.",
+            "İki cümle arasına bağlaç konulmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "\"Ona saygı duyar, güvenirdik.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "-> onu (Nesne) eklenmelidir.",
+            "-> ona (Dolaylı Tümleç) eklenmelidir.",
+            "-> ondan (Dolaylı Tümleç) eklenmelidir.",
+            "-> onu (Nesne) çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "\"Yaptıklarınla gözümden düştün.\" cümlesinin anlatım bozukluğu taşımaması için aşağıdaki durumların hangisinde kullanılması gerekir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kişi, çok çalıştığı için takdir edilmediğinde söylenir.",
+            "Kişi, beklenmedik bir hata yaptığında söylenir.",
+            "Kişi, başarılı olduğu için övüldüğünde söylenir.",
+            "Kişi, kendini çok yorduğunda söylenir."
+          ]
+        },
+        {
+          "soruMetni": "\"Seni ilk burada gördüm.\" cümlesindeki anlatım bozukluğunu gidermek için 'ilk' sözcüğü nereye taşınmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "-> cümlenin başına",
+            "-> 'gördüm' yükleminin önüne",
+            "-> 'burada' sözcüğünün önüne",
+            "-> cümlenin sonuna"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anlatim_bozuklugu_3",
+      "baslik": "Anlatım Bozuklukları-3",
+      "kategoriId": "turkce",
+      "konuId": "anlatim_bozuklugu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "\"Yaptığı bütün hatalara rağmen onun çok iyi biri olduğuna inanıyorum.\" cümlesindeki anlatım bozukluğunun sebebi nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gereksiz sözcük kullanımı",
+            "Tamlama yanlışlığı",
+            "Anlam belirsizliği",
+            "Sözcüğün yanlış anlamda kullanılması"
+          ]
+        },
+        {
+          "soruMetni": "\"Arkadaşını çok sever, sürekli ziyaret eder.\" cümlesinde anlatım bozukluğunu gidermek için II. cümlenin başına ne eklenmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "-> onu (Nesne)",
+            "-> ona (Dolaylı Tümleç)",
+            "-> kendisi (Özne)",
+            "-> evini (Nesne)"
+          ]
+        },
+        {
+          "soruMetni": "\"Ali'nin çok yorgun olduğu belliydi.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "'çok' yerine 'epey' getirilmelidir.",
+            "'belliydi' yerine 'sanılıyordu' getirilmelidir.",
+            "Cümleden 'olduğu' çıkarılmalıdır.",
+            "Cümle 'Ali çok yorgundu.' şeklinde kısaltılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde anlatım bozukluğunun nedeni yüklem ortaklığına gidilmemesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Oraya kimin geldiği merak ediliyor ve bekleniyor.",
+            "Roman sade, hikâyeleri ise karmaşıktı.",
+            "Ona güvenir, her şeyi anlatırdı.",
+            "Arkadaşını çok sever, sürekli ziyaret ederdi."
+          ]
+        },
+        {
+          "soruMetni": "\"Sana güveniyorum ve bu işi sana teslim ediyorum.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'sana' sözcüğü çıkarılmalıdır.",
+            "'güveniyorum' yerine 'inanıyorum' getirilmelidir.",
+            "'teslim ediyorum' yerine 'veriyorum' getirilmelidir.",
+            "'bu işi' nesnesi çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem eksikliğinden kaynaklanan bir anlatım bozukluğu vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "O, bu işi çok, ben ise az isterim.",
+            "Sınavda başarılı olan, Ali'ydi.",
+            "Hiçbiri ders çalışmıyorlardı.",
+            "Yalan söylemeyi sevmez, inanmaz."
+          ]
+        },
+        {
+          "soruMetni": "\"Dün akşam eve erken geldim.\" cümlesindeki anlatım bozukluğunu gidermek için 'erken' sözcüğünün yerine hangi sözcük gelmelidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "-> yavaşça",
+            "-> hızlıca",
+            "-> geç",
+            "-> hemen"
+          ]
+        },
+        {
+          "soruMetni": "\"Onun sözleri bizi çok üzdü.\" cümlesindeki anlam belirsizliğini gidermenin yolu nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "'onun' yerine 'sizin' getirilmelidir.",
+            "Cümlenin başına 'Ben' öznesi getirilmelidir.",
+            "'onun' sözcüğünden önce 'senin' getirilmelidir.",
+            "'onun' sözcüğünün yerine 'Ali' getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yüklem ortaklığına gidilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kitabı okudu, hemen özetledi.",
+            "Erken kalktı, kahvaltısını hazırladı.",
+            "O, bu konuyu tartıştı, sonra kapattı.",
+            "Öğretmenler odası temiz, öğrenciler ise kirliydi."
+          ]
+        },
+        {
+          "soruMetni": "\"Sınavda birinci olursan, sana çok para veririm.\" cümlesinde anlatım bozukluğunun nedeni nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Mantık hatası",
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Sözcüğün yanlış yerde kullanılması",
+            "Anlam belirsizliği"
+          ]
+        },
+        {
+          "soruMetni": "\"Bu kadar küçük bir hatadan dolayı onu kesinlikle affedebilirim.\" cümlesini düzeltmek için hangi sözcük çıkarılmalıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "onu",
+            "kesinlikle",
+            "affedebilirim",
+            "dolayı"
+          ]
+        },
+        {
+          "soruMetni": "\"Ali, Ayşe'den daha çok ders çalıştı.\" cümlesindeki anlatım bozukluğu nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sözcüğün yanlış anlamda kullanılması",
+            "Karşılaştırma hatası",
+            "Anlam belirsizliği",
+            "Gereksiz sözcük kullanımı"
+          ]
+        },
+        {
+          "soruMetni": "\"Kitap okumayı sever, değer verir.\" cümlesindeki anlatım bozukluğunu gidermek için I. cümlenin sonuna ne eklenmelidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "-> kitaba (Dolaylı Tümleç)",
+            "-> onu (Nesne)",
+            "-> okumaya (Dolaylı Tümleç)",
+            "-> kendine (Dolaylı Tümleç)"
+          ]
+        },
+        {
+          "soruMetni": "\"Onun çok yorgun olduğunu gördük.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "'gördük' yerine 'sandık' getirilmelidir.",
+            "'onun' sözcüğü çıkarılmalıdır.",
+            "'onun' yerine 'senin' getirilmelidir.",
+            "'olduğunu' sözcüğü çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "\"Yalan söylemeyi sevmez, inanmaz.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'kimseye' dolaylı tümleci getirilmelidir.",
+            "'yalanı' nesnesi getirilmelidir.",
+            "'söylemeye' dolaylı tümleci getirilmelidir.",
+            "'inanmaz' yerine 'sevmez' getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde çatı uyuşmazlığından kaynaklanan bir anlatım bozukluğu vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Önce bütün dersler tekrar edildi, sonra çalışıldı.",
+            "Herkes, bu konuda bana yardım etti.",
+            "O, bu konuda kimseye danışmadı.",
+            "Kitap okumak insana yeni dünyalar açar."
+          ]
+        },
+        {
+          "soruMetni": "\"Bu olayın nedeni onun bencil olmasındandır.\" cümlesindeki anlatım bozukluğunu gidermek için en uygun değişiklik nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "'olmasındandır' yerine 'olmasıdır' getirilmelidir.",
+            "'nedeni' sözcüğü çıkarılmalıdır.",
+            "'onun' sözcüğü çıkarılmalıdır.",
+            "'olmasındandır' yerine 'olmasından kaynaklanmaktadır' getirilmelidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Ona saygı duyar, güvenirdik.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "-> onu (Nesne) eklenmelidir.",
+            "-> ona (Dolaylı Tümleç) eklenmelidir.",
+            "-> ondan (Dolaylı Tümleç) eklenmelidir.",
+            "-> onu (Nesne) çıkarılmalıdır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde mantık hatası vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bırakın domatesi, patates bile yetiştiremedik.",
+            "Dışarıdaki gürültüden ders çalışamadık.",
+            "Bu işte başarılı olursan, sana çok para veririm.",
+            "İlk önce ders çalıştı, sonra televizyon izledi."
+          ]
+        },
+        {
+          "soruMetni": "\"Yaptıklarıyla gözümden düştü.\" cümlesindeki anlatım bozukluğunu gidermek için ne yapılmalıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "'yaptıklarıyla' yerine 'sözleriyle' getirilmelidir.",
+            "'gözümden düştü' yerine 'kırıldı' getirilmelidir.",
+            "'gözümden düştü' yerine 'takdir edildi' getirilmelidir.",
+            "Anlatım bozukluğu yoktur, deyim doğrudur."
           ]
         }
       ]
