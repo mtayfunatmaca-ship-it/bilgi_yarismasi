@@ -247,6 +247,66 @@
       "ad": "Anlatım Bozukluğu", 
       "kategoriId": "turkce", 
       "sira": 9
+    },
+    {
+      "id": "temel_kavramlar", 
+      "ad": "Temel Kavramlar", 
+      "kategoriId": "matematik", 
+      "sira": 1
+    },
+    {
+      "id": "ebob_ekok_asal_carpan", 
+      "ad": "EBOB-EKOK ve Asal Çarpanlara Ayırma", 
+      "kategoriId": "matematik", 
+      "sira": 2
+    },
+    {
+      "id": "rasyonel_sayilar", 
+      "ad": "Rasyonel Sayılar", 
+      "kategoriId": "matematik", 
+      "sira": 3
+    },
+    {
+      "id": "esitsizlik_ve_mutlak_deger", 
+      "ad": "Eşitsizlik ve Mutlak Değer", 
+      "kategoriId": "matematik", 
+      "sira": 4
+    },
+    {
+      "id": "uslu_koklu_sayilar", 
+      "ad": "Üslü ve Köklü Sayılar", 
+      "kategoriId": "matematik", 
+      "sira": 5
+    },
+    {
+      "id": "carpanlara_ayirma", 
+      "ad": "Çarpanlara Ayırla", 
+      "kategoriId": "matematik", 
+      "sira": 6
+    },
+    {
+      "id": "oran_oranti", 
+      "ad": "Oran-Orantı", 
+      "kategoriId": "matematik", 
+      "sira": 7
+    },
+    {
+      "id": "problemler", 
+      "ad": "Problemler", 
+      "kategoriId": "matematik", 
+      "sira": 8
+    },
+    {
+      "id": "kumeler", 
+      "ad": "Kümeler", 
+      "kategoriId": "matematik", 
+      "sira": 9
+    },
+    {
+      "id": "permutasyon_kombinasyon_olasilik", 
+      "ad": "Permütasyon, Kombinasyon, Olasılık", 
+      "kategoriId": "matematik", 
+      "sira": 10
     }
   ],
   
@@ -30175,6 +30235,2326 @@
       ]
     }
   ]
+},
+{
+  "id": "temel_kavramlar_1",
+  "baslik": "Temel Kavramlar-1",
+  "kategoriId": "matematik",
+  "konuId": "temel_kavramlar",
+  "isNew": false,
+  "soruSayisi": 10,
+  "sureDakika": 10,
+  "sorular": [
+    {
+      "soruMetni": "a ve b pozitif tam sayılardır. 3a + 2b = 40 olduğuna göre, a*b çarpımının alabileceği en büyük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "54",
+        "60",
+        "64",
+        "66"
+      ]
+    },
+    {
+      "soruMetni": "x, y ve z birbirinden farklı pozitif tam sayılardır. 3x + 2y + z = 30 olduğuna göre, z'nin alabileceği en büyük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "23",
+        "24",
+        "25",
+        "26"
+      ]
+    },
+    {
+      "soruMetni": "A, B, C birbirinden farklı rakamlardır. 2A - 3B + 4C ifadesinin alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "-21",
+        "-22",
+        "-23",
+        "-24"
+      ]
+    },
+    {
+      "soruMetni": "a, b, c birer tam sayı olmak üzere, 5a - b = 3c + 2 eşitliği veriliyor. Buna göre, aşağıdakilerden hangisi daima doğrudur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "a çifttir.",
+        "b tektir.",
+        "a+b çifttir.",
+        "b ve c aynı anda tek olamaz."
+      ]
+    },
+    {
+      "soruMetni": "x < y < z olmak üzere, x, y, z ardışık üç çift sayıdır. (x-z)*(y-z) + (x-y) işleminin sonucu kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ]
+    },
+    {
+      "soruMetni": "(8! + 7!)/(6!) işleminin sonucu kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "50",
+        "56",
+        "60",
+        "63"
+      ]
+    },
+    {
+      "soruMetni": "Bir bölme işleminde bölünen ve bölenin toplamı 133, bölüm 8 ve kalan 7'dir. Buna göre, bölen kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ]
+    },
+    {
+      "soruMetni": "Beş basamaklı 3x45y sayısı 45 ile tam bölünebilmektedir. Buna göre, x'in alabileceği en büyük değer kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "soruMetni": "Dört basamaklı 5A3B sayısının 9 ile bölümünden kalan 2'dir. Bu sayı 4 ile tam bölünebildiğine göre, A'nın alabileceği değerler toplamı kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "10",
+        "12",
+        "14",
+        "16"
+      ]
+    },
+    {
+      "soruMetni": "Bir doğal sayının 6 ile bölümünden kalan 4'tür. Aynı doğal sayının karesinin 12 ile bölümünden kalan kaçtır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ]
+    }
+  ]
+},
+{
+  "id": "temel_kavramlar_2",
+  "baslik": "Temel Kavramlar-2",
+  "kategoriId": "matematik",
+  "konuId": "temel_kavramlar",
+  "isNew": false,
+  "soruSayisi": 20,
+  "sureDakika": 20,
+  "sorular": [
+    {
+      "soruMetni": "a, b, c birbirinden farklı rakamlardır. \n\n3a - 2b + 5c ifadesinin alabileceği en büyük değer kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "61",
+        "62",
+        "63",
+        "64"
+      ]
+    },
+    {
+      "soruMetni": "x, y, z pozitif tam sayılardır. \n\nx ⋅ y = 24 \n\ny ⋅ z = 36 \n\nolduğuna göre, x + y + z toplamının alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "15",
+        "17",
+        "18",
+        "21"
+      ]
+    },
+    {
+      "soruMetni": "a, b, c tam sayılardır. \n\na + b = 9 \n\nb + c = 15 \n\nolduğuna göre, a² + c² toplamının alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "18",
+        "20",
+        "26",
+        "34"
+      ]
+    },
+    {
+      "soruMetni": "x bir çift tam sayı olduğuna göre, aşağıdakilerden hangisi daima tek sayıdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "x + 4",
+        "x² - 2x",
+        "3x + 6",
+        "x² + x + 1"
+      ]
+    },
+    {
+      "soruMetni": "a ve b birer doğal sayı olmak üzere, a ⋅ b = 7a + 18 olduğuna göre, b'nin alabileceği kaç farklı değer vardır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "6",
+        "4",
+        "3",
+        "2"
+      ]
+    },
+    {
+      "soruMetni": "Ardışık 4 tek tam sayının toplamı 80'dir. \n\nBu sayıların en küçüğü kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "17",
+        "19",
+        "21",
+        "23"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ifadelerden hangisi her zaman doğrudur?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "Çift iki tam sayının çarpımı tektir.",
+        "İrrasyonel iki sayının çarpımı irrasyoneldir.",
+        "Bir rasyonel sayı ile bir irrasyonel sayının toplamı rasyoneldir.",
+        "a⋅b tek ise, a ve b tek sayılardır."
+      ]
+    },
+    {
+      "soruMetni": "a, b, c pozitif tam sayılardır. \n\n3a = 4b \n\n2b = 5c \n\nolduğuna göre, a+b+c toplamının alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "30",
+        "38",
+        "47",
+        "54"
+      ]
+    },
+    {
+      "soruMetni": "Birbirinden farklı 5 doğal sayının toplamı 135'tir. \n\nBu sayılardan en büyüğü en çok kaç olabilir?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "121",
+        "123",
+        "124",
+        "125"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdakilerden hangisi bir rasyonel sayı değildir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "0,5",
+        "√27",
+        "3/4",
+        "0"
+      ]
+    },
+    {
+      "soruMetni": "x bir tam sayı olmak üzere, \n\n(3x+18) / (x+4) ifadesini tam sayı yapan kaç farklı x değeri vardır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "soruMetni": "a ve b tam sayıları için, a² - 4 = 3b olduğuna göre, aşağıdakilerden hangisi daima doğrudur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "a tektir.",
+        "a çifttir.",
+        "b tektir.",
+        "b çifttir."
+      ]
+    },
+    {
+      "soruMetni": "x, y, z ardışık tam sayılar ve x < y < z'dir. \n\n(x-y) ⋅ (y-z) + (x-z) işleminin sonucu kaçtır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "-1",
+        "0",
+        "1",
+        "2"
+      ]
+    },
+    {
+      "soruMetni": "A, B, C birer tam sayıdır. \n\nA ⋅ B < 0 \n\nA ⋅ C > 0 \n\nB + C < 0 \n\nolduğuna göre, A, B ve C'nin işaretleri sırasıyla nedir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "+, -, +",
+        "-, +, -",
+        "+, -, -",
+        "-, -, +"
+      ]
+    },
+    {
+      "soruMetni": "Dört basamaklı 7A3B sayısı 10 ile bölündüğünde kalan 6'dır. \n\nBu sayı 3 ile tam bölünebildiğine göre, A'nın alabileceği kaç farklı değer vardır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "soruMetni": "Bir K doğal sayısının 5 katının 3 eksiği bir çift sayıdır. \n\nBuna göre, aşağıdakilerden hangisi kesinlikle tek sayıdır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "K + 2",
+        "2K + 1",
+        "K² + 1",
+        "K + 4"
+      ]
+    },
+    {
+      "soruMetni": "x, y ve z birer tam sayıdır. \n\nx ⋅ y ⋅ z = 45 olduğuna göre, x + y + z toplamının alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "9",
+        "15",
+        "-45",
+        "-47"
+      ]
+    },
+    {
+      "soruMetni": "√3'ün yaklaşık değeri 1,732 olduğuna göre, √48 sayısının yaklaşık değeri kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "4,284",
+        "5,196",
+        "6,928",
+        "8,304"
+      ]
+    },
+    {
+      "soruMetni": "İki basamaklı, rakamları farklı 4 farklı doğal sayının toplamı 80'dir. \n\nBu sayıların en büyüğü en çok kaç olabilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "47",
+        "48",
+        "50",
+        "52"
+      ]
+    },
+    {
+      "soruMetni": "Sayı doğrusu üzerinde iki tam sayı arasındaki uzaklık 14 birimdir. \n\nBu iki tam sayının toplamı 20 olduğuna göre, küçük olan sayı kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    }
+  ]
+},
+{
+  "id": "temel_kavramlar_3",
+  "baslik": "Temel Kavramlar-3",
+  "kategoriId": "matematik",
+  "konuId": "temel_kavramlar",
+  "isNew": false,
+  "soruSayisi": 10,
+  "sureDakika": 10,
+  "sorular": [
+    {
+      "soruMetni": "a ve b birer doğal sayı olmak üzere, \n\n3a + 5b = 60 olduğuna göre, a'nın alabileceği kaç farklı değer vardır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "soruMetni": "x, y, z birbirinden farklı tam sayılardır. \n\n-3 < x < 4 \n\n-1 ≤ y < 5 \n\n-2 < z ≤ 3 \n\nolduğuna göre, x + y + z toplamının alabileceği en büyük değer kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ]
+    },
+    {
+      "soruMetni": "Üç basamaklı birbirinden farklı dört doğal sayının toplamı 340'tır. \n\nBu sayıların en küçüğü en çok kaç olabilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "82",
+        "83",
+        "84",
+        "85"
+      ]
+    },
+    {
+      "soruMetni": "a bir tam sayı olmak üzere, \n\n(4a - 10) / (a + 1) ifadesi bir tam sayıya eşit ise, a'nın alabileceği kaç farklı tam sayı değeri vardır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "4",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "soruMetni": "Aşağıdaki ifadelerden hangisi yanlıştır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "En küçük doğal sayı 0'dır.",
+        "İki tam sayının çarpımı daima bir tam sayıdır.",
+        "Pozitif doğal sayılar kümesi, pozitif tam sayılar kümesine eşittir.",
+        "Negatif tam sayılar kümesi sonsuz elemanlıdır ve en büyük elemanı -1'dir."
+      ]
+    },
+    {
+      "soruMetni": "x, y doğal sayı olmak üzere, \n\nx² = 4y + 11 olduğuna göre, x'in alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ]
+    },
+    {
+      "soruMetni": "a, b birer tam sayı ve a ≠ b olmak üzere, \n\na ⋅ b = 5(a + b) \n\neşitliğini sağlayan kaç farklı (a, b) tam sayı ikilisi vardır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ]
+    },
+    {
+      "soruMetni": "Dört farklı negatif tam sayının toplamı -60'tır. \n\nBu sayılardan en büyüğü en çok kaç olabilir?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "-12",
+        "-13",
+        "-14",
+        "-15"
+      ]
+    },
+    {
+      "soruMetni": "A, B, C birer doğal sayıdır. \n\nA + B = 10 \n\nA + C = 15 \n\nolduğuna göre, B + C toplamının alabileceği en küçük değer kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "13",
+        "14",
+        "15",
+        "16"
+      ]
+    },
+    {
+      "soruMetni": "İki basamaklı 4 farklı tam sayının toplamı -36'dır. \n\nBu sayıların en küçüğü en az kaç olabilir?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "-99",
+        "-69",
+        "-63",
+        "-36"
+      ]
+    }
+  ]
+},
+{
+  "id": "temel_kavramlar_4",
+  "baslik": "Temel Kavramlar-4",
+  "kategoriId": "matematik",
+  "konuId": "temel_kavramlar",
+  "isNew": false,
+  "soruSayisi": 10,
+  "sureDakika": 10,
+  "sorular": [
+    {
+      "soruMetni": "(n+1)! + n! = 7 ⋅ n! olduğuna göre, n kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "soruMetni": "A ve B birer rakam olmak üzere, (AB) ve (BA) iki basamaklı sayılardır. \n\n(AB) + (BA) = 132 olduğuna göre, A + B toplamı kaçtır?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "12",
+        "11",
+        "10",
+        "9"
+      ]
+    },
+    {
+      "soruMetni": "0! + 1! + 2! + ... + 20! toplamının birler basamağındaki rakam kaçtır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ]
+    },
+    {
+      "soruMetni": "Üç basamaklı bir doğal sayının sağına 2 rakamı eklendiğinde oluşan dört basamaklı sayı, ilk sayıdan 1802 daha büyük olmaktadır. \n\nBuna göre, bu üç basamaklı sayı kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "180",
+        "190",
+        "200",
+        "202"
+      ]
+    },
+    {
+      "soruMetni": "10! sayısı en büyük hangi tam sayı kuvveti ile çarpılırsa sonuç bir tam sayının karesi olur?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "30",
+        "70",
+        "140",
+        "210"
+      ]
+    },
+    {
+      "soruMetni": "x! / (x-2)! = 42 olduğuna göre, x kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "5",
+        "6",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "soruMetni": "a, b, c sıfırdan farklı rakamlar olmak üzere, \n\nÜç basamaklı (abc) sayısında a'nın değeri 3 artırılıp, b'nin değeri 2 azaltılırsa sayı kaç artar?",
+      "dogruCevapIndex": 0,
+      "secenekler": [
+        "280",
+        "278",
+        "270",
+        "268"
+      ]
+    },
+    {
+      "soruMetni": "15! sayısının sondan kaç basamağı sıfırdır?",
+      "dogruCevapIndex": 1,
+      "secenekler": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "soruMetni": "x, y, z birer rakamdır. \n\n(xy) ve (yx) iki basamaklı sayılardır. \n\n(xy) = 2(yx) + 1 olduğuna göre, x + y toplamı kaçtır?",
+      "dogruCevapIndex": 2,
+      "secenekler": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "soruMetni": "A ve B birer tam sayı olmak üzere, \n\n18! = 2ᴬ ⋅ 3ᴮ ⋅ K eşitliğinde K sayısı 2 ve 3 ile tam bölünemeyen bir sayı olduğuna göre, A + B toplamı kaçtır?",
+      "dogruCevapIndex": 3,
+      "secenekler": [
+        "20",
+        "21",
+        "22",
+        "23"
+      ]
+    }
+  ]
+},
+{
+"id": "temel_kavramlar_5",
+"baslik": "Temel Kavramlar-5",
+"kategoriId": "matematik",
+"konuId": "temel_kavramlar",
+"isNew": true,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Bir bölme işleminde bölünen ve bölenin toplamı 133, bölüm 8 ve kalan 7'dir. \n\nBuna göre, bölen kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "12",
+    "14",
+    "16",
+    "18"
+  ]
+},
+{
+  "soruMetni": "Beş basamaklı 3x45y sayısı 45 ile tam bölünebilmektedir. \n\nBuna göre, x'in alabileceği en büyük değer kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "5",
+    "6",
+    "7",
+    "8"
+  ]
+},
+{
+  "soruMetni": "Dört basamaklı 5A3B sayısının 9 ile bölümünden kalan 2'dir. \n\nBu sayı 4 ile tam bölünebildiğine göre, A'nın alabileceği değerler toplamı kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "10",
+    "12",
+    "14",
+    "16"
+  ]
+},
+{
+  "soruMetni": "Bir doğal sayının 6 ile bölümünden kalan 4'tür. \n\nAynı doğal sayının karesinin 12 ile bölümünden kalan kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "4",
+    "6",
+    "8",
+    "10"
+  ]
+},
+{
+  "soruMetni": "Bir x doğal sayısının 15 ile bölümünden kalan 7'dir. \n\nBuna göre, 2x + 1 sayısının 5 ile bölümünden kalan kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ]
+},
+{
+  "soruMetni": "Dört basamaklı 7A2B sayısı 11 ile tam bölünebilmektedir. \n\nBu sayının 5 ile bölümünden kalan 4 olduğuna göre, A'nın alabileceği değerler toplamı kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "10",
+    "12",
+    "14",
+    "16"
+  ]
+},
+{
+  "soruMetni": "Üç basamaklı 4AB sayısı 3 ve 8 ile tam bölünebilmektedir. \n\nBuna göre, A'nın alabileceği kaç farklı değer vardır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ]
+},
+{
+  "soruMetni": "A sayısının B ile bölümünden bölüm 5, kalan 3'tür. \n\nB sayısının C ile bölümünden bölüm 4, kalan 2'dir. \n\nA'nın C türünden eşiti aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "20C + 13",
+    "20C + 10",
+    "20C + 13",
+    "5C + 7"
+  ]
+},
+{
+  "soruMetni": "Beş basamaklı 843x7 sayısının 9 ile bölümünden kalan 5 olduğuna göre, x rakamı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "4",
+    "5",
+    "6",
+    "7"
+  ]
+},
+{
+  "soruMetni": "Rakamları farklı dört basamaklı en büyük sayının 6 ile bölümünden kalan kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ]
+}
+]
+},
+{
+"id": "ebob_ekok_asal_carpan_1",
+"baslik": "EBOB-EKOK ve Asal Çarpanlara Ayırma-1",
+"kategoriId": "matematik",
+"konuId": "ebob_ekok_asal_carpan",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "A = 2³ ⋅ 3² ⋅ 5¹ \n\nB = 2¹ ⋅ 3³ ⋅ 7² \n\nsayıları veriliyor. \n\nEBOB(A, B) kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "36",
+    "72",
+    "108",
+    "216"
+  ]
+},
+{
+  "soruMetni": "x ve y aralarında asal iki doğal sayıdır. \n\nEBOB(x, y) + EKOK(x, y) = 61 olduğuna göre, x + y toplamının alabileceği en büyük değer kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "15",
+    "17",
+    "19",
+    "21"
+  ]
+},
+{
+  "soruMetni": "720 sayısının pozitif tam sayı bölenlerinin sayısı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "18",
+    "24",
+    "30",
+    "36"
+  ]
+},
+{
+  "soruMetni": "32, 48 ve 80 cm boyutlarındaki dikdörtgenler prizması şeklindeki bir kutunun içini tam dolduracak şekilde en büyük hacimli eş küplerden kaç tane gereklidir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "120",
+    "160",
+    "200",
+    "240"
+  ]
+},
+{
+  "soruMetni": "A = 2¹ ⋅ 3³ ⋅ 5² \n\nB = 2² ⋅ 3¹ ⋅ 7¹ \n\nsayıları veriliyor. \n\nEKOK(A, B) kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "1260",
+    "6300",
+    "12600",
+    "25200"
+  ]
+},
+{
+  "soruMetni": "Kenar uzunlukları 24 metre ve 30 metre olan dikdörtgen şeklindeki bir tarlanın etrafına ve köşelerine eşit aralıklarla ağaç dikilecektir. \n\nEn az kaç ağaç gereklidir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "16",
+    "18",
+    "20",
+    "22"
+  ]
+},
+{
+  "soruMetni": "x bir tam sayı olmak üzere, \n\n300 ⋅ x çarpımının bir tam kare sayı olması için x en az kaç olmalıdır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "2",
+    "3",
+    "5",
+    "3"
+  ]
+},
+{
+  "soruMetni": "4, 6 ve 8'e bölündüğünde her defasında 3 kalanını veren üç basamaklı en küçük doğal sayı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "123",
+    "120",
+    "103",
+    "99"
+  ]
+},
+{
+  "soruMetni": "360 sayısının asal olmayan tam sayı bölenlerinin sayısı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "21",
+    "45",
+    "46",
+    "48"
+  ]
+},
+{
+  "soruMetni": "Toplamları 77 olan iki doğal sayının EBOB'u 7 olduğuna göre, bu sayılardan küçük olanı en az kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "7",
+    "14",
+    "21",
+    "28"
+  ]
+}
+]
+},
+{
+"id": "ebob_ekok_asal_carpan_2",
+"baslik": "EBOB-EKOK ve Asal Çarpanlara Ayırma-2",
+"kategoriId": "matematik",
+"konuId": "ebob_ekok_asal_carpan",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "3(x - 2) + 2x = 4x - 10 \n\nDenklemini sağlayan x değeri kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "-2",
+    "-4",
+    "2",
+    "4"
+  ]
+},
+{
+  "soruMetni": "x - [2x - (3x + 1)] = 12 \n\nDenklemini sağlayan x değeri kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "11",
+    "10",
+    "9",
+    "8"
+  ]
+},
+{
+  "soruMetni": "(x + 1)/2 + (x - 1)/3 = 5 \n\nDenklemini sağlayan x değeri kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "4",
+    "5",
+    "6",
+    "7"
+  ]
+},
+{
+  "soruMetni": "a ve b sıfırdan farklı tam sayılar olmak üzere, \n\n3a - 5b = 21 \n\n2a + b = 1 \n\ndenklemlerini sağlayan a ve b değerleri için a + b toplamı kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "0",
+    "-1",
+    "1",
+    "2"
+  ]
+},
+{
+  "soruMetni": "k bir gerçel sayı olmak üzere, \n\n(k-2)x + 5 = 3x - 2 \n\ndenkleminin çözüm kümesi boş küme olduğuna göre, k kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1",
+    "5",
+    "2",
+    "3"
+  ]
+},
+{
+  "soruMetni": "x / (x - 2) - 2 / (x - 2) = 1 \n\nDenkleminin çözüm kümesi aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "{1}",
+    "R",
+    "R - {2}",
+    "∅ (Boş Küme)"
+  ]
+},
+{
+  "soruMetni": "a - b = 5 \n\nb + c = 8 \n\nolduğuna göre, a + 2c - 2b ifadesinin değeri kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "18",
+    "19",
+    "21",
+    "23"
+  ]
+},
+{
+  "soruMetni": "3x - y = 10 \n\nx + y = 6 \n\nDenklem sistemine göre, x ⋅ y çarpımı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "8",
+    "10",
+    "12",
+    "15"
+  ]
+},
+{
+  "soruMetni": "k bir gerçel sayı olmak üzere, \n\n3x - 4k + 1 = 5 \n\ndenklemini sağlayan x değeri x = 8 olduğuna göre, k kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "4",
+    "5",
+    "6",
+    "5"
+  ]
+},
+{
+  "soruMetni": "3a - 2b = 4 \n\n6a - 4b = 8 \n\nDenklem sisteminin çözüm kümesi hakkında aşağıdakilerden hangisi doğrudur?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "Çözüm kümesi tek elemanlıdır.",
+    "Çözüm kümesi sonsuz elemanlıdır.",
+    "Çözüm kümesi boş kümedir.",
+    "Çözüm kümesi iki elemanlıdır."
+  ]
+}
+]
+},
+{
+"id": "rasyonel_sayilar_1",
+"baslik": "Rasyonel Sayılar-1",
+"kategoriId": "matematik",
+"konuId": "rasyonel_sayilar",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n(1 - 1/2) ⋅ (1 - 1/3) ⋅ (1 - 1/4) ⋅ ... ⋅ (1 - 1/10)",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "1/2",
+    "1/5",
+    "1/9",
+    "1/10"
+  ]
+},
+{
+  "soruMetni": "İşleminin sonucu kaçtır?\n\n(2/3 + 1/4) / (2/3 - 1/4)",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "7/11",
+    "11/5",
+    "5/11",
+    "3"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki ondalık gösterimlerden hangisi bir rasyonel sayı değildir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "0,333...",
+    "5,42",
+    "π (Pi Sayısı)",
+    "0"
+  ]
+},
+{
+  "soruMetni": "Devirli ondalık gösterimi verilen 1,2̄ sayısının rasyonel karşılığı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "11/9",
+    "12/10",
+    "1/2",
+    "11/10"
+  ]
+},
+{
+  "soruMetni": "x = 0,3 \n\ny = 0,3̄ \n\nz = 0,33 \n\nolduğuna göre, aşağıdaki sıralamalardan hangisi doğrudur?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "x < z < y",
+    "x < y < z",
+    "z < x < y",
+    "y < x < z"
+  ]
+},
+{
+  "soruMetni": "İşleminin sonucu kaçtır?\n\n(2 + 1/3) / (1 - 1/4) ⋅ (1/2)",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "5/4",
+    "7/6",
+    "8/5",
+    "7/9"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki rasyonel sayılardan hangisi en büyüktür?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "4/9",
+    "5/11",
+    "6/13",
+    "7/15"
+  ]
+},
+{
+  "soruMetni": "İşleminin sonucu kaçtır?\n\n1 / [ 1 + (1 / 1 - 1/2) ]",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1/4",
+    "1/3",
+    "2/3",
+    "3/4"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki eşitliklerden hangisi yanlıştır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "0,25 = 1/4",
+    "0,9̄ = 1",
+    "1,0̄ = 1",
+    "0,1̄ = 1/10"
+  ]
+},
+{
+  "soruMetni": "Bir kesrin değeri 2/3'tür. \n\nBu kesrin payına 2 eklenir ve paydasından 1 çıkarılırsa kesrin değeri 5/6 oluyor. \n\nBuna göre, bu kesrin paydası kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "18",
+    "15",
+    "12",
+    "9"
+  ]
+}
+]
+},
+{
+"id": "esitsizlik_ve_mutlak_deger_1",
+"baslik": "Eşitsizlik ve Mutlak Değer-1",
+"kategoriId": "matematik",
+"konuId": "esitsizlik_ve_mutlak_deger",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "x bir tam sayı olmak üzere, \n\n-3 < 2x - 1 ≤ 7 eşitsizliğini sağlayan kaç farklı x tam sayısı vardır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki eşitsizliklerden hangisi mutlak değer kullanılarak |x - a| ≤ b şeklinde yazılabilir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "-5 ≤ x ≤ 1",
+    "x > 5 veya x < -1",
+    "x > 3",
+    "x ≤ -2"
+  ]
+},
+{
+  "soruMetni": "Mutlak değeri 5'ten küçük olan kaç farklı tam sayı vardır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "8",
+    "9",
+    "10",
+    "11"
+  ]
+},
+{
+  "soruMetni": "x ve y birer tam sayıdır. \n\n-2 ≤ x < 5 \n\n-4 < y ≤ 3 \n\nolduğuna göre, 3x - 2y ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "18",
+    "19",
+    "20",
+    "21"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki denklemi sağlayan x değerlerinin toplamı kaçtır?\n\n|2x - 6| = 10",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "4",
+    "6",
+    "8",
+    "12"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki eşitsizliğin çözüm kümesi nedir?\n\n|x - 5| ≥ 2",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "[3, 7]",
+    "(-∞, 3)",
+    "(7, ∞)",
+    "(-∞, 3] ∪ [7, ∞)"
+  ]
+},
+{
+  "soruMetni": "x, y birer gerçel sayıdır. \n\n|x| = 3 \n\n|y| = 2 \n\nolduğuna göre, x - y farkının alabileceği en küçük değer kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "-5",
+    "-1",
+    "1",
+    "5"
+  ]
+},
+{
+  "soruMetni": "a, b birer gerçel sayıdır. \n\n1 < a < 5 \n\n-4 < b < -1 \n\nolduğuna göre, a/b oranı hangi aralıkta yer alır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "(-5, -1/4)",
+    "(-5, -1/4)",
+    "(-1/4, -5)",
+    "(-5, -1)"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki denklemin çözüm kümesi nedir?\n\n|x - 3| + |3 - x| = 12",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "{9}",
+    "{-3}",
+    "{-3, 9}",
+    "∅ (Boş Küme)"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki eşitsizliği sağlayan en küçük ve en büyük tam sayıların toplamı kaçtır?\n\n|2x + 1| < 7",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "-4",
+    "0",
+    "2",
+    "-1"
+  ]
+}
+]
+},
+{
+"id": "uslu_koklu_sayilar_1",
+"baslik": "Üslü ve Köklü Sayılar",
+"kategoriId": "matematik",
+"konuId": "uslu_koklu_sayilar",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n(2⁰ + 3⁻¹) / (2⁻¹ - 3⁰)",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "-4/3",
+    "-2/3",
+    "1/3",
+    "4/3"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n(3²)⁴ ⋅ (3⁻⁵) / 3³",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "3",
+    "9",
+    "27",
+    "81"
+  ]
+},
+{
+  "soruMetni": "x = 2⁴ \n\ny = 8² \n\nz = 4³ \n\nolduğuna göre, aşağıdaki sıralamalardan hangisi doğrudur?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "x < y < z",
+    "x < z < y",
+    "y < x < z",
+    "x = y = z"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki denklemi sağlayan x değeri kaçtır?\n\n2ˣ⁺³ = 16",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "0",
+    "1",
+    "2",
+    "4"
+  ]
+},
+{
+  "soruMetni": "İfadesinin eşiti aşağıdakilerden hangisidir?\n\n√12 + √27 - √3",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "2√3",
+    "3√3",
+    "4√3",
+    "5√3"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n√[3√8 + √2]",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "3√2",
+    "4",
+    "2√5",
+    "√18"
+  ]
+},
+{
+  "soruMetni": "Denklemini sağlayan x değeri kaçtır?\n\n√[x - 1] = 5",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "6",
+    "11",
+    "25",
+    "26"
+  ]
+},
+{
+  "soruMetni": "Aşağıdaki ifadenin en sade şekli nedir?\n\n(2⁵ + 2⁶ + 2⁷) / (2⁵)",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "4",
+    "6",
+    "7",
+    "8"
+  ]
+},
+{
+  "soruMetni": "√[8] ⋅ √[18] işleminin sonucu kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "10",
+    "12",
+    "16",
+    "24"
+  ]
+},
+{
+  "soruMetni": "x ve y birer tam sayıdır. \n\n(x-2)² + (y+3)⁴ = 0 \n\nolduğuna göre, x + y toplamı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "-1",
+    "0",
+    "1",
+    "5"
+  ]
+}
+]
+},
+{
+"id": "carpanlara_ayirma_1",
+"baslik": "Çarpanlara Ayırma-1",
+"kategoriId": "matematik",
+"konuId": "carpanlara_ayirma",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "(x - 3y)² - (x + 3y)² \n\nifadesinin en sade şekli aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "12xy",
+    "-6xy",
+    "6xy",
+    "-12xy"
+  ]
+},
+{
+  "soruMetni": "a³ + 3a²b + 3ab² + b³ \n\nifadesinin çarpanlara ayrılmış şekli aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "(a + b)³",
+    "(a - b)³",
+    "a³ + b³",
+    "a² + 2ab + b²"
+  ]
+},
+{
+  "soruMetni": "x² - 9y² \n\nifadesi aşağıdakilerden hangisine eşittir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "(x - 3y)(x - 3y)",
+    "(x - 3y)(x + 3y)",
+    "(x - 9y)(x + y)",
+    "(x + 3y) + (x - 3y)"
+  ]
+},
+{
+  "soruMetni": "x² - 5x + 6 \n\nifadesinin çarpanlarından biri aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "x - 1",
+    "x - 6",
+    "x - 3",
+    "x + 2"
+  ]
+},
+{
+  "soruMetni": "a - b = 6 ve a² - b² = 30 olduğuna göre, a + b toplamı kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "3",
+    "5",
+    "6",
+    "10"
+  ]
+},
+{
+  "soruMetni": "(a² - 2a) / (a² - 4) : a / (a + 2) \n\nifadesinin en sade şekli aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "a",
+    "1 / a",
+    "a - 2",
+    "1"
+  ]
+},
+{
+  "soruMetni": "x³ - 8 \n\nifadesinin çarpanlara ayrılmış şekli aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "(x - 2)(x² + 2x + 4)",
+    "(x - 2)(x² + 2x + 4)",
+    "(x - 2)(x² - 2x + 4)",
+    "(x - 2)(x² - 4)"
+  ]
+},
+{
+  "soruMetni": "x + 1/x = 4 olduğuna göre, x² + 1/x² ifadesinin değeri kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "12",
+    "14",
+    "14",
+    "16"
+  ]
+},
+{
+  "soruMetni": "a² + ab - 2b² \n\nifadesinin çarpanlarından biri aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "a - b",
+    "a + 2b",
+    "a + b",
+    "a - 2b"
+  ]
+},
+{
+  "soruMetni": "x ≠ y olmak üzere, \n\n(x² - y²) / (x³ - y³) \n\nifadesinin en sade şekli aşağıdakilerden hangisidir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "1 / (x + y)",
+    "1 / (x - y)",
+    "(x + y) / (x² - xy + y²)",
+    "(x + y) / (x² + xy + y²)"
+  ]
+}
+]
+},
+{
+"id": "oran_oranti_1",
+"baslik": "Oran ve Orantı-1",
+"kategoriId": "matematik",
+"konuId": "oran_oranti",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "a/b = 2/3 ve a + b = 25 olduğuna göre, a kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "10",
+    "12",
+    "15",
+    "18"
+  ]
+},
+{
+  "soruMetni": "3a = 4b = 5c ve a + b + c = 94 olduğuna göre, a kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "30",
+    "40",
+    "45",
+    "50"
+  ]
+},
+{
+  "soruMetni": "x/2 = y/3 = z/5 ve 2x + y - z = 10 olduğuna göre, y kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "4",
+    "6",
+    "12",
+    "18"
+  ]
+},
+{
+  "soruMetni": "Bir işi eşit güçteki 6 işçi 12 günde bitirebiliyorsa, aynı işi eşit güçteki 4 işçi kaç günde bitirebilir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "8",
+    "16",
+    "17",
+    "18"
+  ]
+},
+{
+  "soruMetni": "x, y, z sayıları sırasıyla 2, 3 ve 5 ile doğru orantılıdır. \n\n2x + y - z = 10 olduğuna göre, x kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "10",
+    "15",
+    "20",
+    "25"
+  ]
+},
+{
+  "soruMetni": "a, b, c sayıları sırasıyla 2, 3 ve 4 ile ters orantılıdır. \n\na + b + c = 52 olduğuna göre, c kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "12",
+    "16",
+    "24",
+    "36"
+  ]
+},
+{
+  "soruMetni": "A/B = C/D = 3 \n\nolduğuna göre, (A + 3C) / (B + 3D) oranı kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1/3",
+    "3",
+    "6",
+    "9"
+  ]
+},
+{
+  "soruMetni": "Birbirini çeviren iki dişli çarktan birincisi 8 devir yaptığında ikincisi 5 devir yapmaktadır. \n\nİkinci çarkın diş sayısı 40 olduğuna göre, birinci çarkın diş sayısı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "20",
+    "25",
+    "25",
+    "32"
+  ]
+},
+{
+  "soruMetni": "x/y = 4 ve y/z = 3 olduğuna göre, x/z oranı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "12",
+    "7",
+    "4/3",
+    "3/4"
+  ]
+},
+{
+  "soruMetni": "Bir havuzu 4 musluk 9 saatte dolduruyorsa, aynı havuzu bu musluklarla aynı özellikteki 6 musluk kaç saatte doldurur?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "5",
+    "6",
+    "8",
+    "13.5"
+  ]
+}
+]
+},
+{
+"id": "problemler_1",
+"baslik": "Problemler-1",
+"kategoriId": "matematik",
+"konuId": "problemler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Bir sayının 3 katının 5 eksiği, aynı sayının yarısının 4 fazlasına eşittir. \n\nBuna göre, bu sayı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "2",
+    "4",
+    "6",
+    "8"
+  ]
+},
+{
+  "soruMetni": "Bir sınıftaki öğrenciler sıralara 2'şerli oturduklarında 6 öğrenci ayakta kalıyor. 3'erli oturduklarında ise 2 sıra boş kalıyor. \n\nBuna göre, sınıfta kaç öğrenci vardır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "30",
+    "34",
+    "36",
+    "42"
+  ]
+},
+{
+  "soruMetni": "Bir depodaki suyun önce 1/3'ü, daha sonra kalanın 1/4'ü kullanılıyor. Depoda kalan su 120 litre olduğuna göre, başlangıçta depoda kaç litre su vardı?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "200",
+    "240",
+    "270",
+    "300"
+  ]
+},
+{
+  "soruMetni": "Bir telin bir ucundan 1/5'i, diğer ucundan 1/10'u kesilince telin orta noktası ilk durumuna göre 3 cm kayıyor. \n\nBuna göre, telin kesilmeden önceki boyu kaç cm'dir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "40",
+    "50",
+    "55",
+    "60"
+  ]
+},
+{
+  "soruMetni": "Bir merdivenin basamaklarını 2'şer 2'şer çıkıp, 3'er 3'er inen bir kişinin çıkarken attığı adım sayısı, inerken attığı adım sayısından 5 fazladır. \n\nBu merdiven kaç basamaklıdır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "30",
+    "25",
+    "20",
+    "15"
+  ]
+},
+{
+  "soruMetni": "Ayşe'nin parası Fatma'nın parasının 3 katıdır. \n\nAyşe, Fatma'ya 10 TL verirse, Ayşe'nin parası Fatma'nın parasının 2 katı oluyor. \n\nBaşlangıçta Ayşe'nin kaç TL'si vardır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "50",
+    "60",
+    "80",
+    "90"
+  ]
+},
+{
+  "soruMetni": "Bir kumaş 10 eşit parçaya ayrılıyor. Eğer 16 eşit parçaya ayrılsaydı, her bir parçanın uzunluğu 30 cm daha kısa olacaktı. \n\nBuna göre, bu kumaşın tamamı kaç cm'dir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "600",
+    "700",
+    "800",
+    "900"
+  ]
+},
+{
+  "soruMetni": "Ali'nin bilyelerinin sayısı, Veli'nin bilyelerinin sayısının 2 katından 4 fazladır. \n\nİkisinin toplam 49 bilyesi olduğuna göre, Ali'nin kaç bilyesi vardır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "34",
+    "30",
+    "18",
+    "15"
+  ]
+},
+{
+  "soruMetni": "Bir bilet kuyruğunda Ahmet baştan 12. sırada, Mehmet ise sondan 18. sıradadır. \n\nAhmet ile Mehmet arasında 5 kişi olduğuna göre, bilet kuyruğunda en çok kaç kişi vardır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "30",
+    "33",
+    "34",
+    "35"
+  ]
+},
+{
+  "soruMetni": "Bir kasada 40 TL'lik ve 50 TL'lik banknotlardan toplam 20 adet bulunmaktadır. \n\nBanknotların toplam değeri 920 TL olduğuna göre, kasada kaç tane 40 TL'lik banknot vardır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "8",
+    "10",
+    "12",
+    "15"
+  ]
+}
+]
+},
+{
+"id": "problemler_2",
+"baslik": "Problemler-2",
+"kategoriId": "matematik",
+"konuId": "problemler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Bir annenin yaşı, iki çocuğunun yaşları toplamının 3 katıdır. \n\n6 yıl sonra annenin yaşı, çocukların yaşları toplamının 2 katı olacağına göre, annenin şimdiki yaşı kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "24",
+    "30",
+    "32",
+    "36"
+  ]
+},
+{
+  "soruMetni": "Ayşe ile Fatma'nın şimdiki yaşları toplamı 50'dir. \n\n5 yıl önce Ayşe'nin yaşı, Fatma'nın yaşının 2 katı olduğuna göre, Ayşe'nin şimdiki yaşı kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "25",
+    "30",
+    "35",
+    "40"
+  ]
+},
+{
+  "soruMetni": "Ali, Veli'den 8 yaş büyüktür. \n\n4 yıl sonra yaşları oranı 5/3 olacağına göre, Ali'nin şimdiki yaşı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "12",
+    "16",
+    "20",
+    "24"
+  ]
+},
+{
+  "soruMetni": "Bir baba 40, oğlu ise 10 yaşındadır. \n\nKaç yıl sonra babanın yaşı oğlunun yaşının 3 katı olur?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "5",
+    "8",
+    "10",
+    "12"
+  ]
+},
+{
+  "soruMetni": "Bir ailenin yaş ortalaması 20'dir. Bu aileye 10 yaşında bir çocuk katılırsa, yeni yaş ortalaması 18 oluyor. \n\nBuna göre, ailede başlangıçta kaç kişi vardır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ]
+},
+{
+  "soruMetni": "Ahmet, doğduğunda Mehmet 5 yaşındaydı. \n\nŞimdiki yaşları toplamı 43 olduğuna göre, Mehmet'in şimdiki yaşı kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "19",
+    "21",
+    "22",
+    "24"
+  ]
+},
+{
+  "soruMetni": "x yıl önce Ayşe'nin yaşı 12 idi. \n\n3x yıl sonra Ayşe'nin yaşı 56 olacağına göre, x kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "8",
+    "11",
+    "12",
+    "14"
+  ]
+},
+{
+  "soruMetni": "4 yıl önce yaşları 3 ve 4 ile orantılı olan iki kardeşin şimdiki yaşları toplamı 42'dir. \n\nKüçük kardeşin şimdiki yaşı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "19",
+    "23",
+    "24",
+    "28"
+  ]
+},
+{
+  "soruMetni": "Bir dede, 50 yaşındayken torunu 2 yaşındaydı. \n\nDedenin yaşı torununun yaşının 4 katı olduğunda torun kaç yaşında olur?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "12",
+    "14",
+    "15",
+    "16"
+  ]
+},
+{
+  "soruMetni": "Bir kişinin doğum tarihi, 19AB'dir. \n\nBu kişinin 2012 yılındaki yaşı, doğum yılının son iki basamağındaki (A ve B) rakamların toplamına eşittir. \n\nBuna göre, bu kişi hangi yılda doğmuştur?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1981",
+    "1982",
+    "1983",
+    "1984"
+  ]
+}
+]
+},
+{
+"id": "problemler_3",
+"baslik": "Problemler-3",
+"kategoriId": "matematik",
+"konuId": "problemler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Bir ürün %20 kârla 180 TL'ye satılmıştır. \n\nBu ürünün maliyet fiyatı kaç TL'dir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "140",
+    "145",
+    "150",
+    "160"
+  ]
+},
+{
+  "soruMetni": "Etiket fiyatı üzerinden %30 indirimle satılan bir malın indirimli fiyatı 210 TL'dir. \n\nBu malın etiket fiyatı kaç TL'dir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "250",
+    "270",
+    "280",
+    "300"
+  ]
+},
+{
+  "soruMetni": "Bir öğrenci, bir sınavdaki soruların önce %40'ını, sonra kalan soruların %50'sini çözmüştür. \n\nÖğrenci toplam 210 soru çözdüğüne göre, sınavda toplam kaç soru vardır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "300",
+    "325",
+    "350",
+    "400"
+  ]
+},
+{
+  "soruMetni": "Tuz oranı %20 olan 60 gram tuzlu suya kaç gram tuz eklenirse, karışımın tuz oranı %40 olur?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "15",
+    "20",
+    "25",
+    "30"
+  ]
+},
+{
+  "soruMetni": "Bir miktar paranın %10'u faize verilmiştir. \n\nBu paranın %20'si 5 yıl sonunda kaç TL faiz getirir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "Faiz oranı verilmemiştir.",
+    "Paranın miktarı verilmemiştir.",
+    "200 TL",
+    "Bilgiler yetersizdir, faiz oranı verilmelidir."
+  ]
+},
+{
+  "soruMetni": "Bir satıcı, bir malın satış fiyatına %20 zam yapınca günlük satışı %10 azalmıştır. \n\nBuna göre, satıcının günlük toplam hasılatı nasıl değişmiştir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "%8 azalmıştır.",
+    "%8 artmıştır.",
+    "Değişmemiştir.",
+    "%10 artmıştır."
+  ]
+},
+{
+  "soruMetni": "Bir malın etiket fiyatı, maliyet fiyatı üzerinden %25 kârla belirlenmiştir. \n\nBu mal, etiket fiyatı üzerinden %20 indirimle satılırsa, son durumdaki kâr-zarar durumu nedir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "%5 kâr",
+    "%5 zarar",
+    "%2 kâr",
+    "Ne kâr ne zarar"
+  ]
+},
+{
+  "soruMetni": "Bir sayının %30'unun %20'si 18 olduğuna göre, bu sayı kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "200",
+    "250",
+    "280",
+    "300"
+  ]
+},
+{
+  "soruMetni": "Alkol oranı %40 olan 20 litre alkol-su karışımına 5 litre saf alkol eklenirse, yeni karışımın alkol oranı yüzde kaç olur?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "44",
+    "48",
+    "50",
+    "52"
+  ]
+},
+{
+  "soruMetni": "Bir işçi, maaşının %25'ini kiraya ve maaşının %15'ini mutfak masrafına harcıyor. \n\nGeriye 600 TL parası kaldığına göre, bu işçinin maaşı kaç TL'dir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "800",
+    "900",
+    "1200",
+    "1000"
+  ]
+}
+]
+},
+{
+"id": "problemler_4",
+"baslik": "Problemler-4",
+"kategoriId": "matematik",
+"konuId": "problemler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Bir ürün %20 kârla 360 TL'ye satılmıştır. \n\nBuna göre, bu ürünün maliyet fiyatı kaç TL'dir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "280",
+    "290",
+    "300",
+    "310"
+  ]
+},
+{
+  "soruMetni": "Maliyeti 500 TL olan bir ürün, %15 zararla kaç TL'ye satılır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "420",
+    "425",
+    "430",
+    "435"
+  ]
+},
+{
+  "soruMetni": "Bir satıcı, bir ürünü %30 kârla sattığında 650 TL elde ediyor. \n\nAynı ürünü %10 zararla satsaydı kaç TL elde ederdi?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "400",
+    "450",
+    "500",
+    "550"
+  ]
+},
+{
+  "soruMetni": "Bir malın etiket fiyatı üzerinden %20 indirim yapıldığında bile %4 kâr ediliyor. \n\nBuna göre, indirim yapılmadan önceki etiket fiyatı, maliyet fiyatının yüzde kaç fazlasıdır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "%25",
+    "%30",
+    "%30",
+    "%35"
+  ]
+},
+{
+  "soruMetni": "Bir tüccar, elindeki malın %40'ını %30 kârla, kalanını ise %10 zararla satmıştır. \n\nBu satış sonunda tüccarın toplam kâr-zarar durumu nedir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "%8 kâr",
+    "%8 zarar",
+    "Ne kâr ne zarar",
+    "%4 kâr"
+  ]
+},
+{
+  "soruMetni": "Bir satıcı, teraziyi %10 eksik tartarak satış yapmaktadır. \n\nBu satıcının %17 kâr elde etmesi için, sattığı ürüne yüzde kaç zam yapması gerekir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "%3",
+    "%5",
+    "%7",
+    "%10"
+  ]
+},
+{
+  "soruMetni": "Etiket fiyatı maliyet fiyatının iki katı olan bir ürüne, etiket fiyatı üzerinden %x indirim yapıldığında %20 kâr ediliyor. \n\nBuna göre, x kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "30",
+    "40",
+    "45",
+    "40"
+  ]
+},
+{
+  "soruMetni": "Bir malın satış fiyatından 80 TL indirim yapıldığında %10 zarar, 40 TL zam yapıldığında ise %20 kâr ediliyor. \n\nBu malın maliyeti kaç TL'dir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "400",
+    "360",
+    "300",
+    "280"
+  ]
+},
+{
+  "soruMetni": "Bir esnaf, iki farklı ürünü de 600 TL'ye satmıştır. \n\nBirinci üründen %25 kâr ederken, ikinci üründen %25 zarar etmiştir. \n\nBu esnafın bu iki satıştan elde ettiği genel kâr-zarar durumu nedir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "Ne kâr ne zarar",
+    "20 TL kâr",
+    "80 TL zarar",
+    "100 TL zarar"
+  ]
+},
+{
+  "soruMetni": "Bir ürüne arka arkaya %10 ve %20 zam yapılmıştır. \n\nToplam zam oranı yüzde kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "%28",
+    "%32",
+    "%30",
+    "%33"
+  ]
+}
+]
+},
+{
+"id": "problemler_5",
+"baslik": "Problemler-5",
+"kategoriId": "matematik",
+"konuId": "problemler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Birinci musluk bir havuzu tek başına 6 saatte, ikinci musluk ise 3 saatte doldurmaktadır. \n\nİki musluk birlikte açılırsa, boş havuzu kaç saatte doldururlar?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1",
+    "2",
+    "2.5",
+    "3"
+  ]
+},
+{
+  "soruMetni": "Bir musluk boş bir havuzu 10 saatte dolduruyor. Havuzun dibindeki bir delik ise dolu havuzu 15 saatte boşaltıyor. \n\nHavuz boşken, musluk açılır ve delik kapatılmazsa havuz kaç saatte dolar?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "20",
+    "25",
+    "28",
+    "30"
+  ]
+},
+{
+  "soruMetni": "Bir havuzu A musluğu tek başına 12 saatte, B musluğu ise tek başına 4 saatte doldurmaktadır. \n\nİkisi birlikte açıldıktan 2 saat sonra A musluğu kapatılırsa, havuzun kalan kısmını B musluğu tek başına kaç saatte doldurur?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "1",
+    "1.5",
+    "2",
+    "2.5"
+  ]
+},
+{
+  "soruMetni": "Üç musluk bir havuzu sırasıyla 6, 8 ve 12 saatte doldurmaktadır. \n\nBu üç musluk birlikte açıldığında boş havuz kaç saatte dolar?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "1.5",
+    "2",
+    "2.6",
+    "3"
+  ]
+},
+{
+  "soruMetni": "Bir havuzun yarısını bir musluk 8 saatte dolduruyor. \n\nBu musluk ile aynı kapasitede 3 musluk boş havuzun tamamını kaç saatte doldurur?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "4",
+    "16/3",
+    "5.5",
+    "6"
+  ]
+},
+{
+  "soruMetni": "Bir havuzu A musluğu 2T saatte dolduruyor, B musluğu ise T saatte boşaltıyor. \n\nİki musluk aynı anda açıldığında havuz dolmadığına göre, T hakkında ne söylenebilir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "T = 1",
+    "T > 2",
+    "T < 1",
+    "Boşaltma musluğu daha hızlıdır."
+  ]
+},
+{
+  "soruMetni": "Bir havuzu dolduran musluklar, havuzu 4 saatte doldurmaktadır. \n\nMusluklardan birinin kapasitesi 3 katına çıkarılırsa, havuz kaç saatte dolar?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ]
+},
+{
+  "soruMetni": "Bir musluk bir havuzu 8 saatte doldurmaktadır. Musluk 4 saat açık bırakıldıktan sonra musluğun kapasitesi yarıya düşürülürse, havuz toplam kaç saatte dolar?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "6",
+    "8",
+    "10",
+    "12"
+  ]
+},
+{
+  "soruMetni": "Bir musluk boş bir havuzu 6 saatte dolduruyor. Havuzun tam ortasındaki bir delik ise dolu olan havuzun üst yarısını 4 saatte boşaltıyor. \n\nHavuz boşken musluk açılırsa havuz kaç saatte dolar?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "9",
+    "10",
+    "11",
+    "12"
+  ]
+},
+{
+  "soruMetni": "Bir havuzu A musluğu 18 saatte doldurmakta, B musluğu ise 9 saatte boşaltmaktadır. \n\nHavuz dolu iken iki musluk aynı anda açılırsa, havuz kaç saatte boşalır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "18",
+    "9",
+    "6",
+    "3"
+  ]
+}
+]
+},
+{
+"id": "problemler_6",
+"baslik": "Problemler-6",
+"kategoriId": "matematik",
+"konuId": "problemler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "A ve B şehirleri arası 480 km'dir. \n\nBir araç A'dan B'ye doğru saatte 80 km hızla hareket ederse, kaç saatte B şehrine ulaşır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "5",
+    "5.5",
+    "6",
+    "6.5"
+  ]
+},
+{
+  "soruMetni": "Aynı anda ve aynı yönde hareket eden iki araçtan birinin hızı 60 km/sa, diğerinin hızı 40 km/sa'tir. \n\nİki araç arasındaki mesafe 4 saat sonra 80 km olduğuna göre, başlangıçta aralarındaki mesafe kaç km'dir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "0",
+    "20",
+    "40",
+    "60"
+  ]
+},
+{
+  "soruMetni": "Aralarında 500 km mesafe bulunan iki araç, birbirine doğru hareket ettiklerinde 5 saat sonra karşılaşıyorlar. \n\nHızlarının toplamı kaç km/sa'tir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "80",
+    "90",
+    "95",
+    "100"
+  ]
+},
+{
+  "soruMetni": "Hızı V olan bir araç A kentinden B kentine 6 saatte gitmektedir. \n\nBu araç hızını 2V yaparsa, aynı yolu kaç saatte gider?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "3",
+    "4",
+    "8",
+    "12"
+  ]
+},
+{
+  "soruMetni": "Çevresi 600 metre olan dairesel bir pistte, zıt yönde hareket eden iki koşucunun hızları 30 m/dk ve 20 m/dk'dır. \n\nBu iki koşucu kaç dakika sonra ilk kez karşılaşırlar?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "10",
+    "12",
+    "15",
+    "20"
+  ]
+},
+{
+  "soruMetni": "Bir hareketli 200 metrelik tüneli 15 saniyede tamamen geçiyor. \n\nHareketlinin hızı 20 m/s olduğuna göre, hareketlinin boyu kaç metredir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "50",
+    "80",
+    "100",
+    "150"
+  ]
+},
+{
+  "soruMetni": "Hızları oranı 2/3 olan iki araç aynı noktadan aynı anda aynı yöne doğru hareket ediyor. \n\nHızlı olan araç 4 saat sonra diğerine 60 km fark attığına göre, yavaş olan aracın hızı kaç km/sa'tir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "25",
+    "28",
+    "30",
+    "30"
+  ]
+},
+{
+  "soruMetni": "Bir araç bir yolun 1/3'ünü V hızıyla, kalan yolu ise 2V hızıyla gitmiştir. \n\nAracın tüm yoldaki ortalama hızı V cinsinden nedir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "1.2V",
+    "1.5V",
+    "1.6V",
+    "1.8V"
+  ]
+},
+{
+  "soruMetni": "Bir araç bir yolu 4 saatte gidip 6 saatte geri dönüyor. \n\nGidişteki hızı, dönüşteki hızından 30 km/sa fazla olduğuna göre, bu yolun uzunluğu kaç km'dir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "300",
+    "360",
+    "400",
+    "420"
+  ]
+},
+{
+  "soruMetni": "A ve B şehirlerinden aynı anda birbirine doğru hareket eden iki araç, yolun orta noktasından 20 km uzaklıkta karşılaşıyorlar. \n\nBu araçların hızları oranı aşağıdakilerden hangisi olabilir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "1/3",
+    "2/5",
+    "3/5",
+    "4/7"
+  ]
+}
+]
+},
+{
+"id": "kumeler_1",
+"baslik": "Kümeler-1",
+"kategoriId": "matematik",
+"konuId": "kumeler",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "A = {1, {1, 2}, 3, 4} kümesi için aşağıdakilerden hangisi yanlıştır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "s(A) = 4",
+    "1 ∈ A",
+    "{3, 4} ⊂ A",
+    "{1, 2} ∈ A"
+  ]
+},
+{
+  "soruMetni": "A ve B, E evrensel kümesinin iki alt kümesidir. \n\ns(A) = 10, s(B) = 15 ve s(A ∪ B) = 22 olduğuna göre, s(A ∩ B) kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "3",
+    "4",
+    "5",
+    "8"
+  ]
+},
+{
+  "soruMetni": "A kümesinin alt küme sayısı 64 olduğuna göre, A kümesinin eleman sayısı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "4",
+    "5",
+    "6",
+    "7"
+  ]
+},
+{
+  "soruMetni": "A ve B kümeleri için, \n\ns(A - B) = 7 \n\ns(B - A) = 5 \n\ns(A ∩ B) = 3 \n\nolduğuna göre, s(A ∪ B) kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "12",
+    "13",
+    "14",
+    "15"
+  ]
+},
+{
+  "soruMetni": "Bir sınıftaki öğrencilerin hepsi Almanca veya İngilizce dillerinden en az birini bilmektedir. \n\nAlmanca bilenler 20, İngilizce bilenler 18 ve her iki dili de bilenler 5 kişi olduğuna göre, bu sınıf mevcudu kaçtır?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "28",
+    "33",
+    "38",
+    "43"
+  ]
+},
+{
+  "soruMetni": "n elemanlı bir kümenin, en az bir elemanlı kaç tane alt kümesi vardır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "2n",
+    "n!",
+    "2ⁿ",
+    "2ⁿ - 1"
+  ]
+},
+{
+  "soruMetni": "A kümesinin 2 elemanlı alt küme sayısı 21 olduğuna göre, A kümesinin eleman sayısı kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "5",
+    "6",
+    "7",
+    "7"
+  ]
+},
+{
+  "soruMetni": "A = {x | 1 < x ≤ 10, x ∈ Z} \n\nkümesinin alt kümelerinin kaç tanesinde 5 elemanı bulunur?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "32",
+    "64",
+    "128",
+    "256"
+  ]
+},
+{
+  "soruMetni": "Bir E evrensel kümesinde A kümesinin tümleyeni A' olmak üzere, \n\ns(E) = 30 ve s(A) = 12 olduğuna göre, s(A') kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "14",
+    "16",
+    "17",
+    "18"
+  ]
+},
+{
+  "soruMetni": "A = {a, b, c, d, e} kümesinin alt kümelerinin kaç tanesinde a elemanı bulunmaz?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "16",
+    "15",
+    "8",
+    "4"
+  ]
+}
+]
+},
+{
+"id": "permitasyon_kombinasyon_olasilik_1",
+"baslik": "Permütasyon, Kombinasyon, Olasılık-1",
+"kategoriId": "matematik",
+"konuId": "permitasyon_kombinasyon_olasilik",
+"isNew": false,
+"soruSayisi": 10,
+"sureDakika": 10,
+"sorular": [
+{
+  "soruMetni": "Birbirinden farklı 5 matematik ve 4 fizik kitabı, bir rafa yan yana dizilecektir. \n\nAynı dersin kitapları yan yana olmak şartıyla kaç farklı şekilde dizilebilir?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "2880",
+    "1440",
+    "720",
+    "120"
+  ]
+},
+{
+  "soruMetni": "A = {1, 2, 3, 4, 5} kümesinin elemanları kullanılarak üç basamaklı, rakamları farklı kaç tek sayı yazılabilir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "24",
+    "36",
+    "48",
+    "60"
+  ]
+},
+{
+  "soruMetni": "C(n, 2) = 15 olduğuna göre, n kaçtır? \n\n(Not: C(n, k) 'nün anlamı n'nin k'lı kombinasyonudur.)",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "5",
+    "6",
+    "6",
+    "8"
+  ]
+},
+{
+  "soruMetni": "8 kişilik bir sporcu grubundan 5 kişilik bir takım ve bu takımdan bir de kaptan kaç farklı şekilde seçilebilir?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "56",
+    "280",
+    "300",
+    "280"
+  ]
+},
+{
+  "soruMetni": "5 doktor ve 4 hemşire arasından, 2 doktor ve 2 hemşireden oluşan 4 kişilik bir sağlık ekibi kaç farklı şekilde kurulabilir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "40",
+    "60",
+    "80",
+    "120"
+  ]
+},
+{
+  "soruMetni": "Bir torbada 3 kırmızı ve 4 beyaz top vardır. \n\nTorbadan rastgele çekilen bir topun kırmızı olma olasılığı kaçtır?",
+  "dogruCevapIndex": 0,
+  "secenekler": [
+    "3/7",
+    "4/7",
+    "1/3",
+    "1/2"
+  ]
+},
+{
+  "soruMetni": "İki zar birlikte atılıyor. \n\nZarların üst yüzüne gelen sayıların toplamının 8 olma olasılığı kaçtır?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "1/12",
+    "1/9",
+    "5/36",
+    "1/6"
+  ]
+},
+{
+  "soruMetni": "4 kız ve 4 erkek öğrenciden oluşan bir gruptan rastgele seçilen 3 kişinin 2'sinin kız, 1'inin erkek olma olasılığı kaçtır?",
+  "dogruCevapIndex": 3,
+  "secenekler": [
+    "1/2",
+    "2/7",
+    "3/7",
+    "3/7"
+  ]
+},
+{
+  "soruMetni": "6 farklı oyuncak, 3 çocuğa her birine ikişer tane olacak şekilde kaç farklı şekilde dağıtılabilir?",
+  "dogruCevapIndex": 1,
+  "secenekler": [
+    "30",
+    "90",
+    "180",
+    "360"
+  ]
+},
+{
+  "soruMetni": "7 farklı renkteki kalemden, en az bir tane olacak şekilde kaç farklı kalem grubu oluşturulabilir?",
+  "dogruCevapIndex": 2,
+  "secenekler": [
+    "63",
+    "127",
+    "127",
+    "255"
+  ]
+}
+]
 }
 
      ],
