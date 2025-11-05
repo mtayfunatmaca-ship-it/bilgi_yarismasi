@@ -9,339 +9,310 @@
   
   "konuBasliklari": [
     {
+      "id": "islamiyet_oncesi_turk_devletleri", 
+      "ad": "İslamiyet Öncesi Türk Devletleri", 
+      "kategoriId": "tarih", 
+      "sira": 1 
+    },
+    {
+      "id": "ilk_turk_islam_devletleri", 
+      "ad": "İlk Türk İslam Devletleri", 
+      "kategoriId": "tarih", 
+      "sira": 2
+    },
+    {
+      "id": "osmanli_devleti_kurulus_donemi", 
+      "ad": "Osmanlı Devleti Kuruluş Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 3
+    },
+    {
+      "id": "osmanli_devleti_yukselme_donemi", 
+      "ad": "Osmanlı Devleti Yükselme Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 4
+    },
+    {
+      "id": "osmanli_devleti_duraklama_donemi", 
+      "ad": "Osmanlı Devleti Duraklama Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 5
+    },
+    {
+      "id": "osmanli_devleti_gerileme_donemi", 
+      "ad": "Osmanlı Devleti Gerileme Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 6
+    },
+    {
+      "id": "osmanli_devleti_dagilma_donemi", 
+      "ad": "Osmanlı Devleti Dağılma Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 7
+    },
+    {
+      "id": "osmanli_devleti_kultur_medeniyet", 
+      "ad": "Osmanlı Devletinde Kültür ve Medeniyet", 
+      "kategoriId": "tarih", 
+      "sira": 8
+    },
+    {
+      "id": "20_yy_osmanli_devleti", 
+      "ad": "20. Yüzyıl Osmanlı Devleti", 
+      "kategoriId": "tarih", 
+      "sira": 8
+    },
+    {
+      "id": "1_tbmm_donemi", 
+      "ad": "1. TBMM Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 9
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi", 
+      "ad": "Kurtuluş Savaşı Muharebeler Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 10
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari", 
+      "ad": "Atatürk İlkeleri ve İnkılapları", 
+      "kategoriId": "tarih", 
+      "sira": 11
+    },
+    {
+      "id": "cok_partili_hayata_gecis_donemi", 
+      "ad": "Çok Partili Hayata Geçiş Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 12
+    },
+    {
+      "id": "ataturk_donemi_dis_politika", 
+      "ad": "Atatürk Dönemi Dış Politika", 
+      "kategoriId": "tarih", 
+      "sira": 13
+    },
+    {
+      "id": "turkiyenin_cografi_konumu", 
+      "ad": "Türkiye'nin Coğrafi Konumu", 
+      "kategoriId": "cografya", 
+      "sira": 1
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri", 
+      "ad": "Türkiye'nin Yerşekilleri ve Özellikleri", 
+      "kategoriId": "cografya", 
+      "sira": 2
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu", 
+      "ad": "Türkiye'nin İklimi ve Bitki Örtüsü", 
+      "kategoriId": "cografya", 
+      "sira": 3
+    },
+    {
+      "id": "turkiyede_nufus_ve_yerlesme", 
+      "ad": "Türkiye'de Nüfus ve Yerleşme", 
+      "kategoriId": "cografya", 
+      "sira": 4
+    },
+    {
+      "id": "turkiyede_tarim_ve_hayvancilik", 
+      "ad": "Türkiye'de Tarım ve Hayvancılık", 
+      "kategoriId": "cografya", 
+      "sira": 5
+    },
+    {
+      "id": "turkiyede_madenler_ve_enerji_kaynaklari", 
+      "ad": "Türkiye'de Madenler ve Enerji Kaynakları", 
+      "kategoriId": "cografya", 
+      "sira": 6
+    },
+    {
+      "id": "turkiyede_ulasim_ticaret_ve_turizm", 
+      "ad": "Türkiye'de Ulaşım Ticaret ve Turizm", 
+      "kategoriId": "cografya", 
+      "sira": 7
+    },
+    {
+      "id": "turkiyenin_cografi_bolgeleri", 
+      "ad": "Türkiye'nin Coğrafi Bölgeleri", 
+      "kategoriId": "cografya", 
+      "sira": 8
+    },
+    {
+      "id": "hukukun_temel_kavramlari", 
+      "ad": "Hukukun Temel Kavramları", 
+      "kategoriId": "vatandaslik", 
+      "sira": 1
+    },
+    {
+      "id": "devlet_bicimleri_ve_kuvvetler_ayriligi", 
+      "ad": "Devlet Biçimleri Demokrasi ve Kuvvetler Ayrılığı", 
+      "kategoriId": "vatandaslik", 
+      "sira": 2
+    },
+    {
+      "id": "anayasa_hukukuna_giris", 
+      "ad": "Anayasa Hukukuna Giriş ve Temel Kavramlar", 
+      "kategoriId": "vatandaslik", 
+      "sira": 3
+    },
+    {
+      "id": "1982_anayasasi_temel_ilkeleri", 
+      "ad": "1982 Anayasasının Temel İlkeleri", 
+      "kategoriId": "vatandaslik", 
+      "sira": 4
+    },
+    {
+      "id": "yasama_yurutme_yargi", 
+      "ad": "Yasama, Yürütme ve Yargı", 
+      "kategoriId": "vatandaslik", 
+      "sira": 5
+    },
+    {
+      "id": "temel_hak_ve_hurriyetler", 
+      "ad": "Temel Hak ve Hürriyetler", 
+      "kategoriId": "vatandaslik", 
+      "sira": 6
+    },
+    {
+      "id": "idare_hukuku", 
+      "ad": "İdare Hukuku", 
+      "kategoriId": "vatandaslik", 
+      "sira": 7
+    },
+    {
+      "id": "uluslararasi_kuruluslar", 
+      "ad": "Uluslararası Kuruluşlar", 
+      "kategoriId": "vatandaslik", 
+      "sira": 8
+    },
+    {
+      "id": "sozcukte_anlam", 
+      "ad": "Sözcükte Anlam", 
+      "kategoriId": "turkce", 
+      "sira": 1
+    },
+    {
+      "id": "cumlede_anlam", 
+      "ad": "Cümlede Anlam", 
+      "kategoriId": "turkce", 
+      "sira": 2
+    },
+    {
+      "id": "paragrafta_anlam", 
+      "ad": "Paragrafta Anlam", 
+      "kategoriId": "turkce", 
+      "sira": 3
+    },
+    {
+      "id": "ses_bilgisi", 
+      "ad": "Ses Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 4
+    },
+    {
+      "id": "yapi_bilgisi", 
+      "ad": "Yapı Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 5
+    },
+    {
+      "id": "sozcukte_yapi", 
+      "ad": "Sözcükte Yapı", 
+      "kategoriId": "turkce", 
+      "sira": 6
+    },
+    {
+      "id": "cumle_bilgisi", 
+      "ad": "Cümle Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 6
+    },
+    {
+      "id": "yazim_kurallari", 
+      "ad": "Yazım Kuralları", 
+      "kategoriId": "turkce", 
+      "sira": 7
+    },
+    {
+      "id": "noktalama_isaretleri", 
+      "ad": "Noktalama İşaretleri", 
+      "kategoriId": "turkce", 
+      "sira": 8
+    },
+    {
+      "id": "anlatim_bozuklugu", 
+      "ad": "Anlatım Bozukluğu", 
+      "kategoriId": "turkce", 
+      "sira": 9
+    },
+    {
       "id": "temel_kavramlar", 
       "ad": "Temel Kavramlar", 
       "kategoriId": "matematik", 
       "sira": 1
+    },
+    {
+      "id": "ebob_ekok_asal_carpan", 
+      "ad": "EBOB-EKOK ve Asal Çarpanlara Ayırma", 
+      "kategoriId": "matematik", 
+      "sira": 2
+    },
+    {
+      "id": "rasyonel_sayilar", 
+      "ad": "Rasyonel Sayılar", 
+      "kategoriId": "matematik", 
+      "sira": 3
+    },
+    {
+      "id": "esitsizlik_ve_mutlak_deger", 
+      "ad": "Eşitsizlik ve Mutlak Değer", 
+      "kategoriId": "matematik", 
+      "sira": 4
+    },
+    {
+      "id": "uslu_koklu_sayilar", 
+      "ad": "Üslü ve Köklü Sayılar", 
+      "kategoriId": "matematik", 
+      "sira": 5
+    },
+    {
+      "id": "carpanlara_ayirma", 
+      "ad": "Çarpanlara Ayırla", 
+      "kategoriId": "matematik", 
+      "sira": 6
+    },
+    {
+      "id": "oran_oranti", 
+      "ad": "Oran-Orantı", 
+      "kategoriId": "matematik", 
+      "sira": 7
+    },
+    {
+      "id": "problemler", 
+      "ad": "Problemler", 
+      "kategoriId": "matematik", 
+      "sira": 8
+    },
+    {
+      "id": "kumeler", 
+      "ad": "Kümeler", 
+      "kategoriId": "matematik", 
+      "sira": 9
+    },
+    {
+      "id": "permutasyon_kombinasyon_olasilik", 
+      "ad": "Permütasyon, Kombinasyon, Olasılık", 
+      "kategoriId": "matematik", 
+      "sira": 10
     }
-   
   ],
   
   "quizzes": [
-        {
-      "id": "temel_kavramlar_1",
-      "baslik": "Temel Kavramlar-1",
-      "kategoriId": "matematik",
-      "konuId": "temel_kavramlar",
-      "isNew": false,
-      "soruSayisi": 10,
-      "sureDakika": 10,
-      "sorular": [
-        {
-          "soruMetni": "a ve b pozitif tam sayılardır. 3a + 2b = 40 olduğuna göre, a*b çarpımının alabileceği en büyük değer kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "54",
-            "60",
-            "64",
-            "66"
-          ]
-        },
-        {
-          "soruMetni": "x, y ve z birbirinden farklı pozitif tam sayılardır. 3x + 2y + z = 30 olduğuna göre, z'nin alabileceği en büyük değer kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "23",
-            "24",
-            "25",
-            "26"
-          ]
-        },
-        {
-          "soruMetni": "A, B, C birbirinden farklı rakamlardır. 2A - 3B + 4C ifadesinin alabileceği en küçük değer kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "-21",
-            "-22",
-            "-23",
-            "-24"
-          ]
-        },
-        {
-          "soruMetni": "a, b, c birer tam sayı olmak üzere, 5a - b = 3c + 2 eşitliği veriliyor. Buna göre, aşağıdakilerden hangisi daima doğrudur?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "a çifttir.",
-            "b tektir.",
-            "a+b çifttir.",
-            "b ve c aynı anda tek olamaz."
-          ]
-        },
-        {
-          "soruMetni": "x < y < z olmak üzere, x, y, z ardışık üç çift sayıdır. (x-z)*(y-z) + (x-y) işleminin sonucu kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "6",
-            "8",
-            "10",
-            "12"
-          ]
-        },
-        {
-          "soruMetni": "(8! + 7!)/(6!) işleminin sonucu kaçtır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "50",
-            "56",
-            "60",
-            "63"
-          ]
-        },
-        {
-          "soruMetni": "Bir bölme işleminde bölünen ve bölenin toplamı 133, bölüm 8 ve kalan 7'dir. Buna göre, bölen kaçtır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "12",
-            "14",
-            "16",
-            "18"
-          ]
-        },
-        {
-          "soruMetni": "Beş basamaklı 3x45y sayısı 45 ile tam bölünebilmektedir. Buna göre, x'in alabileceği en büyük değer kaçtır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "5",
-            "6",
-            "7",
-            "8"
-          ]
-        },
-        {
-          "soruMetni": "Dört basamaklı 5A3B sayısının 9 ile bölümünden kalan 2'dir. Bu sayı 4 ile tam bölünebildiğine göre, A'nın alabileceği değerler toplamı kaçtır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "10",
-            "12",
-            "14",
-            "16"
-          ]
-        },
-        {
-          "soruMetni": "Bir doğal sayının 6 ile bölümünden kalan 4'tür. Aynı doğal sayının karesinin 12 ile bölümünden kalan kaçtır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "4",
-            "6",
-            "8",
-            "10"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "temel_kavramlar_2",
-      "baslik": "Temel Kavramlar-2",
-      "kategoriId": "matematik",
-      "konuId": "temel_kavramlar",
-      "isNew": false,
-      "soruSayisi": 20,
-      "sureDakika": 20,
-      "sorular": [
-        {
-          "soruMetni": "a, b, c birbirinden farklı rakamlardır. \n\n3a - 2b + 5c ifadesinin alabileceği en büyük değer kaçtır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "61",
-            "62",
-            "63",
-            "64"
-          ]
-        },
-        {
-          "soruMetni": "x, y, z pozitif tam sayılardır. \n\nx ⋅ y = 24 \n\ny ⋅ z = 36 \n\nolduğuna göre, x + y + z toplamının alabileceği en küçük değer kaçtır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "15",
-            "17",
-            "18",
-            "21"
-          ]
-        },
-        {
-          "soruMetni": "a, b, c tam sayılardır. \n\na + b = 9 \n\nb + c = 15 \n\nolduğuna göre, a² + c² toplamının alabileceği en küçük değer kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "18",
-            "20",
-            "26",
-            "34"
-          ]
-        },
-        {
-          "soruMetni": "x bir çift tam sayı olduğuna göre, aşağıdakilerden hangisi daima tek sayıdır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "x + 4",
-            "x² - 2x",
-            "3x + 6",
-            "x² + x + 1"
-          ]
-        },
-        {
-          "soruMetni": "a ve b birer doğal sayı olmak üzere, a ⋅ b = 7a + 18 olduğuna göre, b'nin alabileceği kaç farklı değer vardır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "6",
-            "4",
-            "3",
-            "2"
-          ]
-        },
-        {
-          "soruMetni": "Ardışık 4 tek tam sayının toplamı 80'dir. \n\nBu sayıların en küçüğü kaçtır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "17",
-            "19",
-            "21",
-            "23"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki ifadelerden hangisi her zaman doğrudur?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Çift iki tam sayının çarpımı tektir.",
-            "İrrasyonel iki sayının çarpımı irrasyoneldir.",
-            "Bir rasyonel sayı ile bir irrasyonel sayının toplamı rasyoneldir.",
-            "a⋅b tek ise, a ve b tek sayılardır."
-          ]
-        },
-        {
-          "soruMetni": "a, b, c pozitif tam sayılardır. \n\n3a = 4b \n\n2b = 5c \n\nolduğuna göre, a+b+c toplamının alabileceği en küçük değer kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "30",
-            "38",
-            "47",
-            "54"
-          ]
-        },
-        {
-          "soruMetni": "Birbirinden farklı 5 doğal sayının toplamı 135'tir. \n\nBu sayılardan en büyüğü en çok kaç olabilir?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "121",
-            "123",
-            "124",
-            "125"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdakilerden hangisi bir rasyonel sayı değildir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "0,5",
-            "√27",
-            "3/4",
-            "0"
-          ]
-        },
-        {
-          "soruMetni": "x bir tam sayı olmak üzere, \n\n(3x+18) / (x+4) ifadesini tam sayı yapan kaç farklı x değeri vardır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "2",
-            "4",
-            "6",
-            "8"
-          ]
-        },
-        {
-          "soruMetni": "a ve b tam sayıları için, a² - 4 = 3b olduğuna göre, aşağıdakilerden hangisi daima doğrudur?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "a tektir.",
-            "a çifttir.",
-            "b tektir.",
-            "b çifttir."
-          ]
-        },
-        {
-          "soruMetni": "x, y, z ardışık tam sayılar ve x < y < z'dir. \n\n(x-y) ⋅ (y-z) + (x-z) işleminin sonucu kaçtır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "-1",
-            "0",
-            "1",
-            "2"
-          ]
-        },
-        {
-          "soruMetni": "A, B, C birer tam sayıdır. \n\nA ⋅ B < 0 \n\nA ⋅ C > 0 \n\nB + C < 0 \n\nolduğuna göre, A, B ve C'nin işaretleri sırasıyla nedir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "+, -, +",
-            "-, +, -",
-            "+, -, -",
-            "-, -, +"
-          ]
-        },
-        {
-          "soruMetni": "Dört basamaklı 7A3B sayısı 10 ile bölündüğünde kalan 6'dır. \n\nBu sayı 3 ile tam bölünebildiğine göre, A'nın alabileceği kaç farklı değer vardır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "2",
-            "3",
-            "4",
-            "5"
-          ]
-        },
-        {
-          "soruMetni": "Bir K doğal sayısının 5 katının 3 eksiği bir çift sayıdır. \n\nBuna göre, aşağıdakilerden hangisi kesinlikle tek sayıdır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "K + 2",
-            "2K + 1",
-            "K² + 1",
-            "K + 4"
-          ]
-        },
-        {
-          "soruMetni": "x, y ve z birer tam sayıdır. \n\nx ⋅ y ⋅ z = 45 olduğuna göre, x + y + z toplamının alabileceği en küçük değer kaçtır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "9",
-            "15",
-            "-45",
-            "-47"
-          ]
-        },
-        {
-          "soruMetni": "√3'ün yaklaşık değeri 1,732 olduğuna göre, √48 sayısının yaklaşık değeri kaçtır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "4,284",
-            "5,196",
-            "6,928",
-            "8,304"
-          ]
-        },
-        {
-          "soruMetni": "İki basamaklı, rakamları farklı 4 farklı doğal sayının toplamı 80'dir. \n\nBu sayıların en büyüğü en çok kaç olabilir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "47",
-            "48",
-            "50",
-            "52"
-          ]
-        },
-        {
-          "soruMetni": "Sayı doğrusu üzerinde iki tam sayı arasındaki uzaklık 14 birimdir. \n\nBu iki tam sayının toplamı 20 olduğuna göre, küçük olan sayı kaçtır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "3",
-            "4",
-            "5",
-            "6"
-          ]
-        }
-      ]
-    }
 
-   ],
+  ],
      "trialExams": [ ],
    "achievements": [ ]
   } 
