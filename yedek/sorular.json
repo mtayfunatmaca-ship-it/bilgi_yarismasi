@@ -1496,6 +1496,429 @@
           ]
         }
       ]
+    },
+    {
+      "id": "tarih_osmanli_kurulus_1",
+      "baslik": "Osmanlı Devleti Kuruluş Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_kurulus_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Osmanlı Devleti'nin Kuruluş Dönemi'nde Balkanlar'a yerleştirdiği Türkmen aileler aracılığıyla uyguladığı \"İskan Politikası\"nın temel amacı aşağıdakilerden hangisi değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fethedilen bölgelerin Türkleşmesini ve İslamlaşmasını sağlamak",
+            "Balkanlardaki fetihlerin kalıcı olmasını sağlamak",
+            "Konar-göçer unsurları yerleşik hayata geçirerek tarımsal üretimi artırmak",
+            "Balkanlardaki Hristiyan halkı asimile ederek Bizans'ın gücünü kırmak"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde kurulan ve Osmanlı Devleti'nin ilk düzenli ordusu olan birlik, aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yeniçeri Ocağı",
+            "Kapıkulu Süvarileri",
+            "Tımarlı Sipahiler",
+            "Yaya ve Müsellemler"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Haçlı ordularına karşı kazandığı ilk büyük meydan savaşı olan ve Edirne'nin fethinden sonra gerçekleşen savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Koyunhisar Savaşı",
+            "Sırpsındığı Savaşı",
+            "I. Kosova Savaşı",
+            "Niğbolu Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "I. Murat Dönemi'nde, savaş esirlerinin beşte birinin asker olarak yetiştirilmesi esasına dayanan ve Yeniçeri Ocağı'nın temelini oluşturan sistem aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devşirme Sistemi",
+            "İskan Politikası",
+            "Pençik Sistemi",
+            "Tımar Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki padişahlardan hangisi, I. Kosova Savaşı'nda savaş meydanını gezerken şehit edilmiş ve \"Sultan\" unvanını kullanan ilk Osmanlı padişahı olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Orhan Bey",
+            "I. Murat",
+            "Yıldırım Bayezid",
+            "Çelebi Mehmet"
+          ]
+        },
+        {
+          "soruMetni": "Yıldırım Bayezid'in İstanbul'u kuşatması sırasında, Bizans'a denizden gelecek yardımı engellemek amacıyla inşa ettirdiği yapı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Rumeli Hisarı",
+            "Anadolu Hisarı",
+            "Yedikule Zindanları",
+            "Gelibolu Tersanesi"
+          ]
+        },
+        {
+          "soruMetni": "1396 yılında Yıldırım Bayezid'in Haçlı ordusuna karşı kazandığı Niğbolu Zaferi'nin ardından, Abbasi Halifesi tarafından Yıldırım Bayezid'e verilen unvan nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gazi Padişah",
+            "Sultanü'l-Guzât",
+            "Sultan-ı İklim-i Rum",
+            "Padişah-ı Alem"
+          ]
+        },
+        {
+          "soruMetni": "1402 Ankara Savaşı'nın sonuçları arasında aşağıdakilerden hangisi gösterilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Osmanlı Devleti'nin Fetret Devri'ne girmesi",
+            "Anadolu'daki Türk siyasi birliğinin bozulması",
+            "Bizans İmparatorluğu'nun yıkılışının gecikmesi",
+            "Osmanlı Devleti'nin Rumeli'deki tüm topraklarını kaybetmesi"
+          ]
+        },
+        {
+          "soruMetni": "1402-1413 yılları arasındaki Fetret Devri'nde taht mücadelesi veren şehzadeler arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsa Çelebi",
+            "Musa Çelebi",
+            "Mustafa Çelebi",
+            "Süleyman Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Kuruluş Dönemi'nde Anadolu Türk siyasi birliğini sağlamak amacıyla Germiyanoğullarından çeyiz yoluyla, Hamitoğullarından ise para karşılığı toprak satın alan padişah kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Orhan Bey",
+            "I. Murat",
+            "Yıldırım Bayezid",
+            "Çelebi Mehmet"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Kuruluş Dönemi'nde fethettiği yerlerdeki Hristiyan halka din ve vicdan hürriyeti tanıması, onların can ve mal güvenliğini sağlaması, \"İstimalet Politikası\" olarak bilinir.\nBu politikanın temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gayrimüslimleri İslam'a geçmeye zorlamak",
+            "Fethedilen bölgelerde kalıcı hakimiyet kurmak ve isyanları önlemek",
+            "Avrupa devletleriyle diplomatik ilişkileri geliştirmek",
+            "Gaza ve cihat anlayışını terk etmek"
+          ]
+        },
+        {
+          "soruMetni": "Fetret Devri'ne son vererek devleti dağılmaktan kurtaran ve \"Osmanlı Devleti'nin ikinci kurucusu\" olarak kabul edilen padişah aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıldırım Bayezid",
+            "Çelebi Mehmet",
+            "II. Murat",
+            "Musa Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Çelebi Mehmet döneminde çıkan, \"toplumsal ve dini\" nitelikli olduğu kadar \"ilk\" olmasıyla da bilinen, Börklüce Mustafa ve Torlak Kemal'in de önemli rol oynadığı isyan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Baba İshak İsyanı",
+            "Şeyh Bedreddin İsyanı",
+            "Düzmece Mustafa İsyanı",
+            "Şahkulu İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nde, I. Murat döneminde \"Ülke, Padişah ve oğullarının ortak malıdır\" anlayışının getirilmesinin temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Taht kavgalarını sınırlayarak merkezi otoriteyi güçlendirmek",
+            "Şehzadelerin devlet tecrübesi kazanmasını sağlamak",
+            "Türkmen beylerinin yönetime karışmasını engellemek",
+            "Bizans'ın veraset sistemini örnek almak"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin ilk veziri olarak atanan devlet adamı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çandarlı Halil Paşa",
+            "Köprülü Mehmet Paşa",
+            "Alaeddin Paşa",
+            "Sinan Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde İznik'te kurulan \"İznik Orhaniyesi\" adlı yapı, Osmanlı Devleti'nin hangi alandaki ilk kurumsal yapısıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordu",
+            "Hastane",
+            "Medrese",
+            "Saray"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin, Kapıkulu Ocağı'nı kurmasının ve Devşirme Sistemini uygulamasının temel siyasi amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordunun asker ihtiyacını hızlıca karşılamak",
+            "Fethedilen yerlerdeki gayrimüslim nüfusu azaltmak",
+            "Padişaha doğrudan bağlı, sadık bir askeri güç oluşturarak Türkmen beylerinin nüfuzunu dengelemek",
+            "Avrupa ordularının askeri sistemlerini taklit etmek"
+          ]
+        },
+        {
+          "soruMetni": "Osman Bey döneminde, Bizans Tekfurları ile yapılan ve Osmanlı'nın bağımsızlığını ilan etmesinde önemli rol oynayan, beyliğin resmen kurulduğu savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Koyunhisar Savaşı",
+            "Palekanon Savaşı",
+            "Sırpsındığı Savaşı",
+            "I. Kosova Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Beyliği'nin, fetih siyasetini \"İskan\" ve \"İstimalet\" politikalarıyla birlikte yürütmesinin en temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Haçlı seferlerini ideolojik olarak zayıflatmak",
+            "Fethedilen bölgelerde kalıcı egemenlik kurmak ve demografik dengeyi sağlamak",
+            "Bizans İmparatorluğu'nu ekonomik olarak çökertmek",
+            "Konar-göçer Türkmenlerin askeri gücünden faydalanmak"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde Karesioğulları Beyliği'nin Osmanlı topraklarına katılması, Anadolu Türk siyasi birliği yolunda atılan ilk adım olmasının yanı sıra, Osmanlı Devleti'ne öncelikle hangi stratejik avantajı sağlamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ahilerin tam desteğini",
+            "Rumeli'ye geçişi kolaylaştıracak bir donanma ve tecrübeli denizciler",
+            "Tımar sisteminin ilk uygulamasını",
+            "Moğollara karşı bir tampon bölge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_kurulus_2",
+      "baslik": "Osmanlı Devleti Kuruluş Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_kurulus_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "I. Murat'ın veraset sisteminde \"Ülke hanedanın ortak malıdır\" anlayışını \"Ülke padişah ve oğullarınındır\" şeklinde değiştirmesine rağmen, taht kavgalarının tam olarak engellenememesinin temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devşirme sisteminin henüz oturmamış olması",
+            "Oğullar arasında hangisinin tahta geçeceğinin hâlâ belirsiz olması",
+            "Bizans'ın şehzadeleri sürekli kışkırtması",
+            "Tımar sisteminin beyleri güçlendirmesi"
+          ]
+        },
+
+        {
+          "soruMetni": "1402 Ankara Savaşı sonrası yaşanan Fetret Devri'nde Anadolu'daki Türk beyliklerinin çoğu yeniden kurulurken, Osmanlı'nın Balkanlar'daki topraklarında ciddi bir çözülme yaşanmamıştır.\nBu durum, aşağıdakilerden hangisinin doğrudan bir başarısı olarak yorumlanabilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tımar sisteminin askeri gücünün",
+            "Kapıkulu Ocağı'nın sadakatinin",
+            "Uygulanan adil yönetim ve İskan politikalarının",
+            "Bizans İmparatorluğu'nun desteğinin"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde Bizans İmparatoru III. Andronikos ile yapılan ve Bizans'ın Kocaeli Yarımadası'ndaki etkinliğini kesin olarak sona erdiren savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Koyunhisar Savaşı",
+            "Palekanon Savaşı",
+            "Sırpsındığı Savaşı",
+            "I. Kosova Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "1389 I. Kosova Savaşı'nın, Kuruluş Dönemi'ndeki diğer Haçlı savaşlarından farklı olan en belirgin özelliği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Osmanlıların ilk kez ateşli silahlar kullanması",
+            "Haçlı ordusunun ilk kez yenilgiye uğratılması",
+            "Savaş sırasında her iki tarafın hükümdarının da ölmesi",
+            "Bizans'ın Haçlılara yardım göndermesi"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey'in, kendi adına hutbe okutup gümüş sikke bastırması, aşağıdakilerden hangisinin en güçlü göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gaza ve Cihat anlayışının resmileştiğinin",
+            "Beyliğin, bağımsız bir devlet niteliği kazandığının",
+            "Tımar sistemini kurduğunun",
+            "Bizans ile kalıcı barış yaptığının"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Rumeli'deki fetihlerinin merkezi ve üssü olması amacıyla I. Murat döneminde fethedilerek Bursa'dan sonra başkent yapılan şehir hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sofya",
+            "İznik",
+            "Edirne",
+            "Filibe"
+          ]
+        },
+        {
+          "soruMetni": "Çelebi Mehmet, 11 yıl süren Fetret Devri'nde kardeşleri İsa, Musa ve Süleyman Çelebi'yi yenerek Anadolu ve Rumeli'de birliği sağlamıştır. Taht için mücadele ettiği bu kardeşleri dışında, hangi padişah döneminde isyan çıkarmış olan bir şehzade, Fetret Devri'nde yer almamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ertuğrul Çelebi",
+            "Savcı Bey",
+            "Kasım Çelebi",
+            "Halil Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Çelebi Mehmet döneminde, Fetret Devri'nin yarattığı sosyal ve ekonomik kriz ortamında ortaya çıkan, \"ortak mülkiyeti\" savunan ve Osmanlı tarihindeki ilk büyük dini-toplumsal nitelikli isyan olarak kabul edilen hareket hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Düzmece Mustafa İsyanı",
+            "Şeyh Bedreddin İsyanı",
+            "Baba İshak İsyanı",
+            "Buçuktepe İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Kuruluş Dönemi'nde Osmanlı ordusunun ana vurucu gücünü oluşturan Tımarlı Sipahilerin, Kapıkulu Ocağı'ndan en temel farkı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Padişaha bağlı olmaları",
+            "Sadece Türklerden oluşmaları",
+            "Maaşlarını doğrudan hazineden almamaları",
+            "Savaş zamanında orduya katılmaları"
+          ]
+        },
+        {
+          "soruMetni": "Yıldırım Bayezid'in Niğbolu Zaferi'nden sonra Anadolu Türk birliğini büyük ölçüde sağlaması ve İstanbul'u kuşatması, hangi doğu gücünün Anadolu'ya girmesine ve 1402'de Ankara Savaşı'nın yaşanmasına zemin hazırlamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akkoyunlular",
+            "Memlükler",
+            "Timur İmparatorluğu",
+            "Karakoyunlular"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde divan teşkilatının kurulması, vezirlik makamının oluşturulması ve İznik'te ilk medresenin açılması, aşağıdakilerden hangisinin en belirgin göstergesidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Taht kavgalarının sona erdiğinin",
+            "Anadolu Türk siyasi birliğinin sağlandığının",
+            "Beylikten devlete geçişin yaşandığının",
+            "Balkanlara geçişin tamamlandığının"
+          ]
+        },
+        {
+          "soruMetni": "Fatih'in ölümünden sonra II. Bayezid döneminde yaşanan, Memlüklere ve Rodos Şövalyelerine sığınması nedeniyle bir iç sorunken uluslararası bir sorun haline gelen olay nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Şahkulu İsyanı",
+            "Cem Sultan Olayı",
+            "Börklüce Mustafa İsyanı",
+            "Kalenderoğlu İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in 1515 yılında yaptığı Turnadağ Savaşı ile hangi beyliğe son verilmiş ve böylece Anadolu Türk Siyasi Birliği kesin olarak sağlanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karamanoğulları",
+            "Germiyanoğulları",
+            "Dulkadiroğulları",
+            "Ramazanoğulları"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in 1516 Mercidabık ve 1517 Ridaniye Savaşları ile Memlük Devleti'ne son vermesinin en önemli dini-siyasi sonucu nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Venedik'in Kıbrıs için ödediği verginin Osmanlı'ya geçmesi",
+            "Baharat Yolu'nun tam kontrolünün sağlanması",
+            "Halifelik makamının Osmanlı padişahlarına geçmesi",
+            "Doğu Akdeniz'de donanma üstünlüğünün kurulması"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman döneminde, Macaristan'ın fethine ve Osmanlı'nın Orta Avrupa'daki hakimiyetinin başlamasına yol açan, 1526'da gerçekleşen meydan savaşı hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "I. Kosova Savaşı",
+            "Mohaç Meydan Muharebesi",
+            "I. Viyana Kuşatması",
+            "Zigetvar Seferi"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın Safeviler üzerine yaptığı seferler sonucunda 1555 yılında imzalanan ve Osmanlı tarihindeki ilk resmi Türk-İran antlaşması olan belge hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Amasya Antlaşması",
+            "Kasr-ı Şirin Antlaşması",
+            "Ferhat Paşa Antlaşması",
+            "Serav Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni döneminde Fransa'ya verilen kapitülasyonların (ticari ayrıcalıklar) verilmesinin temel siyasi amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fransız sanayisini geliştirmek",
+            "Coğrafi Keşiflerin olumsuz etkilerini azaltmak",
+            "Avrupa'da Kutsal Roma-Cermen İmparatoru Şarlken'e karşı bir Hristiyan ittifakını kırmak",
+            "Baharat Yolu'nu kontrol altına almak"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1529'da gerçekleştirdiği ancak mevsim koşulları ve ağır topların getirilmemesi nedeniyle başarısız olan kuşatma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Belgrad Kuşatması",
+            "Rodos Kuşatması",
+            "I. Viyana Kuşatması",
+            "Malta Kuşatması"
+          ]
+        },
+        {
+          "soruMetni": "Sokullu Mehmet Paşa'nın, Rusya'nın güneye inmesini engellemek ve Orta Asya Türkleri ile bağlantı kurmak amacıyla planladığı ancak başarılı olamayan kanal projesi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Süveyş Kanalı Projesi",
+            "Don-Volga Kanalı Projesi",
+            "Marmara-Karadeniz Kanalı Projesi",
+            "Tuna-Ren Kanalı Projesi"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in, Divan-ı Hümayun başkanlığını Padişahtan alıp Sadrazam'a bırakmasının temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadrazamın yetkilerini padişahtan üstün kılmak",
+            "Divan'ın daha hızlı karar almasını sağlamak",
+            "Padişahın otoritesini artırarak Divan'ı bir danışma meclisi konumuna getirmek",
+            "Taht kavgalarını engellemek"
+          ]
+        }
+      ]
     }
 
      ],
