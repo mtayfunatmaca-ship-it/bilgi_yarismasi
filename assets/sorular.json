@@ -311,217 +311,217 @@
   ],
   
   "quizzes": [
-{
-  "id": "tarih_osmanli_gerileme_4",
-  "baslik": "Osmanlı Devleti Gerileme Dönemi-4",
-  "kategoriId": "tarih",
-  "konuId": "osmanli_devleti_gerileme_donemi",
-  "isNew": true,
-  "soruSayisi": 20,
-  "sureDakika": 20,
-  "sorular": [
-    {
-      "soruMetni": "1877-1878 Osmanlı-Rus Savaşı'nda Plevne'de yaptığı destansı savunmayla tanınan komutan kimdir?",
-      "dogruCevapIndex": 0,
-      "secenekler": [
-        "Gazi Osman Paşa",
-        "Gazi Muhtar Paşa",
-        "Mithat Paşa",
-        "Enver Paşa"
-      ]
-    },
-    {
-      "soruMetni": "93 Harbi sonunda imzalanan ancak Avrupalı devletlerin tepkisi nedeniyle yürürlüğe girmeyen antlaşma hangisidir?",
-      "dogruCevapIndex": 2,
-      "secenekler": [
-        "Paris Antlaşması",
-        "Edirne Antlaşması",
-        "Ayastefanos Antlaşması",
-        "Hünkar İskelesi Antlaşması"
-      ]
-    },
-    {
-      "soruMetni": "Ayastefanos Antlaşması'nın yerine imzalanan 1878 Berlin Antlaşması'nda; Sırbistan, Karadağ ve Romanya bağımsız olmuş, Kars, Ardahan ve Batum Rusya'ya verilmiştir. Bu antlaşmanın en önemli sonucu nedir?",
-      "dogruCevapIndex": 0,
-      "secenekler": [
-        "Osmanlı Devleti'nin dağılma sürecinin hızlanması",
-        "Osmanlıcılık fikrinin güçlenmesi",
-        "Rusya'nın Akdeniz'e inmesi",
-        "Padişahın yetkilerinin artması"
-      ]
-    },
-    {
-      "soruMetni": "\"Ermeni Meselesi\"nin ilk kez uluslararası bir antlaşma metnine girmesi hangi antlaşma ile olmuştur?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Paris Antlaşması",
-        "Berlin Antlaşması",
-        "Edirne Antlaşması",
-        "Yaş Antlaşması"
-      ]
-    },
-    {
-      "soruMetni": "II. Abdülhamid'in, 93 Harbi'ni bahane ederek Meclis-i Mebusan'ı kapatmasıyla başlayan ve anayasanın askıya alındığı döneme ne ad verilir?",
-      "dogruCevapIndex": 2,
-      "secenekler": [
-        "Lale Devri",
-        "Fetret Devri",
-        "İstibdat Dönemi",
-        "Nizam-ı Cedid Dönemi"
-      ]
-    },
-    {
-      "soruMetni": "II. Abdülhamid'in temel devlet politikası aşağıdakilerden hangisi olmuştur?",
-      "dogruCevapIndex": 2,
-      "secenekler": [
-        "Türkçülük",
-        "Batıcılık",
-        "İslamcılık",
-        "Adem-i Merkeziyetçilik"
-      ]
-    },
-    {
-      "soruMetni": "1881 yılında, Osmanlı Devleti'nin dış borçlarını ödeyememesi üzerine, Avrupalı alacaklı devletler tarafından kurulan ve devletin gelirlerine el koyan idare hangisidir?",
-      "dogruCevapIndex": 2,
-      "secenekler": [
-        "Bank-ı Osmani",
-        "Reji İdaresi",
-        "Düyun-ı Umumiye İdaresi",
-        "Memleket Sandıkları"
-      ]
-    },
-    {
-      "soruMetni": "II. Abdülhamid'in İslamcılık politikası doğrultusunda yaptırdığı ve İstanbul'u kutsal topraklara bağlamayı amaçlayan demiryolu projesi hangisidir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Berlin-Bağdat Demiryolu",
-        "Hicaz Demiryolu",
-        "Rumeli Demiryolu",
-        "Edirne Demiryolu"
-      ]
-    },
-    {
-      "soruMetni": "İngiltere ve Rusya arasında yapılan Reval Görüşmeleri'nin ve İttihat ve Terakki Cemiyeti'nin başlattığı isyanın doğrudan sonucu nedir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "I. Meşrutiyet'in ilanı",
-        "II. Meşrutiyet'in ilanı",
-        "Tanzimat Fermanı'nın ilanı",
-        "Vaka-i Hayriye'nin yaşanması"
-      ]
-    },
-    {
-      "soruMetni": "II. Meşrutiyet'in ilan edildiği 1908 yılındaki kargaşa sırasında Osmanlı Devleti'nin kaybettiği topraklar hangileridir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Mısır, Tunus, Cezayir",
-        "Bulgaristan, Bosna-Hersek, Girit",
-        "Kırım, Eflak, Boğdan",
-        "Sırbistan, Romanya, Karadağ"
-      ]
-    },
-    {
-      "soruMetni": "Osmanlı tarihinde Meşrutiyet rejimini yıkmaya yönelik ilk gerici isyan aşağıdakilerden hangisidir?",
-      "dogruCevapIndex": 0,
-      "secenekler": [
-        "31 Mart Vakası",
-        "Patrona Halil İsyanı",
-        "Edirne Olayı",
-        "Çınar Vakası"
-      ]
-    },
-    {
-      "soruMetni": "31 Mart İsyanı'nı bastırmak için Selanik'ten gelen, Komutanlığını Mahmut Şevket Paşa'nın, Kurmay Başkanlığını Mustafa Kemal'in yaptığı ordunun adı nedir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Nizam-ı Cedid Ordusu",
-        "Hareket Ordusu",
-        "Sekban-ı Cedid",
-        "Hassa Ordusu"
-      ]
-    },
-    {
-      "soruMetni": "Arnavutluk'un bağımsızlığını ilan etmesi ve Balkan uluslarının Osmanlı'ya saldırması, hangi fikir akımının iflas ettiğini kesin olarak göstermiştir?",
-      "dogruCevapIndex": 2,
-      "secenekler": [
-        "Türkçülük",
-        "Batıcılık",
-        "Osmanlıcılık",
-        "Adem-i Merkeziyetçilik"
-      ]
-    },
-    {
-      "soruMetni": "I. Dünya Savaşı sırasında Arapların Osmanlı'ya karşı İngilizlerle işbirliği yapması, hangi fikir akımının iflas ettiğini göstermiştir?",
-      "dogruCevapIndex": 2,
-      "secenekler": [
-        "Osmanlıcılık",
-        "Türkçülük",
-        "İslamcılık",
-        "Batıcılık"
-      ]
-    },
-    {
-      "soruMetni": "İtalya'nın sömürge arayışıyla 1911'de Osmanlı Devleti'ne saldırması sonucu başlayan savaş hangisidir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "93 Harbi",
-        "Trablusgarp Savaşı",
-        "Balkan Savaşı",
-        "I. Dünya Savaşı"
-      ]
-    },
-    {
-      "soruMetni": "Mustafa Kemal'in Trablusgarp Savaşı'nda yerel halkı İtalyanlara karşı örgütlemesi, onun öncelikle hangi kişisel özelliğini göstermektedir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "İleri görüşlülüğü",
-        "Teşkilatçılığı",
-        "Eğitimciliği",
-        "İnkılapçılığı"
-      ]
-    },
-    {
-      "soruMetni": "1912 Uşi Antlaşması ile Osmanlı Devleti'nin Kuzey Afrika'daki son toprağı olan Trablusgarp hangi devlete bırakılmıştır?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Fransa",
-        "İtalya",
-        "Almanya",
-        "Rusya"
-      ]
-    },
-    {
-      "soruMetni": "1913 yılında İttihat ve Terakki Partisi'nin, I. Balkan Savaşı'ndaki Edirne yenilgisini bahane ederek Kâmil Paşa Hükümeti'ni devirip yönetime el koyduğu olay nedir?",
-      "dogruCevapIndex": 0,
-      "secenekler": [
-        "Bab-ı Ali Baskını",
-        "31 Mart Vakası",
-        "Çırağan Baskını",
-        "Vaka-i Hayriye"
-      ]
-    },
-    {
-      "soruMetni": "I. Balkan Savaşı'nda en fazla toprağı alan Bulgaristan'a karşı, Sırbistan, Yunanistan ve Romanya'nın saldırmasıyla başlayan savaş hangisidir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Trablusgarp Savaşı",
-        "II. Balkan Savaşı",
-        "93 Harbi",
-        "I. Dünya Savaşı"
-      ]
-    },
-    {
-      "soruMetni": "II. Balkan Savaşı sonunda Osmanlı Devleti'nin Bulgaristan'dan Midye-Enez hattını aşarak geri aldığı en önemli şehirler hangileridir?",
-      "dogruCevapIndex": 1,
-      "secenekler": [
-        "Selanik ve Manastır",
-        "Edirne ve Kırklareli",
-        "Sofya ve Filibe",
-        "Üsküp ve Priştine"
+ {
+      "id": "tarih_osmanli_dagilma_2",
+      "baslik": "Osmanlı Devleti Dağılma Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_dagilma_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1877-1878 Osmanlı-Rus Savaşı'nda Doğu Cephesi'nde Erzurum Aziziye Tabyası'ndaki sivil direnişin sembolü olan kadın kahraman kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kara Fatma",
+            "Nene Hatun",
+            "Şerife Bacı",
+            "Halide Edip"
+          ]
+        },
+        {
+          "soruMetni": "Ayastefanos Antlaşması'nın yürürlüğe girmemesinin temel nedeni nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Rusya'nın antlaşmayı reddetmesi",
+            "Osmanlı Devleti'nin kabul etmemesi",
+            "Sırbistan ve Romanya'nın isyan etmesi",
+            "İngiltere ve Avusturya-Macaristan'ın, Rusya'nın aşırı güçlenmesinden rahatsız olması"
+          ]
+        },
+        {
+          "soruMetni": "1878 Berlin Antlaşması'nda İngiltere, Osmanlı'ya destek verme vaadiyle aşağıdaki topraklardan hangisini \"geçici\" olarak üs olarak almıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mısır",
+            "Girit",
+            "Kıbrıs",
+            "On İki Ada"
+          ]
+        },
+        {
+          "soruMetni": "1878 Berlin Antlaşması'nda \"Ermenilerin oturduğu yerlerde ıslahat yapılması\" maddesi, uluslararası siyasette hangi sorunun başlangıcı kabul edilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ermeni Meselesi",
+            "Boğazlar Sorunu",
+            "Mısır Sorunu",
+            "Milliyetçilik Sorunu"
+          ]
+        },
+        {
+          "soruMetni": "II. Abdülhamid'in 1878'de Meclis-i Mebusan'ı kapatarak başlattığı 30 yıllık baskı ve sansür dönemine ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Lale Devri",
+            "Tanzimat Dönemi",
+            "İstibdat Dönemi",
+            "Nizam-ı Cedid Dönemi"
+          ]
+        },
+        {
+          "soruMetni": "1881'de çıkarılan \"Muharrem Kararnamesi\" ile kurulan, Avrupalı devletlerin Osmanlı maliyesini denetlediği ve borçlara karşılık tütün, tuz, ipek gibi gelirlere el koyduğu kurum hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Düyun-ı Umumiye",
+            "Reji İdaresi",
+            "Bank-ı Osmani",
+            "Memleket Sandıkları"
+          ]
+        },
+        {
+          "soruMetni": "II. Abdülhamid döneminde, Alman İmparatoru II. Wilhelm'in de desteğiyle yaptırılan ve Almanya'nın Orta Doğu'ya nüfuz etmesini sağlayan demiryolu projesi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hicaz Demiryolu",
+            "Berlin-Bağdat Demiryolu",
+            "Rumeli Demiryolu",
+            "Varna-Rusçuk Demiryolu"
+          ]
+        },
+        {
+          "soruMetni": "II. Abdülhamid'in İslamcılık politikası doğrultusunda, Japonya'ya dostluk mesajı götürmek ve Müslümanlar üzerindeki etkisini göstermek için gönderdiği, ancak dönüş yolunda batan geminin adı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yavuz Zırhlısı",
+            "Midilli Zırhlısı",
+            "Ertuğrul Fırkateyni",
+            "Bandırma Vapuru"
+          ]
+        },
+        {
+          "soruMetni": "II. Abdülhamid döneminde kurulan, yabancıların elindeki tütün tekelini yöneten ve Düyun-ı Umumiye'ye bağlı olan idare hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Reji İdaresi",
+            "Bank-ı Dersaadet",
+            "Memleket Sandıkları",
+            "Sanayi-i Nefise Mektebi"
+          ]
+        },
+        {
+          "soruMetni": "II. Abdülhamid döneminde Mithat Paşa'nın kurduğu Memleket Sandıkları'nın geliştirilmesiyle oluşturulan ve çiftçiye kredi vermeyi amaçlayan banka hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Osmanlı Bankası",
+            "İtibar-ı Milli Bankası",
+            "Ziraat Bankası",
+            "İş Bankası"
+          ]
+        },
+        {
+          "soruMetni": "II. Abdülhamid döneminde Osman Hamdi Bey tarafından kurulan ve günümüzde Mimar Sinan Güzel Sanatlar Üniversitesi'nin temelini oluşturan okul hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sanayi-i Nefise Mektebi",
+            "Darülfünun",
+            "Mekteb-i Sultani",
+            "Darülmaarif"
+          ]
+        },
+        {
+          "soruMetni": "II. Meşrutiyet'in ilan edilmesini hızlandıran ve İttihat ve Terakki'yi harekete geçiren dış gelişme aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Napolyon'un Mısır'ı işgali",
+            "Kırım Savaşı'nın başlaması",
+            "İngiltere ve Rusya arasında yapılan Reval Görüşmeleri",
+            "Berlin Antlaşması'nın imzalanması"
+          ]
+        },
+        {
+          "soruMetni": "1909'daki 31 Mart Vakası'nı bastırmak için Selanik'ten İstanbul'a gelen \"Hareket Ordusu\"nun komutanı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Enver Paşa",
+            "Mustafa Kemal Paşa",
+            "Mahmut Şevket Paşa",
+            "Kazım Karabekir Paşa"
+          ]
+        },
+        {
+          "soruMetni": "31 Mart Vakası'nın bastırılmasından sonra Meclis kararıyla tahttan indirilen padişah kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Abdülaziz",
+            "II. Abdülhamid",
+            "V. Murat",
+            "V. Mehmet Reşat"
+          ]
+        },
+        {
+          "soruMetni": "Kanun-i Esasi'de 1909 yılında yapılan değişiklikler hangi sonucu doğurmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Padişahın otoritesini artırmıştır.",
+            "Osmanlıcılık fikrini güçlendirmiştir.",
+            "Parlamenter sistemin güçlenmesini sağlamıştır.",
+            "İstibdat Dönemi'ni başlatmıştır."
+          ]
+        },
+        {
+          "soruMetni": "İttihat ve Terakki Cemiyeti'nin temel fikir akımı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Osmanlıcılık",
+            "İslamcılık",
+            "Batıcılık",
+            "Türkçülük"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal'in, 1911 Trablusgarp Savaşı'nda İtalyanlara karşı yerel halkı örgütlediği Derne ve Tobruk'taki mücadelesi, onun en çok hangi yönünü öne çıkarmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İnkılapçılığını",
+            "Eğitimciliğini",
+            "Teşkilatçılığını",
+            "İleri görüşlülüğünü"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin 1912 Uşi Antlaşması ile On İki Ada'yı geçici olarak İtalya'ya bırakmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İtalya ile ittifak kurmak",
+            "I. Balkan Savaşı'nın başlaması ve Yunanistan'ın adaları işgal etmesini engellemek",
+            "Rodos Şövalyelerine karşı yardım almak",
+            "Adaların ekonomik yük olmasından kurtulmak"
+          ]
+        },
+        {
+          "soruMetni": "I. Balkan Savaşı'nda Osmanlı Devleti'ne karşı ittifak kuran devletler arasında hangisi yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bulgaristan",
+            "Yunanistan",
+            "Sırbistan",
+            "Romanya"
+          ]
+        },
+        {
+    "soruMetni": "Hünkâr İskelesi Antlaşması'nın imzalanması, aşağıdaki deniz yollarından hangisinin uluslararası bir sorun haline gelmesine yol açmıştır?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Süveyş Kanalı",
+      "Kiel Kanalı",
+      "İstanbul ve Çanakkale Boğazları",
+      "Cebelitarık Boğazı"
+    ]
+  }
       ]
     }
-  ]
-}
   ],
      "trialExams": [ ],
    "achievements": [ ]
