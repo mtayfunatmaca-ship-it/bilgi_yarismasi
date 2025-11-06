@@ -1,0 +1,4624 @@
+{
+  "kategoriler": [
+    { "id": "turkce", "ad": "Türkçe", "sira": 1 },
+    { "id": "matematik", "ad": "Matematik", "sira": 2 },
+    { "id": "tarih", "ad": "Tarih", "sira": 3 },
+    { "id": "cografya", "ad": "Coğrafya", "sira": 4 },
+    { "id": "vatandaslik", "ad": "Vatandaşlık", "sira": 5 }
+  ],
+  
+  "konuBasliklari": [
+    {
+      "id": "islamiyet_oncesi_turk_devletleri", 
+      "ad": "İslamiyet Öncesi Türk Devletleri", 
+      "kategoriId": "tarih", 
+      "sira": 1 
+    },
+    {
+      "id": "ilk_turk_islam_devletleri", 
+      "ad": "İlk Türk İslam Devletleri", 
+      "kategoriId": "tarih", 
+      "sira": 2
+    },
+    {
+      "id": "osmanli_devleti_kurulus_donemi", 
+      "ad": "Osmanlı Devleti Kuruluş Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 3
+    },
+    {
+      "id": "osmanli_devleti_yukselme_donemi", 
+      "ad": "Osmanlı Devleti Yükselme Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 4
+    },
+    {
+      "id": "osmanli_devleti_duraklama_donemi", 
+      "ad": "Osmanlı Devleti Duraklama Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 5
+    },
+    {
+      "id": "osmanli_devleti_gerileme_donemi", 
+      "ad": "Osmanlı Devleti Gerileme Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 6
+    },
+    {
+      "id": "osmanli_devleti_dagilma_donemi", 
+      "ad": "Osmanlı Devleti Dağılma Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 7
+    },
+    {
+      "id": "osmanli_devleti_kultur_medeniyet", 
+      "ad": "Osmanlı Devletinde Kültür ve Medeniyet", 
+      "kategoriId": "tarih", 
+      "sira": 8
+    },
+    {
+      "id": "20_yy_osmanli_devleti", 
+      "ad": "20. Yüzyıl Osmanlı Devleti", 
+      "kategoriId": "tarih", 
+      "sira": 8
+    },
+    {
+      "id": "1_tbmm_donemi", 
+      "ad": "1. TBMM Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 9
+    },
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi", 
+      "ad": "Kurtuluş Savaşı Muharebeler Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 10
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari", 
+      "ad": "Atatürk İlkeleri ve İnkılapları", 
+      "kategoriId": "tarih", 
+      "sira": 11
+    },
+    {
+      "id": "cok_partili_hayata_gecis_donemi", 
+      "ad": "Çok Partili Hayata Geçiş Dönemi", 
+      "kategoriId": "tarih", 
+      "sira": 12
+    },
+    {
+      "id": "ataturk_donemi_dis_politika", 
+      "ad": "Atatürk Dönemi Dış Politika", 
+      "kategoriId": "tarih", 
+      "sira": 13
+    },
+    {
+      "id": "turkiyenin_cografi_konumu", 
+      "ad": "Türkiye'nin Coğrafi Konumu", 
+      "kategoriId": "cografya", 
+      "sira": 1
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri", 
+      "ad": "Türkiye'nin Yerşekilleri ve Özellikleri", 
+      "kategoriId": "cografya", 
+      "sira": 2
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu", 
+      "ad": "Türkiye'nin İklimi ve Bitki Örtüsü", 
+      "kategoriId": "cografya", 
+      "sira": 3
+    },
+    {
+      "id": "turkiyede_nufus_ve_yerlesme", 
+      "ad": "Türkiye'de Nüfus ve Yerleşme", 
+      "kategoriId": "cografya", 
+      "sira": 4
+    },
+    {
+      "id": "turkiyede_tarim_ve_hayvancilik", 
+      "ad": "Türkiye'de Tarım ve Hayvancılık", 
+      "kategoriId": "cografya", 
+      "sira": 5
+    },
+    {
+      "id": "turkiyede_madenler_ve_enerji_kaynaklari", 
+      "ad": "Türkiye'de Madenler ve Enerji Kaynakları", 
+      "kategoriId": "cografya", 
+      "sira": 6
+    },
+    {
+      "id": "turkiyede_ulasim_ticaret_ve_turizm", 
+      "ad": "Türkiye'de Ulaşım Ticaret ve Turizm", 
+      "kategoriId": "cografya", 
+      "sira": 7
+    },
+    {
+      "id": "turkiyenin_cografi_bolgeleri", 
+      "ad": "Türkiye'nin Coğrafi Bölgeleri", 
+      "kategoriId": "cografya", 
+      "sira": 8
+    },
+    {
+      "id": "hukukun_temel_kavramlari", 
+      "ad": "Hukukun Temel Kavramları", 
+      "kategoriId": "vatandaslik", 
+      "sira": 1
+    },
+    {
+      "id": "devlet_bicimleri_ve_kuvvetler_ayriligi", 
+      "ad": "Devlet Biçimleri Demokrasi ve Kuvvetler Ayrılığı", 
+      "kategoriId": "vatandaslik", 
+      "sira": 2
+    },
+    {
+      "id": "anayasa_hukukuna_giris", 
+      "ad": "Anayasa Hukukuna Giriş ve Temel Kavramlar", 
+      "kategoriId": "vatandaslik", 
+      "sira": 3
+    },
+    {
+      "id": "1982_anayasasi_temel_ilkeleri", 
+      "ad": "1982 Anayasasının Temel İlkeleri", 
+      "kategoriId": "vatandaslik", 
+      "sira": 4
+    },
+    {
+      "id": "yasama_yurutme_yargi", 
+      "ad": "Yasama, Yürütme ve Yargı", 
+      "kategoriId": "vatandaslik", 
+      "sira": 5
+    },
+    {
+      "id": "temel_hak_ve_hurriyetler", 
+      "ad": "Temel Hak ve Hürriyetler", 
+      "kategoriId": "vatandaslik", 
+      "sira": 6
+    },
+    {
+      "id": "idare_hukuku", 
+      "ad": "İdare Hukuku", 
+      "kategoriId": "vatandaslik", 
+      "sira": 7
+    },
+    {
+      "id": "uluslararasi_kuruluslar", 
+      "ad": "Uluslararası Kuruluşlar", 
+      "kategoriId": "vatandaslik", 
+      "sira": 8
+    },
+    {
+      "id": "sozcukte_anlam", 
+      "ad": "Sözcükte Anlam", 
+      "kategoriId": "turkce", 
+      "sira": 1
+    },
+    {
+      "id": "cumlede_anlam", 
+      "ad": "Cümlede Anlam", 
+      "kategoriId": "turkce", 
+      "sira": 2
+    },
+    {
+      "id": "paragrafta_anlam", 
+      "ad": "Paragrafta Anlam", 
+      "kategoriId": "turkce", 
+      "sira": 3
+    },
+    {
+      "id": "ses_bilgisi", 
+      "ad": "Ses Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 4
+    },
+    {
+      "id": "yapi_bilgisi", 
+      "ad": "Yapı Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 5
+    },
+    {
+      "id": "sozcukte_yapi", 
+      "ad": "Sözcükte Yapı", 
+      "kategoriId": "turkce", 
+      "sira": 6
+    },
+    {
+      "id": "cumle_bilgisi", 
+      "ad": "Cümle Bilgisi", 
+      "kategoriId": "turkce", 
+      "sira": 6
+    },
+    {
+      "id": "yazim_kurallari", 
+      "ad": "Yazım Kuralları", 
+      "kategoriId": "turkce", 
+      "sira": 7
+    },
+    {
+      "id": "noktalama_isaretleri", 
+      "ad": "Noktalama İşaretleri", 
+      "kategoriId": "turkce", 
+      "sira": 8
+    },
+    {
+      "id": "anlatim_bozuklugu", 
+      "ad": "Anlatım Bozukluğu", 
+      "kategoriId": "turkce", 
+      "sira": 9
+    },
+    {
+      "id": "temel_kavramlar", 
+      "ad": "Temel Kavramlar", 
+      "kategoriId": "matematik", 
+      "sira": 1
+    },
+    {
+      "id": "ebob_ekok_asal_carpan", 
+      "ad": "EBOB-EKOK ve Asal Çarpanlara Ayırma", 
+      "kategoriId": "matematik", 
+      "sira": 2
+    },
+    {
+      "id": "rasyonel_sayilar", 
+      "ad": "Rasyonel Sayılar", 
+      "kategoriId": "matematik", 
+      "sira": 3
+    },
+    {
+      "id": "esitsizlik_ve_mutlak_deger", 
+      "ad": "Eşitsizlik ve Mutlak Değer", 
+      "kategoriId": "matematik", 
+      "sira": 4
+    },
+    {
+      "id": "uslu_koklu_sayilar", 
+      "ad": "Üslü ve Köklü Sayılar", 
+      "kategoriId": "matematik", 
+      "sira": 5
+    },
+    {
+      "id": "carpanlara_ayirma", 
+      "ad": "Çarpanlara Ayırla", 
+      "kategoriId": "matematik", 
+      "sira": 6
+    },
+    {
+      "id": "oran_oranti", 
+      "ad": "Oran-Orantı", 
+      "kategoriId": "matematik", 
+      "sira": 7
+    },
+    {
+      "id": "problemler", 
+      "ad": "Problemler", 
+      "kategoriId": "matematik", 
+      "sira": 8
+    },
+    {
+      "id": "kumeler", 
+      "ad": "Kümeler", 
+      "kategoriId": "matematik", 
+      "sira": 9
+    },
+    {
+      "id": "permutasyon_kombinasyon_olasilik", 
+      "ad": "Permütasyon, Kombinasyon, Olasılık", 
+      "kategoriId": "matematik", 
+      "sira": 10
+    }
+  ],
+  
+  "quizzes": [
+    {
+      "id": "islamiyet_oncesi_turk_devletleri_1",
+      "baslik": "İslamiyet Öncesi Türk Devletleri-1",
+      "kategoriId": "tarih",
+      "konuId":"islamiyet_oncesi_turk_devletleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Asya Hun Devleti'nin en parlak dönemini yaşatan ve orduda 'onlu sistemi' kurarak dünya askeri tarihini etkileyen hükümdar aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Teoman",
+            "Mete Han",
+            "Ki-ok",
+            "Balamir"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, Hunların batıya doğru hareketiyle başlayan Kavimler Göçü'nün siyasi sonuçlarından biri olarak gösterilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Roma İmparatorluğu'nun Batı-Doğu olarak ikiye ayrılması",
+            "Avrupa'da feodalite rejiminin ortaya çıkması",
+            "Avrupa Hun Devleti'nin kurulması",
+            "Skolastik düşüncenin zayıflaması"
+          ]
+        },
+        {
+          "soruMetni": "'Tanrı'nın Kırbacı' olarak bilinen ve Bizans'ı Margos ve Anatolios antlaşmalarıyla vergiye bağlayan Avrupa Hun hükümdarı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Atilla",
+            "Balamir",
+            "Uldız",
+            "Rua"
+          ]
+        },
+        {
+          "soruMetni": "Tarihte 'Türk' adını resmi devlet adı olarak kullanan ilk Türk devleti aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Asya Hun Devleti",
+            "Uygur Kağanlığı",
+            "Göktürk Kağanlığı",
+            "Avrupa Hun Devleti"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde görülen 'İkili Teşkilat' anlayışının temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Taht kavgalarını tamamen engellemek",
+            "Ülke yönetimini kolaylaştırmak",
+            "Çin'in siyasi modelini örnek almak",
+            "Federatif bir yapıya geçiş yapmak"
+          ]
+        },
+        {
+          "soruMetni": "Türk tarihi ve edebiyatının ilk yazılı kaynakları olan Orhun Abideleri, aşağıdaki Türk devletlerinden hangisi döneminde dikilmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Asya Hun Devleti",
+            "I. Göktürk Kağanlığı",
+            "Uygur Kağanlığı",
+            "II. Göktürk Devleti"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türk devletleri arasında, Maniheizm dinini benimseyerek yerleşik hayata geçen ve tarımsal faaliyetlere başlayan ilk Türk devleti hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Göktürkler",
+            "Hazarlar",
+            "Uygurlar",
+            "Türgişler"
+          ]
+        },
+        {
+          "soruMetni": "Uygurların yerleşik hayata geçmelerinin aşağıdakilerden hangisine ortam hazırladığı savunulamaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kalıcı mimari eserler bırakmalarına",
+            "Tarım kültürünün gelişmesine",
+            "Yazılı kültürün ve matbaanın gelişmesine",
+            "Savaşçılık yeteneklerinin artmasına"
+          ]
+        },
+        {
+          "soruMetni": "Hem Asya'da hem de Avrupa'da devlet kuran, İstanbul'u Sasanilerle birlikte iki kez kuşatan Türk devleti aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hunlar",
+            "Peçenekler",
+            "Avarlar",
+            "Bulgarlar"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde 'Kurultay' ile ilgili aşağıda verilen bilgilerden hangisi yanlıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletin en üst düzey danışma meclisidir.",
+            "Kağanın yetkilerini 'Töre'ye göre sınırlayabilirdi.",
+            "Sadece hanedan üyelerinin katılımıyla toplanırdı.",
+            "Kağan seçiminde ve savaş kararında etkili olurdu."
+          ]
+        },
+        {
+          "soruMetni": "Emevilerin Orta Asya'da ilerleyişini durdurarak bölgenin Araplaşmasını engelleyen ve hükümdarı Baga Tarkan adına para bastıran Türk devleti aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Göktürkler",
+            "Türgişler",
+            "Karluklar",
+            "Hazarlar"
+          ]
+        },
+        {
+          "soruMetni": "751 yılındaki Talas Savaşı'nda Çin'e karşı Abbasilerin yanında yer alarak savaşın kazanılmasında rol oynayan ve İslamiyet'i toplu olarak kabul eden ilk Türk topluluğu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Karluklar",
+            "Oğuzlar",
+            "Bulgarlar",
+            "Uygurlar"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türk devletlerinde sosyal yapıyı oluşturan unsurların küçükten büyüğe doğru sıralanışı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Oguş - Urug - Boy - Budun - İl",
+            "Boy - Budun - Urug - Oguş - İl",
+            "Urug - Oguş - Boy - İl - Budun",
+            "Oguş - Boy - Urug - Budun - İl"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, ilk Türk devletlerinde 'Töre' olarak adlandırılan sözlü hukuk kurallarının özellikleri arasında yer almaz?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kaynakları arasında Kağan emirleri ve Kurultay kararları bulunur.",
+            "Zamana ve koşullara göre değişmez, dogmatik kurallardır.",
+            "Hem yönetenleri hem de yönetilenleri bağlardı.",
+            "Uygurlar döneminde yerleşik hayata geçişle birlikte yazılı hale getirilmiştir."
+          ]
+        },
+        {
+          "soruMetni": "Ötüken'i merkez olarak kullanan son Türk devleti olan ve 'Manas Destanı' ile bilinen Türk devleti/topluluğu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kırgızlar",
+            "Göktürkler",
+            "Uygurlar",
+            "Karluklar"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türklerde 'Gök Tanrı' inancı ile ilgili aşağıdakilerden hangisi söylenemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Tek tanrılı bir yapıya sahiptir.",
+            "Ölümden sonra yaşama inancı vardır.",
+            "Kağan'ın gücünün tanrısal kaynaklı olduğuna inanılır.",
+            "İbadetler için yapılmış putlara tapınılırdı."
+          ]
+        },
+        {
+          "soruMetni": "Oğuz Kağan Destanı aşağıdaki Türk devletlerinden hangisiyle ilişkilendirilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Göktürkler",
+            "Uygurlar",
+            "Asya Hunları",
+            "Avrupa Hunları"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki Türk devletlerinden hangisi, kurulduğu coğrafya bakımından diğerlerinden farklıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Asya Hun Devleti",
+            "Göktürk Kağanlığı",
+            "İtil Bulgar Devleti",
+            "Uygur Kağanlığı"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde 'Kut' anlayışı, kağana yönetme yetkisinin Tanrı tarafından verildiğine inanılması esasına dayanıyordu. Bu durumun, öncelikle aşağıdakilerden hangisine zemin hazırladığı söylenebilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kağanın yetkilerinin Kurultay tarafından tamamen kısıtlanmasına",
+            "Demokratik bir yönetim anlayışının gelişmesine",
+            "Hanedan üyeleri arasında taht kavgalarının yaşanmasına",
+            "Ülkede din birliğinin sağlanamamasına"
+          ]
+        },
+        {
+          "soruMetni": "Türk tarihinde, Bizans ordusunda paralı askerlik yaparken Malazgirt Savaşı sırasında Selçuklu saflarına geçerek savaşın seyrini değiştiren Türk topluluğu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Peçenekler",
+            "Kumanlar",
+            "Avarlar",
+            "Türgişler"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_turk_devletleri_2",
+      "baslik": "İslamiyet Öncesi Türk Devletleri-2",
+      "kategoriId": "tarih",
+      "konuId":"islamiyet_oncesi_turk_devletleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Göktürklerin 50 yıl süren Çin esaretinden sonra İlteriş Kağan liderliğinde bağımsızlıklarını kazanmaları, Türk tarihindeki hangi özelliğin güçlü bir göstergesidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yerleşik hayata geçme arzusunun",
+            "Farklı dinlere karşı hoşgörünün",
+            "Bağımsızlık mücadelesi karakterinin",
+            "Ticari yollara hakim olma hedefinin"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet'i kabul eden ilk Türk devleti olan İtil Bulgar Devleti'nin hükümdarı, Abbasi halifesinden din alimleri ve mimarlar istemiştir. Bu hükümdar aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Almış Han",
+            "Baga Tarkan",
+            "Bilge Kül Kadir Han",
+            "Bögü Kağan"
+          ]
+        },
+        {
+          "soruMetni": "Uygurların, tarım yaptıkları bölgelerde sulama kanalları inşa etmeleri, onların öncelikle hangi alanda geliştiklerini gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sadece askeri mimaride",
+            "Şehircilik ve mühendislikte",
+            "Göçebe yaşam tarzında",
+            "Sözlü hukuk kurallarında"
+          ]
+        },
+        {
+          "soruMetni": "'Codex Cumanicus' adlı sözlük, hangi Türk topluluğunun dili üzerine Latin, Fars ve Alman misyonerler tarafından hazırlanmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kumanlar",
+            "Karluklar",
+            "Oğuzlar",
+            "Kırgızlar"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde Kağan'ın eşi olan 'Hatun'un siyasi yetkilere sahip olması, elçi kabul edebilmesi ve Kurultay'a katılması, aşağıdakilerden hangisinin bir göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin teokratik bir yapıya sahip olduğunun",
+            "Toplumsal hayatta kadının statüsünün yüksek olduğunun",
+            "Ülkenin 'Hatun' adına yönetildiğinin",
+            "Özel mülkiyetin gelişmediğinin"
+          ]
+        },
+        {
+          "soruMetni": "II. Göktürk Devleti'nin kurucusu İlteriş Kağan'ın en büyük yardımcısı olan ve \"Apa Tarkan\" unvanını kullanan, Türk tarihinin ilk \"veziri\" ve \"tarihçisi\" olarak kabul edilen devlet adamı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Vezir Tonyukuk",
+            "Bilge Kağan",
+            "Kültigin",
+            "Kapgan Kağan"
+          ]
+        },
+        {
+          "soruMetni": "Göktürklerin, Bizans ve Sasani imparatorlukları ile aynı dönemde var olmaları ve bu devletlerle yoğun diplomatik ve askeri ilişkilere girmeleri, aşağıdakilerden hangisinin kanıtıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bu devletlerin hukuk sistemini benimsediklerinin",
+            "Dünya siyasetinde denge unsuru olan bir güç olduklarının",
+            "Çin ile ilişkilerini tamamen kestiklerinin",
+            "Yerleşik hayata geçtiklerinin"
+          ]
+        },
+        {
+          "soruMetni": "Orta Asya Türk tarihi ile ilgili araştırmalar yapan ve Orhun Abideleri'ni ilk kez okuyarak bilim dünyasına tanıtan Danimarkalı dil bilimci aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Vilhelm Thomsen",
+            "Wilhelm Radloff",
+            "Louis Bazin",
+            "Németh Gyula"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde göçebe yaşam tarzı, aşağıdaki sanatlardan hangisinin gelişmesini yavaşlatmış veya engellemiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Maden işlemeciliği",
+            "Dokumacılık",
+            "Kalıcı mimari",
+            "Dericilik "
+          ]
+        },
+        {
+          "soruMetni": "Avrupa Hun hükümdarı Atilla, Batı Roma İmparatorluğu üzerine sefere çıkmış ve Roma'ya kadar ilerlemiştir. Papa I. Leo'nun ricası üzerine Roma'yı almaktan vazgeçmiştir. Bu seferin adı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Galya Seferi",
+            "Balkan Seferi",
+            "İtalya Seferi",
+            "Anatolios Seferi"
+          ]
+        },
+        {
+          "soruMetni": "Uygur alfabesi, hangi alfabeden etkilenerek oluşturulmuştur ve daha sonra Moğollar tarafından da kullanılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sogd Alfabesi",
+            "Çin Alfabesi",
+            "Kiril Alfabesi",
+            "Runik Alfabe"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türk devletlerinin İpek Yolu üzerinde hakimiyet kurmak için Çin, Sasani ve Bizans gibi devletlerle sürekli mücadele etmesi, onların en çok hangi alana önem verdiklerini gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dini yayılmacılığa",
+            "Ekonomik çıkarlara",
+            "Deniz ticaretine",
+            "Tarımsal üretime"
+          ]
+        },
+        {
+          "soruMetni": "Türk tarihinde \"Bozkırın Kuyumcuları\" olarak bilinen ve altın işlemeciliğinde çok ileri giden, ancak tam teşekküllü bir devletten çok bir topluluk olarak var olan kavim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kırgızlar",
+            "İskitler",
+            "Karluklar",
+            "Türgişler"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde hükümdarın \"Töre\"ye uymak zorunda olması, aksi takdirde \"Kut\"unun Tanrı tarafından geri alınacağına inanılması, aşağıdakilerden hangisini sağlamaya yönelik bir kontrol mekanizmasıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hükümdarın keyfi ve adaletsiz yönetimini engellemek",
+            "Göçebe yaşam tarzını korumak",
+            "Yeni dinlerin benimsenmesini hızlandırmak",
+            "Ordunun \"onlu sistem\"e göre yapılandırılmasını sağlamak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki Türk devletlerinden hangisi, kurulduğu coğrafya bakımından diğerlerinden belirgin bir şekilde farklıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Karluklar",
+            "Göktürkler",
+            "Uygurlar",
+            "Avarlar"
+          ]
+        },
+        {
+          "soruMetni": "\"Ergenekon\" ve \"Bozkurt\" destanları, hangi Türk devletinin kuruluşunu ve yeniden doğuşunu anlatan milli destanlarıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Asya Hunları",
+            "Uygurlar",
+            "Göktürkler",
+            "Kırgızlar"
+          ]
+        },
+        {
+          "soruMetni": "I. Göktürk Devleti'nde devletin batı kanadını \"Yabgu\" unvanıyla yöneten ve Sasanilere karşı Bizans ile ilk diplomatik ilişkileri kuran devlet adamı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İstemi Yabgu",
+            "Bumin Kağan",
+            "Mukan Kağan",
+            "Tapo Kağan"
+          ]
+        },
+        {
+          "soruMetni": "II. Göktürk Devleti, Çin esaretine karşı bağımsızlık mücadelesi vererek kurulmuştur. Bu devletin kurucusu olan ve \"İlteriş\" unvanını alan hükümdar kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bilge Kağan",
+            "Kapgan Kağan",
+            "Kutluk Kağan",
+            "Bumin Kağan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi İslamiyet öncesi Türk devletlerindeki \"ordu-millet\" anlayışını en iyi açıklar?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ordunun sadece hanedan üyelerinden oluşması",
+            "Her Türk bireyinin potansiyel asker sayılması",
+            "Ordunun ücretli ve yabancı askerlerden oluşması",
+            "Sadece savaş tehlikesi olduğunda ordu toplanması"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz'in kuzeyinde yaşamış, Rusların 'İgor Destanı'na ve 'Dede Korkut Hikayeleri'ne konu olmuş Türk topluluğu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hazarlar",
+            "Avarlar",
+            "Peçenekler",
+            "Kıpçaklar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "islamiyet_oncesi_turk_devletleri_3",
+      "baslik": "İslamiyet Öncesi Türk Devletleri-3",
+      "kategoriId": "tarih",
+      "konuId":"islamiyet_oncesi_turk_devletleri",
+      "isNew": true,
+      "soruSayisi": 15,
+      "sureDakika": 15,
+      "sorular": [
+        {
+          "soruMetni": "1071 Malazgirt Savaşı sırasında Bizans ordusunda paralı askerken, Selçuklu ordusunun Türk olduğunu fark ederek Sultan Alparslan'ın tarafına geçen iki Türk topluluğu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karluklar ve Kırgızlar",
+            "Avarlar ve Bulgarlar",
+            "Peçenekler ve Oğuzlar",
+            "Türgişler ve Hazarlar"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türk devletlerinde 'hükümet' veya 'bakanlar kurulu' anlamında kullanılan terim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ayukı",
+            "Kurultay",
+            "Tudun",
+            "Yarlığ"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde Kağan'dan sonra gelen en yetkili kişi olan vezir için kullanılan unvan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Aygucı",
+            "Şad",
+            "Yabgu",
+            "Tigin"
+          ]
+        },
+        {
+          "soruMetni": "Uygurların, Soğd alfabesini geliştirerek oluşturdukları ve yerleşik hayata geçişle birlikte yaygınlaşan alfabe aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Orhun Alfabesi",
+            "Uygur Alfabesi",
+            "Latin Alfabesi",
+            "Brahmi Alfabesi"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türklerde, ölen kişinin mezarının başına, hayattayken öldürdüğü düşman sayısını temsilen dikilen küçük taş heykellere ne ad verilirdi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kurgan",
+            "Balbal",
+            "Stupa",
+            "Bengütaş"
+          ]
+        },
+        {
+          "soruMetni": "Göktürklere ait olan ve bir dağın içinde sıkışıp kaldıktan sonra, bir demirci önderliğinde dağı eriterek yurda dönüşü anlatan destan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Oğuz Kağan Destanı",
+            "Göç Destanı",
+            "Ergenekon Destanı",
+            "Türeyiş Destanı"
+          ]
+        },
+        {
+          "soruMetni": "Uygurlara ait olan ve ülkedeki kıtlığın nedenini kutsal 'Yada Taşı'nın Çinlilere verilmesine bağlayarak yaşanan büyük göçü anlatan destan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türeyiş Destanı",
+            "Göç Destanı",
+            "Manas Destanı",
+            "Ergenekon Destanı"
+          ]
+        },
+        {
+          "soruMetni": "Çin'in kuzeyinde kurulan, Budizm'i benimseyen ve zamanla Çin kültürü içinde asimile olarak Türklük özelliklerini kaybeden Türk devleti aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türgişler",
+            "Tabgaçlar",
+            "Akhunlar",
+            "Karluklar"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türklerde 'Kut' anlayışı aşağıdakilerden hangisini ifade eder?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletin sözlü hukuk kurallarını",
+            "Ülkenin doğu ve batı olarak yönetilmesini",
+            "Hükümdara yönetme yetkisinin Tanrı tarafından verilmesini",
+            "Ordunun onlu sisteme göre teşkilatlanmasını"
+          ]
+        },
+        {
+          "soruMetni": "I. Göktürk Devleti, İpek Yolu hakimiyeti için Sasanilerle ittifak kurarak aşağıdaki devletlerden hangisinin yıkılmasını sağlamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Akhunlar",
+            "Asya Hunları",
+            "Bizans İmparatorluğu",
+            "Tabgaçlar"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türk sanatında, özellikle Uygurlar döneminde Maniheizm ve Budizm'in etkisiyle gelişen 'duvar resmi' sanatına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fresk",
+            "Minyatür",
+            "Tezhip",
+            "Vitray"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türk devletlerinde Kağan'ın emirlerine ve fermanlarına verilen isim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yarlığ",
+            "Bitig",
+            "Tamga",
+            "Tudun"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türklerde Gök Tanrı inancı dışındaki yaygın inanç sistemlerinde din adamlarına verilen genel isim nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kam",
+            "Ataman",
+            "Böri",
+            "Subaşı"
+          ]
+        },
+        {
+          "soruMetni": "Bizans kaynaklarında \"devlet kuramayan\" ancak \"ordu kurabilen\" bir topluluk olarak nitelendirilen, sık sık Bizans ordusunda paralı askerlik yapan ve Çaka Bey ile İstanbul kuşatmasına katılan Türk topluluğu hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kıpçaklar",
+            "Hazarlar",
+            "Avarlar",
+            "Peçenekler"
+          ]
+        },
+        {
+          "soruMetni": "İlk Türk devletlerinde vergi toplayan görevliye verilen ad aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tudun",
+            "Tarkan",
+            "Apa",
+            "Bitigçi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_turk_islam_1",
+      "baslik": "İlk Türk-İslam Devletleri-1",
+      "kategoriId": "tarih",
+      "konuId":"ilk_turk_islam_devletleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Karahanlıların İslamiyet'i kabul etmelerine rağmen Uygur alfabesini kullanmaya devam etmeleri, \"Han, Hakan\" gibi eski Türk unvanlarını sürdürmeleri ve ikili teşkilat yapısını korumaları, onların hangi özelliğini ön plana çıkarmaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İslamiyet'i tam olarak benimsemediklerini",
+            "Ulusal kimliklerini korumaya özen gösterdiklerini",
+            "Çin kültürünün etkisi altında kaldıklarını",
+            "Yerleşik hayata geçemediklerini"
+          ]
+        },
+        {
+          "soruMetni": "Gazneli Mahmut'un, Abbasi Halifesini Şii Büveyhoğulları'nın baskısından kurtarması üzerine, Halife'nin Gazneli Mahmut'a \"Sultan\" unvanını vermesi, aşağıdakilerden hangisinin önemli bir göstergesidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gaznelilerin resmen halifeliği devraldığının",
+            "İslam dünyasındaki mezhep çatışmalarının sona erdiğinin",
+            "İslam dünyasının siyasi liderliğinin Türk hanedanlarına geçtiğinin",
+            "Gaznelilerin sadece Hindistan ile ilgilendiğinin"
+          ]
+        },
+        {
+          "soruMetni": "1040 yılında Gazneliler ile Büyük Selçuklular arasında yapılan Dandanakan Savaşı'nın sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Büyük Selçuklu Devleti'nin resmen kurulması",
+            "Gazneli Devleti'nin yıkılış sürecine girmesi",
+            "Anadolu'nun kapılarının kesin olarak Türklere açılması",
+            "Horasan ve çevresinin Selçuklu hakimiyetine girmesi"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Selçuklu Hükümdarı Tuğrul Bey'in 1055'te Bağdat Seferi ile Abbasi Halifesini himaye altına alması ve \"Doğu'nun ve Batı'nın Sultanı\" unvanını almasının en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halifeliğin Türklere geçmesi",
+            "Dini ve siyasi otoritenin birbirinden ayrılması",
+            "Bizans İmparatorluğu'nun Selçukluların üstünlüğünü tanıması",
+            "Batınilik faaliyetlerinin sona ermesi"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Selçuklu Devleti'nde Vezir Nizamülmülk tarafından kurulan Nizamiye Medreselerinin kurulma amaçları arasında aşağıdakilerden hangisi gösterilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Batınilik hareketinin yıkıcı propagandalarına karşı ilmi mücadele yürütmek",
+            "Devletin idari kademeleri için vasıflı memur yetiştirmek",
+            "Sünni İslam anlayışını güçlendirmek ve yaymak",
+            "Gayrimüslim tebaanın devlete bağlılığını artırmak"
+          ]
+        },
+        {
+          "soruMetni": "Mısır'da kurulan ilk Türk-İslam devleti olan ve \"Maristan\" adı verilen ücretsiz hastaneler ve eczaneler kurarak sosyal devlet anlayışının ilk örneklerini veren devlet hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İhşidîler",
+            "Tolunoğulları",
+            "Eyyubiler",
+            "Memlükler"
+          ]
+        },
+        {
+          "soruMetni": "1187 Hıttin Savaşı ile Kudüs'ü Haçlılardan geri alarak III. Haçlı Seferi'nin başlamasına neden olan hükümdar aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sultan Baybars",
+            "Nureddin Zengi",
+            "Selahaddin Eyyubi",
+            "Kalavun"
+          ]
+        },
+        {
+          "soruMetni": "Veraset sistemi bakımından diğer Türk-İslam devletlerinden farklılık gösteren ve \"El-Devlet'üt Türkiyye\" olarak bilinen, her emirin sultan olma hakkının bulunduğu devlet aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Memlükler",
+            "Harzemşahlar",
+            "Gazneliler",
+            "Anadolu Selçukluları"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Hükümdarı I. Kılıçarslan'ın, I. Haçlı Seferi sonucunda başkenti İznik'ten Konya'ya taşımak zorunda kalmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Konya'nın daha iyi bir tarım merkezi olması",
+            "Moğol istilasının başlaması",
+            "İznik'in Haçlıların eline geçmesi ve stratejik önemini yitirmesi",
+            "Bizans ile barış antlaşması yapılması"
+          ]
+        },
+        {
+          "soruMetni": "1176 Miryokefalon Savaşı'nın Türk tarihi açısından en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bizans İmparatorluğu'nun yıkılması",
+            "Anadolu'nun Türk yurdu olduğunun kesinleşmesi ve Bizans'ın Türkleri atma ümidinin sona ermesi",
+            "Haçlı Seferleri'nin başlaması",
+            "Anadolu'da ilk Türk beyliklerinin kurulması"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti'nin kervansaraylar inşa etmesi, liman şehirlerini fethetmesi ve ticari sigorta uygulamaları başlatmasının temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Haçlı seferlerine karşı önlem almak",
+            "Anadolu'daki Hristiyan nüfusu azaltmak",
+            "Anadolu'yu uluslararası ticaret yollarının merkezi haline getirmek",
+            "Tarımsal üretimi artırmak"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti'nde esnaf ve zanaatkarların örgütlendiği; üyelerine mesleki, ahlaki ve dini eğitim veren, aynı zamanda sosyal yardımlaşmayı sağlayan teşkilatın adı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İkta",
+            "Gulam",
+            "Ahilik",
+            "Divan-ı Pervane"
+          ]
+        },
+        {
+          "soruMetni": "1240 yılında Anadolu Selçuklu Devleti'nde çıkan ve devletin otoritesini sarsarak zayıflamasına neden olan, Moğol istilasını kolaylaştıran büyük dini ve sosyal nitelikli isyan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Baba İshak İsyanı",
+            "Şeyh Bedreddin İsyanı",
+            "Kalenderoğlu İsyanı",
+            "Bozoklu Celal İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "1243 Kösedağ Savaşı'nda Moğollara yenilen Anadolu Selçuklu Devleti'nin yıkılış sürecine girmesinin Anadolu'daki en önemli siyasi sonucu ne olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bizans'ın Anadolu'da tekrar güçlenmesi",
+            "Anadolu'da II. Türk Beylikleri Dönemi'nin başlaması",
+            "Haçlı Seferleri'nin yeniden başlaması",
+            "Ahilik teşkilatının dağılması"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde, hükümdarın erkek çocuklarını eyaletlere vali olarak atarken, onların devlet yönetiminde tecrübe kazanmaları için yanlarına verilen tecrübeli devlet adamlarına ne ad verilirdi?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Atabey",
+            "Subaşı",
+            "Kadı",
+            "Muhtesip"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam mimarisinde, yolcuların, tüccarların ve orduların konaklaması, dinlenmesi ve güvenliğini sağlaması amacıyla ana yollar üzerine kurulan yapılara ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bimarhane",
+            "Kervansaray",
+            "Kümbet",
+            "Medrese"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu'da kurulan ilk Türk beylikleri arasında, Sivas, Malatya ve Kayseri civarında hüküm süren, Anadolu'daki ilk medrese olan Yağıbasan Medresesi'ni kuran beylik hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Saltuklular",
+            "Artuklular",
+            "Danişmentliler",
+            "Mengücekliler"
+          ]
+        },
+        {
+          "soruMetni": "UNESCO Dünya Mirası Listesi'nde yer alan, eşsiz taş işçiliğiyle ünlü Divriği Ulu Camii ve Darüşşifası, aşağıdaki Anadolu beyliklerinden hangisinin dönemine aittir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Mengücekliler",
+            "Artuklular",
+            "Çaka Beyliği",
+            "Danişmentliler"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Selçuklu Devleti'nde \"Siyasetname\" adlı eseri kaleme alan, Nizamiye Medreselerini kuran ve İkta sistemini düzenleyen ünlü vezir aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gazali",
+            "Nizamülmülk",
+            "Kaşgarlı Mahmut",
+            "Ömer Hayyam"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde, hizmet veya maaş karşılığında, belirli bir bölgenin vergi gelirlerinin devlete asker beslemesi koşuluyla komutan veya devlet adamlarına bırakılması esasına dayanan toprak sistemi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Vakıf Sistemi",
+            "Gulam Sistemi",
+            "İkta Sistemi",
+            "Devşirme Sistemi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_turk_islam_2",
+      "baslik": "İlk Türk-İslam Devletleri-2",
+      "kategoriId": "tarih",
+      "konuId":"ilk_turk_islam_devletleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "\"El-Medinetü'l-Fâzıla\" adlı eseriyle tanınan ve Aristo'nun felsefesini İslam dünyasına tanıttığı için \"Muallim-i Sani\" olarak bilinen ünlü Türk-İslam filozofu kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İbn-i Sina",
+            "Farabi",
+            "Biruni",
+            "Gazali"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Selçuklu Devleti'nde mali işlerden sorumlu olan ve başında \"Müstevfi\" bulunan divan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Divan-ı Arz",
+            "Divan-ı İşraf",
+            "Divan-ı İnşa",
+            "Divan-ı İstifa"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde şer'i hukukun başındaki en üst düzey görevli, yani \"Kadıların Kadısı\" anlamına gelen unvan nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Emir-i Dad",
+            "Kadı'l-kudât",
+            "Muhtesip",
+            "Subaşı"
+          ]
+        },
+        {
+          "soruMetni": "Avrupa'da \"Avicenna\" adıyla tanınan, \"El-Kanun fi't-Tıb\" adlı eseri yüzyıllarca tıp fakültelerinde okutulan ve \"Şeyh el-Reis\" olarak bilinen bilim insanı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Farabi",
+            "El-Cezeri",
+            "İbn-i Sina",
+            "İbn-i Rüşd"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde, hükümdarın şahsına bağlı, farklı milletlerden devşirilen veya satın alınan kölelerin özel olarak yetiştirilmesiyle oluşturulan saray ordusuna ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İkta Askerleri",
+            "Türkmen Birlikleri",
+            "Gulam Ordusu",
+            "Akıncılar"
+          ]
+        },
+        {
+          "soruMetni": "Karahanlılar döneminde Yusuf Has Hacib tarafından yazılan, \"Mutluluk Veren Bilgi\" anlamına gelen ve Türk-İslam edebiyatının ilk siyasetname örneği kabul edilen eser hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Divânu Lügati't-Türk",
+            "Kutadgu Bilig",
+            "Atabetü'l-Hakayık",
+            "Divan-ı Hikmet"
+          ]
+        },
+        {
+          "soruMetni": "Moğol istilası sırasında yaşanan ve Cengiz Han'ın Türk-İslam dünyasına yönelmesine neden olan \"Otrar Faciası\", aşağıdaki devletlerden hangisinin yıkılışını hızlandırmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gazneliler",
+            "Harzemşahlar",
+            "Büyük Selçuklular",
+            "Anadolu Selçukluları"
+          ]
+        },
+        {
+          "soruMetni": "1402 Ankara Savaşı'nda Osmanlı Hükümdarı Yıldırım Bayezid'i yenilgiye uğratarak Osmanlı Devleti'nde \"Fetret Devri\"nin başlamasına neden olan Türk hükümdarı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Timur",
+            "Uzun Hasan",
+            "Cengiz Han",
+            "Hülagü Han"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti'nin en parlak dönemini yaşatan, Alanya ve Sinop'u fethederek Anadolu'da ilk tersaneyi kuran ve \"Sultanü'l-Bahreyn\" olarak anılan hükümdar kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "II. Kılıçarslan",
+            "I. Gıyaseddin Keyhüsrev",
+            "I. Alaeddin Keykubad",
+            "I. Mesud"
+          ]
+        },
+        {
+          "soruMetni": "1473 Otlukbeli Savaşı'nda Fatih Sultan Mehmet'e yenilen, Kur'an-ı Kerim'i Türkçeye çevirten ve \"Küçük Türk\" olarak bilinen Akkoyunlu hükümdarı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kara Yülük Osman Bey",
+            "Şah İsmail",
+            "Uzun Hasan",
+            "Cihangir Mirza"
+          ]
+        },
+        {
+          "soruMetni": "Kaşgarlı Mahmut tarafından, Abbasi Halifesine sunulan, Araplara Türkçeyi öğretmek ve Türkçenin zenginliğini göstermek amacıyla yazılan ilk Türk dili sözlüğü ve ansiklopedisi hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kutadgu Bilig",
+            "Divan-ı Hikmet",
+            "Mukaddimetü'l-Edeb",
+            "Divânu Lügati't-Türk"
+          ]
+        },
+        {
+          "soruMetni": "Moğolları 1260 Ayn Calut ve 1277 Elbistan savaşlarında yenilgiye uğratarak Ortadoğu'daki Moğol ilerleyişini kesin olarak durduran Türk devleti aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Eyyubiler",
+            "Harzemşahlar",
+            "Memlükler",
+            "Anadolu Selçukluları"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde çarşı ve pazarlardaki fiyatları, tartı ve ölçü aletlerini, üretilen malın kalitesini denetleyen görevliye ne ad verilirdi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kadı",
+            "Muhtesip",
+            "Emir-i Dad",
+            "Müstevfi"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam mimarisinde, devlet adamları veya önemli şahsiyetler için inşa edilen, genellikle silindirik veya çokgen gövdeli, üzeri konik bir çatıyla örtülü anıt mezar yapısına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kümbet",
+            "Ribat",
+            "Bedesten",
+            "İmarethane"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti'nde, ikta topraklarının kayıtlarını tutan ve arazi dağıtımından sorumlu olan divan görevlisine verilen isim nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Pervaneci",
+            "Müstevfi",
+            "Tuğrai",
+            "Emir-i Arz"
+          ]
+        },
+        {
+          "soruMetni": "Sibernetik biliminin kurucusu kabul edilen, \"Kitâb'ül-Hiyel\" adlı eseriyle tanınan ve otomatik makineler tasarlayan El-Cezeri, aşağıdaki Türk beyliklerinden hangisinin himayesinde yaşamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Danişmentliler",
+            "Saltuklular",
+            "Artuklular",
+            "Mengücekliler"
+          ]
+        },
+        {
+          "soruMetni": "Edip Ahmet Yükneki tarafından yazılan, \"Hakikatlerin Eşiği\" anlamına gelen, ahlaki öğütler içeren didaktik Karahanlı dönemi eseri aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Atabetü'l-Hakayık",
+            "Divan-ı Hikmet",
+            "Şehname",
+            "Siyasetname"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde, gelirleri cami, medrese, hastane, imarethane gibi sosyal kurumların masraflarını karşılamak üzere ayrılan topraklara ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İkta",
+            "Has",
+            "Vakıf",
+            "Mülk"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Selçuklu Devleti'nde yazışmalardan sorumlu olan ve başında \"Tuğrai\" veya \"Münşi\" bulunan divan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Divan-ı Arz",
+            "Divan-ı İstifa",
+            "Divan-ı İşraf",
+            "Divan-ı İnşa"
+          ]
+        },
+        {
+          "soruMetni": "Tuğrul Bey'in 1055'te Abbasi Halifesini Şii Büveyhoğulları'nın baskısından kurtarması üzerine, Halife'nin Tuğrul Bey'e \"Doğu'nun ve Batı'nın Sultanı\" unvanını vermesi, İslam dünyasında nasıl bir değişimin yaşandığını göstermektedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halifelik makamının Selçuklu hanedanına geçtiğini",
+            "İslam dünyasındaki mezhep ayrılıklarının sona erdiğini",
+            "İslam'ın siyasi koruyuculuğunun Türk hanedanına geçtiğini",
+            "Bizans'ın, Selçukluları İslam'ın temsilcisi olarak tanıdığını"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_turk_islam_3",
+      "baslik": "İlk Türk-İslam Devletleri-3",
+      "kategoriId": "tarih",
+      "konuId":"ilk_turk_islam_devletleri",
+      "isNew": true,
+      "soruSayisi": 17,
+      "sureDakika": 17,
+      "sorular": [
+        {
+          "soruMetni": "Mısır'da kurulan Memlük Devleti'nde, diğer Türk-İslam devletlerinden farklı olarak, saltanatın babadan oğula geçmesi kuralı kesin değildir. Güçlü olan her komutanın sultan olma hakkı vardır.\nBu özgün veraset sisteminin aşağıdakilerden hangisine yol açtığı söylenebilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin siyasi istikrarının sürekli olmasına",
+            "Taht kavgalarının sık yaşanmasına rağmen liyakatli kişilerin başa geçmesine",
+            "Devletin kısa sürede yıkılmasına",
+            "Abbasi Halifeliği'nin devleti denetim altına almasına"
+          ]
+        },
+        {
+          "soruMetni": "1040 Dandanakan Savaşı'nda Selçukluların Gaznelileri yenmesi, Horasan'a hakim olmaları ve resmen devletleşmeleriyle sonuçlanmıştır.\nBu durumun aşağıdakilerden hangisine ortam hazırladığı söylenemez?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gazneli Devleti'nin yıkılış sürecine girmesine",
+            "Selçukluların batı yönlü politikalarının güçlenmesine",
+            "İslam dünyasındaki Şii-Sünni çekişmesinin sona ermesine",
+            "Büyük Selçuklu Devleti'nin Yakın Doğu'da en büyük güç haline gelmeye başlamasına"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti, ticareti geliştirmek amacıyla Antalya, Sinop ve Alanya gibi liman kentlerini fethetmiş, Venedik ve Cenevizlilerle ticaret antlaşmaları yapmış, Kervansaraylar inşa etmiş ve \"devlet sigortası\" sistemini uygulamıştır.\nBu faaliyetlerin temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Haçlı seferlerini engellemek",
+            "Bizans'ın deniz gücünü kırmak",
+            "Anadolu'yu uluslararası ticaret yollarının merkezi haline getirmek",
+            "Tarımsal üretimi artırmak"
+          ]
+        },
+        {
+          "soruMetni": "1230 Yassıçemen Savaşı'nda Anadolu Selçukluları, Harzemşahları yenilgiye uğratmıştır.\nBu savaşın görünüşte bir zafer olmasına rağmen, Anadolu Selçuklu Devleti için olumsuz sonuç doğuran yönü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Haçlıların Anadolu'ya saldırması",
+            "Moğollar ile Anadolu Selçukluları arasındaki tampon bölgenin ortadan kalkması",
+            "Baba İshak İsyanı'nın çıkması",
+            "Harzemşahların Bizans ile ittifak kurması"
+          ]
+        },
+        {
+          "soruMetni": "1243 Kösedağ Savaşı'nda Anadolu Selçuklu Devleti'nin Moğol ordularına yenilmesinin sonuçları arasında hangisi gösterilemez?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Anadolu'da siyasi birliğin bozulması ve II. Türk Beylikleri'nin kurulmaya başlaması",
+            "Anadolu Selçuklu Devleti'nin Moğollara bağlı hale gelmesi",
+            "Anadolu'da Moğol baskısından kaçan Türkmen göçlerinin durması",
+            "Anadolu'daki ticaret yollarının güvenliğinin sarsılması"
+          ]
+        },
+        {
+          "soruMetni": "\"Tehâfütü'l-Felâsife\" adlı eseriyle İbn-i Sina ve Farabi gibi filozofları eleştiren, Nizamiye Medreselerinde baş müderrislik yapan ve Sünni kelamının en önemli savunucularından olan \"Hüccet'ül İslam\" kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Gazali",
+            "İbn-i Rüşd",
+            "Ömer Hayyam",
+            "El-Cezeri"
+          ]
+        },
+        {
+          "soruMetni": "Ahi Evran tarafından kurulan Ahilik Teşkilatı, Anadolu'daki esnaf ve zanaatkarları örgütlemiştir.\nAşağıdakilerden hangisi Ahilik Teşkilatı'nın fonksiyonlarından biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Üretilen malların kalitesini ve fiyatını denetlemek",
+            "Gayrimüslim esnaflarla Müslüman esnafları aynı çatı altında birleştirmek",
+            "Üyelerine mesleki eğitim vermek",
+            "İhtiyacı olan üyelere sosyal ve ekonomik yardım sağlamak"
+          ]
+        },
+        {
+          "soruMetni": "1071 Malazgirt Savaşı'ndan sonra Anadolu'da kurulan I. Türk Beylikleri'nin en önemli ortak özelliği aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hepsinin denizcilikle uğraşması",
+            "Anadolu'yu Bizans ve Haçlı saldırılarına karşı savunarak Türkleştirmeleri",
+            "Moğol istilasına karşı kurulmuş olmaları",
+            "Osmanlı Devleti'ne katılan ilk beylik olmaları"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti'nin en parlak dönemi olan Sultan Alaeddin Keykubad devrinde, devletin ticari ve siyasi gücünün zirvesinde olmasına rağmen, merkezi otoriteyi sarsacak hangi sosyal ve dini gelişmenin temelleri atılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Haçlı Seferleri'nin başlaması",
+            "Moğol istilası nedeniyle Anadolu'ya gelen göçebe Türkmenlerin artan hoşnutsuzluğu",
+            "Bizans'ın taht kavgalarına karışması",
+            "Kösedağ Savaşı'nın kaybedilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam tarihinde, \"Büyük Selçuklu Devleti'nin mirasçısı\" olma iddiasıyla ortaya çıkan ve Anadolu Selçukluları ile Moğollara karşı mücadele eden devlet aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Eyyubiler",
+            "Gazneliler",
+            "Harzemşahlar",
+            "Memlükler"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam mimarisinde cami, medrese, türbe, kütüphane, hamam ve imarethane gibi yapıların bir arada bulunduğu toplu yapı komplekslerine ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Külliye",
+            "Bedesten",
+            "Ribat",
+            "Kapan"
+          ]
+        },
+        {
+          "soruMetni": "İslamiyet öncesi Türklerdeki \"Balbal\" geleneği, İslamiyet'in kabulünden sonra tasvir yasağının da etkisiyle nasıl bir değişime uğramıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tamamen ortadan kalkmıştır",
+            "Minyatür sanatına dönüşmüştür",
+            "Mimari bir form kazanarak \"Kümbet\" ve \"Türbe\"ye dönüşmüştür",
+            "Fresk olarak devam etmiştir"
+          ]
+        },
+        {
+          "soruMetni": "Türk-İslam devletlerinde, gelirleri doğrudan devlet hazinesine değil, sosyal yardım kurumlarına harcanmak üzere ayrılan topraklara ne ad verilirdi?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İkta Arazi",
+            "Mülk Arazi",
+            "Vakıf Arazi",
+            "Has Arazi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki Türk-İslam eserlerinden hangisi, \"Siyasetname\" özelliği taşırken, aynı zamanda \"Türk-İslam Edebiyatı'nın ilk örneği\" kabul edilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Divânu Lügati't-Türk",
+            "Kutadgu Bilig",
+            "Divan-ı Hikmet",
+            "Atabetü'l-Hakayık"
+          ]
+        },
+        {
+          "soruMetni": "1402 Ankara Savaşı'nda Yıldırım Bayezid'i yenen Timur'un bu seferinin, aşağıdakilerden hangisine yönelik olduğu söylenemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Osmanlı Devleti'nin batı yönündeki ilerleyişini durdurmaya",
+            "Anadolu'daki Türk beyliklerini yeniden canlandırmaya",
+            "Çin seferi öncesinde batıdaki tehlikeleri ortadan kaldırmaya",
+            "İslam dünyasında Sünni birliği sağlamaya"
+          ]
+        },
+        {
+          "soruMetni": "Anadolu Selçuklu Devleti'nde, Moğol baskısının arttığı bir dönemde, \"Bugünden sonra divanda, dergahta ve bargahta Türkçeden başka dil kullanılmayacaktır\" fermanını yayınlayarak Türkçeyi resmi dil ilan eden devlet adamı ve beylik aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ahi Evran / Ahilik Teşkilatı",
+            "Osman Bey / Osmanoğulları",
+            "Karamanoğlu Mehmet Bey / Karamanoğulları",
+            "Mevlana Celaleddin Rumi / Konya"
+          ]
+        },
+        {
+          "soruMetni": "Gazneli Mahmut'un Hindistan'a yaptığı 17 seferin, İslamiyet'in yayılması ve bölgenin zenginliklerinin ele geçirilmesi dışında, Hindistan'ın toplumsal yapısı üzerindeki en önemli etkisi ne olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bölgenin tamamen Türkleşmesi",
+            "Kast sisteminin zayıflamasına zemin hazırlaması",
+            "Çin ile olan ticari ilişkilerin kesilmesi",
+            "Hindistan'da feodal düzenin başlaması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_kurulus_1",
+      "baslik": "Osmanlı Devleti Kuruluş Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_kurulus_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Osmanlı Devleti'nin Kuruluş Dönemi'nde Balkanlar'a yerleştirdiği Türkmen aileler aracılığıyla uyguladığı \"İskan Politikası\"nın temel amacı aşağıdakilerden hangisi değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fethedilen bölgelerin Türkleşmesini ve İslamlaşmasını sağlamak",
+            "Balkanlardaki fetihlerin kalıcı olmasını sağlamak",
+            "Konar-göçer unsurları yerleşik hayata geçirerek tarımsal üretimi artırmak",
+            "Balkanlardaki Hristiyan halkı asimile ederek Bizans'ın gücünü kırmak"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde kurulan ve Osmanlı Devleti'nin ilk düzenli ordusu olan birlik, aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yeniçeri Ocağı",
+            "Kapıkulu Süvarileri",
+            "Tımarlı Sipahiler",
+            "Yaya ve Müsellemler"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Haçlı ordularına karşı kazandığı ilk büyük meydan savaşı olan ve Edirne'nin fethinden sonra gerçekleşen savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Koyunhisar Savaşı",
+            "Sırpsındığı Savaşı",
+            "I. Kosova Savaşı",
+            "Niğbolu Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "I. Murat Dönemi'nde, savaş esirlerinin beşte birinin asker olarak yetiştirilmesi esasına dayanan ve Yeniçeri Ocağı'nın temelini oluşturan sistem aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devşirme Sistemi",
+            "İskan Politikası",
+            "Pençik Sistemi",
+            "Tımar Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki padişahlardan hangisi, I. Kosova Savaşı'nda savaş meydanını gezerken şehit edilmiş ve \"Sultan\" unvanını kullanan ilk Osmanlı padişahı olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Orhan Bey",
+            "I. Murat",
+            "Yıldırım Bayezid",
+            "Çelebi Mehmet"
+          ]
+        },
+        {
+          "soruMetni": "Yıldırım Bayezid'in İstanbul'u kuşatması sırasında, Bizans'a denizden gelecek yardımı engellemek amacıyla inşa ettirdiği yapı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Rumeli Hisarı",
+            "Anadolu Hisarı",
+            "Yedikule Zindanları",
+            "Gelibolu Tersanesi"
+          ]
+        },
+        {
+          "soruMetni": "1396 yılında Yıldırım Bayezid'in Haçlı ordusuna karşı kazandığı Niğbolu Zaferi'nin ardından, Abbasi Halifesi tarafından Yıldırım Bayezid'e verilen unvan nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gazi Padişah",
+            "Sultanü'l-Guzât",
+            "Sultan-ı İklim-i Rum",
+            "Padişah-ı Alem"
+          ]
+        },
+        {
+          "soruMetni": "1402 Ankara Savaşı'nın sonuçları arasında aşağıdakilerden hangisi gösterilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Osmanlı Devleti'nin Fetret Devri'ne girmesi",
+            "Anadolu'daki Türk siyasi birliğinin bozulması",
+            "Bizans İmparatorluğu'nun yıkılışının gecikmesi",
+            "Osmanlı Devleti'nin Rumeli'deki tüm topraklarını kaybetmesi"
+          ]
+        },
+        {
+          "soruMetni": "1402-1413 yılları arasındaki Fetret Devri'nde taht mücadelesi veren şehzadeler arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsa Çelebi",
+            "Musa Çelebi",
+            "Mustafa Çelebi",
+            "Süleyman Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Kuruluş Dönemi'nde Anadolu Türk siyasi birliğini sağlamak amacıyla Germiyanoğullarından çeyiz yoluyla, Hamitoğullarından ise para karşılığı toprak satın alan padişah kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Orhan Bey",
+            "I. Murat",
+            "Yıldırım Bayezid",
+            "Çelebi Mehmet"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Kuruluş Dönemi'nde fethettiği yerlerdeki Hristiyan halka din ve vicdan hürriyeti tanıması, onların can ve mal güvenliğini sağlaması, \"İstimalet Politikası\" olarak bilinir.\nBu politikanın temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gayrimüslimleri İslam'a geçmeye zorlamak",
+            "Fethedilen bölgelerde kalıcı hakimiyet kurmak ve isyanları önlemek",
+            "Avrupa devletleriyle diplomatik ilişkileri geliştirmek",
+            "Gaza ve cihat anlayışını terk etmek"
+          ]
+        },
+        {
+          "soruMetni": "Fetret Devri'ne son vererek devleti dağılmaktan kurtaran ve \"Osmanlı Devleti'nin ikinci kurucusu\" olarak kabul edilen padişah aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıldırım Bayezid",
+            "Çelebi Mehmet",
+            "II. Murat",
+            "Musa Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Çelebi Mehmet döneminde çıkan, \"toplumsal ve dini\" nitelikli olduğu kadar \"ilk\" olmasıyla da bilinen, Börklüce Mustafa ve Torlak Kemal'in de önemli rol oynadığı isyan aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Baba İshak İsyanı",
+            "Şeyh Bedreddin İsyanı",
+            "Düzmece Mustafa İsyanı",
+            "Şahkulu İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nde, I. Murat döneminde \"Ülke, Padişah ve oğullarının ortak malıdır\" anlayışının getirilmesinin temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Taht kavgalarını sınırlayarak merkezi otoriteyi güçlendirmek",
+            "Şehzadelerin devlet tecrübesi kazanmasını sağlamak",
+            "Türkmen beylerinin yönetime karışmasını engellemek",
+            "Bizans'ın veraset sistemini örnek almak"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin ilk veziri olarak atanan devlet adamı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çandarlı Halil Paşa",
+            "Köprülü Mehmet Paşa",
+            "Alaeddin Paşa",
+            "Sinan Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde İznik'te kurulan \"İznik Orhaniyesi\" adlı yapı, Osmanlı Devleti'nin hangi alandaki ilk kurumsal yapısıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordu",
+            "Hastane",
+            "Medrese",
+            "Saray"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin, Kapıkulu Ocağı'nı kurmasının ve Devşirme Sistemini uygulamasının temel siyasi amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordunun asker ihtiyacını hızlıca karşılamak",
+            "Fethedilen yerlerdeki gayrimüslim nüfusu azaltmak",
+            "Padişaha doğrudan bağlı, sadık bir askeri güç oluşturarak Türkmen beylerinin nüfuzunu dengelemek",
+            "Avrupa ordularının askeri sistemlerini taklit etmek"
+          ]
+        },
+        {
+          "soruMetni": "Osman Bey döneminde, Bizans Tekfurları ile yapılan ve Osmanlı'nın bağımsızlığını ilan etmesinde önemli rol oynayan, beyliğin resmen kurulduğu savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Koyunhisar Savaşı",
+            "Palekanon Savaşı",
+            "Sırpsındığı Savaşı",
+            "I. Kosova Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Beyliği'nin, fetih siyasetini \"İskan\" ve \"İstimalet\" politikalarıyla birlikte yürütmesinin en temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Haçlı seferlerini ideolojik olarak zayıflatmak",
+            "Fethedilen bölgelerde kalıcı egemenlik kurmak ve demografik dengeyi sağlamak",
+            "Bizans İmparatorluğu'nu ekonomik olarak çökertmek",
+            "Konar-göçer Türkmenlerin askeri gücünden faydalanmak"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde Karesioğulları Beyliği'nin Osmanlı topraklarına katılması, Anadolu Türk siyasi birliği yolunda atılan ilk adım olmasının yanı sıra, Osmanlı Devleti'ne öncelikle hangi stratejik avantajı sağlamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ahilerin tam desteğini",
+            "Rumeli'ye geçişi kolaylaştıracak bir donanma ve tecrübeli denizciler",
+            "Tımar sisteminin ilk uygulamasını",
+            "Moğollara karşı bir tampon bölge"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_kurulus_2",
+      "baslik": "Osmanlı Devleti Kuruluş Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_kurulus_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "I. Murat'ın veraset sisteminde \"Ülke hanedanın ortak malıdır\" anlayışını \"Ülke padişah ve oğullarınındır\" şeklinde değiştirmesine rağmen, taht kavgalarının tam olarak engellenememesinin temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devşirme sisteminin henüz oturmamış olması",
+            "Oğullar arasında hangisinin tahta geçeceğinin hâlâ belirsiz olması",
+            "Bizans'ın şehzadeleri sürekli kışkırtması",
+            "Tımar sisteminin beyleri güçlendirmesi"
+          ]
+        },
+
+        {
+          "soruMetni": "1402 Ankara Savaşı sonrası yaşanan Fetret Devri'nde Anadolu'daki Türk beyliklerinin çoğu yeniden kurulurken, Osmanlı'nın Balkanlar'daki topraklarında ciddi bir çözülme yaşanmamıştır.\nBu durum, aşağıdakilerden hangisinin doğrudan bir başarısı olarak yorumlanabilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tımar sisteminin askeri gücünün",
+            "Kapıkulu Ocağı'nın sadakatinin",
+            "Uygulanan adil yönetim ve İskan politikalarının",
+            "Bizans İmparatorluğu'nun desteğinin"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde Bizans İmparatoru III. Andronikos ile yapılan ve Bizans'ın Kocaeli Yarımadası'ndaki etkinliğini kesin olarak sona erdiren savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Koyunhisar Savaşı",
+            "Palekanon Savaşı",
+            "Sırpsındığı Savaşı",
+            "I. Kosova Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "1389 I. Kosova Savaşı'nın, Kuruluş Dönemi'ndeki diğer Haçlı savaşlarından farklı olan en belirgin özelliği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Osmanlıların ilk kez ateşli silahlar kullanması",
+            "Haçlı ordusunun ilk kez yenilgiye uğratılması",
+            "Savaş sırasında her iki tarafın hükümdarının da ölmesi",
+            "Bizans'ın Haçlılara yardım göndermesi"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey'in, kendi adına hutbe okutup gümüş sikke bastırması, aşağıdakilerden hangisinin en güçlü göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gaza ve Cihat anlayışının resmileştiğinin",
+            "Beyliğin, bağımsız bir devlet niteliği kazandığının",
+            "Tımar sistemini kurduğunun",
+            "Bizans ile kalıcı barış yaptığının"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Rumeli'deki fetihlerinin merkezi ve üssü olması amacıyla I. Murat döneminde fethedilerek Bursa'dan sonra başkent yapılan şehir hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sofya",
+            "İznik",
+            "Edirne",
+            "Filibe"
+          ]
+        },
+        {
+          "soruMetni": "Çelebi Mehmet, 11 yıl süren Fetret Devri'nde kardeşleri İsa, Musa ve Süleyman Çelebi'yi yenerek Anadolu ve Rumeli'de birliği sağlamıştır. Taht için mücadele ettiği bu kardeşleri dışında, hangi padişah döneminde isyan çıkarmış olan bir şehzade, Fetret Devri'nde yer almamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ertuğrul Çelebi",
+            "Savcı Bey",
+            "Kasım Çelebi",
+            "Halil Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Çelebi Mehmet döneminde, Fetret Devri'nin yarattığı sosyal ve ekonomik kriz ortamında ortaya çıkan, \"ortak mülkiyeti\" savunan ve Osmanlı tarihindeki ilk büyük dini-toplumsal nitelikli isyan olarak kabul edilen hareket hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Düzmece Mustafa İsyanı",
+            "Şeyh Bedreddin İsyanı",
+            "Baba İshak İsyanı",
+            "Buçuktepe İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Kuruluş Dönemi'nde Osmanlı ordusunun ana vurucu gücünü oluşturan Tımarlı Sipahilerin, Kapıkulu Ocağı'ndan en temel farkı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Padişaha bağlı olmaları",
+            "Sadece Türklerden oluşmaları",
+            "Maaşlarını doğrudan hazineden almamaları",
+            "Savaş zamanında orduya katılmaları"
+          ]
+        },
+        {
+          "soruMetni": "Yıldırım Bayezid'in Niğbolu Zaferi'nden sonra Anadolu Türk birliğini büyük ölçüde sağlaması ve İstanbul'u kuşatması, hangi doğu gücünün Anadolu'ya girmesine ve 1402'de Ankara Savaşı'nın yaşanmasına zemin hazırlamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akkoyunlular",
+            "Memlükler",
+            "Timur İmparatorluğu",
+            "Karakoyunlular"
+          ]
+        },
+        {
+          "soruMetni": "Orhan Bey döneminde divan teşkilatının kurulması, vezirlik makamının oluşturulması ve İznik'te ilk medresenin açılması, aşağıdakilerden hangisinin en belirgin göstergesidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Taht kavgalarının sona erdiğinin",
+            "Anadolu Türk siyasi birliğinin sağlandığının",
+            "Beylikten devlete geçişin yaşandığının",
+            "Balkanlara geçişin tamamlandığının"
+          ]
+        },
+        {
+          "soruMetni": "Fatih'in ölümünden sonra II. Bayezid döneminde yaşanan, Memlüklere ve Rodos Şövalyelerine sığınması nedeniyle bir iç sorunken uluslararası bir sorun haline gelen olay nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Şahkulu İsyanı",
+            "Cem Sultan Olayı",
+            "Börklüce Mustafa İsyanı",
+            "Kalenderoğlu İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in 1515 yılında yaptığı Turnadağ Savaşı ile hangi beyliğe son verilmiş ve böylece Anadolu Türk Siyasi Birliği kesin olarak sağlanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karamanoğulları",
+            "Germiyanoğulları",
+            "Dulkadiroğulları",
+            "Ramazanoğulları"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in 1516 Mercidabık ve 1517 Ridaniye Savaşları ile Memlük Devleti'ne son vermesinin en önemli dini-siyasi sonucu nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Venedik'in Kıbrıs için ödediği verginin Osmanlı'ya geçmesi",
+            "Baharat Yolu'nun tam kontrolünün sağlanması",
+            "Halifelik makamının Osmanlı padişahlarına geçmesi",
+            "Doğu Akdeniz'de donanma üstünlüğünün kurulması"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman döneminde, Macaristan'ın fethine ve Osmanlı'nın Orta Avrupa'daki hakimiyetinin başlamasına yol açan, 1526'da gerçekleşen meydan savaşı hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "I. Kosova Savaşı",
+            "Mohaç Meydan Muharebesi",
+            "I. Viyana Kuşatması",
+            "Zigetvar Seferi"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın Safeviler üzerine yaptığı seferler sonucunda 1555 yılında imzalanan ve Osmanlı tarihindeki ilk resmi Türk-İran antlaşması olan belge hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Amasya Antlaşması",
+            "Kasr-ı Şirin Antlaşması",
+            "Ferhat Paşa Antlaşması",
+            "Serav Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni döneminde Fransa'ya verilen kapitülasyonların (ticari ayrıcalıklar) verilmesinin temel siyasi amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fransız sanayisini geliştirmek",
+            "Coğrafi Keşiflerin olumsuz etkilerini azaltmak",
+            "Avrupa'da Kutsal Roma-Cermen İmparatoru Şarlken'e karşı bir Hristiyan ittifakını kırmak",
+            "Baharat Yolu'nu kontrol altına almak"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1529'da gerçekleştirdiği ancak mevsim koşulları ve ağır topların getirilmemesi nedeniyle başarısız olan kuşatma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Belgrad Kuşatması",
+            "Rodos Kuşatması",
+            "I. Viyana Kuşatması",
+            "Malta Kuşatması"
+          ]
+        },
+        {
+          "soruMetni": "Sokullu Mehmet Paşa'nın, Rusya'nın güneye inmesini engellemek ve Orta Asya Türkleri ile bağlantı kurmak amacıyla planladığı ancak başarılı olamayan kanal projesi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Süveyş Kanalı Projesi",
+            "Don-Volga Kanalı Projesi",
+            "Marmara-Karadeniz Kanalı Projesi",
+            "Tuna-Ren Kanalı Projesi"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in, Divan-ı Hümayun başkanlığını Padişahtan alıp Sadrazam'a bırakmasının temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadrazamın yetkilerini padişahtan üstün kılmak",
+            "Divan'ın daha hızlı karar almasını sağlamak",
+            "Padişahın otoritesini artırarak Divan'ı bir danışma meclisi konumuna getirmek",
+            "Taht kavgalarını engellemek"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_yukselme_1",
+      "baslik": "Osmanlı Devleti Yükselme Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_yukselme_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Fatih Sultan Mehmet döneminde Bosna-Hersek'in fethinden sonra yayınlanan \"Ahidname\" ile bölge halkına din ve vicdan hürriyeti tanınmasının temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bölgenin hızla Türkleştirilmesini sağlamak",
+            "Macar Krallığı'na karşı askeri bir üs elde etmek",
+            "Bölge halkının desteğini alarak fethin kalıcı olmasını sağlamak",
+            "Papalığın siyasi gücünü kırmak"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet döneminde Divan-ı Hümayun'a Sadrazamın başkanlık etmesi uygulamasına geçilmesi ve padişahın toplantıları \"Kasr-ı Adl\" denilen bir pencereden izlemesi, aşağıdakilerden hangisini güçlendirmeye yöneliktir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yeniçeri Ocağı'nın devlete bağlılığını",
+            "Padişahın mutlak otoritesini ve Divan'ın danışma meclisi niteliğini",
+            "Sadrazamın padişahtan daha yetkili olduğunu",
+            "Şehzadelerin devlet yönetimindeki etkinliğini"
+          ]
+        },
+{
+    "soruMetni": "Fatih Sultan Mehmet döneminde \"Kanunname-i Âl-i Osman\" ile yasallaşan kardeş katli uygulamasının amacı nedir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Devlet gelirlerini artırmak",
+      "Taht kavgalarını engelleyerek merkezi otoriteyi korumak",
+      "Yeni fetihlere meşruiyet kazandırmak",
+      "Anadolu beyliklerinin iç işlerine karışmak"
+    ]
+  },
+        {
+          "soruMetni": "II. Bayezid dönemi, Fatih ve Yavuz dönemlerine kıyasla sönük bir fetih dönemi olarak bilinir. Bu durumun temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ordunun ve donanmanın yetersiz olması",
+            "Cem Sultan Olayı'nın devleti dış politikada pasif kalmaya zorlaması",
+            "Anadolu'da çıkan Celali isyanları",
+            "Coğrafi Keşiflerin başlaması"
+          ]
+        },
+       {
+    "soruMetni": "Fatih Sultan Mehmet'in, İtalya Yarımadası'ndaki Otranto'yu fethetmesinin temel hedefi nedir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Venedik ticaret yollarını tamamen ele geçirmek",
+      "Rönesans'ın yayılmasını engellemek",
+      "Akdeniz'in kontrolünü tamamen sağlamak",
+      "İtalya'ya çıkarma yaparak Roma'yı almayı hedeflemek"
+    ]
+  },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in Mısır Seferi sonucunda Memlük Devleti'ni yıkarak Halifeliği devralması, Osmanlı Devleti'nin hangi niteliğini daha fazla güçlendirmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mutlak Monarşi yapısını",
+            "Çok uluslu özelliğini",
+            "Teokratik devlet karakterini",
+            "Denizci devlet kimliğini"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in Mısır Seferi sonucunda Baharat Yolu'nun denetimini ele geçirmesine rağmen, bu yoldan beklenen ekonomik verimin alınamamasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Safevilerin bu yolu engellemesi",
+            "Akdeniz'deki Venedik ve Ceneviz üstünlüğü",
+            "Coğrafi Keşifler sonucunda ticaret yollarının değişmesi",
+            "Mısır'da çıkan iç isyanlar"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1521'de Belgrad'ı fethetmesi, Osmanlı'nın hangi yöndeki fetihleri için stratejik bir kilit rol oynamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu",
+            "Denizler",
+            "Orta Avrupa",
+            "Kuzey Afrika"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman döneminde 1522'de Rodos'un fethi, Osmanlı Devleti'ne öncelikle hangi alanda üstünlük sağlamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Doğu Akdeniz ticaret yollarının güvenliği ve Mısır'a ulaşım",
+            "Karadeniz ticaretinin canlanması",
+            "Venedik'in kapitülasyon alması",
+            "İpek Yolu'nun kontrolü"
+          ]
+        },
+{
+    "soruMetni": "II. Bayezid döneminin en önemli iç sorunu ve tahtı tehdit eden olayı aşağıdakilerden hangisidir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Şahkulu İsyanı",
+      "Cem Sultan Olayı",
+      "Düzmece Mustafa Olayı",
+      "Büyük Selçuklu İmparatorluğu'nun yeniden kurulma girişimi"
+    ]
+  },
+        {
+          "soruMetni": "1533 İstanbul Antlaşması'nda yer alan \"Avusturya Arşidükü, Osmanlı Sadrazamına denk sayılacaktır\" maddesi, aşağıdakilerden hangisinin açık bir göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Osmanlı'nın Avusturya'yı askeri olarak yendiğinin",
+            "Osmanlı'nın Avusturya üzerinde siyasi ve diplomatik üstünlük kurduğunun",
+            "Sadrazamın padişahtan daha yetkili olduğunun",
+            "İki devlet arasında kalıcı barışın sağlandığının"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1538'de kazandığı Preveze Deniz Zaferi'nin en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Baharat Yolu'nun yeniden canlanması",
+            "Akdeniz'in bir 'Türk Gölü' haline gelmesi",
+            "Coğrafi Keşiflerin etkisinin kırılması",
+            "Rodos Şövalyelerinin Malta'ya sürülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman döneminde Fransa'ya verilen kapitülasyonların, \"iki hükümdarın sağlığında geçerli\" olması maddesinin temel amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kapitülasyonların ileride devlete yük olmasını engellemek",
+            "Fransa'yı sürekli kontrol altında tutmak",
+            "Şarlken'in bu antlaşmayı tanımasını sağlamak",
+            "Padişahın otoritesini göstermek"
+          ]
+        },
+        {
+          "soruMetni": "1555 Amasya Antlaşması'nın en önemli özelliği aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Safevi Devleti'ni tamamen yıkması",
+            "Osmanlı'nın doğuda en geniş sınırlara ulaşması",
+            "İran ile imzalanan ilk resmi barış antlaşması olması",
+            "Bağdat'ın ilk kez Osmanlı'ya geçmesi"
+          ]
+        },
+{
+    "soruMetni": "Fatih döneminde gerçekleşen Otlukbeli Savaşı, hangi devlet ile Doğu Anadolu egemenliği için yapılmıştır?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Akkoyunlular",
+      "Memlükler",
+      "Safeviler",
+      "Karamanlılar"
+    ]
+  },
+        {
+          "soruMetni": "Sokollu Mehmet Paşa'nın Don-Volga Kanalı Projesi ile Karadeniz'i Hazar Denizi'ne bağlama girişiminin temel siyasi amacı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İpek Yolu'nu canlandırmak",
+            "Rusya'nın güneye inmesini engellemek ve Orta Asya Türkleri ile bağlantı kurmak",
+            "İran'ı kuzeyden kuşatmak",
+            "Hindistan'a donanma göndermek"
+          ]
+        },
+{
+    "soruMetni": "Fatih döneminde hazırlanan ve padişahın mutlak otoritesini güçlendiren yasal düzenlemelerin bütününe ne ad verilir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "İltizam Sistemi",
+      "Miri Toprak Nizamnamesi",
+      "Kanunname-i Âl-i Osman",
+      "Sancak Sistemi"
+    ]
+  },
+{
+    "soruMetni": "Akkoyunlu Hükümdarı Uzun Hasan ile Otlukbeli Savaşı'nın yapılmasının temel nedeni nedir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Anadolu'nun doğusunda Türk siyasi birliğini kurma mücadelesi",
+      "Bizans'a destek vermesi",
+      "Kırım'ın ele geçirilmesine karşı çıkması",
+      "Avrupa devletleri ile ittifak kurması"
+    ]
+  },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in Ayasofya'yı camiye çevirmesi ve yanına medreseler kurması, İstanbul'u nasıl bir merkez haline getirmeyi amaçladığını gösterir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadece bir askeri üs",
+            "Avrupa ile rekabet eden bir ticaret merkezi",
+            "İslam dünyasının ilim, kültür ve hilafet merkezi",
+            "Çok uluslu bir imparatorluk başkenti"
+          ]
+        },
+        {
+          "soruMetni": "Yükselme Dönemi'nde Divan-ı Hümayun'da görev yapan ve ilmiye sınıfının başı olan görevli kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadrazam",
+            "Defterdar",
+            "Kazasker",
+            "Nişancı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_yukselme_2",
+      "baslik": "Osmanlı Devleti Yükselme Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_yukselme_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in, devşirme kökenli devlet adamlarını Türk ailelere tercih ederek Sadrazamlığa getirmesinin temel amacı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devşirmelerin daha yetenekli olması",
+            "Padişaha alternatif bir güç odağı oluşmasını engelleyerek merkezi otoriteyi güçlendirmek",
+            "Türkmenlerin devlete küsmesini sağlamak",
+            "Balkanlardaki halkların devlete bağlılığını artırmak"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin 1453'te İstanbul'u fethetmesi, Avrupa'da hangi kültürel gelişmenin hızlanmasına neden olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Feodalitenin güçlenmesi",
+            "Coğrafi Keşiflerin başlaması",
+            "İstanbul'dan kaçan Bizanslı alimlerin İtalya'ya sığınmasıyla Rönesans'ın gelişmesi",
+            "Skolastik düşüncenin güçlenmesi"
+          ]
+        },
+        {
+          "soruMetni": "1514 Çaldıran Savaşı'ndan sonra Yavuz Sultan Selim'in Tebriz'den İstanbul'a getirdiği sanatçılar ve zanaatkarlar, Osmanlı'da en çok hangi alanın gelişmesine katkı sağlamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mimari ve hat",
+            "Çinicilik, minyatür ve tezhip",
+            "Askeri teknoloji",
+            "Denizcilik"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in Venedik elçisine \"Bugünden itibaren denizlerin hakimi benim\" demesi ve İstanbul'da bir Balyos bulundurmalarına izin vermesi, Venedik ile olan ilişkilerde hangi politikanın izlendiğini gösterir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadece askeri üstünlük politikası",
+            "Tam bir teslimiyet politikası",
+            "Askeri üstünlüğü kabul ettirirken, ticari ilişkileri sürdürme politikası",
+            "Kültürel işbirliği politikası"
+          ]
+        },
+       {
+    "soruMetni": "II. Bayezid döneminde gerçekleşen 'Küçük Kıyamet' olarak adlandırılan doğal felaket aşağıdakilerden hangisidir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Büyük Veba Salgını",
+      "Tuna Nehri'nin taşması",
+      "Anadolu'da kuraklık yaşanması",
+      "İstanbul Depremi"
+    ]
+  },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in Sırbistan, Mora ve Trabzon'u fethetmesinin ortak amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz ticaretini ele geçirmek",
+            "Anadolu Türk birliğini sağlamak",
+            "Bizans hanedanının yeniden canlanma umutlarını ortadan kaldırmak",
+            "Venedik'in üslerini yok etmek"
+          ]
+        },
+{
+    "soruMetni": "Fatih Sultan Mehmet döneminde İstanbul'daki bilim ve kültür hayatının canlanmasına yönelik atılan adımlardan biri aşağıdakilerden hangisidir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Bütün eğitim kurumlarının kapatılması",
+      "Sahn-ı Seman medreselerinin kurulması",
+      "Avrupa'ya öğrenci gönderilmesi",
+      "Latince'nin resmi dil olarak kabul edilmesi"
+    ]
+  },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in son seferini İtalya'nın Otranto limanına yapmasının asıl stratejik hedefi neydi?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İtalya'yı tamamen fethetmek",
+            "Venedik'e gözdağı vermek",
+            "Katolik dünyasının merkezini ele geçirmek",
+            "İspanya'daki Müslümanlara yardım etmek"
+          ]
+        },
+{
+    "soruMetni": "Fatih Sultan Mehmet, İstanbul'un fethinden sonra \"Kayser-i Rum\" (Roma İmparatoru) unvanını kullanmıştır. Bu unvanı kullanmasının temel amacı aşağıdakilerden hangisidir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Ortodoks tebaanın siyasi liderliğini üstlenme iddiasını güçlendirmek",
+      "Anadolu beyliklerinin ona karşı birleşmesini sağlamak",
+      "Safevi Devleti'ne meydan okumak",
+      "Yeniçerilerin maaşlarını artırmak"
+    ]
+  },
+        {
+          "soruMetni": "Yükselme Dönemi'nde, devletin toprak kayıtlarını tutan, fethedilen yerleri Tımar sistemine göre defterlere işleyen ve padişahın tuğrasını çeken divan üyesi kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Nişancı",
+            "Defterdar",
+            "Kazasker",
+            "Reis'ül Küttab"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Fatih döneminde Sahn-ı Seman, Kanuni döneminde Süleymaniye Medreselerini kurması, devletin hangi alana verdiği önemi göstermektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Askeri teknoloji",
+            "İlmiye",
+            "Denizcilik",
+            "Ticaret yolları"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in sadece 8 yıl süren saltanatında Osmanlı topraklarının iki kattan fazla büyümesi, öncelikle hangi devletlerin yıkılmasıyla gerçekleşmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akkoyunlu ve Karakoyunlu",
+            "Bizans ve Trabzon İmparatorluğu",
+            "Memlük Devleti ve Dulkadiroğulları Beyliği",
+            "Avusturya ve Macaristan"
+          ]
+        },
+{
+    "soruMetni": "Fatih'in hedeflediği; \nI. Roma İmparatorluğu'nun siyasi varlığını yeniden canlandırmak, \nII. Akdeniz ve Karadeniz ticaret yollarını tek elde toplamak, \nIII. Anadolu Türk birliğini kurmak\nhedeflerinden hangisi veya hangileri Otlukbeli Savaşı ile doğrudan ilişkilidir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız II",
+      "Yalnız III",
+      "I ve II"
+    ]
+  },
+{
+    "soruMetni": "Fatih döneminde, devlet arazilerinin gelirlerinin yüksek bir bedelle belirli süreler için ihaleyle peşin olarak satılması esasına dayanan 'İltizam' sisteminin getirilmesinin temel sebebi nedir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Nakde olan ihtiyacı karşılamak ve Hazine'ye sıcak para sağlamak",
+      "Tımarlı sipahilerin sayısını azaltmak",
+      "Köylüyü toprak sahibi yapmak",
+      "Savaşların sayısını artırmak"
+    ]
+  },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman döneminde İspanya Kralı Şarlken'in Avrupa'da kurmaya çalıştığı \"Habsburg hegemonyası\", Osmanlı Devleti tarafından hangi iki güçle ittifak kurularak dengelenmeye çalışılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fransa ve Protestanlar",
+            "İngiltere ve Venedik",
+            "Safeviler ve Rusya",
+            "Portekiz ve Papalık"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in, İstanbul'daki Fener Rum Patrikhanesi'ne ek olarak, Ermeni ve Yahudi cemaatlerine de izin vermesi, Osmanlı yönetim sisteminin hangi temel üzerine kurulduğunu gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Asimilasyon",
+            "Millet Sistemi",
+            "Teokratik",
+            "Feodal"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim döneminde çıkan \"Bozoklu Celal\" isyanının, Kanuni döneminde \"Celali İsyanları\" adıyla yaygınlaşmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Safevi Devleti'nin bu isyanları desteklemesi",
+            "Ekonomik ve sosyal bozulmaların artması",
+            "Taht kavgalarının yaşanması",
+            "Devşirme sisteminin bozulması"
+          ]
+        },
+{
+    "soruMetni": "Osmanlı'nın fethettiği bölgelerdeki halka karşı hoşgörülü ve adil yönetim uygulaması (İstimalet Politikası); \nI. Bölge halkının devlete bağlılığını artırmak, \nII. Fetihlerin kalıcı olmasını sağlamak, \nIII. Avrupa devletlerinin içişlerine karışmak\namaçlarından hangilerine doğrudan hizmet eder?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız III",
+      "I ve II",
+      "I, II ve III"
+    ]
+  },
+{
+    "soruMetni": "Fatih Sultan Mehmet döneminde gerçekleşen; \nI. Mora Despotluğu'na son verilmesi, \nII. Cenevizlilerden Amasra ve Sinop'un alınması, \nIII. Otranto'nun kısa süreliğine fethi\ngelişmelerinin ortak amacı nedir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Haçlı Seferlerinin başlamasını önlemek",
+      "Anadolu beyliklerini tamamen ortadan kaldırmak",
+      "Ticaret yollarının kontrolünü tamamen Memlüklere bırakmak",
+      "Osmanlı'nın denizlerdeki hakimiyetini güçlendirmek"
+    ]
+  },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in 1461'de Trabzon Rum İmparatorluğu'na son vermesinin en önemli stratejik sonucu nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz'in Türk gölü haline gelmesi",
+            "Bizans'ı yeniden canlandırma umutlarının tamamen sona erdirilmesi",
+            "İpek Yolu'nun denetiminin tamamen Osmanlı'ya geçmesi",
+            "Akkoyunlu Devleti ile komşu olunması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_yukselme_3",
+      "baslik": "Osmanlı Devleti Yükselme Dönemi-3",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_yukselme_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in \"Kanunname-i Ali Osman\" ile kardeş katlini \"Nizam-ı Alem için\" yasal hale getirmesi, hangi yönetim anlayışını güçlendirmeye yöneliktir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Federatif yönetim",
+            "Teokratik yönetim",
+            "Mutlak ve merkezi monarşi",
+            "Meşruti yönetim"
+          ]
+        },
+        {
+          "soruMetni": "Fatih döneminde Sahn-ı Seman Medreselerinin açılması, Topkapı Sarayı'nda Enderun Mektebi'nin kurumsallaşması ve Ali Kuşçu, Sabuncuoğlu Şerafettin gibi alimlerin himaye edilmesi, devletin hangi iki alanda da zirveyi hedeflediğini gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Askeri güç ve denizcilik",
+            "İlim ve idari kadro",
+            "Tarım ve hayvancılık",
+            "Mimari ve ticaret"
+          ]
+        },
+        {
+          "soruMetni": "II. Bayezid döneminin \"Yükselme içindeki Duraklama\" olarak adlandırılmasının ve fetihlerin yavaşlamasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Coğrafi Keşiflerin olumsuz ekonomik etkileri",
+            "Avrupa'da Rönesans'ın başlaması",
+            "İç sorun olan Cem Sultan Olayı'nın uluslararası krize dönüşmesi",
+            "Şahkulu İsyanı'nın Anadolu'da yarattığı tahribat"
+          ]
+        },
+        {
+          "soruMetni": "II. Bayezid'in, İspanya'daki Müslüman ve Yahudilere yardım etmek için Kemal Reis komutasında donanma göndermesi, Osmanlı Devleti'nin hangi rolü üstlendiğini gösterir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadece Akdeniz ticaretini koruma",
+            "Avrupa'da siyasi birliği sağlama",
+            "Dünya Müslümanlarının ve zulme uğrayanların hamisi olma",
+            "İspanya ile ittifak kurma"
+          ]
+        },
+        {
+          "soruMetni": "Yavuz Sultan Selim'in, babası II. Bayezid'e karşı taht mücadelesine girerek padişah olmasında, hangi dış tehlikenin yarattığı endişe etkili olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Memlüklerin Dulkadiroğulları üzerindeki baskısı",
+            "Safevi tehlikesinin Anadolu'da yarattığı istikrarsızlık",
+            "Portekizlilerin Hint Okyanusu'ndaki faaliyetleri",
+            "Avusturya'nın Macaristan'ı işgal etmesi"
+          ]
+        },
+{
+    "soruMetni": "II. Bayezid döneminde yaşanan Şahkulu İsyanı'nın ortaya çıkardığı en önemli sonuç nedir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Osmanlı'nın Safevi Devleti tehlikesini daha net görmesi",
+      "Cem Sultan'ın tahta geçmesi",
+      "Venedik ile barış yapılması",
+      "Karadeniz'in kaybedilmesi"
+    ]
+  },
+        {
+          "soruMetni": "1515 Turnadağ Savaşı ile Dulkadiroğulları Beyliği'ne son verilmesinin en önemli sonucu nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Anadolu Türk siyasi birliğinin kesin olarak sağlanması",
+            "Memlük Devleti ile ittifak kurulması",
+            "Safevilerin Anadolu'daki etkinliğinin artması",
+            "Kırım Hanlığı'nın Osmanlı'ya bağlanması"
+          ]
+        },
+{
+    "soruMetni": "Fatih döneminde, Rumeli ve Anadolu'daki toprakları doğrudan merkezden yönetmek için kullanılan idari birimlere ne ad verilir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Kaza",
+      "Millet",
+      "Eyalet",
+      "Beylik"
+    ]
+  },
+        {
+          "soruMetni": "Mısır Seferi'nin ardından Kutsal Emanetlerin İstanbul'a getirilmesi ve Halifeliğin Osmanlı'ya geçmesi, devletin hangi kimliğini daha fazla öne çıkarmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Askeri",
+            "Teokratik",
+            "Bürokratik",
+            "Ekonomik"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1521'de Belgrad'ı fethetmesi, hangi devletin Orta Avrupa'daki kilit savunma noktasını kaybetmesine yol açmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Venedik Cumhuriyeti",
+            "Avusturya Arşidüklüğü",
+            "Macar Krallığı",
+            "Lehistan Krallığı"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1526'da Mohaç Meydan Muharebesi'ni kazanmasıyla Macar Krallığı'nın yıkılması, Osmanlı Devleti'ni hangi büyük rakibi ile doğrudan sınır komşusu yapmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kutsal Roma-Cermen İmparatorluğu",
+            "Fransa Krallığı",
+            "Lehistan Krallığı",
+            "Venedik Cumhuriyeti"
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın, Fransa Kralı I. Fransuva'nın annesinin yardım talebi üzerine Almanya Seferi'ne çıkması ve Fransa'ya kapitülasyonlar vermesi, hangi siyasi hedefi gütmektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fransa'nın ekonomik gücünden faydalanmak",
+            "Avrupa Hristiyan birliğini parçalamak ve müttefik kazanmak",
+            "Akdeniz ticaretini canlandırmak",
+            "Protestanlık hareketini desteklemek"
+          ]
+        },
+        {
+          "soruMetni": "1533 İstanbul Antlaşması ile Avusturya Arşidükü'nün, Osmanlı Sadrazamı'na denk sayılması, aşağıdakilerden hangisinin açık bir kanıtıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Osmanlı'nın Avusturya'ya karşı sağladığı diplomatik üstünlüğün",
+            "Avusturya'nın artık vergi vermeyeceğinin",
+            "Sadrazamın padişahtan daha yetkili hale geldiğinin",
+            "Savaşların kalıcı olarak bittiğinin"
+          ]
+        },
+        {
+          "soruMetni": "Barbaros Hayrettin Paşa'nın 1538 Preveze Deniz Zaferi ile Haçlı donanmasını yenilgiye uğratması, hangi sonucu doğurmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Coğrafi Keşiflerin olumsuz etkilerini sona erdirmiştir.",
+            "Akdeniz'deki Osmanlı hakimiyetini kesinleştirmiştir.",
+            "Karadeniz'i Türk gölü haline getirmiştir.",
+            "Portekizlilerin Hint Okyanusu'ndaki üstünlüğünü kırmıştır."
+          ]
+        },
+{
+    "soruMetni": "Aşağıdakilerden hangisi Fatih Sultan Mehmet'in Venedik ile mücadele etmesinin temel nedenlerinden biri değildir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Mora ve Ege adaları üzerindeki hakimiyet",
+      "Doğu Anadolu'da Türk siyasi birliğini kurma isteği",
+      "Arnavutluk kıyıları üzerindeki anlaşmazlıklar",
+      "Akdeniz ticaret yollarının kontrolü"
+    ]
+  },
+        {
+          "soruMetni": "Hint Deniz Seferleri'nin, Portekiz'in okyanusa dayanıklı gemileri ve bölgedeki Müslümanların yeterli destek vermemesi gibi nedenlerle başarısız olması, neyin göstergesidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Osmanlı'nın Akdeniz'deki gücünün Hint Okyanusu'nda yetersiz kaldığının",
+            "Safevilerin Portekiz ile ittifak yaptığının",
+            "Tımar sisteminin bozulduğunun",
+            "Osmanlı hazinesinin boşaldığının"
+          ]
+        },
+        {
+          "soruMetni": "1555 Amasya Antlaşması'nın en önemli özelliği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Safevi Devleti'ni yıkan antlaşmadır.",
+            "Osmanlı'nın doğuda en geniş sınırlara ulaştığı antlaşmadır.",
+            "İki devlet arasında imzalanan ilk resmi barış antlaşmasıdır.",
+            "Tebriz'in ilk defa Osmanlı eline geçmesidir."
+          ]
+        },
+        {
+          "soruMetni": "Kanuni Sultan Süleyman'ın 1565'te Malta'yı kuşatıp alamaması ve 1566'da Zigetvar Seferi sırasında vefat etmesi, neyin habercisi olarak görülebilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tımar sisteminin çöktüğünün",
+            "Osmanlı'nın fetihlerde eski gücünü ve ivmesini kaybetmeye başladığının",
+            "Celali isyanlarının başladığının",
+            "Devletin yıkılış sürecine girdiğinin"
+          ]
+        },
+{
+    "soruMetni": "Fatih Sultan Mehmet'in 'Kanunname-i Âl-i Osman' ile getirdiği 'müştemilat' olarak bilinen sistem nedir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Vergi toplama usulü",
+      "Saray mutfağı düzeni",
+      "Saray ve devlet görevlilerinin rütbe ve protokol düzeni",
+      "Askeri alım şartları"
+    ]
+  },
+        {
+          "soruMetni": "1571'de Kıbrıs'ın fethinden hemen sonra İnebahtı'da Osmanlı donanmasının yakılması, Avrupa'da nasıl bir algı yaratmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Osmanlı'nın kara ordusunun da zayıfladığı",
+            "\"Yenilmez\" sanılan Türk donanmasının yenilebileceği",
+            "Akdeniz ticaretinin tamamen bittiği",
+            "Kıbrıs'ın geri alınacağı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_yukselme_4",
+      "baslik": "Osmanlı Devleti Yükselme Dönemi-4",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_yukselme_donemi",
+      "isNew": false,
+      "soruSayisi": 16,
+      "sureDakika": 16,
+      "sorular": [
+        {
+          "soruMetni": "Sokollu Mehmet Paşa'nın Don-Volga Kanalı Projesi ile Hazar Denizi'ne ulaşmayı hedeflemesinin temel jeopolitik amacı neydi?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Rusya'nın güneye inmesini engellemek",
+            "İpek Yolu'nu canlandırmak",
+            "Hindistan'a ulaşmak",
+            "Venedik ticaretini bitirmek"
+          ]
+        },
+        {
+          "soruMetni": "Sokollu Mehmet Paşa'nın Süveyş Kanalı Projesi ile Akdeniz'i Kızıldeniz'e bağlama planının temel ekonomik amacı neydi?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hac yolculuğunu kolaylaştırmak",
+            "Portekiz donanmasını engellemek",
+            "Coğrafi Keşiflerle Baharat Yolu'nu yeniden Akdeniz'e çekmek",
+            "Mısır'da tarımı geliştirmek"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in Topkapı Sarayı'nda kurduğu Enderun Mektebi'nin temel işlevi nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halka açık dini eğitim vermek",
+            "Padişaha sadık, devşirme kökenli idareci ve komutan yetiştirmek",
+            "Şehzadeleri eğitmek",
+            "Tımar sistemini organize etmek"
+          ]
+        },
+{
+    "soruMetni": "Fatih Sultan Mehmet döneminde Tımar sistemine yapılan önemli düzenlemelerden biri, \nI. Dirlik gelirlerini azaltmak, \nII. Yeniçerilere tahsis etmek, \nIII. Devlet hizmetindeki kişilere rütbelerine uygun dirlik vermek\ndurumlarından hangisini amaçlamıştır?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız II",
+      "I ve III",
+      "Yalnız III"
+    ]
+  },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Yükselme Dönemi'nde Avrupa'daki Protestanlık hareketini desteklemesinin temel siyasi amacı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Protestanlığın Sünni İslam'a daha yakın olması",
+            "Avrupa'daki mezhep birliğini kırmak",
+            "Fransa ile ilişkileri bozmak",
+            "Yeni ticaret yolları bulmak"
+          ]
+        },
+        {
+          "soruMetni": "Fatih Sultan Mehmet'in Venedik'e ve Kanuni'nin Fransa'ya kapitülasyon vermesinin ortak amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Avrupa birliğini parçalamak ve ticareti canlandırmak",
+            "Bu devletlerin donanmalarını Osmanlı hizmetine almak",
+            "Rönesans hareketini Osmanlı'ya getirmek",
+            "Bu devletlerden vergi toplamak"
+          ]
+        },
+        {
+          "soruMetni": "Divan-ı Hümayun'da, fethedilen toprakların kaydını tutan ve Tımar sistemini düzenleyen görevli aynı zamanda hangi hukuki işlevi yerine getirirdi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Şer'i hukuka göre davalara bakmak",
+            "Padişahın yazılı emirlerine onun imzasını çekmek",
+            "Hazine gelir-giderlerini tutmak",
+            "Yeniçeri maaşlarını dağıtmak"
+          ]
+        },
+        {
+          "soruMetni": "Mimar Sinan'ın Kanuni döneminde yaptığı Şehzade Camii, Süleymaniye Camii ve II. Selim döneminde yaptığı Selimiye Camii hangi devlet politikasını yansıtmaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sadece dini mimariyi geliştirme",
+            "Devletin gücünü ve ihtişamını kalıcı mimari eserlerle gösterme",
+            "Gayrimüslim tebaaya hoşgörü",
+            "Askeri yapıları güçlendirme"
+          ]
+        },
+{
+    "soruMetni": "II. Bayezid döneminde iç huzursuzluk ve isyanların artmasında hangi dış gücün rolü yoktur?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Safevi Devleti",
+      "Rodos Şövalyeleri",
+      "Portekiz",
+      "Memlük Devleti"
+    ]
+  },
+{
+    "soruMetni": "Akkoyunlu Devleti'nin Otlukbeli Savaşı'nda yenilmesi, Osmanlı için Doğu'da hangi kapıyı açmıştır?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Mısır seferlerinin yolu",
+      "Safevi Devleti ile karşı karşıya gelme potansiyeli",
+      "İran içlerine kolayca ilerleme",
+      "Avrupa'ya asker gönderme"
+    ]
+  },
+{
+    "soruMetni": "Fatih Sultan Mehmet'in Venedik ile 16 yıl süren savaşları sona erdiren antlaşma Osmanlı'ya hangi önemli Ege adasının kontrolünü vermiştir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Eğriboz",
+      "Rodos",
+      "Girit",
+      "Kıbrıs"
+    ]
+  },
+{
+    "soruMetni": "Fatih dönemi denizcilik faaliyetlerinin; \nI. Karadeniz'i Türk gölü haline getirmek, \nII. Akdeniz'deki Venedik hakimiyetini kırmak, \nIII. Atlantik Okyanusu'na ulaşmak\nhedeflerinden hangileri bulunmaktadır?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Yalnız I",
+      "I ve II",
+      "Yalnız III",
+      "I, II ve III"
+    ]
+  },
+{
+    "soruMetni": "Fatih Sultan Mehmet döneminde ilk kez resmileşen Divan-ı Hümayun'da; \nI. Nişancı, \nII. Kazasker, \nIII. Sadrazam\ngörevlilerinden hangileri 'Seyfiye' sınıfına mensuptur?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız II",
+      "Yalnız III",
+      "I ve III"
+    ]
+  },
+        {
+          "soruMetni": "Yükselme Dönemi'nde, özellikle Kanuni'nin son zamanlarından itibaren Tımar sisteminin bozulmaya başlamasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tarımsal üretimin durması",
+            "Tımarların liyakat yerine rüşvet ve iltimasla dağıtılmaya başlanması",
+            "Safevi savaşlarının uzun sürmesi",
+            "Yeniçeri sayısının artması"
+          ]
+        },
+{
+    "soruMetni": "II. Bayezid'in Karaman beyliğini kesin olarak ortadan kaldırması, Osmanlı ile hangi devlet arasındaki ilişkileri gerginleştirmiştir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Venedik",
+      "İran",
+      "Macaristan",
+      "Memlük"
+    ]
+  },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Yükselme Dönemi'nde \"Altın Çağ\"ını yaşamasının temel dayanağı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sadece askeri fetihler",
+            "Güçlü merkezi otorite, liyakata dayalı yönetim ve güçlü ekonomi",
+            "Sadece Avrupa ile yapılan ittifaklar",
+            "Sadece Halifelik gücünün kullanılması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_duraklama_1",
+      "baslik": "Osmanlı Devleti Duraklama Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_duraklama_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1606 yılında Avusturya ile imzalanan ve \"Avusturya Arşidükü protokol bakımından Osmanlı Padişahına denk sayılacaktır\" maddesini içeren antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ferhat Paşa Antlaşması",
+            "Zitvatorok Antlaşması",
+            "Bucaş Antlaşması",
+            "Vasvar Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Zitvatorok Antlaşması'nda Avusturya Kralı'nın Osmanlı Padişahı'na denk sayılması, 1533 İstanbul Antlaşması'ndaki duruma kıyasla neyin göstergesidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Osmanlı'nın Avusturya üzerindeki siyasi üstünlüğünü kaybettiğinin",
+            "Savaşların kalıcı olarak sona erdiğinin",
+            "Avusturya'nın vergi vermeye devam edeceğinin",
+            "İki devletin müttefik olduğunun"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin III. Murat döneminde Safevilerle imzaladığı ve \"Doğu'da en geniş sınırlara\" ulaştığı antlaşma aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Nasuh Paşa Antlaşması",
+            "Serav Antlaşması",
+            "Kasr-ı Şirin Antlaşması",
+            "Ferhat Paşa Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat'ın Bağdat ve Revan Seferleri sonucunda Safevilerle 1639'da imzaladığı ve günümüz Türkiye-İran sınırını büyük ölçüde çizen antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Amasya Antlaşması",
+            "Kasr-ı Şirin Antlaşması",
+            "Ferhat Paşa Antlaşması",
+            "Bucaş Antlaşması"
+          ]
+        },
+
+        {
+          "soruMetni": "I. Ahmet döneminde Sancak sisteminin kaldırılarak yerine \"Ekber ve Erşed\" sisteminin getirilmesinin temel amacı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Şehzadelerin devlet tecrübesi kazanmasını sağlamak",
+            "Taht kavgalarını engelleyerek merkezi otoriteyi korumak",
+            "Saray masraflarını azaltmak",
+            "Yeniçeri Ocağı'nın desteğini almak"
+          ]
+        },
+{
+    "soruMetni": "17. yüzyıl ıslahatlarının genel özelliği aşağıdakilerden hangisidir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Sorunların kaynağına inilmemiş ve kişilere bağlı kalmıştır",
+      "Batı örnek alınarak yapılmıştır",
+      "Hukuk ve eğitim alanında köklü değişiklikler içermiştir",
+      "Halkın desteğiyle sürekli hale gelmiştir"
+    ]
+  },
+        {
+          "soruMetni": "17. yüzyılda Anadolu'da çıkan Celali İsyanlarının temel ekonomik nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tımar sisteminin bozulması, enflasyon ve ağır vergiler",
+            "Safevi Devleti'nin Şii propagandası yapması",
+            "Kapıkulu Ocağı'nın maaş alamaması",
+            "Beşik ulemalığının başlaması"
+          ]
+        },
+        {
+          "soruMetni": "Celali İsyanları sonucunda Anadolu'da binlerce insanın can güvenliği nedeniyle toprağını terk edip şehirlere göç etmesi olayına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Büyük Kaçgun",
+            "Çınar Vakası",
+            "Vaka-i Hayriye",
+            "Edirne Olayı"
+          ]
+        },
+{
+    "soruMetni": "Osmanlı'da 'Ocak devlet içindir' anlayışının 'Devlet ocak içindir' anlayışına dönüşmesi, hangi kurumdaki bozulmanın temel göstergesidir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Tımar Sistemi",
+      "İlmiye Sınıfı",
+      "Enderun Mektebi",
+      "Yeniçeri Ocağı"
+    ]
+  },
+        {
+          "soruMetni": "II. Osman'ın 1621 Hotin Seferi sırasında Yeniçerilerin disiplinsizliğini görerek ocağı kaldırmak istemesi, hangi sonuca zemin hazırlamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yeniçerilerin II. Osman'ı tahttan indirip öldürmesine",
+            "Celali isyanlarının sona ermesine",
+            "Lehistan'ın fethedilmesine",
+            "İlk kez Batı tarzı ıslahat yapılmasına"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı tarihinde ilk kez \"Saray dışından\" evlilik yapan ve başkenti İstanbul'dan Anadolu'ya taşımayı düşünen ıslahatçı padişah kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "IV. Murat",
+            "I. Ahmet",
+            "II. Osman",
+            "IV. Mehmet"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat'ın İstanbul'da içki, tütün, yatsıdan sonra sokağa çıkma yasağı getirmesi ve kahvehaneleri kapatmasının temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halk sağlığını korumak",
+            "Saray masraflarını kısmak",
+            "Toplumsal asayişi yeniden sağlamak",
+            "Ulemanın desteğini almak"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat ve Sultan İbrahim dönemlerinde, devletin bozulma nedenlerini ve çözüm yollarını sunan, ancak önerileri tam olarak uygulanmayan devlet adamı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Koçi Bey",
+            "Katip Çelebi",
+            "Naima Efendi",
+            "Evliya Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "IV. Mehmet döneminde, saray masraflarını kısarak, gelir-gideri dengeleyerek modern anlamda ilk Osmanlı \"denk bütçesini\" hazırlayan sadrazam kimdir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kuyucu Murat Paşa",
+            "Köprülü Mehmet Paşa",
+            "Merzifonlu Kara Mustafa Paşa",
+            "Tarhuncu Ahmet Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Tarhuncu Ahmet Paşa'nın denk bütçe hazırlamasına rağmen idam edilmesi, aşağıdakilerden hangisinin açık bir göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Islahatların halk tarafından istenmediğinin",
+            "Çıkar çevrelerinin ıslahatların önündeki en büyük engel olduğunun",
+            "Ordunun bütçe açığı verdiğinin",
+            "Padişahın ıslahat karşıtı olduğunun"
+          ]
+        },
+{
+    "soruMetni": "Osmanlı Devleti'nin doğuda en geniş sınırlara ulaştığı Ferhat Paşa Antlaşması'ndan sonra, kaybettiği toprakları geri alıp günümüz İran sınırını büyük ölçüde çizen antlaşma hangisidir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Nasuh Paşa Antlaşması",
+      "Serav Antlaşması",
+      "Amasya Antlaşması",
+      "Kasr-ı Şirin Antlaşması"
+    ]
+  },
+        {
+          "soruMetni": "IV. Mehmet'in annesi Hatice Turhan Sultan'ın, \"sarayın devlet işlerine karışmaması\" gibi şartlarını kabul ederek sadrazamlığa getirdiği ve \"Köprülüler Devri\"ni başlatan kişi kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Köprülü Fazıl Ahmet Paşa",
+            "Köprülü Mehmet Paşa",
+            "Tarhuncu Ahmet Paşa",
+            "Amcazade Hüseyin Paşa"
+          ]
+        },
+{
+    "soruMetni": "17. yüzyılda Anadolu'da çıkan ve halkın artan vergilere ve tımar sisteminin bozulmasına tepkisi olan isyanlara verilen genel ad nedir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Celali İsyanları",
+      "Yeniçeri İsyanları",
+      "Şeyh Said İsyanı",
+      "Suhte İsyanları"
+    ]
+  },
+{
+    "soruMetni": "Sancak sistemi kaldırılarak tahta çıkma usulünü düzenleyen ve en yaşlı ile en tecrübeli hanedan üyesinin padişah olmasını öngören sistem hangisidir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Müsadere Sistemi",
+      "Ekber ve Erşed Sistemi",
+      "İltizam Sistemi",
+      "Beşik Ulemalığı"
+    ]
+  }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_duraklama_2",
+      "baslik": "Osmanlı Devleti Duraklama Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_duraklama_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Osmanlı Devleti'nin Batı'da toprak kazandığı son antlaşma olan ve IV. Mehmet döneminde Lehistan'dan Podolya'nın alındığı antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Vasvar Antlaşması",
+            "Bucaş Antlaşması",
+            "Zitvatorok Antlaşması",
+            "Karlofça Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1683 yılındaki II. Viyana Kuşatması'nın başarısız olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yeniçerilerin isyan etmesi",
+            "Avusturya'ya Lehistan ve Alman prensliklerinden yardım gelmesi",
+            "Safevilerin doğudan saldırması",
+            "IV. Mehmet'in sefere katılmaması"
+          ]
+        },
+        {
+          "soruMetni": "II. Viyana Kuşatması'ndaki başarısızlık üzerine Papa'nın çağrısıyla Osmanlı'ya karşı oluşturulan \"Kutsal İttifak\" devletleri arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Avusturya",
+            "Lehistan",
+            "Venedik",
+            "Fransa"
+          ]
+        },
+        {
+          "soruMetni": "1683-1699 yılları arasındaki Kutsal İttifak Savaşları'nı sona erdiren ve Osmanlı Devleti'nin Batı'da ilk kez büyük çapta toprak kaybettiği antlaşma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Prut Antlaşması",
+            "Yaş Antlaşması",
+            "Karlofça Antlaşması",
+            "Zitvatorok Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Karlofça Antlaşması ile Macaristan ve Erdel'in Avusturya'ya, Podolya'nın Lehistan'a, Mora'nın Venedik'e bırakılması, Osmanlı Devleti'nin hangi politikaya geçmesine neden olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fetih politikasına",
+            "Kaybettiği toprakları geri alma politikasına",
+            "Denge politikasına",
+            "Batılılaşma politikasına"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda Tımar sisteminin bozulması üzerine, eyaletlerde Tımarlı Sipahilerin yerini alan, ücretli askerlere ne ad verilirdi?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cebeci",
+            "Akıncı",
+            "Sarıca ve Sekban",
+            "Humbaracı"
+          ]
+        },
+        {
+          "soruMetni": "Tımar sisteminin bozulmasıyla devletin artan nakit para ihtiyacını karşılamak amacıyla, eyaletlerdeki vergilerin \"ihale yoluyla peşin\" satılması sistemine ne ad verilirdi?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İltizam Sistemi",
+            "Müsadere Sistemi",
+            "Devşirme Sistemi",
+            "Sancak Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda, iltizam sisteminin bir sonraki aşaması olarak, vergi toplama hakkının kişilere \"ömür boyu\" verilmesi sistemine ne ad verilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Malikane Sistemi",
+            "Vakıf Sistemi",
+            "Ekber ve Erşed Sistemi",
+            "Pençik Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda medrese eğitiminin bozulması, enflasyon nedeniyle geçim sıkıntısı çeken ve iş bulamayan medrese öğrencilerinin çıkardığı isyanlara ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Celali İsyanları",
+            "Kapıkulu İsyanları",
+            "Suhte İsyanları",
+            "Şeyh Bedreddin İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nde, ilmiye sınıfında \"Alimin oğlu alimdir\" anlayışıyla, hak etmeyen kişilerin küçük yaşta müderris veya kadı yapılması uygulamasına ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devşirme",
+            "Beşik Ulemalığı",
+            "İltizam",
+            "Müsadere"
+          ]
+        },
+        {
+          "soruMetni": "Padişahların küçük yaşta tahta çıkması, 17. yüzyılda devlet yönetiminde en çok kimlerin nüfuzunu artırmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sadrazamların",
+            "Valide Sultanlar ve Saray Ağalarının",
+            "Şeyhülislamların",
+            "Yeniçeri Ağalarının"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda, \"Keşfü'z-Zünûn\" ve \"Cihannümâ\" gibi eserleriyle tanınan, dönemin bozulmaları hakkında risaleler de yazan ünlü Osmanlı alimi kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Katip Çelebi",
+            "Evliya Çelebi",
+            "Naima Efendi",
+            "Koçi Bey"
+          ]
+        },
+        {
+          "soruMetni": "I. Ahmet döneminde, Mimar Sedefkar Mehmet Ağa tarafından yapılan, 6 minareli ve iç süslemelerindeki çiniler nedeniyle \"Mavi Cami\" olarak da bilinen yapı hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Süleymaniye Camii",
+            "Selimiye Camii",
+            "Sultanahmet Camii",
+            "Fatih Camii"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda 50 yıl boyunca dünyayı gezen ve izlenimlerini \"Seyahatname\" adlı eserde toplayan ünlü seyyah kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Piri Reis",
+            "Evliya Çelebi",
+            "Katip Çelebi",
+            "Ali Kuşçu"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat'ın \"Bağdat Fatihi\" unvanını almasını sağlayan sefer, hangi devlet üzerine yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Avusturya",
+            "Venedik",
+            "Safevi",
+            "Lehistan"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda, devletin bozulmasının nedenlerini askeri disiplinsizliğe ve rüşvete bağlayan, çözüm olarak ise \"Kanuni dönemindeki\" yasalara dönülmesini savunan ıslahatçıların dayandığı temel düşünce nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Batılılaşma",
+            "Muhafazakarlık",
+            "Türkçülük",
+            "Teokratik yönetim"
+          ]
+        },
+        {
+          "soruMetni": "\"Uyvar önünde bir Türk gibi güçlü\" sözünün Avrupa'da söylenmesine neden olan Uyvar Kalesi'nin fethi ve ardından Vasvar Antlaşması'nın imzalanması, hangi sadrazam dönemindedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tarhuncu Ahmet Paşa",
+            "Köprülü Fazıl Ahmet Paşa",
+            "Kuyucu Murat Paşa",
+            "Merzifonlu Kara Mustafa Paşa"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin ilk resmi tarih yazıcısı olan ve 17. yüzyıl olaylarını anlatan \"Naima Tarihi\" adlı eseriyle bilinen kişi kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Koçi Bey",
+            "Evliya Çelebi",
+            "Naima",
+            "Katip Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Karlofça Antlaşması'nda yer almayıp, bir yıl sonra Rusya ile ayrıca imzalanan ve Rusların Azak Kalesi'ni alarak Karadeniz'e inme yolunda ilk adımı attığı antlaşma hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İstanbul Antlaşması",
+            "Prut Antlaşması",
+            "Yaş Antlaşması",
+            "Küçük Kaynarca Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1699 Karlofça Antlaşması'nın \"Avusturya'nın garantörlüğü\" altında imzalanması, Osmanlı Devleti'nin hangi niteliğini kaybettiğini göstermektedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çok uluslu yapısını",
+            "Teokratik karakterini",
+            "Uluslararası siyasetteki tek taraflı üstünlüğünü",
+            "Ekonomik bağımsızlığını"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_duraklama_3",
+      "baslik": "Osmanlı Devleti Duraklama Dönemi-3",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_duraklama_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "I. Ahmet döneminde \"Ekber ve Erşed\" sistemine geçilmesinin doğrudan sonucu olarak hangi uygulama sona ermiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sancak Sistemi",
+            "Devşirme Sistemi",
+            "Müsadere Sistemi",
+            "İltizam Sistemi"
+          ]
+        },
+{
+    "soruMetni": "Tarhuncu Ahmet Paşa'nın ıslahatlarının en belirgin özelliği nedir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "İlk kez Batı'yı örnek alması",
+      "Sadece askeri alanda yapılması",
+      "İlk kez ciddi bir bütçe hazırlaması",
+      "Yeniçeri Ocağı'nı kaldırması"
+    ]
+  },
+        {
+          "soruMetni": "17. yüzyılda, Tımar sisteminin bozulmasıyla eyaletlerde ortaya çıkan otorite boşluğu ve ağır vergiler, Anadolu'da hangi büyük toplumsal isyanlara yol açmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kapıkulu İsyanları",
+            "Celali İsyanları",
+            "Suhte İsyanları",
+            "Patrona Halil İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Celali İsyanları'nın en önemli toplumsal ve ekonomik sonucu olan \"Büyük Kaçgun\" olayı neyi ifade etmektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Köylülerin vergilerden kaçmak için dağlara sığınması",
+            "Köyden kente yaşanan kitlesel göç ve tarımsal üretimin çöküşü",
+            "Anadolu'daki Türkmenlerin İran'a göç etmesi",
+            "Medrese öğrencilerinin İstanbul'u terk etmesi"
+          ]
+        },
+{
+    "soruMetni": "Osmanlı Devleti'nin 'Kutsal İttifak' savaşları sonucunda büyük toprak kaybı yaşadığı Karlofça Antlaşması'nın (1699) imzalanmasında etkili olan Avrupalı devletler hangileridir? \nI. Avusturya, \nII. Rusya, \nIII. Venedik, \nIV. Lehistan",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "I ve II",
+      "II ve IV",
+      "I, II ve III",
+      "I, III ve IV"
+    ]
+  },
+        {
+          "soruMetni": "1593-1606 Osmanlı-Avusturya Savaşları'nı bitiren ve Osmanlı'nın Avusturya üzerindeki diplomatik üstünlüğünü sona erdiren antlaşma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karlofça Antlaşması",
+            "Vasvar Antlaşması",
+            "Zitvatorok Antlaşması",
+            "Bucaş Antlaşması"
+          ]
+        },
+       {
+    "soruMetni": "II. Osman'ın (Genç Osman) Hotin Seferi sırasında Yeniçerilerin disiplinsizliğini görerek yapmak istediği ancak hayatına mal olan temel reform nedir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Tımar sistemini kaldırmak",
+      "Yeniçeri Ocağı'nı kaldırmak veya düzenlemek",
+      "Başkenti Anadolu'ya taşımak",
+      "Sadece maliye alanında düzenleme yapmak"
+    ]
+  },
+        {
+          "soruMetni": "1621 Hotin Seferi sırasında Yeniçerilerin disiplinsizliğini gören ve ocağı kaldırmayı düşünen, bu düşüncesi nedeniyle öldürülen padişah kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "IV. Murat",
+            "II. Osman",
+            "I. Ahmet",
+            "I. Mustafa"
+          ]
+        },
+        {
+          "soruMetni": "II. Osman'ın Yeniçeri Ocağı'nı kaldırmayı düşünmesinin yanı sıra, hangi geleneksel olmayan adımı atması ulema ve askerin tepkisini çekmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Saray dışından evlilik yapması",
+            "Medreseleri kapatması",
+            "Sancağa çıkması",
+            "Batı'dan askeri uzman getirmesi"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat'ın, annesi Kösem Sultan'ın etkisinden kurtulduktan sonra otoriteyi sağlamak için başvurduğu temel yöntem ne olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Batı tarzı ıslahatlar yapmak",
+            "Baskı, şiddet ve yasaklar yoluyla asayişi sağlamak",
+            "Yeniçeri Ocağı'nı kaldırmak",
+            "Tımar sistemini yeniden düzenlemek"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat'a ve Sultan İbrahim'e sunduğu \"Risale\" ile devletin bozulma nedenlerini ve çözüm yollarını anlatan devlet adamı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Koçi Bey",
+            "Katip Çelebi",
+            "Naima Efendi",
+            "Tarhuncu Ahmet Paşa"
+          ]
+        },
+       {
+    "soruMetni": "Duraklama döneminde maliyenin bozulmasının temel nedenleri arasında; \nI. Coğrafi Keşifler sonrası değerli madenlerin akışı, \nII. Savaşların uzaması ve ganimetin azalması, \nIII. Kapıkulu Ocağı'nın maaş yükünün artması\ndurumlarından hangileri yer alır?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız III",
+      "I ve II",
+      "I, II ve III"
+    ]
+  },
+        {
+          "soruMetni": "IV. Mehmet döneminde, isyancı askerlerin talebiyle 30'a yakın devlet adamının saraydan alınarak Sultanahmet Meydanı'ndaki çınar ağaçlarına asıldığı olaya ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Edirne Olayı",
+            "Çınar Vakası",
+            "Kabakçı Mustafa İsyanı",
+            "Patrona Halil İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Devletin maliyesini düzeltmek için saray masraflarını kısan ve modern anlamda ilk \"denk bütçeyi\" hazırlayan, ancak çıkarları zedelenen çevrelerce idam ettirilen 17. yüzyıl sadrazamı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Köprülü Mehmet Paşa",
+            "Tarhuncu Ahmet Paşa",
+            "Kuyucu Murat Paşa",
+            "Merzifonlu Kara Mustafa Paşa"
+          ]
+        },
+        {
+          "soruMetni": "IV. Mehmet'in annesi Hatice Turhan Sultan'ın, belirli şartlar öne sürerek sadrazamlığı kabul eden kişiye yetki vermesiyle başlayan dönem hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Lale Devri",
+            "Tanzimat Dönemi",
+            "Köprülüler Devri",
+            "Fetret Devri"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda Tımar sisteminin bozulmasıyla, iltizamların ömür boyu kiralanması sistemine ne ad verilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Malikane Sistemi",
+            "Müsadere Sistemi",
+            "Devşirme Sistemi",
+            "Sancak Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Köprülü Fazıl Ahmet Paşa döneminde Avusturya'ya karşı kazanılan zafer sonrası imzalanan ve \"Uyvar önünde bir Türk gibi güçlü\" sözüne neden olan antlaşma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Zitvatorok Antlaşması",
+            "Bucaş Antlaşması",
+            "Vasvar Antlaşması",
+            "Karlofça Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1645'te başlayıp 1669'da Kandiye Kalesi'nin fethiyle sona eren 24 yıllık Girit Kuşatması, Osmanlı Devleti'nin en çok hangi alanda zayıfladığını göstermiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kara ordusu",
+            "Tımar sistemi",
+            "Donanma",
+            "Diplomasi"
+          ]
+        },
+        {
+          "soruMetni": "1672 Bucaş Antlaşması'nın en önemli özelliği nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Osmanlı'nın ilk kez toprak kaybettiği antlaşmadır.",
+            "Osmanlı'nın Batı'da son kez toprak kazandığı antlaşmadır.",
+            "Osmanlı'nın Avusturya'ya denk sayıldığı antlaşmadır.",
+            "Rusya'nın Karadeniz'e indiği antlaşmadır."
+          ]
+        },
+       {
+    "soruMetni": "Köprülü Fazıl Ahmet Paşa'nın Uyvar önlerindeki başarısı üzerine, Osmanlı'nın Avusturya'dan son kez toprak ve tazminat aldığı kazançlı antlaşma hangisidir?",
+    "dogruCevapIndex": 0,
+    "secenekler": [
+      "Vasvar Antlaşması (1664)",
+      "Zitvatorok Antlaşması",
+      "Karlofça Antlaşması",
+      "Pasarofça Antlaşması"
+    ]
+  }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_duraklama_4",
+      "baslik": "Osmanlı Devleti Duraklama Dönemi-4",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_duraklama_donemi",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "II. Viyana Kuşatması'ndaki yenilgi üzerine Papa'nın önderliğinde Osmanlı'ya karşı oluşturulan \"Kutsal İttifak\" içinde aşağıdakilerden hangisi yer almamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Avusturya",
+            "Rusya",
+            "Fransa",
+            "Venedik"
+          ]
+        },
+        {
+          "soruMetni": "16 yıl süren Kutsal İttifak Savaşları sonucunda imzalanan ve Osmanlı'nın Batı'da ilk kez ve büyük miktarda toprak kaybettiği antlaşma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Zitvatorok Antlaşması",
+            "Prut Antlaşması",
+            "Karlofça Antlaşması",
+            "Yaş Antlaşması"
+          ]
+        },
+{
+    "soruMetni": "17. yüzyıl ıslahatları neden sürekli ve kalıcı olamamıştır? \nI. Halk desteği alınmaması, \nII. Yeniçeri ve ulema direnci, \nIII. Islahatçıların öldürülmesi veya görevden alınması",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız III",
+      "I ve II",
+      "I, II ve III"
+    ]
+  },
+{
+    "soruMetni": "Ekber ve Erşed Sistemi'nin getirilmesinin; \nI. Taht kavgalarını azaltmak, \nII. Tecrübesiz padişahların tahta geçmesini sağlamak, \nIII. Kafes usulünü sona erdirmek\nsonuçlarından hangileri gerçekleşmiştir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız III",
+      "I ve II",
+      "II ve III"
+    ]
+  },
+        {
+          "soruMetni": "17. yüzyılda ilmiye sınıfının bozulmasına, medreseye siyasetin girmesine ve \"Alimin oğlu alimdir\" anlayışıyla liyakatsiz atamaların yapılmasına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Beşik Ulemalığı",
+            "İltizam Sistemi",
+            "Ekber ve Erşed",
+            "Kafes Usulü"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda medreselerin bozulması ve işsiz kalan medrese öğrencilerinin çıkardığı isyanlara ne ad verilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Celali İsyanları",
+            "Suhte İsyanları",
+            "Kapıkulu İsyanları",
+            "Vaka-i Vakvakiye"
+          ]
+        },
+        {
+          "soruMetni": "Duraklama Dönemi ıslahatçılarının ortak özelliği nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sorunların kökenine inerek Batı tarzı çözümler aramaları",
+            "Merkezi otoriteyi yeniden kurmayı amaçlamaları",
+            "Halkın yönetime katılmasını sağlamaları",
+            "Yeniçeri Ocağı'nı örnek almaları"
+          ]
+        },
+        {
+          "soruMetni": "IV. Mehmet'in av tutkusu nedeniyle sık sık Edirne'ye gitmesi ve devlet işlerini İstanbul'dan uzaklaştırması, hangi olaya zemin hazırlamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "1703 Edirne Olayı",
+            "Çınar Vakası",
+            "Hotin Seferi",
+            "II. Viyana Kuşatması"
+          ]
+        },
+        {
+          "soruMetni": "Tımar sisteminin bozulmasıyla ortaya çıkan Sarıca ve Sekban adı verilen ücretli askerlerin, savaş bittikten sonra köylere dağılarak isyan çıkarması, hangi isyanların büyümesine neden olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Celali İsyanları",
+            "Kapıkulu İsyanları",
+            "Suhte İsyanları",
+            "Dini isyanlar"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda Coğrafi Keşifler ve Avrupa'dan gelen ucuz gümüşün etkisiyle Osmanlı parasının değer kaybetmesine ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tağşiş",
+            "İltizam",
+            "Müsadere",
+            "Tahrir"
+          ]
+        },
+        {
+          "soruMetni": "17. yüzyılda \"Seyahatname\" adlı eseriyle gezip gördüğü yerlerin kültürünü, dilini ve sosyal yapısını anlatan ünlü Osmanlı seyyahı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Evliya Çelebi",
+            "Katip Çelebi",
+            "Koçi Bey",
+            "Naima Efendi"
+          ]
+        },
+        {
+          "soruMetni": "\"Keşfü'z-Zünûn\" ve \"Cihannümâ\" ile tanınan, 17. yüzyılın en önemli aydınlarından ve risale yazarlarından olan kişi kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Evliya Çelebi",
+            "Katip Çelebi",
+            "Lagari Hasan Çelebi",
+            "Hezarfen Ahmet Çelebi"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin ilk resmi tarih yazıcısı olan ve 17. yüzyıl olaylarını kaleme alan devlet adamı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Naima Efendi",
+            "Koçi Bey",
+            "Evliya Çelebi",
+            "Aşıkpaşazade"
+          ]
+        },
+        {
+          "soruMetni": "IV. Murat döneminde roketle uçtuğu iddia edilen ve bu denemesiyle bilinen kişi kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hezarfen Ahmet Çelebi",
+            "Lagari Hasan Çelebi",
+            "Ali Kuşçu",
+            "Takiyüddin Mehmet"
+          ]
+        },
+        {
+          "soruMetni": "I. Ahmet döneminde inşa edilen, 6 minaresi ve mavi çinileriyle \"Mavi Cami\" olarak bilinen yapı hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Süleymaniye Camii",
+            "Selimiye Camii",
+            "Sultanahmet Camii",
+            "Fatih Camii"
+          ]
+        },
+{
+    "soruMetni": "Karlofça Antlaşması'nın (1699) Rusya dışındaki devletlerle imzalanmasının ve Rusya ile bir yıl sonra İstanbul Antlaşması'nın yapılmasının temel nedeni nedir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Rusya'nın daha az toprak kaybetmesi",
+      "Rusya'nın müzakereleri terk etmesi",
+      "Sadrazamın Rusya'ya güvenmemesi",
+      "Rusya'nın Karlofça'da Azak Kalesi için daha fazla kazanım istemesi"
+    ]
+  },
+        {
+          "soruMetni": "Köprülü Fazıl Ahmet Paşa döneminde imzalanan Vasvar Antlaşması ile Bucaş Antlaşması'nın ortak özelliği nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Avusturya ile imzalanmıştır.",
+            "Toprak kazanımı sağlayan antlaşmalardır.",
+            "Rusya'ya karşı yapılmıştır.",
+            "Girit Seferi'ni sona erdirmiştir."
+          ]
+        },
+{
+    "soruMetni": "Osmanlı Devleti'nin Duraklama Dönemi'ndeki en büyük başarısızlığı olarak kabul edilen ve sonrasında Karlofça Antlaşması'na giden süreçteki kritik olay nedir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Kasr-ı Şirin'de toprak kaybetmesi",
+      "II. Viyana Kuşatması'nın başarısızlıkla sonuçlanması",
+      "Girit'in çok geç fethedilmesi",
+      "İran ile yapılan savaşları kaybetmesi"
+    ]
+  },
+        {
+          "soruMetni": "Karlofça Antlaşması ile Osmanlı Devleti'nin Mora Yarımadası'nı kaybettiği devlet hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Avusturya",
+            "Lehistan",
+            "Rusya",
+            "Venedik"
+          ]
+        },
+        {
+          "soruMetni": "1700 İstanbul Antlaşması ile Rusya'nın Azak Kalesi'ni alarak Karadeniz'e inmesi, Rusya'nın hangi tarihi emeline ulaştığını gösterir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Balkanlara hakim olma",
+            "Kutsal yerleri ele geçirme",
+            "Sıcak denizlere inme politikasının ilk adımını atma",
+            "Panslavizm'i gerçekleştirme"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_gerileme_1",
+      "baslik": "Osmanlı Devleti Gerileme Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_gerileme_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1699 Karlofça Antlaşması'ndan sonra, Osmanlı Devleti'nin 18. yüzyılın başlarında izlediği temel dış politika aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Avrupa'da denge politikası izlemek",
+            "Karlofça ile kaybettiği toprakları geri almak",
+            "Avrupa'daki askeri ıslahatları uygulamak",
+            "Fetih politikasını yeniden canlandırmak"
+          ]
+        },
+        {
+          "soruMetni": "1711 Prut Antlaşması ile Rusya'dan Azak Kalesi'nin geri alınması, Osmanlı Devleti'nde hangi beklentiyi güçlendirmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Karlofça ile kaybedilen diğer toprakların da geri alınabileceği",
+            "Rusya ile kalıcı barışın sağlandığı",
+            "Fransa'nın müttefik olacağı",
+            "Ordunun ıslahata ihtiyacı olmadığı"
+          ]
+        },
+        {
+          "soruMetni": "1703 yılında II. Mustafa'nın tahttan indirilip yerine III. Ahmet'in getirilmesine neden olan ve başkentin Edirne'ye taşınması dedikoduları üzerine çıkan olay hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Patrona Halil İsyanı",
+            "Kabakçı Mustafa İsyanı",
+            "Edirne Olayı",
+            "Çınar Vakası"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nin Venedik'ten Mora'yı geri alması üzerine, Avusturya'nın Karlofça Antlaşması'nın garantörü olarak savaşa girdiği ve Osmanlı'nın ağır yenilgisiyle sonuçlanan 1715-1718 Savaşları'nı bitiren antlaşma nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Prut Antlaşması",
+            "Pasarofça Antlaşması",
+            "Belgrad Antlaşması",
+            "Küçük Kaynarca Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1718 Pasarofça Antlaşması ile Belgrad'ın Avusturya'ya verilmesi, Osmanlı Devleti'nde hangi düşüncenin kesin olarak kabul edilmesine yol açmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kaybedilen toprakların geri alınabileceği",
+            "Avrupa'nın askeri ve teknik üstünlüğünün kabul edilmesi",
+            "Rusya'nın en büyük düşman olduğu",
+            "Ordunun modernleştiği"
+          ]
+        },
+        {
+          "soruMetni": "1718 Pasarofça Antlaşması'ndan 1730 Patrona Halil İsyanı'na kadar süren, Batı ile barışın korunduğu ve kültürel ıslahatların yapıldığı döneme ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Lale Devri",
+            "Tanzimat Dönemi",
+            "Nizam-ı Cedid Dönemi",
+            "Köprülüler Devri"
+          ]
+        },
+        {
+          "soruMetni": "Lale Devri'nde Sait Efendi ve İbrahim Müteferrika tarafından kurulan ilk Türk matbaasında dini eserlerin basılmamasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kağıt maliyetinin yüksek olması",
+            "Hattatların tepkisini çekmemek ve işsiz kalmalarını önlemek",
+            "Padişahın dini kitaplara önem vermemesi",
+            "Avrupa'dan bu yönde bir talep gelmemesi"
+          ]
+        },
+        {
+          "soruMetni": "Lale Devri'nde Avrupa'nın yakından tanınması amacıyla açılan ilk geçici elçiliklerin temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ticari antlaşmalar yapmak",
+            "Askeri ittifaklar kurmak",
+            "Avrupa'daki teknik, kültürel ve diplomatik gelişmeleri gözlemlemek",
+            "Avrupa'ya kapitülasyon vermek"
+          ]
+        },
+        {
+          "soruMetni": "Lale Devri'nde askeri alan dışında birçok yenilik yapılmasına rağmen, neden askeri alanda ıslahat yapılmamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ordunun yapılacak bir ıslahata tepki göstereceğinden çekinilmesi",
+            "Ordunun zaten çok güçlü olduğuna inanılması",
+            "Avrupa'dan askeri uzman bulunamaması",
+            "Savaşların kazanılıyor olması"
+          ]
+        },
+        {
+          "soruMetni": "1730 yılında Lale Devri'nin lüks, israf ve Batı tarzı yeniliklerine karşı çıkan, III. Ahmet'i tahttan indirip Nevşehirli Damat İbrahim Paşa'yı öldüren isyan hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Patrona Halil İsyanı",
+            "Kabakçı Mustafa İsyanı",
+            "Edirne Olayı",
+            "Çınar Vakası"
+          ]
+        },
+{
+    "soruMetni": "Osmanlı Devleti'nin 18. yüzyıla girmesinin temel siyasi göstergesi olan ve Batı'da ilk büyük toprak kaybının yaşandığı antlaşma hangisidir?",
+    "dogruCevapIndex": 1,
+    "secenekler": [
+      "Zitvatorok Antlaşması",
+      "Karlofça Antlaşması",
+      "Vasvar Antlaşması",
+      "Küçük Kaynarca Antlaşması"
+    ]
+  },
+        {
+          "soruMetni": "I. Mahmut döneminde, Avrupa tarzında açılan ilk askeri-teknik okul olan ve Humbaracı Ocağı'na subay yetiştiren okulun adı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hendesehane",
+            "Mühendishane-i Berr-i Hümayun",
+            "Mühendishane-i Bahr-i Hümayun",
+            "Mekteb-i Harbiye"
+          ]
+        },
+        {
+          "soruMetni": "I. Mahmut döneminde Humbaracı Ocağı'nı ıslah eden, Hendesehane'nin açılmasında rol oynayan ve \"Humbaracı Ahmet Paşa\" adını alan Fransız asıllı askeri uzman kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Baron de Tott",
+            "Comte de Bonneval",
+            "Moltke",
+            "Colmar von der Goltz"
+          ]
+        },
+        {
+          "soruMetni": "1736-1739 Osmanlı-Rusya/Avusturya Savaşları'nda, I. Mahmut dönemi askeri ıslahatlarının başarısı sayesinde Avusturya'dan Belgrad'ın geri alındığı antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Pasarofça Antlaşması",
+            "Belgrad Antlaşması",
+            "Prut Antlaşması",
+            "Yaş Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1739 Belgrad Antlaşması'nda arabuluculuk yapan Fransa'ya, bu desteğinin karşılığı olarak 1740'ta verilen diplomatik ayrıcalık nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kapitülasyonların \"sürekli\" hale getirilmesi",
+            "Mısır'da üs verilmesi",
+            "Kırım'da ticaret yapma hakkı",
+            "Ortodoksları himaye etme hakkı"
+          ]
+        },
+        {
+          "soruMetni": "1768-1774 Osmanlı-Rus Savaşı sırasında, Rus donanmasının Baltık Denizi'nden yola çıkıp Cebelitarık'ı geçerek Ege'de Osmanlı donanmasını yaktığı felaket hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İnebahtı Baskını",
+            "Sinop Baskını",
+            "Çeşme Baskını",
+            "Navarin Baskını"
+          ]
+        },
+        {
+          "soruMetni": "1768-1774 Osmanlı-Rus Savaşı'nı bitiren ve Osmanlı tarihinin en ağır diplomatik yenilgilerinden biri olan antlaşma hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karlofça Antlaşması",
+            "Belgrad Antlaşması",
+            "Küçük Kaynarca Antlaşması",
+            "Yaş Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1774 Küçük Kaynarca Antlaşması'nda, \"Kırım'a bağımsızlık\" verilmesinin Osmanlı Devleti için en acı anlamı neydi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz'in Türk gölü olma özelliğini kaybetmesi",
+            "İlk kez halkı Türk ve Müslüman olan bir toprağın kaybedilmesi",
+            "Rusya'nın Kırım üzerinden Akdeniz'e inmesi",
+            "Kırım'daki vergi gelirlerinin kaybedilmesi"
+          ]
+        },
+{
+    "soruMetni": "Lale Devri'nin başlangıcı kabul edilen ve Osmanlı'nın Avusturya ve Venedik'e karşı toprak kaybettiği antlaşma hangisidir?",
+    "dogruCevapIndex": 2,
+    "secenekler": [
+      "Prut Antlaşması",
+      "Küçük Kaynarca Antlaşması",
+      "Pasarofça Antlaşması",
+      "Belgrad Antlaşması"
+    ]
+  },
+        {
+          "soruMetni": "Osmanlı Devleti'nin tarihinde ilk kez savaş tazminatı ödemek zorunda kaldığı antlaşma aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Karlofça Antlaşması",
+            "Prut Antlaşması",
+            "Pasarofça Antlaşması",
+            "Küçük Kaynarca Antlaşması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_gerileme_2",
+      "baslik": "Osmanlı Devleti Gerileme Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_gerileme_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Rusya'nın 1774'te bağımsız olan Kırım'a 1779'da kendi yanlısı olan Şahin Giray'ı han olarak atamasını Osmanlı Devleti'ne kabul ettirdiği antlaşma nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Aynalıkavak Tenkihnamesi",
+            "Yaş Antlaşması",
+            "Ziştovi Antlaşması",
+            "Hünkar İskelesi Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1783 yılında Rusya'nın Kırım'ı resmen ilhak etmesi, hangi antlaşmanın tamamen ihlal edildiğini gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Belgrad Antlaşması",
+            "Küçük Kaynarca Antlaşması",
+            "Prut Antlaşması",
+            "İstanbul Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "III. Mustafa döneminde, 1768-1774 Savaşı'nın masraflarını karşılamak için devletin iç borçlanma senetleri çıkarmasına dayanan sisteme ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İltizam Sistemi",
+            "Esham Sistemi",
+            "Malikane Sistemi",
+            "Tımar Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "III. Mustafa döneminde, Baron de Tott öncülüğünde topçu sınıfını modernleştirmek amacıyla kurulan askeri birlik hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nizam-ı Cedid",
+            "Sürat Topçuları Ocağı",
+            "Humbaracı Ocağı",
+            "Sekban-ı Cedid"
+          ]
+        },
+        {
+          "soruMetni": "18. yüzyılda, özellikle III. Mustafa ve I. Abdülhamit dönemlerinde kurulan \"Mühendishane-i Bahr-i Hümayun\" hangi alanda eğitim vermeyi amaçlamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Modern donanma ve deniz subayı yetiştirme",
+            "Kara ordusu için topçu yetiştirme",
+            "Harita ve istihkam subayı yetiştirme",
+            "Tıp ve cerrahi"
+          ]
+        },
+        {
+          "soruMetni": "I. Abdülhamit döneminde, Yeniçeri Ocağı'ndaki disiplinsizliği ve yolsuzluğu engellemek amacıyla atılan en önemli adım nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ocağın kaldırılması",
+            "Ulufe alım-satımının yasaklanması",
+            "Sancağa çıkma usulünün getirilmesi",
+            "Yeniçeri sayısının artırılması"
+          ]
+        },
+        {
+          "soruMetni": "1789'da III. Selim tahta çıktığında, dünyada yaşanan ve Osmanlı Devleti'ni derinden etkileyecek olan en önemli olay nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sanayi Devrimi",
+            "Fransız İhtilali",
+            "ABD'nin kuruluşu",
+            "Viyana Kongresi"
+          ]
+        },
+        {
+          "soruMetni": "1787'de başlayan Osmanlı-Rus/Avusturya Savaşları sırasında, Avusturya'nın Fransız İhtilali'nin etkisiyle savaştan çekilerek imzaladığı antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yaş Antlaşması",
+            "Ziştovi Antlaşması",
+            "Küçük Kaynarca Antlaşması",
+            "Belgrad Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "1787-1792 Osmanlı-Rus Savaşı'nı bitiren, Kırım'ın Rusya'ya ait olduğunun Osmanlı tarafından resmen kabul edildiği ve Gerileme Dönemi'ni bitiren antlaşma hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Küçük Kaynarca Antlaşması",
+            "Yaş Antlaşması",
+            "Bükreş Antlaşması",
+            "Edirne Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim'in, devletin köklü sorunlarına çözüm bulmak amacıyla yerli ve yabancı devlet adamlarından raporlar istemesi, onun hangi yönetim anlayışını benimsediğini gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mutlak monarşiyi güçlendirme",
+            "Sorunların kökenine inmeyi ve danışarak çözüm aramayı",
+            "Ulemanın her dediğini yapmayı",
+            "Yeniçerilere güvenmeyi"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim döneminde yapılan tüm ıslahatlara verilen genel isim nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tanzimat",
+            "Islahat Fermanı",
+            "Nizam-ı Cedid",
+            "Lale Devri"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim tarafından, Yeniçeri Ocağı'na alternatif olarak Batı tarzında kurulan yeni ve modern ordunun adı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sekban-ı Cedid",
+            "Eşkinci Ocağı",
+            "Nizam-ı Cedid Ordusu",
+            "Asakir-i Mansure-i Muhammediye"
+          ]
+        },
+        {
+          "soruMetni": "Nizam-ı Cedid Ordusu'nun masraflarını karşılamak amacıyla kurulan yeni hazinenin adı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hazine-i Amire",
+            "İrad-ı Cedid",
+            "Esham Hazinesi",
+            "Mansure Hazinesi"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim döneminde, Lale Devri'ndeki geçici elçiliklerin yerine, Avrupa'daki gelişmeleri sürekli takip etmek amacıyla açılan kurumlar hangileridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Daimi Elçilikler",
+            "Konsolosluklar",
+            "Meşveret Meclisleri",
+            "Posta Teşkilatı"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim döneminde Londra'ya atanan ilk daimi Osmanlı elçisi kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İbrahim Müteferrika",
+            "Yirmisekiz Çelebi Mehmet Efendi",
+            "Yusuf Agah Efendi",
+            "Alemdar Mustafa Paşa"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim'in kurduğu Nizam-ı Cedid Ordusu'nun ilk ve tek askeri başarısı, hangi olaya karşı kazanılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Rusya'ya karşı Yaş Savaşı",
+            "Napolyon'un Mısır'ı işgali",
+            "Sırp İsyanı",
+            "Kabakçı Mustafa İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "Napolyon'un 1798'de Mısır'ı işgal etmesi üzerine, Osmanlı Devleti tarihinde ilk kez hangi devletlerle ittifak kurarak \"Denge Politikası\" izlemeye başlamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Avusturya ve Prusya",
+            "İngiltere ve Rusya",
+            "Venedik ve Ceneviz",
+            "Lehistan ve İsveç"
+          ]
+        },
+        {
+          "soruMetni": "Nizam-ı Cedid Ordusu'nun Mısır'da Napolyon'u Akka Kalesi önünde durduran ünlü komutanı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cezzar Ahmet Paşa",
+            "Alemdar Mustafa Paşa",
+            "Kavalalı Mehmet Ali Paşa",
+            "Köprülü Mehmet Paşa"
+          ]
+        },
+        {
+          "soruMetni": "III. Selim dönemindeki Batılılaşma hareketlerine karşı çıkan Yeniçeriler ve Ulema tarafından desteklenen, 1807'de padişahın tahttan indirilmesiyle sonuçlanan isyan hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Patrona Halil İsyanı",
+            "Kabakçı Mustafa İsyanı",
+            "31 Mart Vakası",
+            "Edirne Olayı"
+          ]
+        },
+{
+    "soruMetni": "Osmanlı Devleti'nin 18. yüzyılda; \nI. Avrupa'nın askeri üstünlüğünü kabul etmesi, \nII. İçerideki sorunları görmezden gelmesi, \nIII. Diplomasinin önemini anlaması\ndurumlarından hangileri ıslahatların temel karakteristiğini oluşturur?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız II",
+      "I ve II",
+      "I ve III"
+    ]
+  }
+      ]
+    },
+    {
+      "id": "tarih_osmanli_gerileme_3",
+      "baslik": "Osmanlı Devleti Gerileme Dönemi-3",
+      "kategoriId": "tarih",
+      "konuId":"osmanli_devleti_gerileme_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1808 yılında Ayanlar ile Padişah II. Mahmut arasında imzalanan, padişahın yetkilerini Ayanlara karşı kısıtlayan ilk belge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tanzimat Fermanı",
+            "Sened-i İttifak",
+            "Islahat Fermanı",
+            "Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "1829 Edirne Antlaşması ile Osmanlı Devleti'nden bağımsızlık kazanan ilk Balkan ulusu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sırplar",
+            "Romenler",
+            "Karadağlılar",
+            "Yunanlılar"
+          ]
+        },
+        {
+          "soruMetni": "Kavalalı Mehmet Ali Paşa'nın isyanı sırasında II. Mahmut'un \"denize düşen yılana sarılır\" diyerek yardım istediği ve 1833 Hünkar İskelesi Antlaşması'nı imzaladığı devlet hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İngiltere",
+            "Fransa",
+            "Rusya",
+            "Prusya"
+          ]
+        },
+        {
+          "soruMetni": "Hünkar İskelesi Antlaşması'nın imzalanması, doğrudan doğruya hangi uluslararası sorunun başlamasına neden olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mısır Sorunu",
+            "Boğazlar Sorunu",
+            "Kutsal Yerler Sorunu",
+            "Kapitülasyonlar Sorunu"
+          ]
+        },
+        {
+          "soruMetni": "1841 Londra Boğazlar Sözleşmesi'nin en önemli sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Rusya'nın Karadeniz'deki donanmasını yok etmesi",
+            "Osmanlı'nın Boğazlar üzerindeki mutlak egemenliğini kazanması",
+            "Boğazların uluslararası bir statü kazanması",
+            "İngiltere'nin Boğazlar'da üs kurması"
+          ]
+        },
+        {
+          "soruMetni": "II. Mahmut tarafından Yeniçeri Ocağı'nın 1826'da kaldırılması olayına verilen isim nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Vaka-i Vakvakiye",
+            "Edirne Olayı",
+            "Vaka-i Hayriye",
+            "31 Mart Vakası"
+          ]
+        },
+        {
+          "soruMetni": "Yeniçeri Ocağı'nın kaldırılmasından sonra II. Mahmut tarafından kurulan modern ordunun adı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nizam-ı Cedid",
+            "Asakir-i Mansure-i Muhammediye",
+            "Sekban-ı Cedid",
+            "Redif Birlikleri"
+          ]
+        },
+        {
+          "soruMetni": "II. Mahmut döneminde Divan-ı Hümayun'un kaldırılarak yerine Batı tarzı bakanlıkların kurulması, hangi alanda yapılan bir ıslahattır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Eğitim",
+            "İdari",
+            "Hukuk",
+            "Ekonomi"
+          ]
+        },
+{
+    "soruMetni": "Rusya'nın, Küçük Kaynarca Antlaşması ile Karadeniz'de ticaret hakkı elde etmesi, \nI. Boğazların stratejik önemini artırmak, \nII. Osmanlı deniz ticaretini zayıflatmak, \nIII. Rusya'nın donanma gücünü kabul etmek\ndurumlarından hangilerine neden olmuştur?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Yalnız I",
+      "Yalnız II",
+      "I ve II",
+      "I, II ve III"
+    ]
+  },
+        {
+          "soruMetni": "Tanzimat Fermanı'nın \"Padişah dahil herkesin kanun önünde eşit olacağı\" maddesi, Osmanlı Devleti'nde ilk kez hangi ilkenin benimsendiğini gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Laiklik",
+            "Kanun üstünlüğü",
+            "Ulusal egemenlik",
+            "Sosyalizm"
+          ]
+        },
+        {
+          "soruMetni": "1853-1856 Kırım Savaşı'nın temel nedeni olarak gösterilen \"Kutsal Yerler Sorunu\", Osmanlı Devleti ile hangi devleti karşı karşıya getirmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fransa",
+            "Avusturya",
+            "Rusya",
+            "Prusya"
+          ]
+        },
+        {
+          "soruMetni": "Kırım Savaşı sırasında Osmanlı Devleti tarihinde ilk kez yaşanan önemli ekonomik gelişme nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İlk kağıt paranın basılması",
+            "Düyun-ı Umumiye'nin kurulması",
+            "İngiltere'den dış borç alınması",
+            "Vergilerin iltizamla toplanması"
+          ]
+        },
+        {
+          "soruMetni": "1856 Paris Antlaşması'nın \"Osmanlı Devleti Avrupa devleti sayılacak ve toprak bütünlüğü Avrupalı devletlerin garantisi altında olacak\" maddesine rağmen, hangi madde Osmanlı'nın galipken mağlup sayıldığını göstermiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Islahat Fermanı'nın antlaşmada yer alması",
+            "Osmanlı ve Rusya'nın Karadeniz'de donanma bulunduramayacak olması",
+            "Sırbistan'a ayrıcalık tanınması",
+            "Tuna nehrinin uluslararası ticarete açılması"
+          ]
+        },
+        {
+          "soruMetni": "1856 yılında Paris Konferansı'nın toplandığı sırada, Avrupalı devletlerin iç işlerine karışmasını engellemek amacıyla ilan edilen ferman hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tanzimat Fermanı",
+            "Sened-i İttifak",
+            "Islahat Fermanı",
+            "Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "Tanzimat Fermanı genel hakları kapsarken, Islahat Fermanı'nın daha çok hangi grup üzerinde yoğunlaşması Müslüman tebaanın tepkisine yol açmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Gayrimüslimler",
+            "Ayanlar",
+            "Yeniçeriler",
+            "Ulema"
+          ]
+        },
+        {
+          "soruMetni": "Avrupa'ya seyahat eden ilk Osmanlı padişahı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Abdülmecid",
+            "Abdülaziz",
+            "II. Abdülhamid",
+            "V. Mehmet Reşat"
+          ]
+        },
+        {
+          "soruMetni": "Ahmet Cevdet Paşa başkanlığında bir komisyon tarafından hazırlanan ve Osmanlı Devleti'nin ilk medeni kanunu sayılan eser aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kanun-i Esasi",
+            "Mecelle",
+            "Ceza Kanunnamesi",
+            "Arazi Kanunnamesi"
+          ]
+        },
+        {
+          "soruMetni": "Namık Kemal ve Ziya Paşa gibi aydınların oluşturduğu Genç Osmanlılar cemiyetinin temel siyasi hedefi neydi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Padişahlığı kaldırıp cumhuriyeti ilan etmek",
+            "Padişahın yetkilerini anayasa ile sınırlayan Meşrutiyet rejimine geçmek",
+            "Batı'dan alınan tüm kurumları kapatmak",
+            "İslamcılık politikasını uygulamak"
+          ]
+        },
+        {
+          "soruMetni": "1876 yılında II. Abdülhamid tarafından ilan edilen Kanun-i Esasi'nin Türk tarihindeki önemi nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İlk yazılı kanun olması",
+            "İlk medeni kanun olması",
+            "İlk anayasa olması",
+            "İlk ticaret kanunu olması",
+            "İlk ceza kanunu olması"
+          ]
+        },
+ {
+    "soruMetni": "III. Selim'in ıslahatlarını sona erdiren ve tahttan indirilmesine yol açan isyan hangisidir?",
+    "dogruCevapIndex": 3,
+    "secenekler": [
+      "Patrona Halil İsyanı",
+      "Şahkulu İsyanı",
+      "Celali İsyanları",
+      "Kabakçı Mustafa İsyanı"
+    ]
+  }
+      ]
+    }
+
+     ],
+     "trialExams": [
+      {
+        "id": "turkiye_geneli_1",
+        "title": "Türkiye Geneli-1 (Sadece Tarih)",
+        "isPro": false,
+        "description": "Tarih konularından 3 soruluk mini deneme.",
+        "isPublished": true,
+        "startTime": "2025-10-21T12:00:00+03:00",
+        "endTime": "2025-12-27T12:00:00+03:00",
+        "durationMinutes": 5,
+        "questionCount": 3,
+        "isMixedCategory": false,
+        "sorular": [
+          {
+            "soruMetni": "(TARİH) İstanbul hangi padişah döneminde fethedilmiştir?", 
+            "dogruCevapIndex": 0, 
+            "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"],
+            "kategoriId": "tarih",
+            "sira": 1
+          },
+          {
+            "soruMetni": "(TARİH) Ankara Savaşı hangi tarihte yapılmıştır?", 
+            "dogruCevapIndex": 0, 
+            "secenekler": ["1402", "1453", "1389", "1326"],
+            "kategoriId": "tarih",
+            "sira": 2
+          },
+          {
+            "soruMetni": "(TARİH) Mustafa Kemal'e 'Gazi' unvanı hangi savaştan sonra verilmiştir?", 
+            "dogruCevapIndex": 0, 
+            "secenekler": ["Sakarya Meydan Muharebesi", "Büyük Taarruz", "II. İnönü Savaşı", "Çanakkale Savaşı"],
+            "kategoriId": "tarih",
+            "sira": 3
+          }
+        ]
+      },
+      {
+        "id": "turkiye_geneli_karma_1",
+        "title": "Türkiye Geneli - Karma Deneme 1",
+        "description": "Tüm kategorilerden 2'şer soru içeren 10 soruluk deneme.",
+        "isPro": false,
+        "isPublished": true,
+        "startTime": "2025-11-25T10:00:00+03:00",
+        "endTime": "2025-12-30T23:59:00+03:00",
+        "durationMinutes": 15,
+        "questionCount": 10,
+        "isMixedCategory": true,
+        "sorular": [
+          {
+            "soruMetni": "(MATEMATİK) 20 sayısının %20'si kaçtır?",
+            "dogruCevapIndex": 1,
+            "secenekler": ["2", "4", "5", "10"],
+            "kategoriId": "matematik",
+            "sira": 1
+          },
+          {
+            "soruMetni": "(MATEMATİK) Bir üçgenin iç açıları toplamı kaçtır?",
+            "dogruCevapIndex": 2,
+            "secenekler": ["90", "360", "180", "120"],
+            "kategoriId": "matematik",
+            "sira": 2
+          },
+          {
+            "soruMetni": "(TÜRKÇE) 'Okul' kelimesinin kökü nedir?",
+            "dogruCevapIndex": 0,
+            "secenekler": ["Oku-", "Ok-", "Okul-", "Kul-"],
+            "kategoriId": "turkce",
+            "sira": 100
+          },
+          {
+            "soruMetni": "(TÜRKÇE) Aşağıdakilerden hangisi bir 'zamir' (adıl) değildir?",
+            "dogruCevapIndex": 3,
+            "secenekler": ["Ben", "Şu", "Onlar", "Güzel"],
+            "kategoriId": "turkce",
+            "sira": 101
+          },
+          {
+            "soruMetni": "(TARİH) Malazgirt Savaşı hangi tarihte yapılmıştır?",
+            "dogruCevapIndex": 1,
+            "secenekler": ["1075", "1071", "1080", "1066"],
+            "kategoriId": "tarih",
+            "sira": 200
+          },
+          {
+            "soruMetni": "(TARİH) Lozan Antlaşması hangi tarihte imzalanmıştır?",
+            "dogruCevapIndex": 2,
+            "secenekler": ["1920", "1922", "1923", "1921"],
+            "kategoriId": "tarih",
+            "sira": 201
+          },
+          {
+            "soruMetni": "(COĞRAFYA) Türkiye'nin en büyük gölü hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": ["Van Gölü", "Tuz Gölü", "Beyşehir Gölü", "Eğirdir Gölü"],
+            "kategoriId": "cografya",
+            "sira": 300
+          },
+          {
+            "soruMetni": "(COĞRAFYA) Peri bacaları hangi ilimizde ünlüdür?",
+            "dogruCevapIndex": 3,
+            "secenekler": ["Kapadokya", "Denizli", "Ağrı", "Nevşehir"],
+            "kategoriId": "cografya",
+            "sira": 301
+          },
+          {
+            "soruMetni": "(VATANDAŞLIK) Türkiye Büyük Millet Meclisi'nde (TBMM) kaç milletvekili bulunur?",
+            "dogruCevapIndex": 1,
+            "secenekler": ["550", "600", "450", "650"],
+            "kategoriId": "vatandaslik",
+            "sira": 400
+          },
+          {
+            "soruMetni": "(VATANDAŞLIK) Cumhurbaşkanı kaç yıllığına seçilir?",
+            "dogruCevapIndex": 0,
+            "secenekler": ["5", "4", "6", "7"],
+            "kategoriId": "vatandaslik",
+            "sira": 401
+          }
+        ]
+      }
+    ],
+   "achievements": [
+      {
+        "id": "quiz_1",
+        "name": "İlk Adım",
+        "description": "İlk testini başarıyla tamamla.",
+        "emoji": "👟",
+        "criteria_type": "solved_count",
+        "criteria_value": 1
+      },
+      {
+        "id": "quiz_5",
+        "name": "Meraklı Zihin",
+        "description": "5 farklı testi başarıyla tamamla.",
+        "emoji": "🧠",
+        "criteria_type": "solved_count",
+        "criteria_value": 5
+      },
+      {
+        "id": "quiz_10",
+        "name": "Acemi Bilgin",
+        "description": "10 farklı testi başarıyla tamamla.",
+        "emoji": "🧑‍🎓",
+        "criteria_type": "solved_count",
+        "criteria_value": 10
+      },
+      {
+        "id": "quiz_25",
+        "name": "Bilge",
+        "description": "25 farklı testi başarıyla tamamla.",
+        "emoji": "🦉",
+        "criteria_type": "solved_count",
+        "criteria_value": 25
+      },
+      {
+        "id": "quiz_50",
+        "name": "Efsane",
+        "description": "50 farklı testi başarıyla tamamla.",
+        "emoji": "🔥",
+        "criteria_type": "solved_count",
+        "criteria_value": 50
+      },
+      {
+        "id": "quiz_75",
+        "name": "Koleksiyoner",
+        "description": "75 farklı testi başarıyla tamamla.",
+        "emoji": "📚",
+        "criteria_type": "solved_count",
+        "criteria_value": 75
+      },
+      {
+        "id": "quiz_100",
+        "name": "Usta",
+        "description": "100 farklı testi başarıyla tamamla.",
+        "emoji": "🏆",
+        "criteria_type": "solved_count",
+        "criteria_value": 100
+      },
+      {
+        "id": "quiz_150",
+        "name": "Profesör",
+        "description": "150 farklı testi başarıyla tamamla.",
+        "emoji": "🧑‍🏫",
+        "criteria_type": "solved_count",
+        "criteria_value": 150
+      },
+      {
+        "id": "puan_100",
+        "name": "İlk Puan",
+        "description": "Toplam 100 puana ulaş.",
+        "emoji": "🎯",
+        "criteria_type": "total_score",
+        "criteria_value": 100
+      },
+      {
+        "id": "puan_500",
+        "name": "Puan Toplayıcı",
+        "description": "Toplam 500 puana ulaş.",
+        "emoji": "💰",
+        "criteria_type": "total_score",
+        "criteria_value": 500
+      },
+      {
+        "id": "puan_1000",
+        "name": "Bin Puan",
+        "description": "Toplam 1,000 puana ulaş.",
+        "emoji": "🪙",
+        "criteria_type": "total_score",
+        "criteria_value": 1000
+      },
+      {
+        "id": "puan_2500",
+        "name": "Puan Avcısı",
+        "description": "Toplam 2,500 puana ulaş.",
+        "emoji": "💰💰",
+        "criteria_type": "total_score",
+        "criteria_value": 2500
+      },
+      {
+        "id": "puan_5000",
+        "name": "Elit",
+        "description": "Toplam 5,000 puana ulaş.",
+        "emoji": "✨",
+        "criteria_type": "total_score",
+        "criteria_value": 5000
+      },
+      {
+        "id": "puan_10000",
+        "name": "Skor Şampiyonu",
+        "description": "Toplam 10,000 puana ulaş.",
+        "emoji": "👑",
+        "criteria_type": "total_score",
+        "criteria_value": 10000
+      },
+      {
+        "id": "puan_20000",
+        "name": "Puan Zengini",
+        "description": "Toplam 20,000 puana ulaş.",
+        "emoji": "💎",
+        "criteria_type": "total_score",
+        "criteria_value": 20000
+      },
+      {
+        "id": "puan_30000",
+        "name": "Milyoner",
+        "description": "Toplam 30,000 puana ulaş.",
+        "emoji": "🤑",
+        "criteria_type": "total_score",
+        "criteria_value": 30000
+      },
+      {
+        "id": "puan_50000",
+        "name": "Skor Efsanesi",
+        "description": "Toplam 50,000 puana ulaş.",
+        "emoji": "🚀",
+        "criteria_type": "total_score",
+        "criteria_value": 50000
+      },
+      {
+        "id": "deneme_1",
+        "name": "Cesur Adım",
+        "description": "İlk deneme sınavını başarıyla tamamla.",
+        "emoji": "🏃‍♂️",
+        "criteria_type": "trial_exam_solved_count",
+        "criteria_value": 1
+      },
+      {
+        "id": "deneme_3",
+        "name": "Stratejist",
+        "description": "Toplam 3 deneme sınavını tamamla.",
+        "emoji": "📈",
+        "criteria_type": "trial_exam_solved_count",
+        "criteria_value": 3
+      },
+      {
+        "id": "deneme_5",
+        "name": "Deneme Uzmanı",
+        "description": "Toplam 5 deneme sınavını tamamla.",
+        "emoji": "🎓",
+        "criteria_type": "trial_exam_solved_count",
+        "criteria_value": 5
+      },
+      {
+        "id": "deneme_10",
+        "name": "Deneme Canavarı",
+        "description": "Toplam 10 deneme sınavını tamamla.",
+        "emoji": "👹",
+        "criteria_type": "trial_exam_solved_count",
+        "criteria_value": 10
+      },
+      {
+        "id": "tarih_1",
+        "name": "Tarih Kurdu",
+        "description": "Tarih kategorisinden 5 test çöz.",
+        "emoji": "📜",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "tarih",
+        "criteria_value": 5
+      },
+      {
+        "id": "tarih_2",
+        "name": "Kronolog",
+        "description": "Tarih kategorisinden 15 test çöz.",
+        "emoji": "⏳",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "tarih",
+        "criteria_value": 15
+      },
+      {
+        "id": "tarih_3",
+        "name": "Tarih Profesörü",
+        "description": "Tarih kategorisinden 30 test çöz.",
+        "emoji": "🏛️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "tarih",
+        "criteria_value": 30
+      },
+      {
+        "id": "mat_1",
+        "name": "Matematik Ustası",
+        "description": "Matematik kategorisinden 5 test çöz.",
+        "emoji": "🧮",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "matematik",
+        "criteria_value": 5
+      },
+      {
+        "id": "mat_2",
+        "name": "Hesap Makinesi",
+        "description": "Matematik kategorisinden 15 test çöz.",
+        "emoji": "🤖",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "matematik",
+        "criteria_value": 15
+      },
+      {
+        "id": "mat_3",
+        "name": "Pi Sayısı",
+        "description": "Matematik kategorisinden 30 test çöz.",
+        "emoji": "π",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "matematik",
+        "criteria_value": 30
+      },
+      {
+        "id": "cografya_1",
+        "name": "Coğrafyacı",
+        "description": "Coğrafya kategorisinden 5 test çöz.",
+        "emoji": "🗺️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "cografya",
+        "criteria_value": 5
+      },
+      {
+        "id": "cografya_2",
+        "name": "Kaşif",
+        "description": "Coğrafya kategorisinden 15 test çöz.",
+        "emoji": "🧭",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "cografya",
+        "criteria_value": 15
+      },
+      {
+        "id": "cografya_3",
+        "name": "Piri Reis",
+        "description": "Coğrafya kategorisinden 30 test çöz.",
+        "emoji": "⛵",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "cografya",
+        "criteria_value": 30
+      },
+      {
+        "id": "turkce_1",
+        "name": "Dil Bilgini",
+        "description": "Türkçe kategorisinden 5 test çöz.",
+        "emoji": "✍️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "turkce",
+        "criteria_value": 5
+      },
+      {
+        "id": "turkce_2",
+        "name": "Edebiyatçı",
+        "description": "Türkçe kategorisinden 15 test çöz.",
+        "emoji": "✒️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "turkce",
+        "criteria_value": 15
+      },
+      {
+        "id": "turkce_3",
+        "name": "Söz Ustası",
+        "description": "Türkçe kategorisinden 30 test çöz.",
+        "emoji": "🗣️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "turkce",
+        "criteria_value": 30
+      },
+      {
+        "id": "vatandaslik_1",
+        "name": "Vatandaş",
+        "description": "Vatandaşlık kategorisinden 5 test çöz.",
+        "emoji": "⚖️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "vatandaslik",
+        "criteria_value": 5
+      },
+      {
+        "id": "vatandaslik_2",
+        "name": "Hukukçu",
+        "description": "Vatandaşlık kategorisinden 15 test çöz.",
+        "emoji": "🧑‍⚖️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "vatandaslik",
+        "criteria_value": 15
+      },
+      {
+        "id": "vatandaslik_3",
+        "name": "Kanun Yapıcı",
+        "description": "Vatandaşlık kategorisinden 30 test çöz.",
+        "emoji": "🗳️",
+        "criteria_type": "category_solved_count",
+        "criteria_category": "vatandaslik",
+        "criteria_value": 30
+      }
+    ]
+  } 
