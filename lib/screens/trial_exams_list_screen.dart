@@ -45,23 +45,20 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     notificationService.requestExactAlarmPermission();
 
     // Planlanmış bildirimleri çek ve UI'ı güncelle
-    notificationService.flutterLocalNotificationsPlugin.pendingNotificationRequests().then((
-      pendingList,
-    ) {
-      if (mounted) {
-        setState(() {
-          // Bu metoddan sadece ID'leri çekebiliriz, zaman bilgisini çekmek karmaşıktır.
-          _scheduledNotificationIds = pendingList
-              .map((n) => n.payload ?? '')
-              .toSet();
-
-          // NOT: Uygulama yeniden başlatıldığında kurulan alarm zamanı KAYBOLACAKTIR,
-          // çünkü pendingNotificationRequests() zamanı vermez.
-          // Çözüm, zamanı kurarken SharedPreferences'a kaydetmek olacaktır.
-          // Şu an sadece runtime'da (uygulama açıksa) kurulan zamanı göstereceğiz.
+    notificationService.flutterLocalNotificationsPlugin
+        .pendingNotificationRequests()
+        .then((pendingList) {
+          if (mounted) {
+            setState(() {
+              // Bu metoddan sadece ID'leri çekebiliriz, zaman bilgisini çekmek karmaşıktır.
+              // Çözüm, zamanı kurarken SharedPreferences'a kaydetmek olacaktır.
+              // Şu an sadece runtime'da (uygulama açıksa) kurulan zamanı göstereceğiz.
+              _scheduledNotificationIds = pendingList
+                  .map((n) => n.payload ?? '')
+                  .toSet();
+            });
+          }
         });
-      }
-    });
   }
 
   @override
@@ -131,6 +128,64 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
         return 5;
     }
   }
+
+  // --- YENİ FONKSİYON: Giriş Uyarısı ---
+  void _showStartExamWarningDialog({
+    required String examId,
+    required String title,
+    required int durationMinutes,
+    required int questionCount,
+  }) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15),
+          ),
+          title: const Text(
+            'Dikkat!',
+            style: TextStyle(fontWeight: FontWeight.bold),
+            textAlign: TextAlign.center,
+          ),
+          content: const Text(
+            'Bu sınava başladıktan sonra geri dönüş yoktur, süreniz başlar ve sınavı tamamlamadan çıkarsanız puan kazanamazsınız. Devam etmek istediğinizden emin misiniz?',
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('İPTAL ET'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            ElevatedButton(
+              // Başla butonu
+              child: const Text('BAŞLA'),
+              onPressed: () {
+                Navigator.of(context).pop(); // Dialog'u kapat
+
+                // Sınava Yönlendirme (Orijinal Navigator.push mantığı)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => TrialExamScreen(
+                      trialExamId: examId,
+                      title: title,
+                      durationMinutes: durationMinutes,
+                      questionCount: questionCount,
+                    ),
+                  ),
+                ).then((value) {
+                  if (value == true && mounted) _loadUserResults();
+                });
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+  // --- YENİ FONKSİYON BİTTİ ---
 
   // --- YENİ FONKSİYON: Tarih/Saat Seçici ---
   Future<void> _promptUserForDateTime(String examId, String examTitle) async {
@@ -503,21 +558,15 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                             width: 2.0,
                           );
 
-                          startExamCallback() {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => TrialExamScreen(
-                                  trialExamId: examId,
-                                  title: title,
-                                  durationMinutes: durationMinutes,
-                                  questionCount: questionCount,
-                                ),
-                              ),
-                            ).then((value) {
-                              if (value == true && mounted) _loadUserResults();
-                            });
-                          }
+                          // KRİTİK DEĞİŞİKLİK: startExamCallback artık uyarıyı gösterir.
+                          final startExamCallback = () {
+                            _showStartExamWarningDialog(
+                              examId: examId,
+                              title: title,
+                              durationMinutes: durationMinutes,
+                              questionCount: questionCount,
+                            );
+                          };
 
                           trailingWidget = ElevatedButton(
                             onPressed: startExamCallback,
