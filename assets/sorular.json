@@ -311,7 +311,217 @@
   ],
   
   "quizzes": [
-
+    {
+      "id": "kurtulus_savasi_muharebeler_donemi_3",
+      "baslik": "Kurtuluş Savaşı Muharebeler Dönemi-3",
+      "kategoriId": "tarih",
+      "konuId": "kurtulus_savasi_muharebeler_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Mudanya Ateşkes görüşmelerine hangi devlet, doğrudan katılmayıp, görüşmeleri bir gemiden takip etmiş ve antlaşmayı imzalamak zorunda kalmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İngiltere",
+            "Fransa",
+            "İtalya",
+            "Yunanistan"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Konferansı'na İtilaf Devletleri'nin hem TBMM Hükümeti'ni hem de İstanbul Hükümeti'ni birlikte davet etmesi, aşağıdaki hangi önemli iç siyasi gelişmeye yol açmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyetin ilan edilmesi",
+            "Saltanatın kaldırılması",
+            "Başkomutanlık Kanunu'nun süresiz uzatılması",
+            "Ankara'nın başkent ilan edilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Meydan Muharebesi, Türk tarihi açısından 1683 yılındaki hangi olaydan beri süregelen geri çekilişi durduran \"savunma\" savaşı olarak kabul edilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "I. Viyana Kuşatması",
+            "II. Viyana Kuşatması",
+            "Prut Antlaşması",
+            "Karlofça Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması'nın, İstanbul ve Boğazlar üzerindeki idari yetkinin TBMM Hükümeti'ne bırakılmasını öngörmesi; \nI. Osmanlı Devleti'nin hukuken sona ermesi,\nII. İtilaf Devletleri arasındaki görüş birliğinin bozulması,\nIII. Ankara'nın başkent ilan edilmesi\ndurumlarından hangilerine kanıt oluşturur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "I. İnönü Muharebesi'nin kazanılmasında, aynı savaş sırasında bastırılan hangi iç isyanın da rolü büyük olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Koçgiri İsyanı",
+            "Demirci Mehmet Efe İsyanı",
+            "Çerkez Ethem İsyanı",
+            "Delibaş Mehmet İsyanı"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'ni ve Misak-ı Millî'yi tanıyan ilk İtilaf devleti hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İtalya",
+            "İngiltere",
+            "Fransa",
+            "Sovyet Rusya"
+          ]
+        },
+        {
+          "soruMetni": "TBMM Hükümeti'ni tanıyan ilk Avrupalı büyük devlet hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fransa",
+            "İtalya",
+            "Almanya",
+            "Sovyet Rusya"
+          ]
+        },
+        {
+          "soruMetni": "Saltanatın kaldırılmasıyla; \nI. Devlet başkanı sorununun ortaya çıkması,\nII. Laikliğe giden yolda ilk adımın atılması,\nIII. İkiliğin tamamen sona ermesi\ndurumlarından hangileri gerçekleşmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Güney Cephesi'nde Maraş'taki direnişin başlamasında sembolik bir rol oynayan \"Sütçü İmam Olayı\" hangi devlete karşı direnişi tetiklemiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İngiliz",
+            "Fransız",
+            "Yunan",
+            "İtalyan"
+          ]
+        },
+        {
+          "soruMetni": "Kuva-yı Milliye komutanlarından Ali Fuat Paşa'nın Gediz Taarruzu'ndaki başarısızlığı üzerine Moskova'ya büyükelçi olarak atanması, hangi cephenin yeniden yapılandırılmasına yol açmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu Cephesi",
+            "Güney Cephesi",
+            "Batı Cephesi",
+            "Merkez Ordusu"
+          ]
+        },
+        {
+          "soruMetni": "II. İnönü Zaferi'nin ardından Fransa hangi işgal bölgesinden askerlerini çekmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Zonguldak",
+            "Adana",
+            "Antep",
+            "Musul"
+          ]
+        },
+        {
+          "soruMetni": "Kütahya-Eskişehir Savaşları'ndan sonra çıkarılan Başkomutanlık Kanunu ile Mustafa Kemal Paşa'ya verilen yetkilerin ilk süresi ne kadardır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Süresiz",
+            "1 Yıl",
+            "6 Ay",
+            "3 Ay"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın Başkomutanlık yetkisiyle yönettiği ilk savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "II. İnönü Muharebesi",
+            "Kütahya-Eskişehir Muharebeleri",
+            "Sakarya Meydan Muharebesi",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın Başkomutan olarak yönettiği son savaş aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "II. İnönü Muharebesi",
+            "Sakarya Meydan Muharebesi",
+            "Kütahya-Eskişehir Muharebeleri",
+            "Büyük Taarruz"
+          ]
+        },
+        {
+          "soruMetni": "Mudanya Ateşkes Antlaşması'ndan sonra Doğu Trakya'yı TBMM adına teslim alan komutan kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsmet Paşa",
+            "Fevzi Paşa",
+            "Refet Paşa",
+            "Kâzım Karabekir"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un başladığı 26 Ağustos 1922 sabahı, taarruzun yönetildiği tepe aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dumlupınar",
+            "Kocatepe",
+            "Anıttepe",
+            "Metristepe"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Taarruz'un kesin zaferle sonuçlandığı ve \"Dumlupınar Meydan Muharebesi\" olarak da bilinen savaş hangi tarihte gerçekleşmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "26 Ağustos 1922",
+            "30 Ağustos 1922",
+            "9 Eylül 1922",
+            "11 Ekim 1922"
+          ]
+        },
+        {
+          "soruMetni": "9 Eylül 1922 tarihinde Türk ordusunun girdiği ve Yunan işgalinden kurtardığı, \"ilk hedef\" olarak gösterilen şehir hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bursa",
+            "İstanbul",
+            "İzmir",
+            "Çanakkale"
+          ]
+        },
+        {
+          "soruMetni": "Sakarya Zaferi'nden sonra İngiltere ile yapılan esir değişimi antlaşmasını TBMM Hükümeti adına imzalayan devlet adamı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsmet Paşa",
+            "Bekir Sami Bey",
+            "Yusuf Kemal Tengirşenk",
+            "Fethi Okyar"
+          ]
+        },
+        {
+          "soruMetni": "Londra Konferansı'na TBMM Hükümeti adına katılan heyetin başkanı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet Paşa",
+            "Bekir Sami Bey",
+            "Yusuf Kemal Tengirşenk",
+            "Rauf Orbay"
+          ]
+        }
+      ]
+    }
   ],
      "trialExams": [ ],
    "achievements": [ ]
