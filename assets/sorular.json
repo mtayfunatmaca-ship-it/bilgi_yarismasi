@@ -311,7 +311,217 @@
   ],
   
   "quizzes": [
-
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_3",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-3",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Harf İnkılabı'nın temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Okuma-yazmayı kolaylaştırarak okur-yazar oranını artırmak",
+            "Batı ile ekonomik ilişkileri geliştirmek",
+            "Laiklik ilkesini yerleştirmek",
+            "Türkçeyi yabancı dillerin etkisinden kurtarmak"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde çok partili hayata geçiş denemelerinin başarısız olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordunun siyasete müdahale etmesi",
+            "Ekonomik krizin derinleşmesi",
+            "Henüz demokratik olgunluğa erişilmemiş olması",
+            "Mustafa Kemal'in çok partili hayata karşı olması"
+          ]
+        },
+        {
+          "soruMetni": "1925'te kapatılan Terakkiperver Cumhuriyet Fırkası'nın kapatılma gerekçesi olan olay hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Ağrı İsyanları"
+          ]
+        },
+        {
+          "soruMetni": "1930'da yaşanan Menemen Olayı, hangi ilkenin henüz tam olarak yerleşmediğini gösteren acı bir tecrübedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Laiklik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın isteğiyle 1930'da kurulan ve Fethi Okyar'ın başkanlığını yaptığı, ikinci çok partili hayat denemesi olan parti hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "Ahali Cumhuriyet Fırkası",
+            "Demokrat Parti"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'nın kurucuları tarafından feshedilmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Partinin ekonomik liberalizmi savunması",
+            "Mustafa Kemal Paşa'nın desteğini çekmesi",
+            "Rejim karşıtlarının parti içinde toplanmaya başlaması",
+            "Menemen Olayı'nın çıkması"
+          ]
+        },
+        {
+          "soruMetni": "Hukuk alanındaki inkılapların temel amacı aşağıdakilerden hangisi değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hukuk birliğini sağlamak",
+            "Hukuk sistemini laikleştirmek",
+            "Şer'i hukuku modernleştirmek",
+            "Çağdaş hukuk kurallarını benimsemek"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından sonra Türkiye Cumhuriyeti'nin ilk Başbakanı kim olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fethi Okyar",
+            "Rauf Orbay",
+            "İsmet İnönü",
+            "Celal Bayar"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından sonra Türkiye Cumhuriyeti'nin ilk Cumhurbaşkanı kim olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet İnönü",
+            "Mustafa Kemal Atatürk",
+            "Kâzım Karabekir",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangileri, toplumda eşitliği sağlamayı ve ayrıcalıkları kaldırmayı hedefleyen **Halkçılık** ilkesiyle doğrudan ilişkilidir?\nI. Tekke, zaviye ve türbelerin kapatılması\nII. Soyadı Kanunu'nun kabulü\nIII. Medeni Kanun'un kabulü",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal Egemenlik\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal Bağımsızlık\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Laiklik",
+            "Halkçılık",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Akılcılık ve Bilimsellik\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçilik",
+            "Laiklik",
+            "Cumhuriyetçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "\"Çağdaşlaşma ve Batılılaşma\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Halkçılık",
+            "Devletçilik",
+            "Milliyetçilik",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"İnsan ve insanlık sevgisi / Barışçılık\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Cumhuriyetçilik",
+            "Devletçilik",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "1925'te çıkarılan Takrir-i Sükûn Kanunu, hangi olayın sonucunda çıkarılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Serbest Cumhuriyet Fırkası'nın feshi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Devletçilik ilkesinin uygulanmasıyla kurulan kurumlardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sümerbank",
+            "Etibank",
+            "Maden Tetkik Arama Enstitüsü",
+            "İş Bankası"
+          ]
+        },
+        {
+          "soruMetni": "I. Beş Yıllık Sanayi Planı'nın hazırlanmasında hangi ülkeden teknik destek alınmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "ABD",
+            "Almanya",
+            "Sovyetler Birliği",
+            "İngiltere"
+          ]
+        },
+        {
+          "soruMetni": "1924 Anayasası'nda 1928'de yapılan değişiklikle yemin metninden \"vallahi\" sözcüğünün çıkarılması hangi ilkeyle ilgilidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halkçılık",
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Hayatta en hakiki mürşit ilimdir, fendir\" sözü, hangi iki ilkeyi doğrudan vurgulamaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyetçilik ve Milliyetçilik",
+            "Laiklik ve İnkılapçılık",
+            "Devletçilik ve Halkçılık",
+            "Milliyetçilik ve Halkçılık"
+          ]
+        }
+      ]
+    }
   ],
      "trialExams": [ ],
    "achievements": [ ]
