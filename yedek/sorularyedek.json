@@ -9346,6 +9346,4610 @@
           ]
         }
       ]
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_3",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-3",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Harf İnkılabı'nın temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Okuma-yazmayı kolaylaştırarak okur-yazar oranını artırmak",
+            "Batı ile ekonomik ilişkileri geliştirmek",
+            "Laiklik ilkesini yerleştirmek",
+            "Türkçeyi yabancı dillerin etkisinden kurtarmak"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde çok partili hayata geçiş denemelerinin başarısız olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordunun siyasete müdahale etmesi",
+            "Ekonomik krizin derinleşmesi",
+            "Henüz demokratik olgunluğa erişilmemiş olması",
+            "Mustafa Kemal'in çok partili hayata karşı olması"
+          ]
+        },
+        {
+          "soruMetni": "1925'te kapatılan Terakkiperver Cumhuriyet Fırkası'nın kapatılma gerekçesi olan olay hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Ağrı İsyanları"
+          ]
+        },
+        {
+          "soruMetni": "1930'da yaşanan Menemen Olayı, hangi ilkenin henüz tam olarak yerleşmediğini gösteren acı bir tecrübedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Laiklik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın isteğiyle 1930'da kurulan ve Fethi Okyar'ın başkanlığını yaptığı, ikinci çok partili hayat denemesi olan parti hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "Ahali Cumhuriyet Fırkası",
+            "Demokrat Parti"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'nın kurucuları tarafından feshedilmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Partinin ekonomik liberalizmi savunması",
+            "Mustafa Kemal Paşa'nın desteğini çekmesi",
+            "Rejim karşıtlarının parti içinde toplanmaya başlaması",
+            "Menemen Olayı'nın çıkması"
+          ]
+        },
+        {
+          "soruMetni": "Hukuk alanındaki inkılapların temel amacı aşağıdakilerden hangisi değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hukuk birliğini sağlamak",
+            "Hukuk sistemini laikleştirmek",
+            "Şer'i hukuku modernleştirmek",
+            "Çağdaş hukuk kurallarını benimsemek"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından sonra Türkiye Cumhuriyeti'nin ilk Başbakanı kim olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fethi Okyar",
+            "Rauf Orbay",
+            "İsmet İnönü",
+            "Celal Bayar"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet'in ilanından sonra Türkiye Cumhuriyeti'nin ilk Cumhurbaşkanı kim olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet İnönü",
+            "Mustafa Kemal Atatürk",
+            "Kâzım Karabekir",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangileri, toplumda eşitliği sağlamayı ve ayrıcalıkları kaldırmayı hedefleyen Halkçılık ilkesiyle doğrudan ilişkilidir?\nI. Tekke, zaviye ve türbelerin kapatılması\nII. Soyadı Kanunu'nun kabulü\nIII. Medeni Kanun'un kabulü",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal Egemenlik\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal Bağımsızlık\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Laiklik",
+            "Halkçılık",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"Akılcılık ve Bilimsellik\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçilik",
+            "Laiklik",
+            "Cumhuriyetçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "\"Çağdaşlaşma ve Batılılaşma\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Halkçılık",
+            "Devletçilik",
+            "Milliyetçilik",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "\"İnsan ve insanlık sevgisi / Barışçılık\" aşağıdaki ilkelerden hangisinin bütünleyicisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milliyetçilik",
+            "Cumhuriyetçilik",
+            "Devletçilik",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "1925'te çıkarılan Takrir-i Sükûn Kanunu, hangi olayın sonucunda çıkarılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Serbest Cumhuriyet Fırkası'nın feshi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Devletçilik ilkesinin uygulanmasıyla kurulan kurumlardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sümerbank",
+            "Etibank",
+            "Maden Tetkik Arama Enstitüsü",
+            "İş Bankası"
+          ]
+        },
+        {
+          "soruMetni": "I. Beş Yıllık Sanayi Planı'nın hazırlanmasında hangi ülkeden teknik destek alınmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "ABD",
+            "Almanya",
+            "Sovyetler Birliği",
+            "İngiltere"
+          ]
+        },
+        {
+          "soruMetni": "1924 Anayasası'nda 1928'de yapılan değişiklikle yemin metninden \"vallahi\" sözcüğünün çıkarılması hangi ilkeyle ilgilidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Halkçılık",
+            "Laiklik",
+            "Devletçilik",
+            "Cumhuriyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Hayatta en hakiki mürşit ilimdir, fendir\" sözü, hangi iki ilkeyi doğrudan vurgulamaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyetçilik ve Milliyetçilik",
+            "Laiklik ve İnkılapçılık",
+            "Devletçilik ve Halkçılık",
+            "Milliyetçilik ve Halkçılık"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_ilke_ve_inkilaplari_4",
+      "baslik": "Atatürk İlkeleri ve İnkılaplar-4",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_ilke_ve_inkilaplari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Atatürkçü düşünce sisteminde \"Milliyetçilik\" anlayışının temeli nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Irk ve din birliği",
+            "Sınıf mücadelesi",
+            "Ümmetçilik",
+            "Kültürel birlik ve vatan ortaklığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangileri, Devletçilik ilkesinin uygulanmasına zemin hazırlamıştır?\nI. Teşvik-i Sanayi Kanunu'nun yetersiz kalması\nII. 1929 Dünya Ekonomik Krizi'nin etkileri\nIII. Cumhuriyetin ilk yıllarında özel sektörün sermaye yetersizliği",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde açılan Halkevleri'nin temel amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İnkılapları halka anlatmak ve kültürel gelişimi sağlamak",
+            "Ekonomik yatırımları yönetmek",
+            "Çok partili hayata geçişi sağlamak",
+            "Siyasi muhalefet oluşturmak"
+          ]
+        },
+        {
+          "soruMetni": "Terakkiperver Cumhuriyet Fırkası'nın parti programında yer alan \"Partimiz dini inançlara ve fikirlere saygılıdır\" maddesi, hangi ilkenin istismar edilmesine zemin hazırlamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Cumhuriyetçilik",
+            "Laiklik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nde ulusal ekonominin temellerinin atıldığı ilk önemli toplantı hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sivas Kongresi",
+            "Erzurum Kongresi",
+            "İzmir İktisat Kongresi",
+            "Londra Konferansı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi eğitim ve kültür alanında yapılan inkılaplardan biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Harf İnkılabı",
+            "Millet Mekteplerinin açılması",
+            "Üniversite Reformu",
+            "Hafta tatilinin Pazar gününe alınması"
+          ]
+        },
+        {
+          "soruMetni": "Hafta tatilinin Cuma gününden Pazar gününe alınmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dini gerekçeler",
+            "Uluslararası ekonomik ve sosyal ilişkilerde uyum sağlamak",
+            "Halkın taleplerini karşılamak",
+            "Laiklik ilkesini pekiştirmek"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk ilkeleri arasında, devletin sosyal adalet ve eşitlik konularındaki görevlerini vurgulayan ilke hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Halkçılık",
+            "İnkılapçılık"
+          ]
+        },
+        {
+          "soruMetni": "1921 ve 1924 Anayasalarının ortak temel ilkesi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Laiklik",
+            "Ulusal egemenlik",
+            "Güçler ayrılığı",
+            "Devletçilik"
+          ]
+        },
+        {
+          "soruMetni": "\"Atatürkçülük\" veya \"Kemalizm\" olarak da adlandırılan düşünce sisteminin en temel özelliği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Durağan olması",
+            "Sadece Türk ulusuna özgü olması",
+            "Akla ve bilime dayanması, dinamik olması",
+            "Ekonomide katı devletçiliği savunması"
+          ]
+        },
+        {
+          "soruMetni": "3 Mart 1924'te çıkarılan Tevhid-i Tedrisat Kanunu ile aşağıdaki kurumlardan hangisinin varlığı sona ermiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Medreseler",
+            "Üniversiteler",
+            "Halkevleri",
+            "Millet Mektepleri"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün \"Vatanını en çok seven, görevini en iyi yapandır\" sözü, hangi ilkeyle ilişkilendirilebilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Devletçilik",
+            "Milliyetçilik",
+            "Halkçılık"
+          ]
+        },
+        {
+          "soruMetni": "İsviçre Medeni Kanunu'nun seçilmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "O dönemde yazılmış en yeni, en akılcı ve en laik kanun olması",
+            "İsviçre'nin siyasi destek vermesi",
+            "Almanya'ya tepki göstermek",
+            "Dini kurallara en yakın kanun olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangisi, hem \"Laiklik\" hem de \"İnkılapçılık\" ilkesiyle güçlü bir bağa sahiptir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tekke, zaviye ve türbelerin kapatılması",
+            "Kabotaj Kanunu",
+            "Aşar vergisinin kaldırılması",
+            "I. Beş Yıllık Sanayi Planı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangisi, hem \"Halkçılık\" hem de \"İnkılapçılık\" ile doğrudan ilgilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Soyadı Kanunu",
+            "Halifeliğin kaldırılması",
+            "Teşvik-i Sanayi Kanunu",
+            "Kabotaj Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki inkılaplardan hangisi hem \"Milliyetçilik\" hem de \"Devletçilik\" ilkesiyle ilgilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Etibank'ın kurulması",
+            "Medeni Kanun'un kabulü",
+            "Harf İnkılabı",
+            "Şapka Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "\"Ulusal egemenlik\" ve \"ulusal bağımsızlık\" kavramları arasındaki temel fark nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Egemenlik iç yönetimi, bağımsızlık dışa karşı özgürlüğü ifade eder.",
+            "Egemenlik ekonomiyi, bağımsızlık siyaseti ifade eder.",
+            "İkisi arasında hiçbir fark yoktur.",
+            "Egemenlik padişahı, bağımsızlık halkı temsil eder."
+          ]
+        },
+        {
+          "soruMetni": "1924 Anayasası'nda yapılan aşağıdaki değişikliklerden hangisi, \"Halkçılık\" ve \"Cumhuriyetçilik\" ilkelerini pekiştirmeye yöneliktir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin dininin İslam olduğunun belirtilmesi",
+            "Kadınlara seçme ve seçilme hakkının tanınması",
+            "Başkentin Ankara olduğunun belirtilmesi",
+            "Devletçilik ilkesinin eklenmesi"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün Nutuk adlı eseri, hangi yıllar arasındaki olayları kapsamaktadır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "1919 - 1927",
+            "1914 - 1923",
+            "1923 - 1938",
+            "1908 - 1918"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi dış politikasının temel amacı, hangi ilke doğrultusunda \"tam bağımsızlığı\" korumak ve \"barışı\" sürdürmek olmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Cumhuriyetçilik",
+            "Milliyetçilik"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cok_partili_hayata_gecis_donemi_1",
+      "baslik": "Çok Partili Hayata Geçiş Dönemi-1",
+      "kategoriId": "tarih",
+      "konuId": "cok_partili_hayata_gecis_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye Cumhuriyeti tarihinde kurulan ilk muhalefet partisi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Serbest Cumhuriyet Fırkası",
+            "Cumhuriyet Halk Fırkası",
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Demokrat Parti"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Terakkiperver Cumhuriyet Fırkası'nın kurucuları arasında yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kâzım Karabekir",
+            "Ali Fuat Cebesoy",
+            "Rauf Orbay",
+            "Fethi Okyar"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün Serbest Cumhuriyet Fırkası'nı kurması için Fethi Okyar'ı görevlendirmesinde; \nI. Hükümetin çalışmalarını daha etkili denetleme,\nII. 1929 Dünya Ekonomik Krizi'nin olumsuz etkilerini azaltma,\nIII. Demokratik kültürü yerleştirme\namaçlarından hangileri etkili olmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "1925 yılında Doğu Anadolu'da çıkan ve Terakkiperver Cumhuriyet Fırkası'nın kapatılmasına zemin hazırlayan olay hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menemen Olayı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Ağrı İsyanları"
+          ]
+        },
+        {
+          "soruMetni": "Şeyh Sait İsyanı'nın ardından Hükümete olağanüstü yetkiler veren ve rejimi korumayı amaçlayan kanun aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hıyanet-i Vataniye Kanunu",
+            "Tevhid-i Tedrisat Kanunu",
+            "Takrir-i Sükûn Kanunu",
+            "Kabotaj Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "1926'daki İzmir Suikastı Girişimi'nin ardından, suçluları yargılamak için hangi mahkemeler görevlendirilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Divan-ı Harp",
+            "İstiklal Mahkemeleri",
+            "Yüce Divan",
+            "Ankara Ağır Ceza Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "İzmir Suikastı davasında, eski İttihatçılarla birlikte hangi partinin eski üyeleri de yargılanmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Serbest Cumhuriyet Fırkası",
+            "Cumhuriyet Halk Fırkası",
+            "Demokrat Parti",
+            "Terakkiperver Cumhuriyet Fırkası"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün 1929 Dünya Ekonomik Bunalımı'nın etkilerini tartışmak ve hükümeti denetleyecek bir yapı oluşturmak amacıyla kurulmasını teşvik ettiği parti hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Demokrat Parti",
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Milli Kalkınma Partisi",
+            "Serbest Cumhuriyet Fırkası"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası, iktidardaki Cumhuriyet Halk Fırkası'ndan hangi temel ekonomik konuda ayrılmaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tarımda makineleşme",
+            "Liberalizm",
+            "Demiryolu yapımı",
+            "Aşar vergisinin kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'nın kısa sürede kendini feshetmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mustafa Kemal'in desteğini çekmesi",
+            "Şeyh Sait İsyanı'nın başlaması",
+            "Parti içinde rejim karşıtlarının ve laiklik düşmanlarının toplanması",
+            "1930 yerel seçimlerini kaybetmesi"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'nın kendini feshetmesinden kısa bir süre sonra, 1930'da İzmir'de meydana gelen ve rejimin temellerini sarsan olay hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kubilay Olayı",
+            "Bursa Olayı",
+            "İzmir Suikastı Girişimi",
+            "Razgrad Olayı"
+          ]
+        },
+        {
+          "soruMetni": "Menemen Olayı'nın en önemli siyasi sonucu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Terakkiperver Cumhuriyet Fırkası'nın kapatılması",
+            "Takrir-i Sükûn Kanunu'nun çıkarılması",
+            "Çok partili hayata geçiş denemelerine uzun bir süre ara verilmesi",
+            "Ankara'nın başkent ilan edilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi hem Terakkiperver Cumhuriyet Fırkası'nın hem de Serbest Cumhuriyet Fırkası'nın ortak özelliklerinden biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Atatürk'ün isteğiyle kurulmaları",
+            "Liberal ekonomi modelini savunmaları",
+            "Şeyh Sait İsyanı sonrası kapatılmaları",
+            "Kurucularının tamamının asker kökenli olması"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet Halk Fırkası'nın temelini oluşturan ve 9 Eylül 1923'te kurulan partinin ilk adı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Anadolu ve Rumeli Müdâfaa-i Hukuk Cemiyeti",
+            "Halk Fırkası",
+            "İttihat ve Terakki Fırkası",
+            "Cumhuriyetçi Güven Partisi"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde çok partili hayata geçiş denemelerinin temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Mustafa Kemal'in askeri yetkilerini artırmak",
+            "Ekonomi politikalarında tamamen devletçiliğe geçmek",
+            "Saltanatı geri getirmek",
+            "Demokratik kültürü geliştirmek ve hükümet denetimini sağlamak"
+          ]
+        },
+        {
+          "soruMetni": "1929 Dünya Ekonomik Bunalımı, Türkiye'de hangi partinin ekonomi politikasının güçlenmesine zemin hazırlamıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cumhuriyet Halk Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Demokrat Parti"
+          ]
+        },
+        {
+          "soruMetni": "TCF'nin kurulmasından hemen önce, \"Ordu mensuplarının siyaset yapmasını\" yasaklayan kanunun çıkarılmasının amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Orduyu siyaset dışı tutmak",
+            "TCF'nin kuruluşunu engellemek",
+            "Lozan Antlaşması'nın şartlarını yerine getirmek",
+            "Saltanat yanlılarını ordudan temizlemek"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın Nutuk adlı eserinde en çok eleştirdiği grup ve siyasi oluşum aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Serbest Cumhuriyet Fırkası kurucuları",
+            "Terakkiperver Cumhuriyet Fırkası kurucuları ve İttihatçılar",
+            "İstanbul Hükümeti ve Padişah Vahdettin",
+            "Temsil Heyeti üyeleri"
+          ]
+        },
+        {
+          "soruMetni": "Şeyh Sait İsyanı'nın çıkması, Türkiye'nin hangi önemli dış politika meselesini olumsuz etkilemiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hatay'ın ana vatana katılması",
+            "Boğazlar Komisyonu'nun kaldırılması",
+            "Musul sorununun çözülmesi",
+            "Yabancı okullar sorunu"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın \"Benim naçiz vücudum elbet bir gün toprak olacaktır, fakat Türkiye Cumhuriyeti ilelebet payidar kalacaktır.\" sözünü hangi olay üzerine söylediği kabul edilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Şeyh Sait İsyanı",
+            "Cumhuriyet'in ilanı",
+            "İzmir Suikastı Girişimi",
+            "Menemen Olayı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cok_partili_hayata_gecis_donemi_2",
+      "baslik": "Çok Partili Hayata Geçiş Dönemi-2",
+      "kategoriId": "tarih",
+      "konuId": "cok_partili_hayata_gecis_donemi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "\"Halk Fırkası\"nın adının başına \"Cumhuriyet\" kelimesi hangi olaydan sonra eklenmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Saltanatın kaldırılması",
+            "Cumhuriyet'in ilanı",
+            "Halifeliğin kaldırılması",
+            "İzmir İktisat Kongresi"
+          ]
+        },
+        {
+          "soruMetni": "Hem Şeyh Sait İsyanı hem de Menemen Olayı'nın ortak özelliği aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çok partili hayat denemeleri sırasında ortaya çıkmaları",
+            "İzmir'de gerçekleşmeleri",
+            "Laik Cumhuriyete ve inkılaplara karşı olmaları",
+            "Musul meselesini olumsuz etkilemeleri"
+          ]
+        },
+        {
+          "soruMetni": "Terakkiperver Cumhuriyet Fırkası, aşağıdaki konulardan hangisinde Cumhuriyet Halk Fırkası ile aynı görüşü savunmamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyetçilik",
+            "İnkılapların hızlı ve köktenci bir şekilde yapılması",
+            "Misak-ı Millî'nin gerçekleştirilmesi",
+            "Ulusal bağımsızlık"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'nın parti programında, Cumhuriyet Halk Fırkası'ndan farklı olarak savunduğu görüşler aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kadınlara siyasi hakların verilmesi",
+            "Tek dereceli seçim sistemine geçilmesi",
+            "Devletçilik ilkesinin sıkıca uygulanması",
+            "Halifeliğin geri getirilmesi"
+          ]
+        },
+        {
+          "soruMetni": "1925-1929 yılları arasında uygulanan Takrir-i Sükûn dönemi, hangi ilkenin yerleşmesinde otoriter bir yöntem izlenmesine neden olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Laiklik ve İnkılapçılık",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Paşa'nın, Serbest Cumhuriyet Fırkası'nın kurulması için Fethi Okyar'ı görevlendirmesinin temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik politikasını terk etmek",
+            "Kendi iktidarını güçlendirmek",
+            "Hükümetin denetlenmesini sağlamak ve demokratik bir yapı oluşturmak",
+            "İnkılaplara karşı olanları tespit etmek"
+          ]
+        },
+        {
+          "soruMetni": "Serbest Cumhuriyet Fırkası'na katılanlar arasında, Atatürk'ün kız kardeşi olan isim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Afet İnan",
+            "Sabiha Gökçen",
+            "Fikriye Hanım",
+            "Makbule Atadan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, Atatürk dönemindeki çok partili hayat denemelerinin başarısızlıkla sonuçlanmasının toplumsal nedenidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ordunun siyasete karışması",
+            "İnkılapların henüz halk tarafından tam olarak benimsenmemiş olması",
+            "Güçlü bir ekonomik burjuvazinin olmaması",
+            "İki partinin de liberalizmi savunması"
+          ]
+        },
+        {
+          "soruMetni": "\"İki dereceli seçim\" sisteminden \"tek dereceli seçim\" sistemine geçişi savunan ilk parti aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhuriyet Halk Fırkası",
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "Demokrat Parti"
+          ]
+        },
+        {
+          "soruMetni": "Şeyh Sait İsyanı sırasında Başbakan kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet İnönü",
+            "Fethi Okyar",
+            "Celal Bayar",
+            "Rauf Orbay"
+          ]
+        },
+        {
+          "soruMetni": "Menemen Olayı'nda şehit edilen Asteğmen Mustafa Fehmi Kubilay'ın görevi neydi?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Jandarma Komutanı",
+            "Emniyet Müdürü",
+            "Öğretmen",
+            "Kaymakam"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet Halk Fırkası'nın temelini oluşturan \"Anadolu ve Rumeli Müdâfaa-i Hukuk Cemiyeti\"nin bir siyasi partiye dönüşme kararı nerede alınmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Erzurum Kongresi",
+            "Sivas Kongresi",
+            "İzmir İktisat Kongresi",
+            "TBMM'nin açılışı"
+          ]
+        },
+        {
+          "soruMetni": "Terakkiperver Cumhuriyet Fırkası'nın kapatılmasının hukuki dayanağı hangi kanundur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hıyanet-i Vataniye Kanunu",
+            "Takrir-i Sükûn Kanunu",
+            "Teşvik-i Sanayi Kanunu",
+            "Medeni Kanun"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk döneminde kurulan partiler arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Cumhuriyet Halk Fırkası",
+            "Terakkiperver Cumhuriyet Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "Milli Kalkınma Partisi"
+          ]
+        },
+        {
+          "soruMetni": "1930 yılındaki ikinci çok partili hayat denemesinin ilkinde temel farkı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Liberalizmi savunması",
+            "Atatürk'ün teşviki ve kontrolü altında kurulması",
+            "Kurucularının asker olması",
+            "Laikliğe karşı olması"
+          ]
+        },
+        {
+          "soruMetni": "\"Cumhuriyetçilik\" ve \"Laiklik\" ilkelerine karşı çıkan grupların sığındığı ilk organize siyasi yapı hangisi olmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Cumhuriyet Halk Fırkası",
+            "Serbest Cumhuriyet Fırkası",
+            "İstanbul Hükümeti",
+            "Terakkiperver Cumhuriyet Fırkası"
+          ]
+        },
+        {
+          "soruMetni": "Menemen Olayı faillerinin yargılandığı mahkeme aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İstiklal Mahkemeleri",
+            "Divan-ı Harp",
+            "Yüce Divan",
+            "İzmir Ağır Ceza Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün vefatına kadar süren dönemin büyük bölümünde, Cumhuriyet Halk Fırkası'nın \"değişmez genel başkanı\" kim olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İsmet İnönü",
+            "Mustafa Kemal Atatürk",
+            "Celal Bayar",
+            "Fethi Okyar"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet Halk Fırkası'nın 1930'lu yıllarda benimsediği ve I. Beş Yıllık Sanayi Planı'nı uyguladığı ekonomik ilke nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Liberalizm",
+            "Devletçilik",
+            "Sosyalizm",
+            "Karma Ekonomi"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi iç politikasında yaşanan rejim karşıtı isyanların bastırılması, hangi ilkenin yerleşmesini zorunlu ve öncelikli kılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletçilik",
+            "Halkçılık",
+            "Laiklik",
+            "Milliyetçilik"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_donemi_dis_politika_1",
+      "baslik": "Atatürk Dönemi Dış Politika-1",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_donemi_dis_politika",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Atatürk dönemi Türk dış politikasının temel ilkesini ifade eden söz aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "\"Ne mutlu Türk'üm diyene!\"",
+            "\"Geldikleri gibi giderler.\"",
+            "\"Yurtta sulh, cihanda sulh.\"",
+            "\"Hayatta en hakiki mürşit ilimdir.\""
+          ]
+        },
+        {
+          "soruMetni": "Lozan Barış Antlaşması'nda çözüme kavuşturulamayan ve daha sonraya bırakılan tek konu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Boğazlar sorunu",
+            "Musul sorunu",
+            "Nüfus mübadelesi",
+            "Kapitülasyonlar"
+          ]
+        },
+        {
+          "soruMetni": "Musul sorununun Türkiye aleyhine sonuçlanmasında etkili olan iç gelişme aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Menemen Olayı",
+            "İzmir Suikastı Girişimi",
+            "Şeyh Sait İsyanı",
+            "Serbest Cumhuriyet Fırkası'nın kurulması"
+          ]
+        },
+        {
+          "soruMetni": "Musul meselesi, 1926 yılında hangi antlaşma ile Türkiye aleyhine çözüme kavuşmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Lozan Antlaşması",
+            "Ankara Antlaşması",
+            "Kars Antlaşması",
+            "Mudanya Ateşkesi"
+          ]
+        },
+        {
+          "soruMetni": "1926 Ankara Antlaşması'na göre Musul, hangi devlete bağlı Irak yönetimine bırakılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fransa",
+            "İtalya",
+            "Sovyet Rusya",
+            "İngiltere"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Antlaşması'ndan sonra Türkiye'nin dış politikada en çok sorun yaşadığı devlet aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yunanistan",
+            "Fransa",
+            "Sovyet Rusya",
+            "İtalya"
+          ]
+        },
+        {
+          "soruMetni": "Yabancı Okullar meselesinde Türkiye'nin, başta Fransa olmak üzere Batılı devletlere kabul ettirdiği temel politika ne olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Okulların kapatılması",
+            "Okulların Milletler Cemiyeti'ne devredilmesi",
+            "Konunun iç mesele olduğu ve Türk kanunlarına uyulması gerektiği",
+            "Okulların eğitim dilinin sadece Türkçe olması"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Antlaşması gereği Türkiye ile Yunanistan arasında yaşanan Nüfus Mübadelesi sorununda, anlaşmazlığa neden olan temel kavram nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "\"Etabli\" tanımı",
+            "Tazminat miktarı",
+            "Değişimin yapılacağı tarih",
+            "Patrikhane'nin statüsü"
+          ]
+        },
+        {
+          "soruMetni": "Yunanistan ile yaşanan Nüfus Mübadelesi sorunu, hangi antlaşma ile çözüme kavuşmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1926 Ankara Antlaşması",
+            "1930 Ahali Mübadelesi Antlaşması",
+            "Balkan Antantı",
+            "Montrö Sözleşmesi"
+          ]
+        },
+        {
+          "soruMetni": "1930'lu yıllarda Türk-Yunan ilişkilerinin düzelmesinde etkili olan ve Atatürk'ü Nobel Barış Ödülü'ne aday gösteren Yunan devlet adamı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Metaksas",
+            "Çaldaris",
+            "Venizelos",
+            "Papandreu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye, dünya barışına katkı sağlamak amacıyla 1932 yılında hangi uluslararası kuruluşa üye olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Birleşmiş Milletler",
+            "NATO",
+            "Milletler Cemiyeti",
+            "Sadabat Paktı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Milletler Cemiyeti'ne davet edilmesinde hangi iki ülke öncülük etmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İngiltere ve Fransa",
+            "İspanya ve Yunanistan",
+            "ABD ve Sovyet Rusya",
+            "Almanya ve İtalya"
+          ]
+        },
+        {
+          "soruMetni": "1930'larda Almanya ve İtalya'nın yayılmacı politikaları üzerine, Türkiye'nin batı sınırını güvence altına almak için 1934'te öncülük ettiği pakt hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sadabat Paktı",
+            "Balkan Antantı",
+            "Montrö Sözleşmesi",
+            "Nyon Konferansı"
+          ]
+        },
+        {
+          "soruMetni": "Balkan Antantı'na aşağıdaki devletlerden hangisi katılmamıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türkiye",
+            "Yunanistan",
+            "Yugoslavya",
+            "Bulgaristan"
+          ]
+        },
+        {
+          "soruMetni": "Balkan Antantı üyeleri hangi seçenekte doğru verilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türkiye, Arnavutluk, Yugoslavya, Yunanistan",
+            "Türkiye, Yunanistan, Yugoslavya, Romanya",
+            "Türkiye, Bulgaristan, Romanya, Arnavutluk",
+            "Türkiye, Yunanistan, Bulgaristan, Romanya"
+          ]
+        },
+        {
+          "soruMetni": "Bulgaristan'ın Balkan Antantı'na katılmamasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sovyet Rusya'nın baskısı",
+            "Sınırlarını genişletme politikası izlemesi",
+            "Ekonomik olarak zayıf olması",
+            "Türkiye ile nüfus sorunu yaşaması"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Antlaşması'nda Boğazlar'ın yönetimi uluslararası bir komisyona bırakılmışken, Türkiye'nin 1936'da Montrö Sözleşmesi ile Boğazlar'da tam egemenlik kurmasını sağlayan uluslararası gelişme nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1929 Dünya Ekonomik Bunalımı",
+            "İtalya'nın Habeşistan'ı işgali ve Almanya'nın Ren bölgesine girmesi",
+            "Şeyh Sait İsyanı",
+            "İspanya İç Savaşı'nın çıkması"
+          ]
+        },
+        {
+          "soruMetni": "Montrö Boğazlar Sözleşmesi ile kazanılan en önemli diplomatik başarı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Boğazlar Komisyonu'nun kaldırılarak Türk egemenliğinin sağlanması",
+            "Sovyet Rusya'nın Karadeniz'deki üstünlüğünün sona ermesi",
+            "Boğazlar'dan geçişin tamamen yasaklanması",
+            "İngiltere ve Fransa'nın desteğinin alınması"
+          ]
+        },
+        {
+          "soruMetni": "Montrö Boğazlar Sözleşmesi'nde, Karadeniz'e kıyısı olmadığı halde geçiş hakları konusunda en çok tartışma çıkaran ve sözleşmeyi imzalamakta geciken devlet hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İngiltere",
+            "Sovyet Rusya",
+            "İtalya",
+            "ABD"
+          ]
+        },
+        {
+          "soruMetni": "Montrö Boğazlar Sözleşmesi'nin imzalanmasıyla, Lozan'dan kalan hangi sorun kesin olarak çözüme kavuşmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Musul sorunu",
+            "Borçlar sorunu",
+            "Nüfus mübadelesi",
+            "Boğazlar sorunu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_donemi_dis_politika_2",
+      "baslik": "Atatürk Dönemi Dış Politika-2",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_donemi_dis_politika",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "İtalya'nın 1935'te Habeşistan'ı işgal etmesi ve Doğu Akdeniz'de yayılmacı bir politika izlemesi üzerine, Türkiye'nin doğu sınırını güvence altına almak için 1937'de öncülük ettiği pakt hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Balkan Antantı",
+            "Sadabat Paktı",
+            "Nyon Konferansı",
+            "Akdeniz Paktı"
+          ]
+        },
+        {
+          "soruMetni": "Sadabat Paktı'na aşağıdaki devletlerden hangisi katılmamıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türkiye",
+            "İran",
+            "Irak",
+            "Suriye"
+          ]
+        },
+        {
+          "soruMetni": "Sadabat Paktı üyeleri hangi seçenekte doğru verilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Türkiye, İran, Irak, Afganistan",
+            "Türkiye, Irak, İran, Azerbaycan",
+            "Türkiye, İran, Suriye, Afganistan",
+            "Türkiye, Irak, Suriye, Lübnan"
+          ]
+        },
+        {
+          "soruMetni": "Balkan Antantı ve Sadabat Paktı'nın ortak amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sovyet Rusya'nın yayılmacılığını engellemek",
+            "Milletler Cemiyeti'ne alternatif oluşturmak",
+            "Mevcut sınırları korumak ve yayılmacı devletlere karşı önlem almak",
+            "Ekonomik bir birlik kurmak"
+          ]
+        },
+        {
+          "soruMetni": "Türk-Fransız gemilerinin Ege Denizi'nde çarpışması üzerine davanın Lahey Adalet Divanı'na taşındığı ve Türkiye'nin kazandığı hukuki zafer hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Razgrad Olayı",
+            "Vagon-Li Olayı",
+            "Bozkurt-Lotus Olayı",
+            "Chester Projesi"
+          ]
+        },
+        {
+          "soruMetni": "Bozkurt-Lotus Davası'nda Türkiye'yi Lahey'de savunan ve \"Bozkurt\" soyadını alan Adalet Bakanı kimdir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Tevfik Rüştü Aras",
+            "Fethi Okyar",
+            "Şükrü Saraçoğlu",
+            "Mahmut Esat Bozkurt"
+          ]
+        },
+        {
+          "soruMetni": "Bozkurt-Lotus Davası'nın kazanılması, Türkiye'nin hangi alandaki bağımsızlığını uluslararası alanda kanıtlamıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Ekonomik",
+            "Askeri",
+            "Siyasi",
+            "Hukuki"
+          ]
+        },
+        {
+          "soruMetni": "Hatay sorununun temeli, hangi antlaşma ile Hatay'ın Misak-ı Millî dışında kalmasına dayanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1921 Kars Antlaşması",
+            "1921 Ankara Antlaşması",
+            "1926 Ankara Antlaşması",
+            "1923 Lozan Antlaşması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin dış politikada uluslararası barışa katkıda bulunmak amacıyla imzaladığı ve İtalya ile Almanya'nın saldırgan politikalarına karşı önlem niteliği taşıyan iki önemli pakt aşağıdakilerden hangileridir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sadabat Paktı - NATO",
+            "Balkan Antantı - Varşova Paktı",
+            "Montrö Sözleşmesi - Sadabat Paktı",
+            "Balkan Antantı - Sadabat Paktı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye, Hatay meselesinin çözümü için hangi uluslararası kuruluşa başvurmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Lahey Adalet Divanı",
+            "Milletler Cemiyeti",
+            "Balkan Antantı Konseyi",
+            "Sadabat Paktı Konseyi"
+          ]
+        },
+        {
+          "soruMetni": "Milletler Cemiyeti'nin Hatay'daki Türk nüfusunun çoğunlukta olduğunu belirten ve bölgenin statüsü için çözüm öneren raporu hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sandler Raporu",
+            "Brüksel Hattı Raporu",
+            "General Harbord Raporu",
+            "Amiral Bristol Raporu"
+          ]
+        },
+        {
+          "soruMetni": "Mustafa Kemal Atatürk'ün \"Benim şahsi meselem\" olarak tanımladığı dış politika sorunu hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Musul sorunu",
+            "Boğazlar sorunu",
+            "Hatay sorunu",
+            "Nüfus mübadelesi"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk'ün, Hatay sorunuyla ilgili olarak \"Asım Üs\" takma adıyla yazılar yazdığı gazete hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hâkimiyet-i Milliye",
+            "Kurun",
+            "İrade-i Milliye",
+            "Minber"
+          ]
+        },
+        {
+          "soruMetni": "Milletler Cemiyeti'nin kararı doğrultusunda 1938'de kurulan Bağımsız Hatay Cumhuriyeti'nin ilk Cumhurbaşkanı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Abdurrahman Melek",
+            "Tayfur Sökmen",
+            "Rıfat Uray",
+            "Cemil Mardam"
+          ]
+        },
+        {
+          "soruMetni": "Bağımsız Hatay Cumhuriyeti'nin ilk Başbakanı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Abdurrahman Melek",
+            "Tayfur Sökmen",
+            "Fevzi Çakmak",
+            "İsmet İnönü"
+          ]
+        },
+        {
+          "soruMetni": "Hatay Meclisi'nin oybirliği ile anavatana katılma kararı aldığı tarih itibarıyla Türkiye Cumhuriyeti Cumhurbaşkanı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mustafa Kemal Atatürk",
+            "İsmet İnönü",
+            "Celal Bayar",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "Hatay'ın anavatana katılmasıyla Misak-ı Millî sınırları içinde olup da dışarıda kalan hangi önemli bölge kalmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Batı Trakya",
+            "Musul",
+            "Batum",
+            "Kars"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi dış politikasında, 1923-1930 arası dönemde en gergin ilişki hangi ülkeyle Musul meselesi yüzünden yaşanmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fransa",
+            "Yunanistan",
+            "Sovyet Rusya",
+            "İngiltere"
+          ]
+        },
+        {
+          "soruMetni": "1930'lu yıllarda İngiltere ve Türkiye'nin birbirine yakınlaşmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Musul petrollerinin paylaşımı",
+            "İtalya ve Almanya'nın yayılmacı politikaları",
+            "Sovyet Rusya'nın Boğazlar'ı tehdit etmesi",
+            "Nüfus mübadelesinin çözülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin, Boğazların statüsünü kendi lehine değiştirmesini sağlayan 1936 Montrö Boğazlar Sözleşmesi'nin imzalanmasında; \nI. Silahlanma yarışının yeniden başlaması,\nII. İtalya'nın Akdeniz'deki saldırgan politikaları,\nIII. Türkiye'nin barışçıl tutumu ve diplomatik çabaları\ndurumlarından hangileri etkili olmuştur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_donemi_dis_politika_3",
+      "baslik": "Atatürk Dönemi Dış Politika-3",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_donemi_dis_politika",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Osmanlı Devleti'nden kalan borçlar sorunu, en çok hangi ülkeyle yaşanmış ve 1933 Paris Antlaşması ile çözüme kavuşmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İngiltere",
+            "Almanya",
+            "Fransa",
+            "İtalya"
+          ]
+        },
+        {
+          "soruMetni": "İstanbul'daki bir Fransız firması olan Vagon-Li Şirketi'nde Türkçe konuşan memurun işten atılması üzerine başlayan protestolar, hangi ilkenin dış politikadaki yansımasıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletçilik",
+            "Milliyetçilik",
+            "Halkçılık",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "Bulgaristan'ın Razgrad şehrinde Türk mezarlarına yapılan saldırı üzerine Türkiye'de büyük protestoların yaşandığı olay nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Vagon-Li Olayı",
+            "Razgrad Olayı",
+            "Nyon Konferansı",
+            "Bozkurt-Lotus Olayı"
+          ]
+        },
+        {
+          "soruMetni": "İtalya'nın Akdeniz'deki \"korsan\" denizaltı faaliyetlerine karşı Türkiye'nin de katıldığı ve Akdeniz'in güvenliğini sağlamayı amaçlayan 1937 tarihli konferans hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Montrö Konferansı",
+            "Nyon Konferansı",
+            "Lozan Konferansı",
+            "Brüksel Konferansı"
+          ]
+        },
+        {
+          "soruMetni": "Nüfus Mübadelesi Antlaşması gereği, mübadele dışında tutulan bölgeler hangileridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İstanbul Rumları ile Batı Trakya Türkleri",
+            "Gökçeada Rumları ile Selanik Türkleri",
+            "İzmir Rumları ile Gümülcine Türkleri",
+            "Kıbrıs Türkleri ile Ege Adaları Rumları"
+          ]
+        },
+        {
+          "soruMetni": "Milletler Cemiyeti'nin Musul konusunda İngiltere lehine karar vermesinde etkili olan ve Türkiye'nin kabul etmediği sınır hattı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sandler Raporu",
+            "Chester Hattı",
+            "Brüksel Hattı",
+            "Curzon Hattı"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi dış politikasında 1920'li yıllarda Sovyet Rusya ile iyi ilişkiler kurulmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Rejim benzerliği",
+            "Batılı devletlerin ortak tehdit oluşturması",
+            "Musul meselesinde SSCB'nin Türkiye'yi desteklemesi",
+            "Ticari ilişkilerin gelişmiş olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin, Suriye, Irak ve İran gibi doğu komşularıyla imzaladığı ve bölgesel güvenliği hedefleyen antlaşma aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Balkan Antantı",
+            "Kellogg-Briand Paktı",
+            "Moskova Antlaşması",
+            "Sadabat Paktı"
+          ]
+        },
+        {
+          "soruMetni": "Balkan Antantı'na İtalya'nın baskısı nedeniyle katılmayan Balkan devleti hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bulgaristan",
+            "Yugoslavya",
+            "Romanya",
+            "Arnavutluk"
+          ]
+        },
+        {
+          "soruMetni": "1921 Ankara Antlaşması'nda Hatay için tanınan özel statünün temel dayanağı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bölgenin ekonomik zenginliği",
+            "Bölgedeki Türk nüfusunun yoğunluğu",
+            "Fransa'nın bölgeyi Milletler Cemiyeti'ne bırakmak istemesi",
+            "Suriye'nin bu bölge üzerinde hak iddia etmesi"
+          ]
+        },
+        {
+          "soruMetni": "Lozan Antlaşması'nda çözülen ancak Türkiye'nin istediği gibi çözülmeyen sorunlar hangileridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kapitülasyonlar - Ermeni yurdu",
+            "Musul - Hatay - Boğazlar",
+            "Nüfus Mübadelesi - Dış Borçlar",
+            "Yabancı Okullar - Patrikhane"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Lozan Antlaşması'nda Türkiye'nin lehine ve kesin olarak çözülen bir konudur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Boğazlar",
+            "Musul",
+            "Kapitülasyonlar",
+            "Hatay"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Musul üzerindeki hak iddialarını uluslararası alanda zayıflatan ve İngiltere'nin elini güçlendiren iç gelişme nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1929 Dünya Ekonomik Bunalımı",
+            "Şeyh Sait İsyanı",
+            "İzmir Suikastı Girişimi",
+            "Nüfus Mübadelesi sorunu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti ile Yunanistan arasında uzun süren 'Etabli' sorununun, yani Nüfus Mübadelesi'nin barışçıl yollarla çözülmesi, Atatürk'ün hangi ilkesinin uluslararası alanda başarıyla uygulandığını gösterir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Devletçilik",
+            "Laiklik",
+            "Cumhuriyetçilik",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "1936 Montrö Boğazlar Sözleşmesi'nin imzalanmasını hızlandıran temel dış gelişmeler aşağıdakilerden hangileridir?\nI. İtalya'nın Akdeniz'deki yayılmacı politikaları\nII. Almanya'nın Versay Antlaşması'nın getirdiği sınırlamaları kaldırması\nIII. Türkiye'nin Milletler Cemiyeti'nden çekilmesi",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I ve II",
+            "Yalnız III",
+            "I ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "1921 Ankara Antlaşması ve 1921 Moskova Antlaşması'nın ortak sonucu nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Her ikisiyle de Hatay sınırı çizilmiştir",
+            "Her ikisi de Sevr'i reddeden büyük devletlerle imzalanmıştır",
+            "Her ikisi de Boğazlar sorununu çözmüştür",
+            "Her ikisi de kapitülasyonları kaldırmıştır"
+          ]
+        },
+        {
+          "soruMetni": "Atatürk dönemi dış politikasında 1934 ve 1937 yıllarında kurulan ittifakların temel felsefesi nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yayılmacılık",
+            "Tarafsızlık",
+            "Mevcut sınırları koruma",
+            "Sovyet Rusya'ya karşı bir cephe oluşturma"
+          ]
+        },
+        {
+          "soruMetni": "Sadabat Paktı'nın imzalanmasında Türkiye'nin hangi komşusuyla yaşadığı sınır anlaşmazlığı paktın gecikmesine neden olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Irak",
+            "Suriye",
+            "İran",
+            "Sovyet Rusya"
+          ]
+        },
+        {
+          "soruMetni": "1923-1930 yılları arasındaki Türk dış politikasının ana gündemini belirleyen konu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Lozan'dan kalan sorunların çözülmesi",
+            "Hatay'ın anavatana katılması",
+            "Montrö Sözleşmesi'nin imzalanması",
+            "Balkan Antantı'nın kurulması"
+          ]
+        },
+        {
+          "soruMetni": "1930-1938 yılları arasındaki Türk dış politikasının ana gündemini belirleyen konu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Nüfus Mübadelesi sorunu",
+            "Musul meselesi",
+            "Yaklaşan II. Dünya Savaşı tehlikesine karşı sınır güvenliğini sağlama",
+            "Yabancı okullar sorunu"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_sonrasi_donem_1",
+      "baslik": "Atatürk Sonrası Dönem-1",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_sonrasi_donem",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Mustafa Kemal Atatürk'ün vefatının ardından 11 Kasım 1938'de TBMM tarafından Cumhurbaşkanı seçilen devlet adamı kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Celal Bayar",
+            "Fevzi Çakmak",
+            "İsmet İnönü",
+            "Şükrü Saraçoğlu"
+          ]
+        },
+        {
+          "soruMetni": "İsmet İnönü'nün Cumhurbaşkanlığı dönemine verilen ve kendisinin \"değişmez genel başkan\" olarak anıldığı dönem nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milli Şef Dönemi",
+            "Restorasyon Dönemi",
+            "Fetret Dönemi",
+            "Tek Parti Dönemi"
+          ]
+        },
+        {
+          "soruMetni": "1 Eylül 1939'da Almanya'nın Polonya'yı işgaliyle başlayan II. Dünya Savaşı sırasında Türkiye'nin Cumhurbaşkanı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mustafa Kemal Atatürk",
+            "İsmet İnönü",
+            "Celal Bayar",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı yıllarında Türkiye'nin izlediği temel dış politika aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Almanya'nın yanında savaşa girmek",
+            "Sovyet Rusya ile birlikte hareket etmek",
+            "Savaş dışı kalmayı amaçlayan \"denge politikası\"",
+            "Müttefik Devletler safında hemen savaşa girmek"
+          ]
+        },
+        {
+          "soruMetni": "Savaş yıllarında ekonomiyi devlet kontrolü altına almak, fiyatları belirlemek ve temel ihtiyaç maddelerinin dağıtımını düzenlemek amacıyla çıkarılan kanun hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milli Korunma Kanunu",
+            "Takrir-i Sükûn Kanunu",
+            "Teşvik-i Sanayi Kanunu",
+            "Varlık Vergisi Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı yıllarında olağanüstü kazançları vergilendirmek ve devlet gelirlerini artırmak amacıyla 1942'de çıkarılan, ancak uygulamada özellikle gayrimüslim azınlıkları hedef almasıyla eleştirilen vergi hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Aşar Vergisi",
+            "Toprak Mahsulleri Vergisi",
+            "Varlık Vergisi",
+            "Yol Vergisi"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı yıllarında kırsal kesimdeki çocukların eğitimi için açılan, ancak savaş sonrası dönemde siyasi tartışmaların odağı haline gelerek kapatılan eğitim kurumları hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Halkevleri",
+            "Millet Mektepleri",
+            "Köy Enstitüleri",
+            "Darülfünun"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı'nda Müttefik Devletler'in Türkiye'yi savaşa dahil etmek için ısrar ettiği, İnönü'nün ise \"teçhizat eksikliği\" gerekçesiyle direndiği görüşmeler hangileridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Adana ve Kahire Görüşmeleri",
+            "Yalta ve Potsdam Konferansları",
+            "Zürih ve Londra Antlaşmaları",
+            "Paris ve San Francisco Konferansları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin, II. Dünya Savaşı'na fiilen girmemesine rağmen 23 Şubat 1945'te Almanya ve Japonya'ya savaş ilan etmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Almanya'nın Türkiye sınırına dayanması",
+            "Sovyet Rusya'nın baskı yapması",
+            "Savaş sonrası kurulacak Birleşmiş Milletler'e kurucu üye olabilmek",
+            "İtalya'nın Rodos'u işgal etmesi"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı'nın sona ermesiyle birlikte, Sovyet Rusya'nın Türkiye'den hangi taleplerde bulunması, Türk-Sovyet ilişkilerini bozmuş ve Türkiye'yi Batı bloğuna itmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Musul ve Kerkük'ün terk edilmesi",
+            "Boğazlar'da üs verilmesi ve Kars-Ardahan'ın istenmesi",
+            "Montrö Sözleşmesi'nin kaldırılması",
+            "Kıbrıs'ta hak iddia edilmesi"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı sonrası Türkiye'de çok partili hayata geçişi hızlandıran en önemli iç gelişme nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nuri Demirağ'ın Milli Kalkınma Partisi'ni kurması",
+            "CHP içinden dört milletvekilinin \"Dörtlü Takrir\"i vermesi",
+            "1946 seçimlerinin yapılması",
+            "Varlık Vergisi'nin kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Demokrat Parti'nin kurucuları olan \"Dörtlü Takrir\" üyelerinden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Celal Bayar",
+            "Adnan Menderes",
+            "Fuat Köprülü",
+            "İsmet İnönü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de Atatürk dönemi sonrasında kurulan ilk muhalefet partisi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Demokrat Parti",
+            "Millet Partisi",
+            "Milli Kalkınma Partisi",
+            "Terakkiperver Cumhuriyet Fırkası"
+          ]
+        },
+        {
+          "soruMetni": "Milli Kalkınma Partisi'nin kurucusu olan ve sanayi ile havacılık alanındaki yatırımlarıyla tanınan iş insanı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Nuri Demirağ",
+            "Vehbi Koç",
+            "Nuri Killigil",
+            "Şakir Zümre"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti 7 Ocak 1946'da kurulduğunda, iktidardaki Cumhuriyet Halk Partisi'nin hangi temel politikasına karşı çıkmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Laiklik",
+            "Milliyetçilik",
+            "Devletçilik",
+            "Cumhuriyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nin, II. Dünya Savaşı sırasında Almanya ve İtalya'dan gelecek olası tehditlere karşı ittifak kurduğu devletler arasında aşağıdakilerden hangileri yer alır?\nI. İngiltere\nII. Fransa\nIII. Sovyetler Birliği",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I ve II",
+            "Yalnız III",
+            "I ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı sonrası Sovyet tehdidine karşı ABD'nin, Türkiye ve Yunanistan'a askeri yardım yapmasını öngören politika hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Marshall Planı",
+            "Truman Doktrini",
+            "Eisenhower Doktrini",
+            "Monroe Doktrini"
+          ]
+        },
+        {
+          "soruMetni": "ABD'nin, aralarında Türkiye'nin de bulunduğu Avrupa ülkelerine II. Dünya Savaşı sonrası ekonomik kalkınma yardımı yaptığı programın adı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Truman Doktrini",
+            "Marshall Planı",
+            "Atlantik Bildirisi",
+            "Hoover Moratoryumu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin II. Dünya Savaşı'nda fiilen savaşa girmemesine rağmen, savaş sonu kurulan Birleşmiş Milletler'e (BM) kurucu üye olarak kabul edilmesinin temel şartı ne olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "NATO'ya üye olmayı kabul etmesi",
+            "Kore Savaşı'na asker göndermesi",
+            "Almanya ve Japonya'ya sembolik savaş ilan etmesi",
+            "Kıbrıs üzerindeki tüm haklarından vazgeçmesi"
+          ]
+        },
+        {
+          "soruMetni": "1950 seçimlerinde \"Gizli Oy - Açık Tasnif\" yönteminin uygulanmasını sağlayan kanun hangi yıl çıkarılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1946",
+            "1948",
+            "1950",
+            "1954"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_sonrasi_donem_2",
+      "baslik": "Atatürk Sonrası Dönem-2",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_sonrasi_donem",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1950 seçimleri sonucunda iktidara gelen Demokrat Parti döneminde Cumhurbaşkanı olan siyasetçi kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Adnan Menderes",
+            "İsmet İnönü",
+            "Celal Bayar",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "1950-1960 yılları arasında 10 yıl boyunca Başbakanlık yapan Demokrat Parti lideri kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Celal Bayar",
+            "Adnan Menderes",
+            "Fatin Rüştü Zorlu",
+            "Refik Koraltan"
+          ]
+        },
+        {
+          "soruMetni": "1950'li yıllarda Kıbrıs Sorunu'nun uluslararası bir boyut kazanmasında ve Türkiye'nin soruna müdahil olmasında etkili olan temel gelişmeler arasında aşağıdakilerden hangileri yer alır?\nI. Yunanistan'ın adayı Birleşmiş Milletler'e taşıması\nII. İngiltere'nin adadan çekilme kararı\nIII. EOKA terör örgütünün saldırıları",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti döneminde Türkiye, hangi olaya asker göndererek Batı bloğuna bağlılığını göstermiş ve 1952'de NATO'ya üye olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kore Savaşı",
+            "Vietnam Savaşı",
+            "Süveyş Krizi",
+            "Arap-İsrail Savaşı"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti döneminde Türkiye'nin NATO'ya üye olmasının temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Almanya'nın yayılmacılığına karşı önlem almak",
+            "Ortadoğu'da etkinliğini artırmak",
+            "SSCB'nin tehditlerine karşı güvenliğini sağlamak",
+            "Yunanistan ile ilişkileri düzeltmek"
+          ]
+        },
+        {
+          "soruMetni": "1953 yılında Türkiye, Yunanistan ve Yugoslavya arasında, Sovyet tehdidine karşı kurulan ancak Yugoslavya'nın SSCB ile yakınlaşmasıyla önemini yitiren pakt hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bağdat Paktı",
+            "Balkan Paktı",
+            "Sadabat Paktı",
+            "Akdeniz Paktı"
+          ]
+        },
+        {
+          "soruMetni": "1955 yılında Sovyetler Birliği'nin Ortadoğu'daki yayılmasını engellemek amacıyla Türkiye, Irak, İran, Pakistan ve İngiltere'nin katılımıyla kurulan pakt hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Balkan Paktı",
+            "NATO",
+            "Varşova Paktı",
+            "Bağdat Paktı"
+          ]
+        },
+        {
+          "soruMetni": "Bağdat Paktı, 1958'de hangi üyesinin paktan çekilmesi üzerine merkezini Ankara'ya taşımış ve \"CENTO\" adını almıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Irak",
+            "İran",
+            "Pakistan",
+            "İngiltere"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti döneminde, Marshall Planı ve dış kredilerin etkisiyle en çok gelişme gösteren ekonomik sektör hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ağır sanayi",
+            "Tarım",
+            "Bankacılık",
+            "Madencilik"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nin Batı savunma sistemine entegrasyonu yolunda attığı en önemli adımlar arasında aşağıdakilerden hangileri yer alır?\nI. Kore Savaşı'na asker gönderme\nII. NATO'ya tam üyelik\nIII. Bağdat Paktı'na (CENTO) kurucu üye olarak katılma",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "1950'li yıllarda Yunanistan ile Türkiye arasında yaşanan ve 1959 Zürih-Londra Antlaşmaları ile geçici çözüme kavuşan sorun hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ege Adaları'nın silahlandırılması",
+            "Kıbrıs Sorunu",
+            "Kıta Sahanlığı",
+            "Patrikhane'nin statüsü"
+          ]
+        },
+        {
+          "soruMetni": "1959 Zürih ve Londra Antlaşmaları sonucunda kurulan Bağımsız Kıbrıs Cumhuriyeti'nin üç \"Garantör\" devleti hangileridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Türkiye, Yunanistan, İngiltere",
+            "Türkiye, ABD, Sovyet Rusya",
+            "Yunanistan, İngiltere, ABD",
+            "Türkiye, İngiltere, İtalya"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti'nin 1950'li yılların sonuna doğru artan muhalefet ve basın eleştirilerini engellemek amacıyla 1960'ta TBMM'de kurduğu olağanüstü yetkilere sahip komisyon nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Milli Korunma Komisyonu",
+            "Yassıada Divanı",
+            "Tahkikat Komisyonu",
+            "Vatan Cephesi"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti dönemine son veren askeri müdahale hangi tarihte gerçekleşmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "12 Mart 1971",
+            "12 Eylül 1980",
+            "27 Mayıs 1960",
+            "28 Şubat 1997"
+          ]
+        },
+        {
+          "soruMetni": "1960 Anayasası'nın temel özellikleri arasında aşağıdakilerden hangileri yer alır?\nI. Yargı bağımsızlığının ve temel hakların genişletilmesi\nII. Anayasa Mahkemesi ve Yüksek Hakimler Kurulu gibi denetleyici kurumların kurulması\nIII. Güçler Birliği ilkesinin katı şekilde uygulanması",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I ve II",
+            "Yalnız III",
+            "II ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "27 Mayıs 1960 Darbesi'nin ardından Demokrat Parti yöneticilerinin yargılandığı mahkemeler nerede kurulmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ankara İstiklal Mahkemesi",
+            "Yassıada",
+            "İmralı Adası",
+            "Sivas Kongre Binası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Kıbrıs Sorunu'na fiilen askeri olarak müdahale etmesinin ve uluslararası alanda büyük yankı uyandırmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yunanistan'ın NATO'dan ayrılması",
+            "Türkiye'nin adada askeri üs kurma isteği",
+            "Yunanistan destekli askeri darbe ve Enosis (adaya birleşme) girişimi",
+            "ABD'nin Türkiye'ye ekonomik ambargo uygulaması"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı yıllarında Türkiye'de Başbakanlık yapan isimler hangi seçenekte doğru verilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Refik Saydam ve Şükrü Saraçoğlu",
+            "İsmet İnönü ve Celal Bayar",
+            "Fethi Okyar ve Adnan Menderes",
+            "Şükrü Saraçoğlu ve Celal Bayar"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nin, Batı ittifakı içinde yer alarak Orta Doğu'da güvenliğini sağlamak ve Sovyet tehdidine karşı önlem almak amacıyla öncülük ettiği uluslararası teşkilat aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bağdat Paktı",
+            "Balkan Antantı",
+            "Kolektif Güvenlik Antlaşması Örgütü",
+            "Avrupa Konseyi"
+          ]
+        },
+        {
+          "soruMetni": "1954 yılında, DP'den ayrılarak muhalefet partisi kuran ve DP'nin laiklik karşıtı uygulamalarını eleştiren siyasetçi kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fevzi Lütfi Karaosmanoğlu",
+            "Osman Bölükbaşı",
+            "Nuri Demirağ",
+            "İsmet İnönü"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ataturk_sonrasi_donem_3",
+      "baslik": "Atatürk Sonrası Dönem-3",
+      "kategoriId": "tarih",
+      "konuId": "ataturk_sonrasi_donem",
+      "isNew": false,
+      "soruSayisi": 17,
+      "sureDakika": 17,
+      "sorular": [
+        {
+          "soruMetni": "II. Dünya Savaşı sırasında Türkiye'de olası bir hava saldırısına karşı geceleri şehirlerde ışıkların karartılması uygulamasına ne ad verilmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İaşe sistemi",
+            "Karneli sistem",
+            "Karartma Geceleri",
+            "Milli Korunma"
+          ]
+        },
+        {
+          "soruMetni": "1970'li yıllarda Bülent Ecevit başkanlığındaki hükümetin en önemli dış politika başarısı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "ABD ile stratejik ortaklık kurması",
+            "1974 Kıbrıs Barış Harekâtı'nı gerçekleştirmesi",
+            "Yunanistan ile Ege sorununu barışçıl yollarla çözmesi",
+            "Sovyetler Birliği ile saldırmazlık antlaşması imzalaması"
+          ]
+        },
+        {
+          "soruMetni": "1948'de Mareşal Fevzi Çakmak'ın onursal başkanlığında kurulan, DP'den daha sert bir muhalefet yürüten parti hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hürriyet Partisi",
+            "Millet Partisi",
+            "Milli Kalkınma Partisi",
+            "Cumhuriyetçi Köylü Millet Partisi"
+          ]
+        },
+        {
+          "soruMetni": "1950'de Demokrat Parti'nin seçim sloganı aşağıdakilerden hangisiydi?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "\"Yurtta Sulh, Cihanda Sulh\"",
+            "\"Ne Ezen, Ne Ezilen\"",
+            "\"Yeter! Söz Milletindir!\"",
+            "\"Önce Ahlak ve Maneviyat\""
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı sonrası ABD'nin \"Sovyet yayılmacılığını çevreleme\" (Containment) politikası doğrultusunda Türkiye'de en çok önem verdiği askeri yardım nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Truman Doktrini",
+            "Marshall Planı",
+            "Varlık Vergisi",
+            "Milli Korunma Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "II. Dünya Savaşı yıllarında tarımsal üretimi artırmak ve topraksız köylüye toprak dağıtmak amacıyla çıkarılan, ancak toprak ağalarının tepkisiyle tam uygulanamayan kanun hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Çiftçiyi Topraklandırma Kanunu",
+            "Aşar Vergisinin Kaldırılması Kanunu",
+            "Milli Korunma Kanunu",
+            "Varlık Vergisi Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "27 Mayıs 1960 Darbesi'nden sonra Milli Birlik Komitesi'nin (MBK) Devlet Başkanı olarak atadığı orgeneral kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cemal Gürsel",
+            "Cevdet Sunay",
+            "Kenan Evren",
+            "Faruk Gürler"
+          ]
+        },
+        {
+          "soruMetni": "27 Mayıs Darbesi sonrası hazırlanan ve Türkiye Cumhuriyeti'nin en özgürlükçü anayasası olarak kabul edilen anayasa hangi tarihlidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası",
+            "2017 Anayasa Değişikliği"
+          ]
+        },
+
+        {
+          "soruMetni": "II. Dünya Savaşı sırasında Türkiye'de ekmek, şeker, kumaş gibi temel ihtiyaç maddelerinin karne ile dağıtılması, hangi kanunun bir uygulamasıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Milli Korunma Kanunu",
+            "Takrir-i Sükûn Kanunu",
+            "Varlık Vergisi",
+            "Teşvik-i Sanayi Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "1939'da Hatay'ın anavatana katılması sırasında Cumhurbaşkanı kimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mustafa Kemal Atatürk",
+            "İsmet İnönü",
+            "Celal Bayar",
+            "Fevzi Çakmak"
+          ]
+        },
+        {
+          "soruMetni": "Demokrat Parti döneminde (1952) Atatürk'ün naaşı, Etnografya Müzesi'ndeki geçici kabrinden alınarak nereye nakledilmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Anıtkabir",
+            "Dolmabahçe Sarayı",
+            "TBMM",
+            "Çankaya Köşkü"
+          ]
+        },
+        {
+          "soruMetni": "1950'li yıllarda DP iktidarının ekonomide zorlanması üzerine ABD'den istediği kredilerin reddedilmesi, Türkiye'yi hangi kuruluşa (1958) muhtaç bırakmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Birleşmiş Milletler",
+            "NATO",
+            "Uluslararası Para Fonu (IMF)",
+            "Dünya Bankası"
+          ]
+        },
+        {
+          "soruMetni": "1958'de DP Hükümeti'nin IMF baskısıyla almak zorunda kaldığı ve yüksek devalüasyon içeren ekonomik kararlara ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "24 Ocak Kararları",
+            "Milli Korunma Kararları",
+            "4 Ağustos İstikrar Kararları",
+            "Dörtlü Takrir"
+          ]
+        },
+        {
+          "soruMetni": "27 Mayıs 1960 müdahalesi, anayasal düzeni kimden aldığı yetkiyle değil, fiili bir durumla değiştirmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "TBMM",
+            "Halk",
+            "Cumhurbaşkanı",
+            "TSK İç Hizmet Kanunu (fiili gerekçe)"
+          ]
+        },
+
+        {
+          "soruMetni": "1950'de Kore'ye gönderilen Türk Tugayı'nın komutanı kimdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Tahsin Yazıcı",
+            "Fevzi Çakmak",
+            "Cemal Gürsel",
+            "Cevdet Sunay"
+          ]
+        },
+        {
+          "soruMetni": "12 Eylül 1980 Askeri Darbesi sonrasında hazırlanan 1982 Anayasası'nın temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Parlamento'nun gücünü artırmak",
+            "Temel hak ve özgürlükleri genişletmek",
+            "Yönetimde istikrarı sağlamak ve yürütmenin gücünü artırmak",
+            "Askeri yönetimin sivil siyasete karışmasını teşvik etmek"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_cografi_konumu_1",
+      "baslik": "Türkiye'nin Coğrafi Konumu-1",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_cografi_konumu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye, 36° - 42° kuzey paralelleri ile 26° - 45° doğu meridyenleri arasında yer almaktadır.\nAşağıdakilerden hangisi, Türkiye’nin bu mutlak konumunun sonuçlarından biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Dört mevsimin belirgin olarak yaşanması",
+            "Yıl boyunca gölge boyunun sıfır olmaması",
+            "Batıdan doğuya doğru ortalama yükseltinin artması",
+            "Güneyden kuzeye doğru güneş ışınlarının geliş açısının küçülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki coğrafi özelliklerden hangileri Türkiye'nin Görece Konumu ile açıklanır?\nI. Kış mevsiminde Akdeniz'den gelen cephesel yağışların görülmesi\nII. Üçüncü Jeolojik Zaman'da meydana gelen Alp-Himalaya orojenezinde yer alması\nIII. Karadeniz'deki dağların denize paralel uzanması",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "II ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Kuzey Yarım Küre'de yer aldığını kanıtlayan durumlardan biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıl içinde dört mevsimin yaşanması",
+            "21 Haziran'da en uzun gündüzün yaşanması",
+            "En doğusu ile en batısı arasında saat farkı olması",
+            "Dağlık ve engebeli bir yapıya sahip olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de kuzeyden esen rüzgârların sıcaklığı düşürmesi, güneyden esen rüzgârların ise sıcaklığı artırması, Türkiye'nin hangi özelliği ile doğrudan ilgilidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yükseltisinin batıdan doğuya artması",
+            "Üç tarafının denizlerle çevrili olması",
+            "Kuzey Yarım Küre'de yer alması",
+            "Başlangıç Meridyeni'nin doğusunda yer alması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de dağların \"bakı\" etkisi yıl boyunca güney yamaçlarda görülür.\nBu durumun temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yengeç Dönencesi'nin kuzeyinde yer alması",
+            "Ilıman kuşakta yer alması",
+            "Yerel saat farkının fazla olması",
+            "Doğu meridyenlerinde yer alması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin göreceli konumunun sonuçları arasında yer alır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cephesel yağışların görülmesi",
+            "İstanbul ve Çanakkale boğazlarına sahip olması",
+            "Güneyden kuzeye doğru deniz suyu tuzluluğunun azalması",
+            "Dört mevsimin belirgin yaşanması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de batıdan doğuya doğru gidildikçe sıcaklıkların düşmesi ve tarım ürünlerinin olgunlaşma süresinin uzaması, öncelikle aşağıdakilerden hangisiyle açıklanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Paralel derecelerinin değişmesi",
+            "Yükseltinin artması",
+            "Meridyen farkının artması",
+            "Karasallık şiddetinin azalması"
+          ]
+        },
+        {
+          "soruMetni": "21 Haziran tarihinde, haritada verilen illerden hangisinde gündüz süresi diğerlerinden daha uzundur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hatay",
+            "Sinop",
+            "İzmir",
+            "Iğdır"
+          ]
+        },
+        {
+          "soruMetni": "21 Aralık tarihinde, aşağıdaki illerin hangisinde yaşanan gece süresi diğerlerinden daha kısadır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kırklareli",
+            "Zonguldak",
+            "Trabzon",
+            "Mersin"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin ılıman kuşakta yer almasının bir sonucu olarak aşağıdaki iklim ve bitki örtüsü özelliklerinden hangisi görülür?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıl boyunca yağışlı tropikal ormanlar",
+            "Akdeniz, Karadeniz, Karasal ve Step iklimlerinin bir arada görülmesi",
+            "Yıl boyunca donmuş olan Tundra bitki örtüsü",
+            "Sadece çöl iklimi ve kaktüs bitkileri"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'nde dağların kıyıya dik uzanması, aşağıdakilerden hangisine neden olmamıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Denizel iklimin iç kesimlere kadar sokulmasına",
+            "Kıyıda girinti ve çıkıntının fazla olmasına",
+            "Kıyı ile iç kesimler arasında ulaşımın kolay olmasına",
+            "Falez oluşumunun çok yaygın olmasına"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz ve Karadeniz bölgelerinde dağların kıyıya paralel uzanmasının ortak sonuçları arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kıyı ile iç kesimler arasında ulaşımın zor ve geçitlerle sağlanması",
+            "Kıyı şeridinin dar olması",
+            "Falez oluşumunun yaygın olması",
+            "Kıyıdaki limanların iç bölgelerle bağlantısının çok güçlü olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin jeopolitik önemini artıran en önemli faktör aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ortalama yükseltisinin fazla olması",
+            "Zengin bor yataklarına sahip olması",
+            "Asya ve Avrupa kıtaları arasında bir köprü konumunda olması",
+            "Kuzey Yarım Küre'de yer alması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin göreceli konumu ile ilgili bir özellik değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Asya, Avrupa ve Afrika kıtalarının birbirine en çok yaklaştığı yerde bulunması",
+            "Önemli enerji kaynaklarına sahip komşularının bulunması",
+            "Ilıman kuşakta yer alması nedeniyle tarım ürünü çeşitliliğinin fazla olması",
+            "Üç tarafının denizlerle çevrili olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin ulusal saat olarak 45° Doğu meridyeninin yerel saatini kullanmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıl içinde dört mevsimi yaşaması",
+            "Güneş enerjisinden daha fazla yararlanmak ve enerji tasarrufu sağlamak",
+            "Türkiye'nin en doğu noktası olması",
+            "Başlangıç Meridyeni'ne daha yakın olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en uzun kara sınırı aşağıdaki ülkelerden hangisiyle başlar?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İran",
+            "Irak",
+            "Suriye",
+            "Ermenistan"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en kısa kara sınırı hangi ülkeyledir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yunanistan",
+            "Gürcistan",
+            "Azerbaycan",
+            "Ermenistan"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin aşağıdaki komşularından hangisiyle olan sınırı diğerlerine göre en eskidir ve büyük ölçüde değişmemiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İran",
+            "Suriye",
+            "Bulgaristan",
+            "Yunanistan"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en işlek kara sınır kapısı olan Kapıkule, aşağıdaki ülkelerden hangisine açılmaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yunanistan",
+            "Bulgaristan",
+            "Gürcistan",
+            "Suriye"
+          ]
+        },
+        {
+          "soruMetni": "Irak'a açılan ve Orta Doğu'ya yönelik ticarette kilit rol oynayan sınır kapımız aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gürbulak",
+            "Habur",
+            "Cilvegözü",
+            "Sarp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_cografi_konumu_2",
+      "baslik": "Türkiye'nin Coğrafi Konumu-2",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_cografi_konumu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "İran'a açılan ve Transit Ticaret Yolu üzerinde bulunan önemli sınır kapımız aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kapıkule",
+            "İpsala",
+            "Gürbulak",
+            "Dereköy"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Gürcistan ile olan sınır kapısı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Habur",
+            "Gürbulak",
+            "Sarp",
+            "Kapıköy"
+          ]
+        },
+        {
+          "soruMetni": "I. Aynı anda farklı iklim özelliklerinin yaşanması\nII. Petrol ve doğalgaz boru hatlarının geçiş güzergâhında olması\nIII. Dört mevsimin belirgin olarak yaşanması\nIV. Akdeniz iklim kuşağında yer alması\nYukarıdakilerden hangileri Türkiye'nin göreceli konumunun sonuçlarındandır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I ve II",
+            "I ve III",
+            "II ve IV",
+            "III ve IV"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin \"Jeopolitik\" konumunun sonuçlarından biri olarak gösterilemez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "NATO üyesi olması",
+            "Önemli enerji koridorları üzerinde yer alması",
+            "Boğazlar üzerinde tam egemenliğe sahip olması",
+            "Güney yamaçların daha sıcak olması"
+          ]
+        },
+        {
+          "soruMetni": "\"Türkiye, Yengeç Dönencesi'nin kuzeyindedir.\"\nAşağıdakilerden hangisi bu yargıyı destekleyen bir kanıttır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cisimlerin gölgesinin yıl boyunca kuzeye düşmesi",
+            "Yıl içinde dört mevsimin yaşanması",
+            "Batıdan doğuya doğru sıcaklığın azalması",
+            "Karadeniz'in tuzluluk oranının Akdeniz'den az olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de Akdeniz'in tuzluluk oranının, Karadeniz'den daha fazla olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akdeniz'in daha derin olması",
+            "Karadeniz'e daha çok akarsuyun dökülmesi",
+            "Akdeniz'in Ekvator'a daha yakın olması",
+            "Karadeniz'in Cebelitarık Boğazı'na uzak olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en son çizilen kara sınırı hangi komşumuzladır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İran",
+            "Yunanistan",
+            "Suriye",
+            "Bulgaristan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin hem Ege Denizi'ne hem de Marmara Denizi'ne kıyısı vardır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çanakkale",
+            "Balıkesir",
+            "Tekirdağ",
+            "Bursa"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin mutlak konumunun tarıma olan etkilerinden biridir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Batıdan doğuya doğru ürünlerin olgunlaşma süresinin uzaması",
+            "Kıyı bölgelerde narenciye tarımının yapılabilmesi",
+            "İç bölgelerde sulama ihtiyacının fazla olması",
+            "Güneyden kuzeye doğru tarım ürünlerinin olgunlaşma süresinin uzaması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yer şekillerinden hangisi, Türkiye'nin Alp-Himalaya Orojenez Kuşağı'nda yer almasının ve genç oluşumlu olmasının bir sonucu **değildir**?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fay hatlarının yaygın olması",
+            "Linyit ve tuz yataklarının çok olması",
+            "Volkanik arazilerin bulunması",
+            "Ortalama yükseltisinin fazla olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de aşağıdaki tarihlerden hangisinde gölge boyu en uzundur ve kuzeyi gösterir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "21 Mart",
+            "21 Haziran",
+            "23 Eylül",
+            "21 Aralık"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yıl boyunca güneş ışınlarını en dik açıyla alan il aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sinop",
+            "Hatay",
+            "Iğdır",
+            "Çanakkale"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin ulusal saat ile yerel saati arasındaki fark en azdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İzmir",
+            "Ankara",
+            "Iğdır",
+            "Edirne"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin ulusal saat ile yerel saati arasındaki fark en fazladır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kars",
+            "Sivas",
+            "Çanakkale",
+            "Van"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en uç noktaları düşünüldüğünde, aşağıdaki il ve yön eşleştirmelerinden hangisi yanlıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "En Kuzey - Sinop",
+            "En Güney - Hatay",
+            "En Doğu - Iğdır",
+            "En Batı - Çanakkale"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin \"göreceli konumu\"nun sonuçlarından biridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kısa mesafelerde iklim ve bitki örtüsünün değişmesi",
+            "Akdeniz iklim kuşağında yer alması",
+            "Kuzeye doğru çizgisel hızın azalması",
+            "Cephesel yağışların görülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye, 26° Doğu meridyeni ile 45° Doğu meridyeni arasında yer alır.\nAşağıdakilerden hangisi bu durumun bir sonucudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "2. ve 3. saat dilimlerinde yer alması",
+            "Güneş ışınlarının hiçbir zaman dik gelmemesi",
+            "Dört mevsimin yaşanması",
+            "Bakı etkisinin güneyde olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin önemli petrol ve doğalgaz boru hatlarının kavşak noktasında olması, hangi konumunun bir sonucudur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mutlak Konum",
+            "Jeopolitik Konum",
+            "Jeolojik Konum",
+            "Jeomorfolojik Konum"
+          ]
+        },
+        {
+          "soruMetni": "Yunanistan ile sınırımızı oluşturan akarsu ve sınır kapısı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Aras - Dilucu",
+            "Meriç - İpsala",
+            "Asi - Cilvegözü",
+            "Fırat - Karkamış"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Orta Kuşak'ta yer aldığının kanıtlarından biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Dört mevsimin belirgin yaşanması",
+            "Cephesel yağış sistemlerinin etkili olması",
+            "Batı rüzgârlarının etkili olması",
+            "Yükseltinin batıdan doğuya doğru artması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_cografi_konumu_3",
+      "baslik": "Türkiye'nin Coğrafi Konumu-3",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_cografi_konumu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de yıl içerisinde dört mevsimin belirgin olarak yaşanması \"mutlak konum\" ile açıklanırken; aynı anda bir yerde denize girilirken başka bir yerde kayak yapılabilmesi ne ile açıklanır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bakı etkisi",
+            "Meridyen genişliği",
+            "Göreceli konum",
+            "Saat dilimleri"
+          ]
+        },
+        {
+          "soruMetni": "I. Yükselti\nII. Denize göre konum\nIII. Meridyen\nIV. Ekvator'a uzaklık\nYukarıdakilerden hangileri Türkiye'de iklimi etkileyen \"göreceli konum\" faktörlerindendir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I ve II",
+            "II ve III",
+            "III ve IV",
+            "I ve IV"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Asya kıtasında yer alan topraklarına verilen isimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Trakya",
+            "Mezopotamya",
+            "Anadolu",
+            "Kafkasya"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Avrupa kıtasında yer alan topraklarına verilen isimdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Anadolu",
+            "Doğu Trakya",
+            "Kapadokya",
+            "Batı Trakya"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük yüzölçümüne sahip komşusu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Suriye",
+            "Irak",
+            "İran",
+            "Gürcistan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sınır kapılarından hangisi Suriye'ye açılmaktadır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sarp",
+            "Habur",
+            "Cilvegözü",
+            "Gürbulak"
+          ]
+        },
+        {
+          "soruMetni": "Ermenistan ile sınırımızı oluşturan ancak siyasi nedenlerle kapalı olan sınır kapımız aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Dilucu",
+            "Akyaka",
+            "Türkgözü",
+            "İpsala"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ülkelerden hangisi Türkiye'nin hem kara hem de deniz komşusudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bulgaristan",
+            "Suriye",
+            "İran",
+            "Irak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ülkelerden hangisi Türkiye'nin sadece deniz komşusudur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yunanistan",
+            "Gürcistan",
+            "Rusya",
+            "Azerbaycan"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Ege Denizi'nde Yunanistan ile yaşadığı temel sorunlar coğrafi konumun hangi yönünün bir sonucudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Jeopolitik konum",
+            "Mutlak konum",
+            "Jeolojik yapı",
+            "İklimsel konum"
+          ]
+        },
+        {
+          "soruMetni": "Iğdır'da yerel saat 12.00 iken, aynı anda aşağıdaki illerden hangisinde yerel saat daha geridir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Van",
+            "Kars",
+            "Erzurum",
+            "Ankara"
+          ]
+        },
+        {
+          "soruMetni": "21 Mart tarihinde Iğdır'da güneş doğduktan kaç dakika sonra Çanakkale'de güneş doğar?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "19 dakika",
+            "45 dakika",
+            "76 dakika",
+            "120 dakika"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin jeopolitik önemini artıran doğal su yollarıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fırat ve Dicle Nehirleri",
+            "İstanbul ve Çanakkale Boğazları",
+            "Sakarya ve Kızılırmak Nehirleri",
+            "Süveyş ve Panama Kanalları"
+          ]
+        },
+        {
+          "soruMetni": "\"Türkiye, Alp-Himalaya kıvrım kuşağı üzerinde yer alır.\"\nBu bilgi, Türkiye'nin hangi özelliği hakkında doğrudan bilgi verir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıl içinde dört mevsim yaşaması",
+            "Genç oluşumlu, deprem riski yüksek ve dağlık olması",
+            "Önemli enerji koridoru olması",
+            "Kuzey Yarım Küre'de yer alması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin Karadeniz'e kıyısı yoktur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ordu",
+            "Giresun",
+            "Erzurum",
+            "Zonguldak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin Akdeniz'e kıyısı yoktur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hatay",
+            "Adana",
+            "Osmaniye",
+            "Gaziantep"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin Ege Denizi'ne kıyısı yoktur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Aydın",
+            "Muğla",
+            "Manisa",
+            "Denizli"
+          ]
+        },
+        {
+          "soruMetni": "\"Kıta sahanlığı\", bir ülkenin deniz altında devam eden 200 metre derinliğe kadar olan kara parçasıdır.\nDağların denize uzanışı düşünüldüğünde, kıta sahanlığının en geniş olduğu kıyılarımız hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ege kıyıları",
+            "Doğu Karadeniz kıyıları",
+            "Batı Karadeniz kıyıları",
+            "Antalya kıyıları"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin Orta Kuşak'ta yer aldığını kanıtlayan bir durumdur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cephesel yağışların görülmesi",
+            "Yükseltinin fazla olması",
+            "Ortalama sıcaklığın yüksek olması",
+            "Asya ve Avrupa'da toprağı olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin mutlak konumu düşünüldüğünde, aşağıdaki tarım ürünlerinden hangisinin yetişme alanı daha dardır ve güney kıyılarla sınırlıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Buğday",
+            "Elma",
+            "Muz",
+            "Üzüm"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_cografi_konumu_4",
+      "baslik": "Türkiye'nin Coğrafi Konumu-4",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_cografi_konumu",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de çizgisel hızın en fazla olduğu il aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sinop",
+            "Trabzon",
+            "Hatay",
+            "Kırklareli"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de çizgisel hızın en az olduğu il aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hatay",
+            "Antalya",
+            "İzmir",
+            "Sinop"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de 21 Haziran'dan 21 Aralık'a doğru gidildikçe yaşanan değişim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gündüzler uzar, geceler kısalır.",
+            "Geceler uzar, gündüzler kısalır.",
+            "Gölge boyları kısalır.",
+            "Güneş ışınlarının geliş açısı büyür."
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Kuzey Yarım Küre'de yer almasının sonuçları arasında aşağıdakilerden hangileri bulunmaz?\nI. Güneyden kuzeye gidildikçe gölge boylarının uzaması\nII. Yıl içinde cephesel yağışların görülmesi\nIII. Batıdan doğuya doğru yükseltinin artması",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "Yalnız III",
+            "I ve III"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin komşularından hangisiyle olan sınırı bir akarsu ile çizilmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gürcistan",
+            "Ermenistan",
+            "İran",
+            "Irak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin göreceli konumunun bir sonucudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İç Anadolu'nun karasal iklime sahip olması",
+            "Güney kıyılarının kuzey kıyılarından sıcak olması",
+            "Yıl içinde gölge boyunun değişmesi",
+            "Başlangıç Meridyeni'nin doğusunda yer alması"
+          ]
+        },
+        {
+          "soruMetni": "I. TANAP\nII. BTC\nIII. TürkAkım\nYukarıdaki enerji projeleri, Türkiye'nin hangi özelliğinin önemini artırmaktadır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Jeopolitik konumu",
+            "Mutlak konumu",
+            "Jeolojik yapısı",
+            "Yükselti ortalaması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin hem Karadeniz'e hem de Ege Denizi'ne kıyısı olan yarımada aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Datça Yarımadası",
+            "Kapıdağ Yarımadası",
+            "Gelibolu Yarımadası",
+            "Biga Yarımadası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de dağların uzanış yönünün farklılık göstermesi, aşağıdaki coğrafi özelliklerden hangisi üzerinde doğrudan etkili değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kıyı ile iç kesimler arasındaki iklim farklılıkları",
+            "Akarsuların akış hızları ve enerji potansiyelleri",
+            "Kıyı bölgelerinde yağışların dağılışı",
+            "Türkiye'nin ortalama yükseltisinin fazla olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük adası olan Gökçeada, hangi denizde yer alır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz",
+            "Marmara Denizi",
+            "Ege Denizi",
+            "Akdeniz"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin ikinci büyük adası olan Marmara Adası, hangi denizde yer alır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz",
+            "Marmara Denizi",
+            "Ege Denizi",
+            "Akdeniz"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki denizlerimizden hangisi tamamen Türkiye'nin iç suları niteliğindedir ve mutlak egemenliği altındadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz",
+            "Marmara Denizi",
+            "Ege Denizi",
+            "Akdeniz"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de Kuzey Yarım Küre'nin Orta Kuşağı'nda yer almanın bir sonucu olarak yıl boyunca yaşanan iklim olayları arasında aşağıdakilerden hangileri bulunur?\nI. Cephesel yağışlar\nII. Dört mevsimin belirgin olarak yaşanması\nIII. Akdeniz iklim tipinin görülmesi",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin birden fazla ülkeyle kara sınırı vardır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kırklareli",
+            "Ağrı",
+            "Van",
+            "Hakkâri"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin Asya ile Avrupa arasındaki kara yolu geçişlerinin büyük kısmının sağlandığı sınır kapısı hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Habur",
+            "Kapıkule",
+            "Sarp",
+            "Gürbulak"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de aynı anda sadece bir ortak saat kullanılmasına rağmen, yerel saat farkının en fazla olmasının nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kuzey-güney yönünde geniş olması",
+            "Doğu-batı yönünde geniş olması",
+            "Yükseltisinin fazla olması",
+            "Dört mevsimin yaşanması"
+          ]
+        },
+        {
+          "soruMetni": "21 Haziran'da Sinop'ta yaşanan gündüz süresi, Hatay'da yaşanan gündüz süresinden daha uzundur.\nBu durumun temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Eksen eğikliği ve enlem etkisi",
+            "Yükselti farkı",
+            "Boylam farkı",
+            "Denize göre konum"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'nde dağların kıyıya dik uzanması, Karadeniz Bölgesi'nde dağların kıyıya paralel uzanmasına göre hangi farklılığa yol açar?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Falez oluşumunun daha yaygın olmasına",
+            "Orografik (yamaç) yağışların daha şiddetli olmasına",
+            "Denizel iklimin iç kesimlere daha fazla sokulmasına",
+            "Kıyı şeridinin (kıta sahanlığı) daha dar olmasına"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de fiyort ve skyer tipi kıyılar görülmez.\nBu durumun temel nedeni Türkiye'nin hangi özelliğidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Göreceli konumu",
+            "Mutlak konumu",
+            "Yükseltisinin fazla olması",
+            "Dağların kıyıya paralel uzanması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de Haliç tipi kıyılar belirgin olarak görülmez.\nBu durumun temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yükseltinin fazla olması",
+            "Okyanusa kıyısının olmaması",
+            "Akarsu debilerinin düşük olması",
+            "Ortalama sıcaklığın yüksek olması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri_1",
+      "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-1",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'nin genç bir jeolojik yapıya sahip olmasının en önemli kanıtı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Zengin bitki örtüsüne sahip olması",
+            "Ortalama yükseltisinin fazla ve engebeli olması",
+            "Ilıman iklim kuşağında yer alması",
+            "Üç tarafının denizlerle çevrili olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin jeolojik olarak genç oluşumlu olmasının sonuçlarından biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Deprem riskinin yüksek olması",
+            "Sıcak su kaynaklarının yaygın olması",
+            "Linyit ve bor gibi maden yataklarının bulunması",
+            "Taş kömürü yataklarının yaygın olması"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'ndeki dağların oluşum şekli aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kıvrılma",
+            "Volkanizma",
+            "Kırılma",
+            "Buzul aşındırması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de Kuzey Anadolu ve Doğu Anadolu fay hatları boyunca deprem riskinin yüksek olması, bu bölgelerin hangi özelliğiyle doğrudan ilgilidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ortalama yükseltinin fazla olmasıyla",
+            "Volkanik arazilerin geniş yer kaplamasıyla",
+            "Arazinin jeolojik olarak kırıklı yapıda olmasıyla",
+            "Akarsu ağının sık olmasıyla"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, Türkiye'nin Alp-Himalaya dağ kuşağı üzerinde yer aldığını gösteren en güçlü kanıttır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Doğu-batı yönünde uzanan yüksek dağ sıralarının varlığı",
+            "Delta ovalarının geniş yer kaplaması",
+            "İç bölgelerde bozkır bitki örtüsünün görülmesi",
+            "Karstik şekillerin yaygın olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye arazisinin büyük bölümünün toptan yükselmesi aşağıdakilerden hangisine yol açmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Akarsuların yatak eğimlerinin ve aşındırma güçlerinin artmasına",
+            "Kıyı çizgisinin değişmez kalmasına",
+            "Volkanik faaliyetlerin sona ermesine",
+            "Geniş buzul alanlarının oluşmasına"
+          ]
+        },
+        {
+          "soruMetni": "Teke ve Taşeli platolarında lapya, dolin, uvala gibi yerşekillerinin yaygın olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Arazinin volkanik kayaçlardan oluşması",
+            "Bölgenin şiddetli rüzgarlara açık olması",
+            "Suda kolay çözünebilen kayaçların yaygın olması",
+            "Bölgede donma-çözülme olaylarının sık yaşanması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de volkanik arazilerin en yoğun olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Karadeniz Bölgesi",
+            "Marmara Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki dağlardan hangisi oluşum bakımından diğerlerinden farklıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Ağrı Dağı",
+            "Erciyes Dağı",
+            "Hasan Dağı",
+            "Kaçkar Dağları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de fiyort ve skyer tipi kıyıların görülmemesinin temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Dağların kıyıya uzanış doğrultusu",
+            "Ortalama yükseltinin az olması",
+            "Matematik konum",
+            "Gelgit genliğinin düşük olması"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'nde dağların denize dik uzanmasının aşağıdakilerden hangisine yol açtığı söylenemez?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kıyı ile iç kesimler arasında ulaşımın zorlaşmasına",
+            "Kıyıda girinti ve çıkıntının fazla olmasına",
+            "Denizel iklimin iç kesimlere kadar sokulabilmesine",
+            "Kıyıdaki delta ovalarının oluşumunun kolaylaşmasına"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz ve Akdeniz bölgelerinde dağların kıyıya paralel uzanması, aşağıdakilerden hangisini engellemiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kıyıda falez oluşumunu",
+            "Yıllık yağış miktarının fazla olmasını",
+            "Kıyı ile iç kesimler arasındaki iklim farkının belirginleşmesini",
+            "Denizel iklimin iç kesimlere sokulmasını"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ovalardan hangisi oluşum bakımından bir delta ovası değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Çukurova",
+            "Bafra Ovası",
+            "Çarşamba Ovası",
+            "Muş Ovası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'deki akarsuların denize döküldükleri yerlerde delta ovası oluşturabilmeleri, öncelikle aşağıdakilerden hangisine bağlıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Akarsuyun bol alüvyon taşımasına",
+            "Kıyıda güçlü gelgit yaşanmamasına",
+            "Akarsu rejiminin düzenli olmasına",
+            "Akarsuyun yatak eğiminin az olmasına"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'deki platolar içinde karstik oluşumlu platolara en iyi örnekler hangi bölgede yer alır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Akdeniz Bölgesi",
+            "İç Anadolu Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Güneydoğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki platolardan hangisi oluşum bakımından diğerlerinden farklı bir özelliğe sahiptir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Erzurum-Kars Platosu",
+            "Cihanbeyli Platosu",
+            "Haymana Platosu",
+            "Obruk Platosu"
+          ]
+        },
+        {
+          "soruMetni": "İstanbul ve Çanakkale boğazlarının oluşumu, aşağıdaki kıyı tiplerinden hangisine örnektir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Fiyort Tipi Kıyı",
+            "Ria Tipi Kıyı",
+            "Boyuna Tipi Kıyı",
+            "Dalmaçya Tipi Kıyı"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz Bölgesi'nde, Fethiye-Kaş arasında görülen ve kıyıya paralel uzanan adaların bulunduğu kıyı tipi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Enine Kıyı",
+            "Ria Tipi Kıyı",
+            "Dalmaçya Tipi Kıyı",
+            "Limanlı Kıyı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye akarsularının genel bir özelliği olarak aşağıdakilerden hangisi söylenemez?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ulaşım ve taşımacılığa elverişli olmaları",
+            "Rejimlerinin genellikle düzensiz olması",
+            "Hidroelektrik potansiyellerinin yüksek olması",
+            "Yatak eğimlerinin fazla olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye akarsularının rejimlerinin genel olarak düzensiz olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yatak eğimlerinin fazla olması",
+            "Boylarının kısa olması",
+            "Yağış rejiminin düzensiz olması",
+            "Ulaşıma elverişli olmamaları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri_2",
+      "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-2",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki akarsulardan hangisi sularını Türkiye sınırları dışındaki bir denize boşaltır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kızılırmak",
+            "Fırat Nehri",
+            "Sakarya Nehri",
+            "Gediz Nehri"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yerşekillerinin çeşitlilik göstermesi, aşağıdakilerden hangisi üzerinde en az etkiye sahiptir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Tarım ürünleri çeşitliliği",
+            "İklim çeşitliliği",
+            "Yıllık ve günlük sıcaklık farkları",
+            "Jeopolitik konum"
+          ]
+        },
+        {
+          "soruMetni": "İç Anadolu Bölgesi'nde rüzgar erozyonunun şiddetli olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Arazinin yüksek ve engebeli olması",
+            "Bölgenin fay hattı üzerinde yer alması",
+            "Bitki örtüsünün cılız ve iklimin yarı kurak olması",
+            "Kış aylarının çok soğuk geçmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki göllerden hangisi oluşum bakımından karstik bir göldür?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tuz Gölü",
+            "Van Gölü",
+            "Beyşehir Gölü",
+            "Tortum Gölü"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki göllerden hangisi bir heyelan set gölüdür?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Büyükçekmece Gölü",
+            "Sapanca Gölü",
+            "Tortum Gölü",
+            "Nemrut Gölü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de en yaygın görülen toprak tipi olan bozkır toprakları, en çok hangi bölgemizde görülür?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz ve Marmara",
+            "Akdeniz ve Ege",
+            "İç Anadolu ve Güneydoğu Anadolu",
+            "Doğu Anadolu ve Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Erzurum-Kars Platosu'nda çernezyom adı verilen verimli toprakların oluşmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bölgenin volkanik arazilerle kaplı olması",
+            "Yükseltinin fazla olması",
+            "Yaz yağışlarıyla yeşeren gür çayırların toprak altında kalması",
+            "Kışların çok sert geçmesi"
+          ]
+        },
+        {
+          "soruMetni": "Batı Toroslar'da tarımsal faaliyetlerin sınırlı olmasının ve nüfusun seyrek olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıllık yağış miktarının az olması",
+            "Arazinin çok engebeli ve karstik yapıda olması",
+            "Kışların çok soğuk ve karlı geçmesi",
+            "Ulaşımın sadece deniz yoluyla sağlanması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ova ve oluşum şekli eşleştirmelerinden hangisi yanlıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Çukurova - Delta Ovası",
+            "Konya Ovası - Tektonik Ova",
+            "Elmalı Ovası - Karstik Ova",
+            "Erzurum Ovası - Lav Örtüsü Ovası"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Doğu Karadeniz kıyılarının özelliklerinden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kıyıda girinti çıkıntının az olması",
+            "Kıyı ile iç kesimler arasında ulaşımın zor olması",
+            "Kıyıda falez oluşumunun yaygın olması",
+            "Kıta sahanlığının geniş olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yüksek dağların zirvelerinde buzul aşındırma ve biriktirme şekillerine rastlanması, aşağıdakilerden hangisinin kanıtıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türkiye'nin orta kuşakta yer aldığının",
+            "IV. Jeolojik Zaman'daki iklim değişikliklerinin",
+            "Fay hatlarının aktif olduğunun",
+            "Ortalama yükseltinin az olduğunun"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerden hangisinde rüzgarın oluşturduğu yerşekillerine rastlanma olasılığı en yüksektir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Doğu Karadeniz",
+            "İç Anadolu",
+            "Yıldız Dağları",
+            "Menteşe Yöresi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de akarsu aşındırmasının şiddetli olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akarsu boylarının kısa olması",
+            "Yıllık yağış miktarının az olması",
+            "Arazinin engebeli ve yatak eğimlerinin fazla olması",
+            "Akarsuların kapalı havzalara dökülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki delta ovalarından hangisi Ege Denizi kıyısında yer almaz?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Balat Ovası",
+            "Çarşamba Ovası",
+            "Menemen Ovası",
+            "Selçuk Ovası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de karstik arazilerin en az yaygın olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Batı Toroslar",
+            "Orta Toroslar",
+            "İç Anadolu",
+            "Ergene Havzası"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki göllerden hangisinin suları acıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Eğirdir Gölü",
+            "Beyşehir Gölü",
+            "Burdur Gölü",
+            "Hazar Gölü"
+          ]
+        },
+        {
+          "soruMetni": "İç Anadolu Bölgesi'ndeki platoların genel adı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Lav örtüsü platosu",
+            "Karstik plato",
+            "Tabaka düzlüğü platosu",
+            "Aşınım platosu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin aşağıdaki özelliklerinden hangisi göreceli konumu ile açıklanır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Dört mevsimin belirgin olarak yaşanması",
+            "Güneyden kuzeye gidildikçe sıcaklığın düşmesi",
+            "Doğu-batı yönlü dağ sıralarına sahip olması",
+            "Batı rüzgarlarının etkisinde kalması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki kıyı tiplerinden hangisi Türkiye'de görülmez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Enine kıyı",
+            "Boyuna kıyı",
+            "Ria tipi kıyı",
+            "Haliç tipi kıyı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ovalardan hangisi tektonik oluşumlu ovalara örnek olarak gösterilebilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bafra Ovası",
+            "Çarşamba Ovası",
+            "Erzincan Ovası",
+            "Çukurova"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri_3",
+      "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-3",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki toprak tiplerinden hangisi Türkiye'de sadece dar bir alanda görülür?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Terra-rossa",
+            "Çernezyom",
+            "Kahverengi orman toprağı",
+            "Alüvyal toprak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki akarsulardan hangisinin oluşturduğu delta ovası diğerlerinden farklı bir denizdedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kızılırmak",
+            "Yeşilırmak",
+            "Seyhan",
+            "Sakarya"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki göllerden hangisi volkanik set gölüne örnektir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Van Gölü",
+            "Tuz Gölü",
+            "Sapanca Gölü",
+            "Köyceğiz Gölü"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Karadeniz Bölümü'nde kıyı ile iç kesimler arasında ulaşımın geçitlerle sağlanmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kıyıda falezlerin yaygın olması",
+            "Dağların kıyıya paralel ve yüksek olması",
+            "Yıllık yağış miktarının fazla olması",
+            "Akarsu debilerinin yüksek olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de en yaygın görülen doğal afet aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Volkanik patlama",
+            "Deprem",
+            "Tsunami",
+            "Çığ"
+          ]
+        },
+        {
+          "soruMetni": "Menteşe Yöresi'nin dağlık ve engebeli olması, bu alanın hangi jeolojik süreçle ilgili olduğunu gösterir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Volkanizma",
+            "Orojenez",
+            "Buzullaşma",
+            "Rüzgar aşındırması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'deki kapalı havzaların oluşumundaki en önemli etken aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yerşekillerinin engebeli olması ve iklim",
+            "Bitki örtüsünün cılız olması",
+            "Arazinin volkanik olması",
+            "Toprak tipinin elverişsiz olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin ortalama yükseltisinin fazla olmasının sonuçlarından biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İklim çeşitliliğinin artması",
+            "Tarım ürünleri çeşitliliğinin artması",
+            "Kıyı ile iç kesimler arası ulaşımın kolaylaşması",
+            "Hidroelektrik potansiyelin yüksek olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki platolardan hangisi üzerinde tarımsal faaliyetlerden çok büyükbaş hayvancılık yapılır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cihanbeyli Platosu",
+            "Haymana Platosu",
+            "Erzurum-Kars Platosu",
+            "Gaziantep Platosu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük gölü olan Van Gölü'nün sularının sodalı olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çevresindeki volkanik kayaçlar",
+            "Gölün gideğeninin olmaması",
+            "Gölün çok derin olması",
+            "Bölgede yağışın az olması"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz iklim bölgesinin tipik toprağı olan terra-rossaların oluşumunda hangi kayaç türü etkilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kalker",
+            "Granit",
+            "Bazalt",
+            "Andezit"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi bir akarsuyun denge profiline ulaştığını gösterir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akış hızının fazla olması",
+            "Aşındırma gücünün yüksek olması",
+            "Yatak eğiminin azalmış olması",
+            "Hidroelektrik potansiyelinin yüksek olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'deki akarsuların denge profiline ulaşmamış olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akarsu boylarının kısa olması",
+            "Yağış rejimlerinin düzensiz olması",
+            "Arazinin yakın jeolojik zamanda toptan yükselmesi",
+            "Akarsuların açık havzalara dökülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerşekillerinden hangisinin oluşumunda rüzgar aşındırması doğrudan etkilidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Falez",
+            "Dolin",
+            "Mantarkaya",
+            "Sirk"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki göllerden hangisi kıyı set gölü oluşumuna örnektir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Abant Gölü",
+            "Büyükçekmece Gölü",
+            "Salda Gölü",
+            "Çıldır Gölü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de en şiddetli buzul aşındırmasının yaşandığı dağ aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Uludağ",
+            "Erciyes Dağı",
+            "Hakkari Dağları",
+            "Yıldız Dağları"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ova ve oluşum eşleştirmelerinden hangisi yanlıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Konya Ovası - Tektonik",
+            "Muğla Ovası - Karstik",
+            "Silifke Ovası - Delta",
+            "Iğdır Ovası - Buzul"
+          ]
+        },
+        {
+          "soruMetni": "İç Anadolu ve Güneydoğu Anadolu'da şiddetli rüzgar erozyonu yaşanırken, Karadeniz kıyılarında bu durumun görülmemesi ne ile açıklanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Arazinin eğimi",
+            "Bitki örtüsünün gür olması",
+            "Yükseltinin az olması",
+            "Toprağın killi yapıda olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki dağlardan hangisi Güneydoğu Toroslar'ın bir parçasıdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bolkar Dağları",
+            "Aladağlar",
+            "Tahtalı Dağları",
+            "Hakkari Dağları"
+          ]
+        },
+        {
+          "soruMetni": "I. Jeolojik Zaman'a ait araziler Türkiye'de en çok nerede bulunur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Zonguldak ve çevresi",
+            "Erzurum-Kars Platosu",
+            "Konya Havzası",
+            "Ege kıyıları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_yersekilleri_ve_ozellikleri_4",
+      "baslik": "Türkiye'nin Yerşekilleri ve Özellikleri-4",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_yersekilleri_ve_ozellikleri",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Kapadokya yöresinde bulunan peribacalarının oluşumunda hangi iki dış kuvvet birlikte etkili olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Rüzgar ve Buzullar",
+            "Akarsu ve Rüzgar",
+            "Akarsu ve Dalgalar",
+            "Dalga ve Buzullar"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük delta ovası olan Çukurova'yı hangi iki nehir oluşturmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fırat ve Dicle",
+            "Kızılırmak ve Yeşilırmak",
+            "Seyhan ve Ceyhan",
+            "Gediz ve Büyük Menderes"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi bir akarsu biriktirme şekli değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Delta",
+            "Birikinti konisi",
+            "Kırgıbayır",
+            "Irmak adası"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki göllerden hangisi Türkiye'nin en derin gölü olma özelliğini taşır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Van Gölü",
+            "Beyşehir Gölü",
+            "Tuz Gölü",
+            "Eğirdir Gölü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'deki ovaların büyük çoğunluğunun oluşumunda hangi iç kuvvet doğrudan etkili olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Volkanizma",
+            "Orojenez",
+            "Tektonik hareketler",
+            "Epirojenez"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerlerden hangisinde dalga aşındırması sonucu oluşan falezlere rastlanma olasılığı en yüksektir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Batı Karadeniz kıyıları",
+            "Ege kıyıları",
+            "Çukurova deltası",
+            "Çarşamba deltası"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Doğu Anadolu Bölgesi'nin genel yerşekli özelliklerinden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yükselti ve engebenin fazla olması",
+            "Geniş volkanik plato ve dağların varlığı",
+            "Tektonik ova sayısının fazla olması",
+            "Geniş delta ovalarına sahip olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki jeolojik zamanların hangisinde Türkiye'de linyit, bor ve tuz yatakları oluşmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "I. Zaman",
+            "II. Zaman",
+            "III. Zaman",
+            "IV. Zaman"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi Kuzey Anadolu Fay Hattı üzerinde yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Erzincan",
+            "Tokat",
+            "Bolu",
+            "Kırşehir"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de akarsuların hidroelektrik potansiyelinin en yüksek olduğu bölge hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Marmara Bölgesi",
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "İç Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Büyük Menderes, Küçük Menderes ve Gediz nehirlerinin yataklarında menderesler çizerek akmasının temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yatak eğimlerinin çok az olması",
+            "Rejimlerinin düzensiz olması",
+            "Bol alüvyon taşımaları",
+            "Açık havzaya dökülmeleri"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerşekillerinden hangisinin oluşumunda dış kuvvetlerin etkisi yoktur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Peribacası",
+            "Falez",
+            "Horst",
+            "Delta"
+          ]
+        },
+        {
+          "soruMetni": "Obruk Platosu'nun bu ismi almasında, bölgede hangi yerşeklinin yaygın olması etkili olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Volkan konileri",
+            "Buzul vadileri",
+            "Karstik çöküntü çukurları",
+            "Heyelan setleri"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Karadeniz'deki yaylaların varlığı, öncelikle hangi ekonomik faaliyeti desteklemiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sanayi",
+            "Madencilik",
+            "Büyükbaş hayvancılık",
+            "Kış turizmi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin genç oluşumlu bir arazi olduğunu gösteren kanıtlardan biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ortalama yükseltinin fazla olması",
+            "Ilıman iklim kuşağında yer alması",
+            "Tektonik depremlerin sık yaşanması",
+            "Jeotermal kaynakların zengin olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de laterit benzeri toprakların görüldüğü yer aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Konya Ovası",
+            "Erzurum-Kars Platosu",
+            "Doğu Karadeniz kıyıları",
+            "Teke Platosu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ovalardan hangisi bir dağ eteği ovası özelliği gösterir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bursa Ovası",
+            "Konya Ovası",
+            "Ergene Ovası",
+            "Çukurova"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye kıyılarında gelgitin etkisiz olması aşağıdakilerden hangisine ortam hazırlamıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fiyort tipi kıyıların oluşmasına",
+            "Dalmaçya tipi kıyıların oluşmasına",
+            "Delta ovalarının kolay oluşmasına",
+            "Falezlerin yaygınlaşmasına"
+          ]
+        },
+        {
+          "soruMetni": "Sivas ve Çankırı çevresinde yaygın olarak bulunan jips karstı üzerinde oluşan yerşekilleri hangi bölgede yoğunlaşmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Ege Bölgesi",
+            "Akdeniz Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "İç Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki dağ sıralarından hangisi Ege Bölgesi'nde yer alan kırık dağlarından biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kaz Dağları",
+            "Bozdağlar",
+            "Aydın Dağları",
+            "Küre Dağları"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu_1",
+      "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-1",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin matematik konumunun iklim üzerindeki etkilerinden biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Batıdan doğuya doğru sıcaklığın azalması",
+            "Dört mevsimin belirgin olarak yaşanması",
+            "Kısa mesafelerde iklimin değişmesi",
+            "Kıyı ile iç kesimler arasında sıcaklık farkı olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de batıdan doğuya doğru gidildikçe yıllık ortalama sıcaklıkların düşmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Enlem",
+            "Yükselti",
+            "Karasallık",
+            "Bakı"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz ve Akdeniz bölgelerinde dağların kıyıya paralel uzanması, aşağıdakilerden hangisine neden olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kıyı ile iç kesimler arasında iklim farkının belirginleşmesine",
+            "Yıllık yağış miktarının azalmasına",
+            "Kıyılarda donlu gün sayısının artmasına",
+            "Cephesel yağışların azalmasına"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'nde dağların kıyıya dik uzanması, aşağıdakilerden hangisine olanak sağlamıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yıllık sıcaklık farkının artmasına",
+            "Denizel iklimin iç kesimlere kadar sokulmasına",
+            "Karstik arazilerin geniş yer kaplamasına",
+            "Bölgenin kışın daha soğuk olmasına"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin özel konumunun iklim üzerindeki etkilerinden biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Üç tarafının denizlerle çevrili olması",
+            "Ortalama yükseltisinin fazla olması",
+            "Güneyden kuzeye gidildikçe sıcaklıkların azalması",
+            "Doğu-batı yönlü dağ sıralarının bulunması"
+          ]
+        },
+        {
+          "soruMetni": "Toros Dağları'nın güneye bakan yamaçlarının kuzeye bakan yamaçlarına göre daha sıcak olmasını sağlayan faktör aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bakı",
+            "Enlem",
+            "Yükselti",
+            "Denizellik"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yıllık sıcaklık farkının en fazla olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Akdeniz Bölgesi",
+            "Karadeniz Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Ege Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yıllık sıcaklık farkının en az olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İç Anadolu Bölgesi",
+            "Karadeniz Bölgesi",
+            "Güneydoğu Anadolu Bölgesi",
+            "Marmara Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Yaz aylarında Türkiye'nin en sıcak bölgesinin Güneydoğu Anadolu olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yükseltinin az olması",
+            "Enlem ve karasallık",
+            "Bitki örtüsünün cılız olması",
+            "Fay hatları üzerinde olması"
+          ]
+        },
+        {
+          "soruMetni": "Kış aylarında Türkiye'nin en soğuk bölgesinin Doğu Anadolu olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yükselti ve karasallık",
+            "Bitki örtüsünün çayır olması",
+            "Volkanik arazilerin varlığı",
+            "Akarsu ağının sık olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de en fazla yağış alan yer aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Menteşe Yöresi",
+            "Doğu Karadeniz",
+            "Yıldız Dağları",
+            "Batı Toroslar"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de en az yağış alan yer aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ergene Havzası",
+            "Güneydoğu Anadolu",
+            "Tuz Gölü ve çevresi",
+            "Malatya Ovası"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz iklim bölgesinde yağışların en fazla düştüğü mevsim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kış",
+            "İlkbahar",
+            "Yaz",
+            "Sonbahar"
+          ]
+        },
+        {
+          "soruMetni": "İç Anadolu Bölgesi'ndeki karasal iklimde yağışların en fazla düştüğü mevsim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kış",
+            "İlkbahar",
+            "Yaz",
+            "Sonbahar"
+          ]
+        },
+        {
+          "soruMetni": "Erzurum-Kars Platosu'nda yağışların en fazla düştüğü mevsim aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kış",
+            "İlkbahar",
+            "Yaz",
+            "Sonbahar"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz iklim bölgesinin yağış rejimi için aşağıdakilerden hangisi söylenebilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "En fazla yağış kışın düşer",
+            "Yağışlar mevsimlere düzenli dağılmıştır",
+            "En kurak mevsim yazdır",
+            "İlkbahar yağışları belirgindir"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Akdeniz ikliminin karakteristik özelliklerinden biridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yazlar sıcak ve kurak, kışlar ılık ve yağışlı",
+            "Her mevsim yağışlı ve ılıman",
+            "Kışlar çok soğuk ve karlı, yazlar serin",
+            "Yazlar kurak, kışlar soğuk ve kar yağışlı"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz ikliminin bitki örtüsü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bozkır",
+            "Çayır",
+            "Maki",
+            "Tundra"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi maki topluluğunu oluşturan bitkilerden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Zeytin",
+            "Defne",
+            "Keçiboynuzu",
+            "Ladin"
+          ]
+        },
+        {
+          "soruMetni": "Makilerin tahrip edildiği alanlarda ortaya çıkan daha kısa boylu çalılara ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Garig",
+            "Psödomaki",
+            "Bozkır",
+            "Tundra"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu_2",
+      "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-2",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Karadeniz ikliminin karakteristik bitki örtüsü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kestane ve gürgen ormanları",
+            "İğne yapraklı tayga ormanları",
+            "Kurakçıl otlar ve çalılar",
+            "Alpin çayırlar"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz Bölgesi'nde kıyıdan itibaren yükseldikçe görülen orman kuşağında aşağıdakilerden hangisi en yüksekte yer alır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Geniş yapraklı ağaçlar",
+            "İğne yapraklı ağaçlar",
+            "Makiler",
+            "Zeytin ağaçları"
+          ]
+        },
+        {
+          "soruMetni": "İç Anadolu Bölgesi'nin doğal bitki örtüsü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Maki",
+            "Orman",
+            "Bozkır",
+            "Çayır"
+          ]
+        },
+        {
+          "soruMetni": "Erzurum-Kars Platosu'nda yaz yağışlarına bağlı olarak gelişen gür ot topluluklarına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Alpin çayırlar",
+            "Antropojen bozkır",
+            "Garig",
+            "Psödomaki"
+          ]
+        },
+        {
+          "soruMetni": "İç bölgelerde ormanların insanlar tarafından tahrip edilmesi sonucu oluşan bozkırlara ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Antropojen bozkır",
+            "Yalancı maki",
+            "Relikt bitki",
+            "Endemik bitki"
+          ]
+        },
+        {
+          "soruMetni": "Yalnızca belirli bir bölgede yetişen ve başka yerde görülmeyen bitki türlerine ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Endemik",
+            "Relikt",
+            "Kozmopolit",
+            "Formasyon"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de endemik bitki türü çeşitliliğinin en fazla olduğu yer neresidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz Dağları",
+            "Toros Dağları",
+            "Ergene Havzası",
+            "Tuz Gölü çevresi"
+          ]
+        },
+        {
+          "soruMetni": "Köyceğiz Gölü çevresinde yaygın olarak bulunan endemik ağaç türü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kazdağı Göknarı",
+            "Sığla Ağacı",
+            "İspir Meşesi",
+            "Datça Hurması"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz Bölgesi'nde, Akdeniz iklim kuşağına ait olmayan ancak makiye benzeyen çalılıklara ne ad verilir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Garig",
+            "Bozkır",
+            "Tundra",
+            "Psödomaki"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz İklimi'nin belirgin özellikleri arasında aşağıdakilerden hangileri yer alır?\nI. Yağış rejimi düzenlidir.\nII. En yağışlı mevsim kıştır.\nIII. Doğal bitki örtüsü geniş yapraklı ormanlardır.",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de görülen iklim tiplerinin çeşitlilik göstermesinde aşağıdakilerden hangileri doğrudan etkilidir?\nI. Dağların uzanış doğrultusu\nII. Üç tarafının denizlerle çevrili olması\nIII. Doğu-Batı doğrultusunda geniş bir alana yayılması",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinde karasal iklim en belirgin şekilde yaşanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mersin",
+            "Sivas",
+            "Muğla",
+            "Artvin"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de buharlaşma şiddetinin en fazla olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz",
+            "Marmara",
+            "Güneydoğu Anadolu",
+            "Ege"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de güneşlenme süresinin en az olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Doğu Karadeniz",
+            "Akdeniz",
+            "Güneydoğu Anadolu",
+            "İç Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de güneşlenme süresinin en fazla olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu Karadeniz",
+            "Yıldız Dağları",
+            "Güneydoğu Anadolu",
+            "Batı Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de kış aylarında donlu gün sayısının en az olduğu yer neresidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Erzurum çevresi",
+            "Akdeniz kıyı şeridi",
+            "İç Anadolu platosu",
+            "Edirne çevresi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de kış aylarında donlu gün sayısının en fazla olduğu yer neresidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Ege kıyıları",
+            "Antalya Körfezi",
+            "Çukurova",
+            "Doğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'yi kuzeybatıdan etkileyen soğuk ve kuru yerel rüzgar aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Lodos",
+            "Kıble",
+            "Karayel",
+            "Samyeli"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'yi güneybatıdan etkileyen ılık ve nemli yerel rüzgar aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Poyraz",
+            "Lodos",
+            "Yıldız",
+            "Etezyen"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'yi kış aylarında etkisi altına alan, Sibirya kökenli soğuk ve kuru hava kütlesi hangi basınç merkezinden kaynaklanır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sibirya Termik Yüksek Basıncı",
+            "Basra Termik Alçak Basıncı",
+            "İzlanda Dinamik Alçak Basıncı",
+            "Asor Dinamik Yüksek Basıncı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu_3",
+      "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-3",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'yi yaz aylarında etkisi altına alan, Güneydoğu'da aşırı sıcak ve kuraklığa neden olan basınç merkezi hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sibirya Yüksek Basıncı",
+            "İzlanda Alçak Basıncı",
+            "Asor Yüksek Basıncı",
+            "Basra Alçak Basıncı"
+          ]
+        },
+        {
+          "soruMetni": "Rize'de turunçgil, Iğdır'da pamuk, Anamur'da muz yetiştirilebilmesi aşağıdakilerden hangisine örnektir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Mikroklima",
+            "Makroklima",
+            "Matematik konum",
+            "Toprak yapısı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de orman varlığının en zengin olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ege Bölgesi",
+            "İç Anadolu Bölgesi",
+            "Karadeniz Bölgesi",
+            "Güneydoğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de orman varlığının en fakir olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Akdeniz Bölgesi",
+            "Marmara Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Güneydoğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "İç Anadolu'da ilkbaharda görülen ani ve kısa süreli sağanak yağışların oluşum türü nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Orografik",
+            "Konveksiyonel",
+            "Cephesel",
+            "Muson"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz Dağları'nın kuzey yamaçlarının bol yağış alması hangi yağış oluşum türüne örnektir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Konveksiyonel",
+            "Cephesel",
+            "Orografik",
+            "Muson"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de özellikle kış aylarında Akdeniz iklim bölgesinde görülen yağışların büyük çoğunluğu hangi oluşum türüne aittir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cephesel",
+            "Konveksiyonel",
+            "Orografik",
+            "Zenital"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz iklim bölgesinde maki üst sınırı güneyden kuzeye gidildikçe neden alçalır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yükselti",
+            "Enlem",
+            "Denizellik",
+            "Yağış miktarı"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz Bölgesi'nde orman alt sınırının deniz seviyesinden başlamasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Toprak yapısı",
+            "Yükseltinin az olması",
+            "Nemlilik ve yağış fazlalığı",
+            "Dağların kıyıya paralel uzanması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin yıllık yağış miktarı diğerlerinden daha azdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Rize",
+            "Antalya",
+            "Zonguldak",
+            "Aksaray"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'nde yaz aylarında kuzeyden esen serin rüzgara ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İmbat",
+            "Lodos",
+            "Samyeli",
+            "Fön"
+          ]
+        },
+        {
+          "soruMetni": "Bir dağ yamacı boyunca alçalan hava kütlesinin sıcaklığı artırmasıyla oluşan rüzgara ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Lodos",
+            "Fön",
+            "Meltem",
+            "Karayel"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de mutlak nem miktarının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İç Anadolu",
+            "Akdeniz",
+            "Doğu Anadolu",
+            "Güneydoğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de bağıl nem oranının yıl boyunca en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Karadeniz",
+            "Ege",
+            "Marmara",
+            "Güneydoğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de karasallığın sonuçlarından biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yıllık ve günlük sıcaklık farklarının fazla olması",
+            "Kışların sert ve kar yağışlı geçmesi",
+            "Yağış rejiminin düzenli olması",
+            "Bitki örtüsünün bozkır olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de denizelliğin görüldüğü yerlerin ortak özelliğidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yıllık sıcaklık farkının az olması",
+            "En fazla yağışın yazın düşmesi",
+            "Donlu gün sayısının fazla olması",
+            "Bitki örtüsünün çayır olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de aynı enlem üzerinde yer alan İzmir ve Van'ın yıllık ortalama sıcaklıklarının farklı olmasının nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yükselti ve karasallık",
+            "Bakı farkı",
+            "Enlem farkı",
+            "Toprak türü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de en yaygın görülen iklim tipi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz iklimi",
+            "Akdeniz iklimi",
+            "Karasal iklim",
+            "Sert karasal iklim"
+          ]
+        },
+        {
+          "soruMetni": "Güneydoğu Anadolu Bölgesi'nde yaz kuraklığının çok şiddetli olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Enlem ve Basra Alçak Basıncı",
+            "Yükseltinin az olması",
+            "Bitki örtüsünün cılızlığı",
+            "Fırat ve Dicle nehirleri"
+          ]
+        },
+        {
+          "soruMetni": "Marmara Bölgesi'nin \"geçiş iklimi\" özelliği taşımasının kanıtı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ortalama yükseltisinin az olması",
+            "Farklı iklim tiplerinin bir arada görülmesi",
+            "Boğazlara sahip olması",
+            "Sanayinin gelişmiş olması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyenin_iklimi_ve_bitki_ortusu_4",
+      "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-4",
+      "kategoriId": "cografya",
+      "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de en geniş alanda etkili olan ve güneydoğudan esen sıcak, kuru rüzgar aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Lodos",
+            "Kıble",
+            "Samyeli",
+            "Poyraz"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin iklim çeşitliliği aşağıdakilerden hangisini doğrudan etkilemiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fay hatlarının dağılışını",
+            "Maden çeşitliliğini",
+            "Tarım ürünü ve bitki örtüsü çeşitliliğini",
+            "Ortalama yükseltiyi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Kızılçam ormanlarının tahrip edildiği yerlerde ortaya çıkan bitki topluluğudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Maki",
+            "Bozkır",
+            "Çayır",
+            "Psödomaki"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de orman üst sınırının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Karadeniz",
+            "Marmara",
+            "Ege",
+            "Doğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Geçmiş jeolojik dönemlerden kalma, günümüz iklim koşullarında varlığını sürdüren bitkilere ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Endemik bitki",
+            "Relikt bitki",
+            "Kozmopolit bitki",
+            "Formasyon"
+          ]
+        },
+        {
+          "soruMetni": "Ergene Havzası'nda karasal iklimin görülmesi, bu bölümün hangi özelliğinden kaynaklanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ortalama yükseltisinin az olması",
+            "Deniz etkisine kapalı olması",
+            "Sanayinin gelişmiş olması",
+            "Topraklarının verimli olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ağaç türlerinden hangisi Türkiye'deki Karadeniz ormanlarına ait değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kayın",
+            "Ladin",
+            "Gürgen",
+            "Sandal"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bitki türlerinden hangisi İç Anadolu bozkırlarına ait değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Geven",
+            "Çoban yastığı",
+            "Fındık",
+            "Sığır kuyruğu"
+          ]
+        },
+        {
+          "soruMetni": "Batı Toroslar'ın yüksek kesimlerinde yaygın olarak görülen ve endemik önemi olan ağaç türü hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ladin",
+            "Sedir",
+            "Kayın",
+            "Kestane"
+          ]
+        },
+        {
+          "soruMetni": "Güneydoğu Anadolu Bölgesi'nde yaz aylarında yaşanan aşırı kuraklığın temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yükseltinin azlığı",
+            "Buharlaşmanın şiddetli olması",
+            "Akarsu rejimlerinin düzensizliği",
+            "Toprağın verimsizliği"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi Türkiye'nin en kurak alanı içinde yer alır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Antalya",
+            "Rize",
+            "Kars",
+            "Karaman"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerlerden hangisi Türkiye'nin en yağışlı alanlarından biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu Karadeniz",
+            "Menteşe Yöresi",
+            "Iğdır Ovası",
+            "Yıldız Dağları"
+          ]
+        },
+        {
+          "soruMetni": "Hangi iklim tipinin görüldüğü alanlarda kimyasal çözünme en fazladır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Karadeniz iklimi",
+            "Karasal iklim",
+            "Sert karasal iklim",
+            "Güneydoğu Anadolu iklimi"
+          ]
+        },
+        {
+          "soruMetni": "Hangi iklim tipinin görüldüğü alanlarda fiziksel çözünme en fazladır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz iklimi",
+            "Akdeniz iklimi",
+            "İç Anadolu iklimi",
+            "Marmara iklimi"
+          ]
+        },
+        {
+          "soruMetni": "Lodos rüzgarının estiği dönemlerde soba zehirlenmelerinin artmasının nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sıcaklığı aşırı düşürmesi",
+            "Bacadan ters eserek dumanı içeri vermesi",
+            "Bol miktarda yağmur getirmesi",
+            "Havasızlığa neden olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de sisli gün sayısının en fazla olduğu yer neresidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güneydoğu Anadolu",
+            "Akdeniz kıyıları",
+            "Karadeniz kıyıları",
+            "Ege kıyıları"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki dağların hangisinde bakı etkisinden dolayı güney yamaçtaki yerleşme ve tarım sınırı kuzey yamaçtan daha yüksektir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kaçkar Dağları",
+            "Küre Dağları",
+            "Toros Dağları",
+            "Yıldız Dağları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de bitki örtüsü çeşitliliğinin fazla olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nüfusun yoğun olması",
+            "İklim ve yerşekli çeşitliliği",
+            "Toprak türlerinin tekdüze olması",
+            "Akarsu boylarının kısa olması"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz ve Ege kıyılarında yaygın olarak görülen, kırmızı renkli Akdeniz toprağının adı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çernezyom",
+            "Terra-rossa",
+            "Podzol",
+            "Alüvyal"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin iklimi üzerinde aşağıdakilerden hangisinin etkisi yoktur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yükselti",
+            "Enlem",
+            "Gelgit",
+            "Karasallık"
+          ]
+        }
+      ]
     }
 
      ],
