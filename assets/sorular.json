@@ -318,212 +318,212 @@
   
   "quizzes": [
     {
-      "id": "turkiyenin_iklimi_ve_bitki_ortusu_4",
-      "baslik": "Türkiye'nin İklimi ve Bitki Örtüsü-4",
+      "id": "turkiyede_madenler_ve_enerji_kaynaklar_4",
+      "baslik": "Türkiye'de Madenler ve Enerji Kaynakları-4",
       "kategoriId": "cografya",
-      "konuId": "turkiyenin_iklimi_ve_bitki_ortusu",
+      "konuId": "turkiyede_madenler_ve_enerji_kaynaklari",
       "isNew": true,
       "soruSayisi": 20,
       "sureDakika": 20,
       "sorular": [
         {
-          "soruMetni": "Türkiye'de en geniş alanda etkili olan ve güneydoğudan esen sıcak, kuru rüzgar aşağıdakilerden hangisidir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Lodos",
-            "Kıble",
-            "Samyeli",
-            "Poyraz"
-          ]
-        },
-        {
-          "soruMetni": "Türkiye'nin iklim çeşitliliği aşağıdakilerden hangisini doğrudan etkilemiştir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Fay hatlarının dağılışını",
-            "Maden çeşitliliğini",
-            "Tarım ürünü ve bitki örtüsü çeşitliliğini",
-            "Ortalama yükseltiyi"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdakilerden hangisi Kızılçam ormanlarının tahrip edildiği yerlerde ortaya çıkan bitki topluluğudur?",
+          "soruMetni": "Kütahya, Bilecik ve Çanakkale hangi sanayi kolu ile ön plana çıkmıştır?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Maki",
-            "Bozkır",
-            "Çayır",
-            "Psödomaki"
+            "Seramik ve Porselen",
+            "Petrokimya",
+            "Gübre",
+            "Gemi yapımı"
           ]
         },
         {
-          "soruMetni": "Türkiye'de orman üst sınırının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
-          "dogruCevapIndex": 3,
+          "soruMetni": "Türkiye'de hammaddesi en yaygın olduğu için en fazla dağılış gösteren sanayi kolu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Otomotiv",
+            "Demir-Çelik",
+            "Çimento",
+            "İlaç"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de kağıt fabrikalarının genellikle kıyı kesimlerde kurulmasının nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Orman hammaddesi ve su kaynaklarına yakınlık",
+            "Pazara yakınlık",
+            "Ucuz işgücü",
+            "Enerji kaynakları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de gübre fabrikalarının büyük çoğunluğunun kıyıda kurulmasının nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hammadde ithal edilmesi",
+            "Su kaynaklarının bol olması",
+            "İklimin elverişli olması",
+            "Tüketimin fazla olması"
+          ]
+        },
+        {
+          "soruMetni": "Ayçiçek yağı fabrikaları hangi bölgemizde yoğunlaşmıştır?",
+          "dogruCevapIndex": 1,
           "secenekler": [
             "Karadeniz",
             "Marmara",
-            "Ege",
-            "Doğu Anadolu"
+            "Doğu Anadolu",
+            "Güneydoğu Anadolu"
           ]
         },
         {
-          "soruMetni": "Geçmiş jeolojik dönemlerden kalma, günümüz iklim koşullarında varlığını sürdüren bitkilere ne ad verilir?",
+          "soruMetni": "Zeytinyağı fabrikaları hangi bölgemizde yoğunlaşmıştır?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Endemik bitki",
-            "Relikt bitki",
-            "Kozmopolit bitki",
-            "Formasyon"
+            "İç Anadolu",
+            "Ege Bölgesi",
+            "Doğu Anadolu",
+            "Karadeniz"
           ]
         },
         {
-          "soruMetni": "Ergene Havzası'nda karasal iklimin görülmesi, bu bölümün hangi özelliğinden kaynaklanır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Ortalama yükseltisinin az olması",
-            "Deniz etkisine kapalı olması",
-            "Sanayinin gelişmiş olması",
-            "Topraklarının verimli olması"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki ağaç türlerinden hangisi Türkiye'deki Karadeniz ormanlarına ait değildir?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Kayın",
-            "Ladin",
-            "Gürgen",
-            "Sandal"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki bitki türlerinden hangisi İç Anadolu bozkırlarına ait değildir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Geven",
-            "Çoban yastığı",
-            "Fındık",
-            "Sığır kuyruğu"
-          ]
-        },
-        {
-          "soruMetni": "Batı Toroslar'ın yüksek kesimlerinde yaygın olarak görülen ve endemik önemi olan ağaç türü hangisidir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Ladin",
-            "Sedir",
-            "Kayın",
-            "Kestane"
-          ]
-        },
-        {
-          "soruMetni": "Güneydoğu Anadolu Bölgesi'nde yaz aylarında yaşanan aşırı kuraklığın temel nedeni nedir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Yükseltinin azlığı",
-            "Buharlaşmanın şiddetli olması",
-            "Akarsu rejimlerinin düzensizliği",
-            "Toprağın verimsizliği"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki illerden hangisi Türkiye'nin en kurak alanı içinde yer alır?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Antalya",
-            "Rize",
-            "Kars",
-            "Karaman"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki yerlerden hangisi Türkiye'nin en yağışlı alanlarından biri değildir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Doğu Karadeniz",
-            "Menteşe Yöresi",
-            "Iğdır Ovası",
-            "Yıldız Dağları"
-          ]
-        },
-        {
-          "soruMetni": "Hangi iklim tipinin görüldüğü alanlarda kimyasal çözünme en fazladır?",
+          "soruMetni": "İstanbul-Tuzla, Yalova ve Gölcük hangi sanayi kolunun geliştiği merkezlerdir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Karadeniz iklimi",
-            "Karasal iklim",
-            "Sert karasal iklim",
-            "Güneydoğu Anadolu iklimi"
+            "Gemi yapımı",
+            "Vagon sanayisi",
+            "Uçak sanayisi",
+            "Cam sanayisi"
           ]
         },
         {
-          "soruMetni": "Hangi iklim tipinin görüldüğü alanlarda fiziksel çözünme en fazladır?",
+          "soruMetni": "Sivas, Eskişehir ve Adapazarı'nda hangi ulaşım aracına yönelik sanayi gelişmiştir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Karadeniz iklimi",
-            "Akdeniz iklimi",
-            "İç Anadolu iklimi",
-            "Marmara iklimi"
+            "Otomobil",
+            "Gemi",
+            "Lokomotif ve Vagon",
+            "Uçak"
           ]
         },
         {
-          "soruMetni": "Lodos rüzgarının estiği dönemlerde soba zehirlenmelerinin artmasının nedeni nedir?",
+          "soruMetni": "Ankara ve Eskişehir'de hangi savunma sanayisi kolu gelişmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Uçak ve helikopter",
+            "Tank",
+            "Gemi",
+            "Ağır silah"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük petrokimya tesisi olan PETKİM hangi ilimizde yer almaktadır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İzmir",
+            "Mersin",
+            "Kocaeli",
+            "Batman"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerin hangisinde sanayileşme en az düzeydedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Marmara Bölgesi",
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Akdeniz Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerin hangisinde sanayileşme en yoğun düzeydedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İç Anadolu Bölgesi",
+            "Karadeniz Bölgesi",
+            "Marmara Bölgesi",
+            "Güneydoğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "GAP projesinin tamamlanmasıyla Güneydoğu Anadolu Bölgesi'nde en çok hangi sanayi kollarının gelişmesi beklenir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Sıcaklığı aşırı düşürmesi",
-            "Bacadan ters eserek dumanı içeri vermesi",
-            "Bol miktarda yağmur getirmesi",
-            "Havasızlığa neden olması"
+            "Otomotiv ve Savunma",
+            "Tarıma dayalı",
+            "Demir-Çelik ve Metalürji",
+            "Orman ürünleri"
           ]
         },
         {
-          "soruMetni": "Türkiye'de sisli gün sayısının en fazla olduğu yer neresidir?",
+          "soruMetni": "Doğu Anadolu Bölgesi'ndeki sanayi tesisleri ağırlıklı olarak neye dayanır?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Güneydoğu Anadolu",
-            "Akdeniz kıyıları",
-            "Karadeniz kıyıları",
-            "Ege kıyıları"
+            "Teknoloji ve bilişim",
+            "Petrokimya",
+            "Tarım ve hayvancılık",
+            "Madencilik"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki dağların hangisinde bakı etkisinden dolayı güney yamaçtaki yerleşme ve tarım sınırı kuzey yamaçtan daha yüksektir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Kaçkar Dağları",
-            "Küre Dağları",
-            "Toros Dağları",
-            "Yıldız Dağları"
-          ]
-        },
-        {
-          "soruMetni": "Türkiye'de bitki örtüsü çeşitliliğinin fazla olmasının temel nedeni aşağıdakilerden hangisidir?",
+          "soruMetni": "Samsun'da bakır, Antalya'da ferro-krom işletmelerinin bulunması, bu şehirlerin hangi özelliğinden kaynaklanır?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Nüfusun yoğun olması",
-            "İklim ve yerşekli çeşitliliği",
-            "Toprak türlerinin tekdüze olması",
-            "Akarsu boylarının kısa olması"
+            "Hammaddeye yakınlık",
+            "Ulaşım ve hinterlant özellikleri",
+            "Ucuz işgücü",
+            "Enerji kaynakları"
           ]
         },
         {
-          "soruMetni": "Akdeniz ve Ege kıyılarında yaygın olarak görülen, kırmızı renkli Akdeniz toprağının adı nedir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Çernezyom",
-            "Terra-rossa",
-            "Podzol",
-            "Alüvyal"
-          ]
-        },
-        {
-          "soruMetni": "Türkiye'nin iklimi üzerinde aşağıdakilerden hangisinin etkisi yoktur?",
+          "soruMetni": "Türkiye'de sanayinin gelişmesi aşağıdakilerden hangisine yol açmaz?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Yükselti",
-            "Enlem",
-            "Gelgit",
-            "Karasallık"
+            "Kentleşme hızının artmasına",
+            "İşsizlik oranlarının azalmasına",
+            "Kırsal nüfus oranının artmasına",
+            "Dış ticarette sanayi ürünleri payının artmasına"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de sanayinin yapısal sorunlarından biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sermaye yetersizliği",
+            "Hammadde çeşitliliğinin az olması",
+            "Nitelikli eleman eksikliği",
+            "Enerjide dışa bağımlılık"
+          ]
+        },
+        {
+          "soruMetni": "Paşabahçe, Sinop ve Mersin'de fabrikaları bulunan sanayi kolu hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çimento",
+            "Cam",
+            "Seramik",
+            "Gübre"
+          ]
+        },
+        {
+          "soruMetni": "Kayseri, İstanbul ve Bursa hangi sanayi kolunda markalaşmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tekstil",
+            "Mobilya",
+            "Gıda",
+            "Otomotiv"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerden hangisi Türkiye'nin önemli \"sanayi kentleri\" arasında yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kocaeli",
+            "Gaziantep",
+            "Bursa",
+            "Sinop"
           ]
         }
       ]

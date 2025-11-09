@@ -13950,6 +13950,2096 @@
           ]
         }
       ]
+    },
+    {
+      "id": "turkiyede_nufus_ve_yerlesme_2",
+      "baslik": "Türkiye'de Nüfus ve Yerleşme-2",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_nufus_ve_yerlesme",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de çalışan nüfusun ekonomik faaliyet kollarına dağılımında en büyük pay hangi sektöre aittir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tarım",
+            "Sanayi",
+            "Hizmet",
+            "Madencilik"
+          ]
+        },
+        {
+          "soruMetni": "Çalışan nüfus içinde tarım sektörünün payının azalması, sanayi ve hizmet sektörlerinin payının artması neyin göstergesidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nüfusun azaldığının",
+            "Ülkenin gelişmekte olduğunun",
+            "Tarımsal verimin düştüğünün",
+            "İşsizliğin arttığının"
+          ]
+        },
+        {
+          "soruMetni": "Kırsal kesimlerde konut yapı malzemesi olarak ahşabın en yaygın kullanıldığı bölge neresidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İç Anadolu",
+            "Karadeniz",
+            "Akdeniz",
+            "Güneydoğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Kırsal kesimlerde konut yapı malzemesi olarak kerpicin en yaygın kullanıldığı bölgeler hangileridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz ve Akdeniz",
+            "İç Anadolu ve Güneydoğu Anadolu",
+            "Ege ve Marmara",
+            "Doğu Anadolu ve Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz ve Doğu Anadolu'nun kırsal kesimlerinde taş evlerin yaygın olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Arazinin jeolojik yapısı",
+            "Güvenlik ihtiyacı",
+            "İklimin çok soğuk olması",
+            "Ormanların az olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'deki köy altı yerleşmelerinden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Mezra",
+            "Kom",
+            "Divan",
+            "Bucak"
+          ]
+        },
+        {
+          "soruMetni": "Özellikle Doğu ve Güneydoğu Anadolu'da görülen, köyden ayrılmış ancak idari olarak köye bağlı olan tarım ve hayvancılık yapılan yerleşmelere ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Mezra",
+            "Oba",
+            "Dam",
+            "Çiftlik"
+          ]
+        },
+        {
+          "soruMetni": "Batı Karadeniz'e özgü, birbirine uzak birkaç mahallenin birleşmesiyle oluşan köy altı yerleşmesi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çiftlik",
+            "Divan",
+            "Ağıl",
+            "Kom"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de nüfus sayımlarının temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kişi başına düşen geliri belirlemek",
+            "Ülkenin demografik, sosyal ve ekonomik yapısını belirlemek",
+            "Seçmen sayısını tespit etmek",
+            "Asker sayısını belirlemek"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de nüfusun yapısında gözlemlenen değişimler arasında aşağıdakilerden hangileri yer alır?\nI. Ortalama yaşam süresinin uzaması\nII. Bağımlı nüfus oranının azalması\nIII. Çalışan nüfusun yaş ortalamasının yükselmesi",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Şehirlerin etki alanları belirlenirken aşağıdakilerden hangisi en önemli ölçüt olarak kullanılır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Nüfus miktarı",
+            "Yüzölçümü",
+            "Fonksiyonel özellikleri ve çeşitliliği",
+            "Coğrafi konumu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerimizden hangisinin gelişiminde sanayi ve liman fonksiyonu en etkilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İzmir",
+            "Konya",
+            "Erzurum",
+            "Sivas"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerimizden hangisinin gelişiminde madencilik ve enerji kaynakları doğrudan etkili olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Antalya",
+            "Edirne",
+            "Zonguldak",
+            "Trabzon"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de nüfusun dağılışını etkileyen faktörler arasında aşağıdakilerden hangileri doğal faktörlerdendir?\nI. Yüzey şekillerinin engebesi\nII. Sanayi bölgelerinin varlığı\nIII. İklim koşulları",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de göçler sonucunda şehirlerde ortaya çıkan en önemli mekânsal sorun nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İşsizliğin artması",
+            "Eğitim seviyesinin düşmesi",
+            "Çarpık kentleşme ve altyapı yetersizliği",
+            "Kültürel çatışmalar"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de 1960'lı yıllarda başlayan ve yoğun olarak Batı Avrupa ülkelerine yönelik gerçekleşen göç türü hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Beyin göçü",
+            "Mülteci göçü",
+            "İşçi göçü",
+            "Mübadele göçü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye nüfus piramidinin tabanının son yıllarda daralmaya başlaması neyin göstergesidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Doğum oranlarının azaldığının",
+            "Bebek ölümlerinin arttığının",
+            "Yaşlı nüfusun azaldığının",
+            "Dış göçlerin arttığının"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin genç nüfuslu bir ülke olmasının olumlu sonuçlarından biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Demografik yatırım ihtiyacının fazla olması",
+            "İşgücü potansiyelinin yüksek olması",
+            "Yaşlı bağımlılık oranının yüksek olması",
+            "Tüketimin üretimden az olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin genç nüfuslu bir ülke olmasının olumsuz sonuçlarından biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nüfusun dinamik olması",
+            "İşsizlik oranının yüksek olması",
+            "Pazarın geniş olması",
+            "Askeri gücünün fazla olması"
+          ]
+        },
+        {
+          "soruMetni": "Bir bölgede fizyolojik nüfus yoğunluğu ile aritmetik nüfus yoğunluğu arasındaki fark fazlaysa, o bölge için ne söylenebilir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sanayi gelişmiştir",
+            "Tarım alanları geniş yer kaplar",
+            "Nüfus miktarı azdır",
+            "Tarım alanları dar ve engebeli arazi fazladır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_nufus_ve_yerlesme_3",
+      "baslik": "Türkiye'de Nüfus ve Yerleşme-3",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_nufus_ve_yerlesme",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de tarımsal nüfus yoğunluğunun en az olduğu bölge hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Doğu Karadeniz",
+            "Hakkari Bölümü",
+            "Menteşe Yöresi",
+            "İç Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Toros Dağları'nda hayvancılıkla uğraşanların kurduğu, genellikle çadırlardan oluşan geçici yerleşmelere ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Oba",
+            "Kom",
+            "Mezra",
+            "Dam"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Anadolu Bölgesi'nde, özellikle hayvancılık amacıyla kurulan, ahır ve ağılların bulunduğu geçici yerleşmelere ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Divan",
+            "Çiftlik",
+            "Kom",
+            "Oba"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de ilk yerleşmelerin kurulduğu alanların seçiminde en etkili olan faktör aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sanayi tesislerine yakınlık",
+            "Ulaşım yolları",
+            "Su kaynakları ve verimli topraklar",
+            "Turizm potansiyeli"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yerleşme üst sınırının en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz Bölgesi",
+            "Marmara Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Ege Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz Bölgesi'nde yerleşme üst sınırının Akdeniz Bölgesi'ne göre daha alçak olmasının nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yağış fazlalığı ve nemlilik",
+            "Toprak verimsizliği",
+            "Yükseltinin az olması",
+            "Nüfusun seyrek olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin nüfusu mevsimlik tarım göçleriyle belirgin bir artış göstermez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Adana",
+            "Ordu",
+            "Şanlıurfa",
+            "Kars"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerden hangisinin gelişmesinde turizm fonksiyonu diğerlerine göre daha az etkilidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Antalya",
+            "Muğla",
+            "Aydın",
+            "Afyonkarahisar"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de okuryazar oranının en düşük olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Marmara Bölgesi",
+            "Ege Bölgesi",
+            "Güneydoğu Anadolu Bölgesi",
+            "Karadeniz Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerden hangisi \"sakin şehir\" unvanına sahip yerleşmelerden biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Eskişehir",
+            "Seferihisar",
+            "Bodrum",
+            "Kayseri"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de köyden kente göçün sonuçlarından biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kentlerde altyapı sorunlarının artması",
+            "Kırsal kesimde yatırımların artması",
+            "Kentlerde konut açığının ortaya çıkması",
+            "Kırsal kesimde tarım arazilerinin boş kalması"
+          ]
+        },
+        {
+          "soruMetni": "Geniş tarım arazileri üzerine kurulmuş, modern tarım yöntemlerinin uygulandığı, sürekli yerleşmelere ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mezra",
+            "Çiftlik",
+            "Kom",
+            "Yayla"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de günümüzde uygulanan nüfus politikasının temel amacı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Nüfus artış hızını ne pahasına olursa olsun artırmak",
+            "Nüfus artış hızını hızla düşürmek",
+            "Nüfusun sağlık, eğitim gibi niteliklerini iyileştirmek",
+            "Sadece yaşlı nüfusa yönelik politikalar geliştirmek"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin hem doğal nüfus artışı hem de göçlere bağlı gerçek nüfus artışı yüksektir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Tunceli",
+            "Şanlıurfa",
+            "Rize",
+            "Kırklareli"
+          ]
+        },
+        {
+          "soruMetni": "Bir ilin doğal nüfus artış hızı, gerçek nüfus artış hızından yüksekse, o il için ne söylenebilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yoğun göç almaktadır",
+            "Yoğun göç vermektedir",
+            "Nüfusu hızla artmaktadır",
+            "Sanayisi gelişmiştir"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi yoğun göç verdiği için gerçek nüfus artış hızı, doğal nüfus artış hızından düşüktür?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İstanbul",
+            "Gümüşhane",
+            "Tekirdağ",
+            "Antalya"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de yerleşmeyi sınırlandıran faktörlerden biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yüksek ve engebeli alanlar",
+            "Şiddetli kuraklık",
+            "Verimli alüvyal ovalar",
+            "Bataklık ve göl alanları"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerlerden hangisi Türkiye'nin ilk tarım ve yerleşme alanları arasında gösterilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çatalca-Kocaeli",
+            "Zonguldak çevresi",
+            "Güneydoğu Anadolu",
+            "Erzurum-Kars platosu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de eğitim, sağlık, ulaşım gibi hizmetlerin planlanmasında en çok hangi nüfus özelliği dikkate alınır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Nüfusun yaş gruplarına dağılımı",
+            "Nüfusun cinsiyet yapısı",
+            "Tarımsal nüfus yoğunluğu",
+            "Nüfusun tarihsel değişimi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de \"beyin göçü\" olarak adlandırılan göç türü aşağıdakilerden hangisini ifade eder?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Turizm amaçlı gezileri",
+            "Mevsimlik işçi göçünü",
+            "Eğitimli ve nitelikli işgücünün yurt dışına göç etmesini",
+            "Kırsal kesimden kentlere olan göçü"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_nufus_ve_yerlesme_4",
+      "baslik": "Türkiye'de Nüfus ve Yerleşme-4",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_nufus_ve_yerlesme",
+      "isNew": true,
+      "soruSayisi": 19,
+      "sureDakika": 19,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdakilerden hangisi bir yerleşmenin \"köy\" veya \"kent\" olarak sınıflandırılmasında kullanılan ölçütlerden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Nüfus miktarı",
+            "Ekonomik faaliyet türü",
+            "Sosyal ve kültürel yapı",
+            "Jeolojik yapı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de kırsal yerleşmelerde ekonomik faaliyetler büyük ölçüde neye dayanır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sanayi ve ticaret",
+            "Turizm ve hizmet",
+            "Tarım ve hayvancılık",
+            "Madencilik ve enerji"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisinin nüfuslanmasında sanayi faaliyetlerinin etkisi diğerlerinden daha fazladır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kırıkkale",
+            "Sinop",
+            "Muş",
+            "Artvin"
+          ]
+        },
+        {
+          "soruMetni": "\"Metropol\" olarak adlandırılan şehirlerin en belirgin özelliği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadece tarım fonksiyonuna sahip olmaları",
+            "Nüfuslarının az olması",
+            "Çevrelerindeki birçok yerleşmeyi etkileyen merkez şehirler olmaları",
+            "Yüzölçümlerinin küçük olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de hızlı kentleşmenin olumlu sonuçları arasında sayılabilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sanayide işgücü ihtiyacının karşılanması",
+            "Çevre kirliliğinin artması",
+            "Trafik yoğunluğunun yaşanması",
+            "Tarım alanlarının amaç dışı kullanılması"
+          ]
+        },
+        {
+          "soruMetni": "Yılın büyük bölümünü dağlardaki yüksek ve serin alanlarda geçiren geçici yerleşme tipi hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yayla",
+            "Mezra",
+            "Çiftlik",
+            "Divan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerden hangisinde yaylacılık faaliyeti daha çok ekonomik amaçlı yapılır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Akdeniz ve Doğu Karadeniz",
+            "Ege ve Marmara",
+            "İç Anadolu ve Güneydoğu Anadolu",
+            "Marmara ve Ege"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerden hangisinin gelişmesinde dini fonksiyonlar daha etkilidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karabük",
+            "İskenderun",
+            "Konya",
+            "Kırklareli"
+          ]
+        },
+        {
+          "soruMetni": "Ege ve Batı Anadolu'da küçükbaş hayvancılık için oluşturulmuş geçici yerleşmelere ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kom",
+            "Oba",
+            "Dam",
+            "Divan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerlerden hangisinde yerleşmeler daha çok akarsu vadi boylarına kurulmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İç Anadolu platoları",
+            "Çukurova",
+            "Doğu Anadolu'nun engebeli alanları",
+            "Ergene Havzası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de yerleşmelerin dağılışını ve yer seçimini etkileyen beşeri (insan kaynaklı) faktörler arasında aşağıdakilerden hangileri yer alır?\nI. Maden ve enerji kaynaklarının dağılışı\nII. Sanayi tesislerinin yoğunluğu\nIII. Ulaşım ağlarının gelişmişliği",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerden hangisi Türkiye'nin önemli \"tarım kentleri\" arasında gösterilebilir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Batman",
+            "Zonguldak",
+            "Rize",
+            "Adana"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de nüfusun eğitim seviyesinin giderek yükselmesi, aşağıdakilerden hangisine yol açmaz?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nitelikli işgücünün artmasına",
+            "Doğum oranlarının artmasına",
+            "Kültürel seviyenin yükselmesine",
+            "Kadının iş hayatına katılımının artmasına"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye nüfus piramidinin üst kısmının genişlemesi neyin göstergesidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ortalama yaşam süresinin uzadığının",
+            "Doğum oranlarının arttığının",
+            "Çocuk ölümlerinin arttığının",
+            "Nüfusun gençleştiğinin"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerlerden hangisi deprem riski yüksek olmasına rağmen yoğun nüfuslanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tuz Gölü çevresi",
+            "Taşeli Platosu",
+            "İzmir ve çevresi",
+            "Yıldız Dağları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de nüfusun dağılışını etkileyen en önemli beşeri faktör aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yeraltı kaynakları",
+            "Turizm",
+            "Ekonomik faaliyetler",
+            "Tarımsal yöntemler"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki şehirlerden hangisinin nüfusu diğerlerine göre daha azdır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İstanbul",
+            "Ankara",
+            "İzmir",
+            "Bayburt"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerleşme tiplerinden hangisi sürekli bir yerleşme değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Köy",
+            "Şehir",
+            "Mezra",
+            "Oba"
+          ]
+        },
+        {
+          "soruMetni": "Bir bölgede fizyolojik nüfus yoğunluğu ile aritmetik nüfus yoğunluğu arasındaki fark fazlaysa, o bölge için ne söylenebilir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sanayi gelişmiştir",
+            "Tarım alanları geniş yer kaplar",
+            "Nüfus miktarı azdır",
+            "Tarım alanları dar ve engebeli arazi fazladır"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_tarim_ve_hayvancilik_1",
+      "baslik": "Türkiye'de Tarım ve Hayvancılık-1",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_tarim_ve_hayvancilik",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de tarımı etkileyen en önemli faktör aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Toprak özellikleri",
+            "İklim ve su koşulları",
+            "Yerşekilleri",
+            "Beşeri faktörler"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de tarım arazileri içinde en geniş paya sahip olan ürün grubu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Endüstri bitkileri",
+            "Tahıllar",
+            "Baklagiller",
+            "Yağlı tohumlar"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de buğday tarımının en yoğun yapıldığı bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Karadeniz Bölgesi",
+            "Akdeniz Bölgesi",
+            "İç Anadolu Bölgesi",
+            "Doğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Yaz yağışları isteyen ve bu nedenle Karadeniz kıyılarında üretimi yoğunlaşan tarım ürünü hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ayçiçeği",
+            "Mısır",
+            "Pamuk",
+            "Pirinç"
+          ]
+        },
+        {
+          "soruMetni": "Sulama imkanlarının artmasıyla Güneydoğu Anadolu Bölgesi'nde üretimi hızla artan endüstri bitkisi hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tütün",
+            "Çay",
+            "Pamuk",
+            "Haşhaş"
+          ]
+        },
+        {
+          "soruMetni": "Yetişme döneminde yüksek sıcaklık ve olgunlaşma döneminde kuraklık isteyen, Türkiye'de üretimi en çok Ege Bölgesi'nde yapılan ürün hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Zeytin",
+            "İncir",
+            "Tütün",
+            "Pamuk"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin dünya üretiminde birinci sırada olduğu ve büyük bölümünün ihraç edildiği ürün aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fındık",
+            "İncir",
+            "Kayısı",
+            "Antep fıstığı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de çay tarımı, sadece Doğu Karadeniz Bölümü'nde yapılabilmektedir. Bu durumun temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yıkanmış, kireçsiz toprak isteği ve bol nem",
+            "Arazinin engebeli olması",
+            "Toprakların alüvyal olması",
+            "Kış ılıklığının yüksek olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de zeytin tarımının en yoğun yapıldığı coğrafi bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Akdeniz Bölgesi",
+            "Ege Bölgesi",
+            "Marmara Bölgesi",
+            "Güneydoğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de nadas tarım yönteminin yaygın olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Toprakların verimsiz olması",
+            "Çiftçi sayısının az olması",
+            "Yarı kurak iklim ve yetersiz sulama",
+            "Tarım arazilerinin küçük olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi soğuğa karşı en dayanıksızdır ve don olaylarından en çok etkilenir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Buğday",
+            "Elma",
+            "Turunçgiller",
+            "Üzüm"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de seracılık faaliyetlerinin en yoğun olduğu bölge hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Akdeniz Bölgesi",
+            "Ege Bölgesi",
+            "Marmara Bölgesi",
+            "Karadeniz Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Seracılığın Akdeniz ve Ege kıyılarında yoğunlaşmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Verimli topraklar",
+            "Kış ılıklığı ve yüksek güneşlenme süresi",
+            "Pazara yakınlık",
+            "Jeotermal kaynakların varlığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisinin üretimi devlet kontrolündedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mısır",
+            "Ayçiçeği",
+            "Haşhaş",
+            "Pamuk"
+          ]
+        },
+        {
+          "soruMetni": "Güneydoğu Anadolu Projesi'nin (GAP) tamamlanmasıyla bölgede en çok hangi alanda gelişme sağlanmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kuru tarım ve hayvancılık",
+            "Ormancılık faaliyetleri",
+            "Sulu tarım ve endüstri bitkileri",
+            "Kış turizmi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye tarımının genel sorunlarından biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sulama yetersizliği",
+            "Tarım arazilerinin miras yoluyla parçalanması",
+            "Tarımsal ürün çeşitliliğinin az olması",
+            "Pazarlama ve depolama sorunları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de mera hayvancılığının en yaygın olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Marmara Bölgesi",
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "İç Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Erzurum-Kars Platosu'nda büyükbaş mera hayvancılığının gelişmesinin temel nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yerşekillerinin sade olması",
+            "Kışların uzun sürmesi",
+            "Yaz yağışlarına bağlı gür çayırlar",
+            "Nüfusun seyrek olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de besi ve ahır hayvancılığının en çok geliştiği bölge hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Marmara Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "Karadeniz Bölgesi",
+            "Akdeniz Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Besi ve ahır hayvancılığının Marmara gibi nüfusun yoğun olduğu yerlerde gelişmesinin nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Meraların geniş yer kaplaması",
+            "Tüketim merkezlerine yakınlık ve yem sanayisi",
+            "İklimin elverişli olması",
+            "Devlet teşviklerinin fazla olması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_tarim_ve_hayvancilik_2",
+      "baslik": "Türkiye'de Tarım ve Hayvancılık-2",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_tarim_ve_hayvancilik",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de en çok beslenen küçükbaş hayvan türü hangisidir ve hangi bölgede yoğundur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Koyun - İç Anadolu",
+            "Kıl Keçisi - Akdeniz",
+            "Tiftik Keçisi - Doğu Anadolu",
+            "Manda - Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Karasal iklim ve bozkır bitki örtüsünün yaygın olduğu yerlerde hangi hayvancılık faaliyeti ön plana çıkar?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Büyükbaş mera hayvancılığı",
+            "Küçükbaş hayvancılığı",
+            "İpekböcekçiliği",
+            "Kümes hayvancılığı"
+          ]
+        },
+        {
+          "soruMetni": "Engebeli arazilerin ve maki bitki örtüsünün yaygın olduğu Teke ve Taşeli platolarında en çok hangi hayvan yetiştirilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sığır",
+            "Koyun",
+            "Kıl Keçisi",
+            "Tiftik Keçisi"
+          ]
+        },
+        {
+          "soruMetni": "Sadece Ankara ve çevresinde yoğunlaşan, yünü değerli olan küçükbaş hayvan türü hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Merinos Koyunu",
+            "Kıl Keçisi",
+            "Tiftik Keçisi",
+            "Karaman Koyunu"
+          ]
+        },
+        {
+          "soruMetni": "Büyük şehirlerin çevresinde (Bolu, Balıkesir, Sakarya vb.) hangi hayvancılık türü hızla gelişmiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kümes hayvancılığı",
+            "Mera hayvancılığı",
+            "Arıcılık",
+            "İpekböcekçiliği"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de balıkçılıktan elde edilen gelirin en yüksek olduğu deniz hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Akdeniz",
+            "Ege Denizi",
+            "Marmara Denizi",
+            "Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Karadeniz'de balıkçılığın gelişmiş olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Deniz suyunun daha tuzlu olması",
+            "Oksijen bakımından zengin ve plankton sayısının fazla olması",
+            "Kıyılarının daha girintili çıkıntılı olması",
+            "Turizmin gelişmemiş olması"
+          ]
+        },
+        {
+          "soruMetni": "Ege ve Akdeniz'de balık çeşidi fazla olmasına rağmen avlanan balık miktarının Karadeniz'den az olmasının nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sanayi kirliliği",
+            "Deniz suyunun tuzluluk oranının yüksek olması",
+            "Aşırı avlanma",
+            "Yeterli teknelerin olmaması"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi kıyılarında balıkçılığın yanı sıra hangi su ürünleri faaliyeti de gelişmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İnci avcılığı",
+            "Süngercilik",
+            "Kültür balıkçılığı",
+            "Petrol aramacılığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi hem yağ hem de yem sanayisinde kullanılır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ayçiçeği",
+            "Çay",
+            "Tütün",
+            "İncir"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de ayçiçeği tarımının en yoğun yapıldığı bölge hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güneydoğu Anadolu",
+            "Doğu Anadolu",
+            "Marmara",
+            "Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Dut ağacı yapraklarına bağlı olarak yapılan hayvancılık faaliyeti hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Arıcılık",
+            "İpekböcekçiliği",
+            "Kümes hayvancılığı",
+            "Küçükbaş hayvancılık"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerin hangisinde orman varlığı en fazladır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İç Anadolu Bölgesi",
+            "Güneydoğu Anadolu Bölgesi",
+            "Marmara Bölgesi",
+            "Karadeniz Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerin hangisinde orman varlığı en azdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İç Anadolu Bölgesi",
+            "Güneydoğu Anadolu Bölgesi",
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye ormanlarında en yaygın bulunan ağaç türleri hangileridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Meşe ve Çam",
+            "Kayın ve Gürgen",
+            "Ladin ve Köknar",
+            "Sedir ve Ardıç"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz iklim bölgesindeki ormanların tahrip edilmesiyle ortaya çıkan çalı topluluğu hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Maki",
+            "Bozkır",
+            "Psödomaki",
+            "Garig"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de ormanların dağılışını belirleyen temel faktör nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yükselti",
+            "Toprak türü",
+            "Yağış ve nemlilik",
+            "Bakı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'deki ormanların sağladığı faydalardan biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Erozyonu önlemesi",
+            "Yeraltı su kaynaklarını beslemesi",
+            "Hava kirliliğini artırması",
+            "Mobilya ve kağıt sanayisine hammadde sağlaması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de orman yangını riskinin en yüksek olduğu bölge hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz Bölgesi",
+            "Akdeniz ve Ege Bölgeleri",
+            "İç Anadolu Bölgesi",
+            "Doğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Akdeniz ve Ege'de orman yangını riskinin yüksek olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ağaç türlerinin kolay yanıcı olması",
+            "Yaz kuraklığının belirgin olması",
+            "Arazinin engebeli olması",
+            "Nüfusun seyrek olması"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_tarim_ve_hayvancilik_3",
+      "baslik": "Türkiye'de Tarım ve Hayvancılık-3",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_tarim_ve_hayvancilik",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "İç Anadolu Bölgesi'nde tarımı olumsuz etkileyen en önemli iklim olayı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Don olayları ve kuraklık",
+            "Aşırı yağışlar",
+            "Şiddetli rüzgarlar",
+            "Güneşlenme süresinin azlığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ürünlerden hangisi 'lifsiz' endüstri bitkilerine örnek değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Şeker pancarı",
+            "Tütün",
+            "Çay",
+            "Pamuk"
+          ]
+        },
+        {
+          "soruMetni": "Şeker pancarı tarımının Türkiye'nin hemen her bölgesinde yapılabilmesine rağmen kıyı bölgelerde tercih edilmemesinin nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Toprağın uygun olmaması",
+            "Yeterli suyun bulunmaması",
+            "Ekonomik değeri daha yüksek ürünlerin tercih edilmesi",
+            "Devletin izin vermemesi"
+          ]
+        },
+        {
+          "soruMetni": "Şeker pancarı fabrikalarının üretim alanlarına yakın kurulmasının zorunlu nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ulaşım maliyetlerinin yüksek olması",
+            "Ürünün çabuk bozulması",
+            "Enerji kaynaklarına yakınlık",
+            "İşgücünün ucuz olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de pirinç tarımının genellikle akarsu boylarında ve ovalarda yapılmasının nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yüksek sıcaklık isteği",
+            "Sürekli su içinde yetişmesi",
+            "Don olaylarına karşı hassas olması",
+            "Toprak seçiciliğinin fazla olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ürünlerden hangisi mikroklima özelliği sayesinde dar bir alanda yetiştirilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Muz",
+            "Fındık",
+            "Çay",
+            "İncir"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de arıcılık faaliyetlerinin gelişmiş olmasının ve bal çeşitliliğinin fazla olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hayvan sayısının fazla olması",
+            "Bitki örtüsü çeşitliliği",
+            "Su kaynaklarının bolluğu",
+            "İklimin ılıman olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de hayvancılığı geliştirmek için alınması gereken önlemlerden biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hayvan soylarının ıslah edilmesi",
+            "Mera hayvancılığının teşvik edilmesi",
+            "Yem üretiminin artırılması",
+            "Erken hayvan kesimlerinin önlenmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisinin tamamı sulama ile yetiştirilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Buğday",
+            "Mercimek",
+            "Mısır",
+            "Arpa"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi Türkiye'nin hem iç tüketiminde hem de ihracatında önemli bir yere sahiptir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Çay",
+            "Buğday",
+            "Keten",
+            "Üzüm"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de tarımda makineleşmenin en zor olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İç Anadolu",
+            "Marmara",
+            "Doğu Karadeniz",
+            "Güneydoğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Karadeniz'de tarımda makineleşmenin zor olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çiftçilerin makine kullanmayı bilmemesi",
+            "Arazinin aşırı engebeli ve dağınık olması",
+            "Tarım arazilerinin küçük olması",
+            "İklimin sürekli yağışlı olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi tarımda 'intansif' yöntemin özelliklerinden biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Birim alandan yüksek verim alınması",
+            "Modern tekniklerin kullanılması",
+            "Nadas uygulamasının yaygın olması",
+            "Genellikle gelişmiş ülkelerde uygulanması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de orman alt sınırının en alçaktan başladığı yer neresidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Karadeniz kıyıları",
+            "Akdeniz kıyıları",
+            "Ege kıyıları",
+            "Marmara kıyıları"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de orman üst sınırının en yüksek olduğu yer neresidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Karadeniz",
+            "Akdeniz",
+            "İç Anadolu",
+            "Doğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ovalardan hangisinde endüstriyel tarım en az gelişmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çukurova",
+            "Gediz Ovası",
+            "Yüksekova",
+            "Bursa Ovası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de kırmızı mercimek üretiminin en yoğun olduğu bölge hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İç Anadolu",
+            "Güneydoğu Anadolu",
+            "Ege",
+            "Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Yeşil mercimek ve nohut gibi baklagillerin üretimi hangi bölgemizde yoğunlaşmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "İç Anadolu",
+            "Doğu Anadolu",
+            "Karadeniz",
+            "Akdeniz"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi hem gıda hem de biyodizel üretiminde kullanılmaktadır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Patates",
+            "Kenevir",
+            "Kanola",
+            "Tütün"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi Türkiye'nin önemli 'tarım kentleri' arasında yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Konya",
+            "Şanlıurfa",
+            "Adana",
+            "Zonguldak"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_tarim_ve_hayvancilik_4",
+      "baslik": "Türkiye’de Tarım ve Hayvancılık-4",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_tarim_ve_hayvancilik",
+      "isNew": true,
+      "soruSayisi": 19,
+      "sureDakika": 19,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de tarımsal verimliliği artırmak için yapılması gereken en acil ve öncelikli uygulama nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gübre kullanımını artırmak",
+            "Sulama alanlarını genişletmek",
+            "Tarımsal kredileri artırmak",
+            "Zirai mücadeleyi yaygınlaştırmak"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de küçükbaş hayvancılığın yaygın olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Et veriminin yüksek olması",
+            "İklim ve bitki örtüsünün uygun olması",
+            "Devlet teşviklerinin fazla olması",
+            "Pazar talebinin yüksek olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi bir 'kültür' bitkisi değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Buğday",
+            "Mısır",
+            "Çayır",
+            "Pamuk"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de aşağıdaki hayvan türlerinden hangisinin sayısı orman tahribatına yol açtığı gerekçesiyle devlet politikalarıyla azaltılmaya çalışılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kıl Keçisi",
+            "Tiftik Keçisi",
+            "Koyun",
+            "Manda"
+          ]
+        },
+        {
+          "soruMetni": "Tarım ürünlerinin olgunlaşma süresinin Doğu Anadolu'da Ege Bölgesi'ne göre daha uzun olmasının nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yağış yetersizliği",
+            "Yükseltiye bağlı sıcaklık düşüklüğü",
+            "Toprak verimsizliği",
+            "Güneşlenme süresinin azlığı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi Akdeniz ikliminin karakteristik bir ürünüdür?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Fındık",
+            "Çay",
+            "Zeytin",
+            "Mısır"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de tarımsal destekleme alımları yapan kurumlardan biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Toprak Mahsulleri Ofisi",
+            "ÇAYKUR",
+            "Maden Tetkik ve Arama",
+            "Tariş"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki bölgelerden hangisinde balıkçılık ekonomik faaliyetler içinde en az paya sahiptir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Karadeniz",
+            "Marmara",
+            "Ege",
+            "Güneydoğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de fındık tarımının Karadeniz kıyı kuşağında yoğunlaşmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yüksek sıcaklık isteği",
+            "Bol nem, ılıman kış ve serin yaz isteği",
+            "Asitli toprak isteği",
+            "Yerşekillerinin engebeli olması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de ekstansif tarımın özelliklerindendir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Verimin yüksek olması",
+            "Üretimin iklim koşullarına bağlı olması",
+            "Sulama ve gübrelemenin yaygın olması",
+            "Nüfusun yoğun olduğu yerlerde yapılması"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi incir üretimiyle ön plana çıkmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Rize",
+            "Konya",
+            "Aydın",
+            "Edirne"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi kayısı üretimiyle dünyaca ünlüdür?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Malatya",
+            "Giresun",
+            "Antalya",
+            "Bursa"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki illerden hangisi Antep fıstığı üretiminde ilk sırada yer alır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gaziantep",
+            "Şanlıurfa",
+            "Siirt",
+            "Kilis"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de ormanların kendini yenileme süresinin en kısa olduğu bölge neresidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Karadeniz",
+            "Akdeniz",
+            "İç Anadolu",
+            "Doğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de ormanların kendini yenileme süresinin en uzun olduğu bölge neresidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz",
+            "Akdeniz",
+            "Ege",
+            "İç Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi bir bölgede mera hayvancılığı yapıldığının en güçlü kanıtıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yem bitkileri üretiminin fazla olması",
+            "Et ve süt üretiminin iklim koşullarına göre dalgalanması",
+            "Ahır ve besi çiftliklerinin modern olması",
+            "Et ve süt veriminin yüksek olması"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de tütün üretiminin kalitesini korumak amacıyla devlet tarafından sınırlandırılmasının nedeni nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tütünün sağlığa zararlı olması",
+            "Üretiminin zor olması",
+            "Arz-talep dengesini korumak ve kaliteli üretimi teşvik etmek",
+            "Başka ürünlere alan açmak"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de 'Polikültür' tarımın en yaygın olduğu bölge neresidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İç Anadolu",
+            "Doğu Anadolu",
+            "Marmara",
+            "Güneydoğu Anadolu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi diğerlerine göre daha fazla su ister?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Buğday",
+            "Kırmızı Mercimek",
+            "Şeker Pancarı",
+            "Arpa"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_madenler_ve_enerji_kaynaklar_1",
+      "baslik": "Türkiye'de Madenler ve Enerji Kaynakları-1",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_madenler_ve_enerji_kaynaklari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'nin dünya rezervlerinde birinci sırada olduğu ve \"stratejik maden\" olarak kabul edilen yeraltı kaynağı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Demir",
+            "Bor",
+            "Krom",
+            "Bakır"
+          ]
+        },
+        {
+          "soruMetni": "Sivas-Divriği ve Malatya-Hekimhan yöreleri, aşağıdaki madenlerden hangisinin yatakları bakımından zengindir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Demir",
+            "Boksit",
+            "Mermer",
+            "Fosfat"
+          ]
+        },
+        {
+          "soruMetni": "Artvin-Murgul, Kastamonu-Küre ve Elazığ-Maden, hangi madenin çıkarıldığı başlıca merkezlerdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Krom",
+            "Bakır",
+            "Bor",
+            "Cıva"
+          ]
+        },
+        {
+          "soruMetni": "Demir-çelik sanayisinde demirin sertleştirilmesinde kullanılan ve Elazığ-Guleman ile Fethiye-Köyceğiz yörelerinde çıkarılan maden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Volfram",
+            "Boksit",
+            "Krom",
+            "Mangan"
+          ]
+        },
+        {
+          "soruMetni": "Alüminyum sanayisinin hammaddesi olan ve Konya-Seydişehir'de çıkarılıp işlenen maden aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Boksit",
+            "Barit",
+            "Çinko",
+            "Kurşun"
+          ]
+        },
+        {
+          "soruMetni": "Afyonkarahisar, Marmara Adası ve Elazığ gibi merkezlerin ön plana çıktığı, ihracatta önemli yer tutan maden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Linyit",
+            "Tuz",
+            "Mermer",
+            "Lületaşı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin büyük bölümünü ithal ettiği ve suni gübre yapımında kullanılan maden aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fosfat",
+            "Kükürt",
+            "Bor",
+            "Asbest"
+          ]
+        },
+        {
+          "soruMetni": "İzmir-Bergama, Uşak-Kışladağ ve Artvin-Cerattepe gibi yerler hangi maden yataklarıyla gündeme gelmektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gümüş",
+            "Altın",
+            "Uranyum",
+            "Platin"
+          ]
+        },
+        {
+          "soruMetni": "Sıvı halde bulunan tek metal olan ve İzmir-Ödemiş ile Konya-Sarayönü'nde yatakları bulunan maden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cıva",
+            "Manganez",
+            "Volfram",
+            "Antimon"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin tuz ihtiyacının önemli bir bölümünün karşılandığı, tektonik oluşumlu göl aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Van Gölü",
+            "Tuz Gölü",
+            "Beyşehir Gölü",
+          "Eğirdir Gölü"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de III. Jeolojik Zaman'da oluşmuş ve en yaygın enerji kaynağı olan maden aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Linyit",
+            "Taş kömürü",
+            "Petrol",
+            "Doğal gaz"
+          ]
+        },
+        {
+          "soruMetni": "Sadece Zonguldak-Ereğli havzasında bulunan, I. Jeolojik Zaman'da oluşmuş ve demir-çelik sanayisinde kullanılan maden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Linyit",
+            "Taş kömürü",
+            "Antrasit",
+            "Turba"
+          ]
+        },
+        {
+          "soruMetni": "Erzurum-Oltu'da çıkarılan ve süs eşyası yapımında kullanılan değerli taş hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Lületaşı",
+            "Oltutaşı",
+            "Mermer",
+            "Kehribar"
+          ]
+        },
+        {
+          "soruMetni": "Sadece Eskişehir'de çıkarılan, kolay işlenebilen ve süs eşyası yapımında kullanılan maden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Lületaşı",
+            "Oltutaşı",
+            "Asbest",
+            "Zımpara taşı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki madenlerden hangisi nükleer enerji santrallerinde yakıt olarak kullanılır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Toryum",
+            "Boksit",
+            "Kükürt",
+            "Krom"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de maden çeşitliliğinin fazla olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İklim çeşitliliği",
+            "Farklı jeolojik zamanlara ait karmaşık arazi yapısı",
+            "Ortalama yükseltinin fazla olması",
+            "Akarsu ağının sık olması"
+          ]
+        },
+        {
+          "soruMetni": "Mardin-Mazıdağı'nda çıkarılan ve gübre sanayisinin hammaddesi olan maden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fosfat",
+            "Bor",
+            "Kükürt",
+            "Demir"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de çıkarılan madenlerin işlendiği sanayi tesislerine ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Rafineri",
+            "Petrokimya",
+            "Metalürji",
+            "Dökümhane"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin ihraç ettiği önemli madenlerden biridir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bor",
+            "Fosfat",
+            "Taş kömürü",
+            "Petrol"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin ithal ettiği önemli maden ve enerji kaynaklarındandır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mermer",
+            "Bor",
+            "Petrol",
+            "Krom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_madenler_ve_enerji_kaynaklar_2",
+      "baslik": "Türkiye'de Madenler ve Enerji Kaynakları-2",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_madenler_ve_enerji_kaynaklari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Elektrik-elektronik sanayisinde iletkenliği nedeniyle yoğun olarak kullanılan ve Samsun'da işleme tesisi bulunan maden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bakır",
+            "Demir",
+            "Alüminyum",
+            "Krom"
+          ]
+        },
+        {
+          "soruMetni": "Konya-Seydişehir'deki alüminyum tesislerinin kuruluş yeri seçiminde hangi faktör etkili olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hammadde",
+            "Enerji kaynağı",
+            "Ulaşım",
+            "İşgücü"
+          ]
+        },
+        {
+          "soruMetni": "Barit madeni en çok hangi sanayi kolunda kullanılır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Petrol sondajcılığı",
+            "Gübre sanayisi",
+            "Kağıt sanayisi",
+            "Çimento sanayisi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'deki madenleri aramak ve araştırmakla görevli devlet kurumu aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "MTA",
+            "TPAO",
+            "BOTAŞ",
+            "ETİ Maden"
+          ]
+        },
+        {
+          "soruMetni": "Isparta-Keçiborlu'da çıkarılan ve tarımda kullanılan maden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kükürt",
+            "Fosfat",
+            "Tuz",
+            "Barit"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük linyit havzası olan Afşin-Elbistan, hangi ilimizin sınırları içindedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sivas",
+            "Malatya",
+            "Kahramanmaraş",
+            "Elazığ"
+          ]
+        },
+        {
+          "soruMetni": "Bursa-Uludağ'da çıkarılan ve yüksek ısıya dayanıklı sanayide kullanılan maden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Volfram",
+            "Molibden",
+            "Cıva",
+            "Mangan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi yenilenebilir bir enerji kaynağı değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güneş",
+            "Rüzgar",
+            "Doğal gaz",
+            "Jeotermal"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi fosil yakıt olarak da bilinen yenilenemeyen enerji kaynaklarındandır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hidroelektrik",
+            "Linyit",
+            "Biyokütle",
+            "Dalga"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin enerji ithalatında en büyük paya sahip olan kaynak aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Doğal gaz",
+            "Taş kömürü",
+            "Linyit",
+            "Hidroelektrik"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de elektrik enerjisi üretiminde en çok kullanılan fosil yakıt aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Linyit",
+            "Taş kömürü",
+            "Petrol",
+            "Asfaltit"
+          ]
+        },
+        {
+          "soruMetni": "Sadece taş kömürü ile çalışan termik santralimiz aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Afşin-Elbistan",
+            "Soma",
+            "Yatağan",
+            "Çatalağzı"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de çıkarılan petrolün tamamına yakını hangi bölgemizden elde edilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Ege Bölgesi",
+            "Marmara Bölgesi",
+            "Güneydoğu Anadolu Bölgesi",
+            "İç Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin ilk petrol rafinerisi olan Batman Rafinerisi'nin kuruluş yeri seçimindeki temel faktör nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ulaşım",
+            "Hammaddeye yakınlık",
+            "Pazar",
+            "Enerji kaynağı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de bulunan petrol rafinerilerinden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Aliağa",
+            "Ataş",
+            "Kırıkkale",
+            "Seydişehir"
+          ]
+        },
+        {
+          "soruMetni": "Kırklareli-Hamitabat ve Mardin-Çamurlu hangi enerji kaynağının çıkarıldığı yerlerdir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Petrol",
+            "Doğal gaz",
+            "Linyit",
+            "Jeotermal"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin hidroelektrik potansiyelinin en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Marmara Bölgesi",
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "İç Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Doğu Anadolu Bölgesi'nin hidroelektrik potansiyelinin yüksek olmasının temel nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yükselti ve eğim fazlalığı",
+            "Akarsu debilerinin düzenli olması",
+            "Akarsu boylarının uzun olması",
+            "Don olaylarının sık görülmesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin rüzgar enerjisi potansiyelinin en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ege Bölgesi",
+            "Doğu Anadolu Bölgesi",
+            "İç Anadolu Bölgesi",
+            "Güneydoğu Anadolu Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin güneş enerjisi potansiyelinin en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Karadeniz Bölgesi",
+            "Güneydoğu Anadolu Bölgesi",
+            "Marmara Bölgesi",
+            "Ege Bölgesi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "turkiyede_madenler_ve_enerji_kaynaklar_3",
+      "baslik": "Türkiye'de Madenler ve Enerji Kaynakları-3",
+      "kategoriId": "cografya",
+      "konuId": "turkiyede_madenler_ve_enerji_kaynaklari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Türkiye'de güneşlenme süresinin ve güneş enerjisi potansiyelinin en düşük olduğu bölge neresidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Akdeniz Bölgesi",
+            "Doğu Karadeniz Bölümü",
+            "İç Anadolu Bölgesi",
+            "Ege Bölgesi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de jeotermal enerji potansiyelinin en yüksek olduğu bölge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğu Anadolu",
+            "İç Anadolu",
+            "Ege Bölgesi",
+            "Karadeniz"
+          ]
+        },
+        {
+          "soruMetni": "Ege Bölgesi'nde jeotermal potansiyelin yüksek olması neyin bir kanıtıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Arazinin genç ve kırıklı yapıda olduğunun",
+            "Bölgenin karstik arazilerden oluştuğunun",
+            "Ortalama yükseltinin az olduğunun",
+            "Akdeniz ikliminin etkili olduğunun"
+          ]
+        },
+        {
+          "soruMetni": "Denizli-Sarayköy ve Aydın-Germencik hangi enerji kaynağı ile çalışan santrallere sahiptir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Rüzgar",
+            "Jeotermal",
+            "Güneş",
+            "Hidroelektrik"
+          ]
+        },
+        {
+          "soruMetni": "Mersin-Akkuyu ve Sinop'ta kurulması planlanan enerji santrali türü hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Nükleer Santral",
+            "Jeotermal Santral",
+            "Termik Santral",
+            "Hidroelektrik Santral"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki enerji kaynaklarından hangisinin kullanımı atmosferde asit yağmurlarına neden olur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Rüzgar",
+            "Güneş",
+            "Linyit",
+            "Hidroelektrik"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'nin en büyük hidroelektrik santrali olan Atatürk Barajı hangi nehir üzerindedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Fırat",
+            "Dicle",
+            "Kızılırmak",
+            "Yeşilırmak"
+          ]
+        },
+        {
+          "soruMetni": "Şırnak-Silopi'de çıkarılan ve linyit ile taş kömürü arasında bir form olan enerji kaynağı hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Asfaltit",
+            "Turba",
+            "Antrasit",
+            "Oltutaşı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki enerji kaynaklarından hangisinin potansiyeli iklim koşullarından etkilenmez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hidroelektrik",
+            "Güneş",
+            "Rüzgar",
+            "Jeotermal"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yerlerden hangisi Türkiye'nin önemli petrol boru hatlarından biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bakü-Tiflis-Ceyhan",
+            "Kerkük-Yumurtalık",
+            "Mavi Akım",
+            "Batman-Dörtyol"
+          ]
+        },
+        {
+          "soruMetni": "Rus doğal gazını Karadeniz altından Türkiye'ye taşıyan boru hattının adı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Mavi Akım",
+            "TANAP",
+            "Kerkük-Yumurtalık",
+            "Trans-Hazar"
+          ]
+        },
+        {
+          "soruMetni": "Azerbaycan doğal gazını Türkiye üzerinden Avrupa'ya taşıyan proje aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "TANAP",
+            "Mavi Akım",
+            "Nabucco",
+            "Güney Akım"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi Türkiye'nin enerji kaynakları bakımından dışa bağımlı olmasının sonuçlarından biridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Nüfus artış hızının düşmesi",
+            "Cari açığın artması",
+            "Tarımsal verimin düşmesi",
+            "Maden ihracatının artması"
+          ]
+        },
+        {
+          "soruMetni": "Kırklareli-Hamitabat'taki termik santralin kullandığı yakıt türü nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Linyit",
+            "Taş kömürü",
+            "Doğal gaz",
+            "Fuel-oil"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de sanayi tesislerinin dağılışını etkileyen en önemli faktör aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hammadde",
+            "Pazar ve ulaşım",
+            "İşgücü",
+            "İklim"
+          ]
+        },
+        {
+          "soruMetni": "Çay ve şeker fabrikalarının üretim alanlarına yakın kurulmasının zorunlu nedeni nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hammadde çabuk bozulması",
+            "Enerji maliyetlerinin yüksek olması",
+            "Ulaşımın zor olması",
+            "İşgücünün ucuz olması"
+          ]
+        },
+        {
+          "soruMetni": "Karabük ve Ereğli'deki demir-çelik fabrikalarının kuruluş yeri seçiminde hangi faktör belirleyici olmuştur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hammadde",
+            "Enerji kaynağı",
+            "Pazar olanakları",
+            "Ulaşım"
+          ]
+        },
+        {
+          "soruMetni": "İskenderun'daki demir-çelik fabrikasının kuruluş yeri seçiminde hangi faktör belirleyici olmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hammadde",
+            "Enerji kaynağı",
+            "Ulaşım ve pazara yakınlık",
+            "Ucuz işgücü"
+          ]
+        },
+        {
+          "soruMetni": "Bursa, Kocaeli, Sakarya ve İstanbul gibi kentlerin gelişmesinde hangi sanayi kolu öncü olmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Otomotiv",
+            "Gübre",
+            "Seramik",
+            "Petrokimya"
+          ]
+        },
+        {
+          "soruMetni": "İstanbul, Bursa, Denizli, Gaziantep ve Adana gibi illerin ortak gelişmiş sanayi kolu hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Demir-Çelik",
+            "Tekstil ve Dokuma",
+            "Kağıt",
+            "Otomotiv"
+          ]
+        }
+      ]
     }
 
      ],
