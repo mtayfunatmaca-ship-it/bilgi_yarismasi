@@ -18361,6 +18361,1685 @@
           ]
         }
       ]
+    },
+    {
+      "id": "devlet_bicimleri_ve_kuvvetler_ayriligi_1",
+      "baslik": "Devlet Biçimleri Demokrasi ve Kuvvetler Ayrılığı-1",
+      "kategoriId": "vatandaslik",
+      "konuId": "devlet_bicimleri_ve_kuvvetler_ayriligi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Devletin, tek bir merkezi otorite etrafında örgütlendiği ve yasama, yürütme, yargı yetkilerinin merkezde toplandığı devlet biçimi hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Federasyon",
+            "Konfederasyon",
+            "Üniter Devlet",
+            "Bölgesel Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Hem federal devletin hem de federe devletlerin kendi anayasalarına ve hukuk düzenlerine sahip olduğu devlet biçimi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Üniter Devlet",
+            "Federal Devlet",
+            "Konfederasyon",
+            "Monarşi"
+          ]
+        },
+        {
+          "soruMetni": "Egemen ve bağımsız devletlerin, belirli ortak amaçlar için uluslararası bir antlaşmayla kurdukları zayıf devlet birliğine ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Federasyon",
+            "Konfederasyon",
+            "İmparatorluk",
+            "Üniter Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Üniter devlet ile federasyon arasında yer alan, merkezi yönetimin bazı bölgelere anayasa ile özerklik tanıdığı ancak bu bölgelerin \"federe devlet\" statüsünde olmadığı model hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Teokratik Devlet",
+            "Konfederasyon",
+            "Bölgesel Devlet",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi federal devlet modeline örnek olarak gösterilebilir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fransa",
+            "Türkiye",
+            "Japonya",
+            "Almanya"
+          ]
+        },
+        {
+          "soruMetni": "Egemenliğin kaynağının tek bir kişiye dayandığı yönetim biçimine ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhuriyet",
+            "Demokrasi",
+            "Monarşi",
+            "Oligarşi"
+          ]
+        },
+        {
+          "soruMetni": "Hükümdarın yetkilerinin bir anayasa veya parlamento tarafından sınırlandırıldığı monarşi türü hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Mutlak Monarşi",
+            "Meşruti Monarşi",
+            "Teokratik Monarşi",
+            "Aristokrasi"
+          ]
+        },
+        {
+          "soruMetni": "Egemenliğin kaynağının ilahi bir güce veya din kurallarına dayandırıldığı devlet biçimine ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Laik Devlet",
+            "Teokratik Devlet",
+            "Oligarşi",
+            "Cumhuriyet"
+          ]
+        },
+        {
+          "soruMetni": "Devlet başkanının seçimle işbaşına geldiği ve egemenliğin millete ait olduğu kabul edilen devlet biçimi hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Cumhuriyet",
+            "Monarşi",
+            "Aristokrasi",
+            "Mutlakiyet"
+          ]
+        },
+        {
+          "soruMetni": "Egemenliğin zengin bir azınlık veya belirli bir sosyal sınıfın elinde olduğu yönetim biçimine ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Demokrasi",
+            "Teokrasi",
+            "Oligarşi",
+            "Monarşi"
+          ]
+        },
+        {
+          "soruMetni": "Halkın, egemenliğini doğrudan doğruya ve hiçbir aracı olmadan kullandığı demokrasi modeline ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Doğrudan Demokrasi",
+            "Temsili Demokrasi",
+            "Yarı Doğrudan Demokrasi",
+            "Çoğulcu Demokrasi"
+          ]
+        },
+        {
+          "soruMetni": "Halkın, egemenliğini seçtiği temsilciler aracılığıyla kullandığı, günümüzde en yaygın demokrasi modeli hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Doğrudan Demokrasi",
+            "Temsili Demokrasi",
+            "Yarı Doğrudan Demokrasi",
+            "Oligarşik Demokrasi"
+          ]
+        },
+        {
+          "soruMetni": "Temsili demokrasi modeline ek olarak halkın \"referandum\", \"halk vetosu\" ve \"halk girişimi\" gibi araçlarla yönetime katıldığı model hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğrudan Demokrasi",
+            "Otoriter Rejim",
+            "Yarı Doğrudan Demokrasi",
+            "Çoğunlukçu Demokrasi"
+          ]
+        },
+        {
+          "soruMetni": "Yarı doğrudan demokraside, halkın parlamentonun kabul ettiği bir kanunu oylayarak yürürlükten kaldırmasını sağlayan araca ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Referandum",
+            "Halk Vetosu",
+            "Halk Girişimi",
+            "Azil"
+          ]
+        },
+        {
+          "soruMetni": "Yarı doğrudan demokraside, belirli sayıda seçmenin imzasıyla parlamentoyu yeni bir kanun yapmaya veya mevcut bir kanunu değiştirmeye zorlamasına ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gensoru",
+            "Halk Girişimi",
+            "Referandum",
+            "Veto"
+          ]
+        },
+        {
+          "soruMetni": "Demokrasilerde, yönetime katılma hakkının sadece çoğunluğun değil, farklı görüşteki azınlıkların da hakkı olduğunu savunan anlayış hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çoğunlukçu Demokrasi",
+            "Çoğulcu Demokrasi",
+            "Totaliterizm",
+            "Otoriterizm"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki yönetim sistemlerinden hangileri, Yasama ve Yürütme kuvvetlerinin birbirlerinden kesin çizgilerle ayrıldığı, birbirlerinin görevine son veremediği bir \"mutlak kuvvetler ayrılığı\" prensibine dayanır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Parlamenter Sistem",
+            "Başkanlık Sistemi",
+            "Yarı-Başkanlık Sistemi",
+            "Meclis Hükümeti Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Yasama, yürütme ve yargı güçlerinin birbirinden ayrılması ve birbirini dengelemesi esasına dayanan ilkeye ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hukuk Devleti",
+            "Laiklik",
+            "Kuvvetler Ayrılığı",
+            "Milli Egemenlik"
+          ]
+        },
+        {
+          "soruMetni": "Kuvvetler ayrılığı teorisini modern anlamda sistemleştiren ve \"Yasaların Ruhu Üzerine\" adlı eseriyle tanınan düşünür kimdir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Jean-Jacques Rousseau",
+            "John Locke",
+            "Montesquieu",
+            "Karl Marx"
+          ]
+        },
+        {
+          "soruMetni": "Devletin temel üç gücü olan yasama, yürütme ve yargı aşağıdakilerden hangisinde doğru sıralanmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kanun yapma, Kanun uygulama, Yargılama",
+            "Yargılama, Kanun yapma, Kanun uygulama",
+            "Kanun uygulama, Yargılama, Kanun yapma",
+            "Kanun yapma, Yargılama, Kanun uygulama"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devlet_bicimleri_ve_kuvvetler_ayriligi_2",
+      "baslik": "Devlet Biçimleri Demokrasi ve Kuvvetler Ayrılığı-2",
+      "kategoriId": "vatandaslik",
+      "konuId": "devlet_bicimleri_ve_kuvvetler_ayriligi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Yasama, yürütme ve yargı güçlerinin tek bir organda toplandığı hükümet sistemi hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Meclis Hükümeti Sistemi",
+            "Yarı Başkanlık Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Kuvvetler ayrılığının \"sert\" bir şekilde uygulandığı, yasama ve yürütmenin birbirinden kesin çizgilerle ayrıldığı hükümet sistemi hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Yarı Başkanlık Sistemi",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Kuvvetler ayrılığının \"yumuşak\" bir şekilde uygulandığı, yürütmenin yasama organına karşı sorumlu olduğu hükümet sistemi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Totaliter Rejim",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Hem başkanlık sisteminin hem de parlamenter sistemin özelliklerini taşıyan karma hükümet sistemi hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Mutlak Monarşi",
+            "Meclis Hükümeti",
+            "Yarı Başkanlık Sistemi",
+            "Konfederasyon"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"Başkanlık Sistemi\"nin özelliklerinden biridir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yürütme organı iki başlıdır.",
+            "Başkan, parlamentoya karşı siyasi olarak sorumludur.",
+            "Başkan, hem devlet başkanı hem de hükümet başkanıdır.",
+            "Başkan, yasama organı içinden seçilir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"Parlamenter Sistem\"in özelliklerinden biridir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yürütme organı tek başlıdır.",
+            "Başkanın parlamentoyu fesih yetkisi yoktur.",
+            "Kuvvetler sert bir şekilde ayrılmıştır.",
+            "Hükümet, parlamentoya karşı sorumludur."
+          ]
+        },
+        {
+          "soruMetni": "Parlamenter sistemde, hükümetin parlamento içinden güvensizlik oyu alarak düşürülmesini sağlayan denetim yoluna ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Soru",
+            "Fesih",
+            "Gensoru",
+            "Azil"
+          ]
+        },
+        {
+          "soruMetni": "Başkanlık sisteminde, başkanın yasama organının aldığı bir kanunu onaylamayarak tekrar görüşülmek üzere geri göndermesine ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gensoru",
+            "Veto",
+            "Fesih",
+            "Referandum"
+          ]
+        },
+        {
+          "soruMetni": "\"Meclis Hükümeti\" sisteminin en belirgin özelliği aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güçlü ve bağımsız bir yürütme organının varlığı",
+            "Yargı bağımsızlığının olmaması",
+            "Kuvvetler birliği ve yasama organının üstünlüğü",
+            "Devlet başkanının halk tarafından seçilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ülkelerden hangisi \"Başkanlık Sistemi\"nin en tipik örneğidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İngiltere",
+            "Almanya",
+            "Amerika Birleşik Devletleri",
+            "Fransa"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ülkelerden hangisi \"Parlamenter Sistem\"in en tipik örneğidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Amerika Birleşik Devletleri",
+            "İngiltere",
+            "Fransa",
+            "Rusya"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki ülkelerden hangisi \"Yarı Başkanlık Sistemi\"ne örnek olarak gösterilebilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "İsviçre",
+            "Almanya",
+            "Fransa",
+            "Kanada"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nin 1921 Anayasası döneminde uygulanan hükümet sistemi modeli hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Meclis Hükümeti Sistemi",
+            "Yarı Başkanlık Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nde 1961 ve 1982 Anayasaları hangi hükümet sistemini benimsemiştir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Parlamenter Sistem",
+            "Başkanlık Sistemi",
+            "Yarı Başkanlık Sistemi",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de 2017 Anayasa değişikliği ile kabul edilen ve 2018'de yürürlüğe giren yeni hükümet sistemi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Güçlendirilmiş Parlamenter Sistem",
+            "Yarı Başkanlık Sistemi",
+            "Cumhurbaşkanlığı Hükümet Sistemi",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Hukuki açıdan, devlet iktidarını sınırlandıran ve vatandaşların temel haklarını güvence altına alan devlet modeline ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sosyal Devlet",
+            "Polis Devleti",
+            "Hukuk Devleti",
+            "Üniter Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Devletin, vatandaşların sosyal ve ekonomik refahını artırmakla yükümlü olduğu, fırsat eşitliğini sağlamaya çalıştığı devlet modeli hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sosyal Devlet",
+            "Liberal Devlet",
+            "Polis Devleti",
+            "Hukuk Devleti"
+          ]
+        },
+        {
+          "soruMetni": "Devletin, din ve vicdan özgürlüğünü güvence altına aldığı ve resmi bir devlet dininin bulunmadığı devlet modeli hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Teokratik Devlet",
+            "Laik Devlet",
+            "Sosyal Devlet",
+            "Monarşik Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Cumhurbaşkanlığı Hükümet Sistemi'nde yürütme organı kimlerden oluşur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Cumhurbaşkanı ve Başbakan",
+            "Başbakan ve Bakanlar Kurulu",
+            "Sadece Cumhurbaşkanı",
+            "Cumhurbaşkanı, Cumhurbaşkanı Yardımcıları ve Bakanlar"
+          ]
+        },
+        {
+          "soruMetni": "Parlamenter sistemde yürütme organının \"iki başlı\" olmasından kasıt nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Başkan ve Başbakan",
+            "Devlet Başkanı ve Başbakan",
+            "Yasama ve Yürütme",
+            "Federal ve Federe Yönetim"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devlet_bicimleri_ve_kuvvetler_ayriligi_3",
+      "baslik": "Devlet Biçimleri Demokrasi ve Kuvvetler Ayrılığı-3",
+      "kategoriId": "vatandaslik",
+      "konuId": "devlet_bicimleri_ve_kuvvetler_ayriligi",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdakilerden hangisi demokrasinin temel ilkelerinden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Milli egemenlik",
+            "Seçim ve temsil",
+            "Çoğulculuk ve katılım",
+            "Tek parti yönetimi"
+          ]
+        },
+        {
+          "soruMetni": "Bir ülkede iktidarın seçimle değişebilmesi, aşağıdakilerden hangisinin varlığını zorunlu kılar?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Serbest ve adil seçimler",
+            "Güçlü bir ordu",
+            "Ekonomik kalkınma",
+            "Uluslararası tanınma"
+          ]
+        },
+        {
+          "soruMetni": "Parlamenter sistemde, devlet başkanının siyasi olarak \"sorumsuz\" olmasının temel dayanağı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yargı dokunulmazlığı",
+            "Yürütme yetkisini tek başına kullanması",
+            "Yetkilerinin sembolik olması ve kuralı",
+            "Halk tarafından seçilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Üniter devlette, merkezi yönetimin yerel birimlere idari yetkiler vermesi ancak denetimini sürdürmesi ilkesine ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Federalizm",
+            "Yetki genişliği",
+            "Yerinden yönetim",
+            "Özerklik"
+          ]
+        },
+        {
+          "soruMetni": "Federal devletlerde, merkezi yönetimin yetki alanı dışında kalan konuların kim tarafından düzenleneceği kabul edilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Federe devletler",
+            "Uluslararası kuruluşlar",
+            "Sadece Federal Anayasa Mahkemesi",
+            "Doğrudan halk oylaması"
+          ]
+        },
+        {
+          "soruMetni": "Hükümet sistemlerini birbirinden ayıran temel kriter aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin üniter veya federal olması",
+            "Yasama ve yürütme organları arasındaki ilişki",
+            "Yargı organının bağımsızlığı",
+            "Seçim sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Hukuk kurallarının, yönetenler de dahil olmak üzere herkesi bağlaması hangi ilkenin gereğidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sosyal devlet",
+            "Hukuk devleti",
+            "Demokrasi",
+            "Laiklik"
+          ]
+        },
+        {
+          "soruMetni": "Devletin, vatandaşlar arasında hiçbir ayrım gözetmeksizin eşit hizmet sunması hangi ilkeyle doğrudan ilgilidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Eşitlik ilkesi",
+            "Milli egemenlik",
+            "Kuvvetler ayrılığı",
+            "Federalizm"
+          ]
+        },
+        {
+          "soruMetni": "Başkanlık sisteminde, yasama organının yürütmeyi denetlemek için kullandığı en etkili hukuki yol aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Gensoru",
+            "Soruşturma",
+            "Azil",
+            "Veto"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki devlet biçimlerinden hangisinde \"çifte vatandaşlık\" ve \"çifte hukuk düzeni\" görülür?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Üniter Devlet",
+            "Federal Devlet",
+            "Konfederasyon",
+            "Bölgesel Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Hangi hükümet sisteminde \"Bakanlar Kurulu\" kavramı bulunmaz?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Parlamenter Sistem",
+            "Yarı Başkanlık Sistemi",
+            "Başkanlık Sistemi",
+            "Meşruti Monarşi"
+          ]
+        },
+        {
+          "soruMetni": "Parlamenter sistemde, hükümetin kurulabilmesi için parlamentodan alması gereken oya ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Güvenoyu",
+            "Veto",
+            "Yeterlilik",
+            "Bütçe onayı"
+          ]
+        },
+        {
+          "soruMetni": "Yargı organının, yasama ve yürütme organlarının işlemlerini hukuk kurallarına uygunluk açısından denetlemesine ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yargı bağımsızlığı",
+            "Yargısal denetim",
+            "Kuvvetler birliği",
+            "Yasama sorumsuzluğu"
+          ]
+        },
+        {
+          "soruMetni": "Egemenliğin kaynağına göre yapılan devlet sınıflandırmasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Monarşi",
+            "Teokrasi",
+            "Oligarşi",
+            "Federal Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Siyasi partiler, demokrasinin hangi ilkesinin kurumsallaşmış bir gereğidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Doğrudan demokrasi",
+            "Çoğulculuk",
+            "Teokrasi",
+            "Kuvvetler birliği"
+          ]
+        },
+        {
+          "soruMetni": "Bir ülkede temel hak ve özgürlüklerin anayasal güvence altına alınması, en çok hangi devlet ilkesiyle ilgilidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Üniter devlet",
+            "Sosyal devlet",
+            "Hukuk devleti",
+            "Federal devlet"
+          ]
+        },
+        {
+          "soruMetni": "Kuvvetler ayrılığı sisteminde \"fren ve denge\" mekanizmasının amacı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Güçlerin tek elde toplanmasını engellemek",
+            "Yürütme organını güçlendirmek",
+            "Yasama organını tek yetkili kılmak",
+            "Yargı kararlarını yavaşlatmak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"sert\" kuvvetler ayrılığının bir özelliği değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yürütme yasamayı feshedemez.",
+            "Yasama yürütmeyi güvensizlik oyu ile düşüremez.",
+            "Yürütme, yasama organına karşı sorumludur.",
+            "Başkan, halk tarafından seçilir."
+          ]
+        },
+        {
+          "soruMetni": "Cumhurbaşkanlığı Hükümet Sistemi'nde \"Bakan\"ların atanması ve görevden alınması yetkisi kime aittir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "TBMM",
+            "Cumhurbaşkanı",
+            "Anayasa Mahkemesi",
+            "Yargıtay"
+          ]
+        },
+        {
+          "soruMetni": "Cumhurbaşkanlığı Hükümet Sistemi'nde, Cumhurbaşkanının parlamentoyu fesih yetkisi var mıdır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Evet, tek taraflı olarak vardır.",
+            "Hayır, böyle bir yetkisi yoktur.",
+            "Evet, ancak TBMM de seçime gider.",
+            "Sadece Anayasa Mahkemesi kararıyla mümkündür."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devlet_bicimleri_ve_kuvvetler_ayriligi_4",
+      "baslik": "Devlet Biçimleri Demokrasi ve Kuvvetler Ayrılığı-4",
+      "kategoriId": "vatandaslik",
+      "konuId": "devlet_bicimleri_ve_kuvvetler_ayriligi",
+      "isNew": true,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Bir devletin siyasi rejiminin totaliter veya otoriter olarak sınıflandırılmasının temel ölçütü nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin üniter veya federal olması",
+            "Temel hak ve özgürlüklere yaklaşımı ve iktidarın sınırlandırılması",
+            "Ekonomik sistemin kapitalist veya sosyalist olması",
+            "Devlet başkanının seçimle gelip gelmemesi"
+          ]
+        },
+        {
+          "soruMetni": "Antik Yunan şehir devletlerinde görülen, vatandaşların tamamının mecliste toplandığı demokrasi türü hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Temsili Demokrasi",
+            "Yarı Doğrudan Demokrasi",
+            "Doğrudan Demokrasi",
+            "Meşruti Demokrasi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi üniter devletin özelliklerinden biridir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Birden fazla anayasanın varlığı",
+            "Eyaletlerin yasama yetkisi",
+            "Tek bir hukuk düzeni ve merkezi otorite",
+            "Konfederasyona üye olma"
+          ]
+        },
+        {
+          "soruMetni": "Hangi sistemde, yürütme organının başı yasama organı üyesi olmak zorunda değildir ve olamaz?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Parlamenter Sistem",
+            "Meclis Hükümeti",
+            "Başkanlık Sistemi",
+            "Yarı Başkanlık Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "\"Devlet, birey içindir\" anlayışını savunan, temel hak ve özgürlükleri ön planda tutan siyasi ideoloji ve demokrasi anlayışı hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Totaliterizm",
+            "Otoriterizm",
+            "Liberal Demokrasi",
+            "Sosyalist Demokrasi"
+          ]
+        },
+        {
+          "soruMetni": "Devlet iktidarının sınırlandırılmadığı, bireyin hayatının her alanına müdahale eden ve tek bir ideolojiyi dayatan rejim hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Totaliter Rejim",
+            "Demokratik Rejim",
+            "Parlamenter Rejim",
+            "Federal Rejim"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre kanun yapma yetkisi kime aittir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhurbaşkanı",
+            "Türkiye Büyük Millet Meclisi",
+            "Bakanlar Kurulu",
+            "Anayasa Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "Parlamenter sistemde, hükümetin programını parlamentoya sunarak parlamentonun desteğini istemesine ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Güvenoyu",
+            "Bütçe görüşmesi",
+            "Gensoru",
+            "Yüce Divan"
+          ]
+        },
+        {
+          "soruMetni": "\"Demokratik\" bir sistemin varlığı için aşağıdakilerden hangisi zorunlu bir koşul değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Düzenli seçimler",
+            "Siyasi partilerin varlığı",
+            "Temel hak ve özgürlüklerin güvencesi",
+            "Başkanlık sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Yargı organının bağımsızlığı ilkesi, en çok hangi devlet yapısının temel taşıdır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Polis Devleti",
+            "Hukuk Devleti",
+            "Totaliter Devlet",
+            "Mutlak Monarşi"
+          ]
+        },
+        {
+          "soruMetni": "Bir federal devlette, federe devletler ile federal devlet arasında çıkan anayasal uyuşmazlıkları kim çözer?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Federal Yüksek Mahkeme",
+            "Federal Başkan",
+            "Federe devletlerin ortak meclisi",
+            "Uluslararası Adalet Divanı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi bir Konfederasyon'un özelliği değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Üye devletlerin egemen olması",
+            "Uluslararası bir antlaşma ile kurulması",
+            "Konfederasyondan ayrılma hakkının bulunması",
+            "Tek bir federal anayasaya sahip olması"
+          ]
+        },
+        {
+          "soruMetni": "İktidarın, anayasada belirtilmeyen yetkileri kullanamaması ve keyfi davranamaması hangi ilkenin sonucudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Hukuk Devleti",
+            "Sosyal Devlet",
+            "Çoğunlukçuluk",
+            "Üniter yapı"
+          ]
+        },
+        {
+          "soruMetni": "Demokratik yönetim biçiminin temel unsurları arasında aşağıdakilerden hangileri yer alır?\nI. Siyasi iktidarın halkın rızasına dayanması\nII. Temel hak ve özgürlüklerin güvence altına alınması\nIII. Hukukun üstünlüğünün benimsenmesi",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Demokratik bir hukuk devletinde, aşağıdakilerden hangileri kuvvetler ayrılığı ilkesini fiilen güçlendiren mekanizmalar arasındadır?\nI. Yargı bağımsızlığının anayasal güvence altına alınması\nII. Anayasa Mahkemesi'nin denetim yetkisi\nIII. Tek parti egemenliğinin sona ermesi",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "Hangi sistemde, yürütme organı yasama organını feshetme yetkisine sahip olabilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Meclis Hükümeti",
+            "Totaliter Sistem"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"yargı bağımsızlığı\"nı sağlamaya yönelik bir güvence değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hakimlerin görevden alınamaması",
+            "Hakimlerin maaş güvencesi",
+            "Hakimlerin yürütme organına bağlı olması",
+            "Hakimlerin coğrafi teminatı"
+          ]
+        },
+        {
+          "soruMetni": "Bir devletin \"üniter\" veya \"federal\" olarak sınıflandırılması, aşağıdakilerden hangisine göre yapılır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Egemenliğin kaynağı",
+            "Siyasi iktidarın merkezi/yerel dağılımı",
+            "Hükümet sisteminin türü",
+            "Hukukun üstünlüğü"
+          ]
+        },
+        {
+          "soruMetni": "Parlamenter sistemde Yürütme organı; \nI. Devlet başkanı\nII. Bakanlar Kurulu\nbiçiminde iki başlıdır. Bu sistemde Yürütme'nin hangi unsuru *siyasi sorumluluk* taşır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "Her ikisi de sorumludur",
+            "Hiçbiri sorumlu değildir"
+          ]
+        },
+        {
+          "soruMetni": "Hangi hükümet sisteminde, yasama ve yürütme organları aynı kişilerden oluşabilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Totaliter Sistem",
+            "Konfederasyon"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anayasa_hukukuna_giris_1",
+      "baslik": "Anayasa Hukukuna Giriş ve Temel Kavramlar-1",
+      "kategoriId": "vatandaslik",
+      "konuId": "anayasa_hukukuna_giris",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Devletin temel yapısını, organlarını, yetkilerini ve kişilerin temel haklarını düzenleyen en üstün hukuk kuralı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kanun",
+            "Anayasa",
+            "Yönetmelik",
+            "Tüzük"
+          ]
+        },
+        {
+          "soruMetni": "Değiştirilmesi, normal kanunların değiştirilmesinden daha zor usul ve kurallara bağlanan anayasa türü hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sert Anayasa",
+            "Yumuşak Anayasa",
+            "Yazısız Anayasa",
+            "Çerçeve Anayasa"
+          ]
+        },
+        {
+          "soruMetni": "Hukuk kurallarının, alt alta soyut bir güç sıralaması içinde yer almasını ifade eden kavrama ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hukuk Devleti",
+            "Laiklik",
+            "Normlar Hiyerarşisi",
+            "Kuvvetler Ayrılığı"
+          ]
+        },
+        {
+          "soruMetni": "Normlar hiyerarşisine göre en üstün norm aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Anayasa",
+            "Kanun",
+            "Uluslararası Antlaşmalar",
+            "Cumhurbaşkanlığı Kararnamesi"
+          ]
+        },
+        {
+          "soruMetni": "Bir anayasanın, kendisinden önceki anayasal düzeni yok sayarak, yeni bir devlet düzeni kuran iktidara ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Asli Kurucu İktidar",
+            "Tali Kurucu İktidar",
+            "Yürütme İktidarı",
+            "Yasama İktidarı"
+          ]
+        },
+        {
+          "soruMetni": "Bir anayasanın, yine o anayasanın belirlediği kurallara ve usullere uyarak anayasayı değiştiren iktidara ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Asli Kurucu İktidar",
+            "Tali Kurucu İktidar",
+            "Yargı İktidarı",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"devlet\"in kurucu unsurlarından biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Millet",
+            "Ülke",
+            "Egemenlik",
+            "Siyasi Parti"
+          ]
+        },
+        {
+          "soruMetni": "Egemenliğin kaynağının ilahi bir güce veya din kurallarına dayandırıldığı devlet biçimine ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Teokratik Devlet",
+            "Laik Devlet",
+            "Oligarşi",
+            "Monarşi"
+          ]
+        },
+        {
+          "soruMetni": "Devletin, din ve vicdan özgürlüğünü güvence altına alması ve resmi bir devlet dininin bulunmaması ilkesine ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hukuk Devleti",
+            "Sosyal Devlet",
+            "Laik Devlet",
+            "Demokratik Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Yasama, yürütme ve yargı güçlerinin birbirinden ayrılması ve birbirini dengelemesi esasına dayanan ilkeye ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Milli Egemenlik",
+            "Kuvvetler Ayrılığı",
+            "Kuvvetler Birliği",
+            "Hukuk Devleti"
+          ]
+        },
+        {
+          "soruMetni": "Kuvvetler ayrılığının \"sert\" bir şekilde uygulandığı, yasama ve yürütmenin kesin çizgilerle ayrıldığı hükümet sistemi hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Yarı Başkanlık Sistemi",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "Kuvvetler ayrılığının \"yumuşak\" bir şekilde uygulandığı ve yürütmenin yasamaya karşı sorumlu olduğu hükümet sistemi hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Meclis Hükümeti",
+            "Mutlak Monarşi"
+          ]
+        },
+        {
+          "soruMetni": "Devletin, vatandaşların sosyal ve ekonomik refahını artırmakla yükümlü olmasını ifade eden ilke hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hukuk Devleti",
+            "Sosyal Devlet",
+            "Laik Devlet",
+            "Üniter Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Yasama ve yürütme güçlerinin \"yasama\" organında toplandığı hükümet sistemi modeli hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Başkanlık Sistemi",
+            "Parlamenter Sistem",
+            "Meclis Hükümeti",
+            "Yarı Başkanlık Sistemi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi 1982 Anayasası'nda belirtilen temel seçim ilkelerinden biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Genel Oy",
+            "Eşit Oy",
+            "Açık Oy - Gizli Sayım",
+            "Gizli Oy - Açık Sayım"
+          ]
+        },
+        {
+          "soruMetni": "Türk Anayasa tarihinde padişahın yetkilerini ilk kez sınırlayan ve \"anayasal belge\" niteliği taşıyan ilk gelişme hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sened-i İttifak",
+            "Tanzimat Fermanı",
+            "Islahat Fermanı",
+            "Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nde \"kanun gücünün üstünlüğü\" ilkesinin ilk kez kabul edildiği belge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sened-i İttifak",
+            "Tanzimat Fermanı",
+            "Islahat Fermanı",
+            "Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "Osmanlı Devleti'nde gayrimüslimlere Müslümanlarla eşit haklar tanınmasını öngören belge aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tanzimat Fermanı",
+            "Sened-i İttifak",
+            "Islahat Fermanı",
+            "Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "Türk tarihinin ilk yazılı anayasası aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "1921 Teşkilat-ı Esasiye",
+            "1924 Teşkilat-ı Esasiye",
+            "Sened-i İttifak",
+            "1876 Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "1876 Kanun-i Esasi'ye göre oluşturulan çift meclisli yapı aşağıdakilerden hangileridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Meclis-i Mebusan ve Cumhuriyet Senatosu",
+            "Heyet-i Ayan ve Heyet-i Mebusan",
+            "Danışma Meclisi ve Temsilciler Meclisi",
+            "Millet Meclisi ve Milli Güvenlik Konseyi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anayasa_hukukuna_giris_2",
+      "baslik": "Anayasa Hukukuna Giriş ve Temel Kavramlar-2",
+      "kategoriId": "vatandaslik",
+      "konuId": "anayasa_hukukuna_giris",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1909 değişiklikleri ile 1876 Kanun-i Esasi üzerinde yapılan en önemli değişiklik nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Padişahın yetkileri artırılmış, meclisin yetkileri azaltılmıştır.",
+            "Meclisin yetkileri artırılmış, padişahın yetkileri kısıtlanmıştır.",
+            "Cumhuriyet ilan edilmiştir.",
+            "Tek meclisli sisteme geçilmiştir."
+          ]
+        },
+        {
+          "soruMetni": "TBMM'nin açılmasından sonra kabul edilen ve \"Milli Egemenlik\" ilkesini temel alan ilk anayasal belge hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1876 Kanun-i Esasi",
+            "1921 Teşkilat-ı Esasiye",
+            "1924 Teşkilat-ı Esasiye",
+            "1961 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "1921 Anayasası'nın benimsediği temel ilke ve hükümet sistemi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kuvvetler Ayrılığı - Parlamenter Sistem",
+            "Kuvvetler Birliği - Meclis Hükümeti",
+            "Sert Kuvvetler Ayrılığı - Başkanlık Sistemi",
+            "Laiklik - Karma Sistem"
+          ]
+        },
+        {
+          "soruMetni": "1921 Anayasası'nda 1923 yılında yapılan en önemli değişiklik aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Başkentin Ankara olması",
+            "Laiklik ilkesinin kabulü",
+            "Kadınlara oy hakkı verilmesi",
+            "Cumhuriyet'in ilanı"
+          ]
+        },
+        {
+          "soruMetni": "Cumhuriyet döneminin ilk anayasası ve Türkiye'nin ikinci anayasası aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1876 Kanun-i Esasi",
+            "1921 Teşkilat-ı Esasiye",
+            "1924 Anayasası",
+            "1961 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye Cumhuriyeti'nde en uzun süre yürürlükte kalan anayasa aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1921 Anayasası",
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "\"Devletin dini İslam'dır\" ibaresi 1924 Anayasası'ndan hangi yıl çıkarılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1924",
+            "1928",
+            "1934",
+            "1937"
+          ]
+        },
+        {
+          "soruMetni": "\"Laiklik\" ilkesi Anayasa'ya ilk kez hangi yıl yapılan değişiklikle girmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1924",
+            "1928",
+            "1937",
+            "1961"
+          ]
+        },
+        {
+          "soruMetni": "Kadınlara milletvekili seçme ve seçilme hakkı hangi yıl ve hangi anayasa döneminde tanınmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1923 - 1921 Anayasası",
+            "1934 - 1924 Anayasası",
+            "1961 - 1961 Anayasası",
+            "1982 - 1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "Türkiye'de \"çok partili siyasi hayata\" geçiş hangi anayasa döneminde gerçekleşmiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1876 Kanun-i Esasi",
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "27 Mayıs 1960 askeri müdahalesi sonrasında hazırlanan ve halkoyuna sunulan anayasa hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası",
+            "1909 Değişiklikleri"
+          ]
+        },
+        {
+          "soruMetni": "1961 Anayasası'nı hazırlayan sivil ve askeri kanattan oluşan meclisin adı nedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kurucu Meclis",
+            "Milli Güvenlik Konseyi",
+            "Meclis-i Umumi",
+            "Danışma Meclisi"
+          ]
+        },
+        {
+          "soruMetni": "Türk Anayasa tarihinde \"en hürriyetçi\" ve \"çoğulcu\" anayasa olarak kabul edilen anayasa hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1921 Anayasası",
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "\"Anayasa Mahkemesi\" kurumu ilk kez hangi anayasa ile kurulmuştur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1921 Anayasası",
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "1961 Anayasası'nın benimsediği çift meclisli yasama organı aşağıdakilerden hangileridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Heyet-i Ayan ve Heyet-i Mebusan",
+            "Millet Meclisi ve Cumhuriyet Senatosu",
+            "Temsilciler Meclisi ve Milli Birlik Komitesi",
+            "Danışma Meclisi ve Milli Güvenlik Konseyi"
+          ]
+        },
+        {
+          "soruMetni": "12 Mart 1971 Muhtırası sonrasında 1961 Anayasası'nda yapılan değişikliklerin temel amacı neydi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Temel hak ve özgürlükleri genişletmek",
+            "Yürütme organını güçlendirmek ve özgürlükleri kısıtlamak",
+            "Çift meclisli yapıyı kaldırmak",
+            "Anayasa Mahkemesi'ni kurmak"
+          ]
+        },
+        {
+          "soruMetni": "12 Eylül 1980 askeri müdahalesi sonrasında hazırlanan ve günümüzde yürürlükte olan anayasa hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1971 Değişiklikleri",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nı hazırlayan organlar aşağıdakilerden hangileridir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Kurucu Meclis",
+            "Danışma Meclisi ve Milli Güvenlik Konseyi",
+            "Millet Meclisi ve Cumhuriyet Senatosu",
+            "TBMM"
+          ]
+        },
+        {
+          "soruMetni": "Türk anayasaları içinde en \"sert\" ve en \"kazuistik\" olanı hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "1921 Anayasası",
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın ilk halinde aşağıdakilerden hangisi bulunmuyordu?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devlet Denetleme Kurulu",
+            "Milli Güvenlik Kurulu",
+            "Anayasa Mahkemesi'ne bireysel başvuru hakkı",
+            "TRT'nin varlığı"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anayasa_hukukuna_giris_3",
+      "baslik": "Anayasa Hukukuna Giriş ve Temel Kavramlar-3",
+      "kategoriId": "vatandaslik",
+      "konuId": "anayasa_hukukuna_giris",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1982 Anayasası'nda yapılan hangi yıl değişikliği ile Cumhurbaşkanının halk tarafından seçilmesi kabul edilmiştir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1995",
+            "2001",
+            "2007",
+            "2010"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nda yapılan 2010 değişikliği ile getirilen en önemli yeniliklerden biri aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Başbakanlık makamının kaldırılması",
+            "Cumhurbaşkanının halk tarafından seçilmesi",
+            "Anayasa Mahkemesi'ne bireysel başvuru hakkı",
+            "Devlet Güvenlik Mahkemelerinin kurulması"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nda 2017 yılında yapılan referandumla kabul edilen değişikliğin en temel sonucu nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Parlamenter sistemin güçlendirilmesi",
+            "Anayasa Mahkemesi'nin kurulması",
+            "Cumhurbaşkanlığı Hükümet Sistemi'ne geçilmesi",
+            "Temel hak ve özgürlüklerin genişletilmesi"
+          ]
+        },
+        {
+          "soruMetni": "2017 Anayasa değişikliği ile aşağıdaki makamlardan hangisi kaldırılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhurbaşkanlığı",
+            "Başbakanlık",
+            "TBMM Başkanlığı",
+            "Bakanlık"
+          ]
+        },
+        {
+          "soruMetni": "Bir Anayasanın 'sert (katı)' Anayasa olarak nitelendirilmesinin sonuçları arasında aşağıdakilerden hangileri bulunur?\nI. Anayasanın değiştirilme usulünün kanunlardan farklı olması\nII. Anayasa hükümlerinin kanunlardan üstün sayılması\nIII. Anayasa Mahkemesi'nin kurulmasını zorunlu kılması",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "I ve II",
+            "Yalnız III",
+            "II ve III",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 1. Maddesi hangi konuyu düzenler?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Devletin Şekli",
+            "Cumhuriyetin Nitelikleri",
+            "Devletin Bütünlüğü, Resmi Dili",
+            "Değiştirilemez Hükümler"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangileri, 'Demokrasi' kavramının temel ilkeleri ve araçları arasında yer alır?\nI. Çoğunluğun yönetimi\nII. Hukukun üstünlüğü\nIII. Siyasi çoğulculuk (Çok partililik)",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız III",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "'Hukuk Devleti' ilkesinin temel gerekleri arasında aşağıdakilerden hangileri yer alır?\nI. Yargı bağımsızlığının güvence altına alınması\nII. İdarenin tüm eylem ve işlemlerinin yargı denetimine açık olması\nIII. Temel hak ve hürriyetlerin yasal güvencelerle korunması",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız I",
+            "Yalnız II",
+            "I ve II",
+            "I, II ve III"
+          ]
+        },
+        {
+          "soruMetni": "1961 Anayasası ile 1982 Anayasası karşılaştırıldığında, 1982 Anayasası'nın hangi organı daha güçlü kıldığı söylenebilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yürütme",
+            "Yasama",
+            "Yargı",
+            "Sendikalar"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi, 'Anayasa'yı ilk defa yazılı hale getiren (Tarihi anlamda ilk Anayasa) ve kuvvetler ayrılığı ilkesine yer veren anayasal belgedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İngiliz Magna Carta",
+            "Amerika Birleşik Devletleri Anayasası",
+            "Fransız İnsan ve Vatandaş Hakları Bildirisi",
+            "Kanun-i Esasi"
+          ]
+        },
+        {
+          "soruMetni": "\"Siyasi partilerin kapatılması\" davasına bakma yetkisi hangi mahkemeye aittir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yargıtay",
+            "Danıştay",
+            "Anayasa Mahkemesi",
+            "Uyuşmazlık Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nda 2001 yılında yapılan \"AB Uyum Paketi\" değişikliklerinin temel amacı neydi?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yürütmeyi güçlendirmek",
+            "Temel hak ve özgürlükler alanını genişletmek",
+            "Cumhurbaşkanını halkın seçmesini sağlamak",
+            "Parlamenter sistemi kaldırmak"
+          ]
+        },
+        {
+          "soruMetni": "1921 Anayasası'nın en temel özelliği olan \"Kuvvetler Birliği\" ilkesi ne anlama gelir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yasama, yürütme ve yargının ayrı organlarda olması",
+            "Yasama, yürütme ve yargı yetkilerinin Meclis'te toplanması",
+            "Devletin tek bir milletten oluşması",
+            "Padişah ve Meclis'in güçlerini birleştirmesi"
+          ]
+        },
+        {
+          "soruMetni": "Yazılı bir Anayasanın içeriğinde, aşağıdakilerden hangileri mutlaka bulunması gereken temel unsurlardandır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sosyal ve ekonomik düzenlemeler",
+            "Devlet Başkanının tüm yetkileri",
+            "Devletin temel organlarının yapısı ve işleyişi",
+            "Sadece vatandaşlık hakları"
+          ]
+        },
+        {
+          "soruMetni": "Hangi anayasamızda \"Temel hak ve hürriyetler\" konusu hiç düzenlenmemiştir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1876 Kanun-i Esasi",
+            "1921 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "Anayasayı yapan ve yetkisini hukuk düzeninden almayan, dolayısıyla hukuki sınırlamalara tabi olmayan iktidar türü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Tali (İkincil) Kurucu İktidar",
+            "Kurulmuş İktidar",
+            "Yasama İktidarı",
+            "Asli (Orijinal) Kurucu İktidar"
+          ]
+        },
+        {
+          "soruMetni": "Hangi anayasamızda ilk kez \"Sosyal Devlet\" ilkesi açıkça yer almıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1921 Anayasası",
+            "1924 Anayasası",
+            "1961 Anayasası",
+            "1982 Anayasası"
+          ]
+        },
+        {
+          "soruMetni": "1961 Anayasası'nı 1924 Anayasası'ndan ayıran en önemli fark nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletin şeklinin Cumhuriyet olması",
+            "Başkentin Ankara olması",
+            "Anayasal yargıyı getirmiş olması",
+            "Milli egemenlik ilkesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre bir kanunu kim veto edebilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "TBMM Başkanı",
+            "Anayasa Mahkemesi Başkanı",
+            "Cumhurbaşkanı",
+            "Yargıtay Başkanı"
+          ]
+        },
+        {
+          "soruMetni": "2017 değişikliği sonrası \"Cumhurbaşkanlığı Kararnamesi\" hakkında aşağıdakilerden hangisi söylenebilir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sadece olağanüstü hallerde çıkarılabilir.",
+            "Kanunların üzerinde bir normdur.",
+            "Temel haklar CBK ile düzenlenebilir.",
+            "Yürütme yetkisine ilişkin konularda çıkarılabilir."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1982_anayasasi_temel_ilkeleri_1",
+      "baslik": "1982 Anayasası Temel İlkeler-1",
+      "kategoriId": "vatandaslik",
+      "konuId": "1982_anayasasi_temel_ilkeleri",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "1982 Anayasası'nın 1. Maddesi'nde belirtilen Türkiye Devleti'nin yönetim şekli nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Monarşi",
+            "Cumhuriyet",
+            "Federal Devlet",
+            "Meclis Hükümeti"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 2. Maddesi'nde sayılan \"Cumhuriyetin Nitelikleri\" arasında aşağıdakilerden hangisi yer almaz?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Demokratik, laik ve sosyal bir hukuk devleti",
+            "İnsan haklarına saygılı",
+            "Atatürk milliyetçiliğine bağlı",
+            "Federal bir devlet"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 3. Maddesi'ne göre aşağıdakilerden hangisi \"Devletin Bütünlüğü\" ile ilgili hükümlerden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Ülkesi ve milletiyle bölünmez bir bütündür",
+            "Dili Türkçedir",
+            "Başkenti Ankara'dır",
+            "Egemenlik kayıtsız şartsız milletindir"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 4. Maddesi'ne göre Anayasa'nın hangi maddelerinin değiştirilmesi teklif dahi edilemez?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnızca 1. Maddesi",
+            "Yalnızca 2. Maddesi",
+            "İlk üç maddesi",
+            "İlk on maddesi"
+          ]
+        },
+
+        {
+          "soruMetni": "1982 Anayasası'nın 6. Maddesi'ne göre \"Egemenlik\" kime aittir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Türkiye Büyük Millet Meclisi'ne",
+            "Cumhurbaşkanına",
+            "Kayıtsız şartsız Millete",
+            "Anayasa Mahkemesi'ne"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 6. Maddesi'ne göre Türk Milleti egemenliğini hangi organlar eliyle kullanır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yalnızca Yasama",
+            "Yalnızca Yürütme",
+            "Anayasa'nın koyduğu esaslara göre yetkili organları eliyle",
+            "Sadece siyasi partiler aracılığıyla"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 7. Maddesi'ne göre \"Yasama Yetkisi\" kime aittir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhurbaşkanı",
+            "Türkiye Büyük Millet Meclisi",
+            "Halk",
+            "Anayasa Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 7. Maddesi'ne göre \"Yasama Yetkisi\"nin devredilip devredilemeyeceği konusunda aşağıdakilerden hangisi doğrudur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu yetki devredilemez",
+            "Cumhurbaşkanına devredilebilir",
+            "Anayasa Mahkemesi'ne devredilebilir",
+            "Referandum ile devredilebilir"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 8. Maddesi'ne göre \"Yürütme Yetkisi ve Görevi\" kime aittir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhurbaşkanı ve Bakanlar Kurulu",
+            "Yalnızca TBMM",
+            "Cumhurbaşkanı",
+            "Başbakan"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 9. Maddesi'ne göre \"Yargı Yetkisi\" kim tarafından kullanılır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhurbaşkanı adına TBMM tarafından",
+            "TBMM adına Cumhurbaşkanı tarafından",
+            "Türk Milleti adına bağımsız ve tarafsız mahkemelerce",
+            "Adalet Bakanlığı tarafından"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 6. maddesine göre egemenliğin kullanılması aşağıdakilerden hangisine devredilemez?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "TBMM'ye",
+            "Herhangi bir kişiye, aileye, zümreye veya sınıfa",
+            "Cumhurbaşkanına",
+            "Anayasa Mahkemesine"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın Başlangıç kısmında hangi ilkeye atıf yapılmaz?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Atatürk milliyetçiliği",
+            "Federal devlet yapısı",
+            "Kutsal dinî duygular",
+            "Milli mücadele ruhu"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası’nın Başlangıç kısmı, Anayasa metninin ayrılmaz bir parçasıdır ve yorumda başvurulabilir bir kaynaktır. Başlangıç’ta yer alan 'kutsal dinî duygulara saygı' ifadesi, aşağıdaki ilkelerden hangisiyle çelişmez?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletin resmî bir din benimsemesi zorunluluğu",
+            "Din ve vicdan özgürlüğünün korunması",
+            "Laiklik ilkesinin ihlali",
+            "Devlet eliyle din eğitimi verilmesi"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"Hukuk Devleti\" ilkesinin bir gereği değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kanunların Anayasa'ya uygunluğunun denetimi",
+            "İdarenin tüm eylem ve işlemlerinin yargı denetimine tabi olması",
+            "Temel hak ve hürriyetlerin güvence altına alınması",
+            "Mahkemelerin yürütme organına bağlı çalışması"
+          ]
+        },
+        {
+          "soruMetni": "Anayasa'nın 7. maddesine göre, yasama yetkisi Türk Milleti adına aşağıdakilerden hangisi tarafından kullanılır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhurbaşkanı",
+            "Türkiye Büyük Millet Meclisi",
+            "Anayasa Mahkemesi",
+            "Yüksek Seçim Kurulu"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi \"Sosyal Devlet\" ilkesinin bir gereği değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sosyal güvenlik hakkının tanınması",
+            "Fırsat eşitliğinin sağlanması",
+            "Vergi adaletinin sağlanması",
+            "Devletin ekonomik hayata hiç müdahale etmemesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 2. Maddesi'nde belirtilen \"Laik Devlet\" ilkesinin anlamı nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletin ateizmi resmi ideoloji olarak benimsemesi",
+            "Devletin tüm dinleri yasaklaması",
+            "Devletin, din ve vicdan özgürlüğünü güvence altına alması",
+            "Diyanet İşleri Başkanlığı'nın kaldırılması"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 2. Maddesi'nde yer alan \"Demokratik Devlet\" ilkesinin en temel göstergesi nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Egemenliğin tek bir kişiye ait olması",
+            "Yöneticilerin seçimle işbaşına gelmesi ve milli egemenlik",
+            "Hukuk kurallarının olmaması",
+            "Devletin ekonomiye müdahalesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 2. maddesinde belirtilen 'sosyal devlet' ilkesi, aşağıdakilerden hangisini ifade eder?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Devletin sadece güvenlik sağladığı bir yapı",
+            "Din ve vicdan özgürlüğünün korunması",
+            "Toplumsal adalet ve refahın sağlanması",
+            "Yasama organının üstünlüğü"
+          ]
+        }
+      ]
     }
 
      ],

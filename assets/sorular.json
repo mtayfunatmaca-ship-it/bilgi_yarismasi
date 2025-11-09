@@ -318,212 +318,212 @@
   
   "quizzes": [
     {
-      "id": "hukukun_temel_kavramlari_4",
-      "baslik": "Hukukun Temel Kavramları-4",
+      "id": "yasama_yurutme_yargi_1",
+      "baslik": "Yasama, Yürütme, Yargı-1",
       "kategoriId": "vatandaslik",
-      "konuId": "hukukun_temel_kavramlari",
-      "isNew": true,
+      "konuId": "yasama_yurutme_yargi",
+      "isNew": false,
       "soruSayisi": 20,
       "sureDakika": 20,
       "sorular": [
         {
-          "soruMetni": "Hukuki sonuç doğuran insan iradesi dışındaki olaylara ne ad verilir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Hukuki fiil",
-            "Hukuki işlem",
-            "Hukuki olay",
-            "Haksız fiil"
-          ]
-        },
-        {
-          "soruMetni": "Hukuki bir sonuç doğurmaya yönelik irade beyanı veya beyanlarına ne ad verilir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Hukuki fiil",
-            "Hukuki işlem",
-            "Hukuki olay",
-            "Sorumluluk"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdakilerden hangisi tek taraflı bir hukuki işleme örnektir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Evlenme",
-            "Sözleşme",
-            "Vasiyetname",
-            "Satış"
-          ]
-        },
-        {
-          "soruMetni": "Hukuka aykırı ve kusurlu bir fiille başkasına zarar verilmesi durumuna ne ad verilir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Haksız fiil",
-            "Hukuki işlem",
-            "Hukuki olay",
-            "Borç"
-          ]
-        },
-        {
-          "soruMetni": "Bir kişinin, bizzat kendisinin veya hukuken sorumlu olduğu kişilerin ya da malın verdiği zararlardan dolayı hesap verme durumuna ne ad verilir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Hak",
-            "Sorumluluk",
-            "Ehliyet",
-            "Yetki"
-          ]
-        },
-        {
-          "soruMetni": "Devletin temel yapısını, yasama, yürütme ve yargı organlarını belirleyen temel kanuna ne ad verilir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Medeni Kanun",
-            "Anayasa",
-            "Ceza Kanunu",
-            "Borçlar Kanunu"
-          ]
-        },
-        {
-          "soruMetni": "1982 Anayasası'na göre yasama yetkisi kime aittir?",
+          "soruMetni": "1982 Anayasası'na göre \"Yasama Yetkisi\" kime aittir?",
           "dogruCevapIndex": 1,
           "secenekler": [
             "Cumhurbaşkanı",
             "Türkiye Büyük Millet Meclisi",
-            "Bakanlar Kurulu",
+            "Halk",
+            "Anayasa Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "Yasama yetkisinin \"genel\" olması ne anlama gelir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Meclisin her konuyu dilediği ayrıntıda düzenleyebilmesi",
+            "Sadece belirli konuları düzenleyebilmesi",
+            "Yetkisini devredebilmesi",
+            "Sadece temel hakları düzenleyebilmesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre Türkiye Büyük Millet Meclisi kaç milletvekilinden oluşur?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "450",
+            "550",
+            "600",
+            "650"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre TBMM ve Cumhurbaşkanlığı seçimleri normal şartlarda kaç yılda bir yapılır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "soruMetni": "TBMM ve Cumhurbaşkanlığı seçimlerinin aynı gün yapılması esasına ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Çoğunluk sistemi",
+            "Nispi temsil",
+            "Eş zamanlı seçim",
+            "Ara seçim"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre milletvekili seçilebilme yaşı kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "18",
+            "20",
+            "25",
+            "30"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi milletvekili seçilebilme şartlarından biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Türk vatandaşı olmak",
+            "En az ilkokul mezunu olmak",
+            "18 yaşını doldurmuş olmak",
+            "Kısıtlı olmamak"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi milletvekili adayı olabilmek için görevinden çekilmesi gereken kişilerden biri değildir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hâkimler ve savcılar",
+            "Yüksek yargı organı mensupları",
+            "Silahlı kuvvetler mensupları",
+            "İşçiler"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'nın 67. maddesine göre aşağıdakilerden hangisi \"Seçim İlkeleri\"nden biri değildir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Genel oy",
+            "Eşit oy",
+            "Açık oy, gizli sayım",
+            "Seçimlerin yargı denetiminde olması"
+          ]
+        },
+        {
+          "soruMetni": "Milletvekillerinin Meclis çalışmalarındaki oy ve sözlerinden dolayı sorumlu tutulmamalarına ne ad verilir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yasama sorumsuzluğu",
+            "Yasama dokunulmazlığı",
+            "Meclis kararı",
+            "İdari vesayet"
+          ]
+        },
+        {
+          "soruMetni": "Milletvekillerinin seçimden önce veya sonra işledikleri iddia edilen suçlardan dolayı Meclis kararı olmadan tutulamaması, sorguya çekilememesi ve yargılanamamasına ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yasama sorumsuzluğu",
+            "Yasama dokunulmazlığı",
+            "Siyasi parti üyeliği",
+            "Hukuk devleti"
+          ]
+        },
+        {
+          "soruMetni": "Yasama dokunulmazlığının kaldırılmasına kim karar verir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhurbaşkanı",
+            "Anayasa Mahkemesi",
+            "TBMM Genel Kurulu",
             "Yargıtay"
           ]
         },
         {
-          "soruMetni": "1982 Anayasası'na göre yürütme yetkisi ve görevi kime aittir?",
-          "dogruCevapIndex": 2,
+          "soruMetni": "Yasama dokunulmazlığı kaldırılan bir milletvekilinin milletvekilliği düşer mi?",
+          "dogruCevapIndex": 1,
           "secenekler": [
-            "Cumhurbaşkanı ve Bakanlar Kurulu",
-            "Başbakan",
-            "Cumhurbaşkanı",
-            "TBMM"
+            "Evet, dokunulmazlık kalkınca vekillik de düşer.",
+            "Hayır, sadece yargılanmasının önü açılır, vekilliği düşmez.",
+            "Sadece partisinden ihraç edilir.",
+            "Sadece Cumhurbaşkanı kararı ile düşer."
           ]
         },
         {
-          "soruMetni": "1982 Anayasası'na göre yargı yetkisi kim tarafından kullanılır?",
-          "dogruCevapIndex": 2,
+          "soruMetni": "Dokunulmazlığı kaldırılan milletvekilinin, bu karara karşı iptal davası açabileceği yer neresidir?",
+          "dogruCevapIndex": 0,
           "secenekler": [
-            "Cumhurbaşkanı adına",
-            "TBMM adına",
-            "Türk Milleti adına bağımsız ve tarafsız mahkemelerce",
-            "Adalet Bakanlığı'nca"
-          ]
-        },
-        {
-          "soruMetni": "Kanunların, Cumhurbaşkanlığı Kararnamelerinin ve TBMM İçtüzüğünün Anayasa'ya uygunluğunu denetleyen yüksek mahkeme hangisidir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Yargıtay",
-            "Danıştay",
             "Anayasa Mahkemesi",
-            "Uyuşmazlık Mahkemesi"
+            "Danıştay",
+            "Yargıtay",
+            "Bölge İdare Mahkemesi"
           ]
         },
         {
-          "soruMetni": "1982 Anayasası'na göre \"Devletin şekli\" nedir?",
+          "soruMetni": "TBMM'nin çalışmalarını yürüten ve Meclisi temsil eden başkanlık organına ne ad verilir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Demokrasi",
-            "Cumhuriyet",
-            "Sosyal Devlet",
-            "Laik Devlet"
+            "Bakanlar Kurulu",
+            "Başkanlık Divanı",
+            "Siyasi Parti Grupları",
+            "Komisyonlar"
           ]
         },
         {
-          "soruMetni": "Anayasa'da belirtilen, \"insan haklarına saygılı, milli, demokratik, laik ve sosyal bir hukuk devleti\" olma özelliği aşağıdakilerden hangisini tanımlar?",
+          "soruMetni": "TBMM Başkanı seçimi kaç turda ve nasıl yapılır?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Devletin şeklini",
-            "Cumhuriyetin niteliklerini",
-            "Başkenti",
-            "Resmi dili"
+            "2 turda, gizli oyla",
+            "4 turda, gizli oyla",
+            "3 turda, açık oyla",
+            "Tek turda, salt çoğunlukla"
           ]
         },
         {
-          "soruMetni": "Yasama organının yaptığı işlemlerin yargısal denetime tabi olması ve idarenin hukuka bağlılığı ilkesine ne ad verilir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Hukuk Devleti",
-            "Sosyal Devlet",
-            "Laik Devlet",
-            "Demokratik Devlet"
-          ]
-        },
-        {
-          "soruMetni": "Devletin, din ve vicdan özgürlüğünü güvence altına alması, din işlerine karışmaması ve resmi bir devlet dininin bulunmaması ilkesine ne ad verilir?",
-          "dogruCevapIndex": 3,
-          "secenekler": [
-            "Hukuk Devleti",
-            "Demokratik Devlet",
-            "Üniter Devlet",
-            "Laik Devlet"
-          ]
-        },
-        {
-          "soruMetni": "Devletin, vatandaşların sosyal ve ekonomik refahını artırmak, işsizliği önlemek ve sosyal adalet sağlamakla yükümlü olmasını ifade eden ilke hangisidir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Sosyal Devlet",
-            "Eşitlik İlkesi",
-            "Hukuk Devleti",
-            "Milliyetçilik"
-          ]
-        },
-        {
-          "soruMetni": "Kişinin, borcundan dolayı bütün malvarlığı ile sorumlu olmasına ne ad verilir?",
+          "soruMetni": "TBMM'nin çalışma usullerini ve kurallarını belirlediği hukuki düzenlemeye ne ad verilir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Şahsi sorumluluk",
-            "Sınırlı sorumluluk",
-            "Sınırsız sorumluluk",
-            "Kusursuz sorumluluk"
+            "Kanun",
+            "Yönetmelik",
+            "TBMM İçtüzüğü",
+            "Cumhurbaşkanlığı Kararnamesi"
           ]
         },
         {
-          "soruMetni": "Bir hakkın, sahibine mal üzerinde doğrudan doğruya hakimiyet sağlayan ve herkese karşı ileri sürülebilen haklara ne denir?",
+          "soruMetni": "TBMM'nin toplantı yapabilmesi için gereken asgari milletvekili sayısına ne ad verilir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Ayni hak",
-            "Fikri hak",
-            "Alacak hakkı",
-            "Kişilik hakkı"
+            "Toplantı yeter sayısı",
+            "Karar yeter sayısı",
+            "Salt çoğunluk",
+            "Nitelikli çoğunluk"
           ]
         },
         {
-          "soruMetni": "Bir kişinin, kanunda öngörülen koşullar altında, kendi hakkını korumak için kuvvet kullanmasına ne ad verilir?",
+          "soruMetni": "1982 Anayasası'na göre TBMM'nin toplantı yeter sayısı üye tamsayısının ne kadarıdır?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Meşru müdafaa",
-            "Zaruret hali",
-            "Hakkın ihkakı",
-            "Haksız fiil"
+            "Salt çoğunluğu (301)",
+            "Beşte üçü (360)",
+            "Üçte biri (200)",
+            "Dörtte biri (150)"
           ]
         },
         {
-          "soruMetni": "Bir kimsenin, kendisinin veya başkasının uğradığı ağır ve acil bir zararı önlemek için üçüncü bir kişinin malına zarar vermesi durumuna ne ad verilir?",
-          "dogruCevapIndex": 1,
+          "soruMetni": "1982 Anayasası'na göre, özel bir çoğunluk aranmayan hallerde, TBMM'nin karar yeter sayısı kaçtır?",
+          "dogruCevapIndex": 0,
           "secenekler": [
-            "Meşru müdafaa",
-            "Zaruret hali",
-            "Hakkın ihkakı",
-            "Kusursuz sorumluluk"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdakilerden hangisi 1982 Anayasası'nda yer alan \"temel çekirdek haklar\"dan biri değildir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Yaşama hakkı",
-            "Konut dokunulmazlığı",
-            "Din ve vicdan hürriyeti",
-            "Suç ve cezaların geçmişe yürümezliği"
+            "Toplantıya katılanların salt çoğunluğu",
+            "Üye tamsayısının salt çoğunluğu",
+            "Üye tamsayısının beşte üçü",
+            "Toplantıya katılanların üçte ikisi"
           ]
         }
       ]
