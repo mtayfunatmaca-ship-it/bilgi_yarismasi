@@ -318,212 +318,212 @@
   
   "quizzes": [
     {
-      "id": "turkiyede_madenler_ve_enerji_kaynaklar_4",
-      "baslik": "Türkiye'de Madenler ve Enerji Kaynakları-4",
-      "kategoriId": "cografya",
-      "konuId": "turkiyede_madenler_ve_enerji_kaynaklari",
+      "id": "hukukun_temel_kavramlari_4",
+      "baslik": "Hukukun Temel Kavramları-4",
+      "kategoriId": "vatandaslik",
+      "konuId": "hukukun_temel_kavramlari",
       "isNew": true,
       "soruSayisi": 20,
       "sureDakika": 20,
       "sorular": [
         {
-          "soruMetni": "Kütahya, Bilecik ve Çanakkale hangi sanayi kolu ile ön plana çıkmıştır?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Seramik ve Porselen",
-            "Petrokimya",
-            "Gübre",
-            "Gemi yapımı"
-          ]
-        },
-        {
-          "soruMetni": "Türkiye'de hammaddesi en yaygın olduğu için en fazla dağılış gösteren sanayi kolu aşağıdakilerden hangisidir?",
+          "soruMetni": "Hukuki sonuç doğuran insan iradesi dışındaki olaylara ne ad verilir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Otomotiv",
-            "Demir-Çelik",
-            "Çimento",
-            "İlaç"
+            "Hukuki fiil",
+            "Hukuki işlem",
+            "Hukuki olay",
+            "Haksız fiil"
           ]
         },
         {
-          "soruMetni": "Türkiye'de kağıt fabrikalarının genellikle kıyı kesimlerde kurulmasının nedeni nedir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Orman hammaddesi ve su kaynaklarına yakınlık",
-            "Pazara yakınlık",
-            "Ucuz işgücü",
-            "Enerji kaynakları"
-          ]
-        },
-        {
-          "soruMetni": "Türkiye'de gübre fabrikalarının büyük çoğunluğunun kıyıda kurulmasının nedeni nedir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Hammadde ithal edilmesi",
-            "Su kaynaklarının bol olması",
-            "İklimin elverişli olması",
-            "Tüketimin fazla olması"
-          ]
-        },
-        {
-          "soruMetni": "Ayçiçek yağı fabrikaları hangi bölgemizde yoğunlaşmıştır?",
+          "soruMetni": "Hukuki bir sonuç doğurmaya yönelik irade beyanı veya beyanlarına ne ad verilir?",
           "dogruCevapIndex": 1,
           "secenekler": [
-            "Karadeniz",
-            "Marmara",
-            "Doğu Anadolu",
-            "Güneydoğu Anadolu"
+            "Hukuki fiil",
+            "Hukuki işlem",
+            "Hukuki olay",
+            "Sorumluluk"
           ]
         },
         {
-          "soruMetni": "Zeytinyağı fabrikaları hangi bölgemizde yoğunlaşmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "İç Anadolu",
-            "Ege Bölgesi",
-            "Doğu Anadolu",
-            "Karadeniz"
-          ]
-        },
-        {
-          "soruMetni": "İstanbul-Tuzla, Yalova ve Gölcük hangi sanayi kolunun geliştiği merkezlerdir?",
-          "dogruCevapIndex": 0,
-          "secenekler": [
-            "Gemi yapımı",
-            "Vagon sanayisi",
-            "Uçak sanayisi",
-            "Cam sanayisi"
-          ]
-        },
-        {
-          "soruMetni": "Sivas, Eskişehir ve Adapazarı'nda hangi ulaşım aracına yönelik sanayi gelişmiştir?",
+          "soruMetni": "Aşağıdakilerden hangisi tek taraflı bir hukuki işleme örnektir?",
           "dogruCevapIndex": 2,
           "secenekler": [
-            "Otomobil",
-            "Gemi",
-            "Lokomotif ve Vagon",
-            "Uçak"
+            "Evlenme",
+            "Sözleşme",
+            "Vasiyetname",
+            "Satış"
           ]
         },
         {
-          "soruMetni": "Ankara ve Eskişehir'de hangi savunma sanayisi kolu gelişmiştir?",
+          "soruMetni": "Hukuka aykırı ve kusurlu bir fiille başkasına zarar verilmesi durumuna ne ad verilir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "Uçak ve helikopter",
-            "Tank",
-            "Gemi",
-            "Ağır silah"
+            "Haksız fiil",
+            "Hukuki işlem",
+            "Hukuki olay",
+            "Borç"
           ]
         },
         {
-          "soruMetni": "Türkiye'nin en büyük petrokimya tesisi olan PETKİM hangi ilimizde yer almaktadır?",
+          "soruMetni": "Bir kişinin, bizzat kendisinin veya hukuken sorumlu olduğu kişilerin ya da malın verdiği zararlardan dolayı hesap verme durumuna ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Hak",
+            "Sorumluluk",
+            "Ehliyet",
+            "Yetki"
+          ]
+        },
+        {
+          "soruMetni": "Devletin temel yapısını, yasama, yürütme ve yargı organlarını belirleyen temel kanuna ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Medeni Kanun",
+            "Anayasa",
+            "Ceza Kanunu",
+            "Borçlar Kanunu"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre yasama yetkisi kime aittir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Cumhurbaşkanı",
+            "Türkiye Büyük Millet Meclisi",
+            "Bakanlar Kurulu",
+            "Yargıtay"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre yürütme yetkisi ve görevi kime aittir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhurbaşkanı ve Bakanlar Kurulu",
+            "Başbakan",
+            "Cumhurbaşkanı",
+            "TBMM"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre yargı yetkisi kim tarafından kullanılır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Cumhurbaşkanı adına",
+            "TBMM adına",
+            "Türk Milleti adına bağımsız ve tarafsız mahkemelerce",
+            "Adalet Bakanlığı'nca"
+          ]
+        },
+        {
+          "soruMetni": "Kanunların, Cumhurbaşkanlığı Kararnamelerinin ve TBMM İçtüzüğünün Anayasa'ya uygunluğunu denetleyen yüksek mahkeme hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yargıtay",
+            "Danıştay",
+            "Anayasa Mahkemesi",
+            "Uyuşmazlık Mahkemesi"
+          ]
+        },
+        {
+          "soruMetni": "1982 Anayasası'na göre \"Devletin şekli\" nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Demokrasi",
+            "Cumhuriyet",
+            "Sosyal Devlet",
+            "Laik Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Anayasa'da belirtilen, \"insan haklarına saygılı, milli, demokratik, laik ve sosyal bir hukuk devleti\" olma özelliği aşağıdakilerden hangisini tanımlar?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Devletin şeklini",
+            "Cumhuriyetin niteliklerini",
+            "Başkenti",
+            "Resmi dili"
+          ]
+        },
+        {
+          "soruMetni": "Yasama organının yaptığı işlemlerin yargısal denetime tabi olması ve idarenin hukuka bağlılığı ilkesine ne ad verilir?",
           "dogruCevapIndex": 0,
           "secenekler": [
-            "İzmir",
-            "Mersin",
-            "Kocaeli",
-            "Batman"
+            "Hukuk Devleti",
+            "Sosyal Devlet",
+            "Laik Devlet",
+            "Demokratik Devlet"
           ]
         },
         {
-          "soruMetni": "Aşağıdaki bölgelerin hangisinde sanayileşme en az düzeydedir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Marmara Bölgesi",
-            "Ege Bölgesi",
-            "Doğu Anadolu Bölgesi",
-            "Akdeniz Bölgesi"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki bölgelerin hangisinde sanayileşme en yoğun düzeydedir?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "İç Anadolu Bölgesi",
-            "Karadeniz Bölgesi",
-            "Marmara Bölgesi",
-            "Güneydoğu Anadolu Bölgesi"
-          ]
-        },
-        {
-          "soruMetni": "GAP projesinin tamamlanmasıyla Güneydoğu Anadolu Bölgesi'nde en çok hangi sanayi kollarının gelişmesi beklenir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Otomotiv ve Savunma",
-            "Tarıma dayalı",
-            "Demir-Çelik ve Metalürji",
-            "Orman ürünleri"
-          ]
-        },
-        {
-          "soruMetni": "Doğu Anadolu Bölgesi'ndeki sanayi tesisleri ağırlıklı olarak neye dayanır?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Teknoloji ve bilişim",
-            "Petrokimya",
-            "Tarım ve hayvancılık",
-            "Madencilik"
-          ]
-        },
-        {
-          "soruMetni": "Samsun'da bakır, Antalya'da ferro-krom işletmelerinin bulunması, bu şehirlerin hangi özelliğinden kaynaklanır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Hammaddeye yakınlık",
-            "Ulaşım ve hinterlant özellikleri",
-            "Ucuz işgücü",
-            "Enerji kaynakları"
-          ]
-        },
-        {
-          "soruMetni": "Türkiye'de sanayinin gelişmesi aşağıdakilerden hangisine yol açmaz?",
-          "dogruCevapIndex": 2,
-          "secenekler": [
-            "Kentleşme hızının artmasına",
-            "İşsizlik oranlarının azalmasına",
-            "Kırsal nüfus oranının artmasına",
-            "Dış ticarette sanayi ürünleri payının artmasına"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdakilerden hangisi Türkiye'de sanayinin yapısal sorunlarından biri değildir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Sermaye yetersizliği",
-            "Hammadde çeşitliliğinin az olması",
-            "Nitelikli eleman eksikliği",
-            "Enerjide dışa bağımlılık"
-          ]
-        },
-        {
-          "soruMetni": "Paşabahçe, Sinop ve Mersin'de fabrikaları bulunan sanayi kolu hangisidir?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Çimento",
-            "Cam",
-            "Seramik",
-            "Gübre"
-          ]
-        },
-        {
-          "soruMetni": "Kayseri, İstanbul ve Bursa hangi sanayi kolunda markalaşmıştır?",
-          "dogruCevapIndex": 1,
-          "secenekler": [
-            "Tekstil",
-            "Mobilya",
-            "Gıda",
-            "Otomotiv"
-          ]
-        },
-        {
-          "soruMetni": "Aşağıdaki şehirlerden hangisi Türkiye'nin önemli \"sanayi kentleri\" arasında yer almaz?",
+          "soruMetni": "Devletin, din ve vicdan özgürlüğünü güvence altına alması, din işlerine karışmaması ve resmi bir devlet dininin bulunmaması ilkesine ne ad verilir?",
           "dogruCevapIndex": 3,
           "secenekler": [
-            "Kocaeli",
-            "Gaziantep",
-            "Bursa",
-            "Sinop"
+            "Hukuk Devleti",
+            "Demokratik Devlet",
+            "Üniter Devlet",
+            "Laik Devlet"
+          ]
+        },
+        {
+          "soruMetni": "Devletin, vatandaşların sosyal ve ekonomik refahını artırmak, işsizliği önlemek ve sosyal adalet sağlamakla yükümlü olmasını ifade eden ilke hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sosyal Devlet",
+            "Eşitlik İlkesi",
+            "Hukuk Devleti",
+            "Milliyetçilik"
+          ]
+        },
+        {
+          "soruMetni": "Kişinin, borcundan dolayı bütün malvarlığı ile sorumlu olmasına ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Şahsi sorumluluk",
+            "Sınırlı sorumluluk",
+            "Sınırsız sorumluluk",
+            "Kusursuz sorumluluk"
+          ]
+        },
+        {
+          "soruMetni": "Bir hakkın, sahibine mal üzerinde doğrudan doğruya hakimiyet sağlayan ve herkese karşı ileri sürülebilen haklara ne denir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Ayni hak",
+            "Fikri hak",
+            "Alacak hakkı",
+            "Kişilik hakkı"
+          ]
+        },
+        {
+          "soruMetni": "Bir kişinin, kanunda öngörülen koşullar altında, kendi hakkını korumak için kuvvet kullanmasına ne ad verilir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Meşru müdafaa",
+            "Zaruret hali",
+            "Hakkın ihkakı",
+            "Haksız fiil"
+          ]
+        },
+        {
+          "soruMetni": "Bir kimsenin, kendisinin veya başkasının uğradığı ağır ve acil bir zararı önlemek için üçüncü bir kişinin malına zarar vermesi durumuna ne ad verilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Meşru müdafaa",
+            "Zaruret hali",
+            "Hakkın ihkakı",
+            "Kusursuz sorumluluk"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdakilerden hangisi 1982 Anayasası'nda yer alan \"temel çekirdek haklar\"dan biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Yaşama hakkı",
+            "Konut dokunulmazlığı",
+            "Din ve vicdan hürriyeti",
+            "Suç ve cezaların geçmişe yürümezliği"
           ]
         }
       ]
