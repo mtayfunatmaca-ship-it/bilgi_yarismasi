@@ -317,118 +317,131 @@
   ],
   
   "quizzes": [
-    {
-      "id": "problemler_1",
-      "baslik": "Problemler-1",
-      "kategoriId": "matematik",
-      "konuId": "problemler",
-      "isNew": false,
-      "soruSayisi": 10,
-      "sureDakika": 10,
-      "sorular": [
-      {
-        "soruMetni": "Bir sayının 3 katının 5 eksiği, aynı sayının 2 katının 1 fazlasına eşittir. \n\nBuna göre, bu sayı kaçtır?",
-        "dogruCevapIndex": 2,
-        "secenekler": [
-          "2",
-          "4",
-          "6",
-          "8"
-        ]
-      },
-      {
-        "soruMetni": "Bir sınıftaki öğrenciler sıralara 2'şerli oturduklarında 6 öğrenci ayakta kalıyor. 3'erli oturduklarında ise 2 sıra boş kalıyor. \n\nBuna göre, sınıfta kaç öğrenci vardır?",
-        "dogruCevapIndex": 0,
-        "secenekler": [
-          "30",
-          "34",
-          "36",
-          "42"
-        ]
-      },
-      {
-        "soruMetni": "Bir depodaki suyun önce 1/3'ü, daha sonra kalanın 1/4'ü kullanılıyor. Depoda kalan su 120 litre olduğuna göre, başlangıçta depoda kaç litre su vardı?",
-        "dogruCevapIndex": 1,
-        "secenekler": [
-          "200",
-          "240",
-          "270",
-          "300"
-        ]
-      },
-      {
-        "soruMetni": "Bir telin bir ucundan 1/5'i, diğer ucundan 1/10'u kesilince telin orta noktası ilk durumuna göre 3 cm kayıyor. \n\nBuna göre, telin kesilmeden önceki boyu kaç cm'dir?",
-        "dogruCevapIndex": 3,
-        "secenekler": [
-          "40",
-          "50",
-          "55",
-          "60"
-        ]
-      },
-      {
-        "soruMetni": "Bir merdivenin basamaklarını 2'şer 2'şer çıkıp, 3'er 3'er inen bir kişinin çıkarken attığı adım sayısı, inerken attığı adım sayısından 5 fazladır. \n\nBu merdiven kaç basamaklıdır?",
-        "dogruCevapIndex": 0,
-        "secenekler": [
-          "30",
-          "25",
-          "20",
-          "15"
-        ]
-      },
-      {
-        "soruMetni": "Ayşe'nin parası Fatma'nın parasının 3 katıdır. \n\nAyşe, Fatma'ya 10 TL verirse, Ayşe'nin parası Fatma'nın parasının 2 katı oluyor. \n\nBaşlangıçta Ayşe'nin kaç TL'si vardır?",
-        "dogruCevapIndex": 3,
-        "secenekler": [
-          "50",
-          "60",
-          "80",
-          "90"
-        ]
-      },
-      {
-        "soruMetni": "Bir kumaş 10 eşit parçaya ayrılıyor. Eğer 16 eşit parçaya ayrılsaydı, her bir parçanın uzunluğu 30 cm daha kısa olacaktı. \n\nBuna göre, bu kumaşın tamamı kaç cm'dir?",
-        "dogruCevapIndex": 2,
-        "secenekler": [
-          "600",
-          "700",
-          "800",
-          "900"
-        ]
-      },
-      {
-        "soruMetni": "Ali'nin bilyelerinin sayısı, Veli'nin bilyelerinin sayısının 2 katından 4 fazladır. \n\nİkisinin toplam 49 bilyesi olduğuna göre, Ali'nin kaç bilyesi vardır?",
-        "dogruCevapIndex": 0,
-        "secenekler": [
-          "34",
-          "30",
-          "18",
-          "15"
-        ]
-      },
-      {
-        "soruMetni": "Bir bilet kuyruğunda Ahmet baştan 12. sırada, Mehmet ise sondan 18. sıradadır. \n\nAhmet ile Mehmet arasında 5 kişi olduğuna göre, bilet kuyruğunda en çok kaç kişi vardır?",
-        "dogruCevapIndex": 3,
-        "secenekler": [
-          "30",
-          "33",
-          "34",
-          "35"
-        ]
-      },
-      {
-        "soruMetni": "Bir kasada 40 TL'lik ve 50 TL'lik banknotlardan toplam 20 adet bulunmaktadır. \n\nBanknotların toplam değeri 920 TL olduğuna göre, kasada kaç tane 40 TL'lik banknot vardır?",
-        "dogruCevapIndex": 0,
-        "secenekler": [
-          "8",
-          "10",
-          "12",
-          "15"
-        ]
-      }
-      ]
-      }
+
   ],
-     "trialExams": [ ],
+     "trialExams": [
+      {
+        "id": "turkiye_geneli_1",
+        "title": "KPSS Türkiye Geneli-1",
+        "isPro": false,
+        "description": "KPSS Türkiye Geneli Deneme Sınavı",
+        "isPublished": true,
+        "startTime": "2025-11-11T12:00:00+03:00",
+        "endTime": "2025-12-20T12:00:00+03:00",
+        "durationMinutes": 120,
+        "questionCount": 120,
+        "isMixedCategory": false,
+        "sorular": [
+          {
+            "soruMetni": "\"Edebiyatın işlevi, bize yeni bir şeyler söylemekten çok, bildiğimiz şeyleri daha derinden idrak etmemizi sağlamaktır. Okur, bir metni okurken kendisinden uzaklaşmaz, aksine kendi hakikatine döner. Şiir, hayatın yüzeyindeki sıradanlığı kırar, insanın özündeki yüce ve dokunulmaz olana kapı aralar. Bu aralayış, zihinsel bir çaba değil, duygusal bir uyanıştır.\"\n\nBu parçada geçen \"hayatın yüzeyindeki sıradanlığı kırmak\" sözüyle anlatılmak istenen aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Yaşamın zorluklarını açıkça dile getirmek.",
+              "Gündelik olaylara felsefi bir derinlik katmak.",
+              "Yaşamdaki basit olayları sanatsal yönden incelemek.",
+              "Bayağı ve tekdüze olanı aşıp derin manalara ulaşmak.",
+              "İnsanların hayatı anlamlandırma çabalarına eleştiri getirmek."
+            ],
+            "kategoriId": "turkce",
+            "sira": 1
+          },
+          {
+            "soruMetni": "Bir eserin zamana direnebilmesi, onun güncel kaygıları aşabilmesine bağlıdır. Popüler eserler, anlık heyecanlara hitap eder, bir süre sonra unutulur. Oysa gerçek sanat, insanın değişmez ruhsal coğrafyasını işler, evrensel dertlere seslenir. Bu eserler, her çağda kendilerine yeni bir okur bulur, böylece kalıcı bir etki yaratırlar. Bu kalıcılık, sadece teknik başarıyla değil, aynı zamanda anlatılan konunun derinliğiyle de doğrudan ilişkilidir.\n\nBu parçadaki \"insanın değişmez ruhsal coğrafyasını işler\" sözüyle anlatılmak istenen nedir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Toplumsal sorunları tarihsel bir bakış açısıyla ele almak.",
+              "İnsan doğasındaki temel ve evrensel duyguları konu edinmek.",
+              "Eserin geçtiği mekanın ruh halleri üzerindeki etkisini vurgulamak.",
+              "İnsanın zaman içinde değişmeyen fiziksel özelliklerini betimlemek.",
+              "Okuyucuyu, yabancı olduğu psikolojik durumlara alıştırmak."
+            ],
+            "kategoriId": "turkce",
+            "sira": 2
+          },
+          
+            {
+              "soruMetni": "Bir eserin zamana direnebilmesi, onun güncel kaygıları aşabilmesine bağlıdır. Popüler eserler, anlık heyecanlara hitap eder, bir süre sonra unutulur. Oysa gerçek sanat, insanın değişmez ruhsal coğrafyasını işler, evrensel dertlere seslenir. Bu eserler, her çağda kendilerine yeni bir okur bulur, böylece kalıcı bir etki yaratırlar. Bu kalıcılık, sadece teknik başarıyla değil, aynı zamanda anlatılan konunun derinliğiyle de doğrudan ilişkilidir.\n\nBu parçadaki \"insanın değişmez ruhsal coğrafyasını işler\" sözüyle anlatılmak istenen nedir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Toplumsal sorunları tarihsel bir bakış açısıyla ele almak.",
+                "İnsan doğasındaki temel ve evrensel duyguları konu edinmek.",
+                "Eserin geçtiği mekanın ruh halleri üzerindeki etkisini vurgulamak.",
+                "İnsanın zaman içinde değişmeyen fiziksel özelliklerini betimlemek.",
+                "Okuyucuyu, yabancı olduğu psikolojik durumlara alıştırmak."
+              ],
+              "kategoriId": "turkce",
+              "sira": 3
+            },
+            {
+              "soruMetni": "Aşağıdaki cümlelerden hangisinde \"kesinleşmiş bir yargı\" söz konusu değildir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Küresel ısınmanın deniz seviyelerini tehlikeli bir düzeye yükselttiği bilimsel verilerle kanıtlanmıştır.",
+                "Yazar, son eserinde önceki kitaplarına göre daha akıcı ve sade bir dil kullandı.",
+                "Bu yılın ekonomik büyüme rakamları, beklentilerin oldukça altında gerçekleşti.",
+                "Ozanın şiirleri, Anadolu'nun derin acılarını ve umutlarını başarıyla yansıtmış olsa gerek.",
+                "1950'li yıllarda İstanbul nüfusunun bugünküne oranla çok daha az olduğu herkesçe bilinir."
+              ],
+              "kategoriId": "turkce",
+              "sira": 4
+            },
+            
+              {
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde hem kişi zamiri hem de belgisiz zamir kullanılmıştır?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "Ona verdiğim sözü tutmak için elimden geleni yapacağım.",
+                  "Herkes, bu zorlu sınavdan alnının akıyla çıkmayı hedefliyordu.",
+                  "Sen, toplantıdaki fikirlerini kimseye açmamalısın.",
+                  "Bazıları, hayatın basit kurallarını asla anlamayacak.",
+                  "Bizim takımın bazı oyuncuları, oldukça başarılı performans sergiledi."
+                ],
+                "kategoriId": "turkce",
+                "sira": 5
+              },
+              {
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde edat (ilgeç) bulunmamaktadır?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "Sabahları kahvaltı yapmak üzere erkenden kalkar.",
+                  "Bu tarihi yapı, on yıl kadar önce restore edilmişti.",
+                  "Kitapları masanın üzerine koydu ve odadan ayrıldı.",
+                  "Onun gibi yetenekli bir sanatçı zor bulunur.",
+                  "Hayat, ne garip bir serüven, kim bilir nerede bitecek!"
+                ],
+                "kategoriId": "turkce",
+                "sira": 6
+              },
+              {
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde \"de\" bağlacının yazımıyla ilgili bir yanlışlık yapılmıştır?",
+                "dogruCevapIndex": 4,
+                "secenekler": [
+                  "Yazarın bu son romanı da ilk eserleri kadar ilgi çekiciydi.",
+                  "Sen de mi bu zorlu göreve gönüllü oldun?",
+                  "Bu şehirde yaşamayı seviyorum; zira burada her şey bir başka güzel.",
+                  "Ben de bu duruma çok üzüldüm.",
+                  "Seninlede olmuyor ne yazık ki."
+                ],
+                "kategoriId": "turkce",
+                "sira": 7
+              },
+              {
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde tarihlerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+                "dogruCevapIndex": 1,
+                "secenekler": [
+                  "23 Nisan 1920'de Türkiye Büyük Millet Meclisi açıldı.",
+                  "Konferans, her yıl Ekim ayında düzenlenir.",
+                  "Bu yılki fuar, 18 Mart Perşembe günü ziyarete açılacak.",
+                  "Kitabın ilk baskısı ocak ayının ilk haftasında piyasaya sürülecek.",
+                  "Toplantının kesin tarihi 15/06/2026 olarak belirlendi."
+                ],
+                "kategoriId": "turkce",
+                "sira": 8
+              }
+            
+          
+        ]
+      }
+      ],
    "achievements": [ ]
   } 
