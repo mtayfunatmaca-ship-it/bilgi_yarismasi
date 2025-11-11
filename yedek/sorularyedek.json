@@ -22572,6 +22572,1699 @@
           ]
         }
       ]
+    },
+    {
+      "id": "cumlede_anlam_1",
+      "baslik": "Cümlede Anlam-1",
+      "kategoriId": "turkce",
+      "konuId": "cumlede_anlam",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "\"Sanat, insanın ruhunu terbiye eden, onu yaşamın karmaşasından bir süreliğine uzaklaştıran yegâne sığınaktır.\" cümlesinin anlamını en iyi karşılayan ifade aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sanat, insanın ruhsal karmaşasının tek nedenidir.",
+            "Sanat, insana sadece geçici bir huzur sunabilir.",
+            "Sanat, ruhu arındırarak yaşamın zorluklarından koruyan tek kaynaktır.",
+            "Sanat, karmaşık yaşamdan tamamen kaçmanın yoludur."
+          ]
+        },
+        {
+          "soruMetni": "\"Gerçek başarı, kişinin sadece kendi hedeflerine ulaşması değil, aynı zamanda bu yolda başkalarına ilham vermesidir.\" cümlesinden çıkarılabilecek kesin yargı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Başarılı olmak için başkalarına yardım etmek şarttır.",
+            "Başarı, ancak kişisel hedeflere ulaşıldıktan sonra anlam kazanır.",
+            "Başarının tanımı, hem kişisel kazanımı hem de çevresel etkiyi içerir.",
+            "Kişisel hedeflerine ulaşan herkes başkalarına ilham verir."
+          ]
+        },
+        {
+          "soruMetni": "\"Yazar, ele aldığı konuları o denli tarafsız bir gözle aktarıyor ki, hangi görüşü desteklediğini anlamak mümkün değil.\" cümlesinin iletisi aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Yazar, ele aldığı konuları karmaşık bir dille anlatmaktadır.",
+            "Yazarın eserleri çok fazla görüşü bir arada barındırmaktadır.",
+            "Yazarın anlatımında nesnellik, görüşünü belirlemeyi zorlaştırmaktadır.",
+            "Yazarın görüşleri okuyucular tarafından desteklenmemektedir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi, anlamca \"İnsan, tecrübe kazandıkça hatalarından ders almayı öğrenir.\" cümlesine en yakındır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Hatalar, tecrübeyi edinmenin tek yoludur.",
+            "Tecrübe, öğrenilen bilgilerin pratiğe dökülmesidir.",
+            "Yaşananlardan çıkarılan sonuçlar, zamanla olgunlaşmayı sağlar.",
+            "İnsanın tecrübesi arttıkça yaptığı hatalar azalır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde vurgu, özne üzerindedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "\"Yarın\", yeni bir projeye başlayacağını söyledi.",
+            "\"Genç sanatçı\", ödülü almayı gerçekten hak etti.",
+            "Ödülü almayı hak eden \"genç sanatçıydı\".",
+            "Ödülü, \"hakkıyla\" almayı başardı."
+          ]
+        },
+        {
+          "soruMetni": "\"Bir toplumun kültürel zenginliği, o toplumun dilinin derinliği ile doğrudan ilişkilidir.\" cümlesinin anlamca eş değer olduğu cümle aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Dilin yüzeyselliği, kültürel zenginliğe hiçbir katkı sunmaz.",
+            "Dil, kültürel zenginliğin sadece bir yansımasıdır.",
+            "Bir kültürün zenginliği, dilinin kapsamlılığına bağlıdır.",
+            "Kültürel zenginlik, dilin kullanım sıklığı ile ölçülür."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümle çiftlerinden hangisi anlamca çelişmektedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sanatçı, eserlerinde sade bir dil kullanmayı tercih eder. / Onun anlatımı, karmaşık yapısıyla okuyucuyu zorlar.",
+            "Kitap okumak, insana yeni dünyaların kapısını açar. / Okuma, kişinin sadece var olan bilgisini pekiştirir.",
+            "Eleştiri, yazarın gelişimine katkı sağlar. / Eleştiri, sanatçı için yıpratıcı bir süreçtir.",
+            "Tarih, geçmiş olaylardan ders alınması için bir kaynaktır. / Tarih, geleceği doğru öngörmemizi sağlar."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerden hangisi, yapı ve anlam bakımından \"olumlu\" bir cümledir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Buradan ayrılmayı asla düşünmüyor değilim.",
+            "Yaptığı işin ne kadar zor olduğunu anlamıyor.",
+            "O, bu teklife \"hayır\" diyecek biri mi hiç?",
+            "Gelip gitmesi, bizi rahatsız etmedi değil."
+          ]
+        },
+        {
+          "soruMetni": "\"Gecenin bu saatinde sokakta kimsenin olmaması beni endişelendirmedi.\" cümlesinin türü aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Biçimce olumlu, anlamca olumlu",
+            "Biçimce olumsuz, anlamca olumlu",
+            "Biçimce olumsuz, anlamca olumsuz",
+            "Biçimce olumlu, anlamca olumsuz"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisi, diğerlerinden farklı bir anlam sorusu sormaktadır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Olayın bu şekilde sonuçlanacağını hiç düşünmüş müydün?",
+            "Bu kadar kısa sürede buraya nasıl gelebildiniz?",
+            "Söylediğin sözlerin nereye varacağını biliyor musun?",
+            "Bu kitabı alıp almamakta kararsız mısın?"
+          ]
+        },
+        {
+          "soruMetni": "\"Hiçbir edebî eser, yazıldığı dönemin sosyal ve kültürel izlerinden tamamen bağımsız değildir.\" cümlesiyle ilgili aşağıdaki yorumlardan hangisi yanlıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Edebî eserlerin dönemi yansıttığı ifade edilmektedir.",
+            "Sanatçının yaşadığı ortam eserlerine mutlaka yansır.",
+            "Edebî eserler, ancak yazıldığı dönemin koşullarıyla anlaşılabilir.",
+            "Sosyal ve kültürel bağlam, edebiyatı etkileyen unsurlardır."
+          ]
+        },
+        {
+          "soruMetni": "\"Başarısızlık, doğru yolda ilerleyenler için sadece geçilmesi gereken bir duraktır; asla son istasyon değil.\" cümlesinin temel iletisi nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Herkes, başarısızlığın ardından yeni bir istasyon bulur.",
+            "Başarısızlık, başarıya giden yolda kaçınılmaz bir adımdır.",
+            "Azimli kişiler için başarısızlık, yolun sonu anlamına gelmez.",
+            "Başarıya giden yolda duraklamak bir zorunluluktur."
+          ]
+        },
+        {
+          "soruMetni": "\"Olaylara duygusal yaklaşımı bir yana bırakırsak, kararlarımızın mantık süzgecinden geçmesi gerekir.\" cümlesinden çıkarılacak kesin yargı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Duygusallık, doğru karar vermeyi tamamen engeller.",
+            "Karar alma süreçlerinde mantığa öncelik verilmelidir.",
+            "Mantık süzgecinden geçen her karar doğrudur.",
+            "İnsanlar genellikle duygusal kararlar verme eğilimindedir."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde vurgu, zarf (tümleci) üzerindedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bu zor soruyu \"dün\" çözdüğünü söyledi.",
+            "Bu soruyu çözmek için \"çok uğraşmıştı\".",
+            "Soruyu çözen \"bize yeni katılan öğrenciydi\".",
+            "Öğrenci, zor soruyu \"büyük bir dikkatle\" çözdü."
+          ]
+        },
+        {
+          "soruMetni": "\"Bir ülkenin geleceği, o ülkenin gençlerinin sanat ve bilimle olan bağı kadardır.\" cümlesiyle yakın anlamlı olan cümle aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Gençlerin sanata olan ilgisi, bilimden daha önemlidir.",
+            "Sanat ve bilim, bir ülkenin ilerlemesini belirleyen ölçütlerdir.",
+            "Ülkenin geleceği, gençlerin sanata ve bilime ne kadar yönlendirildiği ile ilgilidir.",
+            "Ülkenin aydınlık yarınları, gençlerin sanata ve bilime verdiği değerle sınırlıdır."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümle çiftlerinden hangisi anlamca çelişmez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Sanatçı, özgünlüğe ulaşmak için kendinden önceki tüm izleri silmelidir. / Edebî gelenekten beslenmeden özgünlük mümkün değildir.",
+            "Teknoloji, okuma alışkanlığını günden güne yok ediyor. / Yeni nesil, teknolojiyi okuma için daha çok kullanıyor.",
+            "Kitabın sade ve akıcı bir dili vardı. / Kitabın dili, okuyucuyu yoran ağır bir üsluba sahipti.",
+            "Eleştiriler, eserin ticari başarısını artırdı. / Eleştiriler, eserin okur sayısını azalttı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerden hangisi, yapı ve anlam bakımından \"olumsuz\" bir cümledir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Söylediklerinin birçoğu gerçek dışı değildi.",
+            "Başarılı olmak için çabalamıyor değildi.",
+            "Onun ne kadar bencil olduğunu bilmez olur muyum?",
+            "Bu işin sana yararı dokunmaz."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerden hangisi, anlamca olumsuz olduğu hâlde, biçimce olumlu bir cümledir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bu kadar çalıştı da ne oldu?",
+            "Bu zor günlerde kimseye \"güvenmem\" gerektiğini biliyorum.",
+            "O filmi izlediğimizden bu yana \"uzun zaman\" geçmedi mi?",
+            "Ne arayan var ne de soran."
+          ]
+        },
+        {
+          "soruMetni": "\"Sanat, yalnızca \"gözle\" görüneni değil, \"gönülle\" hissedileni de aktarma biçimidir.\" cümlesinin anlamı nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Sanat, gerçeği ve hayali bir arada sunmalıdır.",
+            "Sanat, somut ve soyut olanı ifade etme yoludur.",
+            "Sanatçı, eserlerinde hem göze hem de duygulara hitap etmelidir.",
+            "Sanat, görme ve hissetme yeteneklerinin birleşimidir."
+          ]
+        },
+        {
+          "soruMetni": "\"Düşüncesini rahatça ifade edemeyen bir toplumun özgürlüğünden söz edilebilir mi?\" cümlesiyle anlatılmak istenen nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Düşünce özgürlüğünün olmadığı bir toplumda hiçbir şeyden söz edilemez.",
+            "Bir toplumda özgürlük, düşüncelerin ifade edilmesiyle başlar.",
+            "Düşüncelerini ifade etme sorunu olan toplumlar özgür değildir.",
+            "Toplumun özgürlüğü, ifade edilen düşüncelerin niteliğine bağlıdır."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paragrafta_anlam_1",
+      "baslik": "Paragrafta Anlam-1",
+      "kategoriId": "turkce",
+      "konuId": "paragrafta_anlam",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Modern yaşamın getirdiği hız ve bilgi bombardımanı, bireylerin odaklanma sürelerini ciddi ölçüde düşürmektedir. Her an tetikte olma zorunluluğu, bilişsel kaynaklarımızı sürekli tüketmekte ve uzun soluklu, derin düşünmeyi gerektiren işlere ayıracak enerjiyi bulmamızı engellemektedir. Bu durum, sadece akademik başarıyı değil, aynı zamanda kişisel gelişim ve karmaşık problemleri çözme yeteneğini de olumsuz etkilemektedir.\nBu parçada asıl anlatılmak istenen aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bireyler, modern yaşamın getirdiği zorluklara uyum sağlamakta güçlük çekmektedir.",
+            "Hızla değişen bilgi ortamı, akademik çalışmaların önemini azaltmıştır.",
+            "Sürekli uyarılma hali, insanların derin düşünme ve odaklanma yeteneğini kaybetmesine neden olmaktadır.",
+            "Modern yaşamdaki sorunların temelinde, karmaşık problemlerin çözülememesi yatmaktadır."
+          ]
+        },
+        {
+          "soruMetni": "Sanatçı, eserini ortaya koyarken içinde yaşadığı toplumdan tamamen bağımsız olamaz. Toplumun değerleri, kültürü ve tarihsel deneyimleri, sanatçının bilinçaltına işler ve eserine yansır. Ancak bu yansıma, basit bir ayna tutma eylemi değildir. Sanatçı, bu verileri kendi süzgecinden geçirir, dönüştürürür ve onlara yeni bir anlam katmanıyla geri sunar. Bu nedenle büyük bir sanat eseri, hem ait olduğu dönemin ruhunu taşır hem de bu ruhu aşarak evrensel bir dille konuşur.\nYazarın \"basit bir ayna tutma eylemi değildir\" sözüyle anlatmak istediği nedir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sanatçının eserinde toplumsal gerçekleri çarpıtarak sunması.",
+            "Sanat eserinin sadece toplumun güzelliklerini yansıtması.",
+            "Sanatçının toplumsal verileri olduğu gibi değil, dönüştürerek aktarması.",
+            "Eserin, toplumun beklentilerine göre biçimlendirilmesi gerektiği."
+          ]
+        },
+        {
+          "soruMetni": "Ekolojik denge, karmaşık ve hassas bir ilişkiler ağı üzerine kuruludur. Bir türün neslinin tükenmesi veya bir yaşam alanının tahrip edilmesi, genellikle yalnızca o bölgeyi değil, zincirleme reaksiyonla tüm sistemi etkiler. Bu, doğanın birbiriyle sürekli iletişim halinde olan bir sistem olduğunu gösterir. İnsan faaliyetleri bu hassas dengeye müdahale ettiğinde, sonuçlar her zaman tahmin edilemez ve genellikle yıkıcı olur.\nBu parçadan hareketle ekolojik denge ile ilgili olarak ulaşılabilecek en kesin yargı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Doğadaki her müdahale, kısa vadede çözülebilen sorunlara yol açar.",
+            "Ekolojik sistemler, türlerin yok oluşuna karşı yüksek bir dirence sahiptir.",
+            "Ekolojik denge, parçalar arasındaki hassas ve karşılıklı bağımlılığa dayanır.",
+            "İnsanlar, ekosistemin işleyişini henüz tam olarak anlayamamıştır."
+          ]
+        },
+        {
+          "soruMetni": "Eleştirmen, bir sanat eserini değerlendirirken kişisel beğenilerinin ötesine geçebilmelidir. Onun görevi, eserin yapısal özelliklerini, teknik başarısını ve kültürel bağlam içindeki yerini objektif kriterlerle incelemektir. Aksi takdirde, eleştiri; kişisel bir izlenimden, yani bir 'fikir' beyanından öteye geçemez. Gerçek eleştiri, okura ya da izleyiciye eseri daha derinlemesine anlama aracı sunmalıdır.\nGerçek bir eleştiriden beklenen temel nitelik aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Eserin halk üzerindeki etkisini ölçmek.",
+            "Sanatçının niyetini doğru bir şekilde yorumlamak.",
+            "Kişisel beğenilere dayanmaksızın objektif ölçütler kullanmak.",
+            "Sadece eserin teknik yönlerine odaklanmak."
+          ]
+        },
+        {
+          "soruMetni": "Roman, gerçek hayattan beslense de, kurduğu dünya itibarıyla her zaman bir kurgudur. Yazar, ne kadar gerçekçi detaylar kullanırsa kullansın, olay örgüsü, karakterlerin iç dünyası ve zaman akışı onun hayal gücünün ürünüdür. Bu kurgu, okuyucunun gerçeklikten kısa bir süreliğine kopmasını sağlar ve ona, normalde deneyimleyemeyeceği yeni bakış açıları sunar. Romanın gücü, bu kurgusal gerçeklik aracılığıyla okuyucuya ulaşmasındadır.\nBu parçada romanın gücünün kaynağı olarak ne gösterilmektedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Okuyucunun beklentilerini tam olarak karşılayabilmesi.",
+            "Kurmaca bir dünya üzerinden okura yeni bir deneyim sunması.",
+            "Gerçek hayattan detayları çarpıcı bir şekilde yansıtması.",
+            "Yazarın hayal gücünü sınırsızca kullanabilmesi."
+          ]
+        },
+        {
+          "soruMetni": "Bilimsel ilerlemenin hızı, bazen etik düşüncenin hızını aşar. Yeni bir teknoloji geliştirildiğinde, onun potansiyel faydaları hemen görülürken, toplumsal ve ahlaki sonuçları genellikle ihmal edilir. Oysa bir yeniliğin uzun vadeli etkileri, kısa vadeli faydalarından çok daha önemlidir. Bu nedenle bilim insanları, laboratuvar çalışmalarını sürdürürken etik felsefecilerle sürekli işbirliği içinde olmalıdır.\nParagrafta vurgulanan temel sorun nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Bilimsel çalışmaların maliyetlerinin çok yüksek olması.",
+            "Teknolojik gelişmelerin etik ve ahlaki değerlendirmelerinin geride kalması.",
+            "Bilim insanları ve etik felsefeciler arasındaki iletişim eksikliği.",
+            "Toplumun yeni teknolojilere karşı önyargılı yaklaşımı."
+          ]
+        },
+        {
+          "soruMetni": "Geleceğin şehirleri, sadece binaların yüksekliğiyle değil, aynı zamanda yaşam kalitesiyle de ölçülecektir. Akıllı ulaşım sistemleri, yenilenebilir enerji kaynakları ve geniş yeşil alanlar, modern bir şehrin olmazsa olmazlarıdır. Ancak tüm bu teknolojik gelişmelerin merkezinde, insan olmalıdır. Şehir planlaması, bireylerin sosyalleşme, güvenlik ve refah ihtiyaçlarına cevap vermelidir.\nYazar, geleceğin şehirlerinin değerlendirilmesinde hangi ölçütün önemli olduğunu belirtmektedir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Bireylerin yaşam kalitesini ve refahını ön planda tutması.",
+            "Kullanılan ileri teknolojilerin çeşitliliği.",
+            "Yenilenebilir enerji kaynaklarının kullanımı.",
+            "Binaların mimari özgünlüğü ve estetiği."
+          ]
+        },
+        {
+          "soruMetni": "Tarihi olayları bugünün değer yargılarıyla yargılamak, çoğu zaman hatalı sonuçlara yol açar. Her tarihsel dönemin kendine has koşulları, ahlaki kodları ve geçerli paradigmaları vardır. Bir tarihçi, olayı kendi bağlamı içinde anlamaya çalışmalı, o dönemin insanlarının motivasyonlarını ve sınırlılıklarını göz önünde bulundurmalıdır. Ancak bu şekilde, geçmişten doğru dersler çıkarmak mümkün olur.\nBu parçaya göre bir tarihçinin en çok kaçınması gereken yaklaşım nedir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Olayları sadece siyasi boyutlarıyla ele almak.",
+            "Tarihi kişiliklerin kişisel yaşamlarına odaklanmak.",
+            "Olayların kronolojik sırasını ihmal etmek.",
+            "Geçmişi, günümüzün etik ve ahlaki değerleriyle değerlendirmek."
+          ]
+        },
+        {
+          "soruMetni": "Mizah, yalnızca bir güldürme aracı değildir; aynı zamanda toplumsal eleştirinin en keskin yollarından biridir. Mizah, ciddi konuları hafif bir tonda sunarak, insanların savunma mekanizmalarını aşmasını sağlar ve böylece en ağır eleştiriler bile daha kabul edilebilir hale gelir. Bu yönüyle mizah, katı yapıları esneten, değişimi tetikleyen güçlü bir felsefi araçtır.\nParagrafa göre mizahın toplumsal eleştirideki temel işlevi nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "İnsanları güldürerek rahatlatmak ve eğlendirmek.",
+            "Ciddi konuları yumuşak bir dille sunarak eleştirinin etkisini artırmak.",
+            "Otoriteye karşı doğrudan bir meydan okuma yapmak.",
+            "Sadece hafif konular üzerine yoğunlaşmak."
+          ]
+        },
+        {
+          "soruMetni": "Fotoğraf, anı dondurur; o anın bütün karmaşıklığını ve duygusal yoğunluğunu tek bir kareye sıkıştırır. Bu dondurulmuş an, izleyicide fotoğraf çekildiği anın duygusundan bağımsız, tamamen yeni bir duygu yaratma potansiyeli taşır. Bir fotoğrafın başarısı, teknik mükemmelliği kadar, zamanın akışına karşı koyarak bir hikayeyi anlatabilmesinde yatar.\nParagrafta, başarılı bir fotoğrafın ölçütü olarak ne vurgulanmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Kullanılan fotoğraf makinesinin kalitesi.",
+            "İzleyicide fotoğraf çekildiği anın duygusunu aynen yaratması.",
+            "Sadece teknik açıdan kusursuz olması.",
+            "Anı dondurarak zamana karşı koyabilmesi ve bir hikaye aktarabilmesi."
+          ]
+        },
+        {
+          "soruMetni": "Dilin evrimi, bir türün çevresel koşullara uyum sağlama sürecinin bir parçasıdır. Yeni kavramlar ortaya çıktıkça, dil bu kavramları ifade etmek için yeni kelimeler veya anlamlar üretir. Bu dinamizm, dilin yalnızca bir iletişim aracı değil, aynı zamanda kolektif düşüncenin bir deposu olduğunu gösterir. Bir toplumun dilindeki kelime dağarcığı, o toplumun neye değer verdiğini ve ne üzerine düşündüğünü yansıtır.\nAşağıdakilerden hangisi, parçaya göre dilin evrimini zorunlu kılan bir durumdur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yeni kavramların ve ihtiyaçların ortaya çıkması.",
+            "Toplumlar arasındaki kültürel etkileşimlerin artması.",
+            "Dilin estetik kaygılarla sürekli zenginleştirilmesi.",
+            "Kolektif düşüncenin bireysel düşünceye baskın gelmesi."
+          ]
+        },
+        {
+          "soruMetni": "Minimalizm, sadece eşyayı azaltmakla ilgili bir akım değildir. Aynı zamanda, dikkati dağıtan unsurlardan kurtularak asıl önemli olana odaklanmayı amaçlayan bir yaşam felsefesidir. Bu felsefe, tüketime dayalı kültüre bir eleştiri getirir ve bireylere, sahip olduklarından çok, neyi deneyimlediklerinin ve kim olduklarının daha önemli olduğunu hatırlatır. Minimalizm, daha azıyla daha çok yaşamayı hedefler.\nMinimalizmin temel amacı aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Sadece estetik açıdan sade ve düzenli bir ev düzeni oluşturmak.",
+            "Tüketim kültürüne tamamen karşı çıkarak her türlü eşyadan vazgeçmek.",
+            "Gereksiz unsurları eleyerek yaşamın esas değerlerine odaklanmak.",
+            "Kişisel gelişim kitaplarını okumayı teşvik etmek."
+          ]
+        },
+        {
+          "soruMetni": "Her ne kadar 'yetenek' doğuştan gelen bir özellik gibi algılansa da, bilimsel çalışmalar, herhangi bir alandaki ustalığın büyük ölçüde pratik, adanmışlık ve doğru geri bildirimle elde edildiğini göstermektedir. Doğuştan gelen eğilimler başlangıçta avantaj sağlayabilir; ancak bu eğilimlerin kalıcı başarıya dönüşmesi, uzun soluklu ve bilinçli bir çalışmaya bağlıdır. En büyük dehalar bile, saatlerce süren disiplinli çalışmanın ürünüdür.\nBu parçada yetenek ve ustalık arasındaki ilişkiye dair savunulan görüş nedir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ustalık için sadece doğuştan gelen yetenek yeterlidir.",
+            "Yetenek, uzun süreli ve disiplinli çalışma ile kalıcı başarıya dönüşür.",
+            "Bilimsel çalışmalar, yeteneğin tamamen doğuştan geldiğini kanıtlamıştır.",
+            "Geri bildirim, ustalık kazanmada yetenekten daha az önemlidir."
+          ]
+        },
+        {
+          "soruMetni": "Öykü, romanın aksine, okuyucuyu bir anda olayların içine çeker ve genellikle tek bir ana duygu veya olaya odaklanır. Öyküde, karakterlerin geçmişleri ve karmaşık yan hikayeler için fazla yer yoktur. Yazarın başarısı, sınırlı kelime sayısı içinde büyük bir etki yaratabilmesinde, yani 'eksik' olanı okuyucunun zihninde tamamlatabilmesinde yatar.\nÖyküyü romandan ayıran ve ona özgünlüğünü veren temel özellik aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Okuyucuyu hemen olayın içine çekmesi ve tek bir etki yaratmaya odaklanması.",
+            "Karakter derinliğinin romandan daha fazla olması",
+            "Birden fazla ana hikayeyi başarıyla birleştirmesi.",
+            "Mutlaka mutlu sonla bitme zorunluluğu."
+          ]
+        },
+        {
+          "soruMetni": "Felsefe, evreni ve varoluşu anlamlandırma çabasının ürünüdür. Bu çaba, somut verilerle sınırlı değildir; aksine, var olanı sorgular ve 'olması gereken' üzerine kafa yorar. Bilim, 'nedir?' sorusuna cevap ararken; felsefe, 'neden?' ve 'nasıl olmalı?' sorularıyla ilgilenir. Bu yüzden felsefe, insan düşüncesinin sınırlarını sürekli zorlayan eleştirel bir etkinliktir.\nAşağıdakilerden hangisi, parçaya göre felsefenin temel işlevlerinden biri değildir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Varoluşu ve evreni anlamlandırmaya çalışmak.",
+            "Var olanı olduğu gibi kabul etmek.",
+            "İnsan düşüncesinin sınırlarını zorlamak.",
+            "‘Neden?’ ve ‘Nasıl olmalı?’ gibi sorularla ilgilenmek."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ses_bilgisi_1",
+      "baslik": "Ses Bilgisi-1",
+      "kategoriId": "turkce",
+      "konuId": "ses_bilgisi",
+      "isNew": false,
+      "soruSayisi": 13,
+      "sureDakika": 13,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki sözcüklerin hangisinde Ünsüz Yumuşaması (Değişimi) gerçekleşmiştir?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Mendili",
+            "Sınıfta",
+            "Affetmek",
+            "Ağacı"
+          ]
+        },
+
+        {
+          "soruMetni": "Aşağıdaki sözcüklerin hangisinde Ünsüz Yumuşaması olması gerekirken, bu kurala aykırılık vardır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kapının",
+            "Ekmeği",
+            "Hukuku",
+            "Tabağın"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerin hangisi hem Ünsüz Yumuşaması hem de Ünlü Düşmesi'ne uğramıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Fikrime",
+            "Omzuna",
+            "Ağzı",
+            "Kaybetti"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki tırnak içindeki ifadelerden hangisinde Ünsüz Benzeşmesi vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yaptığımız \"işten\" herkes memnun kalmıştı.",
+            "Kitapları hızlıca rafa \"dizdik\".",
+            "Soğuktan elleri \"titriyordu\".",
+            "Ağacın gövdesi, rüzgârla \"eğiliyordu\"."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerden hangisinde Ünsüz Benzeşmesi yoktur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Çalışkan",
+            "Hastalık",
+            "Yapmıştır",
+            "Ağaçtan"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerden hangisi hem Ünsüz Benzeşmesi hem de Ünlü Düşmesi'ne uğramıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Kaydetmişti",
+            "Hissetti",
+            "Gönülden",
+            "Sınıfta"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerin hangisinde Ünlü Düşmesi vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Çevreyi",
+            "Odaya",
+            "Yemeği",
+            "Sözümü"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde Ünlü Düşmesi olan sözcük, ünlü düşmesi dışında başka bir ses olayına uğramıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Kapının \"ağzı\" açıktı.",
+            "Onun \"alnı\" yara almıştı.",
+            "Bu olayı \"kaybettiğini\" söyledi.",
+            "Kitapları \"omzunda\" taşıyordu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerin hangisinde Ünlü Düşmesi görülmez?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yalnız",
+            "Oyun",
+            "Çevre",
+            "Beniz"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde iki farklı sözcükte Ünlü Düşmesi vardır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Köyün \"çevresi\", \"ağaçlarla\" doluydu.",
+            "\"Oğlunun\" \"burnunda\" hafif bir yara vardı.",
+            "Arabayı \"kaldırıma\" \"yaklaştırdı\".",
+            "\"Yalnız\" adam, \"ileride\" bir gölge gördü."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerden hangisinde Ünlü Türemesi vardır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Geliyor",
+            "Yalnız",
+            "Daracık",
+            "Gülerken"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki sözcüklerin hangisinde Ünsüz Türemesi vardır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Gülümsedi",
+            "Hissettin",
+            "Reddetmek",
+            "Zemmetmek"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birden fazla Ulama örneği vardır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Adam, işini erken bitirince bize katıldı.",
+            "Evini temiz tutmak, güzel bir alışkanlıktır.",
+            "Sen de hemen odana git ve oyna.",
+            "Dün akşam onu arayıp davet ettim."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yazim_kurallari_1",
+      "baslik": "Yazım Kuralları-1",
+      "kategoriId": "turkce",
+      "konuId": "yazim_kurallari",
+      "isNew": false,
+      "soruSayisi": 20,
+      "sureDakika": 20,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde birleşik sözcüklerin yazımıyla ilgili bir yanlışlık vardır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hafta sonu denize açılan teknemiz birdenbire alabora oldu.",
+            "Çocuklar, oyun oynarken gözden kaybolmuşlardı.",
+            "Bu konudaki görüşlerini yüzüstü bırakmak doğru değil.",
+            "Herşeyin üstesinden gelebilecek güce sahibiz."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde de/da bağlacının yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bu toplantıda alınan kararlar, herkesi yakından ilgilendiriyor.",
+            "Kitapları da defterleri de masanın üzerindeydi.",
+            "Seninde bu konuda söyleyeceklerin olmalıydı.",
+            "O, hayata her şeye rağmen güler yüzle bakardı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde sayıların yazımıyla ilgili bir yazım yanlışı vardır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Yarışmada ikişer ikişer gruplara ayrılmaları istendi.",
+            "Babam, 1990’lı yılların başlarında askerliğini yapmış.",
+            "Yüzde 25'lik indirim oranı, beklenenin altındaydı.",
+            "Okul müdürümüz, bize 7'inci katın anahtarını verdi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısaltmaların yazımıyla ilgili bir yazım yanlışı vardır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "TDK'nin yeni yayımlanan kılavuzunu inceledim.",
+            "İTÜ'den mezun olduktan sonra yüksek lisansa başladı.",
+            "Bu konudaki raporları TBMM'ne sunacağız.",
+            "Bu yıl 2 kg pamuk daha az toplandı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde pekiştirme ve ikilemelerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Köyden kızılağaç kokusu buram buram geliyordu.",
+            "Bahçedeki ip ince dallar, rüzgârda sallanıyordu.",
+            "Sınıfta sessiz sedasız oturup ders çalışıyordu.",
+            "Masmavi gökyüzü insana huzur veriyordu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ayrı yazılması gereken birleşik fiil bitişik yazılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Arkadaşının anlattıklarına kayıtsız kalamadı.",
+            "Bu olay, onun vicdanını sızlattı.",
+            "Konuyu anlamak için gayret sarfetti.",
+            "Usta, sandalyeyi tamir etti."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ki'nin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Öyle görünüyor ki bu film gişede rekor kıracak.",
+            "Duydumki, sen de onlarla tatile çıkıyormuşsun.",
+            "Elindekileri hemen masaya bıraktı.",
+            "Bilmelisin ki, her zaman senin yanındayım."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde özel adlara getirilen eklerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "İstanbul Boğazı'nın suları bugün oldukça sakin.",
+            "Arkadaşım İstanbul Üniversitesinde okuyor.",
+            "Bu şiir, Mehmet Akif Ersoy’un en bilinen eseridir.",
+            "Türkiye Cumhuriyetine bağlılığını her zaman korudu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yazımı yanlış olan bir sözcük kullanılmıştır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Akdeniz bölgesine özgü bitki türlerini incelediler.",
+            "Pazardan iki kilo kırmızı mercimek aldık.",
+            "O, her zaman sağduyulu ve mantıklı hareket ederdi.",
+            "Art arda gelen fırtınalar hayatı olumsuz etkiledi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde büyük harflerin kullanımıyla ilgili bir yazım yanlışı yoktur?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Ablam Ege Bölgesindeki zeytin ağaçlarını inceledi.",
+            "Yeni çıkan 'Uçan At' romanını herkese tavsiye ederim.",
+            "Sınavdan sonra Ali Amca'yı ziyaret etti.",
+            "Kurtuluş Savaşını anlatan bir belgesel izledik."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde bir yazım yanlışı vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Oraya gitgel yolu üç saat sürerdi.",
+            "Evi aradık ama çocukcağız çoktan uyumuştu.",
+            "Gündoğumundan hemen sonra yola çıktık.",
+            "Bu kadar ön yargılı olman beni üzüyor."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yazımı yanlış olan bir sözcük kullanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Tiyatrocu, yeraltı edebiyatının yeni örneklerini sergiledi.",
+            "Yazar, her yapıtında cana yakın karakterler yaratırdı.",
+            "Misafirlerimize kuruyemiş ikram etmeyi unutmayalım.",
+            "Bu durum, herkesin başını ağrıttı."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde tarihlerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Bu toplantı 12.00’de başlayacak.",
+            "29 Ekim 1923’te Cumhuriyet ilan edildi.",
+            "Pazartesi günü değil de 12 Mayıs’da  mı gelsek?",
+            "17’nci yüzyıl, Avrupa için karanlık bir dönemdi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yer adlarının yazımıyla ilgili bir yanlışlık yapılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Gelecek yıl Asya yakasında bir ev tutmayı planlıyor.",
+            "Çukurova’nın bereketli toprakları binlerce yıldır ekiliyor.",
+            "Ankara Kalesi’nin etrafında tarihi konaklar var.",
+            "Ege Bölgesinin en yüksek dağı hangisidir?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde yazımı yanlış olan bir sözcük vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Çevredeki hayvanlar kış gelince uyur gezer oldu.",
+            "Öğretmen, konuyu yüz yüze anlatmayı tercih etti.",
+            "Daireyi satın almadan önce tüm evrakları gözden geçirdik.",
+            "Ona rastgele bir hediye almak istememişti."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noktalama_isaretleri_1",
+      "baslik": "Noktalama İşaretleri-1",
+      "kategoriId": "turkce",
+      "konuId": "noktalama_isaretleri",
+      "isNew": false,
+      "soruSayisi": 12,
+      "sureDakika": 12,
+      "sorular": [
+        {
+          "soruMetni": "Aşağıdaki metinlerin hangisinde noktalama işareti yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bu konuyu tarih, coğrafya ve edebiyat açısından incelemeliyiz.",
+            "Geldi, kapıyı açtı, içeri girdi ve pencerenin önüne oturdu.",
+            "Evet, bu teklifin detaylarını tekrar konuşalım.",
+            "Dün aldığım; elma, armut, ayva bozulmuş."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinin sonuna üç nokta (...) konulması uygun olur?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Hava kararmadan eve dönmelisin",
+            "Sınavdan ne kadar aldığını merak ediyorum",
+            "Ne oldu, neden konuşmuyorsun",
+            "Odasına girdi, masaya oturdu, defterini açtı"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki metinlerin hangisinde kesme işareti (') yanlış kullanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "1985'te bu şehirde doğmuş.",
+            "Bu romanı Yaşar Kemal'in eserleri arasında görürüz.",
+            "Türk Dil Kurumu'nun yeni kararlarını öğrendik.",
+            "Bugün Ayşe’ye mi gitsek?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde soru işareti (?) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Bu yılki tatilimizi nerede geçirelim?",
+            "İstanbul'a ne zaman geleceksin?",
+            "Adınız, soyadınız ve doğum tarihinizi öğrenebilir miyim?",
+            "1825’te doğan yazarın hayatı bilinmiyor olamaz?"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde virgül (,) kullanım amacı diğerlerinden farklıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Genç, doktorun söylediklerini dikkatle dinledi.",
+            "Evet, bu işi en kısa zamanda halledeceğiz.",
+            "Hayır, seninle gelmek istemiyorum.",
+            "Peki, o zaman başka bir yol bulalım."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde kısa çizgi (-) kullanımı yanlıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Türk-Alman ilişkileri her geçen gün gelişiyor.",
+            "Türkçe-İngilizce sözlüğü yanıma almayı unuttum.",
+            "Fenerbahçe-Galatasaray maçı nefesleri kesti.",
+            "Konuyu enine-boyuna tartışmalıyız."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki metinlerin hangisinde nokta (.) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "Prof. Dr. Ahmet Bey'in yeni makalesini okudum.",
+            "Yarın saat 14.30'da buluşmak üzere anlaştık.",
+            "Pazardan 5 kg. elma aldım.",
+            "O gün hava çok soğuktu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde noktalama işareti eksikliği nedeniyle anlam karışıklığı oluşmuştur?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Yaşlı kadına yardım etti.",
+            "Ağabeyin mi geldi?",
+            "Bu konuyu tartışmak istemiyorum.",
+            "Uzun yolda yorulmuştu ama pes etmedi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde ünlem işareti (!) yanlış kullanılmıştır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "Eyvah, otobüsü kaçırdım!",
+            "Aman Tanrım! Ne kadar da zeki.",
+            "Ordular! İlk hedefiniz Akdeniz'dir, ileri!",
+            "Çok yoruldum, biraz dinleneyim!"
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki metinlerin hangisinde virgül (,) kullanılmaması gerekirken kullanılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Romanı bitirdi, defterini kapattı.",
+            "Ya bu deveyi güdeceksin, ya bu diyardan gideceksin.",
+            "Kırtasiyeden kitap, defter ve kalem aldı.",
+            "O, bu işi tek başına bitirdi."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde tırnak işareti (\" \") doğru kullanılmıştır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "Öğretmen \"yarın sınav var\" dedi mi?",
+            "Yazarın son eseri, \"Gecenin Perdesi\", çok beğenildi.",
+            "Bu konuyu \"iyice düşün\" dedi ve kapıyı kapattı.",
+            "Kendisini \"dünyanın merkezi\" olarak görüyordu."
+          ]
+        },
+        {
+          "soruMetni": "Aşağıdaki cümlelerin hangisinde virgül (,) kullanımı yanlış ve gereksizdir?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "Sen mi, o mu daha çok çalışıyor?",
+            "Eve geldi, eşyalarını bıraktı, dinlenmeye geçti.",
+            "Çalışkan, dürüst insanlar her zaman kazanır.",
+            "Tren, büyük bir gürültüyle istasyona yanaştı."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "temel_kavramlar_1",
+      "baslik": "Temel Kavramlar-1",
+      "kategoriId": "matematik",
+      "konuId": "temel_kavramlar",
+      "isNew": false,
+      "soruSayisi": 15,
+      "sureDakika": 15,
+      "sorular":[
+        {
+          "soruMetni": "a, b, c birer tam sayı olmak üzere,\na * b çarpımı tek sayı,\nb + c toplamı ise çift sayıdır.\nBuna göre, aşağıdakilerden hangisi daima çift sayıdır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "a + c",
+            "a.c",
+            "a.c + 2.b",
+            "a + b + c"
+          ]
+        },
+        {
+          "soruMetni": "Üç basamaklı en büyük negatif tam sayı ile iki basamaklı en küçük pozitif tam sayının toplamı kaçtır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "-110",
+            "-90",
+            "10",
+            "110"
+          ]
+        },
+        {
+          "soruMetni": "x ve y sıfırdan farklı tam sayılar olmak üzere, x * y = -12 eşitliği veriliyor. Buna göre, x + y toplamının alabileceği en büyük değer kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "11",
+            "7",
+            "4",
+            "1"
+          ]
+        },
+        {
+          "soruMetni": "(4! - 3!) / 2! işleminin sonucu kaçtır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1",
+            "9",
+            "12",
+            "18"
+          ]
+        },
+        {
+          "soruMetni": "İki basamaklı, birbirinden farklı dört doğal sayının toplamı A'dır. Buna göre, A en az kaç olabilir?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "42",
+            "46",
+            "50",
+            "54"
+          ]
+        },
+        {
+          "soruMetni": "x, y, z birer tam sayı ve x * y > 0, y * z < 0 ve x - z < 0 eşitsizlikleri veriliyor. Buna göre x, y, z'nin işaretleri sırasıyla aşağıdakilerden hangisidir?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "(+, -, +)",
+            "(+, +, -)",
+            "(-, -, +)",
+            "(-, +, -)"
+          ]
+        },
+        {
+          "soruMetni": "|2 - 5| + | -4 | - 3 işleminin sonucu kaçtır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "-2",
+            "0",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "soruMetni": "0,04/0,2 + 1,5/0,05 işleminin sonucu kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "30,2",
+            "32",
+            "32,5",
+            "35"
+          ]
+        },
+        {
+          "soruMetni": "a, b, c ardışık pozitif tam sayılar ve a < b < c olduğuna göre, (a - b) * (c - a) + (b - c) ifadesinin değeri kaçtır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "-3",
+            "-1",
+            "0",
+            "1"
+          ]
+        },
+        {
+          "soruMetni": "x bir asal sayı ve y bir doğal sayı olmak üzere, x * y = 14 eşitliğini sağlayan kaç farklı (x, y) ikilisi vardır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ]
+        },
+        {
+          "soruMetni": "x, y, z birbirinden farklı pozitif tam sayılardır. Buna göre 2x + 3y + 4z ifadesinin alabileceği en küçük değer kaçtır?",
+          "dogruCevapIndex": 3,
+          "secenekler": [
+            "13",
+            "14",
+            "15",
+            "16"
+          ]
+        },
+        {
+          "soruMetni": "x bir rakam olmak üzere, (2x + 15) / (x + 3) kesrinin bir tam sayıya eşit olması için x'in alabileceği kaç farklı değer vardır?",
+          "dogruCevapIndex": 0,
+          "secenekler": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ]
+        },
+        {
+          "soruMetni": "a = -3 ve b = 2 için 2ab-a ifadesinin değeri kaçtır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "-6",
+            "-9",
+            "15",
+            "21"
+          ]
+        },
+        {
+          "soruMetni": "Bir sayının 5 katının 7 eksiği, aynı sayının 2 katının 11 fazlasına eşit ise, bu sayı kaçtır?",
+          "dogruCevapIndex": 1,
+          "secenekler": [
+            "2",
+            "6",
+            "9",
+            "11"
+          ]
+        },
+        {
+          "soruMetni": "x ve y birer rakam olmak üzere, 2x = 3y eşitliğini sağlayan x + y toplamının alabileceği en büyük değer kaçtır?",
+          "dogruCevapIndex": 2,
+          "secenekler": [
+            "5",
+            "10",
+            "15",
+            "18"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rasyonel_sayilar_1",
+      "baslik": "Rasyonel Sayılar-1",
+      "kategoriId": "matematik",
+      "konuId": "rasyonel_sayilar",
+      "isNew": false,
+      "soruSayisi": 13,
+      "sureDakika": 13,
+      "sorular": [
+      {
+        "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n(1 - 1/2) ⋅ (1 - 1/3) ⋅ (1 - 1/4) ⋅ ... ⋅ (1 - 1/10)",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "1/2",
+          "1/5",
+          "1/9",
+          "1/10"
+        ]
+      },
+      {
+        "soruMetni": "İşleminin sonucu kaçtır?\n\n(2/3 + 1/4) / (2/3 - 1/4)",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "7/11",
+          "11/5",
+          "5/11",
+          "3"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki rasyonel sayılardan hangisi en büyüktür?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "4/9",
+          "5/10",
+          "6/11",
+          "7/12"
+        ]
+      },
+      {
+        "soruMetni": "İşleminin sonucu kaçtır?\n\n1 / [ 1 + (1 - 1/2) ]",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "1/4",
+          "1/3",
+          "2/3",
+          "3/4"
+        ]
+      },
+      {
+        "soruMetni": "Bir kesrin değeri 2/3'tür. \n\nBu kesrin payına 2 eklenir ve paydasından 1 çıkarılırsa kesrin değeri 5/6 oluyor. \n\nBuna göre, bu kesrin paydası kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "17",
+          "15",
+          "12",
+          "9"
+        ]
+      },
+      {
+        "soruMetni": "2/3 + (-1/2) - 1/6 işleminin sonucu kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "0",
+          "1/6",
+          "1/3",
+          "1/2"
+        ]
+      },
+      {
+        "soruMetni": "x = 0.666... ve y = 0.333... olduğuna göre, x/y işleminin sonucu aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "1/2",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki rasyonel sayılardan hangisi 1/4 ile 1/2 arasındadır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "0.2",
+          "0.3",
+          "0.6",
+          "0.75"
+        ]
+      },
+      {
+        "soruMetni": "a = -1/3, b = -1/4, c = -1/5 olduğuna göre, aşağıdaki sıralamalardan hangisi doğrudur?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "a < b < c",
+          "b < a < c",
+          "c < b < a",
+          "a < c < b"
+        ]
+      },
+      {
+        "soruMetni": "1 / (1 + 1/2) + 1 işleminin sonucu kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "4/3",
+          "5/3",
+          "3/2",
+          "2"
+        ]
+      },
+      {
+        "soruMetni": "x = 0.1 ve y = 0.01 olduğuna göre, x/y - y/x işleminin sonucu kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "9.9",
+          "9.09",
+          "9",
+          "99"
+        ]
+      },
+      {
+        "soruMetni": "a bir tam sayı olmak üzere, (3a + 7) / (a + 2) kesrini tam sayı yapan kaç farklı a değeri vardır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "soruMetni": "Bir öğrenci parasının önce 2/5'ini, daha sonra kalan parasının 1/3'ünü harcıyor. Geriye 12 TL'si kaldığına göre, öğrencinin başlangıçtaki parası kaç TL'dir?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "20",
+          "25",
+          "30",
+          "35"
+        ]
+      }
+      ]
+    },
+    {
+      "id": "esitsizlik_ve_mutlak_deger_1",
+      "baslik": "Eşitsizlik ve Mutlak Değer-1",
+      "kategoriId": "matematik",
+      "konuId": "esitsizlik_ve_mutlak_deger",
+      "isNew": false,
+      "soruSayisi": 13,
+      "sureDakika": 13,
+      "sorular": [
+      {
+        "soruMetni": "x bir tam sayı olmak üzere, \n\n-3 < 2x - 1 ≤ 7 eşitsizliğini sağlayan kaç farklı x tam sayısı vardır?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      {
+        "soruMetni": "Mutlak değeri 5'ten küçük olan kaç farklı tam sayı vardır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "8",
+          "9",
+          "10",
+          "11"
+        ]
+      },
+      {
+        "soruMetni": "x ve y birer tam sayıdır. \n\n-2 ≤ x < 5 \n\n-4 < y ≤ 3 \n\nolduğuna göre, 3x - 2y ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "18",
+          "19",
+          "20",
+          "21"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki denklemi sağlayan x değerlerinin toplamı kaçtır?\n\n|2x - 6| = 10",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "4",
+          "6",
+          "8",
+          "12"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki eşitsizliğin çözüm kümesi nedir?\n\n|x - 5| ≥ 2",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "[3, 7]",
+          "(-∞, 3)",
+          "(7, ∞)",
+          "(-∞, 3] ∪ [7, ∞)"
+        ]
+      },
+      {
+        "soruMetni": "x, y birer gerçel sayıdır. \n\n|x| = 3 \n\n|y| = 2 \n\nolduğuna göre, x - y farkının alabileceği en küçük değer kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "-5",
+          "-1",
+          "1",
+          "5"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki denklemin çözüm kümesi nedir?\n\n|x - 3| + |3 - x| = 12",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "{9}",
+          "{-3}",
+          "{-3, 9}",
+          "{3, 9}"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki eşitsizliği sağlayan en küçük ve en büyük tam sayıların toplamı kaçtır?\n\n|2x + 1| < 7",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "-4",
+          "0",
+          "2",
+          "-1"
+        ]
+      },
+      {
+        "soruMetni": "x bir gerçek sayı olmak üzere, 2(x-3) + 1 <= 5 - x eşitsizliğini sağlayan en büyük tam sayı değeri kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "soruMetni": "|2x - 1| = 5 denklemini sağlayan x değerlerinin çarpımı kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "-12",
+          "-6",
+          "6",
+          "12"
+        ]
+      },
+      {
+        "soruMetni": "x ve y birer tam sayı olmak üzere, -2 < x <= 3 ve 1 <= y < 5 olduğuna göre, 2x - y ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      {
+        "soruMetni": "a < 0 olmak üzere, |a - 1| - |a| ifadesinin eşiti aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "2a - 1",
+          "1 - 2a",
+          "1",
+          "-1"
+        ]
+      },
+      {
+        "soruMetni": "Bir kırtasiyeci tanesini 10 TL ile 12 TL arasında aldığı bir kalemi, tanesini 15 TL ile 18 TL arasında bir fiyattan satmaktadır. Bu kırtasiyecinin bir kalem satışından elde ettiği kârın TL cinsinden alabileceği en geniş değer aralığı nedir?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "(3, 8)",
+          "(5, 6)",
+          "(3, 6)",
+          "(5, 8)"
+        ]
+      }
+      ]
+    },
+    {
+      "id": "uslu_koklu_sayilar_1",
+      "baslik": "Üslü ve Köklü Sayılar-1",
+      "kategoriId": "matematik",
+      "konuId": "uslu_koklu_sayilar",
+      "isNew": false,
+      "soruSayisi": 10,
+      "sureDakika": 10,
+      "sorular": [
+      {
+        "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n(2⁰ + 3⁻¹) / (2⁻¹ - 3⁰)",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "-8/3",
+          "-2/3",
+          "1/3",
+          "4/3"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki işlemin sonucu kaçtır?\n\n(3²)⁴ ⋅ (3⁻⁵) / 3³",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "1",
+          "3",
+          "9",
+          "27"
+        ]
+      },
+      {
+        "soruMetni": "x = 2⁴ \n\ny = 8² \n\nz = 4³ \n\nolduğuna göre, aşağıdaki sıralamalardan hangisi doğrudur?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "x < y < z",
+          "x < z < y",
+          "y < x = z",
+          "x < y = z"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki denklemi sağlayan x değeri kaçtır?\n\n2ˣ⁺³ = 16",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "0",
+          "1",
+          "2",
+          "4"
+        ]
+      },
+      {
+        "soruMetni": "√12 + √27 - √3\n\nİfadesinin eşiti aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "2√3",
+          "3√3",
+          "4√3",
+          "5√3"
+        ]
+      },
+      {
+        "soruMetni": "Denklemini sağlayan x değeri kaçtır?\n\n√[x - 1] = 5",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "6",
+          "11",
+          "25",
+          "26"
+        ]
+      },
+      {
+        "soruMetni": "Aşağıdaki ifadenin en sade şekli nedir?\n\n(2⁵ + 2⁶ + 2⁷) / (2⁵)",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "4",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      {
+        "soruMetni": "√[8] ⋅ √[18] işleminin sonucu kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "10",
+          "12",
+          "16",
+          "24"
+        ]
+      },
+      {
+        "soruMetni": "x ve y birer tam sayıdır. \n\n(x-2)² + (y+3)⁴ = 0 \n\nolduğuna göre, x + y toplamı kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "-1",
+          "0",
+          "1",
+          "5"
+        ]
+      },
+      {
+        "soruMetni": "x ve y birer tam sayıdır.\n(x + 5)² + (y − 4)⁴ = 0\nolduğuna göre, x + y toplamı kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "−9",
+          "−1",
+          "1",
+          "9"
+        ]
+      }
+      ]
+    },
+    {
+      "id": "carpanlara_ayirma_1",
+      "baslik": "Çarpanlara Ayırma-1",
+      "kategoriId": "matematik",
+      "konuId": "carpanlara_ayirma",
+      "isNew": false,
+      "soruSayisi": 10,
+      "sureDakika": 10,
+      "sorular": [
+      {
+        "soruMetni": "(x - 3y)² - (x + 3y)² \n\nifadesinin en sade şekli aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "12xy",
+          "-6xy",
+          "6xy",
+          "-12xy"
+        ]
+      },
+      {
+        "soruMetni": "a³ + 3a²b + 3ab² + b³ \n\nifadesinin çarpanlara ayrılmış şekli aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "(a + b)³",
+          "(a - b)³",
+          "a³ + b³",
+          "a² + 2ab + b²"
+        ]
+      },
+      {
+        "soruMetni": "x² - 5x + 6 \n\nifadesinin çarpanlarından biri aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "x - 1",
+          "x - 6",
+          "x - 3",
+          "x + 2"
+        ]
+      },
+      {
+        "soruMetni": "a - b = 6 ve a² - b² = 30 olduğuna göre, a + b toplamı kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "3",
+          "5",
+          "6",
+          "10"
+        ]
+      },
+      {
+        "soruMetni": "(a² - 2a) / (a² - 4) : a / (a + 2) \n\nifadesinin en sade şekli aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "a",
+          "1 / a",
+          "a - 2",
+          "1"
+        ]
+      },
+      {
+        "soruMetni": "x + 1/x = 4 olduğuna göre, x² + 1/x² ifadesinin değeri kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "12",
+          "14",
+          "15",
+          "16"
+        ]
+      },
+      {
+        "soruMetni": "a² + ab - 2b² \n\nifadesinin çarpanlarından biri aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "a - b",
+          "a + 2b",
+          "a + b",
+          "a - 2b"
+        ]
+      },
+      {
+        "soruMetni": "x − 1/x = 5 olduğuna göre, x² + 1/x² ifadesinin değeri kaçtır?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "23",
+          "25",
+          "27",
+          "29"
+        ]
+      },
+      {
+        "soruMetni": "(a² − 4) / (a − 2) ⋅ (a + 2) / (a² + 4a + 4) ifadesinin en sade şekli aşağıdakilerden hangisidir?\n(a ≠ 2 ve a ≠ −2 olmak üzere)",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "1",
+          "a",
+          "a + 2",
+          "1/a"
+        ]
+      },
+      {
+        "soruMetni": "​​(x² − 9x + 20) ifadesinin çarpanlarından biri aşağıdakilerden hangisidir?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "x − 1",
+          "x − 4",
+          "x − 6",
+          "x − 10"
+        ]
+      }
+      ]
+    },
+    {
+      "id": "oran_oranti_1",
+      "baslik": "Oran ve Orantı-1",
+      "kategoriId": "matematik",
+      "konuId": "oran_oranti",
+      "isNew": false,
+      "soruSayisi": 10,
+      "sureDakika": 10,
+      "sorular": [
+      {
+        "soruMetni": "a/b = 2/3 ve a + b = 25 olduğuna göre, a kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "10",
+          "12",
+          "15",
+          "18"
+        ]
+      },
+      {
+        "soruMetni": "3a = 4b = 5c ve a + b + c = 94 olduğuna göre, a kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "30",
+          "40",
+          "45",
+          "50"
+        ]
+      },
+      {
+        "soruMetni": "x/2 = y/3 = z/5 ve 2x + y - z = 10 olduğuna göre, y kaçtır?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "4",
+          "6",
+          "12",
+          "18"
+        ]
+      },
+      {
+        "soruMetni": "Bir işi eşit güçteki 6 işçi 12 günde bitirebiliyorsa, aynı işi eşit güçteki 4 işçi kaç günde bitirebilir?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "8",
+          "16",
+          "17",
+          "18"
+        ]
+      },
+      {
+        "soruMetni": "x, y, z sayıları sırasıyla 2, 3 ve 5 ile doğru orantılıdır. \n\n2x + y - z = 10 olduğuna göre, x kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ]
+      },
+      {
+        "soruMetni": "a, b, c sayıları sırasıyla 2, 3 ve 4 ile ters orantılıdır. \n\na + b + c = 52 olduğuna göre, c kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "12",
+          "16",
+          "24",
+          "36"
+        ]
+      },
+      {
+        "soruMetni": "A/B = C/D = 3 \n\nolduğuna göre, (A + 3C) / (B + 3D) oranı kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "1/3",
+          "3",
+          "6",
+          "9"
+        ]
+      },
+      {
+        "soruMetni": "Birbirini çeviren iki dişli çarktan birincisi 8 devir yaptığında ikincisi 5 devir yapmaktadır. \n\nİkinci çarkın diş sayısı 40 olduğuna göre, birinci çarkın diş sayısı kaçtır?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "20",
+          "25",
+          "25",
+          "32"
+        ]
+      },
+      {
+        "soruMetni": "x/y = 4 ve y/z = 3 olduğuna göre, x/z oranı kaçtır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "12",
+          "7",
+          "4/3",
+          "3/4"
+        ]
+      },
+      {
+        "soruMetni": "Bir havuzu 4 musluk 9 saatte dolduruyorsa, aynı havuzu bu musluklarla aynı özellikteki 6 musluk kaç saatte doldurur?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "5",
+          "6",
+          "8",
+          "13"
+        ]
+      }
+      ]
+    },
+    {
+      "id": "problemler_1",
+      "baslik": "Problemler-1",
+      "kategoriId": "matematik",
+      "konuId": "problemler",
+      "isNew": false,
+      "soruSayisi": 10,
+      "sureDakika": 10,
+      "sorular": [
+      {
+        "soruMetni": "Bir sayının 3 katının 5 eksiği, aynı sayının 2 katının 1 fazlasına eşittir. \n\nBuna göre, bu sayı kaçtır?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      {
+        "soruMetni": "Bir sınıftaki öğrenciler sıralara 2'şerli oturduklarında 6 öğrenci ayakta kalıyor. 3'erli oturduklarında ise 2 sıra boş kalıyor. \n\nBuna göre, sınıfta kaç öğrenci vardır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "30",
+          "34",
+          "36",
+          "42"
+        ]
+      },
+      {
+        "soruMetni": "Bir depodaki suyun önce 1/3'ü, daha sonra kalanın 1/4'ü kullanılıyor. Depoda kalan su 120 litre olduğuna göre, başlangıçta depoda kaç litre su vardı?",
+        "dogruCevapIndex": 1,
+        "secenekler": [
+          "200",
+          "240",
+          "270",
+          "300"
+        ]
+      },
+      {
+        "soruMetni": "Bir telin bir ucundan 1/5'i, diğer ucundan 1/10'u kesilince telin orta noktası ilk durumuna göre 3 cm kayıyor. \n\nBuna göre, telin kesilmeden önceki boyu kaç cm'dir?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "40",
+          "50",
+          "55",
+          "60"
+        ]
+      },
+      {
+        "soruMetni": "Bir merdivenin basamaklarını 2'şer 2'şer çıkıp, 3'er 3'er inen bir kişinin çıkarken attığı adım sayısı, inerken attığı adım sayısından 5 fazladır. \n\nBu merdiven kaç basamaklıdır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "30",
+          "25",
+          "20",
+          "15"
+        ]
+      },
+      {
+        "soruMetni": "Ayşe'nin parası Fatma'nın parasının 3 katıdır. \n\nAyşe, Fatma'ya 10 TL verirse, Ayşe'nin parası Fatma'nın parasının 2 katı oluyor. \n\nBaşlangıçta Ayşe'nin kaç TL'si vardır?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "50",
+          "60",
+          "80",
+          "90"
+        ]
+      },
+      {
+        "soruMetni": "Bir kumaş 10 eşit parçaya ayrılıyor. Eğer 16 eşit parçaya ayrılsaydı, her bir parçanın uzunluğu 30 cm daha kısa olacaktı. \n\nBuna göre, bu kumaşın tamamı kaç cm'dir?",
+        "dogruCevapIndex": 2,
+        "secenekler": [
+          "600",
+          "700",
+          "800",
+          "900"
+        ]
+      },
+      {
+        "soruMetni": "Ali'nin bilyelerinin sayısı, Veli'nin bilyelerinin sayısının 2 katından 4 fazladır. \n\nİkisinin toplam 49 bilyesi olduğuna göre, Ali'nin kaç bilyesi vardır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "34",
+          "30",
+          "18",
+          "15"
+        ]
+      },
+      {
+        "soruMetni": "Bir bilet kuyruğunda Ahmet baştan 12. sırada, Mehmet ise sondan 18. sıradadır. \n\nAhmet ile Mehmet arasında 5 kişi olduğuna göre, bilet kuyruğunda en çok kaç kişi vardır?",
+        "dogruCevapIndex": 3,
+        "secenekler": [
+          "30",
+          "33",
+          "34",
+          "35"
+        ]
+      },
+      {
+        "soruMetni": "Bir kasada 40 TL'lik ve 50 TL'lik banknotlardan toplam 20 adet bulunmaktadır. \n\nBanknotların toplam değeri 920 TL olduğuna göre, kasada kaç tane 40 TL'lik banknot vardır?",
+        "dogruCevapIndex": 0,
+        "secenekler": [
+          "8",
+          "10",
+          "12",
+          "15"
+        ]
+      }
+      ]
     }
 
      ],
