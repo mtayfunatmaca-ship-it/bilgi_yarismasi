@@ -684,7 +684,7 @@
             "sira": 27
           },
           {
-            "soruMetni": "A, B, C, D ve E adlı 5 öğrenci, K, L ve M isimli 3 farklı kulüpten sadece birini seçmiştir. Bu öğrencilerin kulüp seçimleriyle ilgili bilinenler şunlardır: * Her kulübe en az bir öğrenci seçilmiştir. * K kulübünü seçen öğrenci sayısı 1'dir. * B ve D, farklı kulüpleri seçmiştir. * E ve A, aynı kulübü seçmiştir. * C, L kulübünü seçmiştir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "soruMetni": "A, B, C, D ve E adlı 5 öğrenci, K, L ve M isimli 3 farklı kulüpten sadece birini seçmiştir. Bu öğrencilerin kulüp seçimleriyle ilgili bilinenler şunlardır: \n- Her kulübe en az bir öğrenci seçilmiştir. \n-  K kulübünü seçen öğrenci sayısı 1'dir. \n- B ve D, farklı kulüpleri seçmiştir. \n- E ve A, aynı kulübü seçmiştir. \n- C, L kulübünü seçmiştir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
             "dogruCevapIndex": 1,
             "secenekler": [
               "L kulübünü seçen öğrenci sayısı 2'dir.",
@@ -697,7 +697,7 @@
             "sira": 28
           },
           {
-            "soruMetni": "Bir lisede, 5 farklı ders (Fizik, Geometri, Tarih, İngilizce ve Japonca) haftanın 5 farklı günü (Pazartesi, Salı, Çarşamba, Perşembe, Cuma) işlenecektir. Her gün sadece bir ders işlenmektedir. Derslerin günlerine ilişkin bilinenler şunlardır: * Japonca dersi, Tarih dersinden hemen sonraki gün işlenecektir. * Fizik dersi, İngilizce dersinden önceki bir gün işlenecektir (hemen önce olmak zorunda değildir). * Çarşamba günü Geometri dersi işlenecektir. * Tarih dersi, Salı günü işlenmeyecektir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "soruMetni": "Bir lisede, 5 farklı ders (Fizik, Geometri, Tarih, İngilizce ve Japonca) haftanın 5 farklı günü (Pazartesi, Salı, Çarşamba, Perşembe, Cuma) işlenecektir. Her gün sadece bir ders işlenmektedir. Derslerin günlerine ilişkin bilinenler şunlardır: \n- Japonca dersi, Tarih dersinden hemen sonraki gün işlenecektir. \n- Fizik dersi, İngilizce dersinden önce işlenecektir. \n- Çarşamba günü Geometri dersi işlenecektir. \n- Tarih dersi, Salı günü işlenmeyecektir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
             "dogruCevapIndex": 2,
             "secenekler": [
               "İngilizce dersi Salı günü işlenecektir.",
@@ -710,7 +710,7 @@
             "sira": 29
           },
           {
-            "soruMetni": "A, B, C, D, E ve F adlı 6 farklı film, Aksiyon, Komedi ve Dram olmak üzere 3 farklı türde vizyona girmiştir. Bu filmlerin türlerine ilişkin bilinenler şunlardır: * Her film sadece bir türe aittir ve her türde en az bir film vardır. * Aksiyon türünde sadece 2 film bulunmaktadır. * A ve F filmleri aynı türdedir. * E filmi, Dram türündedir. * C ve D filmleri farklı türdedir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "soruMetni": "A, B, C, D, E ve F adlı 6 farklı film, Aksiyon, Komedi ve Dram olmak üzere 3 farklı türde vizyona girmiştir. Bu filmlerin türlerine ilişkin bilinenler şunlardır: \n- Her film sadece bir türe aittir ve her türde en az bir film vardır. \n- Aksiyon türünde sadece 2 film bulunmaktadır. \n- A ve F filmleri aynı türdedir. \n- E filmi, Dram türündedir. \n- C ve D filmleri farklı türdedir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
             "dogruCevapIndex": 3,
             "secenekler": [
               "A filmi Komedi türündedir.",
@@ -721,9 +721,200 @@
             ],
             "kategoriId": "turkce",
             "sira": 30
+          },
+          {
+              "soruMetni": "x, y ve z birer tam sayıdır. x < y < 0 < z olduğuna göre, aşağıdakilerden hangisinin sonucu her zaman bir pozitif tam sayıdır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "x + y + z",
+                "x +y * z",
+                "z - x - y",
+                "$(x^2) * (z - y)$",
+                "(y + x) / z"
+              ],
+              "kategoriId": "matematik",
+              "sira": 31
+          },
+          {
+              "soruMetni": "A, B ve C birer tam sayı olmak üzere, A * B * C = 24 olduğu bilinmektedir. Buna göre, A + B + C toplamının alabileceği en küçük tam sayı değeri kaçtır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "6",
+                "10",
+                "-18",
+                "-24",
+                "-30"
+              ],
+              "kategoriId": "matematik",
+              "sira": 32
+          },
+          {
+              "soruMetni": "A = -0,2\nB = -0,22\nC = -0,222\nYukarıda verilen A, B ve C değerleri için aşağıdaki sıralamalardan hangisi doğrudur?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "A < C < B",
+                "B < A < C",
+                "A < B < C",
+                "C < A < B",
+                "C < B < A"
+              ],
+              "kategoriId": "matematik",
+              "sira": 33
+          },
+          {
+              "soruMetni": "(0,4 * 1,2) / 0,4 - 1/5 işleminin sonucu kaçtır?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "0.5",
+                "1",
+                "5",
+                "10",
+                "15"
+              ],
+              "kategoriId": "matematik",
+              "sira": 34
+          },  
+          {
+                "soruMetni": "-2 <= 3x + 4 < 13\nEşitsizliğini sağlayan x tam sayılarının toplamı kaçtır?",
+                "dogruCevapIndex": 0,
+                "secenekler": [
+                  "0",
+                  "3",
+                  "6",
+                  "10",
+                  "12"
+                ],
+                "kategoriId": "matematik",
+                "sira": 35
+          },
+          {
+                "soruMetni": "a ve b gercek sayilar olmak üzere,\n$-4 < a < 2$\n-1 < b < 3\nolduguna göre, 2a - b ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "6",
+                  "5",
+                  "4",
+                  "3",
+                  "2"
+                ],
+                "kategoriId": "matematik",
+                "sira": 36
+          },
+          {
+                "soruMetni": "$x < 0$ olduğuna göre, $|x - 1| + |x|$ ifadesinin eşiti aşağıdakilerden hangisidir?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "2x - 1",
+                  "-1",
+                  "1 - 2x",
+                  "1",
+                  "2x + 1"
+                ],
+                "kategoriId": "matematik",
+                "sira": 37
+          },
+          {
+                "soruMetni": "$||x - 2| - 3| = 1$ denklemini sağlayan $x$ gerçek sayılarının toplamı kaçtır?",
+                "dogruCevapIndex": 4,
+                "secenekler": [
+                  "-2",
+                  "0",
+                  "4",
+                  "6",
+                  "8"
+                ],
+                "kategoriId": "matematik",
+                "sira": 38
+          },
+          {
+            "soruMetni": "x < 0 olduğuna göre, |x - 1| + |x| ifadesinin eşiti aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "2x - 1",
+              "-1",
+              "1 - 2x",
+              "1",
+              "2x + 1"
+            ],
+            "kategoriId": "matematik",
+            "sira": 39
+          },
+          {
+            "soruMetni": "||x - 2| - 3| = 1 denklemini sağlayan x gerçek sayılarının toplamı kaçtır?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "-2",
+              "0",
+              "4",
+              "6",
+              "8"
+            ],
+            "kategoriId": "matematik",
+            "sira": 40
+          },
+          {
+            "soruMetni": "√128 - √32 + √8\n\nİfadesinin eşiti aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "6√2",
+              "5√2",
+              "4√2",
+              "3√2",
+              "2√2"
+            ],
+            "kategoriId": "matematik",
+            "sira": 41
+          },
+          {
+            "soruMetni": "2ˣ = a, 3ˣ = b olduğuna göre, 72ˣ ifadesinin a ve b cinsinden eşiti aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "a² * b³",
+              "a³ * b²",
+              "a² * b²",
+              "a * b³",
+              "a³ * b"
+            ],
+            "kategoriId": "matematik",
+            "sira": 42,
+            "imageUrl": ""
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "8/15",
+              "3/5",
+              "15/8",
+              "2/5",
+              "5/6"
+            ],
+            "kategoriId": "matematik",
+            "sira": 43,
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_43.png?alt=media&token=11726e90-04f4-46f0-8cdc-088eb09ec369"
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "12",
+              "15",
+              "16",
+              "20",
+              "24"
+            ],
+            "kategoriId": "matematik",
+            "sira": 44,
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_44.png?alt=media&token=16453512-fd18-4d7e-a5d9-0cd2d882a0dc"
           }
+          
+
+
+
+          
             
           
+
         ]
       }
       ],
