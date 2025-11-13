@@ -358,8 +358,7 @@
             "kategoriId": "turkce",
             "sira": 2
           },
-          
-            {
+          {
               "soruMetni": "Bir eserin zamana direnebilmesi, onun güncel kaygıları aşabilmesine bağlıdır. Popüler eserler, anlık heyecanlara hitap eder, bir süre sonra unutulur. Oysa gerçek sanat, insanın değişmez ruhsal coğrafyasını işler, evrensel dertlere seslenir. Bu eserler, her çağda kendilerine yeni bir okur bulur, böylece kalıcı bir etki yaratırlar. Bu kalıcılık, sadece teknik başarıyla değil, aynı zamanda anlatılan konunun derinliğiyle de doğrudan ilişkilidir.\n\nBu parçadaki \"insanın değişmez ruhsal coğrafyasını işler\" sözüyle anlatılmak istenen nedir?",
               "dogruCevapIndex": 1,
               "secenekler": [
@@ -371,8 +370,8 @@
               ],
               "kategoriId": "turkce",
               "sira": 3
-            },
-            {
+          },
+          {
               "soruMetni": "Aşağıdaki cümlelerden hangisinde \"kesinleşmiş bir yargı\" söz konusu değildir?",
               "dogruCevapIndex": 3,
               "secenekler": [
@@ -384,9 +383,8 @@
               ],
               "kategoriId": "turkce",
               "sira": 4
-            },
-            
-              {
+          },     
+          {
                 "soruMetni": "Aşağıdaki cümlelerin hangisinde hem kişi zamiri hem de belgisiz zamir kullanılmıştır?",
                 "dogruCevapIndex": 2,
                 "secenekler": [
@@ -398,8 +396,8 @@
                 ],
                 "kategoriId": "turkce",
                 "sira": 5
-              },
-              {
+          },
+          {
                 "soruMetni": "Aşağıdaki cümlelerin hangisinde edat (ilgeç) bulunmamaktadır?",
                 "dogruCevapIndex": 2,
                 "secenekler": [
@@ -411,8 +409,8 @@
                 ],
                 "kategoriId": "turkce",
                 "sira": 6
-              },
-              {
+          },
+          {
                 "soruMetni": "Aşağıdaki cümlelerin hangisinde \"de\" bağlacının yazımıyla ilgili bir yanlışlık yapılmıştır?",
                 "dogruCevapIndex": 4,
                 "secenekler": [
@@ -424,8 +422,8 @@
                 ],
                 "kategoriId": "turkce",
                 "sira": 7
-              },
-              {
+          },
+          {
                 "soruMetni": "Aşağıdaki cümlelerin hangisinde tarihlerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
                 "dogruCevapIndex": 1,
                 "secenekler": [
@@ -437,7 +435,293 @@
                 ],
                 "kategoriId": "turkce",
                 "sira": 8
-              }
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinin sonuna konması gereken noktalama işareti diğerlerinden farklıdır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Bu zorlu görevi başarıyla tamamlayabilecek misin",
+              "Söylediklerini neden bu kadar ciddiye aldın ki",
+              "Hava kararmadan eve dönmeniz gerektiğini bilmiyor muydunuz",
+              "Keşke o gün o kararı hiç vermeseydik",
+              "Okuduğun o kalın kitap kaçıncı baskı"
+            ],
+            "kategoriId": "turkce",
+            "sira": 9
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde bir öge eksikliğinden kaynaklanan anlatım bozukluğu vardır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Öğrenci, okulu bitirince öğretmenine sarıldı, teşekkür etti.",
+              "Yazar, deneme ve hikâyecilik alanında yetenekli bir sanatçıydı.",
+              "Bu topraklarda yaşayan her birey, ülkesine sahip çıkmalıdır.",
+              "Gençler, çevreye karşı duyarlı olmalı, değer vermelidir.",
+              "Herkes, bu zorlu görevin üstesinden gelebilmek için elinden geleni yaptı."
+            ],
+            "kategoriId": "turkce",
+            "sira": 10
+          },
+          {
+            "soruMetni": "Sanat, hayatın karmaşık akışına tutulan bir ayna gibidir. Ne var ki, bu ayna sadece görüneni yansıtmakla kalmaz; aynı zamanda görünmeyeni, derinlerde saklı olanı da açığa çıkarır. Bir yazarın veya ressamın eseri, bize sadece bir hikâye anlatmaz; aynı zamanda o hikâyenin ardındaki evrensel insanlık durumunu, korkularımızı, umutlarımızı da fısıldar. Eğer sanat, bizi sadece eğlendiren bir araç olsaydı, yüzyıllardır süregelen o derin etkiyi yaratamazdı. Onun gücü, bizi kendi özümüzle yüzleştirmesinden gelir.\n\nBu parçada asıl anlatılmak istenen aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Sanat eserleri, görünenin ötesindeki gerçekliği yansıttığı için kalıcıdır.",
+              "Sanatın temel amacı, insanları eğlendirmek ve günlük sorunlardan uzaklaştırmaktır.",
+              "Bir eserin değeri, onun yansıtma gücüyle doğru orantılıdır.",
+              "Sanat, insanın evrensel sorunlarını somutlaştırarak anlatmalıdır.",
+              "Bir eserin kalıcılığı, yazarının deneyimlerine bağlıdır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 11
+          },
+          {
+            "soruMetni": "Eleştiri, bir sanatsal yaratının eksiklerini ortaya koymaktan öte, o eserin neden değerli olduğunu, hangi kültürel ve tarihsel boşluğu doldurduğunu açıklayan bir köprüdür. Ne yazık ki, günümüzdeki eleştirilerin çoğu, kişisel beğenilerin ya da anlık tepkilerin ötesine geçemiyor. Oysa gerçek eleştiri, eserin gölgede kalmış yanlarını aydınlatan, okuyucu ile eser arasına sağlıklı bir bağ kuran yapıcı bir süreç olmalıdır. Bu, sadece eserin değil, aynı zamanda eleştiri kültürünün de gelişimini sağlar.\n\nBu parçanın yazarının eleştiriden temel beklentisi nedir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Eserin yalnızca olumlu ve güçlü yönlerini öne çıkarması.",
+              "Eserin yaratım sürecini ve sanatçının niyetini tam olarak yansıması.",
+              "Okuyucu kitlesini genişletmek için eseri popülerleştirmesi.",
+              "Eserin değerini, bağlamını ve kültürel işlevini açıklayarak sağlıklı bir köprü kurması.",
+              "Eleştirmenin kişisel beğenilerini cesurca ortaya koyması."
+            ],
+            "kategoriId": "turkce",
+            "sira": 12
+          },
+          {
+            "soruMetni": "Modern insan, hız çağında yaşıyor. Her şey hızlı, anlık ve tüketilebilir olmalı. Bu durum, edebi eserlere bakış açımızı da etkiledi. Artık kalın, çok katmanlı romanlar yerine, hızlıca okunup bitirilebilen, mesajı hemen veren metinler revaçta. Oysa nitelikli edebiyat, yavaşlamayı, derinleşmeyi gerektirir. Okuyucunun bu hıza teslim olması, kendi zihinsel derinliğini kaybetmesi anlamına geliyor.\n\nBu parçadan hareketle, aşağıdakilerden hangisi söylenebilir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Nitelikli edebiyat, modern okuyucunun beklentilerini karşılayamayan eserlerdir.",
+              "Hız kültürü, edebi eserlerin sanatsal değerini düşürmektedir.",
+              "Kalın romanlar, okuyucuyu hızla uzaklaştıran bir yapıya sahiptir.",
+              "Modern okuyucunun zihinsel derinliğini kaybetmesinin tek nedeni çağı yakalayamamasıdır.",
+              "Edebiyatın değeri, okuyucunun eseri sindirmesiyle ölçülür."
+            ],
+            "kategoriId": "turkce",
+            "sira": 13
+          },
+          {
+            "soruMetni": "Bilim insanları, Mars'ta yaşam izlerini araştırmayı sürdürüyor. Bununla birlikte, Dünya dışı yaşam arayışının sadece Mars ile sınırlı kalmaması gerektiği konusunda fikir birliği var. Gezegenimizin Güneş Sistemi dışındaki uyduları ve öte gezegenler de potansiyel yaşam barındırma olasılığı nedeniyle inceleniyor. Son dönemde, özellikle Jüpiter'in uydusu Europa ve Satürn'ün uydusu Enceladus'un buz tabakaları altındaki sıvı okyanusları, araştırmacıların odak noktası haline geldi.\n\nBu parçanın anlatımında aşağıdakilerden hangisi ağır basmaktadır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Öyküleme",
+              "Betimleme",
+              "Tartışma",
+              "Açıklama",
+              "Kanıtlama"
+            ],
+            "kategoriId": "turkce",
+            "sira": 14
+          },
+          {
+            "soruMetni": "Okumak, sadece gözlerin satırlar üzerinde gezinmesi değildir. Okumak, aynı zamanda zihnin metinle aktif bir etkileşime girmesi, yazarın kurduğu dünyayı kendi hayal gücüyle yeniden inşa etmesidir. Tıpkı bir arkeolog gibi, okuyucu da metnin derinliklerine iner, anlam katmanlarını kazır ve yazarın gizlediği ipuçlarını ortaya çıkarır. Bu aktif süreç olmadan, metin sadece kuru bir bilgi yığını olarak kalır.\n\nBu parçada okumanın tanımını derinleştirmek için hangi düşünceyi geliştirme yoluna başvurulmuştur?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "Örnekleme",
+              "Tanık gösterme",
+              "Karşılaştırma",
+              "Tanımlama",
+              "Benzetme"
+            ],
+            "kategoriId": "turkce",
+            "sira": 15
+          },
+          {
+            "soruMetni": "Yalnızlık, modern çağın en yaygın hastalıklarından biri olarak görülür. Ancak bu yalnızlığı sadece fiziksel bir ayrılık olarak görmek yanlıştır. Asıl yalnızlık, insanın kendi iç sesiyle kurduğu bağın kopmasıdır. Kalabalıklar içinde dahi, kendi ruhunun derinliklerine inemeyen kişi, aslında en büyük yalnızlığı yaşamaktadır. Bu durum, insanın kendini tanımasını ve kabul etmesini engelleyen bir perdedir. Yalnızlığı yenmenin yolu, dış dünyadan kaçmak değil, iç dünyanın kapısını aralamaktan geçer.\n\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Yalnızlığın, çağımızın genel bir sorunu olduğuna.",
+              "Fiziksel kalabalığın yalnızlık duygusunu engelleyemediğine.",
+              "Gerçek yalnızlığın, içsel bir kopuş olduğuna.",
+              "İnsanın kendini kabul etmesinin yalnızlığı ortadan kaldırdığına.",
+              "Yalnızlığı yenmek için içsel dünyaya yönelmek gerektiğine."
+            ],
+            "kategoriId": "turkce",
+            "sira": 16
+          },
+          {
+            "soruMetni": "Yabancı dil öğrenimi, sadece iletişim kurma becerisi kazandırmaz. Yeni bir dil öğrenmek, aynı zamanda yeni bir düşünce biçimine, farklı bir kültürel bakış açısına da kapı aralar. Her dil, dünyanın farklı bir yorumudur. Bu nedenle, birden fazla dil bilen bir kişi, tek bir dilde düşünen bir kişiye göre dünyayı daha geniş, daha zengin bir perspektifle algılar. Zihnimizdeki sınırların kalkması, yeni bir dilin öğrenilmesiyle başlar.\n\nBu parçanın sonuna düşüncenin akışına uygun olarak aşağıdakilerden hangisi getirilmelidir?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "Bu durum, o kişinin anadilindeki yeterliliğini de artıracaktır.",
+              "Dolayısıyla, dil öğrenimi sadece kelime ezberlemekten ibaret olamaz.",
+              "Çünkü farklı dillerin gramer yapıları, zihinsel gelişimi doğrudan etkiler.",
+              "Böylece o kişi, kendini farklı kültürel kimliklerle tanımlayabilir.",
+              "Öyleyse, yabancı dil öğrenmek, yeni bir pencereden dünyaya bakmaktır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 17
+          },
+          {
+            "soruMetni": "Eleştirel düşünme, bilgiyi pasif bir şekilde kabul etmek yerine, onu sorgulama, değerlendirme ve analiz etme sürecidir. Bu düşünce tarzı, sadece akademik başarı için değil, aynı zamanda günlük hayatımızda bilinçli kararlar alabilmemiz için de hayati öneme sahiptir. Eleştirel düşünebilen bir birey, manipülasyonlara ve yanlış bilgilere karşı daha dirençli olur. Dolayısıyla, eğitim sistemlerinin temel hedeflerinden biri, öğrencilere bu beceriyi kazandırmak olmalıdır.\n\nBu parçanın son cümlesi, metnin hangi özelliğini yansıtmaktadır?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Öneri içermesi",
+              "Kanıt sunması",
+              "Nesnel bir yargı bildirmesi",
+              "Varsayım ifade etmesi",
+              "Tartışmaya açık olması"
+            ],
+            "kategoriId": "turkce",
+            "sira": 18
+          },
+          {
+            "soruMetni": "(I) Filmler, izleyicinin düşünce dünyasında bir kapı açar; bu kapıdan girenler ise genellikle kendi geçmişleriyle yüzleşir. (II) Bazı filmler vardır ki, izleyiciyi tamamen yabancı bir evrene taşır. (III) Bu yabancı evren, izleyicinin kendini güvende hissetmesini sağlar. (IV) Film ne kadar fantastik olursa olsun, izleyici o yabancı dünyanın kurallarını kabul etmeye hazırdır. (V) Zira izleyicinin aradığı, günlük hayatın kurallarından geçici bir süreliğine uzaklaşmaktır.\n\nBu parça iki paragrafa ayrılmak istense, ikinci paragraf numaralanmış hangi cümleyle başlar?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "I.",
+              "II.",
+              "III.",
+              "IV.",
+              "V."
+            ],
+            "kategoriId": "turkce",
+            "sira": 19
+          },
+          {
+            "soruMetni": "Felsefe, zihnin konfor alanından çıkma cesaretidir. Çoğu insan, alışılagelmiş düşünce kalıpları içinde yaşamayı tercih eder; çünkü bu güvenlidir. Oysa felsefe, bu kalıpları kırar, en temel varsayımlarımızı dahi sorgulamaya iter. Bu sorgulama süreci başta rahatsızlık verici olabilir, ancak sonunda bireyi daha derin ve anlamlı bir yaşama ulaştırır. Felsefe, kolay bir yol değil, aydınlık bir yoldur.\n\nBu parçanın ana düşüncesi aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Felsefe, güvenli düşünce kalıplarını terk etmeyi gerektiren zorlu bir disiplindir.",
+              "İnsanlar, felsefi sorgulamadan kaçındığı için konfor alanında kalır.",
+              "Felsefe, alışılagelmiş düşünceleri reddederek yaşamı kolaylaştırır.",
+              "Bireylerin felsefeyle ilgilenmesi, akademik başarıyı artırır.",
+              "Felsefi düşünme, her bireyin ulaşabileceği kolay bir beceridir."
+            ],
+            "kategoriId": "turkce",
+            "sira": 20
+          },
+          {
+            "soruMetni": "Sanatçı, eserini meydana getirirken sadece kişisel deneyimlerinden beslenmez. Aynı zamanda içinde yaşadığı toplumun ortak acılarını, sevinçlerini, hayallerini de süzgeçten geçirir. Bu nedenle, büyük sanat eserleri, kişisel olmaktan çıkıp evrensel bir nitelik kazanır. Eser, bir yandan sanatçının imzasını taşırken, diğer yandan da ait olduğu kültürü ve çağı yansıtan bir ayna işlevi görür.\n\nBu parçadan hareketle aşağıdakilerden hangisine ulaşılamaz?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Sanatçının bireysel tecrübeleri eserinin kaynaklarından biridir.",
+              "Büyük sanat, evrensel niteliği sayesinde kişisellikten uzaklaşır.",
+              "Eserler, meydana geldikleri dönemin ve kültürün izlerini taşır.",
+              "Eserin değeri, sanatçının yaşadığı toplumun sorunlarına çözüm bulmasıyla ölçülür.",
+              "Sanatçılar, toplumun duygusal ve hayali birikimlerini eserlerine aktarır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 21
+          },
+          {
+            "soruMetni": "Düşünme eylemi, genellikle sessiz ve bireysel bir süreç olarak algılanır. Oysa gerçek anlamda derin düşünce, tartışma ortamında, karşıt fikirlerle çarpışarak ortaya çıkar. Bir fikri savunmak, o fikrin sınırlarını görmemizi sağlar. Fikrimizi eleştiriye açtığımızda, onu yıkmak isteyen değil, sağlamlaştırmak isteyen dostlar kazanırız. Fikirler, dar bir alanda değil, açık bir meydanda filizlenir ve güçlenir.\n\nBu parçaya göre, bir fikrin gelişimi için temel koşul nedir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Fikrin sahibi tarafından sessiz ve bireysel olarak olgunlaştırılması.",
+              "Fikrin, karşıt görüşlerle etkileşim ve tartışma içine girmesi.",
+              "Fikri savunan kişinin, eleştirilere karşı dirençli olması.",
+              "Fikrin kabul görmesi için mantıksal bir temele dayandırılması.",
+              "Fikrin, dar çevreler tarafından değil, geniş kitlelerce benimsenmesi."
+            ],
+            "kategoriId": "turkce",
+            "sira": 22
+          },
+          {
+            "soruMetni": "Sanat eseri, zamanın ve mekânın sınırlarını aşarak insanlığa seslenir. (I) Eğer bir eser, sadece yaratıldığı dönemin izlerini taşırsa, o dönemin sonunda unutulur. (II) Ancak eser, insana dair temel duyguları ve evrensel temaları işlediğinde, çağlar boyunca varlığını sürdürür. (III) Homeros'un İlyada'sı, yüzlerce yıl geçmesine rağmen hâlâ okunuyorsa, bunun nedeni budur. (IV) Öyleyse, kalıcılığın anahtarı, güncel olaylara odaklanmak değil, insan doğasına odaklanmaktır. (V) Sanatçının bu noktada seçtiği konu, onun dünya görüşünü de yansıtır.\n\nBu parçadaki numaralanmış cümlelerden hangisi, kendinden önceki yargıyı örnekleme yoluyla desteklemektedir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "I.",
+              "II.",
+              "III.",
+              "IV.",
+              "V."
+            ],
+            "kategoriId": "turkce",
+            "sira": 23
+          },
+          {
+            "soruMetni": "Birçok insan, okuduğu metni anlamakta zorlandığını söyler. Oysa metin, anlamını sadece sözcüklerde saklamaz. Okuyucu, metindeki sözcüklerin yanı sıra, yazarın ses tonunu, alaycı mı yoksa ciddi mi olduğunu, kullandığı göndermeleri ve kültürel bağlamı da yakalamalıdır. Metin, buzdağı gibidir; görünen kısmı sözcükler, görünmeyen kısmı ise yazarın niyetidir. İyi bir okuyucu, buzdağının tamamını görendir.\n\nBu parçaya göre iyi bir okuyucunun temel özelliği nedir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Metni hızlı ve kesintisiz okumak.",
+              "Sadece metindeki sözcüklerin anlamlarını bilmek.",
+              "Metnin içerdiği tüm kültürel göndermeleri öğrenmek.",
+              "Metnin hem sözcüklerini hem de yazarın niyetini anlamak.",
+              "Okuduğu metinle ilgili kişisel yorumlar yapabilmek."
+            ],
+            "kategoriId": "turkce",
+            "sira": 24
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde, hem ünlü düşmesi hem de ünsüz yumuşaması ses olayları bir arada gerçekleşmiştir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Yazarın bu özgün fikri, okuyucunun bakış açısını değiştirmeyi başarıyordu.",
+              "Şehrin çevresindeki dağlar, gün doğumuyla birlikte kızıl bir renge bürünüyor.",
+              "Onun bu ufacık başarısı, bize büyük bir umut kaynağı oldu.",
+              "Kardeşi, tatile gittiği o köydeki tüm ayrıntıları bize tek tek anlattı.",
+              "Bu yorgunluktan sonra herkesin gönlü, huzurlu bir dinlenmeyi istiyordu."
+            ],
+            "kategoriId": "turkce",
+            "sira": 25
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde işaret sıfatı kullanılmıştır?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Bu defter, masanın üzerinde kalmış.",
+              "Senin araban benden daha hızlıydı.",
+              "Oraya gitmek için acele etmeliyiz.",
+              "Bunların hepsi dün yaşandı.",
+              "Ahmet, onu uzun zamandır görmemişti."
+            ],
+            "kategoriId": "turkce",
+            "sira": 26
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde “yüklem”, cümlenin en başında yer almıştır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Dün, bahçedeki tüm çiçekleri suladık.",
+              "Bize gelen misafirler yolda kalmış.",
+              "Görevli, evrakları kontrol etti.",
+              "Geç kalmış, yine yetişememiş randevuya.",
+              "Babam, arabayı dikkatlice park etti."
+            ],
+            "kategoriId": "turkce",
+            "sira": 27
+          },
+          {
+            "soruMetni": "A, B, C, D ve E adlı 5 öğrenci, K, L ve M isimli 3 farklı kulüpten sadece birini seçmiştir. Bu öğrencilerin kulüp seçimleriyle ilgili bilinenler şunlardır: * Her kulübe en az bir öğrenci seçilmiştir. * K kulübünü seçen öğrenci sayısı 1'dir. * B ve D, farklı kulüpleri seçmiştir. * E ve A, aynı kulübü seçmiştir. * C, L kulübünü seçmiştir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "L kulübünü seçen öğrenci sayısı 2'dir.",
+              "M kulübünü seçen öğrenci sayısı 3'tür.",
+              "E, M kulübünü seçmiştir.",
+              "D, K kulübünü seçmiştir.",
+              "A, L kulübünü seçmiştir."
+            ],
+            "kategoriId": "turkce",
+            "sira": 28
+          },
+          {
+            "soruMetni": "Bir lisede, 5 farklı ders (Fizik, Geometri, Tarih, İngilizce ve Japonca) haftanın 5 farklı günü (Pazartesi, Salı, Çarşamba, Perşembe, Cuma) işlenecektir. Her gün sadece bir ders işlenmektedir. Derslerin günlerine ilişkin bilinenler şunlardır: * Japonca dersi, Tarih dersinden hemen sonraki gün işlenecektir. * Fizik dersi, İngilizce dersinden önceki bir gün işlenecektir (hemen önce olmak zorunda değildir). * Çarşamba günü Geometri dersi işlenecektir. * Tarih dersi, Salı günü işlenmeyecektir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "İngilizce dersi Salı günü işlenecektir.",
+              "Fizik dersi, Pazartesi günü işlenecektir.",
+              "Tarih dersi, Perşembe günü işlenecektir.",
+              "Japonca dersi, Cuma günü işlenecektir.",
+              "Geometri dersi, haftanın üçüncü günü işlenecektir."
+            ],
+            "kategoriId": "turkce",
+            "sira": 29
+          },
+          {
+            "soruMetni": "A, B, C, D, E ve F adlı 6 farklı film, Aksiyon, Komedi ve Dram olmak üzere 3 farklı türde vizyona girmiştir. Bu filmlerin türlerine ilişkin bilinenler şunlardır: * Her film sadece bir türe aittir ve her türde en az bir film vardır. * Aksiyon türünde sadece 2 film bulunmaktadır. * A ve F filmleri aynı türdedir. * E filmi, Dram türündedir. * C ve D filmleri farklı türdedir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "A filmi Komedi türündedir.",
+              "Dram türünde en az 2 film vardır.",
+              "C filmi Aksiyon türündedir.",
+              "B filmi Dram türündedir.",
+              "Komedi türünde 2 film vardır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 30
+          }
             
           
         ]
