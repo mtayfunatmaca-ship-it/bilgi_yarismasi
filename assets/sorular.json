@@ -1037,11 +1037,11 @@
             ],
             "kategoriId": "matematik",
             "sira": 54,
-            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_54.png?alt=media&token=139f8e89-ffaa-4085-8378-ede337a4a6f7"
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_54.png?alt=media&token=5d395ab7-26a3-449d-b7f5-e36bbf073181"
           },
           {
             "soruMetni": "",
-            "dogruCevapIndex": 0,
+            "dogruCevapIndex": 1,
             "secenekler": [
               "-1",
               "0",
@@ -1078,13 +1078,407 @@
             ],
             "kategoriId": "matematik",
             "sira": 57
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "3",
+              "7",
+              "10",
+              "21",
+              "35"
+            ],
+            "kategoriId": "matematik",
+            "sira": 58,
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_43.png?alt=media&token=11726e90-04f4-46f0-8cdc-088eb09ec369"
+          },
+          {
+            "soruMetni": "n+100 ve n+168 tam kare olduğuna göre n sayısının alabileceği en küçük pozitik tam sayı değeri kaçtır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "100",
+              "120",
+              "150",
+              "200",
+              "250"
+            ],
+            "kategoriId": "matematik",
+            "sira": 59      
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "18",
+              "24",
+              "36",
+              "48",
+              "72"
+            ],
+            "kategoriId": "matematik",
+            "sira": 60,
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_60.png?alt=media&token=7c525185-a7fe-4957-945a-36408a752d89"
+
+          },
+          {
+            "soruMetni": "İslamiyet öncesi Türk devletlerinde görülen \"ikili teşkilat\" sisteminin temel amacı aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "Federatif bir yapı kurarak iç tehditlere karşı daha güçlü olmak.",
+              "Merkezi otoriteyi güçlendirerek taht kavgalarını engellemek.",
+              "Ülke yönetimini kolaylaştırmak ve boylar arası dengeyi sağlamak.",
+              "Orduyu daha hızlı mobilize edebilmek için askeri bölgeler oluşturmak.",
+              "Ticaret yolları üzerindeki kontrolü artırmak."
+            ],
+            "kategoriId": "tarih",
+            "sira": 61
+          },
+          {
+            "soruMetni": "İslamiyet öncesi Türk devletlerinde, devlet işlerinin görüşülüp karara bağlandığı ve hakanın başkanlık ettiği meclis aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Toy",
+              "Tüz",
+              "Şad",
+              "Ayukı",
+              "Töre"
+            ],
+            "kategoriId": "tarih",
+            "sira": 62
+          },
+          {
+            "soruMetni": "İslamiyet'i kabul eden Türk devletlerinde görülen, devletin hanedan üyelerinin ortak malı sayılması geleneğinin sürdürülmesinin en önemli sonucu aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Kültür ve sanat alanında farklı ekollerin gelişmesi.",
+              "Merkezi otoritenin zayıflaması ve taht kavgalarının artması.",
+              "Devletin kısa sürede imparatorluk haline gelmesi.",
+              "İkili yönetim sisteminin tamamen terk edilmesi.",
+              "Veraset sisteminin tamamen İslami kurallara göre belirlenmesi."
+            ],
+            "kategoriId": "tarih",
+            "sira": 63
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nin Duraklama Dönemi'ne (17. yüzyıl) girmesine neden olan iç etkenlerden biri aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Coğrafi Keşifler sonucu ticaret yollarının değişmesi.",
+                "Avrupa'daki merkezi krallıkların güçlenmesi.",
+                "Tımar sisteminin bozulması ve ordunun disiplinsizleşmesi.",
+                "Kapitülasyonların yaygınlaşması.",
+                "Ateşli silahlarda Avrupa'nın gerisinde kalınması."
+              ],
+              "kategoriId": "tarih",
+              "sira": 64
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nin Batı'nın üstünlüğünü kabul ederek ilk kez büyük çapta toprak kaybettiği ve Gerileme Dönemi'ne (18. yüzyıl) girmesine neden olan antlaşma aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "Zitvatorok Antlaşması (1606)",
+                "Prut Antlaşması (1711)",
+                "Pasarofça Antlaşması (1718)",
+                "Belgrad Antlaşması (1739)",
+                "Karlofça Antlaşması (1699)"
+              ],
+              "kategoriId": "tarih",
+              "sira": 65
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nde ilk anayasal düzen ve parlamenter sisteme geçişin yaşandığı dönem aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Tanzimat Dönemi",
+                "Islahat Dönemi",
+                "Lale Devri",
+                "Birinci Meşrutiyet Dönemi",
+                "İkinci Meşrutiyet Dönemi"
+              ],
+              "kategoriId": "tarih",
+              "sira": 66
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nde uygulanan Tımar Sistemi'nin sağladığı faydalar arasında aşağıdakilerden hangisi gösterilemez?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Hazineden para çıkmadan güçlü bir ordu beslenmesi.",
+                "Üretimde sürekliliğin sağlanması ve denetlenmesi.",
+                "Taşrada merkezi otoritenin temsil edilmesi.",
+                "Toprak mülkiyetinin tamamen köylüye ait olması.",
+                "Bölgenin güvenliğinin sağlanması."
+              ],
+              "kategoriId": "tarih",
+              "sira": 67
+          },
+          {
+              "soruMetni": "Osmanlı Devleti’nde aşağıdakilerden hangisi hiyerarşik sıralamada diğerlerinden yüksektir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Nişancı",
+                "Kazasker",
+                "Sadrazam",
+                "Defterdar",
+                "Reisûlküttap"
+              ],
+              "kategoriId": "tarih",
+              "sira": 68
+          },
+          {
+              "soruMetni": "Kitab-ı Bahriye adlı eseri ve yaptığı haritalarla ünlü denizci aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Kılıç Ali Reis",
+                "Piri Reis",
+                "Murat Reis",
+                "Barbaros Hayrettin",
+                "Seyd Ali Reis"
+              ],
+              "kategoriId": "tarih",
+              "sira": 69
+          },
+          {
+              "soruMetni": "I. Memluk, \nII. Osmanlı, \nIII. Selçuklu\n\nYukarıdaki Devletlerin hangilerinde saltanat makamı içinde halifelik anlayışı uygulanmıştır?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Yalnız I",
+                "Yalnız II",
+                "I ve II",
+                "I ve III",
+                "I, II ve III"
+              ],
+              "kategoriId": "tarih",
+              "sira": 70
+          },
+          {
+              "soruMetni": "Osmanlı Devleti’nde resmi tarih yazarlarına verilen ad aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Nişancı",
+                "Defterdar",
+                "Vakanüvis",
+                "Reisülküttap",
+                "Mültezim"
+              ],
+              "kategoriId": "tarih",
+              "sira": 71
+          },
+          {
+              "soruMetni": "Aşağıdaki gelişmelerden hangisi, 20. yüzyıl başlarında Osmanlı Devleti'nin Kuzey Afrika'daki son toprak parçasını kaybetmesine neden olmuştur?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "I. Balkan Savaşı",
+                "II. Meşrutiyet'in ilanı",
+                "Trablusgarp Savaşı",
+                "31 Mart İsyanı",
+                "II. Balkan Savaşı"
+              ],
+              "kategoriId": "tarih",
+              "sira": 72
+          },
+          {
+              "soruMetni": "Osmanlı'nın dağılmasını engellemeyi amaçlayan, dil, din ve ırk farkı gözetmeksizin tüm vatandaşları kapsayan ve II. Meşrutiyet döneminde önemini yitiren fikir akımı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "İslamcılık",
+                "Türkçülük",
+                "Osmanlıcılık",
+                "Batıcılık",
+                "Adem-i Merkeziyetçilik"
+              ],
+              "kategoriId": "tarih",
+              "sira": 73
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nin Trablusgarp Savaşı'nda İtalya'ya karşı karadan yardım gönderememesinin temel nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Osmanlı donanmasının İtalya tarafından batırılması.",
+                "Mısır'ın İngiltere işgali altında olması.",
+                "Kuzey Afrika'daki deniz üslerinin yetersiz kalması.",
+                "Bölge halkının Osmanlı'ya karşı isyan etmesi.",
+                "Trablusgarp'ın İtalya'ya çok yakın olması."
+              ],
+              "kategoriId": "tarih",
+              "sira": 74
+          },
+          {
+              "soruMetni": "II. Balkan Savaşı'nın temel nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Rusya'nın sıcak denizlere inme politikası.",
+                "Osmanlı'nın kaybettiği toprakları geri almak istemesi.",
+                "Balkan devletlerinin I. Balkan Savaşı ganimetlerini paylaşamaması.",
+                "Sırbistan ve Bulgaristan arasındaki sınır anlaşmazlığı.",
+                "Avusturya-Macaristan'ın bölgedeki etkisi."
+              ],
+              "kategoriId": "tarih",
+              "sira": 75
+          },
+          {
+              "soruMetni": "Kurtuluş Savaşı'nın hazırlık döneminde, aşağıdaki gelişmelerden hangisi ile \"milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır\" ilkesi ilk kez benimsenmiştir?",
+              "dogruCevapIndex": 0,
+              "secenekler": [
+                "Amasya Genelgesi",
+                "Erzurum Kongresi",
+                "Sivas Kongresi",
+                "Misak-ı Millî kararları",
+                "Havza Genelgesi"
+              ],
+              "kategoriId": "tarih",
+              "sira": 76
+          },
+          {
+              "soruMetni": "Aşağıdaki Milli Mücadele dönemine ait kararlardan hangisi, yeni ve bağımsız bir Türk devleti kurulması yolunda atılan ilk önemli adım olarak kabul edilir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Temsil Heyeti'nin kurulması.",
+                "Kuva-yı Milliye'nin kurulması.",
+                "Manda ve himayenin kesin olarak reddedilmesi.",
+                "Misak-ı Millî'nin ilan edilmesi.",
+                "Temsil Heyeti'nin tüm yurdu temsil eder hale gelmesi."
+              ],
+              "kategoriId": "tarih",
+              "sira": 77
+          },
+          {
+              "soruMetni": "Kurtuluş Savaşı'nın Batı Cephesi'ndeki muharebelerden sonra imzalanan, aşağıdaki uluslararası antlaşmalardan hangisi ile İtilaf Devletleri arasındaki birlik bozulmuş ve Fransa, TBMM Hükûmetini resmen tanımıştır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Lozan Barış Antlaşması",
+                "Gümrü Antlaşması",
+                "Moskova Antlaşması",
+                "Ankara Antlaşması",
+                "Mudanya Ateşkes Antlaşması"
+              ],
+              "kategoriId": "tarih",
+              "sira": 78
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nde, saltanatın kaldırılması ile aşağıdaki gelişmelerden hangisi doğrudan gerçekleşmiştir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Ankara'nın başkent ilan edilmesi.",
+                "Laikliğe geçişin ilk ve en önemli adımı atılmıştır.",
+                "Devletin yönetim biçiminin Cumhuriyet olarak belirlenmesi.",
+                "Yeni Türk Devleti'nin, İstanbul Hükümeti ile olan hukuki bağı sona ermiştir.",
+                "Halifelik kurumunun işlevsiz kalması."
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 79
+          },
+          {
+              "soruMetni": "Tevhid-i Tedrisat Kanunu'nun kabul edilmesiyle ulaşılan temel hedefler arasında aşağıdakilerden hangisi yer alır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Medreseleri kapatarak din eğitimini tamamen yasaklamak.",
+                "Yabancı okulları tamamen kapatarak Batı etkisini ortadan kaldırmak.",
+                "Eğitimde bilimsel esasları hakim kılmak ve öğretimde birliği sağlamak.",
+                "Zorunlu eğitimi 4 yıldan 8 yıla çıkarmak.",
+                "Karma eğitime geçişi zorunlu kılmak."
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 80
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nin, ekonomik bağımsızlığını sağlamak ve millî ekonomiyi oluşturmak amacıyla yaptığı ilk önemli icraat ve kararlar nerede alınmıştır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Lozan Konferansı",
+                "I. Beş Yıllık Sanayi Planı",
+                "I. İzmir İktisat Kongresi",
+                "Teşvik-i Sanayi Kanunu",
+                "Ziraat Bankası'nın kurulması"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 81
+          },
+          {
+              "soruMetni": "Atatürk Dönemi'nde görülen, devletin ekonomik hayata bizzat yatırımcı olarak katıldığı ve özel teşebbüsün yetersiz kaldığı alanlarda sanayileşmeyi ön plana çıkardığı ekonomik model aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Liberalizm",
+                "Kapitalizm",
+                "Devletçilik",
+                "Sosyalizm",
+                "Karma Ekonomi"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 82
+          },
+          {
+              "soruMetni": "Mustafa Kemal Atatürk'ün direktifleriyle kurulan Serbest Cumhuriyet Fırkası'nın temel amacı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Merkezi yönetimi güçlendirmek",
+                "Muhalif görüşleri dile getirecek bir denetim mekanizması oluşturmak.",
+                "Laiklik ilkesinin uygulanmasına karşı çıkmak.",
+                "Ekonomik politikaları özel teşebbüs yerine devletçilik yönünde değiştirmek.",
+                "Milletler Cemiyeti'ne üyelik sürecini hızlandırmak."
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 83
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nin, Lozan Barış Antlaşması'ndan sonra çözüme kavuşturduğu ilk uluslararası sorun aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Boğazlar Sorunu",
+                "Hatay Sorunu",
+                "Dış Borçlar Sorunu",
+                "Musul Sorunu",
+                "Nüfus Mübadelesi Sorunu"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 84
+          },
+          {
+              "soruMetni": "Türkiye'nin, Milletler Cemiyeti'ndeki etkinliğini artırmak ve bölge barışına katkıda bulunmak amacıyla, Balkan Devletleri ile imzaladığı antlaşma aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Sadabat Paktı",
+                "Briand-Kellogg Paktı",
+                "Montrö Boğazlar Sözleşmesi",
+                "Balkan Antantı",
+                "Atlantik Paktı"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 85
+          },
+          {
+              "soruMetni": "II. Dünya Savaşı sonrasında, Amerika Birleşik Devletleri'nin ekonomik yönden zor durumda olan Avrupa ülkelerine siyasi rejimlerini korumaları karşılığında yaptığı ekonomik yardım planı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Truman Doktrini",
+                "COMECON",
+                "Molotof Planı",
+                "Marshall Planı",
+                "Schuman Planı"
+              ],
+              "kategoriId": "tarih",
+              "sira": 86
+          },
+          {
+              "soruMetni": "Türkiye'nin, Soğuk Savaş döneminde Batı İttifakı'na dâhil olma ve sınırlarını güvenlik altına alma çabalarının bir sonucu olarak katıldığı uluslararası askeri örgüt aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "SEATO",
+                "Varşova Paktı",
+                "Bağdat Paktı",
+                "Avrupa Konseyi",
+                "NATO"
+              ],
+              "kategoriId": "tarih",
+              "sira": 87
           }
           
-
-
-
           
-            
+          
+          
+          
+          
+                     
           
 
         ]

@@ -24271,124 +24271,774 @@
      "trialExams": [
       {
         "id": "turkiye_geneli_1",
-        "title": "Türkiye Geneli-1 (Sadece Tarih)",
+        "title": "KPSS Türkiye Geneli-1",
         "isPro": false,
-        "description": "Tarih konularından 3 soruluk mini deneme.",
+        "description": "KPSS Türkiye Geneli Deneme Sınavı",
         "isPublished": true,
-        "startTime": "2025-10-21T12:00:00+03:00",
-        "endTime": "2025-12-27T12:00:00+03:00",
-        "durationMinutes": 5,
-        "questionCount": 3,
+        "startTime": "2025-11-11T12:00:00+03:00",
+        "endTime": "2025-12-20T12:00:00+03:00",
+        "durationMinutes": 120,
+        "questionCount": 120,
         "isMixedCategory": false,
         "sorular": [
           {
-            "soruMetni": "(TARİH) İstanbul hangi padişah döneminde fethedilmiştir?", 
-            "dogruCevapIndex": 0, 
-            "secenekler": ["Fatih Sultan Mehmet", "Yavuz Sultan Selim", "Kanuni Sultan Süleyman", "II. Murat"],
-            "kategoriId": "tarih",
+            "soruMetni": "\"Edebiyatın işlevi, bize yeni bir şeyler söylemekten çok, bildiğimiz şeyleri daha derinden idrak etmemizi sağlamaktır. Okur, bir metni okurken kendisinden uzaklaşmaz, aksine kendi hakikatine döner. Şiir, hayatın yüzeyindeki sıradanlığı kırar, insanın özündeki yüce ve dokunulmaz olana kapı aralar. Bu aralayış, zihinsel bir çaba değil, duygusal bir uyanıştır.\"\n\nBu parçada geçen \"hayatın yüzeyindeki sıradanlığı kırmak\" sözüyle anlatılmak istenen aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Yaşamın zorluklarını açıkça dile getirmek.",
+              "Gündelik olaylara felsefi bir derinlik katmak.",
+              "Yaşamdaki basit olayları sanatsal yönden incelemek.",
+              "Bayağı ve tekdüze olanı aşıp derin manalara ulaşmak.",
+              "İnsanların hayatı anlamlandırma çabalarına eleştiri getirmek."
+            ],
+            "kategoriId": "turkce",
             "sira": 1
           },
           {
-            "soruMetni": "(TARİH) Ankara Savaşı hangi tarihte yapılmıştır?", 
-            "dogruCevapIndex": 0, 
-            "secenekler": ["1402", "1453", "1389", "1326"],
-            "kategoriId": "tarih",
+            "soruMetni": "Bir eserin zamana direnebilmesi, onun güncel kaygıları aşabilmesine bağlıdır. Popüler eserler, anlık heyecanlara hitap eder, bir süre sonra unutulur. Oysa gerçek sanat, insanın değişmez ruhsal coğrafyasını işler, evrensel dertlere seslenir. Bu eserler, her çağda kendilerine yeni bir okur bulur, böylece kalıcı bir etki yaratırlar. Bu kalıcılık, sadece teknik başarıyla değil, aynı zamanda anlatılan konunun derinliğiyle de doğrudan ilişkilidir.\n\nBu parçadaki \"insanın değişmez ruhsal coğrafyasını işler\" sözüyle anlatılmak istenen nedir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Toplumsal sorunları tarihsel bir bakış açısıyla ele almak.",
+              "İnsan doğasındaki temel ve evrensel duyguları konu edinmek.",
+              "Eserin geçtiği mekanın ruh halleri üzerindeki etkisini vurgulamak.",
+              "İnsanın zaman içinde değişmeyen fiziksel özelliklerini betimlemek.",
+              "Okuyucuyu, yabancı olduğu psikolojik durumlara alıştırmak."
+            ],
+            "kategoriId": "turkce",
             "sira": 2
           },
           {
-            "soruMetni": "(TARİH) Mustafa Kemal'e 'Gazi' unvanı hangi savaştan sonra verilmiştir?", 
-            "dogruCevapIndex": 0, 
-            "secenekler": ["Sakarya Meydan Muharebesi", "Büyük Taarruz", "II. İnönü Savaşı", "Çanakkale Savaşı"],
-            "kategoriId": "tarih",
-            "sira": 3
-          }
-        ]
-      },
-      {
-        "id": "turkiye_geneli_karma_1",
-        "title": "Türkiye Geneli - Karma Deneme 1",
-        "description": "Tüm kategorilerden 2'şer soru içeren 10 soruluk deneme.",
-        "isPro": false,
-        "isPublished": true,
-        "startTime": "2025-11-25T10:00:00+03:00",
-        "endTime": "2025-12-30T23:59:00+03:00",
-        "durationMinutes": 15,
-        "questionCount": 10,
-        "isMixedCategory": true,
-        "sorular": [
-          {
-            "soruMetni": "(MATEMATİK) 20 sayısının %20'si kaçtır?",
-            "dogruCevapIndex": 1,
-            "secenekler": ["2", "4", "5", "10"],
-            "kategoriId": "matematik",
-            "sira": 1
+              "soruMetni": "Bir eserin zamana direnebilmesi, onun güncel kaygıları aşabilmesine bağlıdır. Popüler eserler, anlık heyecanlara hitap eder, bir süre sonra unutulur. Oysa gerçek sanat, insanın değişmez ruhsal coğrafyasını işler, evrensel dertlere seslenir. Bu eserler, her çağda kendilerine yeni bir okur bulur, böylece kalıcı bir etki yaratırlar. Bu kalıcılık, sadece teknik başarıyla değil, aynı zamanda anlatılan konunun derinliğiyle de doğrudan ilişkilidir.\n\nBu parçadaki \"insanın değişmez ruhsal coğrafyasını işler\" sözüyle anlatılmak istenen nedir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Toplumsal sorunları tarihsel bir bakış açısıyla ele almak.",
+                "İnsan doğasındaki temel ve evrensel duyguları konu edinmek.",
+                "Eserin geçtiği mekanın ruh halleri üzerindeki etkisini vurgulamak.",
+                "İnsanın zaman içinde değişmeyen fiziksel özelliklerini betimlemek.",
+                "Okuyucuyu, yabancı olduğu psikolojik durumlara alıştırmak."
+              ],
+              "kategoriId": "turkce",
+              "sira": 3
           },
           {
-            "soruMetni": "(MATEMATİK) Bir üçgenin iç açıları toplamı kaçtır?",
-            "dogruCevapIndex": 2,
-            "secenekler": ["90", "360", "180", "120"],
-            "kategoriId": "matematik",
-            "sira": 2
+              "soruMetni": "Aşağıdaki cümlelerden hangisinde \"kesinleşmiş bir yargı\" söz konusu değildir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Küresel ısınmanın deniz seviyelerini tehlikeli bir düzeye yükselttiği bilimsel verilerle kanıtlanmıştır.",
+                "Yazar, son eserinde önceki kitaplarına göre daha akıcı ve sade bir dil kullandı.",
+                "Bu yılın ekonomik büyüme rakamları, beklentilerin oldukça altında gerçekleşti.",
+                "Ozanın şiirleri, Anadolu'nun derin acılarını ve umutlarını başarıyla yansıtmış olsa gerek.",
+                "1950'li yıllarda İstanbul nüfusunun bugünküne oranla çok daha az olduğu herkesçe bilinir."
+              ],
+              "kategoriId": "turkce",
+              "sira": 4
+          },     
+          {
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde hem kişi zamiri hem de belgisiz zamir kullanılmıştır?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "Ona verdiğim sözü tutmak için elimden geleni yapacağım.",
+                  "Herkes, bu zorlu sınavdan alnının akıyla çıkmayı hedefliyordu.",
+                  "Sen, toplantıdaki fikirlerini kimseye açmamalısın.",
+                  "Bazıları, hayatın basit kurallarını asla anlamayacak.",
+                  "Bizim takımın bazı oyuncuları, oldukça başarılı performans sergiledi."
+                ],
+                "kategoriId": "turkce",
+                "sira": 5
           },
           {
-            "soruMetni": "(TÜRKÇE) 'Okul' kelimesinin kökü nedir?",
-            "dogruCevapIndex": 0,
-            "secenekler": ["Oku-", "Ok-", "Okul-", "Kul-"],
-            "kategoriId": "turkce",
-            "sira": 100
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde edat (ilgeç) bulunmamaktadır?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "Sabahları kahvaltı yapmak üzere erkenden kalkar.",
+                  "Bu tarihi yapı, on yıl kadar önce restore edilmişti.",
+                  "Kitapları masanın üzerine koydu ve odadan ayrıldı.",
+                  "Onun gibi yetenekli bir sanatçı zor bulunur.",
+                  "Hayat, ne garip bir serüven, kim bilir nerede bitecek!"
+                ],
+                "kategoriId": "turkce",
+                "sira": 6
           },
           {
-            "soruMetni": "(TÜRKÇE) Aşağıdakilerden hangisi bir 'zamir' (adıl) değildir?",
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde \"de\" bağlacının yazımıyla ilgili bir yanlışlık yapılmıştır?",
+                "dogruCevapIndex": 4,
+                "secenekler": [
+                  "Yazarın bu son romanı da ilk eserleri kadar ilgi çekiciydi.",
+                  "Sen de mi bu zorlu göreve gönüllü oldun?",
+                  "Bu şehirde yaşamayı seviyorum; zira burada her şey bir başka güzel.",
+                  "Ben de bu duruma çok üzüldüm.",
+                  "Seninlede olmuyor ne yazık ki."
+                ],
+                "kategoriId": "turkce",
+                "sira": 7
+          },
+          {
+                "soruMetni": "Aşağıdaki cümlelerin hangisinde tarihlerin yazımıyla ilgili bir yanlışlık yapılmıştır?",
+                "dogruCevapIndex": 1,
+                "secenekler": [
+                  "23 Nisan 1920'de Türkiye Büyük Millet Meclisi açıldı.",
+                  "Konferans, her yıl Ekim ayında düzenlenir.",
+                  "Bu yılki fuar, 18 Mart Perşembe günü ziyarete açılacak.",
+                  "Kitabın ilk baskısı ocak ayının ilk haftasında piyasaya sürülecek.",
+                  "Toplantının kesin tarihi 15/06/2026 olarak belirlendi."
+                ],
+                "kategoriId": "turkce",
+                "sira": 8
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinin sonuna konması gereken noktalama işareti diğerlerinden farklıdır?",
             "dogruCevapIndex": 3,
-            "secenekler": ["Ben", "Şu", "Onlar", "Güzel"],
+            "secenekler": [
+              "Bu zorlu görevi başarıyla tamamlayabilecek misin",
+              "Söylediklerini neden bu kadar ciddiye aldın ki",
+              "Hava kararmadan eve dönmeniz gerektiğini bilmiyor muydunuz",
+              "Keşke o gün o kararı hiç vermeseydik",
+              "Okuduğun o kalın kitap kaçıncı baskı"
+            ],
             "kategoriId": "turkce",
-            "sira": 101
+            "sira": 9
           },
           {
-            "soruMetni": "(TARİH) Malazgirt Savaşı hangi tarihte yapılmıştır?",
-            "dogruCevapIndex": 1,
-            "secenekler": ["1075", "1071", "1080", "1066"],
-            "kategoriId": "tarih",
-            "sira": 200
-          },
-          {
-            "soruMetni": "(TARİH) Lozan Antlaşması hangi tarihte imzalanmıştır?",
-            "dogruCevapIndex": 2,
-            "secenekler": ["1920", "1922", "1923", "1921"],
-            "kategoriId": "tarih",
-            "sira": 201
-          },
-          {
-            "soruMetni": "(COĞRAFYA) Türkiye'nin en büyük gölü hangisidir?",
-            "dogruCevapIndex": 0,
-            "secenekler": ["Van Gölü", "Tuz Gölü", "Beyşehir Gölü", "Eğirdir Gölü"],
-            "kategoriId": "cografya",
-            "sira": 300
-          },
-          {
-            "soruMetni": "(COĞRAFYA) Peri bacaları hangi ilimizde ünlüdür?",
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde bir öge eksikliğinden kaynaklanan anlatım bozukluğu vardır?",
             "dogruCevapIndex": 3,
-            "secenekler": ["Kapadokya", "Denizli", "Ağrı", "Nevşehir"],
-            "kategoriId": "cografya",
-            "sira": 301
+            "secenekler": [
+              "Öğrenci, okulu bitirince öğretmenine sarıldı, teşekkür etti.",
+              "Yazar, deneme ve hikâyecilik alanında yetenekli bir sanatçıydı.",
+              "Bu topraklarda yaşayan her birey, ülkesine sahip çıkmalıdır.",
+              "Gençler, çevreye karşı duyarlı olmalı, değer vermelidir.",
+              "Herkes, bu zorlu görevin üstesinden gelebilmek için elinden geleni yaptı."
+            ],
+            "kategoriId": "turkce",
+            "sira": 10
           },
           {
-            "soruMetni": "(VATANDAŞLIK) Türkiye Büyük Millet Meclisi'nde (TBMM) kaç milletvekili bulunur?",
-            "dogruCevapIndex": 1,
-            "secenekler": ["550", "600", "450", "650"],
-            "kategoriId": "vatandaslik",
-            "sira": 400
-          },
-          {
-            "soruMetni": "(VATANDAŞLIK) Cumhurbaşkanı kaç yıllığına seçilir?",
+            "soruMetni": "Sanat, hayatın karmaşık akışına tutulan bir ayna gibidir. Ne var ki, bu ayna sadece görüneni yansıtmakla kalmaz; aynı zamanda görünmeyeni, derinlerde saklı olanı da açığa çıkarır. Bir yazarın veya ressamın eseri, bize sadece bir hikâye anlatmaz; aynı zamanda o hikâyenin ardındaki evrensel insanlık durumunu, korkularımızı, umutlarımızı da fısıldar. Eğer sanat, bizi sadece eğlendiren bir araç olsaydı, yüzyıllardır süregelen o derin etkiyi yaratamazdı. Onun gücü, bizi kendi özümüzle yüzleştirmesinden gelir.\n\nBu parçada asıl anlatılmak istenen aşağıdakilerden hangisidir?",
             "dogruCevapIndex": 0,
-            "secenekler": ["5", "4", "6", "7"],
-            "kategoriId": "vatandaslik",
-            "sira": 401
+            "secenekler": [
+              "Sanat eserleri, görünenin ötesindeki gerçekliği yansıttığı için kalıcıdır.",
+              "Sanatın temel amacı, insanları eğlendirmek ve günlük sorunlardan uzaklaştırmaktır.",
+              "Bir eserin değeri, onun yansıtma gücüyle doğru orantılıdır.",
+              "Sanat, insanın evrensel sorunlarını somutlaştırarak anlatmalıdır.",
+              "Bir eserin kalıcılığı, yazarının deneyimlerine bağlıdır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 11
+          },
+          {
+            "soruMetni": "Eleştiri, bir sanatsal yaratının eksiklerini ortaya koymaktan öte, o eserin neden değerli olduğunu, hangi kültürel ve tarihsel boşluğu doldurduğunu açıklayan bir köprüdür. Ne yazık ki, günümüzdeki eleştirilerin çoğu, kişisel beğenilerin ya da anlık tepkilerin ötesine geçemiyor. Oysa gerçek eleştiri, eserin gölgede kalmış yanlarını aydınlatan, okuyucu ile eser arasına sağlıklı bir bağ kuran yapıcı bir süreç olmalıdır. Bu, sadece eserin değil, aynı zamanda eleştiri kültürünün de gelişimini sağlar.\n\nBu parçanın yazarının eleştiriden temel beklentisi nedir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Eserin yalnızca olumlu ve güçlü yönlerini öne çıkarması.",
+              "Eserin yaratım sürecini ve sanatçının niyetini tam olarak yansıması.",
+              "Okuyucu kitlesini genişletmek için eseri popülerleştirmesi.",
+              "Eserin değerini, bağlamını ve kültürel işlevini açıklayarak sağlıklı bir köprü kurması.",
+              "Eleştirmenin kişisel beğenilerini cesurca ortaya koyması."
+            ],
+            "kategoriId": "turkce",
+            "sira": 12
+          },
+          {
+            "soruMetni": "Modern insan, hız çağında yaşıyor. Her şey hızlı, anlık ve tüketilebilir olmalı. Bu durum, edebi eserlere bakış açımızı da etkiledi. Artık kalın, çok katmanlı romanlar yerine, hızlıca okunup bitirilebilen, mesajı hemen veren metinler revaçta. Oysa nitelikli edebiyat, yavaşlamayı, derinleşmeyi gerektirir. Okuyucunun bu hıza teslim olması, kendi zihinsel derinliğini kaybetmesi anlamına geliyor.\n\nBu parçadan hareketle, aşağıdakilerden hangisi söylenebilir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Nitelikli edebiyat, modern okuyucunun beklentilerini karşılayamayan eserlerdir.",
+              "Hız kültürü, edebi eserlerin sanatsal değerini düşürmektedir.",
+              "Kalın romanlar, okuyucuyu hızla uzaklaştıran bir yapıya sahiptir.",
+              "Modern okuyucunun zihinsel derinliğini kaybetmesinin tek nedeni çağı yakalayamamasıdır.",
+              "Edebiyatın değeri, okuyucunun eseri sindirmesiyle ölçülür."
+            ],
+            "kategoriId": "turkce",
+            "sira": 13
+          },
+          {
+            "soruMetni": "Bilim insanları, Mars'ta yaşam izlerini araştırmayı sürdürüyor. Bununla birlikte, Dünya dışı yaşam arayışının sadece Mars ile sınırlı kalmaması gerektiği konusunda fikir birliği var. Gezegenimizin Güneş Sistemi dışındaki uyduları ve öte gezegenler de potansiyel yaşam barındırma olasılığı nedeniyle inceleniyor. Son dönemde, özellikle Jüpiter'in uydusu Europa ve Satürn'ün uydusu Enceladus'un buz tabakaları altındaki sıvı okyanusları, araştırmacıların odak noktası haline geldi.\n\nBu parçanın anlatımında aşağıdakilerden hangisi ağır basmaktadır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Öyküleme",
+              "Betimleme",
+              "Tartışma",
+              "Açıklama",
+              "Kanıtlama"
+            ],
+            "kategoriId": "turkce",
+            "sira": 14
+          },
+          {
+            "soruMetni": "Okumak, sadece gözlerin satırlar üzerinde gezinmesi değildir. Okumak, aynı zamanda zihnin metinle aktif bir etkileşime girmesi, yazarın kurduğu dünyayı kendi hayal gücüyle yeniden inşa etmesidir. Tıpkı bir arkeolog gibi, okuyucu da metnin derinliklerine iner, anlam katmanlarını kazır ve yazarın gizlediği ipuçlarını ortaya çıkarır. Bu aktif süreç olmadan, metin sadece kuru bir bilgi yığını olarak kalır.\n\nBu parçada okumanın tanımını derinleştirmek için hangi düşünceyi geliştirme yoluna başvurulmuştur?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "Örnekleme",
+              "Tanık gösterme",
+              "Karşılaştırma",
+              "Tanımlama",
+              "Benzetme"
+            ],
+            "kategoriId": "turkce",
+            "sira": 15
+          },
+          {
+            "soruMetni": "Yalnızlık, modern çağın en yaygın hastalıklarından biri olarak görülür. Ancak bu yalnızlığı sadece fiziksel bir ayrılık olarak görmek yanlıştır. Asıl yalnızlık, insanın kendi iç sesiyle kurduğu bağın kopmasıdır. Kalabalıklar içinde dahi, kendi ruhunun derinliklerine inemeyen kişi, aslında en büyük yalnızlığı yaşamaktadır. Bu durum, insanın kendini tanımasını ve kabul etmesini engelleyen bir perdedir. Yalnızlığı yenmenin yolu, dış dünyadan kaçmak değil, iç dünyanın kapısını aralamaktan geçer.\n\nBu parçada aşağıdakilerden hangisine değinilmemiştir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Yalnızlığın, çağımızın genel bir sorunu olduğuna.",
+              "Fiziksel kalabalığın yalnızlık duygusunu engelleyemediğine.",
+              "Gerçek yalnızlığın, içsel bir kopuş olduğuna.",
+              "İnsanın kendini kabul etmesinin yalnızlığı ortadan kaldırdığına.",
+              "Yalnızlığı yenmek için içsel dünyaya yönelmek gerektiğine."
+            ],
+            "kategoriId": "turkce",
+            "sira": 16
+          },
+          {
+            "soruMetni": "Yabancı dil öğrenimi, sadece iletişim kurma becerisi kazandırmaz. Yeni bir dil öğrenmek, aynı zamanda yeni bir düşünce biçimine, farklı bir kültürel bakış açısına da kapı aralar. Her dil, dünyanın farklı bir yorumudur. Bu nedenle, birden fazla dil bilen bir kişi, tek bir dilde düşünen bir kişiye göre dünyayı daha geniş, daha zengin bir perspektifle algılar. Zihnimizdeki sınırların kalkması, yeni bir dilin öğrenilmesiyle başlar.\n\nBu parçanın sonuna düşüncenin akışına uygun olarak aşağıdakilerden hangisi getirilmelidir?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "Bu durum, o kişinin anadilindeki yeterliliğini de artıracaktır.",
+              "Dolayısıyla, dil öğrenimi sadece kelime ezberlemekten ibaret olamaz.",
+              "Çünkü farklı dillerin gramer yapıları, zihinsel gelişimi doğrudan etkiler.",
+              "Böylece o kişi, kendini farklı kültürel kimliklerle tanımlayabilir.",
+              "Öyleyse, yabancı dil öğrenmek, yeni bir pencereden dünyaya bakmaktır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 17
+          },
+          {
+            "soruMetni": "Eleştirel düşünme, bilgiyi pasif bir şekilde kabul etmek yerine, onu sorgulama, değerlendirme ve analiz etme sürecidir. Bu düşünce tarzı, sadece akademik başarı için değil, aynı zamanda günlük hayatımızda bilinçli kararlar alabilmemiz için de hayati öneme sahiptir. Eleştirel düşünebilen bir birey, manipülasyonlara ve yanlış bilgilere karşı daha dirençli olur. Dolayısıyla, eğitim sistemlerinin temel hedeflerinden biri, öğrencilere bu beceriyi kazandırmak olmalıdır.\n\nBu parçanın son cümlesi, metnin hangi özelliğini yansıtmaktadır?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Öneri içermesi",
+              "Kanıt sunması",
+              "Nesnel bir yargı bildirmesi",
+              "Varsayım ifade etmesi",
+              "Tartışmaya açık olması"
+            ],
+            "kategoriId": "turkce",
+            "sira": 18
+          },
+          {
+            "soruMetni": "(I) Filmler, izleyicinin düşünce dünyasında bir kapı açar; bu kapıdan girenler ise genellikle kendi geçmişleriyle yüzleşir. (II) Bazı filmler vardır ki, izleyiciyi tamamen yabancı bir evrene taşır. (III) Bu yabancı evren, izleyicinin kendini güvende hissetmesini sağlar. (IV) Film ne kadar fantastik olursa olsun, izleyici o yabancı dünyanın kurallarını kabul etmeye hazırdır. (V) Zira izleyicinin aradığı, günlük hayatın kurallarından geçici bir süreliğine uzaklaşmaktır.\n\nBu parça iki paragrafa ayrılmak istense, ikinci paragraf numaralanmış hangi cümleyle başlar?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "I.",
+              "II.",
+              "III.",
+              "IV.",
+              "V."
+            ],
+            "kategoriId": "turkce",
+            "sira": 19
+          },
+          {
+            "soruMetni": "Felsefe, zihnin konfor alanından çıkma cesaretidir. Çoğu insan, alışılagelmiş düşünce kalıpları içinde yaşamayı tercih eder; çünkü bu güvenlidir. Oysa felsefe, bu kalıpları kırar, en temel varsayımlarımızı dahi sorgulamaya iter. Bu sorgulama süreci başta rahatsızlık verici olabilir, ancak sonunda bireyi daha derin ve anlamlı bir yaşama ulaştırır. Felsefe, kolay bir yol değil, aydınlık bir yoldur.\n\nBu parçanın ana düşüncesi aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Felsefe, güvenli düşünce kalıplarını terk etmeyi gerektiren zorlu bir disiplindir.",
+              "İnsanlar, felsefi sorgulamadan kaçındığı için konfor alanında kalır.",
+              "Felsefe, alışılagelmiş düşünceleri reddederek yaşamı kolaylaştırır.",
+              "Bireylerin felsefeyle ilgilenmesi, akademik başarıyı artırır.",
+              "Felsefi düşünme, her bireyin ulaşabileceği kolay bir beceridir."
+            ],
+            "kategoriId": "turkce",
+            "sira": 20
+          },
+          {
+            "soruMetni": "Sanatçı, eserini meydana getirirken sadece kişisel deneyimlerinden beslenmez. Aynı zamanda içinde yaşadığı toplumun ortak acılarını, sevinçlerini, hayallerini de süzgeçten geçirir. Bu nedenle, büyük sanat eserleri, kişisel olmaktan çıkıp evrensel bir nitelik kazanır. Eser, bir yandan sanatçının imzasını taşırken, diğer yandan da ait olduğu kültürü ve çağı yansıtan bir ayna işlevi görür.\n\nBu parçadan hareketle aşağıdakilerden hangisine ulaşılamaz?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Sanatçının bireysel tecrübeleri eserinin kaynaklarından biridir.",
+              "Büyük sanat, evrensel niteliği sayesinde kişisellikten uzaklaşır.",
+              "Eserler, meydana geldikleri dönemin ve kültürün izlerini taşır.",
+              "Eserin değeri, sanatçının yaşadığı toplumun sorunlarına çözüm bulmasıyla ölçülür.",
+              "Sanatçılar, toplumun duygusal ve hayali birikimlerini eserlerine aktarır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 21
+          },
+          {
+            "soruMetni": "Düşünme eylemi, genellikle sessiz ve bireysel bir süreç olarak algılanır. Oysa gerçek anlamda derin düşünce, tartışma ortamında, karşıt fikirlerle çarpışarak ortaya çıkar. Bir fikri savunmak, o fikrin sınırlarını görmemizi sağlar. Fikrimizi eleştiriye açtığımızda, onu yıkmak isteyen değil, sağlamlaştırmak isteyen dostlar kazanırız. Fikirler, dar bir alanda değil, açık bir meydanda filizlenir ve güçlenir.\n\nBu parçaya göre, bir fikrin gelişimi için temel koşul nedir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Fikrin sahibi tarafından sessiz ve bireysel olarak olgunlaştırılması.",
+              "Fikrin, karşıt görüşlerle etkileşim ve tartışma içine girmesi.",
+              "Fikri savunan kişinin, eleştirilere karşı dirençli olması.",
+              "Fikrin kabul görmesi için mantıksal bir temele dayandırılması.",
+              "Fikrin, dar çevreler tarafından değil, geniş kitlelerce benimsenmesi."
+            ],
+            "kategoriId": "turkce",
+            "sira": 22
+          },
+          {
+            "soruMetni": "Sanat eseri, zamanın ve mekânın sınırlarını aşarak insanlığa seslenir. (I) Eğer bir eser, sadece yaratıldığı dönemin izlerini taşırsa, o dönemin sonunda unutulur. (II) Ancak eser, insana dair temel duyguları ve evrensel temaları işlediğinde, çağlar boyunca varlığını sürdürür. (III) Homeros'un İlyada'sı, yüzlerce yıl geçmesine rağmen hâlâ okunuyorsa, bunun nedeni budur. (IV) Öyleyse, kalıcılığın anahtarı, güncel olaylara odaklanmak değil, insan doğasına odaklanmaktır. (V) Sanatçının bu noktada seçtiği konu, onun dünya görüşünü de yansıtır.\n\nBu parçadaki numaralanmış cümlelerden hangisi, kendinden önceki yargıyı örnekleme yoluyla desteklemektedir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "I.",
+              "II.",
+              "III.",
+              "IV.",
+              "V."
+            ],
+            "kategoriId": "turkce",
+            "sira": 23
+          },
+          {
+            "soruMetni": "Birçok insan, okuduğu metni anlamakta zorlandığını söyler. Oysa metin, anlamını sadece sözcüklerde saklamaz. Okuyucu, metindeki sözcüklerin yanı sıra, yazarın ses tonunu, alaycı mı yoksa ciddi mi olduğunu, kullandığı göndermeleri ve kültürel bağlamı da yakalamalıdır. Metin, buzdağı gibidir; görünen kısmı sözcükler, görünmeyen kısmı ise yazarın niyetidir. İyi bir okuyucu, buzdağının tamamını görendir.\n\nBu parçaya göre iyi bir okuyucunun temel özelliği nedir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Metni hızlı ve kesintisiz okumak.",
+              "Sadece metindeki sözcüklerin anlamlarını bilmek.",
+              "Metnin içerdiği tüm kültürel göndermeleri öğrenmek.",
+              "Metnin hem sözcüklerini hem de yazarın niyetini anlamak.",
+              "Okuduğu metinle ilgili kişisel yorumlar yapabilmek."
+            ],
+            "kategoriId": "turkce",
+            "sira": 24
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde, hem ünlü düşmesi hem de ünsüz yumuşaması ses olayları bir arada gerçekleşmiştir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Yazarın bu özgün fikri, okuyucunun bakış açısını değiştirmeyi başarıyordu.",
+              "Şehrin çevresindeki dağlar, gün doğumuyla birlikte kızıl bir renge bürünüyor.",
+              "Onun bu ufacık başarısı, bize büyük bir umut kaynağı oldu.",
+              "Kardeşi, tatile gittiği o köydeki tüm ayrıntıları bize tek tek anlattı.",
+              "Bu yorgunluktan sonra herkesin gönlü, huzurlu bir dinlenmeyi istiyordu."
+            ],
+            "kategoriId": "turkce",
+            "sira": 25
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde işaret sıfatı kullanılmıştır?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Bu defter, masanın üzerinde kalmış.",
+              "Senin araban benden daha hızlıydı.",
+              "Oraya gitmek için acele etmeliyiz.",
+              "Bunların hepsi dün yaşandı.",
+              "Ahmet, onu uzun zamandır görmemişti."
+            ],
+            "kategoriId": "turkce",
+            "sira": 26
+          },
+          {
+            "soruMetni": "Aşağıdaki cümlelerin hangisinde “yüklem”, cümlenin en başında yer almıştır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Dün, bahçedeki tüm çiçekleri suladık.",
+              "Bize gelen misafirler yolda kalmış.",
+              "Görevli, evrakları kontrol etti.",
+              "Geç kalmış, yine yetişememiş randevuya.",
+              "Babam, arabayı dikkatlice park etti."
+            ],
+            "kategoriId": "turkce",
+            "sira": 27
+          },
+          {
+            "soruMetni": "A, B, C, D ve E adlı 5 öğrenci, K, L ve M isimli 3 farklı kulüpten sadece birini seçmiştir. Bu öğrencilerin kulüp seçimleriyle ilgili bilinenler şunlardır: \n- Her kulübe en az bir öğrenci seçilmiştir. \n-  K kulübünü seçen öğrenci sayısı 1'dir. \n- B ve D, farklı kulüpleri seçmiştir. \n- E ve A, aynı kulübü seçmiştir. \n- C, L kulübünü seçmiştir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "L kulübünü seçen öğrenci sayısı 2'dir.",
+              "M kulübünü seçen öğrenci sayısı 3'tür.",
+              "E, M kulübünü seçmiştir.",
+              "D, K kulübünü seçmiştir.",
+              "A, L kulübünü seçmiştir."
+            ],
+            "kategoriId": "turkce",
+            "sira": 28
+          },
+          {
+            "soruMetni": "Bir lisede, 5 farklı ders (Fizik, Geometri, Tarih, İngilizce ve Japonca) haftanın 5 farklı günü (Pazartesi, Salı, Çarşamba, Perşembe, Cuma) işlenecektir. Her gün sadece bir ders işlenmektedir. Derslerin günlerine ilişkin bilinenler şunlardır: \n- Japonca dersi, Tarih dersinden hemen sonraki gün işlenecektir. \n- Fizik dersi, İngilizce dersinden önce işlenecektir. \n- Çarşamba günü Geometri dersi işlenecektir. \n- Tarih dersi, Salı günü işlenmeyecektir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "İngilizce dersi Salı günü işlenecektir.",
+              "Fizik dersi, Pazartesi günü işlenecektir.",
+              "Tarih dersi, Perşembe günü işlenecektir.",
+              "Japonca dersi, Cuma günü işlenecektir.",
+              "Geometri dersi, haftanın üçüncü günü işlenecektir."
+            ],
+            "kategoriId": "turkce",
+            "sira": 29
+          },
+          {
+            "soruMetni": "A, B, C, D, E ve F adlı 6 farklı film, Aksiyon, Komedi ve Dram olmak üzere 3 farklı türde vizyona girmiştir. Bu filmlerin türlerine ilişkin bilinenler şunlardır: \n- Her film sadece bir türe aittir ve her türde en az bir film vardır. \n- Aksiyon türünde sadece 2 film bulunmaktadır. \n- A ve F filmleri aynı türdedir. \n- E filmi, Dram türündedir. \n- C ve D filmleri farklı türdedir.\n\nBuna göre aşağıdakilerden hangisi kesinlikle yanlıştır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "A filmi Komedi türündedir.",
+              "Dram türünde en az 2 film vardır.",
+              "C filmi Aksiyon türündedir.",
+              "B filmi Dram türündedir.",
+              "Komedi türünde 2 film vardır."
+            ],
+            "kategoriId": "turkce",
+            "sira": 30
+          },
+          {
+              "soruMetni": "x, y ve z birer tam sayıdır. x < y < 0 < z olduğuna göre, aşağıdakilerden hangisinin sonucu her zaman bir pozitif tam sayıdır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "x + y + z",
+                "x +y * z",
+                "z - x - y",
+                "$(x^2) * (z - y)$",
+                "(y + x) / z"
+              ],
+              "kategoriId": "matematik",
+              "sira": 31
+          },
+          {
+              "soruMetni": "A, B ve C birer tam sayı olmak üzere, A * B * C = 24 olduğu bilinmektedir. Buna göre, A + B + C toplamının alabileceği en küçük tam sayı değeri kaçtır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "6",
+                "10",
+                "-18",
+                "-24",
+                "-30"
+              ],
+              "kategoriId": "matematik",
+              "sira": 32
+          },
+          {
+              "soruMetni": "A = -0,2\nB = -0,22\nC = -0,222\nYukarıda verilen A, B ve C değerleri için aşağıdaki sıralamalardan hangisi doğrudur?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "A < C < B",
+                "B < A < C",
+                "A < B < C",
+                "C < A < B",
+                "C < B < A"
+              ],
+              "kategoriId": "matematik",
+              "sira": 33
+          },
+          {
+              "soruMetni": "(0,4 * 1,2) / 0,4 - 1/5 işleminin sonucu kaçtır?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "0.5",
+                "1",
+                "5",
+                "10",
+                "15"
+              ],
+              "kategoriId": "matematik",
+              "sira": 34
+          },  
+          {
+                "soruMetni": "-2 <= 3x + 4 < 13\nEşitsizliğini sağlayan x tam sayılarının toplamı kaçtır?",
+                "dogruCevapIndex": 0,
+                "secenekler": [
+                  "0",
+                  "3",
+                  "6",
+                  "10",
+                  "12"
+                ],
+                "kategoriId": "matematik",
+                "sira": 35
+          },
+          {
+                "soruMetni": "a ve b gercek sayilar olmak üzere,\n$-4 < a < 2$\n-1 < b < 3\nolduguna göre, 2a - b ifadesinin alabileceği en büyük tam sayı değeri kaçtır?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "6",
+                  "5",
+                  "4",
+                  "3",
+                  "2"
+                ],
+                "kategoriId": "matematik",
+                "sira": 36
+          },
+          {
+                "soruMetni": "$x < 0$ olduğuna göre, $|x - 1| + |x|$ ifadesinin eşiti aşağıdakilerden hangisidir?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "2x - 1",
+                  "-1",
+                  "1 - 2x",
+                  "1",
+                  "2x + 1"
+                ],
+                "kategoriId": "matematik",
+                "sira": 37
+          },
+          {
+                "soruMetni": "$||x - 2| - 3| = 1$ denklemini sağlayan $x$ gerçek sayılarının toplamı kaçtır?",
+                "dogruCevapIndex": 4,
+                "secenekler": [
+                  "-2",
+                  "0",
+                  "4",
+                  "6",
+                  "8"
+                ],
+                "kategoriId": "matematik",
+                "sira": 38
+          },
+          {
+            "soruMetni": "x < 0 olduğuna göre, |x - 1| + |x| ifadesinin eşiti aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "2x - 1",
+              "-1",
+              "1 - 2x",
+              "1",
+              "2x + 1"
+            ],
+            "kategoriId": "matematik",
+            "sira": 39
+          },
+          {
+            "soruMetni": "||x - 2| - 3| = 1 denklemini sağlayan x gerçek sayılarının toplamı kaçtır?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "-2",
+              "0",
+              "4",
+              "6",
+              "8"
+            ],
+            "kategoriId": "matematik",
+            "sira": 40
+          },
+          {
+            "soruMetni": "√128 - √32 + √8\n\nİfadesinin eşiti aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "6√2",
+              "5√2",
+              "4√2",
+              "3√2",
+              "2√2"
+            ],
+            "kategoriId": "matematik",
+            "sira": 41
+          },
+          {
+            "soruMetni": "2ˣ = a, 3ˣ = b olduğuna göre, 72ˣ ifadesinin a ve b cinsinden eşiti aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "a² * b³",
+              "a³ * b²",
+              "a² * b²",
+              "a * b³",
+              "a³ * b"
+            ],
+            "kategoriId": "matematik",
+            "sira": 42,
+            "imageUrl": ""
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "8/15",
+              "3/5",
+              "15/8",
+              "2/5",
+              "5/6"
+            ],
+            "kategoriId": "matematik",
+            "sira": 43,
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_43.png?alt=media&token=11726e90-04f4-46f0-8cdc-088eb09ec369"
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "12",
+              "15",
+              "16",
+              "20",
+              "24"
+            ],
+            "kategoriId": "matematik",
+            "sira": 44,
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_44.png?alt=media&token=16453512-fd18-4d7e-a5d9-0cd2d882a0dc"
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "1",
+              "3",
+              "4",
+              "8",
+              "12"
+            ],
+            "kategoriId": "matematik",
+            "sira": 45,
+            "imageUrl": "https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_45.png?alt=media&token=556942df-d1d5-4ec4-ad17-b437c905153c"
+          },
+          {
+            "soruMetni": "Bir baba ile oğlunun bugünkü yaşları toplamı 50'dir. 5 yıl sonra babanın yaşı, oğlunun yaşının 3 katı olacağına göre, babanın bugünkü yaşı kaçtır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "35",
+              "40",
+              "42",
+              "45",
+              "48"
+            ],
+            "kategoriId": "matematik",
+            "sira": 46
+          },
+          {
+            "soruMetni": "Bir sınıftaki öğrenciler sıralara ikişerli oturunca 5 öğrenci ayakta kalıyor. Üçerli oturunca ise 2 sıra boş kalıyor. Buna göre, sınıfta kaç öğrenci vardır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "21",
+              "23",
+              "25",
+              "27",
+              "29"
+            ],
+            "kategoriId": "matematik",
+            "sira": 47
+          },
+          {
+            "soruMetni": "Bir telin ucundan 1/4'ü kesildiğinde telin orta noktası 6 cm kayıyor. Buna göre, telin başlangıçtaki boyu kaç cm'dir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "24",
+              "36",
+              "48",
+              "72",
+              "96"
+            ],
+            "kategoriId": "matematik",
+            "sira": 48
+          },
+          {
+            "soruMetni": "Ahmet'in parası, Mehmet'in parasının 2 katından 100 TL fazladır. İkisinin paraları toplamı 700 TL olduğuna göre, Mehmet'in parası kaç TL'dir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "200",
+              "240",
+              "300",
+              "360",
+              "400"
+            ],
+            "kategoriId": "matematik",
+            "sira": 49
+          },
+          {
+            "soruMetni": "Hızı saatte V km olan bir araç t saatte aldığı yolu, hızını 10 km/saat artırarak kaç saatte alır?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Vt/(V+10)",
+              "(V+10)/Vt",
+              "Vt/(V-10)",
+              "V/(t+10)",
+              "t/(V+10)"
+            ],
+            "kategoriId": "matematik",
+            "sira": 50
+          },
+          {
+            "soruMetni": "Etiket fiyatı üzerinden %10 indirim yapılan bir ürün, indirimli fiyat üzerinden %10 daha indirim yapılarak satılıyor. Ürüne yapılan toplam indirim yüzde kaçtır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "15",
+              "19",
+              "20",
+              "25",
+              "45"
+            ],
+            "kategoriId": "matematik",
+            "sira": 51
+          },
+          {
+            "soruMetni": "Bir tüccar, bir malın 1/3'ünü %30 zararla, kalanını ise %45 kârla satmıştır. Tüccarın bu satıştan elde ettiği toplam kâr-zarar durumu nedir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "10",
+              "18",
+              "20",
+              "25",
+              "30"
+            ],
+            "kategoriId": "matematik",
+            "sira": 52
+          },
+          {
+            "soruMetni": "Yıllık enflasyonun %25 olduğu bir ülkede, maaşına %40 zam yapılan bir memurun alım gücü yüzde kaç artmıştır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "10",
+              "12",
+              "15",
+              "16",
+              "20"
+            ],
+            "kategoriId": "matematik",
+            "sira": 53
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "10",
+              "12",
+              "15",
+              "16",
+              "20"
+            ],
+            "kategoriId": "matematik",
+            "sira": 54,
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_54.png?alt=media&token=139f8e89-ffaa-4085-8378-ede337a4a6f7"
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "-1",
+              "0",
+              "2",
+              "3",
+              "5"
+            ],
+            "kategoriId": "matematik",
+            "sira": 55,
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_55.png?alt=media&token=1a02aef0-ee20-486c-a222-ceb4254c92c7"
+          },
+          {
+            "soruMetni": "Bir madeni para art arda 3 kez havaya atılıyor. Buna göre, paranın en az 2 kez tura gelme olasılığı kaçtır?",
+            "dogruCevapIndex": 4,
+            "secenekler": [
+              "1/12",
+              "1/8",
+              "1/4",
+              "1/3",
+              "1/2"
+            ],
+            "kategoriId": "matematik",
+            "sira": 56
+          },
+          {
+            "soruMetni": "Aşağıdaki tabloda A ve B sütunları arasındaki bir ilişki kuralı bulunmaktadır.| A | B ||---|---|| 4 | 24 || 6 | 48 || 8 | 80 || 10 | ? |\n\nBuna göre A=10 olduğuna göre B kaç olmalıdır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "100",
+              "120",
+              "150",
+              "200",
+              "250"
+            ],
+            "kategoriId": "matematik",
+            "sira": 57
           }
+          
+
+
+
+          
+            
+          
+
         ]
       }
-    ],
+      ],
    "achievements": [
       {
         "id": "quiz_1",
