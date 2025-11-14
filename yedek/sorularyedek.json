@@ -24986,11 +24986,11 @@
             ],
             "kategoriId": "matematik",
             "sira": 54,
-            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_54.png?alt=media&token=139f8e89-ffaa-4085-8378-ede337a4a6f7"
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_54.png?alt=media&token=5d395ab7-26a3-449d-b7f5-e36bbf073181"
           },
           {
             "soruMetni": "",
-            "dogruCevapIndex": 0,
+            "dogruCevapIndex": 1,
             "secenekler": [
               "-1",
               "0",
@@ -25027,16 +25027,830 @@
             ],
             "kategoriId": "matematik",
             "sira": 57
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "3",
+              "7",
+              "10",
+              "21",
+              "35"
+            ],
+            "kategoriId": "matematik",
+            "sira": 58,
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_43.png?alt=media&token=11726e90-04f4-46f0-8cdc-088eb09ec369"
+          },
+          {
+            "soruMetni": "n+100 ve n+168 tam kare olduğuna göre n sayısının alabileceği en küçük pozitik tam sayı değeri kaçtır?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "100",
+              "120",
+              "150",
+              "200",
+              "250"
+            ],
+            "kategoriId": "matematik",
+            "sira": 59      
+          },
+          {
+            "soruMetni": "",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "18",
+              "24",
+              "36",
+              "48",
+              "72"
+            ],
+            "kategoriId": "matematik",
+            "sira": 60,
+            "imageUrl":"https://firebasestorage.googleapis.com/v0/b/bilgi-yarismasi-76128.firebasestorage.app/o/question_images%2Ftg_1_60.png?alt=media&token=7c525185-a7fe-4957-945a-36408a752d89"
+
+          },
+          {
+            "soruMetni": "İslamiyet öncesi Türk devletlerinde görülen \"ikili teşkilat\" sisteminin temel amacı aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "Federatif bir yapı kurarak iç tehditlere karşı daha güçlü olmak.",
+              "Merkezi otoriteyi güçlendirerek taht kavgalarını engellemek.",
+              "Ülke yönetimini kolaylaştırmak ve boylar arası dengeyi sağlamak.",
+              "Orduyu daha hızlı mobilize edebilmek için askeri bölgeler oluşturmak.",
+              "Ticaret yolları üzerindeki kontrolü artırmak."
+            ],
+            "kategoriId": "tarih",
+            "sira": 61
+          },
+          {
+            "soruMetni": "İslamiyet öncesi Türk devletlerinde, devlet işlerinin görüşülüp karara bağlandığı ve hakanın başkanlık ettiği meclis aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 0,
+            "secenekler": [
+              "Toy",
+              "Tüz",
+              "Şad",
+              "Ayukı",
+              "Töre"
+            ],
+            "kategoriId": "tarih",
+            "sira": 62
+          },
+          {
+            "soruMetni": "İslamiyet'i kabul eden Türk devletlerinde görülen, devletin hanedan üyelerinin ortak malı sayılması geleneğinin sürdürülmesinin en önemli sonucu aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 1,
+            "secenekler": [
+              "Kültür ve sanat alanında farklı ekollerin gelişmesi.",
+              "Merkezi otoritenin zayıflaması ve taht kavgalarının artması.",
+              "Devletin kısa sürede imparatorluk haline gelmesi.",
+              "İkili yönetim sisteminin tamamen terk edilmesi.",
+              "Veraset sisteminin tamamen İslami kurallara göre belirlenmesi."
+            ],
+            "kategoriId": "tarih",
+            "sira": 63
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nin Duraklama Dönemi'ne girmesine neden olan iç etkenlerden biri aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Coğrafi Keşifler sonucu ticaret yollarının değişmesi.",
+                "Avrupa'daki merkezi krallıkların güçlenmesi.",
+                "Tımar sisteminin bozulması ve ordunun disiplinsizleşmesi.",
+                "Kapitülasyonların yaygınlaşması.",
+                "Ateşli silahlarda Avrupa'nın gerisinde kalınması."
+              ],
+              "kategoriId": "tarih",
+              "sira": 64
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nin Batı'nın üstünlüğünü kabul ederek ilk kez büyük çapta toprak kaybettiği ve Gerileme Dönemi'ne girmesine neden olan antlaşma aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "Zitvatorok Antlaşması",
+                "Prut Antlaşması",
+                "Pasarofça Antlaşması",
+                "Belgrad Antlaşması",
+                "Karlofça Antlaşması"
+              ],
+              "kategoriId": "tarih",
+              "sira": 65
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nde ilk anayasal düzen ve parlamenter sisteme geçişin yaşandığı dönem aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Tanzimat Dönemi",
+                "Islahat Dönemi",
+                "Lale Devri",
+                "Birinci Meşrutiyet Dönemi",
+                "İkinci Meşrutiyet Dönemi"
+              ],
+              "kategoriId": "tarih",
+              "sira": 66
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nde uygulanan Tımar Sistemi'nin sağladığı faydalar arasında aşağıdakilerden hangisi gösterilemez?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Hazineden para çıkmadan güçlü bir ordu beslenmesi.",
+                "Üretimde sürekliliğin sağlanması ve denetlenmesi.",
+                "Taşrada merkezi otoritenin temsil edilmesi.",
+                "Toprak mülkiyetinin tamamen köylüye ait olması.",
+                "Bölgenin güvenliğinin sağlanması."
+              ],
+              "kategoriId": "tarih",
+              "sira": 67
+          },
+          {
+              "soruMetni": "Osmanlı Devleti’nde aşağıdakilerden hangisi hiyerarşik sıralamada diğerlerinden yüksektir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Nişancı",
+                "Kazasker",
+                "Sadrazam",
+                "Defterdar",
+                "Reisûlküttap"
+              ],
+              "kategoriId": "tarih",
+              "sira": 68
+          },
+          {
+              "soruMetni": "Kitab-ı Bahriye adlı eseri ve yaptığı haritalarla ünlü denizci aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Kılıç Ali Reis",
+                "Piri Reis",
+                "Murat Reis",
+                "Barbaros Hayrettin",
+                "Seyd Ali Reis"
+              ],
+              "kategoriId": "tarih",
+              "sira": 69
+          },
+          {
+              "soruMetni": "I. Memluk, \nII. Osmanlı, \nIII. Selçuklu\n\nYukarıdaki Devletlerin hangilerinde saltanat makamı içinde halifelik anlayışı uygulanmıştır?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Yalnız I",
+                "Yalnız II",
+                "I ve II",
+                "I ve III",
+                "I, II ve III"
+              ],
+              "kategoriId": "tarih",
+              "sira": 70
+          },
+          {
+              "soruMetni": "Osmanlı Devleti’nde resmi tarih yazarlarına verilen ad aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Nişancı",
+                "Defterdar",
+                "Vakanüvis",
+                "Reisülküttap",
+                "Mültezim"
+              ],
+              "kategoriId": "tarih",
+              "sira": 71
+          },
+          {
+              "soruMetni": "Aşağıdaki gelişmelerden hangisi, 20. yüzyıl başlarında Osmanlı Devleti'nin Kuzey Afrika'daki son toprak parçasını kaybetmesine neden olmuştur?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "I. Balkan Savaşı",
+                "II. Meşrutiyet'in ilanı",
+                "Trablusgarp Savaşı",
+                "31 Mart İsyanı",
+                "II. Balkan Savaşı"
+              ],
+              "kategoriId": "tarih",
+              "sira": 72
+          },
+          {
+              "soruMetni": "Osmanlı'nın dağılmasını engellemeyi amaçlayan, dil, din ve ırk farkı gözetmeksizin tüm vatandaşları kapsayan ve II. Meşrutiyet döneminde önemini yitiren fikir akımı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "İslamcılık",
+                "Türkçülük",
+                "Osmanlıcılık",
+                "Batıcılık",
+                "Adem-i Merkeziyetçilik"
+              ],
+              "kategoriId": "tarih",
+              "sira": 73
+          },
+          {
+              "soruMetni": "Osmanlı Devleti'nin Trablusgarp Savaşı'nda İtalya'ya karşı karadan yardım gönderememesinin temel nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Osmanlı donanmasının İtalya tarafından batırılması.",
+                "Mısır'ın İngiltere işgali altında olması.",
+                "Kuzey Afrika'daki deniz üslerinin yetersiz kalması.",
+                "Bölge halkının Osmanlı'ya karşı isyan etmesi.",
+                "Trablusgarp'ın İtalya'ya çok yakın olması."
+              ],
+              "kategoriId": "tarih",
+              "sira": 74
+          },
+          {
+              "soruMetni": "II. Balkan Savaşı'nın temel nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Rusya'nın sıcak denizlere inme politikası.",
+                "Osmanlı'nın kaybettiği toprakları geri almak istemesi.",
+                "Balkan devletlerinin I. Balkan Savaşı ganimetlerini paylaşamaması.",
+                "Sırbistan ve Bulgaristan arasındaki sınır anlaşmazlığı.",
+                "Avusturya-Macaristan'ın bölgedeki etkisi."
+              ],
+              "kategoriId": "tarih",
+              "sira": 75
+          },
+          {
+              "soruMetni": "Kurtuluş Savaşı'nın hazırlık döneminde, aşağıdaki gelişmelerden hangisi ile \"milletin bağımsızlığını yine milletin azim ve kararı kurtaracaktır\" ilkesi ilk kez benimsenmiştir?",
+              "dogruCevapIndex": 0,
+              "secenekler": [
+                "Amasya Genelgesi",
+                "Erzurum Kongresi",
+                "Sivas Kongresi",
+                "Misak-ı Millî kararları",
+                "Havza Genelgesi"
+              ],
+              "kategoriId": "tarih",
+              "sira": 76
+          },
+          {
+              "soruMetni": "Aşağıdaki Milli Mücadele dönemine ait kararlardan hangisi, yeni ve bağımsız bir Türk devleti kurulması yolunda atılan ilk önemli adım olarak kabul edilir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Temsil Heyeti'nin kurulması.",
+                "Kuva-yı Milliye'nin kurulması.",
+                "Manda ve himayenin kesin olarak reddedilmesi.",
+                "Misak-ı Millî'nin ilan edilmesi.",
+                "Temsil Heyeti'nin tüm yurdu temsil eder hale gelmesi."
+              ],
+              "kategoriId": "tarih",
+              "sira": 77
+          },
+          {
+              "soruMetni": "Kurtuluş Savaşı'nın Batı Cephesi'ndeki muharebelerden sonra imzalanan, aşağıdaki uluslararası antlaşmalardan hangisi ile İtilaf Devletleri arasındaki birlik bozulmuş ve Fransa, TBMM Hükûmetini resmen tanımıştır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Lozan Barış Antlaşması",
+                "Gümrü Antlaşması",
+                "Moskova Antlaşması",
+                "Ankara Antlaşması",
+                "Mudanya Ateşkes Antlaşması"
+              ],
+              "kategoriId": "tarih",
+              "sira": 78
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nde, saltanatın kaldırılması ile aşağıdaki gelişmelerden hangisi doğrudan gerçekleşmiştir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Ankara'nın başkent ilan edilmesi.",
+                "Laikliğe geçişin ilk ve en önemli adımı atılmıştır.",
+                "Devletin yönetim biçiminin Cumhuriyet olarak belirlenmesi.",
+                "Yeni Türk Devleti'nin, İstanbul Hükümeti ile olan hukuki bağı sona ermiştir.",
+                "Halifelik kurumunun işlevsiz kalması."
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 79
+          },
+          {
+              "soruMetni": "Tevhid-i Tedrisat Kanunu'nun kabul edilmesiyle ulaşılan temel hedefler arasında aşağıdakilerden hangisi yer alır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Medreseleri kapatarak din eğitimini tamamen yasaklamak.",
+                "Yabancı okulları tamamen kapatarak Batı etkisini ortadan kaldırmak.",
+                "Eğitimde bilimsel esasları hakim kılmak ve öğretimde birliği sağlamak.",
+                "Zorunlu eğitimi 4 yıldan 8 yıla çıkarmak.",
+                "Karma eğitime geçişi zorunlu kılmak."
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 80
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nin, ekonomik bağımsızlığını sağlamak ve millî ekonomiyi oluşturmak amacıyla yaptığı ilk önemli icraat ve kararlar nerede alınmıştır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Lozan Konferansı",
+                "I. Beş Yıllık Sanayi Planı",
+                "I. İzmir İktisat Kongresi",
+                "Teşvik-i Sanayi Kanunu",
+                "Ziraat Bankası'nın kurulması"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 81
+          },
+          {
+              "soruMetni": "Atatürk Dönemi'nde görülen, devletin ekonomik hayata bizzat yatırımcı olarak katıldığı ve özel teşebbüsün yetersiz kaldığı alanlarda sanayileşmeyi ön plana çıkardığı ekonomik model aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Liberalizm",
+                "Kapitalizm",
+                "Devletçilik",
+                "Sosyalizm",
+                "Karma Ekonomi"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 82
+          },
+          {
+              "soruMetni": "Mustafa Kemal Atatürk'ün direktifleriyle kurulan Serbest Cumhuriyet Fırkası'nın temel amacı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Merkezi yönetimi güçlendirmek",
+                "Muhalif görüşleri dile getirecek bir denetim mekanizması oluşturmak.",
+                "Laiklik ilkesinin uygulanmasına karşı çıkmak.",
+                "Ekonomik politikaları özel teşebbüs yerine devletçilik yönünde değiştirmek.",
+                "Milletler Cemiyeti'ne üyelik sürecini hızlandırmak."
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 83
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nin, Lozan Barış Antlaşması'ndan sonra çözüme kavuşturduğu ilk uluslararası sorun aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Boğazlar Sorunu",
+                "Hatay Sorunu",
+                "Dış Borçlar Sorunu",
+                "Musul Sorunu",
+                "Nüfus Mübadelesi Sorunu"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 84
+          },
+          {
+              "soruMetni": "Türkiye'nin, Milletler Cemiyeti'ndeki etkinliğini artırmak ve bölge barışına katkıda bulunmak amacıyla, Balkan Devletleri ile imzaladığı antlaşma aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Sadabat Paktı",
+                "Briand-Kellogg Paktı",
+                "Montrö Boğazlar Sözleşmesi",
+                "Balkan Antantı",
+                "Atlantik Paktı"
+              ],
+              "kategoriId": "inkılap-tarihi",
+              "sira": 85
+          },
+          {
+              "soruMetni": "II. Dünya Savaşı sonrasında, Amerika Birleşik Devletleri'nin ekonomik yönden zor durumda olan Avrupa ülkelerine siyasi rejimlerini korumaları karşılığında yaptığı ekonomik yardım planı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Truman Doktrini",
+                "COMECON",
+                "Molotof Planı",
+                "Marshall Planı",
+                "Schuman Planı"
+              ],
+              "kategoriId": "tarih",
+              "sira": 86
+          },
+          {
+              "soruMetni": "Türkiye'nin, Soğuk Savaş döneminde Batı İttifakı'na dâhil olma ve sınırlarını güvenlik altına alma çabalarının bir sonucu olarak katıldığı uluslararası askeri örgüt aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "SEATO",
+                "Varşova Paktı",
+                "Bağdat Paktı",
+                "Avrupa Konseyi",
+                "NATO"
+              ],
+              "kategoriId": "tarih",
+              "sira": 87
+          },
+          {
+            "soruMetni": "I. Bakı yönü güneydir.\nII. Gölgeler daima kuzeye düşer.\nIII. Öğle vakti güneş daima kuzeyden gelir.\n\nYukarıdakilerden hangileri Türkiye'nin Yengeç Dönencesi'nin kuzeyinde yer almasının sonuçlarındandır?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Yalnız I",
+              "Yalnız II",
+              "Yalnız III",
+              "I ve II",
+              "I, II ve III"
+            ],
+            "kategoriId": "cografya",
+            "sira": 88
+          },
+          {
+            "soruMetni": "Türkiye'nin bulunduğu coğrafi konumun sonuçları arasında aşağıdakilerden hangisi özel konumun sonuçlarından biridir?",
+            "dogruCevapIndex": 3,
+            "secenekler": [
+              "Cephesel yağışların görülmesi.",
+              "Aynı anda birden fazla mevsim özelliğinin yaşanması.",
+              "Akdeniz iklim kuşağında yer alması.",
+              "Batıdan doğuya doğru yükseltinin artması.",
+              "Ekvator'dan kutuplara doğru sıcaklığın azalması."
+            ],
+            "kategoriId": "cografya",
+            "sira": 89
+          },
+          {
+              "soruMetni": "Karadeniz İklimi'nin görüldüğü kıyı bölgelerinde, yıl boyunca nem oranının yüksek olması ve sıcaklık farklarının az olmasının temel nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Dağların denize paralel uzanması.",
+                "Yıl boyunca bol ve düzenli yağış alması.",
+                "Ormanların geniş alan kaplaması.",
+                "Bölgenin yüksek enlemlerde yer alması.",
+                "Karasallığın etkisinin güçlü olması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 90
+          },
+          {
+              "soruMetni": "Türkiye'de bir bölgenin yüksek kesimlerinde iğne yapraklı ormanların görülmesine rağmen, daha alçak kesimlerde geniş yapraklı ormanların görülmesinin nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Toprak tipinin değişmesi.",
+                "Yükseltiye bağlı olarak sıcaklık değerlerinin azalması.",
+                "Bakı etkisinin azalması.",
+                "Yağış rejiminin değişmesi.",
+                "Nemliliğin azalması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 91
+          },
+          {
+              "soruMetni": "Aşağıdakilerden hangisi, Türkiye'nin III. ve IV. Jeolojik zamanlarda oluşumunu tamamlamasının doğrudan bir sonucudur?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Dört mevsimin belirgin yaşanması.",
+                "Üç tarafının denizlerle çevrili olması.",
+                "Aktif fay hatlarının ve genç volkanik arazilerin bulunması.",
+                "Yağış rejiminin düzensiz olması.",
+                "Batıdan doğuya doğru yükseltinin azalması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 92
+          },
+          {
+              "soruMetni": "Aşağıdaki akarsu rejimlerinden hangisi, Türkiye'deki akarsuların genel rejim özelliklerinden biri değildir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "Düzensiz rejimli olmaları.",
+                "Rejimlerinde eriyen kar sularının etkili olması.",
+                "Debilerinin ilkbaharda artması.",
+                "Yaz aylarında debilerinin minimum seviyeye inmesi.",
+                "Yıl boyunca düzenli ve bol su taşımaları."
+              ],
+              "kategoriId": "cografya",
+              "sira": 93
+          },
+          {
+              "soruMetni": "Türkiye'deki göllerden hangisi, oluşum türü bakımından diğerlerinden farklıdır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Tuz Gölü",
+                "Burdur Gölü",
+                "Manyas Gölü",
+                "Nemrut Gölü",
+                "Hazar Gölü"
+              ],
+              "kategoriId": "cografya",
+              "sira": 94
+          },
+          {
+              "soruMetni": "Türkiye'nin Boyuna Kıyı Tipi'nin görüldüğü yerlerde, denizel etkinin iç kısımlara ulaşamamasının temel nedeni nedir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Kıyıda aktif fay hatlarının bulunması.",
+                "Dağların kıyıya paralel ve yakın uzanması.",
+                "Kıyı derinliğinin fazla olması.",
+                "Yıllık yağış miktarının az olması.",
+                "Akarsu rejimlerinin düzensiz olması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 95
+          },
+          {
+              "soruMetni": "Türkiye'deki yer şekillerinin kısa mesafelerde değişiklik göstermesi ve engebeli olması, aşağıdaki durumların hangisinde olumlu bir etki yaratmıştır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Ulaşım maliyetlerinin düşmesi.",
+                "Tarım alanlarının genişlemesi.",
+                "Akarsu rejimlerinin düzenlenmesi.",
+                "Turizm çeşitliliğinin artması.",
+                "Tarımsal nüfus yoğunluğunun azalması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 96
+          },
+          {
+              "soruMetni": "Türkiye'de nüfus artış hızının genel olarak düşüş göstermesinin temel nedenleri arasında hangisi gösterilemez?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Eğitim seviyesinin yükselmesi",
+                "Dış göç edenlerin sayısının artması",
+                "Kadınların iş hayatına katılımının artması",
+                "Kentleşme oranının artması",
+                "Tarımda makine kullanımının artması"
+              ],
+              "kategoriId": "cografya",
+              "sira": 97
+          },
+          {
+              "soruMetni": "Aşağıdaki bölgelerden hangisi, tarımsal nüfus yoğunluğunun en fazla olduğu bölgedir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "İç Anadolu Bölgesi",
+                "Güneydoğu Anadolu Bölgesi.",
+                "Ege Bölgesi.",
+                "Doğu Karadeniz Bölümü.",
+                "Marmara Bölgesi."
+              ],
+              "kategoriId": "cografya",
+              "sira": 98
+          },
+          {
+              "soruMetni": "Aşağıdakilerden hangisi, Türkiye'de nüfusun dağılışını etkileyen beşeri faktörlerden biri değildir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Tarihi ve kültürel özellikler.",
+                "Sanayi faaliyetleri.",
+                "Ulaşım imkânları.",
+                "Yer altı kaynakları.",
+                "Tarımsal faaliyetler."
+              ],
+              "kategoriId": "cografya",
+              "sira": 99
+          },
+          {
+              "soruMetni": "Aşağıdaki tarım ürünlerinden hangisi, Türkiye'de yetiştirildiği alanlar göz önüne alındığında, tamamen devlet kontrolünde olan bir ürün değildir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Çay",
+                "Tütün",
+                "Haşhaş",
+                "Mısır",
+                "Kenevir"
+              ],
+              "kategoriId": "cografya",
+              "sira": 100
+          },
+          {
+              "soruMetni": "Aşağıdakilerden hangisi, Türkiye'de deniz balıkçılığının gelişmemesinin nedenleri arasında en az etkili olanıdır?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Açık deniz balıkçılığının gelişmemesi.",
+                "Geleneksel yöntemlerle balıkçılık yapılması.",
+                "Su ürünleri yetiştiriciliğine yeterince önem verilmemesi.",
+                "Kıyı derinliğinin fazla olması.",
+                "Balıkçı barınaklarının yetersiz olması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 101
+          },
+          {
+              "soruMetni": "Aşağıdakilerden hangisi, Türkiye'nin yenilenemeyen enerji kaynaklarından biri değildir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "Taş kömürü",
+                "Linyit",
+                "Petrol",
+                "Doğalgaz",
+                "Jeotermal enerji"
+              ],
+              "kategoriId": "cografya",
+              "sira": 102
+          },
+          {
+              "soruMetni": "Türkiye'nin enerji ihtiyacını karşılamada önemli bir paya sahip olan ve rezervlerinin büyük bir kısmı Afşin-Elbistan'da bulunan yer altı kaynağı aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Taş kömürü",
+                "Doğalgaz",
+                "Uranyum",
+                "Linyit",
+                "Bor"
+              ],
+              "kategoriId": "cografya",
+              "sira": 103
+          },
+          {
+              "soruMetni": "Türkiye'de demir-çelik sanayisinin Karabük ve Ereğli gibi Batı Karadeniz kıyılarında yoğunlaşmasının temel nedeni aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Bölgenin demir cevheri rezervlerine yakın olması.",
+                "Ulaşım imkânlarının çok gelişmiş olması.",
+                "Eritmede kullanılan taş kömürü yataklarına yakın olması.",
+                "Nüfus yoğunluğunun fazla olması.",
+                "Enerji ihtiyacının HES'lerle karşılanması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 104
+          },
+          {
+              "soruMetni": "Güneş enerjisi potansiyeli Türkiye'de oldukça yüksek olmasına rağmen, bu enerjiden elektrik üretiminin istenilen seviyeye ulaşamamasının nedenleri arasında aşağıdakilerden hangisi yer alır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Güneşlenme süresinin yetersiz kalması.",
+                "Tüketici talebinin az olması.",
+                "İlk yatırım maliyetlerinin yüksek olması.",
+                "Karasal iklimin geniş yer kaplaması.",
+                "Yağışların yıl boyunca düzenli olması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 105
+          },
+          {
+            "soruMetni": "Turizm faaliyetlerinin bir ülkenin ekonomisine olan en önemli ve doğrudan katkısı aşağıdakilerden hangisidir?",
+            "dogruCevapIndex": 2,
+            "secenekler": [
+              "İşsizlik oranını tamamen ortadan kaldırması.",
+              "Tarımsal üretimi artırması.",
+              "Dış ticaret açığının kapatılmasına katkıda bulunması.",
+              "Tekstil sanayisinin gelişmesini hızlandırması.",
+              "Ulaşım ağlarının sadece kıyı bölgelerinde gelişmesini sağlaması."
+            ],
+            "kategoriId": "cografya",
+            "sira": 106
+          },
+          {
+              "soruMetni": "Aşağıdakilerden hangisi, Doğu Anadolu Bölgesi'nin diğer bölgelerden ayrılan belirgin fiziki özelliklerinden biri değildir?",
+              "dogruCevapIndex": 4,
+              "secenekler": [
+                "Ortalama yükseltinin en fazla olması.",
+                "Volkanik arazilerin geniş yer kaplaması.",
+                "Yıllık sıcaklık farklarının çok yüksek olması.",
+                "Tektonik ovaların (çöküntü alanları) geniş yer tutması.",
+                "Kıyıdan başlayarak dağların denize paralel uzanması."
+              ],
+              "kategoriId": "cografya",
+              "sira": 107
+          },
+          {
+              "soruMetni": "Güneydoğu Anadolu Bölgesi'nin tarımsal potansiyelini önemli ölçüde artıran, sulama ve hidroelektrik enerji üretimine katkı sağlayan en büyük bölgesel kalkınma projesi aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Doğu Karadeniz Projesi",
+                "Zonguldak-Bartın-Karabük Projesi",
+                "Güneydoğu Anadolu Projesi",
+                "Yeşilırmak Havzası Gelişim Projesi",
+                "Konya Ovası Projesi"
+              ],
+              "kategoriId": "cografya",
+              "sira": 108
+          },
+          {
+              "soruMetni": "Hukuk kurallarının diğer sosyal düzen kurallarından ayrılmasını sağlayan en temel özellik aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Toplumun büyük bir kısmı tarafından benimsenmiş olması.",
+                "Zamanla değişime uğrayabilmesi.",
+                "Devlet gücüyle desteklenmiş maddi bir yaptırımının bulunması.",
+                "Bireyler arası ilişkileri düzenlemesi.",
+                "Genel ve soyut nitelikte olması."
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 109
+          },
+          {
+              "soruMetni": "Bir hakkın kazanılmasında iyiniyetin korunmasını temel alan, kanunun bir hakkın doğuşuna veya bir hukuki sonucun oluşmasına bağladığı, olayın bilinmemesi veya yanlış bilinmesi hali hangi hukuki kavramla ifade edilir?",
+              "dogruCevapIndex": 0,
+              "secenekler": [
+                "İyiniyet",
+                "Dürüstlük Kuralı",
+                "Hak Kazanımı",
+                "Hakkın Kötüye Kullanılması",
+                "Hak Ehliyeti"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 110
+          },
+          {
+              "soruMetni": "Aşağıdakilerden hangisi, hukuka aykırı bir fiil veya kararın, ilgili kişinin o fiil ya da karardan önceki duruma geri getirilmesi anlamına gelen hukuki yaptırımdır?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Ceza",
+                "Tazminat",
+                "İptal",
+                "Geçersizlik",
+                "Cebri İcra"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 111
+          },
+          {
+              "soruMetni": "Bir kişinin hukuki işlemleri yapabilme, hak ve borç altına girebilme ehliyetini ifade eden ve akıl sağlığı yerinde, ergin her bireyde aranan ehliyet türü aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Hak Ehliyeti",
+                "Fiil Ehliyeti",
+                "Sınırlı Ehliyet",
+                "Tam Ehliyet",
+                "Kısıtlı Ehliyet"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 112
+          },
+          {
+                "soruMetni": "Aşağıdakilerden hangisi, Türkiye'deki yüksek mahkemelerden biri değildir?",
+                "dogruCevapIndex": 4,
+                "secenekler": [
+                  "Anayasa Mahkemesi",
+                  "Yargıtay",
+                  "Danıştay",
+                  "Uyuşmazlık Mahkemesi",
+                  "Sayıştay"
+                ],
+                "kategoriId": "vatandaslik",
+                "sira": 113
+          },
+          {
+                "soruMetni": "Temel görevi kanunların, Cumhurbaşkanlığı kararnamelerinin ve TBMM İçtüzüğü'nün Anayasa'ya uygunluğunu denetlemek olan yüksek yargı organı aşağıdakilerden hangisidir?",
+                "dogruCevapIndex": 2,
+                "secenekler": [
+                  "Yargıtay",
+                  "Danıştay",
+                  "Anayasa Mahkemesi",
+                  "Uyuşmazlık Mahkemesi",
+                  "Sayıştay"
+                ],
+                "kategoriId": "vatandaslik",
+                "sira": 114
+          },
+          {
+              "soruMetni": "2026 yılında FIFA Dünya Kupası'na ev sahipliği yapacak olan Kuzey Amerika ülkeleri aşağıdakilerin hangisinde doğru verilmiştir?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Kanada, Brezilya, Meksika",
+                "ABD, Kanada, Meksika",
+                "ABD, Brezilya, Arjantin",
+                "İspanya, Portekiz, Fas",
+                "ABD, Kolombiya, Meksika"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 115
+          },
+          {
+              "soruMetni": "Uluslararası Para Fonu (IMF) ve Dünya Bankası gibi kuruluşların 2025-2026 küresel ekonomik tahminlerinde sıklıkla vurgulanan, dünya ekonomisini olumsuz etkilemesi beklenen iki temel risk faktörü aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Nüfus artış hızı ve turizm gelirleri.",
+                "Yenilenebilir enerji yatırımları ve okyanus temizliği.",
+                "Küresel enflasyon ve jeopolitik gerilimler.",
+                "Dijitalleşmenin yavaşlaması ve tarımsal verimliliğin artması.",
+                "Sağlık harcamalarının azalması ve uzay turizminin gelişmesi."
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 116
+          },
+          {
+              "soruMetni": "Türkiye'nin ilk astronotu unvanını alan Alper Gezeravcı, Ocak 2024'te gerçekleştirdiği uzay görevi boyunca hangi uluslararası uzay istasyonunda kalmıştır?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Çin Uzay İstasyonu (Tiangong)",
+                "Uluslararası Uzay İstasyonu (ISS)",
+                "Rus Uzay İstasyonu (MIR)",
+                "Avrupa Uzay İstasyonu (ESA)",
+                "Hubble Uzay Teleskobu"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 117
+          },
+          {
+              "soruMetni": "Birleşmiş Milletler Genel Kurulu tarafından, küresel ekosistemlerin korunmasına dikkat çekmek amacıyla 2025 yılı hangi tema ile uluslararası yıl ilan edilmiştir?",
+              "dogruCevapIndex": 2,
+              "secenekler": [
+                "Uluslararası Sürdürülebilir Turizm Yılı",
+                "Uluslararası Hububat Yılı",
+                "Uluslararası Buzul Koruma Yılı",
+                "Uluslararası Cam Yılı",
+                "Uluslararası Barış ve Güven Yılı"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 118
+          },
+          {
+              "soruMetni": "Şinasi tarafından yazılan ve Tercüman-ı Ahval Gazetesi’nde yayımlanan ilk Türk tiyatro eseri aşağıdakilerden hangisidir?",
+              "dogruCevapIndex": 3,
+              "secenekler": [
+                "Vatan Yahut Silistre",
+                "Gülnihal",
+                "Zoraki Tabip",
+                "Şair Evlenmesi",
+                "Afife Anjelik"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 119
+          },
+          {
+              "soruMetni": "Türkiye Cumhuriyeti'nin ilk şeker fabrikası hangi ilimizde kurulmuştur?",
+              "dogruCevapIndex": 1,
+              "secenekler": [
+                "Eskişehir",
+                "Uşak",
+                "Ankara",
+                "Konya",
+                "Afyonkarahisar"
+              ],
+              "kategoriId": "vatandaslik",
+              "sira": 120
           }
-          
-
-
-
-          
-            
-          
-
-        ]
+          ]
       }
       ],
    "achievements": [
