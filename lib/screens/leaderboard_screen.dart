@@ -629,8 +629,9 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
                 podiumShadowColor,
               ),
               DraggableScrollableSheet(
-                initialChildSize: 0.45,
-                minChildSize: 0.4,
+                // PODYUM GÖRÜNÜRLÜK DÜZELTMESİ
+                initialChildSize: 0.38,
+                minChildSize: 0.38,
                 maxChildSize: 0.9,
                 builder: (context, scrollController) {
                   return Container(
@@ -695,11 +696,11 @@ class _LeaderboardScreenState extends State<LeaderboardScreen>
               podiumShadowColor,
             ),
             DraggableScrollableSheet(
-              // --- PODYUM GÖRÜNÜRLÜK DÜZELTMESİ BURADA ---
+              // PODYUM GÖRÜNÜRLÜK DÜZELTMESİ BURADA
               initialChildSize: 0.38, // %45'ten %38'e düşürüldü
               minChildSize: 0.38,
               maxChildSize: 0.9,
-              // --- DÜZELTME BİTTİ ---
+              // DÜZELTME BİTTİ
               builder: (context, scrollController) {
                 return Container(
                   decoration: BoxDecoration(

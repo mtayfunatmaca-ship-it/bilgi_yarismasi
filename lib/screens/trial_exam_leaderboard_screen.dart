@@ -3,10 +3,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-// --- YENİ IMPORTLAR ---
 import 'package:confetti/confetti.dart';
-import 'dart:math'; // Konfeti için
-// --- BİTTİ ---
+import 'dart:math';
 
 class TrialExamLeaderboardScreen extends StatefulWidget {
   final String trialExamId;
@@ -35,10 +33,8 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
   late List<Animation<double>> _podiumAnimations;
   Stream<QuerySnapshot>? _examLeaderboardStream;
 
-  // --- YENİ STATE'LER ---
   late ConfettiController _confettiController;
-  bool _isExamFinished = false; // Sınavın bitip bitmediğini tutar
-  // --- BİTTİ ---
+  bool _isExamFinished = false;
 
   @override
   void initState() {
@@ -46,7 +42,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     _currentUserId = _authService.currentUser?.uid;
 
     _initializeStream();
-    _checkExamStatus(); // <<< YENİ: Sınavın bitiş tarihini kontrol et
+    _checkExamStatus();
 
     // Animasyonlar (Aynı)
     _animationController = AnimationController(
@@ -71,11 +67,10 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
       );
     });
 
-    // --- YENİ: Konfeti Controller ---
+    // Konfeti Controller (Aynı)
     _confettiController = ConfettiController(
       duration: const Duration(seconds: 2),
     );
-    // --- BİTTİ ---
 
     _animationController.forward();
     _podiumAnimationController.forward();
@@ -86,7 +81,6 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Stream'i başlatan fonksiyon (Aynı)
   void _initializeStream() {
     _examLeaderboardStream = _firestore
         .collectionGroup('trialExamResults')
@@ -96,7 +90,6 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         .snapshots();
   }
 
-  // --- YENİ FONKSİYON: Sınavın bitip bitmediğini kontrol eder ---
   Future<void> _checkExamStatus() async {
     try {
       final examDoc = await _firestore
@@ -112,18 +105,16 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
         final DateTime endTime = endTimeTs.toDate();
         if (DateTime.now().isAfter(endTime)) {
           setState(() {
-            _isExamFinished = true; // Sınav bitmiş
+            _isExamFinished = true;
           });
-          _confettiController.play(); // Sınav bittiyse konfetiyi patlat
+          _confettiController.play();
         }
       }
     } catch (e) {
       print("Sınav durumu kontrol hatası: $e");
     }
   }
-  // --- YENİ FONKSİYON BİTTİ ---
 
-  // Yenileme fonksiyonu (Aynı)
   Future<void> _refreshData() async {
     _animationController.reset();
     _podiumAnimationController.reset();
@@ -132,7 +123,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     setState(() {
       _initializeStream();
     });
-    _checkExamStatus(); // Yenileyince durumu tekrar kontrol et
+    _checkExamStatus();
     await Future.delayed(const Duration(milliseconds: 500));
   }
 
@@ -140,7 +131,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
   void dispose() {
     _animationController.dispose();
     _podiumAnimationController.dispose();
-    _confettiController.dispose(); // <<< YENİ: Konfetiyi dispose et
+    _confettiController.dispose();
     super.dispose();
   }
 
@@ -151,7 +142,6 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
 
     return Scaffold(
       backgroundColor: colorScheme.background,
-      // --- GÜNCELLEME: Stack ve Confetti eklendi ---
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
@@ -193,7 +183,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               ],
             ),
           ),
-          // --- Konfeti Widget'ı ---
+          // Konfeti Widget'ı
           Align(
             alignment: Alignment.topCenter,
             child: ConfettiWidget(
@@ -212,13 +202,11 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               numberOfParticles: 20,
             ),
           ),
-          // --- GÜNCELLEME BİTTİ ---
         ],
       ),
     );
   }
 
-  // Liderlik İçeriği Oluşturucu
   Widget _buildLeaderboardContent({
     required Stream<QuerySnapshot> stream,
     required String puanField,
@@ -260,15 +248,12 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
 
         return Column(
           children: [
-            // --- YENİ: Şampiyon Kartı ---
-            // Sadece sınav bittiyse VE en az 1 kazanan varsa göster
             if (_isExamFinished && topThree.isNotEmpty)
               _buildWinnerCard(
                 topThree[0].data() as Map<String, dynamic>,
                 puanField,
               ),
 
-            // --- BİTTİ ---
             if (topThree.isNotEmpty)
               _buildPodiumSection(topThree, puanField, currentUserId),
             if (otherUsers.isNotEmpty)
@@ -285,7 +270,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // --- YENİ WIDGET: Sınav Şampiyonu Kartı ---
+  // --- GÜNCELLENDİ: Sınav Şampiyonu Kartı (KPSS Puanı 2 ondalık) ---
   Widget _buildWinnerCard(Map<String, dynamic> winnerData, String puanField) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
@@ -294,6 +279,9 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     final String emoji = winnerData['emoji'] ?? '🏆';
     final int puan = (winnerData[puanField] as num? ?? 0).toInt();
     final double kpssPuan = (winnerData['kpssPuan'] as num? ?? 0.0).toDouble();
+
+    // KPSS Puanını virgülden sonra 2 basamakla formatla
+    final String formattedKpssPuan = kpssPuan.toStringAsFixed(2);
 
     return Container(
       padding: const EdgeInsets.all(16),
@@ -346,7 +334,8 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
                   ),
                 ),
                 Text(
-                  '${kpssPuan.toStringAsFixed(3)} KPSS Puanı ($puan Skor)',
+                  // K-Puanı formatında gösterim
+                  '$formattedKpssPuan K-Puanı ($puan Skor)',
                   style: textTheme.bodyMedium?.copyWith(
                     color: Colors.white.withOpacity(0.9),
                   ),
@@ -358,9 +347,8 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
       ),
     );
   }
-  // --- BİTTİ ---
 
-  // Podyum Bölümü
+  // Podyum Bölümü (Değişiklik yok)
   Widget _buildPodiumSection(
     List<QueryDocumentSnapshot> topThree,
     String puanField,
@@ -432,7 +420,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Podyum Kullanıcısı Widget'ı (isPro kontrolü dahil)
+  // --- GÜNCELLENDİ: Podyum Kullanıcısı Widget'ı (KPSS Puanı 2 ondalık) ---
   Widget _buildPodiumUser({
     required Map<String, dynamic> userData,
     required int rank,
@@ -440,11 +428,16 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     required bool isCurrentUser,
   }) {
     final puan = (userData[puanField] as num? ?? 0).toInt();
+    // KPSS Puanını çek
+    final double kpssPuan = (userData['kpssPuan'] as num? ?? 0.0).toDouble();
     final kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
     final emoji = userData['emoji'] ?? '🙂';
     final bool isPro = userData['isPro'] ?? false;
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+
+    // KPSS Puanını virgülden sonra 2 basamakla formatla
+    final String formattedKpssPuan = kpssPuan.toStringAsFixed(2);
 
     double heightFactor = rank == 1 ? 1.0 : (rank == 2 ? 0.85 : 0.7);
     Color rankColor;
@@ -541,7 +534,8 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
               FittedBox(
                 fit: BoxFit.scaleDown,
                 child: Text(
-                  '$puan',
+                  // K-Puanı formatında gösterim
+                  formattedKpssPuan,
                   style: textTheme.titleMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -581,7 +575,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Diğer Kullanıcılar Bölümü
+  // Diğer Kullanıcılar Bölümü (Değişiklik yok)
   Widget _buildOtherUsersSection(
     List<QueryDocumentSnapshot> otherUsers,
     String puanField,
@@ -629,19 +623,25 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Liste Elemanı Widget'ı (isPro kontrolü dahil)
+  // --- GÜNCELLENDİ: Liste Elemanı Widget'ı (KPSS Puanı 2 ondalık) ---
   Widget _buildUserListItem({
     required Map<String, dynamic> userData,
     required int rank,
     required String puanField,
     required bool isCurrentUser,
   }) {
-    final puan = (userData[puanField] as num? ?? 0).toInt();
-    final kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
-    final emoji = userData['emoji'] ?? '🙂';
+    // Ham skor
+    final int puan = (userData[puanField] as num? ?? 0).toInt();
+    // KPSS Puanını çek
+    final double kpssPuan = (userData['kpssPuan'] as num? ?? 0.0).toDouble();
+    final String kullaniciAdi = userData['kullaniciAdi'] ?? 'İsimsiz';
+    final String emoji = userData['emoji'] ?? '🙂';
     final bool isPro = userData['isPro'] ?? false;
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+
+    // KPSS Puanını virgülden sonra 2 basamakla formatla
+    final String formattedKpssPuan = kpssPuan.toStringAsFixed(2);
 
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
@@ -688,7 +688,8 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
           ],
         ),
         trailing: Text(
-          '$puan Puan',
+          // K-Puanı formatında gösterim
+          '$formattedKpssPuan Puan',
           style: textTheme.bodyMedium?.copyWith(
             fontWeight: FontWeight.bold,
             color: Colors.green.shade700,
@@ -700,14 +701,14 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Mevcut Kullanıcı mı?
+  // Mevcut Kullanıcı mı? (Değişiklik yok)
   bool _isCurrentUser(DocumentSnapshot userDoc, String? currentUserId) {
     var data = userDoc.data() as Map<String, dynamic>? ?? {};
     var userId = data.containsKey('userId') ? data['userId'] : userDoc.id;
     return userId == currentUserId;
   }
 
-  // Hata Durumu Widget'ı
+  // Hata Durumu Widget'ı (Değişiklik yok)
   Widget _buildErrorState(VoidCallback onRetry, String message) {
     final colorScheme = Theme.of(context).colorScheme;
     return Center(
@@ -755,7 +756,7 @@ class _TrialExamLeaderboardScreenState extends State<TrialExamLeaderboardScreen>
     );
   }
 
-  // Boş Durum Widget'ı
+  // Boş Durum Widget'ı (Değişiklik yok)
   Widget _buildEmptyState(String message, BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     return Center(

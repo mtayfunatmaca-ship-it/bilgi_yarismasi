@@ -230,7 +230,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Center(
                           child: Image.asset(
                             'assets/images/login_background.png', // <<< SENİN GÖRSELİNİN YOLU
-                            fit: BoxFit.contain,
                             // Hata durumunda (resim yolu yanlışsa)
                             errorBuilder: (context, error, stackTrace) {
                               print("Giriş ekranı resmi yüklenemedi: $error");
@@ -253,8 +252,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Giriş yap ve devam et',
-                        style: theme.textTheme.bodyLarge?.copyWith(
+                        'Sınav dünyasına erişmek için lütfen kayıt olun!',
+                        style: theme.textTheme.bodyMedium?.copyWith(
                           color: colorScheme.onPrimary.withOpacity(0.8),
                         ),
                       ),

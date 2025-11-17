@@ -38,6 +38,7 @@ dependencies:
     sdk: flutter
   pdfx: ^2.9.2
   http: ^1.5.0
+  firebase_messaging: ^16.0.4
   
 
 
@@ -64,6 +65,7 @@ flutter:
   assets:
     - assets/sorular.json
     - assets/images/google_logo.png
+    - assets/images/login_background.png
 
 
   uses-material-design: true

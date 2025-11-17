@@ -34,38 +34,58 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
   @override
   void initState() {
     super.initState();
+
+    // 1. Kullanıcı sonuçlarını yükle (context'e ihtiyaç duymadığı için burada çağırılabilir)
     _loadUserResults();
+
+    // 2. Context'e ihtiyaç duyan bildirim yükleme işlemini bir sonraki frame'e ertele
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _loadScheduledNotifications();
+    });
   }
 
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
+  // --- YENİ METOT ---
+  // initState içinde doğrudan async işlem yapılamayacağı için ayrı bir metot oluşturduk.
+  Future<void> _loadScheduledNotifications() async {
+    // `context.read` initState'de güvenle kullanılabilir.
     final notificationService = context.read<NotificationService>();
-    notificationService.requestExactAlarmPermission();
 
-    // Planlanmış bildirimleri çek ve UI'ı güncelle
-    notificationService.flutterLocalNotificationsPlugin
-        .pendingNotificationRequests()
-        .then((pendingList) {
-          if (mounted) {
-            setState(() {
-              // Bu metoddan sadece ID'leri çekebiliriz, zaman bilgisini çekmek karmaşıktır.
-              // Çözüm, zamanı kurarken SharedPreferences'a kaydetmek olacaktır.
-              // Şu an sadece runtime'da (uygulama açıksa) kurulan zamanı göstereceğiz.
-              _scheduledNotificationIds = pendingList
-                  .map((n) => n.payload ?? '')
-                  .toSet();
-            });
-          }
+    // Not: İzin zaten main.dart'dan isteniyor, burada tekrar istemeye gerek yok.
+    // notificationService.requestExactAlarmPermission();
+
+    try {
+      final pendingList = await notificationService
+          .flutterLocalNotificationsPlugin
+          .pendingNotificationRequests();
+      if (mounted) {
+        setState(() {
+          _scheduledNotificationIds = pendingList
+              .map((n) => n.payload ?? '')
+              .where(
+                (payload) => payload.isNotEmpty,
+              ) // Boş payload'ları temizle
+              .toSet();
         });
+      }
+    } catch (e) {
+      print("Planlanmış bildirimler yüklenirken hata: $e");
+    }
   }
+
+  // --- BU METOD ARTIK GEREKSİZ VE KALDIRILDI ---
+  // @override
+  // void didChangeDependencies() {
+  //   super.didChangeDependencies();
+  //   // ... bu bloktaki tüm kod taşındı ...
+  // }
+  // --- BİTTİ ---
 
   @override
   void dispose() {
     super.dispose();
   }
 
+  // ... _loadUserResults, _getExamStatus, _getStatusPriority metotları aynı kalacak ...
   Future<void> _loadUserResults() async {
     if (!mounted) return;
     final user = _authService.currentUser;
@@ -129,7 +149,7 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     }
   }
 
-  // --- YENİ FONKSİYON: Giriş Uyarısı ---
+  // ... geri kalan tüm metotlar (_showStartExamWarningDialog, _promptUserForDateTime, _toggleNotification, _showProFeatureDialog, build) aynı kalacak ...
   void _showStartExamWarningDialog({
     required String examId,
     required String title,
@@ -159,12 +179,9 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
               },
             ),
             ElevatedButton(
-              // Başla butonu
               child: const Text('BAŞLA'),
               onPressed: () {
-                Navigator.of(context).pop(); // Dialog'u kapat
-
-                // Sınava Yönlendirme (Orijinal Navigator.push mantığı)
+                Navigator.of(context).pop();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -185,14 +202,11 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
       },
     );
   }
-  // --- YENİ FONKSİYON BİTTİ ---
 
-  // --- YENİ FONKSİYON: Tarih/Saat Seçici ---
   Future<void> _promptUserForDateTime(String examId, String examTitle) async {
     final notificationService = context.read<NotificationService>();
     final now = DateTime.now();
 
-    // 1. TARİH Seçiciyi Göster
     DateTime? selectedDate = await showDatePicker(
       context: context,
       initialDate: now.add(const Duration(hours: 1)),
@@ -206,7 +220,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
 
     if (selectedDate == null) return;
 
-    // 2. SAAT Seçiciyi Göster
     TimeOfDay? selectedTime = await showTimePicker(
       context: context,
       initialTime: TimeOfDay.fromDateTime(now.add(const Duration(hours: 1))),
@@ -217,7 +230,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
 
     if (selectedTime == null) return;
 
-    // 3. Tarih ve Saati Birleştir
     DateTime finalNotificationTime = DateTime(
       selectedDate.year,
       selectedDate.month,
@@ -226,7 +238,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
       selectedTime.minute,
     );
 
-    // Geçmiş Kontrolü
     if (finalNotificationTime.isBefore(DateTime.now())) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -237,7 +248,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
       return;
     }
 
-    // 4. Bildirimi Kur
     await notificationService.scheduleExamNotification(
       examId: examId,
       title: "$examTitle Hatırlatıcısı",
@@ -245,14 +255,11 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
       scheduledTime: finalNotificationTime,
     );
 
-    // 5. Başarı Mesajı ve UI Güncelleme
     final formatter = DateFormat('dd MMM yyyy HH:mm', 'tr_TR');
     if (mounted) {
-      // 🔔 KRİTİK DÜZELTME 2: UI'ı anında güncellemek için Set ve Map'e ekle
       setState(() {
         _scheduledNotificationIds.add(examId);
-        _scheduledNotificationTimes[examId] =
-            finalNotificationTime; // ZAMANI KAYDET
+        _scheduledNotificationTimes[examId] = finalNotificationTime;
       });
 
       ScaffoldMessenger.of(context).showSnackBar(
@@ -266,7 +273,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     }
   }
 
-  // --- YENİ FONKSİYON: Bildirimi Planla/İptal Et (Ana Buton Fonksiyonu) ---
   void _toggleNotification(
     String examId,
     String title,
@@ -275,14 +281,12 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
     final notificationService = context.read<NotificationService>();
 
     if (isScheduled) {
-      // İPTAL ET
       await notificationService.cancelExamNotification(examId);
 
       if (mounted) {
-        // 🔔 KRİTİK DÜZELTME 3: UI'ı anında güncellemek için Set ve Map'ten kaldır
         setState(() {
           _scheduledNotificationIds.remove(examId);
-          _scheduledNotificationTimes.remove(examId); // ZAMANI SİL
+          _scheduledNotificationTimes.remove(examId);
         });
 
         ScaffoldMessenger.of(context).showSnackBar(
@@ -290,14 +294,11 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
         );
       }
     } else {
-      // KUR (Kullanıcıya saat seçtir)
       _promptUserForDateTime(examId, title);
     }
   }
-  // --- BİTTİ ---
 
   void _showProFeatureDialog(BuildContext context) {
-    // ... (Fonksiyonun içeriği aynı kalacak) ...
     final colorScheme = Theme.of(context).colorScheme;
     showDialog(
       context: context,
@@ -386,7 +387,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
 
                 var examDocs = snapshot.data!.docs;
 
-                // Sıralama Mantığı (Aynı)
                 final nowForSorting = DateTime.now();
                 examDocs.sort((a, b) {
                   final aData = a.data() as Map<String, dynamic>? ?? {};
@@ -400,7 +400,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                   if (aPriority != bPriority) {
                     return aPriority.compareTo(bPriority);
                   }
-                  // ... (İkincil sıralama mantığı aynı) ...
                   final aStartTime = (aData['startTime'] as Timestamp?)
                       ?.toDate();
                   final bStartTime = (bData['startTime'] as Timestamp?)
@@ -469,14 +468,16 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           ? _userResults[examId]?.data()
                                 as Map<String, dynamic>?
                           : null;
-                      final int? userScore = hasTaken
-                          ? (userResultData?['score'] as num?)?.toInt()
-                          : null;
+
+                      final num rawScoreNum =
+                          userResultData?['score'] as num? ?? 0.0;
+                      final double userScore = rawScoreNum.toDouble() / 100.0;
+                      final String formattedScore = userScore
+                          .toStringAsFixed(2)
+                          .replaceAll('.', ',');
 
                       final isNotificationScheduled = _scheduledNotificationIds
                           .contains(examId);
-
-                      // 🔔 KRİTİK DÜZELTME 4: Kaydedilen alarm zamanını çek
                       final DateTime? scheduledAlarmTime =
                           _scheduledNotificationTimes[examId];
 
@@ -490,7 +491,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                       double elevation = 1;
                       BorderSide borderSide = BorderSide.none;
 
-                      // --- MANTIK BAŞLANGICI ---
                       if (hasTaken) {
                         statusColor = Colors.red.shade700;
                         cardBackgroundColor = Colors.red.shade50.withOpacity(
@@ -499,7 +499,7 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                         contentColor = Colors.red.shade900;
                         leadingIcon = Icons.history_edu_rounded;
                         subtitleText =
-                            'Girdin | Puan: $userScore | Sıralamayı Gör';
+                            'Girdin | Puan: $formattedScore | Sıralamayı Gör';
                         elevation = 0;
                         borderSide = BorderSide(
                           color: statusColor.withOpacity(0.4),
@@ -520,9 +520,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           ),
                         );
                       } else if (status == ExamStatus.active) {
-                        // 2. AKTİF
-
-                        // PRO SINAV, KULLANICI PRO DEĞİL
                         if (isProExam && !isPro) {
                           statusColor = Colors.orange.shade700;
                           cardBackgroundColor = Colors.orange.shade50;
@@ -544,9 +541,7 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                             ),
                           );
                           listTileOnTap = () => _showProFeatureDialog(context);
-                        }
-                        // PRO SINAV (KULLANICI PRO) veya NORMAL SINAV
-                        else {
+                        } else {
                           statusColor = Colors.green.shade600;
                           cardBackgroundColor = Colors.green.shade50;
                           contentColor = Colors.green.shade800;
@@ -558,7 +553,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                             width: 2.0,
                           );
 
-                          // KRİTİK DEĞİŞİKLİK: startExamCallback artık uyarıyı gösterir.
                           final startExamCallback = () {
                             _showStartExamWarningDialog(
                               examId: examId,
@@ -579,7 +573,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           listTileOnTap = startExamCallback;
                         }
                       } else if (status == ExamStatus.upcoming) {
-                        // 3. YAKINDA
                         statusColor = Colors.orange.shade700;
                         cardBackgroundColor = Colors.orange.shade50;
                         contentColor = Colors.orange.shade900;
@@ -589,7 +582,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           width: 1.5,
                         );
 
-                        // 🔔 KRİTİK DÜZELTME 5: Alarm Kurulduysa zamanı göster
                         if (isNotificationScheduled &&
                             scheduledAlarmTime != null) {
                           final formatter = DateFormat(
@@ -599,12 +591,10 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           subtitleText =
                               'Alarm: ${formatter.format(scheduledAlarmTime)}';
                         } else {
-                          // Eğer alarm kurulmadıysa, başlangıç zamanını göster
                           subtitleText =
                               'Başlama: ${DateFormat('dd MMM HH:mm', 'tr_TR').format(startTime!)}';
                         }
 
-                        // --- BİLDİRİM BUTONU ---
                         trailingWidget = TextButton.icon(
                           onPressed: () {
                             _toggleNotification(
@@ -631,8 +621,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                             visualDensity: VisualDensity.compact,
                           ),
                         );
-                        // --- BİTTİ ---
-
                         listTileOnTap = () =>
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
@@ -641,7 +629,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                               ),
                             );
                       } else if (status == ExamStatus.finished) {
-                        // 4. BİTMİŞ (girilmemiş/KAÇIRILMIŞ)
                         statusColor = Colors.red.shade700;
                         cardBackgroundColor = Colors.red.shade50.withOpacity(
                           0.6,
@@ -686,7 +673,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           ),
                         );
                       } else {
-                        // 5. BİLİNMEYEN
                         statusColor = Colors.grey;
                         cardBackgroundColor = colorScheme.surfaceVariant
                             .withOpacity(0.5);
@@ -703,7 +689,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                           width: 1,
                         );
                       }
-                      // --- MANTIK BİTTİ ---
 
                       return Card(
                         margin: const EdgeInsets.only(bottom: 14),
@@ -753,7 +738,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                                               ),
                                         ),
                                         const SizedBox(height: 4),
-                                        // 🔔 Sadece AKTİF durumunda TimeDifferenceDisplay göster
                                         (status == ExamStatus.active &&
                                                 !hasTaken)
                                             ? TimeDifferenceDisplay(
@@ -761,7 +745,6 @@ class _TrialExamsListScreenState extends State<TrialExamsListScreen> {
                                                 endTime: endTime,
                                                 status: status,
                                               )
-                                            // 🔔 YAKINDA ve DİĞER DURUMLARDA subtitleText'i göster
                                             : Text(
                                                 subtitleText,
                                                 style: textTheme.bodySmall

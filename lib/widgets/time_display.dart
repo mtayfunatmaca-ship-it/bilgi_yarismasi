@@ -17,6 +17,7 @@ class TimeDifferenceDisplay extends StatefulWidget {
     required this.startTime,
     required this.endTime,
     required this.status,
+    TextStyle? textStyle,
   });
 
   @override

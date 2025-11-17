@@ -63,7 +63,7 @@ const List<String> kProEmojis = [
   '👩‍🎨',
   '🧑‍🎨',
   '🧛‍♀️',
-  '🧛‍♂️', 
+  '🧛‍♂️',
 ];
 // --- BİTTİ ---
 
@@ -905,11 +905,42 @@ class _ProfileScreenState extends State<ProfileScreen>
                     const Color.fromARGB(255, 243, 100, 33),
                     'Varsayılan Turuncu',
                   ),
+                  // Mevcut renk seçimleriniz:
                   _buildColorChoice(context, Colors.blue.shade600, 'Mavi'),
                   _buildColorChoice(context, Colors.green.shade600, 'Yeşil'),
                   _buildColorChoice(context, Colors.purple.shade600, 'Mor'),
                   _buildColorChoice(context, Colors.red.shade600, 'Kırmızı'),
                   _buildColorChoice(context, Colors.teal.shade600, 'Turkuaz'),
+                  _buildColorChoice(
+                    context,
+                    Colors.indigo.shade800,
+                    'Lacivert',
+                  ), // Daha koyu, daha zengin bir mavi
+                  _buildColorChoice(
+                    context,
+                    Colors.deepOrange.shade800,
+                    'Kiremit',
+                  ), // Derin, topraksı bir turuncu
+                  _buildColorChoice(
+                    context,
+                    Colors.green.shade900,
+                    'Zeytin Yeşili',
+                  ), // Koyu ve doğal bir yeşil
+                  _buildColorChoice(
+                    context,
+                    Colors.blueGrey.shade900,
+                    'Kömür Gri',
+                  ), // Şık ve modern bir gri tonu
+                  _buildColorChoice(
+                    context,
+                    Colors.brown.shade800,
+                    'Bordo',
+                  ), // Derin, koyu bir kırmızı-kahverengi
+                  _buildColorChoice(
+                    context,
+                    Colors.amber.shade800,
+                    'Hardal',
+                  ), // Daha az parlak, sıcak bir sarı
                 ],
               ),
               SizedBox(height: MediaQuery.of(context).padding.bottom + 16),
