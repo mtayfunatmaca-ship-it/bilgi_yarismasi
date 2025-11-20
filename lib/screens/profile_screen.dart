@@ -1,3 +1,4 @@
+import 'package:bilgi_yarismasi/screens/login_screen.dart';
 import 'package:bilgi_yarismasi/screens/purchase_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:bilgi_yarismasi/services/auth_service.dart';
@@ -11,7 +12,11 @@ import 'dart:ui' as ui; // Flulaştırma (Blur) için
 import 'package:bilgi_yarismasi/screens/achievements_screen.dart';
 import 'package:bilgi_yarismasi/services/user_data_provider.dart';
 
-// --- EMOJİ SABİTLERİ (Değişmedi) ---
+// --- DİKKAT: Buraya projenizdeki Giriş/Karşılama ekranını import edin ---
+// Eğer dosya adınız farklıysa (örn: login_screen.dart) burayı düzeltin.
+// -----------------------------------------------------------------------
+
+// --- EMOJİ SABİTLERİ ---
 const List<String> kBasicEmojis = [
   '🙂',
   '🤓',
@@ -24,7 +29,6 @@ const List<String> kBasicEmojis = [
   '🧠',
   '😎',
 ];
-
 const List<String> kProEmojis = [
   '👑',
   '💎',
@@ -69,7 +73,6 @@ const List<String> kProEmojis = [
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
-
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
@@ -78,30 +81,25 @@ class _ProfileScreenState extends State<ProfileScreen>
     with TickerProviderStateMixin {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final AuthService _authService = AuthService();
-
   int _liderlikSirasi = -1;
   bool _isRankLoading = false;
   bool _isSaving = false;
-
   List<QueryDocumentSnapshot> _allAchievements = [];
   Map<String, dynamic> _earnedAchievements = {};
   bool _isLoadingAchievements = true;
   late AnimationController _shimmerController;
   late List<AnimationController> _badgeAnimationControllers = [];
   late List<Animation<double>> _badgeAnimations = [];
-
   String? _currentUserId;
 
   @override
   void initState() {
     super.initState();
     _currentUserId = _authService.currentUser?.uid;
-
     _shimmerController = AnimationController(
       duration: const Duration(milliseconds: 2500),
       vsync: this,
     );
-
     if (_currentUserId != null) {
       _refreshAllData();
     }
@@ -122,7 +120,6 @@ class _ProfileScreenState extends State<ProfileScreen>
       _isRankLoading = true;
       _isLoadingAchievements = true;
     });
-
     for (var controller in _badgeAnimationControllers) {
       controller.reset();
     }
@@ -199,11 +196,9 @@ class _ProfileScreenState extends State<ProfileScreen>
         if (!aIsEarned && bIsEarned) return 1;
         return 0;
       });
-
       final int itemsToAnimate = _allAchievements.length > 8
           ? 8
           : _allAchievements.length;
-
       for (var controller in _badgeAnimationControllers) {
         controller.dispose();
       }
@@ -238,14 +233,10 @@ class _ProfileScreenState extends State<ProfileScreen>
   List<String> _getAllEmojis() {
     return List.from(kBasicEmojis)..addAll(kProEmojis);
   }
-  // --- BİTTİ ---
 
-  // --- GÜNCELLENDİ: showEmojiPicker (PRO ayrımı ve kilitli overlay) ---
   void _showEmojiPicker(String currentEmoji, bool isProUser) {
     final List<String> allEmojis = _getAllEmojis();
-    final int proStartIndex = kBasicEmojis.length;
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
-
     showModalBottomSheet(
       context: context,
       backgroundColor: Colors.transparent,
@@ -255,9 +246,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         return StatefulBuilder(
           builder: (BuildContext context, StateSetter setModalState) {
             return Container(
-              height:
-                  MediaQuery.of(context).size.height *
-                  0.7, // Yüksekliği artırıldı
+              height: MediaQuery.of(context).size.height * 0.7,
               decoration: BoxDecoration(
                 color: colorScheme.surface,
                 borderRadius: const BorderRadius.only(
@@ -287,8 +276,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                       ],
                     ),
                   ),
-
-                  // --- Scrollable Emoji Listesi ---
                   Expanded(
                     child: SingleChildScrollView(
                       child: Padding(
@@ -296,7 +283,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // 1. Temel İkonlar Başlık
                             Text(
                               'Temel İkonlar',
                               style: Theme.of(context).textTheme.titleMedium!
@@ -306,8 +292,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   ),
                             ),
                             const SizedBox(height: 12),
-
-                            // Temel Emojiler
                             GridView.builder(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -340,8 +324,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                               },
                             ),
                             const SizedBox(height: 30),
-
-                            // 2. PRO İkonlar Başlık
                             Text(
                               'PRO Özel İkonlar',
                               style: Theme.of(context).textTheme.titleMedium!
@@ -351,11 +333,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   ),
                             ),
                             const SizedBox(height: 12),
-
-                            // PRO Emojiler Grubu (Kilitli Bölge)
                             Stack(
                               children: [
-                                // Emojilerin Kendisi (Flu Gösterim)
                                 GridView.builder(
                                   shrinkWrap: true,
                                   physics: const NeverScrollableScrollPhysics(),
@@ -369,13 +348,11 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   itemBuilder: (context, index) {
                                     final emoji = kProEmojis[index];
                                     final bool isSelected =
-                                        (selectedEmoji == emoji &&
-                                        isProUser); // PRO ise seçili olabilir
+                                        (selectedEmoji == emoji && isProUser);
                                     return _buildEmojiButton(
                                       emoji: emoji,
                                       isSelected: isSelected,
-                                      isLocked:
-                                          !isProUser, // Gerçek kilit durumu
+                                      isLocked: !isProUser,
                                       onTap: (e) {
                                         if (!isProUser) {
                                           Navigator.pop(context);
@@ -397,8 +374,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                     );
                                   },
                                 ),
-
-                                // 3. Büyük Kilit Overlay'i (PRO Değilse)
                                 if (!isProUser)
                                   Positioned.fill(
                                     child: ClipRRect(
@@ -432,7 +407,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                                                         fontWeight:
                                                             FontWeight.bold,
                                                         shadows: [
-                                                          Shadow(
+                                                          const Shadow(
                                                             blurRadius: 5,
                                                             color: Colors.black,
                                                           ),
@@ -462,9 +437,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
     );
   }
-  // --- GÜNCELLEME BİTTİ ---
 
-  // --- YENİ WIDGET: Tek Emoji Butonu (Yorumsuz) ---
   Widget _buildEmojiButton({
     required String emoji,
     required bool isSelected,
@@ -472,7 +445,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     required Function(String) onTap,
   }) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
-
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
@@ -498,11 +470,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         color: Colors.transparent,
         child: InkWell(
           borderRadius: BorderRadius.circular(16),
-          onTap: isLocked
-              ? () => onTap(emoji)
-              : () => onTap(
-                  emoji,
-                ), // Tap event'i üstteki GestureDetector'dan geliyor
+          onTap: isLocked ? () => onTap(emoji) : () => onTap(emoji),
           child: Center(
             child: Text(
               emoji,
@@ -516,10 +484,8 @@ class _ProfileScreenState extends State<ProfileScreen>
       ),
     );
   }
-  // --- BİTTİ ---
 
   Future<void> _saveEmoji(String newEmoji) async {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     if (_isSaving || !mounted) return;
     setState(() => _isSaving = true);
     final user = _authService.currentUser;
@@ -531,7 +497,7 @@ class _ProfileScreenState extends State<ProfileScreen>
       await _firestore.collection('users').doc(user.uid).update({
         'emoji': newEmoji,
       });
-      if (mounted)
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: const Text('Profil emojisi güncellendi!'),
@@ -542,12 +508,13 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
           ),
         );
+      }
     } catch (e) {
       print("Emoji kaydetme hatası: $e");
-      if (mounted)
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('Hata: Emoji güncellenemedi.'),
+            content: const Text('Hata: Emoji güncellenemedi.'),
             backgroundColor: Colors.red,
             behavior: SnackBarBehavior.floating,
             shape: RoundedRectangleBorder(
@@ -555,13 +522,13 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
           ),
         );
+      }
     } finally {
       if (mounted) setState(() => _isSaving = false);
     }
   }
 
   void _showEditInfoDialog(String currentAd, String currentSoyad) {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final TextEditingController adController = TextEditingController(
       text: currentAd,
     );
@@ -570,7 +537,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
     final _formKey = GlobalKey<FormState>();
     bool isDialogSaving = false;
-
     showDialog(
       context: context,
       builder: (context) {
@@ -590,7 +556,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       controller: adController,
                       decoration: InputDecoration(
                         labelText: 'Ad',
-                        prefixIcon: Icon(Icons.person_outline),
+                        prefixIcon: const Icon(Icons.person_outline),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -607,7 +573,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       controller: soyadController,
                       decoration: InputDecoration(
                         labelText: 'Soyad',
-                        prefixIcon: Icon(Icons.person_outline),
+                        prefixIcon: const Icon(Icons.person_outline),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -630,28 +596,24 @@ class _ProfileScreenState extends State<ProfileScreen>
                   onPressed: isDialogSaving
                       ? null
                       : () async {
-                          if (!(_formKey.currentState?.validate() ?? false))
+                          if (!(_formKey.currentState?.validate() ?? false)) {
                             return;
+                          }
                           final newAd = adController.text.trim();
                           final newSoyad = soyadController.text.trim();
-
                           if (newAd == currentAd && newSoyad == currentSoyad) {
                             Navigator.pop(context);
                             return;
                           }
-
                           setDialogState(() {
                             isDialogSaving = true;
                           });
-
                           final String? saveError = await _saveUserInfo(
                             newAd,
                             newSoyad,
                           );
-
                           if (!mounted) return;
                           setDialogState(() => isDialogSaving = false);
-
                           if (saveError == null) {
                             Navigator.pop(context);
                           } else {
@@ -686,7 +648,6 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   Future<String?> _saveUserInfo(String newAd, String newSoyad) async {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final user = _authService.currentUser;
     if (user == null) return "Kullanıcı bulunamadı.";
     setState(() => _isSaving = true);
@@ -711,8 +672,9 @@ class _ProfileScreenState extends State<ProfileScreen>
     } catch (e) {
       print("Kullanıcı bilgileri kaydetme hatası: $e");
       String errorMsg = 'Bilgiler güncellenemedi.';
-      if (e is FirebaseException && e.code == 'permission-denied')
+      if (e is FirebaseException && e.code == 'permission-denied') {
         errorMsg = 'İzniniz yok.';
+      }
       return errorMsg;
     } finally {
       if (mounted) setState(() => _isSaving = false);
@@ -720,7 +682,6 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   void _showChangePasswordDialog() {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final _passwordFormKey = GlobalKey<FormState>();
     final TextEditingController currentPasswordController =
         TextEditingController();
@@ -749,7 +710,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Mevcut Şifre',
-                        prefixIcon: Icon(Icons.lock_open),
+                        prefixIcon: const Icon(Icons.lock_open),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -764,16 +725,18 @@ class _ProfileScreenState extends State<ProfileScreen>
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Yeni Şifre',
-                        prefixIcon: Icon(Icons.lock_outline),
+                        prefixIcon: const Icon(Icons.lock_outline),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                       validator: (value) {
-                        if (value == null || value.isEmpty)
+                        if (value == null || value.isEmpty) {
                           return 'Yeni şifre boş olamaz.';
-                        if (value.length < 6)
+                        }
+                        if (value.length < 6) {
                           return 'Yeni şifre en az 6 karakter olmalıdır.';
+                        }
                         return null;
                       },
                     ),
@@ -783,16 +746,18 @@ class _ProfileScreenState extends State<ProfileScreen>
                       obscureText: true,
                       decoration: InputDecoration(
                         labelText: 'Yeni Şifre Tekrar',
-                        prefixIcon: Icon(Icons.lock_reset_rounded),
+                        prefixIcon: const Icon(Icons.lock_reset_rounded),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                       validator: (value) {
-                        if (value == null || value.isEmpty)
+                        if (value == null || value.isEmpty) {
                           return 'Tekrar alanı boş olamaz.';
-                        if (value != newPasswordController.text)
+                        }
+                        if (value != newPasswordController.text) {
                           return 'Yeni şifreler eşleşmiyor.';
+                        }
                         return null;
                       },
                     ),
@@ -833,8 +798,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                             if (error == null) {
                               Navigator.pop(context);
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: const Text(
+                                const SnackBar(
+                                  content: Text(
                                     'Şifreniz başarıyla güncellendi!',
                                   ),
                                   backgroundColor: Colors.green,
@@ -869,7 +834,6 @@ class _ProfileScreenState extends State<ProfileScreen>
   }
 
   void _showThemePicker(BuildContext context, ColorScheme colorScheme) {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     showModalBottomSheet(
       context: context,
       backgroundColor: colorScheme.surface,
@@ -905,7 +869,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                     const Color.fromARGB(255, 243, 100, 33),
                     'Varsayılan Turuncu',
                   ),
-                  // Mevcut renk seçimleriniz:
                   _buildColorChoice(context, Colors.blue.shade600, 'Mavi'),
                   _buildColorChoice(context, Colors.green.shade600, 'Yeşil'),
                   _buildColorChoice(context, Colors.purple.shade600, 'Mor'),
@@ -915,32 +878,24 @@ class _ProfileScreenState extends State<ProfileScreen>
                     context,
                     Colors.indigo.shade800,
                     'Lacivert',
-                  ), // Daha koyu, daha zengin bir mavi
+                  ),
                   _buildColorChoice(
                     context,
                     Colors.deepOrange.shade800,
                     'Kiremit',
-                  ), // Derin, topraksı bir turuncu
+                  ),
                   _buildColorChoice(
                     context,
                     Colors.green.shade900,
                     'Zeytin Yeşili',
-                  ), // Koyu ve doğal bir yeşil
+                  ),
                   _buildColorChoice(
                     context,
                     Colors.blueGrey.shade900,
                     'Kömür Gri',
-                  ), // Şık ve modern bir gri tonu
-                  _buildColorChoice(
-                    context,
-                    Colors.brown.shade800,
-                    'Bordo',
-                  ), // Derin, koyu bir kırmızı-kahverengi
-                  _buildColorChoice(
-                    context,
-                    Colors.amber.shade800,
-                    'Hardal',
-                  ), // Daha az parlak, sıcak bir sarı
+                  ),
+                  _buildColorChoice(context, Colors.brown.shade800, 'Bordo'),
+                  _buildColorChoice(context, Colors.amber.shade800, 'Hardal'),
                 ],
               ),
               SizedBox(height: MediaQuery.of(context).padding.bottom + 16),
@@ -951,14 +906,13 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // --- Ayarlar Menüsü (GÜNCELLENDİ: Tema Kilidi ve İstatistikler Kaldırıldı) ---
+  // --- Ayarlar Menüsü (GÜNCELLENDİ: ÇIKIŞ YAP BUTONU DÜZELTİLDİ) ---
   void _showSettingsMenu(
     BuildContext context,
     ColorScheme colorScheme,
     bool isGoogleUser,
     bool isPro,
   ) {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     showModalBottomSheet(
       context: context,
       backgroundColor: colorScheme.surface,
@@ -990,7 +944,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                 ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 16),
-
               if (!isGoogleUser)
                 ListTile(
                   leading: Icon(
@@ -1006,8 +959,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                     _showChangePasswordDialog();
                   },
                 ),
-
-              // --- TEMA DEĞİŞTİRME KİLİDİ ---
               ListTile(
                 leading: Icon(
                   Icons.palette_outlined,
@@ -1043,8 +994,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                   }
                 },
               ),
-
-              // --- TEMA KİLİDİ BİTTİ ---
               const Divider(),
               ListTile(
                 leading: Icon(Icons.logout_rounded, color: colorScheme.error),
@@ -1071,10 +1020,22 @@ class _ProfileScreenState extends State<ProfileScreen>
                           onPressed: () => Navigator.pop(ctx),
                           child: const Text('İptal'),
                         ),
+                        // --- DÜZELTİLEN KISIM: ÇIKIŞ YAP BUTONU ---
                         ElevatedButton(
-                          onPressed: () {
-                            Navigator.pop(ctx);
-                            _authService.signOut();
+                          onPressed: () async {
+                            Navigator.pop(ctx); // Dialog kapat
+                            await _authService.signOut(); // Firebase çıkışı
+
+                            if (context.mounted) {
+                              // Geçmişi silerek giriş ekranına yönlendir
+                              Navigator.of(context).pushAndRemoveUntil(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const LoginScreen(), // <<< BURAYI KONTROL EDİN
+                                ),
+                                (route) => false,
+                              );
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: colorScheme.error,
@@ -1085,6 +1046,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                           ),
                           child: const Text('Çıkış Yap'),
                         ),
+                        // --- DÜZELTME BİTTİ ---
                       ],
                     ),
                   );
@@ -1098,11 +1060,8 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // --- PRO Özellik Uyarısı (GÜNCELLENDİ: Mesaj parametresi aldı) ---
   void _showProFeatureDialog(BuildContext context, String message) {
-    // ... (Bu fonksiyon aynı, değişiklik yok) ...
     final colorScheme = Theme.of(context).colorScheme;
-
     showDialog(
       context: context,
       builder: (context) {
@@ -1119,7 +1078,7 @@ class _ProfileScreenState extends State<ProfileScreen>
             'PRO Özellik',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          content: Text(message), // <<< Özelleştirilmiş mesaj
+          content: Text(message),
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(context),
@@ -1142,16 +1101,12 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
     );
   }
-  // --- BİTTİ ---
 
-  // === build METODU (GÜNCELLENDİ) ===
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
-
     final bool isPro = context.watch<UserDataProvider>().isPro;
-
     return Scaffold(
       backgroundColor: colorScheme.background,
       body: _currentUserId == null
@@ -1176,27 +1131,23 @@ class _ProfileScreenState extends State<ProfileScreen>
                 if (!snapshot.hasData || !snapshot.data!.exists) {
                   return _buildLoadingState(colorScheme, textTheme);
                 }
-
                 final data = snapshot.data!.data() as Map<String, dynamic>;
                 final String ad = data['ad'] ?? '';
                 final String soyad = data['soyad'] ?? '';
                 final String displayName = (ad.isNotEmpty || soyad.isNotEmpty)
                     ? '$ad $soyad'
-                    : (data['kullaniciAdi'] ?? 'İsimsiz'); // Fallback
+                    : (data['kullaniciAdi'] ?? 'İsimsiz');
                 final String emoji = data['emoji'] ?? '🙂';
                 final int toplamPuan = (data['toplamPuan'] as num? ?? 0)
                     .toInt();
-
                 if (_liderlikSirasi == -1 && !_isRankLoading) {
                   Future.microtask(() => _loadUserRank());
                 }
-
                 final bool isGoogleUser =
                     _authService.currentUser?.providerData.any(
                       (p) => p.providerId == 'google.com',
                     ) ??
                     false;
-
                 return RefreshIndicator(
                   onRefresh: _refreshAllData,
                   color: colorScheme.primary,
@@ -1210,9 +1161,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                         foregroundColor: colorScheme.onSurface,
                         elevation: 0,
                         pinned: true,
-                        // --- Geri tuşu kaldırıldı ---
                         leading: const SizedBox.shrink(),
-                        // --- BİTTİ ---
                         title: Text(
                           'Profil',
                           style: textTheme.titleLarge?.copyWith(
@@ -1235,19 +1184,16 @@ class _ProfileScreenState extends State<ProfileScreen>
                           const SizedBox(width: 8),
                         ],
                       ),
-
                       SliverToBoxAdapter(
                         child: Column(
                           children: [
                             const SizedBox(height: 10),
-                            // --- Avatar (isPro eklendi) ---
                             _buildProfileAvatar(
                               emoji,
                               () => _showEmojiPicker(emoji, isPro),
                               colorScheme,
                               isPro,
-                            ), // <<< isPro eklendi
-                            // --- BİTTİ ---
+                            ),
                             const SizedBox(height: 16),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -1262,11 +1208,9 @@ class _ProfileScreenState extends State<ProfileScreen>
                                   ),
                                 ),
                                 IconButton(
-                                  // --- GÜNCELLENDİ (Kullanıcı adı kaldırıldı) ---
                                   onPressed: _isSaving
                                       ? null
                                       : () => _showEditInfoDialog(ad, soyad),
-                                  // --- BİTTİ ---
                                   icon: Icon(
                                     Icons.edit_note_rounded,
                                     color: colorScheme.onSurfaceVariant
@@ -1309,7 +1253,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  // --- "Tümünü Gör" butonu geri eklendi ---
                                   if (_allAchievements.length > 8)
                                     TextButton(
                                       onPressed: () {
@@ -1323,7 +1266,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                                       },
                                       child: const Text("Tümünü Gör"),
                                     ),
-                                  // --- BİTTİ ---
                                 ],
                               ),
                             ),
@@ -1331,11 +1273,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                           ],
                         ),
                       ),
-
-                      // --- Rozet grid'i 8 ile sınırlandı ---
                       _buildAchievementsGrid(colorScheme, textTheme),
-
-                      // --- BİTTİ ---
                       SliverToBoxAdapter(
                         child: SizedBox(
                           height: MediaQuery.of(context).padding.bottom + 40,
@@ -1349,7 +1287,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Yükleniyor Ekranı
   Widget _buildLoadingState(ColorScheme colorScheme, TextTheme textTheme) {
     return Center(
       child: Column(
@@ -1388,21 +1325,18 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // --- Profil Avatarı (GÜNCELLENDİ: isPro eklendi) ---
   Widget _buildProfileAvatar(
     String emoji,
     VoidCallback onTap,
     ColorScheme colorScheme,
     bool isPro,
   ) {
-    // PRO ise altın rengi, değilse normal tema rengi
     final Color borderColor = isPro
         ? Colors.amber.shade600
         : colorScheme.primaryContainer;
     final Color glowColor = isPro
         ? Colors.amber.shade700
         : colorScheme.primary.withOpacity(0.1);
-
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -1412,10 +1346,8 @@ class _ProfileScreenState extends State<ProfileScreen>
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: colorScheme.surfaceContainerHighest,
-            // PRO ise altın, değilse normal çerçeve
             border: Border.all(color: borderColor, width: 4),
             boxShadow: [
-              // PRO ise altın parlama (glow)
               if (isPro)
                 BoxShadow(
                   color: glowColor,
@@ -1423,7 +1355,6 @@ class _ProfileScreenState extends State<ProfileScreen>
                   spreadRadius: 4,
                   offset: const Offset(0, 0),
                 ),
-              // Normal gölge
               BoxShadow(
                 color: colorScheme.shadow.withOpacity(0.1),
                 blurRadius: 20,
@@ -1455,7 +1386,6 @@ class _ProfileScreenState extends State<ProfileScreen>
             ),
           ),
         ),
-        // --- YENİ: PRO Taç İkonu ---
         if (isPro)
           Positioned(
             top: -4,
@@ -1479,13 +1409,10 @@ class _ProfileScreenState extends State<ProfileScreen>
               ),
             ),
           ),
-        // --- BİTTİ ---
       ],
     );
   }
-  // --- BİTTİ ---
 
-  // Seviye/XP Barı
   Widget _buildLevelAndXP(
     int toplamPuan,
     TextTheme textTheme,
@@ -1567,7 +1494,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // 3'lü İstatistik Kartları (PRO Korumalı)
   Widget _buildStatCardsRow(
     int toplamPuan,
     ColorScheme colorScheme,
@@ -1636,7 +1562,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Tek bir istatistik kartı
   Widget _buildStatCard({
     required String label,
     required String value,
@@ -1707,7 +1632,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Başarılar Grid'i (Sadece ilk 8)
   Widget _buildAchievementsGrid(ColorScheme colorScheme, TextTheme textTheme) {
     if (_isLoadingAchievements) {
       return SliverPadding(
@@ -1738,9 +1662,7 @@ class _ProfileScreenState extends State<ProfileScreen>
         ),
       );
     }
-
     final achievementsToShow = _allAchievements.take(8).toList();
-
     return SliverPadding(
       padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
       sliver: SliverGrid(
@@ -1752,7 +1674,6 @@ class _ProfileScreenState extends State<ProfileScreen>
         ),
         delegate: SliverChildBuilderDelegate((context, index) {
           if (index >= achievementsToShow.length) return null;
-
           final achievementDoc = achievementsToShow[index];
           final achievementId = achievementDoc.id;
           final achievementData =
@@ -1768,12 +1689,10 @@ class _ProfileScreenState extends State<ProfileScreen>
           final String name = achievementData['name'] ?? 'Başarı';
           final String description =
               achievementData['description'] ?? 'Açıklama yok';
-
           Animation<double>? animation;
           if (index < _badgeAnimations.length) {
             animation = _badgeAnimations[index];
           }
-
           return _buildAchievementBadge(
             emoji,
             name,
@@ -1789,7 +1708,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Yükleniyor Placeholder
   Widget _buildAchievementBadgePlaceholder(ColorScheme colorScheme) {
     return Container(
       decoration: BoxDecoration(
@@ -1799,7 +1717,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Rozet Widget'ı (Yuvarlak Tasarım)
   Widget _buildAchievementBadge(
     String emoji,
     String name,
@@ -1851,14 +1768,12 @@ class _ProfileScreenState extends State<ProfileScreen>
         ),
       ),
     );
-
     if (!isEarned) {
       badge = ImageFiltered(
         imageFilter: ui.ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0),
         child: Opacity(opacity: 0.6, child: badge),
       );
     }
-
     return Tooltip(
       message: isEarned
           ? '$name\nKazanıldı: $earnedDate'
@@ -1881,7 +1796,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Rozet Detay Dialog'u
   void _showAchievementDetails(
     String emoji,
     String name,
@@ -2072,7 +1986,6 @@ class _ProfileScreenState extends State<ProfileScreen>
     );
   }
 
-  // Tema Seçim Widget'ı
   Widget _buildColorChoice(
     BuildContext context,
     Color color,

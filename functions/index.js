@@ -3,7 +3,7 @@
 /* eslint-disable max-len */
 
 const {onSchedule} = require("firebase-functions/v2/scheduler");
-const {onDocumentWritten} = require("firebase-functions/v2/firestore"); 
+const {onDocumentWritten} = require("firebase-functions/v2/firestore");
 const {logger} = require("firebase-functions");
 const admin = require("firebase-admin");
 
@@ -26,7 +26,8 @@ async function getUserDetails(userId) {
   if (userDoc.exists) {
     const userData = userDoc.data();
     return {
-      kullaniciAdi: userData.ad || userData.kullaniciAdi || userData.email || "İsimsiz",
+      // ✅ DÜZELTME YAPILDI: Öncelik KULLANICI ADI'na verildi.
+      kullaniciAdi: userData.kullaniciAdi || userData.ad || userData.email || "İsimsiz",
       emoji: userData.emoji || "🙂",
       isPro: userData.isPro || false,
       userId: userId,
@@ -74,7 +75,7 @@ exports.updateLeaderboardsInstantly = onDocumentWritten({
   document: "users/{userId}/solvedQuizzes/{quizId}", // DOĞRU TETİKLEYİCİ YOLU
   region: "europe-west3",
 }, async (event) => {
-  if (!event.data) return null; 
+  if (!event.data) return null;
 
   const userId = event.params.userId;
   logger.info(`ANLIK SKOR GÜNCELLEME TETİKLENDİ: Kullanıcı ${userId} yeni test çözdü.`);
@@ -88,7 +89,7 @@ exports.updateLeaderboardsInstantly = onDocumentWritten({
   const weeklyRef = db.collection("mevcutHaftalikLiderlik").doc(userId);
   batch.set(weeklyRef, {
     puan: totalWeeklyScore,
-    kullaniciAdi: userDetails.kullaniciAdi,
+    kullaniciAdi: userDetails.kullaniciAdi, // Düzeltilmiş getUserDetails çağrısı
     userId: userId,
     emoji: userDetails.emoji,
     isPro: userDetails.isPro,
@@ -99,7 +100,7 @@ exports.updateLeaderboardsInstantly = onDocumentWritten({
   const monthlyRef = db.collection("mevcutAylikLiderlik").doc(userId);
   batch.set(monthlyRef, {
     puan: totalMonthlyScore,
-    kullaniciAdi: userDetails.kullaniciAdi,
+    kullaniciAdi: userDetails.kullaniciAdi, // Düzeltilmiş getUserDetails çağrısı
     userId: userId,
     emoji: userDetails.emoji,
     isPro: userDetails.isPro,
@@ -121,13 +122,13 @@ exports.updateLeaderboardUserDetails = onDocumentWritten({
   region: "europe-west3",
 }, async (event) => {
   // Belge silme işlemi (delete) değilse ve veri varsa devam et
-  if (!event.data) return null; 
-  
+  if (!event.data) return null;
+
   const userId = event.params.userId;
   logger.info(`PROFİL DETAY GÜNCELLEMESİ TETİKLENDİ: Kullanıcı ${userId}`);
 
-  const userDetails = await getUserDetails(userId); 
-  
+  const userDetails = await getUserDetails(userId); // Düzeltilmiş getUserDetails çağrısı
+
   const batch = db.batch();
 
   // 1. Canlı Haftalık Tabloyu Güncelle (Puanı koru)
@@ -145,7 +146,7 @@ exports.updateLeaderboardUserDetails = onDocumentWritten({
     emoji: userDetails.emoji,
     isPro: userDetails.isPro,
   }, { merge: true });
-  
+
   // --- KRİTİK DÜZELTME: İlan Edilmiş Liderin Bilgisini KONTROLLÜ Güncelleme ---
   // Sadece emojiyi ve adı güncelle, puanı KESİNLİKLE elleme.
   const winnerDetailsUpdate = {
@@ -161,7 +162,7 @@ exports.updateLeaderboardUserDetails = onDocumentWritten({
   // UPDATE yerine SET(merge: true) kullandığımız için puan korunur.
   batch.set(weeklyWinnerRef, winnerDetailsUpdate, { merge: true });
   batch.set(monthlyWinnerRef, winnerDetailsUpdate, { merge: true });
-  
+
   await batch.commit();
   logger.info(`✅ Kullanıcı detayları (Emoji/PRO/Ad) anlık olarak yansıtıldı.`);
   return null;
@@ -170,10 +171,10 @@ exports.updateLeaderboardUserDetails = onDocumentWritten({
 
 
 /**
- * HAFTALIK LİDERİ İLAN EDER. (Pazartesi 00:00) 
+ * HAFTALIK LİDERİ İLAN EDER. (Pazartesi 00:00)
  */
 exports.announceWeeklyWinner = onSchedule({
-  schedule: "00 00 * * 1", // Pazartesi 00:00
+  schedule: "00 00 * * 0", // Pazartesi 00:00
   timeZone: "Europe/Istanbul",
 }, async (event) => {
   logger.info("HAFTALIK LİDER İLAN EDİLİYOR...");
@@ -185,7 +186,7 @@ exports.announceWeeklyWinner = onSchedule({
     const winnerData = leadersSnapshot.docs[0].data();
     const winnerRef = db.collection("leaders").doc("weeklyWinner");
 
-    const winnerDetails = await getUserDetails(winnerData.userId);
+    const winnerDetails = await getUserDetails(winnerData.userId); // Düzeltilmiş getUserDetails çağrısı
 
     await winnerRef.set({
       kullaniciAdi: winnerDetails.kullaniciAdi,
@@ -202,10 +203,10 @@ exports.announceWeeklyWinner = onSchedule({
 });
 
 /**
- * AYLIK LİDERİ İLAN EDER. (Ayın 2'si 00:00) 
+ * AYLIK LİDERİ İLAN EDER. (Ayın 2'si 00:00)
  */
 exports.announceMonthlyWinner = onSchedule({
-  schedule: "00 00 2 * *", // Ayın 2'si 00:00
+  schedule: "00 00 1 * *", // Ayın 2'si 00:00
   timeZone: "Europe/Istanbul",
 }, async (event) => {
   logger.info("AYLIK LİDER İLAN EDİLİYOR...");
@@ -217,7 +218,7 @@ exports.announceMonthlyWinner = onSchedule({
     const winnerData = leadersSnapshot.docs[0].data();
     const winnerRef = db.collection("leaders").doc("monthlyWinner");
 
-    const winnerDetails = await getUserDetails(winnerData.userId);
+    const winnerDetails = await getUserDetails(winnerData.userId); // Düzeltilmiş getUserDetails çağrısı
 
     await winnerRef.set({
       kullaniciAdi: winnerDetails.kullaniciAdi,

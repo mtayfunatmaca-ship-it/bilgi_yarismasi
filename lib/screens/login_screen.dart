@@ -1,6 +1,10 @@
 import 'package:bilgi_yarismasi/services/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:bilgi_yarismasi/screens/register_screen.dart';
+// --- YENİ IMPORT ---
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'dart:io'; // Platform kontrolü için
+// --- BİTTİ ---
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -25,8 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  // --- Fonksiyonlar (_login, _loginWithGoogle, _showForgotPasswordDialog) ---
-  // (Bu fonksiyonların içi bir önceki mesajdakiyle aynı, değişiklik yok)
+  // --- Fonksiyonlar ---
   void _login() async {
     if (!(_formKey.currentState?.validate() ?? false) || _isLoading) return;
     setState(() {
@@ -64,6 +67,25 @@ class _LoginScreenState extends State<LoginScreen> {
       _isLoading = false;
     });
   }
+
+  // --- YENİ FONKSİYON: Apple ile Giriş ---
+  void _loginWithApple() async {
+    if (_isLoading) return;
+    setState(() {
+      _errorMessage = '';
+      _isLoading = true;
+    });
+    final error = await _authService.signInWithApple();
+    if (!mounted) return;
+    if (error != null)
+      setState(() {
+        _errorMessage = error;
+      });
+    setState(() {
+      _isLoading = false;
+    });
+  }
+  // --- BİTTİ ---
 
   void _showForgotPasswordDialog() {
     final TextEditingController resetEmailController = TextEditingController();
@@ -189,19 +211,62 @@ class _LoginScreenState extends State<LoginScreen> {
       },
     );
   }
-  // --- Fonksiyonlar Bitti ---
 
-  // === build METODU (YENİ TASARIM) ===
+  // Yardımcı widget (TextFormField için)
+  Widget _buildTextField({
+    required TextEditingController controller,
+    required String label,
+    required String hint,
+    required IconData icon,
+    bool obscureText = false,
+    String? Function(String?)? validator,
+    TextInputType? keyboardType,
+    Widget? suffixIcon,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            fontWeight: FontWeight.w500,
+            color: Theme.of(context).colorScheme.onSurfaceVariant,
+          ),
+        ),
+        const SizedBox(height: 8),
+        TextFormField(
+          controller: controller,
+          decoration: InputDecoration(
+            hintText: hint,
+            prefixIcon: Icon(icon, size: 20),
+            suffixIcon: suffixIcon,
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 14,
+              horizontal: 12,
+            ),
+          ),
+          obscureText: obscureText,
+          keyboardType: keyboardType,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          validator: validator,
+        ),
+      ],
+    );
+  }
+
+  // === build METODU (APPLE BUTONU EKLENDİ) ===
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
     final screenSize = MediaQuery.of(context).size;
 
+    // iOS'ta Sign in with Apple butonunun görünmesi için kontrol
+    final bool isIOS = Platform.isIOS;
+
     return Scaffold(
       backgroundColor: colorScheme.background, // Beyaz arka plan
-      // Klavye açıldığında taşmayı önlemek için SingleChildScrollView
-      // ve ekranı doldurmak için ConstrainedBox
       body: ConstrainedBox(
         constraints: BoxConstraints(
           minHeight: screenSize.height, // En az ekran yüksekliği kadar
@@ -212,13 +277,19 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               // 1. MAVİ BAŞLIK VE GÖRSEL ALANI
               Container(
-                height: screenSize.height * 0.4, // Yükseklik ayarlandı
+                height: screenSize.height * 0.5, // Yükseklik ayarlandı
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(
                   horizontal: 24.0,
                   vertical: 16.0,
                 ),
-                decoration: BoxDecoration(color: colorScheme.primary),
+                decoration: BoxDecoration(
+                  color: colorScheme.primary,
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30),
+                  ),
+                ),
                 child: SafeArea(
                   bottom: false, // Alt SafeArea'yı form alanı halledecek
                   child: Column(
@@ -230,19 +301,22 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Center(
                           child: Image.asset(
                             'assets/images/login_background.png', // <<< SENİN GÖRSELİNİN YOLU
-                            // Hata durumunda (resim yolu yanlışsa)
+                            fit: BoxFit.cover,
                             errorBuilder: (context, error, stackTrace) {
                               print("Giriş ekranı resmi yüklenemedi: $error");
-                              return Icon(
-                                Icons.quiz_rounded,
-                                color: colorScheme.onPrimary.withOpacity(0.5),
-                                size: 80,
+                              return Center(
+                                child: Icon(
+                                  Icons.quiz_rounded,
+                                  color: colorScheme.onPrimary.withOpacity(0.5),
+                                  size: 80,
+                                ),
                               );
                             },
                           ),
                         ),
                       ),
                       // --- GÖRSEL BİTTİ ---
+                      const SizedBox(height: 12),
                       Text(
                         'Tekrar Hoş Geldin!',
                         style: theme.textTheme.headlineMedium?.copyWith(
@@ -252,14 +326,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Sınav dünyasına erişmek için lütfen kayıt olun!',
-                        style: theme.textTheme.bodyMedium?.copyWith(
+                        'Giriş yap ve devam et',
+                        style: theme.textTheme.bodyLarge?.copyWith(
                           color: colorScheme.onPrimary.withOpacity(0.8),
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ), // Formun üstüne binmesi için boşluk
                     ],
                   ),
                 ),
@@ -267,8 +338,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               // 2. BEYAZ FORM ALANI
               Transform.translate(
-                // Mavi alanın üstüne binsin diye
-                offset: const Offset(0, -20), // 20 piksel yukarı kaydır
+                offset: const Offset(0, -10),
                 child: Container(
                   padding: const EdgeInsets.fromLTRB(24, 32, 24, 24),
                   decoration: BoxDecoration(
@@ -290,7 +360,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           icon: Icons.email_outlined,
                           keyboardType: TextInputType.emailAddress,
                           validator: (value) {
-                            /* ... (validator aynı) ... */
+                            if (value == null || value.isEmpty) {
+                              return 'E-posta boş olamaz.';
+                            }
+                            if (!RegExp(r'\S+@\S+\.\S+').hasMatch(value)) {
+                              return 'Lütfen geçerli bir e-posta girin.';
+                            }
+                            return null;
                           },
                         ),
                         const SizedBox(height: 16),
@@ -301,7 +377,13 @@ class _LoginScreenState extends State<LoginScreen> {
                           icon: Icons.lock_outline,
                           obscureText: !_isPasswordVisible,
                           validator: (value) {
-                            /* ... (validator aynı) ... */
+                            if (value == null || value.isEmpty) {
+                              return 'Şifre boş olamaz.';
+                            }
+                            if (value.length < 6) {
+                              return 'Şifre en az 6 karakter olmalıdır.';
+                            }
+                            return null;
                           },
                           suffixIcon: IconButton(
                             icon: Icon(
@@ -344,7 +426,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                         const SizedBox(height: 10),
 
-                        // Giriş Yap Butonu
+                        // 3. E-posta Giriş Butonu (Aynı)
                         ElevatedButton(
                           onPressed: _isLoading ? null : _login,
                           style: ElevatedButton.styleFrom(
@@ -410,7 +492,21 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
 
-                        // Google ile Giriş Butonu
+                        // 4. APPLE İLE GİRİŞ BUTONU (Sadece iOS'ta görünür)
+                        /* if (isIOS)
+                          Container(
+                            height: 50,
+                            margin: const EdgeInsets.only(bottom: 16),
+                            child: SignInWithAppleButton(
+                              style: SignInWithAppleButtonStyle
+                                  .black, // Apple'ın yönergelerine uygun
+                              onPressed: _isLoading ? null : _loginWithApple,
+                              borderRadius: BorderRadius.circular(12),
+                              height: 50,
+                            ),
+                          ),
+
+                        // 5. Google ile Giriş Butonu
                         ElevatedButton.icon(
                           onPressed: _isLoading ? null : _loginWithGoogle,
                           style: ElevatedButton.styleFrom(
@@ -440,10 +536,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   width: 22.0,
                                 ),
                           label: const Text('Google ile Giriş Yap'),
-                        ),
-                        const SizedBox(height: 20),
+                        ),*/
 
-                        // Kayıt Ol Butonu (Artık Positioned değil, Column içinde)
+                        // Kayıt Ol Butonu
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -487,45 +582,4 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   // Yardımcı widget (TextFormField için)
-  Widget _buildTextField({
-    required TextEditingController controller,
-    required String label,
-    required String hint,
-    required IconData icon,
-    bool obscureText = false,
-    String? Function(String?)? validator,
-    TextInputType? keyboardType,
-    Widget? suffixIcon,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-            fontWeight: FontWeight.w500,
-            color: Theme.of(context).colorScheme.onSurfaceVariant,
-          ),
-        ),
-        const SizedBox(height: 8),
-        TextFormField(
-          controller: controller,
-          decoration: InputDecoration(
-            hintText: hint,
-            prefixIcon: Icon(icon, size: 20),
-            suffixIcon: suffixIcon,
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-            contentPadding: const EdgeInsets.symmetric(
-              vertical: 14,
-              horizontal: 12,
-            ),
-          ),
-          obscureText: obscureText,
-          keyboardType: keyboardType,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          validator: validator,
-        ),
-      ],
-    );
-  }
 }

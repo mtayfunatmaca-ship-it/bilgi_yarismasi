@@ -450,6 +450,20 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
 
   void _showQuestionGridPicker() {
     final colorScheme = Theme.of(context).colorScheme;
+
+    // --- ADIM 1: Soruları kategorilerine göre grupla ---
+    // Map<Kategori ID, List<Sorunun Orijinal Index'i>>
+    final Map<String, List<int>> questionsByCategory = {};
+    for (int i = 0; i < _questions.length; i++) {
+      final qData = _questions[i].data() as Map<String, dynamic>;
+      final String katId =
+          qData['kategoriId'] ??
+          'diger'; // Kategori ID'sini al, yoksa 'diger' yap
+      questionsByCategory
+          .putIfAbsent(katId, () => [])
+          .add(i); // Orijinal index'i (i) ekle
+    }
+
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -479,6 +493,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    // --- Sürükleme Çubuğu ---
                     Container(
                       margin: const EdgeInsets.only(top: 12),
                       width: 40,
@@ -488,6 +503,7 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
+                    // --- Başlık ---
                     Padding(
                       padding: const EdgeInsets.all(24.0),
                       child: Row(
@@ -507,80 +523,137 @@ class _TrialExamScreenState extends State<TrialExamScreen> {
                       ),
                     ),
                     const Divider(height: 1),
+                    // --- İçerik: Kategorilere Ayrılmış Liste ---
                     Expanded(
-                      child: GridView.builder(
-                        padding: const EdgeInsets.all(24),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 6,
-                              mainAxisSpacing: 12,
-                              crossAxisSpacing: 12,
-                              childAspectRatio: 1.0,
-                            ),
-                        itemCount: _questions.length,
-                        itemBuilder: (context, index) {
-                          final bool isCurrent = _currentPage == index;
-                          final bool isAnswered = _selectedAnswers.containsKey(
-                            index,
+                      child: ListView.builder(
+                        padding: const EdgeInsets.all(16.0),
+                        // Eleman sayısı kategori sayısıdır
+                        itemCount: questionsByCategory.keys.length,
+                        itemBuilder: (context, categoryIndex) {
+                          // Mevcut kategorinin ID'sini ve sorularını al
+                          final categoryId = questionsByCategory.keys.elementAt(
+                            categoryIndex,
                           );
-                          Color boxColor = colorScheme.surface;
-                          Color borderColor = colorScheme.outline.withOpacity(
-                            0.3,
-                          );
-                          Color textColor = colorScheme.onSurfaceVariant;
+                          final categoryName =
+                              _categoryNameMap[categoryId] ?? categoryId;
+                          final categoryQuestionIndexes =
+                              questionsByCategory[categoryId]!;
 
-                          if (isAnswered) {
-                            boxColor = colorScheme.primaryContainer;
-                            borderColor = colorScheme.primary;
-                            textColor = colorScheme.onPrimaryContainer;
-                          }
-
-                          if (isCurrent) {
-                            boxColor = colorScheme.primary;
-                            borderColor = colorScheme.primary;
-                            textColor = colorScheme.onPrimary;
-                          }
-
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.pop(context);
-                              _pageController.animateToPage(
-                                index,
-                                duration: const Duration(milliseconds: 300),
-                                curve: Curves.easeInOut,
-                              );
-                            },
-                            child: AnimatedContainer(
-                              duration: const Duration(milliseconds: 200),
-                              decoration: BoxDecoration(
-                                color: boxColor,
-                                borderRadius: BorderRadius.circular(12),
-                                border: Border.all(
-                                  color: borderColor,
-                                  width: 2,
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // --- Kategori Başlığı ---
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8.0,
+                                  vertical: 12.0,
                                 ),
-                                boxShadow: isCurrent
-                                    ? [
-                                        BoxShadow(
-                                          color: colorScheme.primary
-                                              .withOpacity(0.3),
-                                          blurRadius: 8,
-                                          spreadRadius: 1,
-                                        ),
-                                      ]
-                                    : null,
-                              ),
-                              child: Center(
                                 child: Text(
-                                  '${index + 1}',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: textColor,
-                                    fontSize: 16,
-                                  ),
+                                  categoryName,
+                                  style: Theme.of(context).textTheme.titleMedium
+                                      ?.copyWith(
+                                        fontWeight: FontWeight.bold,
+                                        color: colorScheme.primary,
+                                      ),
                                 ),
                               ),
-                            ),
+                              // --- Kategoriye Ait Soru Grid'i ---
+                              GridView.builder(
+                                // ÖNEMLİ: İç grid'in kendi scroll'u olmasın, boyutunu içeriğe göre ayarlasın
+                                shrinkWrap: true,
+                                physics: const NeverScrollableScrollPhysics(),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8.0,
+                                ),
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount: 6,
+                                      mainAxisSpacing: 12,
+                                      crossAxisSpacing: 12,
+                                      childAspectRatio: 1.0,
+                                    ),
+                                // Eleman sayısı bu kategorideki soru sayısıdır
+                                itemCount: categoryQuestionIndexes.length,
+                                itemBuilder: (context, gridIndex) {
+                                  // Orijinal soru index'ini gridden al
+                                  final int originalQuestionIndex =
+                                      categoryQuestionIndexes[gridIndex];
+
+                                  final bool isCurrent =
+                                      _currentPage == originalQuestionIndex;
+                                  final bool isAnswered = _selectedAnswers
+                                      .containsKey(originalQuestionIndex);
+
+                                  Color boxColor = colorScheme.surface;
+                                  Color borderColor = colorScheme.outline
+                                      .withOpacity(0.3);
+                                  Color textColor =
+                                      colorScheme.onSurfaceVariant;
+
+                                  if (isAnswered) {
+                                    boxColor = colorScheme.primaryContainer;
+                                    borderColor = colorScheme.primary;
+                                    textColor = colorScheme.onPrimaryContainer;
+                                  }
+
+                                  if (isCurrent) {
+                                    boxColor = colorScheme.primary;
+                                    borderColor = colorScheme.primary;
+                                    textColor = colorScheme.onPrimary;
+                                  }
+
+                                  return GestureDetector(
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                      _pageController.animateToPage(
+                                        originalQuestionIndex, // Orijinal index'e git
+                                        duration: const Duration(
+                                          milliseconds: 300,
+                                        ),
+                                        curve: Curves.easeInOut,
+                                      );
+                                    },
+                                    child: AnimatedContainer(
+                                      duration: const Duration(
+                                        milliseconds: 200,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        color: boxColor,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(
+                                          color: borderColor,
+                                          width: 2,
+                                        ),
+                                        boxShadow: isCurrent
+                                            ? [
+                                                BoxShadow(
+                                                  color: colorScheme.primary
+                                                      .withOpacity(0.3),
+                                                  blurRadius: 8,
+                                                  spreadRadius: 1,
+                                                ),
+                                              ]
+                                            : null,
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          '${originalQuestionIndex + 1}', // Orijinal index'e göre numaralandır
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: textColor,
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                              // Kategoriler arasında boşluk bırak (sonuncu hariç)
+                              if (categoryIndex <
+                                  questionsByCategory.keys.length - 1)
+                                const SizedBox(height: 24),
+                            ],
                           );
                         },
                       ),

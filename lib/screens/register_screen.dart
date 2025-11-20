@@ -284,7 +284,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         color: colorScheme.outline.withOpacity(0.5),
                       ),
                     ),
-                    Padding(
+                    /* Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 12.0),
                       child: Text(
                         'VEYA',
@@ -292,7 +292,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           color: colorScheme.onSurfaceVariant,
                         ),
                       ),
-                    ),
+                    ),*/
                     Expanded(
                       child: Divider(
                         color: colorScheme.outline.withOpacity(0.5),
@@ -303,7 +303,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
 
               // --- GOOGLE BUTONU (Image.asset ile GÜNCELLENDİ) ---
-              ElevatedButton.icon(
+              /*ElevatedButton.icon(
                 onPressed: _isLoading ? null : _registerWithGoogle,
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white, // Google standardı beyaz
@@ -325,7 +325,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 // --- İKON BİTTİ ---
                 label: const Text('Google ile Kayıt Ol'),
-              ),
+              ),*/
               // --- GOOGLE BUTONU BİTTİ ---
             ],
           ),

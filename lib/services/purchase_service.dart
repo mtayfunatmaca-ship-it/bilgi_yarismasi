@@ -49,7 +49,9 @@ class PurchaseService with ChangeNotifier {
     Set<String> kIds = {proProductId};
     // --- DÜZELTME BİTTİ ---
     try {
-      final ProductDetailsResponse response = await _iap.queryProductDetails(kIds);
+      final ProductDetailsResponse response = await _iap.queryProductDetails(
+        kIds,
+      );
       if (response.notFoundIDs.isNotEmpty) {
         print("Hata: Ürün ID'leri bulunamadı: ${response.notFoundIDs}");
       }
@@ -62,19 +64,21 @@ class PurchaseService with ChangeNotifier {
 
   Future<void> buyProMembership() async {
     if (!_isStoreAvailable || _isPurchasePending) return;
-    
+
     ProductDetails? product;
     try {
       // --- DÜZELTME: Alt çizgi kaldırıldı ---
       product = _products.firstWhere((p) => p.id == proProductId);
       // --- DÜZELTME BİTTİ ---
     } catch (e) {
-      product = null; 
+      product = null;
       print("firstWhere hatası (buyProMembership): $e");
     }
 
     if (product == null) {
-      print("Hata: 'pro_lifetime' ürünü marketten çekilemedi. Konsol ayarlarını kontrol et.");
+      print(
+        "Hata: 'pro_lifetime' ürünü marketten çekilemedi. Konsol ayarlarını kontrol et.",
+      );
       return;
     }
 
@@ -90,7 +94,9 @@ class PurchaseService with ChangeNotifier {
     }
   }
 
-  Future<void> _onPurchaseUpdate(List<PurchaseDetails> purchaseDetailsList) async {
+  Future<void> _onPurchaseUpdate(
+    List<PurchaseDetails> purchaseDetailsList,
+  ) async {
     for (var purchase in purchaseDetailsList) {
       if (purchase.status == PurchaseStatus.purchased) {
         print("Satın alım başarılı: ${purchase.productID}");
