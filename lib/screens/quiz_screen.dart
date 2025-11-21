@@ -1149,8 +1149,6 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                                               height: 1.4,
                                               color: textColor,
                                             ),
-                                            maxLines: 3,
-                                            overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
                                         if (trailingIcon != null) ...[
